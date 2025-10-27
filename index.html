@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Scales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Universal Scales</h1>
+            <p class="subtitle">Interactive logarithmic visualizations of the universe's dimensions</p>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="dimension-select">Dimension:</label>
+                    <select id="dimension-select">
+                        <option value="length">Length</option>
+                        <option value="duration">Duration</option>
+                        <option value="speed">Speed</option>
+                        <option value="acceleration">Acceleration</option>
+                        <option value="jerk">Jerk</option>
+                        <option value="brightness">Brightness</option>
+                        <option value="force">Force</option>
+                        <option value="energy">Energy</option>
+                        <option value="costs">Costs</option>
+                        <option value="pressure">Pressure</option>
+                        <option value="youngs-modulus">Young's Modulus</option>
+                        <option value="yield-strength">Yield Strength</option>
+                    </select>
+                </div>
+                
+                <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+            </div>
+            
+            <p id="dimension-description" class="dimension-description"></p>
+        </header>
+        
+        <main class="main">
+            <div id="plot-container" class="plot-container">
+                <svg id="plot-svg"></svg>
+            </div>
+            
+            <div class="unit-selector-container">
+                <label for="unit-select">Unit:</label>
+                <select id="unit-select">
+                    <!-- Units will be populated dynamically -->
+                </select>
+            </div>
+            
+            <p id="unit-description" class="unit-description"></p>
+            
+            <div id="tooltip" class="tooltip">
+                <div class="tooltip-content">
+                    <img class="tooltip-image" src="" alt="">
+                    <h3 class="tooltip-title"></h3>
+                    <p class="tooltip-value"></p>
+                    <p class="tooltip-description"></p>
+                    <a class="tooltip-source" href="#" target="_blank">Learn More</a>
+                </div>
+            </div>
+            
+            <div id="band-popup" class="band-popup">
+                <div class="band-popup-content">
+                    <h3 class="band-popup-title"></h3>
+                    <div class="band-popup-plot"></div>
+                    <button class="band-popup-button">Open Detailed View</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p class="footer-attribution">
+                Made by <a href="https://github.com/ethanNguyenUser" target="_blank">Ethan Nguyen</a> • Last updated: October 27, 2025
+            </p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
