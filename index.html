@@ -18,22 +18,31 @@
                 <div class="control-group">
                     <label for="dimension-select">Dimension:</label>
                     <select id="dimension-select">
-                        <option value="length">Length</option>
-                        <option value="duration">Duration</option>
-                        <option value="speed">Speed</option>
-                        <option value="acceleration">Acceleration</option>
-                        <option value="jerk">Jerk</option>
-                        <option value="brightness">Brightness</option>
-                        <option value="force">Force</option>
-                        <option value="energy">Energy</option>
-                        <option value="costs">Costs</option>
-                        <option value="pressure">Pressure</option>
-                        <option value="youngs-modulus">Young's Modulus</option>
-                        <option value="yield-strength">Yield Strength</option>
+                        <optgroup label="Fundamental SI Units">
+                            <option value="length">Length</option>
+                            <option value="duration">Duration (Time)</option>
+                            <option value="energy">Energy</option>
+                            <option value="force">Force</option>
+                        </optgroup>
+                        <optgroup label="Kinematics">
+                            <option value="speed">Speed</option>
+                            <option value="acceleration">Acceleration</option>
+                            <option value="jerk">Jerk</option>
+                        </optgroup>
+                        <optgroup label="Material Properties">
+                            <option value="pressure">Pressure</option>
+                            <option value="youngs-modulus">Young's Modulus</option>
+                            <option value="yield-strength">Yield Strength</option>
+                        </optgroup>
+                        <optgroup label="Other Physical Quantities">
+                            <option value="brightness">Brightness</option>
+                            <option value="costs">Costs</option>
+                        </optgroup>
                     </select>
                 </div>
                 
                 <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+                <button id="music-toggle" class="music-toggle">🎵</button>
             </div>
             
             <p id="dimension-description" class="dimension-description"></p>
@@ -59,7 +68,7 @@
                     <h3 class="tooltip-title"></h3>
                     <p class="tooltip-value"></p>
                     <p class="tooltip-description"></p>
-                    <a class="tooltip-source" href="#" target="_blank">Learn More</a>
+                    <a class="tooltip-source" href="#" target="_blank"></a>
                 </div>
             </div>
             
@@ -71,6 +80,12 @@
                 </div>
             </div>
         </main>
+        
+        <!-- Background Music -->
+        <audio id="background-music" loop>
+            <source src="Frozen Star.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         
         <footer class="footer">
             <p class="footer-attribution">

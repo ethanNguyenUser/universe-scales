@@ -6,21 +6,66 @@ Images are named based on dimension and item name (e.g., length_Planck_Length.jp
 """
 
 import os
-import yaml
-import requests
+import json
 import time
 from urllib.parse import urlparse, unquote
 from pathlib import Path
 import re
+import urllib.request
+import urllib.error
+
+# Simple YAML parser for basic YAML files
+def parse_yaml_simple(file_path):
+    """Simple YAML parser that handles basic YAML structure."""
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # This is a very basic parser - for production use, install PyYAML
+    data = {}
+    lines = content.split('\n')
+    
+    current_section = None
+    items = []
+    current_item = None
+    
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+            
+        if line.startswith('dimension:'):
+            data['dimension'] = line.split(':', 1)[1].strip().strip('"\'')
+        elif line.startswith('items:'):
+            current_section = 'items'
+        elif current_section == 'items' and line.startswith('- description:'):
+            # Start of new item
+            if current_item:
+                items.append(current_item)
+            current_item = {'description': line.split(':', 1)[1].strip().strip('"\'')}
+        elif current_section == 'items' and line.startswith('name:'):
+            # Add name to current item
+            if current_item:
+                current_item['name'] = line.split(':', 1)[1].strip().strip('"\'')
+        elif current_section == 'items' and line.startswith('source:'):
+            # Add source to current item
+            if current_item:
+                current_item['source'] = line.split(':', 1)[1].strip().strip('"\'')
+        elif current_section == 'items' and line.startswith('value:'):
+            # Add value to current item
+            if current_item:
+                current_item['value'] = line.split(':', 1)[1].strip().strip('"\'')
+    
+    # Add the last item if it exists
+    if current_item:
+        items.append(current_item)
+    
+    data['items'] = items
+    return data
 
 class ImageDownloader:
     def __init__(self, data_dir="data", images_dir="images"):
         self.data_dir = Path(data_dir)
         self.images_dir = Path(images_dir)
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Universal Scales Image Downloader (educational project)'
-        })
         
         # Create images directory if it doesn't exist
         self.images_dir.mkdir(exist_ok=True)
@@ -34,12 +79,15 @@ class ImageDownloader:
             
             # Use Wikipedia API to get page info
             api_url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + page_title
-            response = self.session.get(api_url, timeout=10)
             
-            if response.status_code == 200:
-                data = response.json()
-                if 'thumbnail' in data and 'source' in data['thumbnail']:
-                    return data['thumbnail']['source']
+            req = urllib.request.Request(api_url)
+            req.add_header('User-Agent', 'Universal Scales Image Downloader (educational project)')
+            
+            with urllib.request.urlopen(req, timeout=10) as response:
+                if response.status == 200:
+                    data = json.loads(response.read().decode())
+                    if 'thumbnail' in data and 'source' in data['thumbnail']:
+                        return data['thumbnail']['source']
             
             return None
             
@@ -47,18 +95,59 @@ class ImageDownloader:
             print(f"Error getting Wikipedia image for {wikipedia_url}: {e}")
             return None
     
+    def search_unsplash_image(self, query):
+        """Search for images on Unsplash (free stock photos)."""
+        try:
+            # URL encode the query
+            from urllib.parse import quote
+            encoded_query = quote(query)
+            search_url = f"https://unsplash.com/napi/search/photos?query={encoded_query}&per_page=1"
+            
+            req = urllib.request.Request(search_url)
+            req.add_header('User-Agent', 'Universal Scales Image Downloader (educational project)')
+            
+            with urllib.request.urlopen(req, timeout=10) as response:
+                if response.status == 200:
+                    data = json.loads(response.read().decode())
+                    if 'results' in data and len(data['results']) > 0:
+                        result = data['results'][0]
+                        if 'urls' in result and 'small' in result['urls']:
+                            return result['urls']['small']
+            
+            return None
+            
+        except Exception as e:
+            print(f"Error searching Unsplash for {query}: {e}")
+            return None
+    
+    def generate_placeholder_image(self, filename, text):
+        """Generate a simple placeholder image using a placeholder service."""
+        try:
+            # Use a different placeholder service that's more reliable
+            from urllib.parse import quote
+            encoded_text = quote(text)
+            placeholder_url = f"https://dummyimage.com/400x300/cccccc/666666&text={encoded_text}"
+            return placeholder_url
+        except Exception as e:
+            print(f"Error generating placeholder for {text}: {e}")
+            return None
+    
     def download_image(self, url, filename):
         """Download an image from URL and save it to the images directory."""
         try:
-            response = self.session.get(url, timeout=30)
-            response.raise_for_status()
+            req = urllib.request.Request(url)
+            req.add_header('User-Agent', 'Universal Scales Image Downloader (educational project)')
             
-            filepath = self.images_dir / filename
-            with open(filepath, 'wb') as f:
-                f.write(response.content)
+            with urllib.request.urlopen(req, timeout=30) as response:
+                if response.status == 200:
+                    filepath = self.images_dir / filename
+                    with open(filepath, 'wb') as f:
+                        f.write(response.read())
+                    
+                    print(f"Downloaded: {filename}")
+                    return True
             
-            print(f"Downloaded: {filename}")
-            return True
+            return False
             
         except Exception as e:
             print(f"Error downloading {url}: {e}")
@@ -75,16 +164,44 @@ class ImageDownloader:
         
         return f"{safe_dimension.lower()}_{safe_name.lower()}.jpg"
     
+    def find_missing_images(self, yaml_file):
+        """Find all images that are missing for items in a YAML file."""
+        print(f"\nChecking missing images in {yaml_file.name}...")
+        
+        data = parse_yaml_simple(yaml_file)
+        
+        if 'items' not in data or 'dimension' not in data:
+            print(f"No items or dimension found in {yaml_file.name}")
+            return []
+        
+        dimension = data['dimension']
+        missing_images = []
+        
+        for item in data['items']:
+            item_name = item['name']
+            filename = self.sanitize_filename(dimension, item_name)
+            image_path = self.images_dir / filename
+            
+            if not image_path.exists():
+                missing_images.append({
+                    'name': item_name,
+                    'filename': filename,
+                    'dimension': dimension,
+                    'source': item.get('source', '')
+                })
+        
+        print(f"Found {len(missing_images)} missing images for {dimension}")
+        return missing_images
+    
     def process_yaml_file(self, yaml_file):
         """Process a single YAML file and download images for its items."""
         print(f"\nProcessing {yaml_file.name}...")
         
-        with open(yaml_file, 'r', encoding='utf-8') as f:
-            data = yaml.safe_load(f)
+        data = parse_yaml_simple(yaml_file)
         
         if 'items' not in data or 'dimension' not in data:
             print(f"No items or dimension found in {yaml_file.name}")
-            return
+            return 0, 0
         
         dimension = data['dimension']
         downloaded_count = 0
@@ -103,10 +220,21 @@ class ImageDownloader:
                 skipped_count += 1
                 continue
             
-            # Try to get image from Wikipedia
+            # Try multiple approaches to find an image
             image_url = None
+            
+            # 1. Try Wikipedia first
             if 'source' in item and 'wikipedia.org' in item['source']:
                 image_url = self.get_wikipedia_image_url(item['source'])
+            
+            # 2. If no Wikipedia image, try Unsplash search
+            if not image_url:
+                search_query = f"{item_name} {dimension}"
+                image_url = self.search_unsplash_image(search_query)
+            
+            # 3. If still no image, generate a placeholder
+            if not image_url:
+                image_url = self.generate_placeholder_image(filename, item_name)
             
             if image_url:
                 # Download the image
@@ -116,9 +244,10 @@ class ImageDownloader:
                 else:
                     print(f"Failed to download image for {dimension}/{item_name}")
             else:
-                print(f"No Wikipedia image found for {dimension}/{item_name}")
+                print(f"No image found for {dimension}/{item_name}")
         
         print(f"Summary for {dimension}: {downloaded_count} downloaded, {skipped_count} already existed")
+        return downloaded_count, skipped_count
     
     def run(self):
         """Main function to process all YAML files."""
@@ -137,8 +266,31 @@ class ImageDownloader:
         total_downloaded = 0
         total_skipped = 0
         
+        # First, show missing images summary
+        print("\n" + "="*50)
+        print("MISSING IMAGES SUMMARY")
+        print("="*50)
+        
+        all_missing = []
         for yaml_file in yaml_files:
-            self.process_yaml_file(yaml_file)
+            missing = self.find_missing_images(yaml_file)
+            all_missing.extend(missing)
+        
+        if all_missing:
+            print(f"\nTotal missing images: {len(all_missing)}")
+            for missing in all_missing:
+                print(f"  - {missing['dimension']}/{missing['name']} -> {missing['filename']}")
+        else:
+            print("\nAll images are present!")
+        
+        print("\n" + "="*50)
+        print("DOWNLOADING MISSING IMAGES")
+        print("="*50)
+        
+        for yaml_file in yaml_files:
+            downloaded, skipped = self.process_yaml_file(yaml_file)
+            total_downloaded += downloaded
+            total_skipped += skipped
         
         print(f"\nImage download process completed!")
         print(f"Total images downloaded: {total_downloaded}")

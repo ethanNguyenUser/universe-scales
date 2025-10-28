@@ -1,160 +1,670 @@
 base_unit: meters
 dimension: length
-dimension_description: The measurement of distance or extent from one point to another,
-  fundamental to understanding spatial relationships in the universe. This is the
-  most commonly used dimension when comparing the scales of things. See scaleofuniverse.com
-  as an example that also served as an inspiration for this project.
+dimension_description: Length measures the distance between two points, yet it spans everything from the Planck length, where spacetime ripples like quantum foam, to the 93-billion-light-year reach of the observable universe. Across these 61 orders of magnitude, the same physical laws shape quarks, atoms, planets, and galaxies. If the universe were the size of Earth, a human would be smaller than an atom.
 items:
-- description: Characteristic length scale of string theory
+- description: The fundamental length scale in string theory, where quantum strings vibrate
+    in 10-dimensional spacetime. At this scale, space itself becomes 'fuzzy' and
+    quantum fluctuations are so violent that measuring distances shorter than this
+    becomes meaningless. This length emerges from the interplay between quantum
+    mechanics and gravity, offering a potential solution to the black hole
+    information paradox and providing a natural cutoff for the infinite
+    energies that plague quantum field theory.
   name: String Length
   source: https://en.wikipedia.org/wiki/String_theory
   value: 1e-35
-- description: The smallest meaningful length in physics, where quantum gravity effects
-    become significant
+- description: The smallest meaningful distance in physics, where quantum mechanics
+    and general relativity collide. At this scale, spacetime becomes a
+    seething foam of quantum fluctuations, and attempting to measure distances
+    shorter than this would require so much energy that it would create a
+    black hole. This length is derived from fundamental constants and represents
+    the ultimate limit of our current understanding of space and time.
   name: Planck Length
   source: https://en.wikipedia.org/wiki/Planck_length
   value: 1.616e-35
-- description: Charge radius of a proton
+- description: The experimental upper limit on quark size from high-energy collisions
+    at particle accelerators. Quarks are never found alone due to 'color
+    confinement' - the strong force becomes stronger as you try to separate
+    them, like cosmic rubber bands. This size limit represents our current
+    resolution for probing the fundamental building blocks of matter, and
+    any attempt to see smaller would require energies exceeding what
+    current accelerators can achieve.
+  name: Quark
+  source: https://en.wikipedia.org/wiki/Quark
+  value: 4.3e-19
+- description: The electromagnetic 'size' of an electron, calculated from its
+    self-energy interactions. While electrons appear point-like in experiments,
+    this radius represents the scale where electromagnetic effects dominate.
+    Interestingly, if an electron were actually this size, its electrostatic
+    self-energy would exceed its rest mass energy by a factor of 200,000,
+    highlighting the quantum mechanical nature of fundamental particles.
+  name: Electron
+  source: https://en.wikipedia.org/wiki/Electron
+  value: 2.8e-15
+- description: The charge radius of the proton, measured through electron-proton
+    scattering and muonic hydrogen spectroscopy. This measurement sparked the
+    'proton radius puzzle' when muonic hydrogen gave a different result than
+    electronic hydrogen - a discrepancy that challenged quantum electrodynamics
+    and hinted at possible new physics. The proton's internal structure
+    contains three quarks constantly exchanging gluons in a quantum soup.
   name: Proton Radius
   source: https://en.wikipedia.org/wiki/Proton
   value: 8.7e-16
-- description: Bohr radius of hydrogen atom
+- description: The diameter of atomic nuclei, where 99.97% of an atom's mass
+    is concentrated in a space 100,000 times smaller than the atom itself.
+    Nuclear size scales roughly as the cube root of atomic mass, meaning
+    uranium nuclei are only about 6 times larger than hydrogen nuclei despite
+    being 238 times more massive. This incredible density means nuclear
+    matter is 100 trillion times denser than water.
+  name: Atomic Nucleus
+  source: https://en.wikipedia.org/wiki/Atomic_nucleus
+  value: 1e-14
+- description: The quantum mechanical 'size' of neutrinos, the most abundant
+    massive particles in the universe. Trillions of neutrinos pass through
+    your body every second from the Sun, yet they're so weakly interacting
+    that you'd need a light-year of lead to stop half of them. Their tiny
+    mass and ghostly nature make them crucial messengers from stellar
+    cores and supernova explosions.
+  name: Neutrino
+  source: https://en.wikipedia.org/wiki/Neutrino
+  value: 1e-12
+- description: The quantum mechanical 'size' of a hydrogen atom, where the electron
+    exists in a probability cloud around the nucleus. This distance emerges
+    from the balance between electrostatic attraction and quantum uncertainty.
+    Remarkably, if you scaled up a hydrogen atom so its nucleus was the size
+    of a basketball, the electron would orbit at a distance of 2.5 kilometers,
+    illustrating the vast emptiness within atoms.
   name: Hydrogen Atom
   source: https://en.wikipedia.org/wiki/Bohr_radius
   value: 5.3e-11
-- description: Van der Waals radius of carbon
+- description: The van der Waals radius of carbon, defining how close non-bonded
+    atoms can approach before repulsion dominates. This 'personal space' radius
+    is crucial for molecular recognition - enzymes use it to distinguish between
+    different molecules. The carbon atom's versatility comes from its ability
+    to form four bonds, making it the backbone of all organic chemistry and
+    life itself.
   name: Carbon Atom
   source: https://en.wikipedia.org/wiki/Van_der_Waals_radius
   value: 7e-11
-- description: Bond length in water molecule
+- description: The O-H bond length in water, the most important molecule for life.
+    This precise distance creates water's unique properties - its high boiling
+    point, surface tension, and ability to dissolve salts. Water's bent geometry
+    makes it polar, allowing it to form hydrogen bonds that give ice its
+    unusual property of being less dense than liquid water, crucial for
+    aquatic life in cold climates.
   name: Water Molecule
   source: https://en.wikipedia.org/wiki/Water
   value: 2.75e-10
-- description: Width of DNA double helix
-  name: DNA Helix Width
-  source: https://en.wikipedia.org/wiki/DNA
-  value: 2e-9
-- description: Approximate size of glucose molecule
+- description: The size of a glucose molecule, the primary fuel for cellular
+    respiration. This sugar's compact structure allows it to efficiently
+    store chemical energy - one glucose molecule can power a cell for
+    several minutes. The molecule's size is optimized for transport
+    through cell membranes and interaction with metabolic enzymes.
+    Interestingly, glucose exists in multiple ring forms, with this
+    size representing the most stable configuration in solution.
   name: Glucose Molecule
   source: https://en.wikipedia.org/wiki/Glucose
   value: 1e-9
-- description: Size of small proteins like insulin
+- description: The diameter of DNA's double helix, the molecular blueprint of life.
+    This remarkably consistent width accommodates the universal genetic code
+    across all species. The helix's major groove provides access for proteins
+    to read genetic information, while the minor groove offers binding sites
+    for regulatory molecules. This precise dimension has remained constant
+    through billions of years of evolution, reflecting the fundamental
+    constraints of molecular biology.
+  name: DNA Helix Width
+  source: https://en.wikipedia.org/wiki/DNA
+  value: 2e-9
+- description: The size of small proteins like insulin, molecular machines that
+    perform specific cellular functions. Proteins fold into precise shapes
+    determined by their amino acid sequence - a single wrong amino acid can
+    cause diseases like sickle cell anemia. This size represents the optimal
+    balance between stability and flexibility, allowing proteins to interact
+    with other molecules while maintaining their functional structure.
+    Remarkably, proteins can fold from random coils to precise shapes in
+    microseconds.
   name: Protein (Small)
   source: https://en.wikipedia.org/wiki/Protein
   value: 5e-9
-- description: Size of typical virus
+- description: The size of typical viruses, biological entities that blur the
+    line between living and non-living. Viruses are essentially genetic
+    material wrapped in protein coats, hijacking cellular machinery to
+    reproduce. Their small size allows them to penetrate cells through
+    endocytosis, while their protein shells protect their genetic material
+    from environmental damage. Some viruses are so small they can pass
+    through filters designed to remove bacteria.
   name: Virus
   source: https://en.wikipedia.org/wiki/Virus
   value: 1e-8
-- description: Length of E. coli bacteria
+- description: The wavelength of green light, the peak sensitivity of human vision.
+    This wavelength defines the resolution limit of optical microscopes and
+    explains why we can't see individual atoms with visible light. The
+    evolution of color vision in primates was driven by the need to
+    distinguish ripe fruits from foliage, with green being the most
+    common color in nature. This wavelength also determines the
+    diffraction patterns that create the iridescent colors in
+    butterfly wings and soap bubbles.
+  name: Visible Light Wavelength
+  source: https://en.wikipedia.org/wiki/Visible_spectrum
+  value: 5e-7
+- description: The length of E. coli bacteria, the workhorse of molecular biology.
+    These rod-shaped microbes can reproduce every 20 minutes under ideal
+    conditions, meaning a single bacterium could theoretically produce
+    more offspring than there are atoms in the observable universe in
+    just two days. Their streamlined shape optimizes nutrient absorption
+    and allows them to swim efficiently through viscous environments
+    using rotating flagella.
   name: Bacteria
   source: https://en.wikipedia.org/wiki/Escherichia_coli
   value: 2e-6
-- description: Diameter of human red blood cell
+- description: The diameter of red blood cells, the oxygen carriers of the human
+    body. These cells lack nuclei to maximize space for hemoglobin, the
+    protein that binds oxygen. Their biconcave shape increases surface area
+    for gas exchange while allowing them to squeeze through capillaries
+    narrower than their own diameter. Remarkably, an adult human has about
+    25 trillion red blood cells, and they complete a full circuit of the
+    body in just 20 seconds.
   name: Red Blood Cell
   source: https://en.wikipedia.org/wiki/Red_blood_cell
   value: 8e-6
-- description: Diameter of typical neuron cell body
+- description: The size of mitochondria, the powerhouses of cells. These organelles
+    contain their own DNA, suggesting they were once free-living bacteria that
+    became symbiotic partners. They produce ATP through cellular respiration,
+    generating enough energy to power a cell's activities. Interestingly,
+    mitochondria can fuse together and split apart, and they're inherited
+    only from the mother, making them useful for tracing maternal ancestry.
+  name: Mitochondrion
+  source: https://en.wikipedia.org/wiki/Mitochondrion
+  value: 1e-5
+- description: The size of neuron cell bodies, the command centers of the nervous
+    system. These cells can have axons extending over a meter long while
+    maintaining electrical signals. Neurons communicate through synapses,
+    where neurotransmitters cross tiny gaps in milliseconds. The brain
+    contains about 86 billion neurons, each connecting to thousands of
+    others, creating the most complex network known in the universe.
   name: Neuron
   source: https://en.wikipedia.org/wiki/Neuron
   value: 1e-4
-- description: Diameter of human hair
+- description: The diameter of human hair, a remarkable biological fiber that
+    grows continuously throughout life. Hair is stronger than steel by weight
+    and can stretch up to 30% before breaking. Each hair follicle cycles
+    through growth phases lasting 2-7 years, which is why hair can grow
+    so long. The diameter varies by ethnicity, with Asian hair typically
+    being thicker than European hair, and red hair being the thickest.
   name: Human Hair
   source: https://en.wikipedia.org/wiki/Hair
   value: 1e-4
-- description: Diameter of fine sand grain
+- description: The size of sand grains, the building blocks of beaches and deserts.
+    Sand forms through the weathering of rocks over millions of years,
+    with each grain representing a tiny piece of geological history.
+    The size determines how sand behaves - fine sand flows like liquid
+    when dry but becomes solid when wet, while coarse sand maintains
+    its shape. Remarkably, there are more grains of sand on Earth than
+    there are stars in the observable universe.
   name: Grain of Sand
   source: https://en.wikipedia.org/wiki/Sand
   value: 1e-3
-- description: Length of typical ant
+- description: The length of worker ants, among the most successful insects on Earth.
+    Ants can carry objects 50 times their own weight and work together in
+    colonies of millions. They communicate through chemical trails and can
+    navigate using the Earth's magnetic field. Some species farm fungi,
+    while others keep aphids as livestock. The total biomass of ants
+    on Earth exceeds that of all humans combined.
   name: Ant
   source: https://en.wikipedia.org/wiki/Ant
   value: 5e-3
-- description: Average human height
+- description: The length of domestic cats, perfectly sized predators that
+    have adapted to live alongside humans. Cats are obligate carnivores
+    with retractable claws and exceptional night vision. They can rotate
+    their ears 180 degrees and hear frequencies up to 65 kHz, far beyond
+    human hearing. Remarkably, cats purr at frequencies that promote
+    bone healing, and they spend 12-16 hours per day sleeping.
+  name: Cat Length
+  source: https://en.wikipedia.org/wiki/Cat
+  value: 5e-2
+- description: The length of houseflies, masterful fliers that can hover,
+    fly backwards, and perform aerial acrobatics. Their compound eyes
+    contain 4,000 lenses and can detect movement 10 times faster than
+    human eyes. Flies taste with their feet and can walk on ceilings
+    using tiny hairs and adhesive pads. They're vectors for over 100
+    diseases, making them one of humanity's deadliest enemies.
+  name: Housefly
+  source: https://en.wikipedia.org/wiki/Housefly
+  value: 7e-3
+- description: The wingspan of monarch butterflies, champions of long-distance
+    migration. These insects travel up to 3,000 miles from Canada to Mexico,
+    using the Sun's position and Earth's magnetic field for navigation.
+    Their orange and black pattern warns predators of their toxicity,
+    while their wings contain scales that create iridescent colors through
+    light interference. Remarkably, the migration takes multiple generations
+    to complete.
+  name: Butterfly Wingspan
+  source: https://en.wikipedia.org/wiki/Monarch_butterfly
+  value: 1e-1
+- description: The average height of humans, a species that walks upright on two legs.
+    This bipedal stance freed our hands for tool use and allowed us to see
+    over tall grass on the African savanna. Human height varies dramatically
+    across populations due to genetics, nutrition, and environment. The
+    tallest recorded human was 8 feet 11 inches, while the shortest was
+    1 foot 9 inches. Height affects everything from health outcomes to
+    social perceptions and career success.
   name: Human Height
   source: https://en.wikipedia.org/wiki/Human_height
   value: 1.7
-- description: Length of blue whale
+- description: The height of male giraffes, the tallest living animals on Earth.
+    Their incredible height allows them to browse leaves 20 feet above ground,
+    accessing food unavailable to other herbivores. Giraffes have the same
+    number of neck vertebrae as humans (seven), but each one is 10 inches long.
+    Their hearts pump blood 6 feet uphill to reach their brains, requiring
+    blood pressure twice that of humans and special valves to prevent
+    fainting when they lower their heads.
+  name: Giraffe Height
+  source: https://en.wikipedia.org/wiki/Giraffe
+  value: 5.5
+- description: The length of blue whales, the largest animals ever to live on Earth.
+    These marine giants can weigh up to 200 tons and consume 4 tons of krill
+    daily. Their hearts are the size of small cars and beat only twice per
+    minute. Blue whales communicate across entire ocean basins using
+    low-frequency sounds that travel thousands of miles underwater.
+    Despite their massive size, they feed on tiny shrimp-like krill.
   name: Blue Whale
   source: https://en.wikipedia.org/wiki/Blue_whale
   value: 30
-- description: Length of American football field
+- description: The length of American football fields, standardized playing surfaces
+    that have become cultural landmarks. The field's dimensions were designed
+    to balance offense and defense, creating strategic depth while maintaining
+    spectator visibility. Interestingly, the field is exactly 100 yards
+    long, but with end zones it spans 120 yards total. This length has
+    remained constant since the sport's early days, making it one of the
+    most consistent measurements in professional sports.
   name: Football Field
   source: https://en.wikipedia.org/wiki/American_football_field
   value: 100
-- description: Height of Eiffel Tower
+- description: The height of the Eiffel Tower, an iron lattice structure that
+    was initially criticized but became the symbol of Paris. Built for the
+    1889 World's Fair, it was the tallest human-made structure for 41 years.
+    The tower expands 6 inches in summer heat and contracts in winter cold.
+    It weighs 10,100 tons but exerts the same pressure on the ground as
+    a person sitting in a chair. Over 300 million people have visited
+    this engineering marvel.
   name: Eiffel Tower
   source: https://en.wikipedia.org/wiki/Eiffel_Tower
   value: 330
-- description: Height of Mount Everest
+- description: The height of the Burj Khalifa, the world's tallest building that
+    pierces the sky at over half a mile high. This architectural marvel uses
+    a bundled tube design inspired by desert flowers, with setbacks that
+    reduce wind loads. The building contains 57 elevators and can sway
+    up to 2 meters in strong winds. At the top, temperatures are 10
+    degrees cooler than ground level, and the air pressure is 20%
+    lower than at sea level.
+  name: Burj Khalifa
+  source: https://en.wikipedia.org/wiki/Burj_Khalifa
+  value: 828
+- description: The height of Mount Everest, Earth's highest peak that continues
+    growing 1 centimeter per year due to tectonic plate collision. At this
+    altitude, the air contains only one-third the oxygen of sea level,
+    making it the 'death zone' where human survival becomes impossible
+    without supplemental oxygen. The mountain's height was first measured
+    in 1856, and over 300 people have died attempting to reach its summit.
+    The peak is actually moving northeast at 4 centimeters per year.
   name: Mount Everest
   source: https://en.wikipedia.org/wiki/Mount_Everest
   value: 8848
-- description: Depth of Mariana Trench
+- description: The depth of the Mariana Trench, Earth's deepest point where
+    pressure reaches 1,000 times that at sea level. At this crushing depth,
+    water temperature is near freezing and sunlight never reaches. Yet life
+    thrives here - giant amphipods, pressure-resistant fish, and bacteria
+    that feed on chemicals from hydrothermal vents. The trench is deeper
+    than Mount Everest is tall, and only three people have ever reached
+    its bottom.
   name: Mariana Trench
   source: https://en.wikipedia.org/wiki/Mariana_Trench
   value: 11000
-- description: Diameter of Earth
+- description: The diameter of Manhattan Island, a tiny sliver of land that
+    houses over 1.6 million people and generates more economic output than
+    most countries. This densely packed urban environment contains 1,000
+    buildings over 100 meters tall and processes 2.5 million subway riders
+    daily. The island's narrow shape forced vertical development, creating
+    the iconic skyline that defines New York City. Despite its small size,
+    Manhattan's real estate value exceeds $3 trillion.
+  name: Manhattan Island
+  source: https://en.wikipedia.org/wiki/Manhattan
+  value: 20000
+- description: The length of marathon races, a distance born from ancient Greek
+    legend. The original marathon commemorates Pheidippides' run from Marathon
+    to Athens to announce victory over Persia. This distance represents the
+    limit of human endurance without specialized equipment - most people
+    can walk this far, but running requires months of training. The marathon
+    has become a global phenomenon, with over 800 marathons held worldwide
+    annually, attracting millions of participants.
+  name: Marathon Distance
+  source: https://en.wikipedia.org/wiki/Marathon
+  value: 42195
+- description: The length of the Panama Canal, an engineering marvel that
+    revolutionized global trade by eliminating the need to sail around
+    South America. This artificial waterway uses a system of locks to
+    lift ships 26 meters above sea level, saving ships 8,000 miles
+    of dangerous journey. The canal handles 5% of global trade and
+    generates $2 billion annually. It took 75,000 workers and 10 years
+    to complete, with over 25,000 deaths during construction.
+  name: Panama Canal
+  source: https://en.wikipedia.org/wiki/Panama_Canal
+  value: 82000
+- description: The length of the Amazon River, Earth's mightiest waterway that
+    carries more water than the next seven largest rivers combined. This
+    river system drains 40% of South America and discharges 200,000
+    cubic meters of water per second into the Atlantic. The Amazon
+    contains 20% of the world's fresh water and supports 10% of Earth's
+    biodiversity. Its length is disputed because it has multiple sources,
+    but it's generally considered the world's longest river.
+  name: Amazon River
+  source: https://en.wikipedia.org/wiki/Amazon_River
+  value: 7000000
+- description: The length of the Great Wall of China, a massive defensive structure
+    built over 2,000 years to protect against nomadic invasions. This ancient
+    wonder is actually a series of walls built by different dynasties, with
+    some sections dating back to the 7th century BC. The wall is wide enough
+    for five horses to ride abreast and contains watchtowers every 200 meters.
+    Despite its reputation, the wall was never completely effective at stopping
+    invaders, but it remains one of humanity's most ambitious construction projects.
+  name: Great Wall of China
+  source: https://en.wikipedia.org/wiki/Great_Wall_of_China
+  value: 21000000
+- description: The diameter of Earth, our home planet that orbits the Sun
+    at 67,000 mph while rotating at 1,000 mph at the equator. Earth is
+    slightly flattened at the poles due to its rotation, making it an
+    oblate spheroid rather than a perfect sphere. This diameter determines
+    Earth's gravity, atmospheric retention, and climate patterns. If Earth
+    were compressed to the size of a basketball, its surface would be
+    smoother than the ball itself, with mountains and ocean trenches
+    representing tiny imperfections.
   name: Earth Diameter
   source: https://en.wikipedia.org/wiki/Earth
   value: 1.27e7
-- description: Diameter of Jupiter
+- description: The distance to the Moon, Earth's closest celestial neighbor
+    that influences our tides, stabilizes our rotation, and lights our nights.
+    This distance varies by 50,000 km due to the Moon's elliptical orbit,
+    creating supermoons and micromoons. The Moon is slowly drifting away
+    at 3.8 cm per year, meaning it was much closer in ancient times.
+    Twelve people have walked on the Moon, and it's the only celestial
+    body humans have visited beyond Earth.
+  name: Earth-Moon Distance
+  source: https://en.wikipedia.org/wiki/Lunar_distance_(astronomy)
+  value: 3.84e8
+- description: The diameter of Jupiter, the solar system's largest planet that
+    acts as a cosmic vacuum cleaner, protecting Earth from asteroids and comets.
+    This gas giant contains more mass than all other planets combined and
+    has a Great Red Spot storm larger than Earth. Jupiter's massive gravity
+    influences the orbits of other planets and has 95 known moons, including
+    Europa, which may harbor life beneath its icy surface.
   name: Jupiter Diameter
   source: https://en.wikipedia.org/wiki/Jupiter
   value: 1.4e8
-- description: Diameter of the Sun
+- description: The diameter of the Sun, our star that converts 600 million
+    tons of hydrogen into helium every second, releasing energy equivalent
+    to 100 billion nuclear bombs. This nuclear fusion process has been
+    ongoing for 4.6 billion years and will continue for another 5 billion
+    years. The Sun contains 99.86% of the solar system's mass and generates
+    enough energy in one second to power human civilization for 500,000 years.
   name: Sun Diameter
   source: https://en.wikipedia.org/wiki/Sun
   value: 1.39e9
-- description: Diameter of solar system (to Neptune)
+- description: The distance from Earth to the Sun, known as one astronomical
+    unit - the yardstick of the solar system. This distance defines the
+    habitable zone where liquid water can exist, making Earth perfectly
+    positioned for life. Light takes 8 minutes and 20 seconds to travel
+    this distance, meaning we see the Sun as it was 8 minutes ago.
+    This distance varies by 5 million km due to Earth's elliptical orbit,
+    affecting our seasons and climate.
+  name: Astronomical Unit
+  source: https://en.wikipedia.org/wiki/Astronomical_unit
+  value: 1.5e11
+- description: The diameter of Betelgeuse, a red supergiant star that could
+    explode as a supernova within the next 100,000 years. This massive
+    star is so large that if placed at the center of our solar system,
+    it would extend beyond Jupiter's orbit. Betelgeuse is one of the
+    brightest stars in the night sky and appears red due to its cool
+    surface temperature. When it explodes, it will be visible during
+    daylight and brighter than the full Moon.
+  name: Betelgeuse Diameter
+  source: https://en.wikipedia.org/wiki/Betelgeuse
+  value: 1e12
+- description: The diameter of our solar system, a vast region dominated
+    by the Sun's gravitational influence. This space contains eight planets,
+    hundreds of moons, millions of asteroids, and trillions of comets.
+    The solar system formed 4.6 billion years ago from a collapsing
+    cloud of gas and dust. Despite its enormous size, the solar system
+    is just a tiny speck in our galaxy, which contains 100 billion
+    other solar systems.
   name: Solar System
   source: https://en.wikipedia.org/wiki/Solar_System
   value: 1.2e13
-- description: Distance to nearest star
+- description: The diameter of the heliosphere, the protective bubble of
+    solar wind that shields our solar system from cosmic radiation.
+    This bubble extends far beyond Pluto and acts as a barrier against
+    the harsh interstellar environment. The heliosphere's shape changes
+    as the Sun moves through the galaxy, creating a comet-like tail
+    that extends for billions of kilometers. Only two spacecraft,
+    Voyager 1 and 2, have ever left this protective bubble.
+  name: Heliosphere
+  source: https://en.wikipedia.org/wiki/Heliosphere
+  value: 2.4e14
+- description: The radius of the Oort Cloud, a vast shell of icy objects
+    that marks the true boundary of our solar system. This distant region
+    contains trillions of comets and extends halfway to the nearest star.
+    The Oort Cloud is the source of long-period comets that occasionally
+    visit the inner solar system. These icy bodies are pristine remnants
+    from the solar system's formation, preserving the original composition
+    of the protoplanetary disk.
+  name: Oort Cloud
+  source: https://en.wikipedia.org/wiki/Oort_cloud
+  value: 1e15
+- description: The distance to Proxima Centauri, our nearest stellar neighbor
+    that hosts an Earth-sized planet in its habitable zone. This red dwarf
+    star is part of the Alpha Centauri triple star system and is 4.24
+    light-years away. At current spacecraft speeds, it would take 75,000
+    years to reach Proxima Centauri. This star is much smaller and cooler
+    than our Sun, but its planet Proxima b could potentially harbor life.
   name: Proxima Centauri
   source: https://en.wikipedia.org/wiki/Proxima_Centauri
-  value: 2.1e11
-- description: Diameter of Milky Way galaxy
+  value: 4e16
+- description: The size of the Orion Nebula, a stellar nursery visible to the
+    naked eye where hundreds of new stars are being born. This massive cloud
+    of gas and dust contains enough material to form 2,000 Sun-like stars.
+    The nebula glows because young, hot stars ionize the surrounding hydrogen
+    gas. It's one of the most studied objects in astronomy and provides
+    insights into how solar systems like ours form from collapsing clouds.
+  name: Orion Nebula
+  source: https://en.wikipedia.org/wiki/Orion_Nebula
+  value: 2.4e17
+- description: The size of the Pillars of Creation, iconic cosmic structures
+    made famous by the Hubble Space Telescope. These towering columns of
+    gas and dust are being sculpted by stellar winds from nearby massive
+    stars. The pillars contain dozens of embryonic stars hidden within
+    their dense cores. Despite their name, these structures are actually
+    being destroyed by radiation - they may have already been blown away
+    by a supernova explosion 6,000 years ago.
+  name: Pillars of Creation
+  source: https://en.wikipedia.org/wiki/Pillars_of_Creation
+  value: 5e18
+- description: The size of the Tarantula Nebula, the most active stellar
+    nursery in our galactic neighborhood. This massive star-forming region
+    in the Large Magellanic Cloud produces stars at a rate 10 times higher
+    than our entire Milky Way galaxy. The nebula contains some of the most
+    massive stars known, including R136a1, which is 300 times more massive
+    than the Sun. This intense star formation creates spectacular light
+    shows visible across vast distances.
+  name: Tarantula Nebula
+  source: https://en.wikipedia.org/wiki/Tarantula_Nebula
+  value: 9e18
+- description: The size of the Carina Nebula, a massive stellar factory
+    containing some of the most massive and luminous stars in our galaxy.
+    This nebula is home to Eta Carinae, a binary star system that's 5
+    million times brighter than the Sun and may explode as a supernova
+    within the next million years. The nebula's complex structures include
+    dark dust lanes, bright star clusters, and vast regions of ionized
+    gas sculpted by stellar winds.
+  name: Carina Nebula
+  source: https://en.wikipedia.org/wiki/Carina_Nebula
+  value: 3e20
+- description: The diameter of the Milky Way, our home galaxy containing
+    100-400 billion stars orbiting a supermassive black hole. Our solar
+    system orbits the galactic center at 220 km/s, completing one
+    revolution every 230 million years. The galaxy's spiral arms contain
+    most of its stars and gas, while the central bulge contains older
+    stars. The Milky Way is on a collision course with the Andromeda
+    Galaxy, which will merge with us in 4.5 billion years.
   name: Galaxy Diameter
   source: https://en.wikipedia.org/wiki/Milky_Way
   value: 1e21
-- description: Diameter of Local Group of galaxies
+- description: The distance to the Andromeda Galaxy, our nearest major galactic
+    neighbor that's approaching us at 110 km/s. This massive spiral galaxy
+    contains over a trillion stars and is twice the size of the Milky Way.
+    Andromeda is visible to the naked eye as a faint smudge in the night
+    sky. In 4.5 billion years, it will collide with our galaxy, creating
+    a new elliptical galaxy called Milkomeda. The collision will dramatically
+    reshape both galaxies but stars are so far apart that direct collisions
+    are unlikely.
+  name: Andromeda Distance
+  source: https://en.wikipedia.org/wiki/Andromeda_Galaxy
+  value: 2.5e22
+- description: The diameter of the Local Group, our galactic neighborhood
+    containing about 50 galaxies bound together by gravity. This group
+    is dominated by the Milky Way and Andromeda galaxies, which together
+    contain 90% of the group's mass. The Local Group is falling toward
+    the Virgo Cluster at 600 km/s due to dark matter's gravitational
+    pull. Despite its name, this group spans millions of light-years
+    and represents our cosmic backyard in the vast universe.
   name: Local Group
   source: https://en.wikipedia.org/wiki/Local_Group
   value: 1e23
-- description: Diameter of observable universe
+- description: The size of the Virgo Supercluster, a massive collection of
+    galaxy groups containing thousands of galaxies. This structure contains
+    about 100 galaxy groups and clusters with a total mass of 10^15
+    solar masses. The Virgo Supercluster is falling toward the Great
+    Attractor, a mysterious region of space that's pulling galaxies
+    toward it. This represents the largest coherent structures in the
+    universe before cosmic expansion dominates over gravitational
+    attraction.
+  name: Virgo Supercluster
+  source: https://en.wikipedia.org/wiki/Virgo_Supercluster
+  value: 1e23
+- description: The size of the Laniakea Supercluster, our cosmic home that
+    contains 100,000 galaxies including our Milky Way. This Hawaiian-named
+    structure means 'immeasurable heaven' and represents the largest
+    gravitationally bound system we belong to. Laniakea contains a mass
+    of 10^17 solar masses and shows how galaxies flow toward its center
+    like water flowing downhill. This supercluster is part of an even
+    larger cosmic web that spans the observable universe.
+  name: Laniakea Supercluster
+  source: https://en.wikipedia.org/wiki/Laniakea_Supercluster
+  value: 5e23
+- description: The length of the Sloan Great Wall, one of the largest
+    structures in the observable universe. This massive filament contains
+    thousands of galaxy clusters arranged in a wall-like formation
+    spanning billions of light-years. The wall's discovery challenged
+    our understanding of cosmic structure formation, as it seemed
+    too large to have formed in the time since the Big Bang.
+    This structure represents the cosmic web's filamentary nature,
+    where galaxies cluster along vast interconnected threads.
+  name: Sloan Great Wall
+  source: https://en.wikipedia.org/wiki/Sloan_Great_Wall
+  value: 4e24
+- description: The length of the Hercules-Corona Borealis Great Wall, the
+    largest known structure in the observable universe. This immense
+    filament spans 10 billion light-years and contains billions of
+    galaxies arranged in a wall-like formation. The wall's discovery
+    challenged cosmological theories because it appeared too large
+    to have formed through gravitational collapse alone. This structure
+    represents the ultimate scale of cosmic organization and may
+    require new physics to explain its formation.
+  name: Hercules-Corona Borealis Great Wall
+  source: https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall
+  value: 1e25
+- description: The diameter of the observable universe, the ultimate limit
+    of what we can see. This boundary exists because light has only
+    had 13.8 billion years to travel since the Big Bang. Beyond this
+    distance, objects are receding faster than light can reach us
+    due to cosmic expansion. The observable universe contains about
+    2 trillion galaxies and represents only a tiny fraction of
+    the entire universe, which may be infinite in extent. This
+    diameter defines the horizon of human knowledge about
+    cosmic reality.
   name: Observable Universe
   source: https://en.wikipedia.org/wiki/Observable_universe
   value: 8.8e26
 units:
 - conversion_factor: 1
-  description: The base unit of length in the International System of Units (SI).
-    Originally defined as one ten-millionth of the distance from the equator to the
-    North Pole.
+  description: The fundamental unit of length, defined as the distance light travels
+    in vacuum during 1/299,792,458 seconds. This definition makes the meter
+    a universal constant based on the speed of light, ensuring precision across
+    all scientific measurements. The meter serves as the reference for all other
+    length units and forms the foundation for dimensional analysis in physics
+    and engineering. Remarkably, this definition means the speed of light is
+    exactly 299,792,458 meters per second by definition.
   name: meters
   symbol: m
 - conversion_factor: 3.28084
-  description: A unit of length in the imperial system, commonly used in the United
-    States. One foot equals 12 inches.
+  description: A unit of length in the imperial system, originally based on
+    the length of a human foot. This practical unit is defined as exactly
+    0.3048 meters through international agreement. The foot is widely used
+    in construction, aviation, and maritime applications, particularly
+    in the United States. Interestingly, the foot was standardized in
+    1959 when the international yard was redefined, making it exactly
+    12 inches. This unit provides a convenient scale for human-scale
+    measurements and remains deeply embedded in American culture.
   name: feet
   symbol: ft
 - conversion_factor: 39.3701
-  description: A small unit of length in the imperial system, commonly used for precise
-    measurements. There are 12 inches in one foot.
+  description: A unit of length in the imperial system, defined as exactly
+    25.4 millimeters through international standardization. The inch provides
+    high precision for measurements requiring fine resolution, particularly
+    in manufacturing, engineering, and scientific applications. This unit
+    is derived from the width of a human thumb and has been standardized
+    across different measurement systems. The inch serves as a fundamental
+    building block for larger imperial units and enables precise
+    dimensional specifications. Interestingly, the inch was redefined
+    in 1959 to be exactly 2.54 centimeters, creating a precise
+    metric conversion.
   name: inches
   symbol: in
 - conversion_factor: 0.001
-  description: A metric unit of length equal to 1,000 meters. Commonly used for measuring
-    distances on Earth.
+  description: A metric unit of length equal to 1,000 meters, representing
+    the most commonly used unit for terrestrial distances. The kilometer
+    provides an optimal scale for measuring distances on Earth, from
+    city blocks to continental spans. This unit is fundamental to
+    transportation, geography, and Earth sciences, enabling precise
+    navigation and spatial analysis. The kilometer serves as the
+    standard unit for expressing distances in most countries
+    worldwide. Interestingly, the kilometer was originally defined
+    as 1/10,000 of the distance from the North Pole to the Equator
+    through Paris.
   name: kilometers
   symbol: km
 - conversion_factor: 0.000621371
-  description: A unit of length in the imperial system. One mile equals 5,280 feet
-    or 1,609 meters. Commonly used for travel distances.
+  description: A unit of length in the imperial system, defined as exactly
+    1,609.344 meters through international standardization. The mile
+    represents a practical unit for measuring longer distances,
+    particularly in transportation and navigation applications.
+    This unit is derived from the Roman 'mille passus' (thousand paces)
+    and has evolved into a standard measure for road distances,
+    speed limits, and athletic competitions. The mile remains
+    deeply embedded in American culture, with phrases like
+    'miles per hour' and 'miles per gallon' being everyday
+    expressions. Interestingly, the nautical mile is different,
+    being based on one minute of latitude.
   name: miles
   symbol: mi
 - conversion_factor: 1.057e-16
-  description: The distance that light travels in one year in a vacuum, approximately
-    9.46 trillion kilometers. Used to measure astronomical distances.
+  description: A unit of astronomical distance representing the distance
+    traveled by light in vacuum during one Julian year (365.25 days).
+    The light-year provides a natural scale for measuring interstellar
+    and intergalactic distances, where conventional units become
+    impractical. This unit is fundamental to astronomy and cosmology,
+    enabling precise measurements of stellar distances, galactic
+    dimensions, and cosmic expansion. The light-year represents
+    both a distance and a time measurement, reflecting the
+    finite speed of light in the universe. Interestingly, when
+    we look at stars, we're seeing them as they were years
+    or even millennia ago due to light travel time.
   name: light-years
   symbol: ly

@@ -124,6 +124,31 @@ select:focus {
     transform: scale(1.05);
 }
 
+.music-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.music-toggle:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.05);
+}
+
+.music-toggle.playing {
+    background-color: var(--accent-color);
+    color: white;
+}
+
 /* Description Styles */
 .dimension-description {
     text-align: center;
@@ -212,7 +237,7 @@ select:focus {
     transform: translateY(-10px);
     transition: opacity 0.2s ease, transform 0.2s ease;
     z-index: 1000;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .tooltip.visible {
@@ -230,7 +255,7 @@ select:focus {
 .tooltip-image {
     width: 100%;
     height: auto;
-    max-height: 200px;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0.75rem;
