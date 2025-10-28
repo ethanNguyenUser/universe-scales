@@ -1,93 +1,97 @@
 base_unit: newtons
 dimension: force
-dimension_description: A push or pull that can cause an object to accelerate, fundamental
-  to understanding interactions between objects
+dimension_description: Force quantifies how strongly an interaction changes motion or shape, linking directly to acceleration by Newton’s second law. In contact problems it is the agency behind pushes, pulls, and pressures; at a distance it expresses gravity and electromagnetism. Engineers budget forces to keep bridges stable and joints safe. Each entry below states the object and condition so the number is actionable, not abstract.
 items:
-- description: Force between molecules
+- description: Intermolecular attractions in liquids and soft solids often manifest at piconewton scales per interacting pair. This is the regime probed by optical tweezers and single molecule experiments. Such forces set surface tension and viscosity that we experience in droplets and gels. The value represents a typical cohesive tug between nearby molecules.
   name: Molecular Force
   source: https://en.wikipedia.org/wiki/Intermolecular_force
   value: 1e-12
-- description: Force in atomic interactions
+- description: Atomic force microscopy measures nanonewton level tipsurface forces as a cantilever skims a surface. The interaction includes van der Waals, electrostatic, and sometimes chemical bonding contributions. Mapping these tiny forces builds images one atom wide. The number here is a representative contact force in gentle AFM tapping mode.
   name: Atomic Force
   source: https://en.wikipedia.org/wiki/Atomic_force_microscopy
   value: 1e-9
-- description: Force exerted by ant
+- description: An ant’s leg can exert a millinewton scale force while carrying a crumb relative to its body mass. Leveraged by multiple legs the insect achieves impressive load fractions. The force per leg pulses with gait, not steady like a motor. This figure captures a single leg contact during a step.
   name: Ant Force
   source: https://en.wikipedia.org/wiki/Ant
   value: 0.001
-- description: Force of human finger press
-  name: Human Finger
-  source: https://en.wikipedia.org/wiki/Finger
-  value: 10
-- description: Force of human bite
-  name: Human Bite
-  source: https://en.wikipedia.org/wiki/Bite_force_quotient
-  value: 1000
-- description: Force of firm handshake
+- description: Pressing a key on a mechanical keyboard often requires around this force at the finger pad at actuation. Human fingertips control such forces with high precision using tactile feedback. Prolonged work comfort depends on keeping this below fatigue thresholds. The number corresponds to medium switch springs.
+  name: Keyboard Keypress
+  source: https://en.wikipedia.org/wiki/Computer_keyboard
+  value: 0.5
+- description: A firm handshake produces a sustained grip force of this order per hand for an average adult. Social norms modulate it within a wide comfortable band. Force sensors show brief spikes at initial contact and release. The value is a steady mid portion, not the peak squeeze.
   name: Handshake
   source: https://en.wikipedia.org/wiki/Handshake
   value: 50
-- description: Force applied to car brake
+- description: Biting a carrot uses hundreds of newtons at the molars for a brief crush. Muscles generate the force through a lever system that trades distance for advantage. Diet and training affect peak values only modestly. The figure is an average adult bite under deliberate effort.
+  name: Human Bite
+  source: https://en.wikipedia.org/wiki/Bite_force_quotient
+  value: 1000
+- description: A typical car brake pedal can transmit a few kilonewtons to the hydraulic system when a driver stomps in an emergency. Booster systems scale the foot input to caliper clamping force. Anti lock control modulates it rapidly to keep traction. The number is a representative pedal to master cylinder load.
   name: Car Brake
   source: https://en.wikipedia.org/wiki/Brake
   value: 3000
-- description: Force in weight lifting
+- description: A competitive weightlifter holding a 200 kilogram bar at rest supports roughly this downward force through the skeleton. The bar’s motion adds dynamic peaks beyond the static weight. Training centers design platforms and collars with these loads in mind. The figure quotes the sustained portion during a clean hold.
   name: Weight Lifter
   source: https://en.wikipedia.org/wiki/Weightlifting
   value: 2000
-- description: Force from car engine
+- description: The tractive push at the wheels of a compact car during strong acceleration totals around this many newtons. Engine torque, gear ratio, and tire radius all contribute. Traction limits, not engine power alone, cap the usable force. The value reflects a brief burst merging into traffic.
   name: Car Engine
   source: https://en.wikipedia.org/wiki/Internal_combustion_engine
   value: 10000
-- description: Force from hydraulic press
+- description: A shop hydraulic press concentrates input into a compressive force reaching about a meganewton on a small workpiece. Dies and fixtures must distribute it to avoid cracking. Safety cages exist because stored energy can release abruptly. The number is a practical mid size press capacity.
   name: Hydraulic Press
   source: https://en.wikipedia.org/wiki/Hydraulic_press
   value: 1000000
-- description: Force from construction crane
+- description: A tower crane can lift loads with cable tensions summing to this many newtons without overstress. Operators derate with radius because torque at the mast grows with reach. Wind side loads add vector components that must be considered. The figure is a round number for heavy picks at close radius.
   name: Crane
   source: https://en.wikipedia.org/wiki/Crane_(machine)
   value: 10000000
-- description: Force from strong wind
+- description: A strong gust on a pedestrian exerts around a kilonewton of horizontal drag integrated over body area. Leaning and planting feet counters this to avoid slipping. Urban canyons can funnel and amplify such forces. The number matches a stormy day that turns umbrellas inside out.
   name: Wind Force
   source: https://en.wikipedia.org/wiki/Wind
   value: 1000
-- description: Force in major earthquake
-  name: Earthquake
-  source: https://en.wikipedia.org/wiki/Earthquake
-  value: 1e12
-- description: Force from hurricane
-  name: Hurricane
-  source: https://en.wikipedia.org/wiki/Hurricane
-  value: 1e15
-- description: Thrust force of rocket
+- description: Ground reaction forces during a jump landing can spike to several times body weight over milliseconds, totaling thousands of newtons. Good shoes and bent knees stretch the impulse out in time. Force plates in sports labs measure these peaks to tune training. The figure quotes a single foot impact for an adult athlete.
+  name: Jump Landing Peak
+  source: https://en.wikipedia.org/wiki/Ground_reaction_force
+  value: 4000
+- description: The drag force on a cyclist at racing speed is a few tens of newtons and grows with speed squared. Aerobars and tight clothing shave newtons off this budget. Hills convert the problem into gravity dominated force instead. The value assumes flat road and no wind at 12 meters per second.
+  name: Cyclist Aerodynamic Drag
+  source: https://en.wikipedia.org/wiki/Bicycle_performance
+  value: 30
+- description: The thrust of a large rocket engine cluster during liftoff sums to about ten meganewtons. This overcomes weight and provides margin to climb. Nozzles and turbopumps channel enormous mass flow to produce it. The number places human launch capability on a single line.
   name: Rocket Thrust
   source: https://en.wikipedia.org/wiki/Rocket_engine
   value: 1e7
-- description: Force from solar wind
+- description: The solar wind imparts a minuscule steady force on a square meter of reflective sail near Earth. Over months this whisper builds real speed in deep space. Bright sunlight and high reflectivity maximize the small push. The number is the order of magnitude per square meter at 1 astronomical unit.
   name: Solar Wind
   source: https://en.wikipedia.org/wiki/Solar_wind
-  value: 1e12
-- description: Tidal force on Earth
+  value: 1e-7
+- description: Tidal forces stretching Earth arise from the Moon and Sun acting across the planet’s diameter. The integrated effect lifts oceans by meters despite small per kilogram forces. Engineers consider tides when scheduling marine operations. The value here is an effective global scale force budget, illustrative rather than local.
   name: Tidal Force
   source: https://en.wikipedia.org/wiki/Tidal_force
   value: 1e18
-- description: Gravitational force near black hole
+- description: Near a black hole event horizon, gradients in gravity create extreme tidal forces on extended objects. Over short lengths the force difference can exceed anything materials can bear. Astronomers model these fields without touching them. The number is a conceptual scale, not a laboratory measurement.
   name: Black Hole
   source: https://en.wikipedia.org/wiki/Black_hole
   value: 1e30
+- description: Pulling a bowstring to full draw on a traditional longbow requires on this order of force at the fingers. Modern compound bows use cams to reduce peak hold. Archers condition grip and back muscles to manage the load smoothly. The value states the hold at anchor, not the initial pull.
+  name: Bow Draw
+  source: https://en.wikipedia.org/wiki/Bow_(archery)
+  value: 300
+- description: Opening a heavy door with a long handle needs only tens of newtons because torque gives leverage. Short knobs demand higher force for the same latch. Designers tune springs to balance child safety and accessibility. The number is typical for public building doors.
+  name: Door Handle Pull
+  source: https://en.wikipedia.org/wiki/Door_handle
+  value: 40
 units:
 - conversion_factor: 1
-  description: The base unit of force in the SI system. Named after Isaac Newton,
-    represents the force needed to accelerate 1 kg by 1 m/s².
+  description: The newton is the SI unit of force defined as the push that accelerates one kilogram by one meter per second squared. It ties dynamics directly to mass and motion. Using newtons keeps mechanical, fluid, and electromagnetic forces on a single scale. All item values are recorded in newtons before conversion.
   name: newtons
   symbol: N
 - conversion_factor: 0.224809
-  description: A unit of force in the imperial system. Equal to the gravitational
-    force exerted on a mass of one pound.
+  description: Pound force is the imperial unit equal to the weight of one pound mass in standard gravity. Many legacy specifications in the United States use it for loads and thrust. Converting to newtons makes comparisons across systems straightforward. The factor here assumes standard gravity for consistency.
   name: pounds-force
   symbol: lbf
 - conversion_factor: 0.101972
-  description: A unit of force equal to the gravitational force exerted on a mass
-    of one kilogram at Earth's surface.
+  description: Kilogram force expresses the weight of a one kilogram mass under standard gravity, a convenient everyday yardstick. It persists in some fields because people intuit weights more easily than abstract newtons. The unit is not SI but converts cleanly. We include it to bridge intuition and calculation.
   name: kilograms-force
   symbol: kgf

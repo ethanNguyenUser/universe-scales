@@ -1,91 +1,105 @@
 base_unit: pascals
 dimension: pressure
-dimension_description: Force applied per unit area, measuring the intensity of force
-  distribution across a surface
+dimension_description: Pressure is force per unit area, the intensity with which a surface is pressed. It explains why a stiletto heel dents wood while a snowshoe floats, even with the same weight. In fluids, pressure transmits uniformly and drives flow from high to low according to gradients. Every value below names a setting and condition so the number connects to daily life or specific experiments.
 items:
-- description: Pressure in deep space
+- description: Between galaxies, particle densities are so low that mechanical pressure approaches zero for human purposes. Radiation fields and magnetic stresses still act, but as a pressure they are vanishingly small. Spacecraft enjoy this quiet except when hit by solar storms. The value is an order of magnitude benchmark for deep space plasma pressure.
   name: Deep Space
   source: https://en.wikipedia.org/wiki/Outer_space
   value: 1e-17
-- description: Ultra-high vacuum in laboratory
+- description: Ultra high vacuum chambers in surface physics reach pressures near this value after long pumping and bakeout. Molecules arrive so rarely that clean crystal faces can be studied for minutes before contamination. Leak checking becomes an art at these numbers. The figure represents a good day on a research instrument.
   name: Laboratory Vacuum
   source: https://en.wikipedia.org/wiki/Vacuum
   value: 1e-6
-- description: Atmospheric pressure on Mars
+- description: On the Martian surface the thin atmosphere presses at only a few hundred pascals, less than one percent of Earth sea level. Water boils at body temperature under such conditions without a suit. Weather there is driven by dust, not by dense air. The number is for a typical day at the equator.
   name: Mars Surface
   source: https://en.wikipedia.org/wiki/Atmosphere_of_Mars
   value: 600
-- description: Standard atmospheric pressure
+- description: At sea level on Earth, standard atmospheric pressure is about one hundred thousand pascals by definition. It sets boiling points, cooking times, and aircraft calibration. Weather systems drift a few percent above and below. The number is the canonical reference for pressure units.
   name: Earth Sea Level
   source: https://en.wikipedia.org/wiki/Atmospheric_pressure
   value: 101325
-- description: Surface pressure on Venus
+- description: Venus wears a blanket of carbon dioxide so thick that the surface experiences pressures dozens of times higher than Earth. Metals soften and electronics require special cooling even before the heat is considered. Probes survive only hours with heroic engineering. The value is for the mean surface under cloud cover.
   name: Venus Surface
   source: https://en.wikipedia.org/wiki/Atmosphere_of_Venus
   value: 9.2e6
-- description: Pressure at bottom of swimming pool
+- description: The water above you in a swimming pool adds pressure linearly with depth, so a few meters already feels on your ears. Lungs equalize by pushing air into sinuses, a skill every diver learns. Lifeguards know headaches often come from poor equalization rather than chlorine. The number is for a depth of two meters.
   name: Swimming Pool
   source: https://en.wikipedia.org/wiki/Swimming_pool
   value: 20000
-- description: Pressure at 100m ocean depth
+- description: At one hundred meters in the ocean, divers and submersibles face about ten times atmospheric pressure from the water column. Steel hulls and polymer seals are sized with generous safety margins. Breathing gas composition must change to avoid nitrogen narcosis. The value is a round figure for this depth.
   name: Ocean Depth (100m)
   source: https://en.wikipedia.org/wiki/Ocean
   value: 1e6
-- description: Pressure at Mariana Trench bottom
+- description: At the bottom of the Mariana Trench, the weight of nearly eleven kilometers of water piles up a crushing pressure. Only specialized research vessels and adapted organisms operate here. Material imperfections become critical under such loads. The number gives the scale at the deepest natural point on Earth.
   name: Mariana Trench
   source: https://en.wikipedia.org/wiki/Mariana_Trench
   value: 1.1e8
-- description: Car tire pressure
+- description: A passenger car tire is inflated to a few bars over atmospheric pressure to balance grip, wear, and comfort. Underinflation wastes fuel and overheats sidewalls, while overinflation reduces contact patch. Temperature changes during driving shift the number significantly. The value is for a warm tire after highway travel.
   name: Tire Pressure
   source: https://en.wikipedia.org/wiki/Tire
   value: 2e5
-- description: Industrial hydraulic pressure
+- description: Industrial hydraulic systems routinely operate at tens to hundreds of bars to move heavy loads precisely. Hoses and fittings are rated well above working pressure to prevent catastrophic sprays. Small leaks feel deceptively gentle but can inject fluid into skin. The number is a mid range for shop presses and lifts.
   name: Hydraulic System
   source: https://en.wikipedia.org/wiki/Hydraulics
   value: 2e7
-- description: Pressure for diamond formation
+- description: Deep in Earth’s mantle, carbon transforms into diamond under gigapascal class pressures and high temperatures. The combination stabilizes the crystal structure that sparkles on rings. Laboratory presses reproduce these conditions in tiny anvils. The value indicates the lower bound for natural formation.
   name: Diamond Formation
   source: https://en.wikipedia.org/wiki/Diamond
   value: 5e9
-- description: Pressure at Earth's core
+- description: At Earth’s core, pressure from the overlying rock squeezes iron into exotic phases and drives a slowly convecting outer layer. Seismic waves reveal the magnitude indirectly. This pressure and temperature together power the geodynamo. The number is a standard estimate for the center.
   name: Earth's Core
   source: https://en.wikipedia.org/wiki/Earth%27s_core
   value: 3.6e11
-- description: Pressure at Sun's core
+- description: The solar core carries stupendous pressure that enables fusion by pushing nuclei close despite their repulsion. Energy leaks outward over hundreds of thousands of years as heat and light. Surface storms above are gentle by comparison. The value is the order of magnitude for models of the Sun’s interior.
   name: Sun's Core
   source: https://en.wikipedia.org/wiki/Sun
   value: 2.5e16
-- description: Pressure in neutron star
+- description: Matter inside a neutron star is compressed beyond atomic structure, reaching pressures that defy ordinary materials science. Equations of state are constrained by astronomy rather than laboratory tests. The crust behaves like a bizarre ceramic under these loads. The number situates this extreme on the pressure scale.
   name: Neutron Star
   source: https://en.wikipedia.org/wiki/Neutron_star
   value: 1e34
-- description: Pressure near black hole
+- description: Near a black hole, pressures defined in usual material terms become meaningless as spacetime curvature dominates. Still, models of accretion disks describe effective pressures that are astronomical. Observations of x ray spectra inform these estimates. The value here is illustrative of those extremes.
   name: Black Hole
   source: https://en.wikipedia.org/wiki/Black_hole
   value: 1e40
+- description: A typical can of carbonated soda holds an overpressure relative to air that keeps bubbles dissolved. Warming the can raises this pressure and makes foaming more likely on opening. Manufacturers choose levels to balance fizz and safety. The value is for a chilled sealed can.
+  name: Soda Can (sealed)
+  source: https://en.wikipedia.org/wiki/Carbonated_water
+  value: 2e5
+- description: A pressure cooker increases internal pressure modestly so water boils hotter and dinner finishes faster. Safety valves and lids are engineered against accidental opening under load. Recipes account for altitude and cooker setting. The number is for a common kitchen unit at operating pressure.
+  name: Pressure Cooker
+  source: https://en.wikipedia.org/wiki/Pressure_cooking
+  value: 1.2e5
+- description: A hyperbaric chamber used for diving medicine runs at a few atmospheres to treat decompression sickness. Breathing pure oxygen at these pressures accelerates nitrogen washout. Operators monitor for oxygen toxicity risks. The value is a representative treatment pressure.
+  name: Hyperbaric Chamber
+  source: https://en.wikipedia.org/wiki/Hyperbaric_medicine
+  value: 3e5
+- description: Airplane cabins are pressurized to an equivalent altitude of two to three kilometers, which is lower than sea level but comfortable for most passengers. The compromise reduces structural stress and weight while keeping oxygen levels acceptable. Sensitive travelers feel mild headache or fatigue at these numbers. The value is a typical cruise cabin pressure.
+  name: Airplane Cabin
+  source: https://en.wikipedia.org/wiki/Cabin_pressurization
+  value: 7.5e4
+- description: Systolic blood pressure in a healthy adult corresponds to this pressure difference in arteries during a heartbeat. The body regulates it with hormones and vessel elasticity. Long term elevations increase risk for stroke and heart disease. The number is a familiar medical baseline expressed in pascals.
+  name: Human Blood Pressure (systolic)
+  source: https://en.wikipedia.org/wiki/Blood_pressure
+  value: 1.6e4
 units:
 - conversion_factor: 1
-  description: The base unit of pressure in the SI system. Named after Blaise Pascal,
-    represents one newton per square meter.
+  description: The pascal is the SI pressure unit equal to one newton per square meter of area. It connects force and geometry directly for analysis. Using pascals allows pressures in gases, liquids, and solids to be compared consistently. All item values are recorded in pascals before conversion.
   name: pascals
   symbol: Pa
 - conversion_factor: 9.86923e-06
-  description: A unit of pressure based on Earth's atmospheric pressure at sea level.
-    One atm equals 101,325 pascals.
+  description: Atmospheres are tied to mean sea level air pressure on Earth and remain convenient for diving and meteorology. They give an intuitive sense of how many Earth atmospheres a device or body experiences. Converting to pascals is linear by definition. Values here use the conventional standard atmosphere.
   name: atmospheres
   symbol: atm
 - conversion_factor: 0.000145038
-  description: A unit of pressure in the imperial system, measuring force in pounds
-    per square inch of area.
+  description: Pounds per square inch is the imperial unit used for tires, hydraulics, and tools in North America. Gauges on cars and compressors often display psi prominently. Conversions help align those readings with SI calculations. The factor assumes exact definitions of pound and inch.
   name: pounds per square inch
   symbol: psi
 - conversion_factor: 1e-5
-  description: A unit of pressure equal to 100,000 pascals. Commonly used in meteorology
-    and engineering.
+  description: The bar equals one hundred thousand pascals and is common in engineering because round numbers are convenient. Weather maps and compressor ratings often use bars. It is not an SI unit but is compatible by a simple factor. We include it to make comparisons readable.
   name: bars
   symbol: bar
 - conversion_factor: 0.00750062
-  description: A unit of pressure named after Evangelista Torricelli. One torr equals
-    1/760 of an atmosphere.
+  description: Torr measures pressure based on mercury columns, with one torr equal to one seven hundred sixtieth of an atmosphere. Vacuum technology still uses it because old gauges and tables were calibrated this way. Modern sensors output pascals but many labs speak in torr out of habit. The conversion factor links the two worlds cleanly.
   name: torr
   symbol: Torr

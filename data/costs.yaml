@@ -1,139 +1,217 @@
 base_unit: USD
 dimension: costs
-dimension_description: The monetary value or price of goods, services, or activities,
-  representing economic exchange value
+dimension_description: Cost translates human effort, resources, and time into a single comparable number denominated in money. It compresses supply chains, regulation, and risk into prices that move daily with geography and policy. For each entry, I specify a concrete item or service and the condition of purchase, such as retail, wholesale, or per unit time. The aim is scale and perspective rather than price quotes, so values are representative snapshots with context.
 items:
-- description: Cost of single grain of rice
+- description: A single grain of rice costs far less than a cent when buying a 5 kg bag for a few dollars. A kilogram holds roughly 50,000 grains, so a 5 kg bag contains about 250,000 grains, making one grain around four ten thousandths of a dollar. The chessboard doubling fable shows how quickly small unit costs compound when counts explode. The number assumes uncooked long grain rice at supermarket bulk pricing.
   name: Grain of Rice
   source: https://en.wikipedia.org/wiki/Rice
   value: 0.0001
-- description: Cost of single paper clip
+- description: A paper clip in a 100 pack costs near a cent each, with bulk procurement often dropping below that. The metal mass per clip is only a few grams, so transport dominates cost once scaled. Designers sometimes pay more for coatings to avoid paper stains. The number reflects a plain galvanized steel clip from a discount retailer.
   name: Paper Clip
   source: https://en.wikipedia.org/wiki/Paper_clip
   value: 0.01
-- description: Cost of US postage stamp
+- description: A first class US stamp prices national logistics into a single square inch of adhesive. The cost buys a cross country truck, plane, and sorting choreography for one ounce of paper. The ink and paper are cheap; reliability is what you purchase. The value is for a one ounce letter at the counter.
   name: Stamp
   source: https://en.wikipedia.org/wiki/Postage_stamp
   value: 0.55
-- description: Cost of coffee at café
+- description: A cafe coffee folds beans, barista time, rent, and atmosphere into a few dollars. The green beans themselves cost only a few cents per cup; the rest pays for labor and a warm place to sit. Refills and loyalty cards change the average but not the structure. The value assumes a city cafe, not a gas station urn.
   name: Cup of Coffee
   source: https://en.wikipedia.org/wiki/Coffee
   value: 3
-- description: Cost of deli sandwich
+- description: A made to order sandwich costs near this amount when the line cook, fresh produce, and rent are accounted for. Protein choice and portion size swing price more than condiments. Per calorie it often beats packaged snacks despite a higher sticker. The value is for a single counter order with tax.
   name: Sandwich
   source: https://en.wikipedia.org/wiki/Sandwich
   value: 8
-- description: Cost of movie ticket
+- description: A movie ticket for a prime time screening sits around this price before concessions. Premium formats and reserved seating add surcharges. Weekday matinees trend cheaper in many markets. The number reflects a mainstream multiplex price point.
   name: Movie Ticket
   source: https://en.wikipedia.org/wiki/Movie_theater
   value: 12
-- description: Cost of paperback book
+- description: A trade paperback book purchased new at retail often costs this much. Academic texts and full color art books command higher prices due to print runs and materials. Electronic editions change the cost structure but not the author labor. The number anchors everyday reading purchases.
   name: Book
   source: https://en.wikipedia.org/wiki/Book
   value: 15
-- description: Cost of USB cable
+- description: A commodity USB cable from an online retailer is roughly ten dollars when not bundled. Certification and length influence both reliability and price. The cheapest cables can underperform for high current charging. The number is for a one meter data and charge cable.
   name: USB Cable
   source: https://en.wikipedia.org/wiki/USB
   value: 10
-- description: Cost of decent headphones
+- description: Decent over ear headphones without noise canceling hover near this price point at retail. Studio reference and active noise models rise steeply. Comfort and driver quality dominate user experience beyond the sticker. The number is for a mainstream consumer pair.
   name: Headphones
   source: https://en.wikipedia.org/wiki/Headphones
   value: 50
-- description: Cost of flagship smartphone
+- description: A flagship smartphone at launch costs around this much before subsidies or trade ins. The bill of materials is only a fraction; software and marketing fill the rest. Carrier plans can spread the cost over years with interest embedded. The number is for an unlocked model in a major market.
   name: Smartphone
   source: https://en.wikipedia.org/wiki/Smartphone
   value: 800
-- description: Cost of mid-range laptop
+- description: A competent mid range laptop suitable for everyday work is near this price new. Performance per dollar changes quickly with component cycles. Refurbished units can deliver similar capability for less. The value assumes a balanced CPU, memory, and SSD.
   name: Laptop
   source: https://en.wikipedia.org/wiki/Laptop
   value: 1200
-- description: Cost of basic bicycle
+- description: A basic city bicycle sells for a few hundred dollars with reliable components. Specialty frames and suspension add zeros rapidly. Maintenance and locks quickly become part of the lifetime cost. The number is for a steel frame commuter without motor assist.
   name: Bicycle
   source: https://en.wikipedia.org/wiki/Bicycle
   value: 300
-- description: Cost of motorcycle
+- description: An entry level motorcycle new from a dealer typically starts around this price. Displacement, brand, and safety features move the needle. Insurance and protective gear are consequential add ons. The figure is for a small street legal bike.
   name: Motorcycle
   source: https://en.wikipedia.org/wiki/Motorcycle
   value: 8000
-- description: Cost of average new car
+- description: A new compact car lists around this price before taxes and fees in the mass market. Options and financing reshape the monthly burden. Depreciation dominates the first years of ownership cost. The value is a base model with minimal extras.
   name: Car
   source: https://en.wikipedia.org/wiki/Automobile
   value: 25000
-- description: Cost of luxury car
+- description: Luxury cars span this and much higher prices, reflecting materials, performance, and brand positioning. Maintenance costs also scale nonlinearly. Buyers pay for both engineering and signaling. The number marks an accessible tier of the luxury segment.
   name: Luxury Car
   source: https://en.wikipedia.org/wiki/Luxury_car
   value: 100000
-- description: Monthly apartment rent
+- description: Monthly apartment rent for a one bedroom in a large city is often near this amount. Neighborhood, transit access, and amenities set the spread. Utilities and deposits shift the effective monthly cost for budgeting. The value assumes a modern building with basic appliances.
   name: Apartment (Monthly)
   source: https://en.wikipedia.org/wiki/Apartment
   value: 1500
-- description: Cost of average house
+- description: The median house price in many developed regions sits around this level but varies widely by city and interest rates. Mortgage terms transform list price into monthly carrying cost. Land and permitting dominate the price in dense areas. The number gives order of magnitude for a family home.
   name: House
   source: https://en.wikipedia.org/wiki/House
   value: 300000
-- description: Cost of luxury mansion
+- description: Large estates in premium locations easily reach several million dollars. Architectural complexity, lot size, and views stack multiplicatively. Upkeep becomes a continuing budget line comparable to wages. The value labels a high end residence not an average.
   name: Mansion
   source: https://en.wikipedia.org/wiki/Mansion
   value: 5000000
-- description: Startup cost for small business
+- description: Starting a small business with a few employees often requires this seed capital for permits, equipment, and runway. Many ventures bootstrap with less but accept slower growth. The amount should cover months of losses while finding customers. The figure is a planning round number not advice.
   name: Small Business
   source: https://en.wikipedia.org/wiki/Small_business
   value: 50000
-- description: Cost to open restaurant
+- description: Opening a sit down restaurant with a full kitchen frequently consumes this much upfront in buildout and licensing. Location and ventilation drive costs beyond furniture. Training staff before revenue begins demands cash on hand. The number reflects a mid market dining room.
   name: Restaurant
   source: https://en.wikipedia.org/wiki/Restaurant
   value: 200000
-- description: Cost of office building
+- description: A mid rise office building construction budget can easily run to ten million dollars excluding land. Mechanical systems, elevators, and code compliance dominate complexity. Financing costs accrue during long build schedules. The figure is for a modest footprint in a regional city.
   name: Office Building
   source: https://en.wikipedia.org/wiki/Office_building
   value: 10000000
-- description: Cost of highway bridge
+- description: A highway bridge project spans from tens to hundreds of millions depending on length and geology. Traffic detours and environmental mitigation are part of the price. Long lived assets like this amortize costs over decades of use. The number is a round figure for a medium span bridge.
   name: Bridge
   source: https://en.wikipedia.org/wiki/Bridge
   value: 100000000
-- description: Cost of major airport
+- description: Building a major international airport terminal complex costs around a billion dollars or more. Airside infrastructure and security drive unique requirements. Construction phases keep operations running while expanding capacity. The value is emblematic of national scale projects.
   name: Airport
   source: https://en.wikipedia.org/wiki/Airport
   value: 1000000000
-- description: Cost of International Space Station
+- description: The International Space Station total program cost is on the order of hundreds of billions spread across countries and decades. This includes modules, launches, operations, and resupply. Science access is precious because launch capacity is scarce. The figure gives perspective on sustained space infrastructure.
   name: Space Station
   source: https://en.wikipedia.org/wiki/International_Space_Station
   value: 150000000000
-- description: Annual US military budget
+- description: The annual military budget of a large country can reach hundreds of billions of dollars. Personnel, equipment procurement, and maintenance dominate recurring expenses. Year to year changes track policy and macroeconomics. The value labels the United States case as an example.
   name: US Military Budget (Annual)
   source: https://en.wikipedia.org/wiki/Military_budget_of_the_United_States
   value: 700000000000
-- description: Annual US GDP
+- description: The gross domestic product of the United States per year sums to tens of trillions of dollars. It aggregates consumption, investment, government spending, and net exports. Revisions and price deflators adjust these totals after initial release. The number is a recent magnitude for context.
   name: US GDP (Annual)
   source: https://en.wikipedia.org/wiki/Economy_of_the_United_States
   value: 21000000000000
-- description: Annual global GDP
+- description: The world economy generates on the order of one hundred trillion dollars per year across all nations. Exchange rates and purchasing power parity complicate cross country comparison. Growth rates compound to double totals within decades. The figure is a rounded scale for global activity.
   name: Global GDP (Annual)
   source: https://en.wikipedia.org/wiki/World_economy
   value: 84000000000000
+- description: Residential electricity in many regions costs around this much per kilowatt hour on the bill. Time of use pricing can make peak hours more expensive and nights cheaper. Efficiency gains reduce the number of kilowatt hours purchased rather than the price per unit. The value is an average retail rate.
+  name: Electricity (per kWh)
+  source: https://en.wikipedia.org/wiki/Kilowatt_hour
+  value: 0.15
+- description: A cloud virtual machine with modest CPU and memory might cost this much per hour before reserved discounts. Storage and network egress fees are separate line items. Running continuously all month turns small hourly rates into consequential totals. The number is for on demand pricing in a major cloud.
+  name: Cloud VM (per hour)
+  source: https://en.wikipedia.org/wiki/Cloud_computing
+  value: 0.1
+- description: One gigabyte of solid state storage purchased in bulk for data centers falls near this price. Consumer retail per gigabyte is higher due to packaging and distribution. Costs trend downward over time with new fabrication nodes. The number provides a planning figure for capacity budgets.
+  name: SSD Storage (per GB)
+  source: https://en.wikipedia.org/wiki/Solid-state_drive
+  value: 0.05
+- description: An academic article publication fee in some open access journals is several thousand dollars. Charges cover editorial work, typesetting, and platform costs. Debates continue about equity and value in this model. The number is a representative article processing charge.
+  name: Open Access Article Fee
+  source: https://en.wikipedia.org/wiki/Open_access
+  value: 3000
+- description: A transatlantic economy airfare purchased well in advance can be around this price round trip. Fuel, crew, and landing fees set the baseline while demand sets the premium. Flexible tickets cost more but reduce risk. The value is for shoulder season travel.
+  name: Flight Ticket Transatlantic
+  source: https://en.wikipedia.org/wiki/Air_fare
+  value: 700
+- description: A high quality violin suitable for conservatory students often costs this much. Handmade instruments by famous luthiers are far higher. Maintenance and bows add meaningful ongoing cost. The number marks an upper student tier, not a professional Stradivari.
+  name: Violin (Student High End)
+  source: https://en.wikipedia.org/wiki/Violin
+  value: 8000
+- description: One semester of public university tuition for in state students is commonly at this level excluding housing. Fees and textbooks add to the total. Scholarships and aid shift the net cost dramatically for many. The number is a sticker price before grants.
+  name: University Tuition (Semester)
+  source: https://en.wikipedia.org/wiki/Tuition_payments
+  value: 6000
+- description: A dental crown out of pocket expense in the United States is often around this cost. Insurance negotiated rates and materials change the bill. The price includes lab work and clinical time. The figure is for a single molar crown.
+  name: Dental Crown
+  source: https://en.wikipedia.org/wiki/Dental_crown
+  value: 1200
+- description: A used textbook at a campus bookstore might sell for this amount midway through a term. Online marketplaces can undercut this with wider supply. New editions reset resale value abruptly. The number represents a common student purchase.
+  name: Used Textbook
+  source: https://en.wikipedia.org/wiki/Textbook
+  value: 80
+- description: Monthly public transit pass pricing in many cities sits near this amount for unlimited rides. Zone systems and means tested discounts apply. Passes smooth cash flow for agencies and riders. The figure is a city median rather than a specific system.
+  name: Transit Pass (Monthly)
+  source: https://en.wikipedia.org/wiki/Public_transport_fare
+  value: 100
+- description: A data plan for a smartphone with several gigabytes of high speed data is often billed around this per month. Taxes and device installments add to the bill. Competition among carriers creates promotions that temporarily reduce the cost. The number is for a single line without family discounts.
+  name: Mobile Plan (Monthly)
+  source: https://en.wikipedia.org/wiki/Mobile_phone_plan
+  value: 60
+- description: A concert ticket for a popular artist at an arena averages this price before fees. Secondary markets can elevate it sharply. Venue size and production scale drive cost up as well. The number reflects a primary sale seat in the lower bowl.
+  name: Concert Ticket
+  source: https://en.wikipedia.org/wiki/Concert_tour
+  value: 120
+- description: A 100 trillion dollar Zimbabwe note during peak hyperinflation exchanged on the street for less than a US dollar despite its face value. Prices lost meaning as numerals raced ahead of goods, showing that money is a social contract more than paper and ink. Today the same note sells as a collectible for its story. The value reflects a representative peak period exchange into USD.
+  name: Zimbabwe 100 trillion dollar note (peak street value)
+  source: https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe
+  value: 0.5
+- description: The total value of residential and commercial real estate worldwide is in the low hundreds of trillions of dollars. Interest rates and urbanization shift this stock value by tens of trillions without a brick moving. For households, this asset class dominates net worth. The value is a rounded composite estimate for perspective.
+  name: Global Real Estate Value
+  source: https://en.wikipedia.org/wiki/Real_estate_economics
+  value: 300000000000000
+- description: Global household net wealth sums property and financial assets minus debts across all adults. Unlike GDP, which is a yearly flow, wealth is a stock that can rise or fall with markets overnight. Small percentage changes here move trillions on paper. The value is a representative recent magnitude.
+  name: Global Household Wealth (Net)
+  source: https://en.wikipedia.org/wiki/Household_financial_assets
+  value: 500000000000000
+- description: The top one percent by wealth collectively holds nearly half of global household wealth, a concentration that shapes policy and markets. Their net worth moves mainly with asset prices rather than wages. This is not income but accumulated stock. The value assumes a forty five percent share of global wealth.
+  name: Wealth of Top 1 percent
+  source: https://en.wikipedia.org/wiki/Distribution_of_wealth
+  value: 225000000000000
+- description: The bottom ninety nine percent together hold the remaining share of household wealth, which is still a vast sum. Housing and pensions drive much of this number rather than cash. Debates about fairness often anchor to this partition. The value complements the top one percent figure.
+  name: Wealth of Bottom 99 percent
+  source: https://en.wikipedia.org/wiki/Distribution_of_wealth
+  value: 275000000000000
+- description: The wealth of the richest person on Earth fluctuates by billions per day with stock prices. It is net worth on paper, not spendable cash, yet it can fund entire industries. The number changes quickly but anchors public imagination about scale. The value is a representative recent peak.
+  name: Richest Person (current)
+  source: https://en.wikipedia.org/wiki/List_of_wealthiest_people
+  value: 250000000000
+- description: The richest private fortunes in history, adjusted to todays dollars, cluster in the low hundreds of billions for industrial magnates like Rockefeller. Pre modern rulers controlled state treasuries rather than personal wealth, complicating comparisons. The point is order of magnitude, not precise ranking. The value reflects a conservative adjusted estimate for a historical peak fortune.
+  name: Richest Person (historical, adjusted)
+  source: https://en.wikipedia.org/wiki/John_D._Rockefeller
+  value: 400000000000
+- description: Summing gross financial and real assets across everyone on Earth gives a total in the high hundreds of trillions. Debts subtract to yield net wealth, but the gross base shows how much is at work in markets. This stock is the backdrop for savings and risk taking. The value is a rounded gross assets figure.
+  name: Total Assets of Everyone (gross)
+  source: https://en.wikipedia.org/wiki/Global_financial_system
+  value: 700000000000000
+- description: Attempts to value Earth price the annual flow of ecosystem services like pollination, water purification, and climate regulation. Estimates land near a hundred trillion dollars per year for services alone, without pricing the irreplaceable stock. The exercise is a guide to stewardship, not a for sale sign. The value here reflects an annual services benchmark.
+  name: Estimated Earth Value (annual ecosystem services)
+  source: https://en.wikipedia.org/wiki/Ecosystem_services
+  value: 125000000000000
 units:
 - conversion_factor: 1
-  description: United States Dollar, the base currency for cost comparisons. Widely
-    used as a global reserve currency.
+  description: USD is the base currency for this dataset and serves as a common yardstick across items. It is widely used in international trade and as a reserve unit. Conversions from other currencies are approximate snapshots, not live exchange rates. All item values are stored in USD before conversion.
   name: USD
-  symbol: $
+  symbol: USD
 - conversion_factor: 0.85
-  description: Euro, the official currency of the European Union. Used by 19 EU member
-    states.
+  description: EUR represents the euro used by many European countries and provides a useful counterpoint to USD prices. Purchasing power parity differs across members, so local costs still vary. Quoted conversion factors give only a rough mapping for scale reasoning. I list euro amounts by multiplying USD values by this factor.
   name: EUR
-  symbol: €
+  symbol: EUR
 - conversion_factor: 0.73
-  description: British Pound Sterling, the official currency of the United Kingdom
-    and its territories.
+  description: GBP is the pound sterling used in the United Kingdom and some territories. Prices for education and transport often look different in GBP even after conversion due to policy. Using a fixed factor here keeps the table stable rather than timely. Multiply USD by this factor to estimate GBP equivalents.
   name: GBP
-  symbol: £
+  symbol: GBP
 - conversion_factor: 110
-  description: Japanese Yen, the official currency of Japan. Known for its low denomination
-    values.
+  description: JPY is the Japanese yen, a low denomination currency that results in large numerals for everyday items. Relative prices across countries do not follow simple exchange rates because of taxes and norms. The factor here is a round estimate to express scale. Multiply USD by this factor for yen values.
   name: JPY
-  symbol: ¥
+  symbol: JPY
 - conversion_factor: 6.45
-  description: Chinese Yuan Renminbi, the official currency of the People's Republic
-    of China.
+  description: CNY is the Chinese yuan renminbi used in mainland China. Price controls and subsidies can make sector specific comparisons tricky. The factor supplied is an approximate cross rate for orientation. Multiplying USD values by this factor gives CNY estimates.
   name: CNY
-  symbol: ¥
+  symbol: CNY

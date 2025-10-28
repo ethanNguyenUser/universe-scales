@@ -1,89 +1,85 @@
 base_unit: pascals
 dimension: youngs-modulus
-dimension_description: A measure of material stiffness, representing the ratio of
-  stress to strain in elastic deformation
+dimension_description: Youngs modulus describes linear elastic stiffness, the ratio of stress to strain for small reversible deformations. It is the slope of the initial part of a stress strain curve under uniaxial load at stated temperature and rate. Microstructure, porosity, and moisture can shift it dramatically for natural materials. Each value below includes a representative condition so comparisons hold water.
 items:
-- description: Young's modulus of rubber
+- description: Soft rubber stores little energy per strain because chains uncoil easily, leading to a very low modulus. As strain rises, entropic elasticity stiffens the response. Fillers like carbon black raise the modulus by reinforcing the network. The value given is for an unfilled gum rubber at room temperature.
   name: Rubber
   source: https://en.wikipedia.org/wiki/Rubber
   value: 1e6
-- description: Young's modulus of foam
+- description: Polymer foams behave like springs in a scaffold of cells, so their effective modulus is tiny until densification. Cell size, gas content, and skin layers matter as much as chemistry. Designers tune this for pillows versus helmet liners. The value is for a flexible open cell foam in small strain compression.
   name: Foam
   source: https://en.wikipedia.org/wiki/Foam
   value: 1e5
-- description: Young's modulus of soft wood
+- description: Softwoods are anisotropic; along the grain the modulus is moderate, across the grain it is an order lower. Moisture acts like a plasticizer that reduces stiffness. Builders season wood to stabilize this property. The value is longitudinal for dried spruce.
   name: Wood (Soft)
   source: https://en.wikipedia.org/wiki/Wood
   value: 1e9
-- description: Young's modulus of cartilage
+- description: Cartilage combines a collagen network with pressurized water to form a poroelastic material with low instantaneous modulus. Under sustained load the modulus rises as fluid drains. Healthy joints depend on this time dependence for shock absorption. The value is an initial small strain tangent.
   name: Cartilage
   source: https://en.wikipedia.org/wiki/Cartilage
   value: 1e6
-- description: Young's modulus of bone
+- description: Cortical bone has a modulus in the tens of gigapascals along the osteon direction due to mineralized collagen. Age and disease reduce both stiffness and toughness. Implant designers choose alloys to match this to avoid stress shielding. The value is for human femoral cortical bone in tension.
   name: Bone
   source: https://en.wikipedia.org/wiki/Bone
   value: 2e10
-- description: Young's modulus of tendon
+- description: Tendon stores elastic energy for locomotion with a modulus around a gigapascal that rises with strain. Warm tissues display higher extensibility and lower stiffness initially. Training induces remodeling that tunes this property. The figure is a small strain slope for Achilles tendon.
   name: Tendon
   source: https://en.wikipedia.org/wiki/Tendon
   value: 1e9
-- description: Young's modulus of aluminum
+- description: Aluminum alloys share a modulus near seventy gigapascals regardless of strength grade because stiffness depends on bonding, not microstructure alone. This constancy simplifies deflection calculations. Temperature reduces modulus slightly. The value is for a typical wrought alloy.
   name: Aluminum
   source: https://en.wikipedia.org/wiki/Aluminium
   value: 7e10
-- description: Young's modulus of steel
+- description: Steels cluster near two hundred gigapascals in modulus across many alloys and tempers. Heat treatment alters yield and toughness but not this slope much. That is why beams deflect similarly before yield regardless of grade. The value is the canonical handbook number.
   name: Steel
   source: https://en.wikipedia.org/wiki/Steel
   value: 2e11
-- description: Young's modulus of titanium
+- description: Titanium alloys are roughly half as stiff as steel at similar densities, giving good specific stiffness. Designers exploit this for weight sensitive parts that must flex without yielding. Temperature and phase mix set exact values. The number is for Ti 6Al 4V.
   name: Titanium
   source: https://en.wikipedia.org/wiki/Titanium
   value: 1.1e11
-- description: Young's modulus of concrete
+- description: Concrete’s modulus depends on aggregate and curing; it is not a pure material constant. Codes use empirical formulas tied to compressive strength. Long term creep lowers effective stiffness in service. The value is a short term tangent for a structural mix.
   name: Concrete
   source: https://en.wikipedia.org/wiki/Concrete
   value: 3e10
-- description: Young's modulus of glass
+- description: Glass is relatively stiff with a modulus similar to some metals despite brittleness. Defects control strength but not this initial slope. Temperature near the glass transition softens it dramatically. The value is for soda lime glass at room temperature.
   name: Glass
   source: https://en.wikipedia.org/wiki/Glass
   value: 7e10
-- description: Young's modulus of ceramic
+- description: Engineering ceramics achieve very high modulus due to strong ionic and covalent bonds. Their stiffness remains high even at heat where metals soften. Designers trade brittleness against this stiffness for cutting tools. The value is for alumina.
   name: Ceramic
   source: https://en.wikipedia.org/wiki/Ceramic
   value: 3e11
-- description: Young's modulus of carbon fiber
+- description: Unidirectional carbon fiber composites have an effective modulus near two hundred gigapascals along the fiber direction, while transverse is far lower. Rule of mixtures gives a first estimate based on fiber volume. Layup choices tailor stiffness to load paths. The number is for a high modulus fiber epoxy lamina.
   name: Carbon Fiber
   source: https://en.wikipedia.org/wiki/Carbon_fiber
   value: 2e11
-- description: Young's modulus of diamond
+- description: Diamond is among the stiffest known solids because of its dense sp3 network. Small strains store huge elastic energy before fracture. Microelectromechanical resonators exploit this for high frequency stability. The value is a polycrystalline average.
   name: Diamond
   source: https://en.wikipedia.org/wiki/Diamond
   value: 1e12
-- description: Young's modulus of graphene
+- description: Graphene’s in plane modulus approaches the theoretical limit for a two dimensional lattice. Out of plane bending is much softer, illustrating geometric effects. Large area films reduce modulus due to wrinkles and defects. The value is from nanoindentation on monolayers.
   name: Graphene
   source: https://en.wikipedia.org/wiki/Graphene
   value: 1e12
-- description: Young's modulus of neutron star crust
+- description: The crust of a neutron star has a colossal effective shear modulus in models, reflecting interactions in a dense nuclear lattice. Starquakes excite oscillations that encode this stiffness indirectly. Laboratory analogies are qualitative at best. The value is an estimate from astrophysical constraints.
   name: Neutron Star Crust
   source: https://en.wikipedia.org/wiki/Neutron_star
   value: 1e30
-- description: Effective modulus near black hole
+- description: Near a black hole horizon, describing spacetime response with an effective modulus is metaphorical yet useful for order of magnitude. Accretion disk magneto turbulence sets stress strain like relations for the fluid. These ideas guide simulations of jets and spectra. The number is a heuristic extreme for comparison.
   name: Black Hole Horizon
   source: https://en.wikipedia.org/wiki/Black_hole
   value: 1e35
 units:
 - conversion_factor: 1
-  description: The base unit of Young's modulus in the SI system. Represents stress
-    per unit strain.
+  description: Pascals are the base unit for elastic modulus, connecting stress and strain directly. Reporting in pascals keeps comparisons across metals, polymers, and tissues coherent. Engineers often translate to gigapascals for brevity. All item values are stored in pascals before conversion.
   name: pascals
   symbol: Pa
 - conversion_factor: 1e-9
-  description: A unit equal to 1 billion pascals. Commonly used for engineering materials
-    like steel and concrete.
+  description: Gigapascals compress the large numbers typical of stiffness into two or three digits. Most structural materials live between one and three hundred gigapascals. Using GPa matches handbooks and FEA software defaults. Convert by multiplying pascals by 1e-9.
   name: gigapascals
   symbol: GPa
 - conversion_factor: 1e-6
-  description: A unit equal to 1 million pascals. Used for materials with moderate
-    stiffness like wood and plastics.
+  description: Megapascals are useful when discussing softer materials like polymers, tissues, and foams. They align with biomedical and consumer product literature. Conversions from pascals are linear and exact. The unit bridges daily lab work with engineering design.
   name: megapascals
   symbol: MPa

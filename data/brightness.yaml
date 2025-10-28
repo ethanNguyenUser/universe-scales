@@ -1,85 +1,101 @@
 base_unit: candela_per_square_meter
 dimension: brightness
-dimension_description: The intensity of light emitted or reflected by a surface, measured
-  as luminous flux per unit area
+dimension_description: Brightness here refers to luminance, the light leaving or reflected by a surface per unit area in a given direction. It connects what your eye perceives on a screen or page to the photometric power behind it. Unlike illuminance on a desk, luminance belongs to the surface itself under stated conditions. Each item below specifies the scene and viewing context so the number has a clear meaning.
 items:
-- description: Brightness of deep space
+- description: Deep intergalactic space away from stars and dust is functionally dark, with only stray photons from the cosmic background. The luminance is near zero for human perception even after dark adaptation. Instruments still register faint glows from zodiacal light and unresolved galaxies. This number expresses the ideal empty field reference for contrast.
   name: Deep Space
   source: https://en.wikipedia.org/wiki/Outer_space
   value: 1e-10
-- description: Brightness on moonless night
+- description: A moonless rural night sky under clear air provides this approximate surface luminance to the ground as seen by a dark adapted eye. It is dominated by starlight and airglow rather than artificial sources. Photographers call it a long exposure regime where noise matters. The value is a practical baseline for night vision performance.
   name: Moonless Night
   source: https://en.wikipedia.org/wiki/Night
   value: 1e-4
-- description: Brightness under full moon
+- description: Landscapes lit by a full moon at high altitude reflect enough light to reach this luminance when viewed directly. Snow and pale rock can run higher because of albedo. For reading outdoors some people find it barely sufficient at peak lunar elevation. The number assumes clear skies and a bright moon near opposition.
   name: Full Moon
   source: https://en.wikipedia.org/wiki/Moon
   value: 0.25
-- description: Brightness of candle flame
+- description: A candle flame near the wick presents this luminance when viewed from a short distance along the bright axis. The value varies with wax composition and airflow, which is why candles flicker. Artists learned to stage scenes with this small source for mood long before meters existed. The number ties ambiance to measurable output.
   name: Candle
   source: https://en.wikipedia.org/wiki/Candle
   value: 1
-- description: Typical room lighting
+- description: Typical evening room lighting on walls and book pages yields this luminance when using warm bulbs and shaded fixtures. Eyes adapt within minutes to make print comfortable at this level. Screens at matching brightness reduce strain compared with much higher settings. The value presumes matte surfaces to avoid specular glare.
   name: Room Lighting
   source: https://en.wikipedia.org/wiki/Lighting
   value: 100
-- description: Office lighting
+- description: Modern offices target this luminance on task surfaces to balance alertness with comfort for long work periods. The level supports fine handwriting and screen use without harsh reflections. Designers achieve it with a mix of overhead panels and indirect lamps. The number reflects both standards and accumulated workplace experience.
   name: Office Lighting
   source: https://en.wikipedia.org/wiki/Office
   value: 500
-- description: Brightness on overcast day
+- description: An overcast sky acts like a giant diffuser, making outdoor surfaces roughly uniform at this luminance. Photographers appreciate the soft shadows and gentle skin tones it brings. The level is bright to the eye but tame for cameras compared with direct sun. The value assumes midday and thick cloud cover.
   name: Overcast Day
   source: https://en.wikipedia.org/wiki/Overcast
   value: 1000
-- description: Brightness on sunny day
+- description: Under direct midday sun, many natural surfaces reach this luminance or more, especially pale stone and sand. Shadows are hard edged and contrast is high which can exceed camera dynamic range. Human pupils constrict and sunglasses become useful. The number marks a typical clear summer noon on land.
   name: Sunny Day
   source: https://en.wikipedia.org/wiki/Sunlight
   value: 100000
-- description: Brightness of snow reflection
+- description: Fresh snow in direct sun reflects so efficiently that luminance climbs to this level, causing glare and risk of snow blindness. Ski goggles and high albedo roofs are designed with these values in mind. Photovoltaic panels nearby can harvest substantial power because the field is bright and wide. The number assumes clean snow and clear air.
   name: Snow Reflection
   source: https://en.wikipedia.org/wiki/Snow
   value: 150000
-- description: Brightness of LED screen
+- description: A calibrated LCD or OLED screen for comfortable indoor reading is near this luminance when set to a neutral profile. Raising it further helps outdoors but wastes battery inside. Color grading suites fix this level to keep perception consistent across rooms. The number ties display practice to visual science.
   name: LED Screen
   source: https://en.wikipedia.org/wiki/LED_display
   value: 300
-- description: Brightness of fluorescent light
+- description: A ceiling mounted fluorescent panel behind a diffuser produces about this luminance on its emitting surface. The light is even and cost effective, which is why schools and labs used it for decades. Spectrum and flicker now matter more than the raw number for comfort. The figure provides a benchmark when retrofitting to LED.
   name: Fluorescent Light
   source: https://en.wikipedia.org/wiki/Fluorescent_lamp
   value: 1000
-- description: Brightness of arc welding
+- description: An active arc welding pool radiates intensely with luminance near this value at the brightest spot. It emits ultraviolet that can damage eyes and skin in seconds. Helmets and curtains attenuate both brightness and spectrum to safe levels. The number conveys why brief glances feel painful.
   name: Arc Welding
   source: https://en.wikipedia.org/wiki/Arc_welding
   value: 1000000
-- description: Brightness of Sirius star
+- description: The apparent luminance of Sirius as a disk is a modeling construct since the star is unresolved to the eye. As seen through a telescope with finite aperture, diffraction spreads the light into an Airy pattern. The central peak behaves as if it had an extremely high surface luminance. This number expresses that conceptual peak for comparison only.
   name: Sirius
   source: https://en.wikipedia.org/wiki/Sirius
   value: 1e8
-- description: Brightness of the Sun
+- description: The solar photosphere has an effective surface luminance of this order across visible wavelengths. It sets the reference for daylight vision and the upper bound of common sensors. Atmospheric scattering and eye safety make direct viewing unwise. The number is a standard astrophysical parameter for the Sun.
   name: Sun
   source: https://en.wikipedia.org/wiki/Sun
   value: 1.6e9
-- description: Brightness of supernova
+- description: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool. The light curve evolves rapidly so the number applies during peak days only. Spectra are line rich and depart from blackbody assumptions. The figure situates stellar explosions against the Sun on a surface basis.
   name: Supernova
   source: https://en.wikipedia.org/wiki/Supernova
   value: 1e15
-- description: Brightness of gamma ray burst
+- description: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
   name: Gamma Ray Burst
   source: https://en.wikipedia.org/wiki/Gamma-ray_burst
   value: 1e20
+- description: Civil twilight on a city street with modest lamppost spacing often leaves building facades near this luminance. Human eyes still color render well but shadows deepen. Photographers consider it a handheld borderline without stabilization. The number captures the feel of evening errands.
+  name: City Street Twilight
+  source: https://en.wikipedia.org/wiki/Twilight
+  value: 10
+- description: A calibrated cinema projection screen in a dark theater operates near this luminance to preserve contrast and comfort. Going brighter would wash out blacks in large rooms. The standard aims to match human adaptation in that environment. The value underpins projector and screen design.
+  name: Movie Screen
+  source: https://en.wikipedia.org/wiki/Movie_theater
+  value: 50
+- description: Smartphone screens at maximum boost for outdoor readability can reach this luminance for short periods. Thermal throttling often reduces it to protect the panel. In bright sun this margin makes the difference between usable and squint. The number explains marketing claims about nits.
+  name: Smartphone Max Boost
+  source: https://en.wikipedia.org/wiki/Display_brightness
+  value: 1200
+- description: Surgical task lighting focuses high luminance onto a small field to reveal low contrast features in tissue. Heat management and color fidelity matter as much as the raw value. Teams balance glare against visibility under long procedures. The figure is representative for modern LED operating lamps.
+  name: Operating Room Field
+  source: https://en.wikipedia.org/wiki/Surgical_light
+  value: 60000
+- description: A white sheet of paper near a window on a cloudy morning reflects to this luminance and makes for pleasant reading. Graphic designers proof prints against such conditions to judge tone. The value is a simple domestic check for comfortable lighting. It is also a good target for home offices.
+  name: Paper by Window
+  source: https://en.wikipedia.org/wiki/Reading
+  value: 200
 units:
 - conversion_factor: 1
-  description: The base unit of luminance in the SI system. Measures luminous intensity
-    per unit area.
+  description: Candela per square meter is the SI unit of luminance, linking photometric intensity to emitting area. It matches how displays and light boxes are specified. Using this base unit keeps comparisons between screens, walls, and skies consistent. All item values are recorded in this unit before conversion.
   name: candela per square meter
-  symbol: cd/m²
+  symbol: cd/m2
 - conversion_factor: 3.14159
-  description: A unit of illuminance, measuring luminous flux per unit area. One lux
-    equals one lumen per square meter.
+  description: Lux measures illuminance on a surface and relates to luminance by a factor near pi for a perfectly diffusing surface. In practice the mapping depends on reflectance and geometry, so treat converted values as scene dependent. Lux is convenient for workplace and architectural standards. The factor shown provides a common reference for diffuse assumptions.
   name: lux
   symbol: lx
 - conversion_factor: 0.092903
-  description: A unit of illuminance in the imperial system. One foot-candle equals
-    one lumen per square foot.
+  description: Foot candles are illuminance in the imperial system, equal to lumens per square foot. Historical lighting tables use this unit, especially in North America. Conversions follow from the square foot to square meter area ratio. The factor here aligns with the diffuse relation used for lux.
   name: foot-candles
   symbol: fc

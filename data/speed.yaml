@@ -1,115 +1,121 @@
 base_unit: meters_per_second
 dimension: speed
-dimension_description: The rate at which an object changes its position over time,
-  measured as distance traveled per unit of time
+dimension_description: Speed tells how fast position changes with time, without caring about the direction of travel. It is the scalar magnitude behind commuting, sprinting, and orbiting, the number you see on a speedometer. Human bodies sense acceleration more than speed, but fatigue and safety often map back to speed limits. Each entry below identifies a specific context so the values can be tested against experience or instruments.
 items:
-- description: Speed of continental drift
+- description: Continents creep at centimeters per year as plates slide on the mantle, which is a few nanometers per second. Over a lifetime this sums to meters, enough to redraw coastlines for future generations. GPS networks now measure this motion directly. The value represents a typical mid ocean ridge spreading rate.
   name: Continental Drift
   source: https://en.wikipedia.org/wiki/Continental_drift
   value: 2e-9
-- description: Speed of glacier movement
+- description: Glaciers flow down valleys at about a meter per day in temperate climates, changing with snowfall and melt. Crevasses mark places where speed gradients tear the ice. Satellites track these changes season by season. The value is a representative average rather than a surge.
   name: Glacier Movement
   source: https://en.wikipedia.org/wiki/Glacier
   value: 1e-6
-- description: Speed of plant growth
+- description: Plant shoots extend by micrometers per second when conditions are kind, driven by water pressure and cell wall remodeling. To the eye it is stillness; to a timelapse it is motion. Botanists infer these rates from growth curves and hormone assays. The number captures a healthy indoor plant.
   name: Plant Growth
   source: https://en.wikipedia.org/wiki/Plant_growth
   value: 1e-8
-- description: Speed of garden snail
+- description: A garden snail travels at millimeters per second across a sidewalk, limited by muscle cycles and mucus drag. Its speed is steady over minutes but pauses often for sensing. Children learn patience by watching. The value reflects a typical unhurried crawl.
   name: Snail
   source: https://en.wikipedia.org/wiki/Snail
   value: 0.001
-- description: Average human walking speed
+- description: Comfortable human walking on level ground averages around one and a half meters per second. This cadence minimizes energy per distance for the human musculoskeletal system. Runners and robots use it as a planning baseline. The value assumes flat terrain and no load.
   name: Human Walking
   source: https://en.wikipedia.org/wiki/Walking
   value: 1.4
-- description: Average human running speed
+- description: Recreational running settles near five to six meters per second for fit adults on a track. Sprinting peaks higher but cannot be held. Coaches train pacing by feel and watch. The number is a sustained pace for several minutes.
   name: Human Running
   source: https://en.wikipedia.org/wiki/Running
   value: 5.5
-- description: Maximum speed of cheetah
+- description: A cheetah in a short chase can exceed twenty meters per second using a flexible spine as a spring. The burst lasts only seconds before heat builds. Evolution tuned this system to ambush on open savanna. The value is a peak dash, not cruising.
   name: Cheetah
   source: https://en.wikipedia.org/wiki/Cheetah
   value: 28
-- description: Diving speed of peregrine falcon
+- description: A peregrine falcon stooping on prey dives at speeds that approach one hundred meters per second with wings tucked. Feathers and head shape channel air to keep vision stable. The stoop converts gravitational potential into kinetic energy efficiently. The value is for a vertical dive, not level flight.
   name: Peregrine Falcon
   source: https://en.wikipedia.org/wiki/Peregrine_falcon
   value: 89
-- description: Average bicycle speed
+- description: Everyday urban cycling on level ground averages around this speed for commuters. Wind and traffic lights matter more than raw leg power. Good infrastructure increases average speed safely. The value is for a relaxed pace on a city bike.
   name: Bicycle
   source: https://en.wikipedia.org/wiki/Bicycle
   value: 5.5
-- description: Average city driving speed
+- description: City driving averages under fifteen meters per second when signals, stops, and congestion are counted. Drivers often overestimate their average due to brief fast segments. Travel time depends more on reliability than peak speed. The value converts to roughly thirty miles per hour.
   name: Car (City)
   source: https://en.wikipedia.org/wiki/Automobile
   value: 13.9
-- description: Average highway driving speed
+- description: Highway cruising sits around thirty meters per second where legal and conditions allow. Aerodynamic drag dominates fuel economy here. Adaptive cruise control tries to keep this number steady to save energy. The value is a typical posted limit speed.
   name: Car (Highway)
   source: https://en.wikipedia.org/wiki/Automobile
   value: 33.3
-- description: Speed of high-speed trains
+- description: High speed rail lines in service run near eighty meters per second on straight, well maintained track. Curves and stations reduce the trip average below this peak. Quiet cabins make the experience feel slower than it is. The value states a line speed, not schedule speed.
   name: High-Speed Train
   source: https://en.wikipedia.org/wiki/High-speed_rail
   value: 83.3
-- description: Cruising speed of commercial jet
+- description: A commercial jet at cruise in thin air travels near two hundred and fifty meters per second relative to the air. Tailwinds and headwinds adjust groundspeed by tens of meters per second. Pilots aim for efficient Mach numbers rather than raw speed. The value is a long haul typical.
   name: Commercial Jet
   source: https://en.wikipedia.org/wiki/Jet_aircraft
   value: 250
-- description: Cruising speed of Concorde
+- description: Concorde’s supersonic cruise reached about six hundred meters per second, halving transatlantic time. Fuel burn and sonic boom constraints ended routine service. The flight numbers still inspire new designs. The value is at altitude, not near sea level.
   name: Concorde
   source: https://en.wikipedia.org/wiki/Concorde
   value: 600
-- description: Maximum speed of SR-71
+- description: The SR71 Blackbird set records above nine hundred meters per second in level flight. Airframe heating, not engine thrust, became the limit. Reconnaissance routes exploited this speed to outrun threats. The value is a published peak.
   name: SR-71 Blackbird
   source: https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird
   value: 980
-- description: Orbital speed of ISS
+- description: The International Space Station circles Earth at about seven thousand seven hundred meters per second to remain in low orbit. At this speed one lap takes about ninety minutes. Astronauts feel weightless because they are in continuous free fall. The number is a mean orbital speed.
   name: International Space Station
   source: https://en.wikipedia.org/wiki/International_Space_Station
   value: 7700
-- description: Earth's escape velocity
+- description: Escape velocity at Earth’s surface is around eleven thousand meters per second, the speed needed to outrun gravity without further thrust. Rockets reach orbit with less speed by trading some energy to climb rather than escape. The number is a theoretical threshold ignoring atmosphere. It sets a clean physics marker.
   name: Escape Velocity (Earth)
   source: https://en.wikipedia.org/wiki/Escape_velocity
   value: 11186
-- description: Maximum speed of Helios 2
+- description: Helios 2, a solar probe, reached about seventy thousand meters per second at perihelion using gravity assists. Close to the Sun, orbital speeds soar. Such missions map the heliosphere where wind and fields originate. The value is its record setting peak.
   name: Helios 2 Spacecraft
   source: https://en.wikipedia.org/wiki/Helios_(spacecraft)
   value: 70000
-- description: Speed of sound in air at 20°C
+- description: Sound in dry air at room temperature travels near three hundred forty three meters per second, carrying speech and music. Temperature and humidity tweak this value predictably. Musicians sense it as hall delay between stage and back row. The number is the standard classroom reference.
   name: Sound in Air
   source: https://en.wikipedia.org/wiki/Speed_of_sound
   value: 343
-- description: Speed of light in vacuum
+- description: Light in vacuum moves at exactly two hundred ninety nine million seven hundred ninety two thousand four hundred fifty eight meters per second by definition. It is the ultimate speed limit of relativity, entwined with how we measure length and time. Fiber optics carry information just below this pace. The number fixes the meter itself.
   name: Light in Vacuum
   source: https://en.wikipedia.org/wiki/Speed_of_light
   value: 299792458
-- description: Speed of radio waves in vacuum
+- description: Radio waves are light at lower frequencies and share the same vacuum speed as visible light. In air and cables they slow slightly depending on refractive index. Antennas and circuits are designed with these delays in mind. The value repeats the universal constant in a radio context.
   name: Radio Waves
   source: https://en.wikipedia.org/wiki/Radio_wave
   value: 299792458
+- description: A marathon finishing time of four hours corresponds to this average running speed along the course. Hills and crowds change the local pace around this mean. Training plans work backward from such averages. The number ties physics to weekend goals.
+  name: Marathon Pace (4 h)
+  source: https://en.wikipedia.org/wiki/Marathon
+  value: 2.94
+- description: A city elevator travels around this speed to balance comfort with throughput, using careful jerk limits at start and stop. Taller buildings run faster express cars to sky lobbies. Riders barely notice speed when motion is smooth. The value applies between floors, not at doors.
+  name: Elevator Car
+  source: https://en.wikipedia.org/wiki/Elevator
+  value: 3
+- description: A pitched baseball leaves the hand near forty meters per second for professional fastballs. Aerodynamics then trims speed before the plate. Catchers train to read this in fractions of a second. The value is at release, not at contact.
+  name: Fastball
+  source: https://en.wikipedia.org/wiki/Baseball
+  value: 42
 units:
 - conversion_factor: 1
-  description: The base unit of speed in the SI system. Represents distance traveled
-    in meters per second.
+  description: Meters per second is the SI unit for speed and follows directly from distance divided by time. It keeps equations simple and converts cleanly to energy via kinetic formulas. Using it aligns laboratory and field measurements. All item values are recorded in m per s before conversion.
   name: meters per second
   symbol: m/s
 - conversion_factor: 3.6
-  description: A unit of speed commonly used for vehicle speed. One km/h equals 1,000
-    meters per hour.
+  description: Kilometers per hour is common on road signs and dashboards around the world. It maps daily travel times to map distances conveniently. Converting is a simple scale by 3.6 from SI. We include it for transportation contexts.
   name: kilometers per hour
   symbol: km/h
 - conversion_factor: 2.23694
-  description: A unit of speed in the imperial system, commonly used in the United
-    States and United Kingdom for road vehicles.
+  description: Miles per hour is used in the United States and United Kingdom for road speeds. It ties to statute miles familiar from legacy maps. Simple factors connect it to SI when needed. Many instruments display both units side by side.
   name: miles per hour
   symbol: mph
 - conversion_factor: 3.28084
-  description: A unit of speed in the imperial system, measuring distance traveled
-    in feet per second.
+  description: Feet per second appears in ballistics and sports timing, where small distances and short times prevail. It is convenient for quick mental arithmetic in yards and seconds. We list it for legacy comparisons. Convert directly from meters per second using the foot factor.
   name: feet per second
   symbol: ft/s
 - conversion_factor: 1.94384
-  description: A unit of speed equal to one nautical mile per hour. Used for maritime
-    and aviation navigation.
+  description: Knots measure speed over water and in the air based on nautical miles per hour. Pilots and captains plan using this unit because charts are drawn in nautical miles. Conversions keep navigation consistent with physics. The factor provides a direct mapping from SI.
   name: knots
   symbol: kn

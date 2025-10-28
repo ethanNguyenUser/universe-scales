@@ -1,93 +1,101 @@
 base_unit: pascals
 dimension: yield-strength
-dimension_description: The maximum stress a material can withstand before permanent
-  deformation begins
+dimension_description: Yield strength marks the stress where a material stops returning to its original shape and begins to deform permanently. Engineers usually define it by a 0.2 percent offset on a tensile test curve at room temperature unless noted. The value depends strongly on processing, microstructure, and loading rate. Each entry states a representative condition so comparisons are meaningful.
 items:
-- description: Yield strength of rubber
+- description: Soft elastomeric rubber shows a low apparent yield because long polymer chains uncoil and slide instead of breaking. Under slow uniaxial tension at room temperature it flows at stresses near this level. Fillers and crosslink density can raise the value substantially. The number is for a common natural rubber compound.
   name: Rubber
   source: https://en.wikipedia.org/wiki/Rubber
   value: 1e6
-- description: Yield strength of foam
+- description: Flexible polymer foams yield when cell walls buckle and collapse, absorbing energy as they densify. The stress plateau around this value is prized for cushioning. Strain rate and temperature swing the response in real products. The number is for an open cell polyurethane foam in compression.
   name: Foam
   source: https://en.wikipedia.org/wiki/Foam
   value: 1e5
-- description: Yield strength of soft wood
+- description: Softwood loaded along the grain yields around this stress as lignin and cellulose microfibrils begin to slip. Across the grain the value is far lower due to anisotropy. Moisture content and knots matter greatly for real beams. The number assumes clear spruce in tension parallel to grain.
   name: Wood (Soft)
   source: https://en.wikipedia.org/wiki/Wood
   value: 3e7
-- description: Yield strength of cartilage
+- description: Articular cartilage yields at low stress in compression because it is mostly water constrained by a collagen network. Permeability and rate control the response, which is why joints feel different under fast and slow loading. Degeneration lowers this threshold further. The value is for healthy tissue under confined compression.
   name: Cartilage
   source: https://en.wikipedia.org/wiki/Cartilage
   value: 1e6
-- description: Yield strength of bone
+- description: Cortical bone in tension yields near this stress when microcracks coalesce, while compression values are higher. Age, mineralization, and loading direction all shift the number. Implants are designed to share load to stay below this limit. The value quoted is longitudinal tension at body temperature.
   name: Bone
   source: https://en.wikipedia.org/wiki/Bone
   value: 1e8
-- description: Yield strength of tendon
+- description: Tendons behave viscoelastically and yield when collagen fibrils begin to slide irreversibly. Warm up raises extensibility and delays yield onset. Rehabilitation protocols keep loads well below this value for safety. The number is for bovine Achilles tendon in tension.
   name: Tendon
   source: https://en.wikipedia.org/wiki/Tendon
   value: 5e7
-- description: Yield strength of aluminum
+- description: Commercially pure aluminum has a modest yield, but work hardening and alloying create big gains. The value here is for a common 6061 T6 alloy in tension at room temperature using the 0.2 percent offset. Welding locally erases this strengthening unless re treated. The number is a staple in mechanical design tables.
   name: Aluminum
   source: https://en.wikipedia.org/wiki/Aluminium
   value: 2.8e8
-- description: Yield strength of mild steel
+- description: Mild low carbon steel yields at a few hundred megapascals and then work hardens, giving it a forgiving ductile plateau. This makes it ideal for beams and automobile bodies. Strain aging and temperature can introduce a Lüders band, the familiar yield point elongation. The value reflects a classic structural grade.
   name: Steel (Mild)
   source: https://en.wikipedia.org/wiki/Steel
   value: 2.5e8
-- description: Yield strength of high-strength steel
+- description: High strength low alloy steels and martensitic grades push yield into the gigapascal range. Toughness becomes the balancing act to avoid brittle failures. Heat treatment recipes tune both yield and impact resistance. The number represents a quenched and tempered structural steel.
   name: Steel (High Strength)
   source: https://en.wikipedia.org/wiki/Steel
   value: 1e9
-- description: Yield strength of titanium
+- description: Titanium alloys combine moderate density with high yield and corrosion resistance, perfect for airframes and implants. Microstructure from alpha beta processing controls the plateau. At cryogenic temperatures yield rises further. The value is for Ti 6Al 4V in the annealed condition.
   name: Titanium
   source: https://en.wikipedia.org/wiki/Titanium
   value: 8e8
-- description: Yield strength of concrete
+- description: Ordinary concrete carries little tensile yield because cracks propagate early, so reinforcement carries tension. In compression its apparent yield is higher due to microcrack closure and friction. Curing conditions dominate strength variation on site. The number is a compressive yield proxy for structural mixes.
   name: Concrete
   source: https://en.wikipedia.org/wiki/Concrete
   value: 3e7
-- description: Yield strength of glass
+- description: Glass lacks a conventional yield in tension because flaws trigger brittle fracture before plastic flow. Under high hydrostatic pressure or in compression it can withstand much higher stresses. Surface treatments like tempering raise the effective limit. The value shown is an upper bound in compression before crushing.
   name: Glass
   source: https://en.wikipedia.org/wiki/Glass
   value: 7e8
-- description: Yield strength of ceramic
+- description: Engineering ceramics exhibit very high apparent yield in compression with limited ductility. Their grain boundaries and defects set failure in tension. Designers exploit them where hot hardness matters more than give. The value is for alumina under compressive loading.
   name: Ceramic
   source: https://en.wikipedia.org/wiki/Ceramic
   value: 2e9
-- description: Yield strength of carbon fiber
+- description: Carbon fiber composites have no single yield value; it depends on fiber direction and matrix. Along the fibers, stress at first matrix cracking is far below fiber failure. Layup design sets the usable envelope. The number is a unidirectional tensile yield along the fiber direction.
   name: Carbon Fiber
   source: https://en.wikipedia.org/wiki/Carbon_fiber
   value: 5e9
-- description: Yield strength of diamond
+- description: Diamond has extraordinary theoretical strength, but practical yield depends on flaws and direction. Under compression tiny samples sustain immense stresses without plasticity. Machining diamond relies on brittle fracture, not yielding. The value shown is an upper bound inferred from indentation.
   name: Diamond
   source: https://en.wikipedia.org/wiki/Diamond
   value: 5e10
-- description: Yield strength of graphene
+- description: Graphene sheets approach ideal strength at nanoscale, with yield set by breaking sp2 bonds. Defects and grain boundaries reduce the value in larger films. Experiments use nanoindenters to probe this regime. The number represents pristine monolayer strength in tension.
   name: Graphene
   source: https://en.wikipedia.org/wiki/Graphene
   value: 1e11
-- description: Yield strength of neutron star crust
+- description: Annealed copper yields at lower stress than steels but offers excellent electrical and thermal conduction. Cold work raises yield at the cost of ductility, a trade used in springs and connectors. Purity and grain size are decisive. The number is for oxygen free copper in tension.
+  name: Copper
+  source: https://en.wikipedia.org/wiki/Copper
+  value: 7e7
+- description: Nylon yields when polymer chains slide past each other after straightening, a process sensitive to moisture. Conditioned samples can appear tougher but softer. Designers account for this by specifying conditioning state. The value is for dry as molded nylon 6.
+  name: Nylon
+  source: https://en.wikipedia.org/wiki/Nylon
+  value: 8e7
+- description: Kevlar fiber under tension shows a high apparent yield due to oriented aromatic chains. In composites it carries loads efficiently along the fiber direction while the matrix supports shear. Impact helmets exploit this anisotropy. The number is for single fiber tensile yield.
+  name: Kevlar Fiber
+  source: https://en.wikipedia.org/wiki/Kevlar
+  value: 3.6e9
+- description: The neutron star crust behaves like an ultra strong lattice where yield refers to the onset of plastic flow under astronomical shear. Models connect this to starquakes that glitch pulsar rotation. No terrestrial lab can reproduce the conditions. The value is a theoretical estimate.
   name: Neutron Star Crust
   source: https://en.wikipedia.org/wiki/Neutron_star
   value: 1e25
-- description: Effective yield strength near black hole
+- description: Near a black hole event horizon, conventional material concepts blur, but effective stresses in accretion flows can be cast as yields. Magnetic fields and radiation pressure set the limits rather than crystalline defects. The language is metaphorical but useful for order of magnitude. The value signals a physics extreme.
   name: Black Hole Horizon
   source: https://en.wikipedia.org/wiki/Black_hole
   value: 1e30
 units:
 - conversion_factor: 1
-  description: The base unit of yield strength in the SI system. Represents the stress
-    at which plastic deformation begins.
+  description: Pascals measure stress as force per unit area and serve as the base unit for yield strength. Reporting in pascals keeps comparisons across metals, polymers, and tissues consistent. Engineers usually think in megapascals for convenience. All item values are stored in pascals before conversion.
   name: pascals
   symbol: Pa
 - conversion_factor: 1e-6
-  description: A unit equal to 1 million pascals. Commonly used for engineering materials
-    and structural design.
+  description: Megapascals compress large pascal numbers into human readable figures for structural materials. A hundred to a thousand megapascals covers most metals. Using MPa aligns with datasheets and testing reports. Convert by multiplying pascals by 1e-6.
   name: megapascals
   symbol: MPa
 - conversion_factor: 1e-9
-  description: A unit equal to 1 billion pascals. Used for high-strength materials
-    like advanced alloys and ceramics.
+  description: Gigapascals describe very high yield ranges seen in advanced steels, ceramics, and theoretical limits. It is also natural for hardness and indentation scales. While not daily for builders, researchers live in this unit. Convert by multiplying pascals by 1e-9.
   name: gigapascals
   symbol: GPa

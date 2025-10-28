@@ -1,64 +1,73 @@
 base_unit: meters_per_second_cubed
 dimension: jerk
-dimension_description: The rate of change of acceleration over time, measuring how
-  quickly acceleration itself changes
+dimension_description: Jerk is the time rate of change of acceleration, indicating how abruptly a motion profile is being altered. Human comfort is strongly tied to jerk limits rather than raw acceleration because nerves respond to changes. Vehicles, elevators, and robots therefore shape motion with bounded jerk for smoothness. Each value below states the scenario and operating condition so the number maps to a real ride or mechanism.
 items:
-- description: Jerk of continental drift
+- description: Tectonic plates creeping a few centimeters per year change acceleration so slowly that their jerk is nearly zero on human timescales. Over millions of years these tiny changes build mountains and open oceans. Instruments infer such motion from strain accumulation and earthquakes. The value expresses a characteristic background jerk of continental drift.
   name: Continental Drift
   source: https://en.wikipedia.org/wiki/Continental_drift
   value: 1e-15
-- description: Jerk of plant growth
+- description: The growth tip of a plant accelerates its extension as hormones surge with daylight and water, but the changes are still microscopic per second. Garden timelapses show the motion only when hours are compressed into seconds. Biophysics models treat this as a viscoelastic expansion with gentle jerk. The number gives a laboratory scale for seedlings.
   name: Plant Growth
   source: https://en.wikipedia.org/wiki/Plant_growth
   value: 1e-12
-- description: Jerk of snail movement
+- description: A snail starts and stops with small changes in acceleration as muscles cycle, producing a barely perceptible jerk per second. The mucus layer damps sharp transitions that would otherwise waste energy. Sensors on tiny sleds can record the rhythm in controlled tracks. The value is a middle range for steady crawling.
   name: Snail Movement
   source: https://en.wikipedia.org/wiki/Snail
   value: 1e-9
-- description: Jerk during walking
+- description: Humans adjust pace during walking with modest jerk as we push off and land each step. Comfortable sidewalks and shoes keep these transients low. Gait labs smooth rehabilitative robots by limiting jerk rather than acceleration peaks. The value corresponds to level ground at everyday speed.
   name: Human Walking
   source: https://en.wikipedia.org/wiki/Walking
   value: 2
-- description: Jerk in car acceleration
+- description: A family car merging briskly on a highway ramps acceleration in a few seconds, generating a noticeable but tolerable jerk. Electronics in modern powertrains spread the rise to protect comfort and traction. Passengers sense roughness when jerk spikes due to shifting. The number represents a controlled pedal input.
   name: Car Acceleration
   source: https://en.wikipedia.org/wiki/Automobile
   value: 5
-- description: Jerk in elevator movement
+- description: Elevator controllers are tuned for low jerk during start and stop to prevent drinks from sloshing. The profile is often a smooth S curve designed explicitly around jerk limits. People recognize a well tuned elevator by the lack of a jolt at arrival. The figure is a typical target for modern mid rise systems.
   name: Elevator
   source: https://en.wikipedia.org/wiki/Elevator
   value: 10
-- description: Jerk in Formula 1 car
+- description: Formula 1 cars change acceleration rapidly under braking and corner entry, subjecting drivers to high jerk along with high g. Neck muscles and harnesses manage these quick transitions repeatedly per lap. Teams trade tire grip against driver comfort in setup. The number is characteristic of a late braking maneuver on a dry track.
   name: Formula 1 Car
   source: https://en.wikipedia.org/wiki/Formula_One
   value: 50
-- description: Jerk in jet fighter maneuvers
+- description: A jet fighter in an evasive maneuver can generate very high jerk as pilots snap into tight turns or roll. Life support like pressure suits helps with sustained acceleration, but jerk dictates how abrupt the onset feels. Tactics balance structural limits and pilot tolerance. The number is for a sharp onset at subsonic speed.
   name: Jet Fighter
   source: https://en.wikipedia.org/wiki/Fighter_aircraft
   value: 100
-- description: Jerk in space shuttle launch
+- description: The space shuttle launch stack ramped thrust over seconds to manage structural loads, yet liftoff still involved substantial jerk as constraints released. Control systems shape this profile to avoid pogo oscillations. Viewers sense the shift from rumble to climb as the jerk crosses thresholds. The value is for the initial ascent phase.
   name: Space Shuttle
   source: https://en.wikipedia.org/wiki/Space_Shuttle
   value: 30
-- description: Jerk in dragster launch
+- description: A top fuel dragster applies thrust almost instantly, producing extreme jerk at the green light. The chassis flex and tire deformation absorb part of the onset but not all. Spectators feel it in their chests as the sound and air pulse. The number reflects the brutal first fractions of a second.
   name: Dragster
   source: https://en.wikipedia.org/wiki/Dragster
   value: 200
-- description: Jerk in laboratory centrifuge
+- description: Laboratory centrifuges ramp speed following programmed jerk limits to protect samples from shear. In blood work, gentle jerk preserves cell membranes while still reaching target g levels quickly. The profile is a textbook case of motion planning. The figure is a modern bench top ramp setting.
   name: Centrifuge
   source: https://en.wikipedia.org/wiki/Centrifuge
   value: 10000
-- description: Jerk in vehicle crash test
+- description: Crash tests intentionally create very high jerk as vehicles decelerate in milliseconds against barriers. Dummies measure how quickly acceleration changes because injuries correlate with jerk as well as peak g. Energy absorbing structures spread the jerk in time to save lives. The value corresponds to a severe frontal impact.
   name: Crash Test
   source: https://en.wikipedia.org/wiki/Crash_test
   value: 50000
+- description: A commuter train with well tuned traction control limits jerk during departure so standing passengers keep balance. The sensation is a smooth glide rather than a lurch. Operators set jerk limits in software per line and rolling stock. The number is a service target for urban rail.
+  name: Metro Train Departure
+  source: https://en.wikipedia.org/wiki/Railway_traction
+  value: 8
+- description: Industrial robot arms moving between pick and place positions follow S curve profiles to cap jerk and avoid vibration. Payload and arm stiffness determine how tight the jerk bounds can be. Lower jerk extends tool life and improves placement accuracy. The figure is common for collaborative robots working near people.
+  name: Robot Arm Motion
+  source: https://en.wikipedia.org/wiki/Motion_profile
+  value: 20
+- description: Roller coasters create designed patterns of jerk to deliver thrills without injury, especially in banked turns and airtime hills. Designers talk about snap, crackle, and pop as nicknames for the sensations. Standards set both jerk and g limits for rider safety. The number reflects a modern steel coaster transition.
+  name: Roller Coaster Transition
+  source: https://en.wikipedia.org/wiki/Roller_coaster
+  value: 30
 units:
 - conversion_factor: 1
-  description: The base unit of jerk in the SI system. Represents the change in acceleration
-    per second.
+  description: Meters per second cubed is the SI unit for jerk, defined as change in acceleration per second. It keeps motion planning equations simple and consistent. Engineers prefer this when specifying comfort limits for vehicles and lifts. All item values are recorded in m per s3 before conversion.
   name: meters per second cubed
-  symbol: m/s³
+  symbol: m/s3
 - conversion_factor: 3.28084
-  description: A unit of jerk in the imperial system, measuring change in acceleration
-    in feet per second cubed.
+  description: Feet per second cubed expresses jerk in imperial units for legacy systems and ergonomics tables. It converts cleanly from SI using the foot to meter ratio. Using this unit helps compare historical data without rewriting specifications. Values here follow the exact linear conversion.
   name: feet per second cubed
-  symbol: ft/s³
+  symbol: ft/s3
