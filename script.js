@@ -288,7 +288,6 @@ class UniversalScales {
         // Clear existing plot elements
         this.mainGroup.selectAll('.item-group').remove();
         this.mainGroup.selectAll('.vertical-lines-group').remove();
-        this.svg.selectAll('defs').remove(); // Clear clip paths
         
         // Get all items
         const allItems = [];
@@ -404,9 +403,6 @@ class UniversalScales {
         // Position items with collision avoidance
         const positionedItems = this.positionItems(items);
         
-        // Create clipping masks for vertical lines to hide them behind text labels
-        const defs = this.svg.select('defs').empty() ? this.svg.append('defs') : this.svg.select('defs');
-        
         // Draw vertical lines first (behind everything else)
         const verticalLinesGroup = this.mainGroup.append('g')
             .attr('class', 'vertical-lines-group');
@@ -423,38 +419,7 @@ class UniversalScales {
             .attr('stroke-width', 1)
             .attr('stroke-opacity', 0.2)
             .attr('stroke-dasharray', '3,3')
-            .attr('pointer-events', 'none') // Disable pointer events on line
-            .attr('clip-path', (d, i) => {
-                // Create a unique clip path for each line
-                const clipId = `clip-${i}`;
-                
-                // Create the clip path definition
-                const clipPath = defs.append('clipPath')
-                    .attr('id', clipId);
-                
-                // Create a mask that covers the text label area
-                const xPos = this.xScale(d.convertedValue) + (d.xOffset || 0);
-                const yPos = this.height - d.yPosition;
-                
-                // Calculate text label dimensions (same logic as in label hover area)
-                const estimatedTextWidth = d.name.length * 6;
-                const labelWidth = estimatedTextWidth + 20 + 12 + 10; // text + padding + circle + padding
-                const labelHeight = 24;
-                
-                // Determine label position (same logic as in drawItems)
-                const labelX = xPos > this.width / 2 ? xPos - 10 - estimatedTextWidth : xPos - 10;
-                const labelY = yPos - 12;
-                
-                // Create a rectangle that masks the text label area
-                clipPath.append('rect')
-                    .attr('x', labelX)
-                    .attr('y', labelY)
-                    .attr('width', labelWidth)
-                    .attr('height', labelHeight)
-                    .attr('fill', 'white'); // This will hide the line in this area
-                
-                return `url(#${clipId})`;
-            });
+            .attr('pointer-events', 'none'); // Disable pointer events on line
         
         const itemGroup = this.mainGroup.selectAll('.item-group')
             .data(positionedItems)
