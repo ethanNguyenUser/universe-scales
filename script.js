@@ -1,5 +1,76 @@
 // Universal Scales - Main JavaScript Application
 
+// Configuration Constants
+const CONFIG = {
+    // Plot dimensions and margins
+    MARGIN: { top: 40, right: 40, bottom: 60, left: 120 },
+    MIN_SVG_HEIGHT: 200,
+    
+    // Item positioning
+    FIXED_VERTICAL_SPACING: 15,
+    BOTTOM_PADDING: 20,
+    TOP_PADDING: 20,
+    
+    // Visual styling
+    POINT_RADIUS: 6,
+    POINT_RADIUS_HOVER: 8,
+    POINT_STROKE_WIDTH: 1.5,
+    POINT_STROKE_WIDTH_HOVER: 3,
+    POINT_FILL_COLOR: '#007bff',
+    POINT_STROKE_COLOR: '#000000',
+    
+    // Vertical lines
+    VERTICAL_LINE_STROKE_WIDTH: 1,
+    VERTICAL_LINE_OPACITY: 0.2,
+    VERTICAL_LINE_DASH_ARRAY: '3,3',
+    
+    // Text labels
+    LABEL_FONT_SIZE: '9px',
+    LABEL_OFFSET_X: -10,
+    LABEL_OFFSET_Y: -12,
+    LABEL_HEIGHT: 24,
+    LABEL_PADDING: 20,
+    LABEL_CIRCLE_PADDING: 10,
+    TEXT_WIDTH_ESTIMATE: 6, // pixels per character
+    
+    // Horizontal positioning
+    TEXT_BUFFER: 5,
+    
+    // Tooltip positioning
+    TOOLTIP_OFFSET_X: 10,
+    TOOLTIP_OFFSET_Y: 10,
+    TOOLTIP_MIN_TOP: 10,
+    
+    // Animation
+    HOVER_TRANSITION_DURATION: 100,
+    
+    // Grid
+    GRID_TICKS: 10,
+    
+    // Number formatting
+    VALUE_FORMAT: '.2e',
+    AXIS_FORMAT: '.0e',
+    
+    // Debug threshold
+    DEBUG_SMALL_VALUE_THRESHOLD: 1e-10,
+    
+    // Colors
+    COLORS: {
+        LIGHT: {
+            TEXT: '#212529',
+            AXIS: '#6c757d',
+            STROKE: '#000000',
+            LINE: '#007bff'
+        },
+        DARK: {
+            TEXT: '#ffffff',
+            AXIS: '#adb5bd',
+            STROKE: '#ffffff',
+            LINE: '#4dabf7'
+        }
+    }
+};
+
 class UniversalScales {
     constructor() {
         this.currentDimension = 'length';
@@ -8,7 +79,7 @@ class UniversalScales {
         this.exchangeRates = null;
         
         // D3.js setup
-        this.margin = { top: 40, right: 40, bottom: 60, left: 80 };
+        this.margin = CONFIG.MARGIN;
         this.width = 0;
         this.height = 0;
         this.svg = null;
@@ -305,19 +376,22 @@ class UniversalScales {
         const values = allItems.map(item => item.convertedValue);
         this.xScale.domain(d3.extent(values));
         
+        // Position items with collision avoidance
+        const positionedItems = this.positionItems(allItems);
+        
+        // Calculate horizontal offsets after scale domain is set
+        this.calculateHorizontalOffsets(positionedItems);
+        
         // Calculate dynamic SVG height based on number of items with fixed spacing
-        const fixedVerticalSpacing = 20; // Fixed pixel spacing between items
-        const numItems = allItems.length;
-        const bottomPadding = 20;
-        const topPadding = 20;
+        // Add 1 for the invisible item that will be added in positionItems
+        const numItems = allItems.length + 1;
         
         // Calculate required height for items using fixed spacing
-        const itemsHeight = (numItems > 0) ? bottomPadding + ((numItems - 1) * fixedVerticalSpacing) + topPadding : bottomPadding + topPadding;
+        const itemsHeight = (numItems > 0) ? CONFIG.BOTTOM_PADDING + ((numItems - 1) * CONFIG.FIXED_VERTICAL_SPACING) + CONFIG.TOP_PADDING : CONFIG.BOTTOM_PADDING + CONFIG.TOP_PADDING;
         
         // Calculate total SVG height (items + margins)
         const requiredSvgHeight = itemsHeight + this.margin.top + this.margin.bottom;
-        const minSvgHeight = 200; // Minimum height
-        const svgHeight = Math.max(minSvgHeight, requiredSvgHeight);
+        const svgHeight = Math.max(CONFIG.MIN_SVG_HEIGHT, requiredSvgHeight);
         
         // Update SVG height
         this.svg.attr('height', svgHeight);
@@ -341,11 +415,11 @@ class UniversalScales {
         this.xAxisTop.attr('transform', `translate(0,${this.yScale(itemsHeight)})`);
         
         this.xAxis.call(d3.axisBottom(this.xScale).tickFormat(d => {
-            return d3.format('.0e')(d); // Remove unnecessary zeros
+            return d3.format(CONFIG.AXIS_FORMAT)(d);
         }));
         
         this.xAxisTop.call(d3.axisTop(this.xScale).tickFormat(d => {
-            return d3.format('.0e')(d); // Remove unnecessary zeros
+            return d3.format(CONFIG.AXIS_FORMAT)(d);
         }));
         
         this.yAxis.call(d3.axisLeft(this.yScale).tickFormat(() => '')); // Hide y-axis labels
@@ -354,14 +428,14 @@ class UniversalScales {
         this.updateGrid();
         
         // Draw items only (no bands for now)
-        this.drawItems(allItems);
+        this.drawItems(positionedItems);
     }
     
     updateGrid() {
         this.gridGroup.selectAll('.grid-line').remove();
         
         // Vertical grid lines
-        const xTicks = this.xScale.ticks(10);
+        const xTicks = this.xScale.ticks(CONFIG.GRID_TICKS);
         this.gridGroup.selectAll('.grid-line-x')
             .data(xTicks)
             .enter().append('line')
@@ -372,7 +446,7 @@ class UniversalScales {
             .attr('y2', this.yScale(0)); // Bottom of plot (x-axis)
         
         // Horizontal grid lines (simplified)
-        const yTicks = this.yScale.ticks(10);
+        const yTicks = this.yScale.ticks(CONFIG.GRID_TICKS);
         this.gridGroup.selectAll('.grid-line-y')
             .data(yTicks)
             .enter().append('line')
@@ -399,30 +473,27 @@ class UniversalScales {
         return allItems;
     }
     
-    drawItems(items) {
-        // Position items with collision avoidance
-        const positionedItems = this.positionItems(items);
-        
+    drawItems(positionedItems) {
         // Draw vertical lines first (behind everything else)
         const verticalLinesGroup = this.mainGroup.append('g')
             .attr('class', 'vertical-lines-group');
         
         verticalLinesGroup.selectAll('.vertical-line')
-            .data(positionedItems)
+            .data(positionedItems.filter(item => !item.invisible))
             .enter().append('line')
             .attr('class', 'vertical-line')
             .attr('x1', d => this.xScale(d.convertedValue) + (d.xOffset || 0))
             .attr('x2', d => this.xScale(d.convertedValue) + (d.xOffset || 0))
             .attr('y1', 0) // From top axis
             .attr('y2', this.height) // To bottom axis
-            .attr('stroke', '#007bff')
-            .attr('stroke-width', 1)
-            .attr('stroke-opacity', 0.2)
-            .attr('stroke-dasharray', '3,3')
+            .attr('stroke', CONFIG.POINT_FILL_COLOR)
+            .attr('stroke-width', CONFIG.VERTICAL_LINE_STROKE_WIDTH)
+            .attr('stroke-opacity', CONFIG.VERTICAL_LINE_OPACITY)
+            .attr('stroke-dasharray', CONFIG.VERTICAL_LINE_DASH_ARRAY)
             .attr('pointer-events', 'none'); // Disable pointer events on line
         
         const itemGroup = this.mainGroup.selectAll('.item-group')
-            .data(positionedItems)
+            .data(positionedItems.filter(item => !item.invisible))
             .enter().append('g')
             .attr('class', 'item-group')
             .attr('transform', d => {
@@ -434,10 +505,10 @@ class UniversalScales {
         // Item circles
         const circle = itemGroup.append('circle')
             .attr('class', 'plot-item')
-            .attr('r', 6)
-            .attr('fill', '#007bff')
-            .attr('stroke', '#000000')
-            .attr('stroke-width', 1.5)
+            .attr('r', CONFIG.POINT_RADIUS)
+            .attr('fill', CONFIG.POINT_FILL_COLOR)
+            .attr('stroke', CONFIG.POINT_STROKE_COLOR)
+            .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH)
             .attr('pointer-events', 'none'); // Disable pointer events on circle
         
         // Item labels with smart positioning and invisible hover area
@@ -448,19 +519,17 @@ class UniversalScales {
         labelGroup.append('rect')
             .attr('class', 'label-hover-area')
             .attr('x', d => {
-                const xPos = this.xScale(d.convertedValue);
-                const estimatedTextWidth = d.name.length * 6;
-                // For right-side labels (left-positioned text), rectangle starts at text position
-                // For left-side labels (right-positioned text), rectangle starts before circle
-                return xPos > this.width / 2 ? -10 - estimatedTextWidth : -10;
+                const estimatedTextWidth = d.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
+                // Always position to the left of the circle
+                return CONFIG.LABEL_OFFSET_X - estimatedTextWidth;
             })
-            .attr('y', -12) // Start above the circle
+            .attr('y', CONFIG.LABEL_OFFSET_Y) // Start above the circle
             .attr('width', d => {
-                const estimatedTextWidth = d.name.length * 6;
+                const estimatedTextWidth = d.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
                 // Total width: text width + padding + circle diameter + padding
-                return estimatedTextWidth + 20 + 12 + 10; // text + padding + circle + padding
+                return estimatedTextWidth + CONFIG.LABEL_PADDING + (CONFIG.POINT_RADIUS * 2) + CONFIG.LABEL_CIRCLE_PADDING;
             })
-            .attr('height', 24) // Height to encompass circle and text
+            .attr('height', CONFIG.LABEL_HEIGHT) // Height to encompass circle and text
             .attr('fill', 'transparent')
             .attr('cursor', 'pointer')
             .on('mouseenter', (event, d) => {
@@ -470,9 +539,9 @@ class UniversalScales {
                 if (itemGroupElement) {
                     d3.select(itemGroupElement).select('circle')
                         .transition()
-                        .duration(100)
-                        .attr('r', 8)
-                        .attr('stroke-width', 3);
+                        .duration(CONFIG.HOVER_TRANSITION_DURATION)
+                        .attr('r', CONFIG.POINT_RADIUS_HOVER)
+                        .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH_HOVER);
                 }
             })
             .on('mouseleave', (event) => {
@@ -482,9 +551,9 @@ class UniversalScales {
                 if (itemGroupElement) {
                     d3.select(itemGroupElement).select('circle')
                         .transition()
-                        .duration(100)
-                        .attr('r', 6)
-                        .attr('stroke-width', 1.5);
+                        .duration(CONFIG.HOVER_TRANSITION_DURATION)
+                        .attr('r', CONFIG.POINT_RADIUS)
+                        .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH);
                 }
             })
             .on('click', (event, d) => window.open(d.source, '_blank'));
@@ -492,41 +561,72 @@ class UniversalScales {
         // Add the actual text
         labelGroup.append('text')
             .attr('class', 'item-label')
-            .attr('x', d => {
-                // Position labels to the left for items on the right half of the plot
-                const xPos = this.xScale(d.convertedValue);
-                return xPos > this.width / 2 ? -10 : 10;
-            })
+            .attr('x', CONFIG.LABEL_OFFSET_X) // Always position to the left of the circle
             .attr('dy', 0)
-            .attr('font-size', '9px')
+            .attr('font-size', CONFIG.LABEL_FONT_SIZE)
             .attr('fill', 'currentColor')
-            .attr('text-anchor', d => {
-                const xPos = this.xScale(d.convertedValue);
-                return xPos > this.width / 2 ? 'end' : 'start';
-            })
+            .attr('text-anchor', 'end') // Right-align text since it's to the left of the point
             .attr('dominant-baseline', 'central')
             .attr('pointer-events', 'none')
             .text(d => d.name);
     }
     
     positionItems(items) {
+        // Add an invisible lower point to prevent text cutoff at the left edge
+        const invisibleItem = {
+            name: 'Invisible Lower Bound',
+            description: 'Invisible point to prevent text cutoff',
+            source: '',
+            value: 0,
+            convertedValue: 0,
+            invisible: true // Flag to identify invisible items
+        };
+        
+        // Create a value that's much smaller than the smallest real item
+        const smallestValue = Math.min(...items.map(item => item.convertedValue));
+        invisibleItem.convertedValue = smallestValue * 0.1; // 10% of the smallest value
+        
+        // Add invisible item to the items array
+        const itemsWithInvisible = [...items, invisibleItem];
+        
         // Sort items by value (smallest to largest)
-        const sortedItems = [...items].sort((a, b) => a.convertedValue - b.convertedValue);
+        const sortedItems = [...itemsWithInvisible].sort((a, b) => a.convertedValue - b.convertedValue);
         
         // Use fixed vertical spacing for consistent visual appearance
-        const fixedVerticalSpacing = 20; // Same as in updatePlot
-        const bottomPadding = 20; // Same as in updatePlot
         const positionedItems = [];
         
         sortedItems.forEach((item, index) => {
             // Calculate absolute pixel position from bottom
-            const yPosition = bottomPadding + (index * fixedVerticalSpacing);
+            const yPosition = CONFIG.BOTTOM_PADDING + (index * CONFIG.FIXED_VERTICAL_SPACING);
+            
             
             positionedItems.push({
                 ...item,
                 yPosition: yPosition,
-                xOffset: 0
+                xOffset: 0 // Will be calculated later after scale domain is set
             });
+        });
+        
+        return positionedItems;
+    }
+    
+    calculateHorizontalOffsets(positionedItems) {
+        // Add horizontal buffer for points near the left edge to prevent text overflow
+        positionedItems.forEach(item => {
+            const xPosition = this.xScale(item.convertedValue);
+            const estimatedTextWidth = item.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
+            const minXPosition = estimatedTextWidth + CONFIG.TEXT_BUFFER;
+            
+            
+            // Apply horizontal offset for points near the left edge to prevent text overflow
+            // Use more aggressive offset for the lowest point (index 0 after invisible item)
+            const isLowestPoint = positionedItems.indexOf(item) === 1; // 1 because invisible item is at index 0
+            const bufferMultiplier = isLowestPoint ? 2 : 1;
+            const adjustedMinXPosition = minXPosition * bufferMultiplier;
+            
+            if (xPosition < adjustedMinXPosition) {
+                item.xOffset = adjustedMinXPosition - xPosition;
+            }
         });
         
         return positionedItems;
@@ -562,7 +662,7 @@ class UniversalScales {
         }
         
         // Format and display the exact value
-        const formattedValue = d3.format('.2e')(convertedValue);
+        const formattedValue = d3.format(CONFIG.VALUE_FORMAT)(convertedValue);
         const unitSymbol = unit ? unit.symbol : '';
         this.tooltip.querySelector('.tooltip-value').textContent = `${formattedValue} ${unitSymbol}`;
         
@@ -584,20 +684,20 @@ class UniversalScales {
         // Check if tooltip will fit on the right, otherwise position on the left
         const spaceOnRight = rect.width - x;
         
-        if (spaceOnRight < tooltipWidth + 20) {
+        if (spaceOnRight < tooltipWidth + CONFIG.TOOLTIP_OFFSET_X * 2) {
             // Position to the left of the cursor
-            this.tooltip.style.left = `${x - tooltipWidth - 10}px`;
+            this.tooltip.style.left = `${x - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X}px`;
         } else {
             // Position to the right of the cursor
-            this.tooltip.style.left = `${x + 10}px`;
+            this.tooltip.style.left = `${x + CONFIG.TOOLTIP_OFFSET_X}px`;
         }
         
         // Position tooltip near the cursor's Y position
         const tooltipTop = y - (tooltipHeight / 2);
         
         // Ensure tooltip stays within bounds
-        const minTop = 10;
-        const maxTop = rect.height - tooltipHeight - 10;
+        const minTop = CONFIG.TOOLTIP_MIN_TOP;
+        const maxTop = rect.height - tooltipHeight - CONFIG.TOOLTIP_OFFSET_Y;
         
         this.tooltip.style.top = `${Math.max(minTop, Math.min(maxTop, tooltipTop))}px`;
         
@@ -659,7 +759,19 @@ class UniversalScales {
             return value * unit.conversion_factor;
         }
         
-        return value * unit.conversion_factor;
+        const convertedValue = value * unit.conversion_factor;
+        
+        // Debug: Log conversion for specific items
+        if (value < CONFIG.DEBUG_SMALL_VALUE_THRESHOLD) { // Very small values that might be atomic/molecular forces
+            console.log('Converting small value:', {
+                originalValue: value,
+                convertedValue: convertedValue,
+                conversionFactor: unit.conversion_factor,
+                unit: unit.name
+            });
+        }
+        
+        return convertedValue;
     }
     
     async loadExchangeRates() {
@@ -685,10 +797,11 @@ class UniversalScales {
     updatePlotColors() {
         // Update colors based on current theme
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        const textColor = isDark ? '#ffffff' : '#212529';
-        const axisColor = isDark ? '#adb5bd' : '#6c757d';
-        const strokeColor = isDark ? '#ffffff' : '#000000';
-        const lineColor = isDark ? '#4dabf7' : '#007bff';
+        const colors = isDark ? CONFIG.COLORS.DARK : CONFIG.COLORS.LIGHT;
+        const textColor = colors.TEXT;
+        const axisColor = colors.AXIS;
+        const strokeColor = colors.STROKE;
+        const lineColor = colors.LINE;
         
         this.svg.selectAll('.axis text')
             .attr('fill', axisColor);
