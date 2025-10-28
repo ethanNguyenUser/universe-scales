@@ -219,6 +219,18 @@ units:
   description: The basic unit of time, originally based on Earth's daily rotation but now defined by cesium atoms. Since 1967, one second equals 9,192,631,770 vibrations of cesium-133 atoms. This gives us incredibly precise timing, accurate to one part in 10^15, better than any mechanical clock ever made.
   name: seconds
   symbol: s
+- conversion_factor: 1e9
+  description: A time unit equal to one billionth of a second, representing the timescale of modern electronics and quantum processes. This duration is crucial for computer processors, where operations must be synchronized to billionths of a second. Nanoseconds also represent the timescale of light travel over short distances and rapid chemical reactions that occur faster than human perception can detect.
+  name: nanoseconds
+  symbol: ns
+- conversion_factor: 1e6
+  description: A time unit equal to one millionth of a second, representing the timescale of high-speed electronics and computer processors. This duration is crucial for modern computing, where operations must be synchronized to billionths of a second. Microseconds also represent the timescale of nerve impulses and rapid biological processes that occur faster than conscious perception.
+  name: microseconds
+  symbol: μs
+- conversion_factor: 1000
+  description: A time unit equal to one thousandth of a second, representing the threshold of human perception and reaction. This duration is faster than most human reflexes but slow enough to be measured by mechanical devices. Milliseconds are crucial for computer interfaces, where delays longer than 100ms feel sluggish to users, and for understanding the speed of neural processing in the brain.
+  name: milliseconds
+  symbol: ms
 - conversion_factor: 0.0166667
   description: A practical time unit equal to 60 seconds, based on the ancient Babylonian sexagesimal number system. This duration provides a practical subdivision of the hour for everyday timekeeping. The Babylonians were master mathematicians who also gave us the 360-degree circle and our modern calendar structure. This gives us a convenient way to measure everyday activities, microwave cooking times, traffic light cycles, or how long to brush your teeth. It bridges our natural sense of time with precise measurement.
   name: minutes
@@ -231,7 +243,15 @@ units:
   description: A time unit equal to 24 hours, representing one complete rotation of Earth relative to the Sun. This creates our fundamental daily rhythm of light and dark. The solar day varies slightly throughout the year due to Earth's elliptical orbit and axial tilt. This natural cycle has shaped all life on Earth and human civilization since the dawn of agriculture around 10,000 years ago. The length varies slightly throughout the year because Earth's orbit isn't perfectly circular.
   name: days
   symbol: d
+- conversion_factor: 1.65344e-06
+  description: A seven-day period that aligns with natural human work and rest rhythms. This duration provides a convenient subdivision of longer time periods and fits well with lunar cycles. The week has deep religious significance in Judaism, Christianity, and Islam, originating from the biblical creation story and Sabbath traditions. It represents the optimal balance between work and rest that has shaped human civilization for millennia.
+  name: weeks
+  symbol: wk
 - conversion_factor: 3.17098e-08
   description: A time unit equal to about 365.25 days, representing one complete orbit of Earth around the Sun. This creates our fundamental seasonal cycle and drives most of Earth's natural rhythms. The year provides the primary timescale for biological cycles, agricultural planning, and long-term environmental processes. Ancient civilizations from the Maya to the Chinese developed sophisticated calendars based on this cycle. Plants bloom, animals migrate, and weather patterns change on this yearly cycle, it's the fundamental unit for measuring longer time periods.
   name: years
   symbol: yr
+- conversion_factor: 3.17098e-10
+  description: A time unit equal to 100 years, representing major historical periods and the approximate maximum human lifespan. This duration spans multiple human generations and encompasses significant cultural, technological, and environmental changes. Centuries provide the fundamental unit for historical periodization, from the "Century of Light" (18th) to the "American Century" (20th). It represents the timescale of civilizational change and long-term planning.
+  name: centuries
+  symbol: c
