@@ -374,7 +374,10 @@ class UniversalScales {
         
         // Update scales
         const values = allItems.map(item => item.convertedValue);
-        this.xScale.domain(d3.extent(values));
+        const extent = d3.extent(values);
+        // Extend the lower bound to provide more space for text labels
+        const extendedExtent = [extent[0] * 0.1, extent[1]];
+        this.xScale.domain(extendedExtent);
         
         // Position items with collision avoidance
         const positionedItems = this.positionItems(allItems);
@@ -383,8 +386,7 @@ class UniversalScales {
         this.calculateHorizontalOffsets(positionedItems);
         
         // Calculate dynamic SVG height based on number of items with fixed spacing
-        // Add 1 for the invisible item that will be added in positionItems
-        const numItems = allItems.length + 1;
+        const numItems = allItems.length;
         
         // Calculate required height for items using fixed spacing
         const itemsHeight = (numItems > 0) ? CONFIG.BOTTOM_PADDING + ((numItems - 1) * CONFIG.FIXED_VERTICAL_SPACING) + CONFIG.TOP_PADDING : CONFIG.BOTTOM_PADDING + CONFIG.TOP_PADDING;
@@ -479,11 +481,11 @@ class UniversalScales {
             .attr('class', 'vertical-lines-group');
         
         verticalLinesGroup.selectAll('.vertical-line')
-            .data(positionedItems.filter(item => !item.invisible))
+            .data(positionedItems)
             .enter().append('line')
             .attr('class', 'vertical-line')
-            .attr('x1', d => this.xScale(d.convertedValue) + (d.xOffset || 0))
-            .attr('x2', d => this.xScale(d.convertedValue) + (d.xOffset || 0))
+            .attr('x1', d => this.xScale(d.convertedValue)) // Use true value position, not offset
+            .attr('x2', d => this.xScale(d.convertedValue)) // Use true value position, not offset
             .attr('y1', 0) // From top axis
             .attr('y2', this.height) // To bottom axis
             .attr('stroke', CONFIG.POINT_FILL_COLOR)
@@ -493,11 +495,11 @@ class UniversalScales {
             .attr('pointer-events', 'none'); // Disable pointer events on line
         
         const itemGroup = this.mainGroup.selectAll('.item-group')
-            .data(positionedItems.filter(item => !item.invisible))
+            .data(positionedItems)
             .enter().append('g')
             .attr('class', 'item-group')
             .attr('transform', d => {
-                const x = this.xScale(d.convertedValue) + (d.xOffset || 0);
+                const x = this.xScale(d.convertedValue); // Keep points at true position
                 const y = this.height - d.yPosition; // Convert from bottom-up to top-down coordinates
                 return `translate(${x},${y})`;
             });
@@ -520,7 +522,7 @@ class UniversalScales {
             .attr('class', 'label-hover-area')
             .attr('x', d => {
                 const estimatedTextWidth = d.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
-                // Always position to the left of the circle
+                // Position to the left of the circle, same as text
                 return CONFIG.LABEL_OFFSET_X - estimatedTextWidth;
             })
             .attr('y', CONFIG.LABEL_OFFSET_Y) // Start above the circle
@@ -558,10 +560,10 @@ class UniversalScales {
             })
             .on('click', (event, d) => window.open(d.source, '_blank'));
         
-        // Add the actual text
+        // Add the actual text with smart positioning
         labelGroup.append('text')
             .attr('class', 'item-label')
-            .attr('x', CONFIG.LABEL_OFFSET_X) // Always position to the left of the circle
+            .attr('x', CONFIG.LABEL_OFFSET_X) // Keep text at consistent distance from point
             .attr('dy', 0)
             .attr('font-size', CONFIG.LABEL_FONT_SIZE)
             .attr('fill', 'currentColor')
@@ -572,25 +574,8 @@ class UniversalScales {
     }
     
     positionItems(items) {
-        // Add an invisible lower point to prevent text cutoff at the left edge
-        const invisibleItem = {
-            name: 'Invisible Lower Bound',
-            description: 'Invisible point to prevent text cutoff',
-            source: '',
-            value: 0,
-            convertedValue: 0,
-            invisible: true // Flag to identify invisible items
-        };
-        
-        // Create a value that's much smaller than the smallest real item
-        const smallestValue = Math.min(...items.map(item => item.convertedValue));
-        invisibleItem.convertedValue = smallestValue * 0.1; // 10% of the smallest value
-        
-        // Add invisible item to the items array
-        const itemsWithInvisible = [...items, invisibleItem];
-        
         // Sort items by value (smallest to largest)
-        const sortedItems = [...itemsWithInvisible].sort((a, b) => a.convertedValue - b.convertedValue);
+        const sortedItems = [...items].sort((a, b) => a.convertedValue - b.convertedValue);
         
         // Use fixed vertical spacing for consistent visual appearance
         const positionedItems = [];
@@ -598,7 +583,6 @@ class UniversalScales {
         sortedItems.forEach((item, index) => {
             // Calculate absolute pixel position from bottom
             const yPosition = CONFIG.BOTTOM_PADDING + (index * CONFIG.FIXED_VERTICAL_SPACING);
-            
             
             positionedItems.push({
                 ...item,
@@ -617,15 +601,10 @@ class UniversalScales {
             const estimatedTextWidth = item.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
             const minXPosition = estimatedTextWidth + CONFIG.TEXT_BUFFER;
             
-            
-            // Apply horizontal offset for points near the left edge to prevent text overflow
-            // Use more aggressive offset for the lowest point (index 0 after invisible item)
-            const isLowestPoint = positionedItems.indexOf(item) === 1; // 1 because invisible item is at index 0
-            const bufferMultiplier = isLowestPoint ? 2 : 1;
-            const adjustedMinXPosition = minXPosition * bufferMultiplier;
-            
-            if (xPosition < adjustedMinXPosition) {
-                item.xOffset = adjustedMinXPosition - xPosition;
+            // Only apply offset if the point would cause text overflow
+            // Use a more conservative approach - don't double the buffer for lowest point
+            if (xPosition < minXPosition) {
+                item.xOffset = minXPosition - xPosition;
             }
         });
         
