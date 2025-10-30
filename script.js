@@ -46,6 +46,7 @@ const CONFIG = {
     
     // Grid
     GRID_TICKS: 10,
+    AXIS_TICKS: 10,
     
     // Number formatting
     VALUE_FORMAT: '.2e',
@@ -416,13 +417,25 @@ class UniversalScales {
         // Position x-axis at the top
         this.xAxisTop.attr('transform', `translate(0,${this.yScale(itemsHeight)})`);
         
-        this.xAxis.call(d3.axisBottom(this.xScale).tickFormat(d => {
-            return d3.format(CONFIG.AXIS_FORMAT)(d);
-        }));
+        // Build controlled tick set for log scale; adapt to width to avoid overlap
+        const candidateTicks = this.xScale.ticks(50);
+        const minLabelSpacing = window.matchMedia('(max-width: 480px)').matches ? 56 : 72; // px between labels
+        const maxByWidth = Math.max(2, Math.floor(this.width / minLabelSpacing));
+        const targetCount = Math.max(2, Math.min(CONFIG.AXIS_TICKS, maxByWidth));
+        const step = Math.max(1, Math.floor(candidateTicks.length / targetCount));
+        const tickValues = candidateTicks.filter((_, i) => i % step === 0);
+
+        this.xAxis.call(
+            d3.axisBottom(this.xScale)
+                .tickValues(tickValues)
+                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+        );
         
-        this.xAxisTop.call(d3.axisTop(this.xScale).tickFormat(d => {
-            return d3.format(CONFIG.AXIS_FORMAT)(d);
-        }));
+        this.xAxisTop.call(
+            d3.axisTop(this.xScale)
+                .tickValues(tickValues)
+                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+        );
         
         this.yAxis.call(d3.axisLeft(this.yScale).tickFormat(() => '')); // Hide y-axis labels
         
@@ -512,12 +525,26 @@ class UniversalScales {
             .attr('stroke', CONFIG.POINT_STROKE_COLOR)
             .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH)
             .attr('pointer-events', 'none'); // Disable pointer events on circle
+
+        // On touch devices, add a generous invisible tap target around each item
+        if (('ontouchstart' in window) || window.matchMedia('(hover: none)').matches) {
+            itemGroup.append('circle')
+                .attr('class', 'tap-target')
+                .attr('r', 24) // larger hit area for fingers
+                .attr('fill', 'transparent')
+                .attr('pointer-events', 'all')
+                .on('pointerup', (event, d) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    this.showTooltip(event, d);
+                });
+        }
         
         // Item labels with smart positioning and invisible hover area
         const labelGroup = itemGroup.append('g')
             .attr('class', 'label-group');
         
-        // Add invisible rectangle for hover detection that encompasses both circle and text
+        // Add invisible rectangle for hover/tap detection that encompasses both circle and text
         labelGroup.append('rect')
             .attr('class', 'label-hover-area')
             .attr('x', d => {
@@ -525,40 +552,56 @@ class UniversalScales {
                 // Position to the left of the circle, same as text
                 return CONFIG.LABEL_OFFSET_X - estimatedTextWidth;
             })
-            .attr('y', CONFIG.LABEL_OFFSET_Y) // Start above the circle
+            .attr('y', () => {
+                // Slightly enlarge vertical hitbox on small screens
+                return window.matchMedia('(max-width: 480px)').matches ? (CONFIG.LABEL_OFFSET_Y - 6) : CONFIG.LABEL_OFFSET_Y;
+            }) // Start above the circle
             .attr('width', d => {
                 const estimatedTextWidth = d.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
                 // Total width: text width + padding + circle diameter + padding
                 return estimatedTextWidth + CONFIG.LABEL_PADDING + (CONFIG.POINT_RADIUS * 2) + CONFIG.LABEL_CIRCLE_PADDING;
             })
-            .attr('height', CONFIG.LABEL_HEIGHT) // Height to encompass circle and text
+            .attr('height', () => {
+                return window.matchMedia('(max-width: 480px)').matches ? Math.max(32, CONFIG.LABEL_HEIGHT) : CONFIG.LABEL_HEIGHT;
+            }) // Height to encompass circle and text
             .attr('fill', 'transparent')
             .attr('cursor', 'pointer')
-            .on('mouseenter', (event, d) => {
-                this.showTooltip(event, d);
-                // Find the specific circle by traversing up to the itemGroup and selecting its circle
-                const itemGroupElement = event.target.closest('.item-group');
-                if (itemGroupElement) {
-                    d3.select(itemGroupElement).select('circle')
-                        .transition()
-                        .duration(CONFIG.HOVER_TRANSITION_DURATION)
-                        .attr('r', CONFIG.POINT_RADIUS_HOVER)
-                        .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH_HOVER);
+            .on('pointerenter', (event, d) => {
+                if (window.matchMedia('(hover: hover)').matches) {
+                    this.showTooltip(event, d);
+                    const itemGroupElement = event.target.closest('.item-group');
+                    if (itemGroupElement) {
+                        d3.select(itemGroupElement).select('circle')
+                            .transition()
+                            .duration(CONFIG.HOVER_TRANSITION_DURATION)
+                            .attr('r', CONFIG.POINT_RADIUS_HOVER)
+                            .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH_HOVER);
+                    }
                 }
             })
-            .on('mouseleave', (event) => {
-                this.hideTooltip();
-                // Find the specific circle by traversing up to the itemGroup and selecting its circle
-                const itemGroupElement = event.target.closest('.item-group');
-                if (itemGroupElement) {
-                    d3.select(itemGroupElement).select('circle')
-                        .transition()
-                        .duration(CONFIG.HOVER_TRANSITION_DURATION)
-                        .attr('r', CONFIG.POINT_RADIUS)
-                        .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH);
+            .on('pointerleave', (event) => {
+                if (window.matchMedia('(hover: hover)').matches) {
+                    this.hideTooltip();
+                    const itemGroupElement = event.target.closest('.item-group');
+                    if (itemGroupElement) {
+                        d3.select(itemGroupElement).select('circle')
+                            .transition()
+                            .duration(CONFIG.HOVER_TRANSITION_DURATION)
+                            .attr('r', CONFIG.POINT_RADIUS)
+                            .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH);
+                    }
                 }
             })
-            .on('click', (event, d) => window.open(d.source, '_blank'));
+            .on('pointerup', (event, d) => {
+                const isTouchPrimary = window.matchMedia('(hover: none)').matches;
+                if (isTouchPrimary) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    this.showTooltip(event, d);
+                } else {
+                    window.open(d.source, '_blank');
+                }
+            });
         
         // Add the actual text with smart positioning
         labelGroup.append('text')
@@ -646,45 +689,81 @@ class UniversalScales {
         this.tooltip.querySelector('.tooltip-value').textContent = `${formattedValue} ${unitSymbol}`;
         
         this.tooltip.querySelector('.tooltip-description').textContent = item.description;
-        this.tooltip.querySelector('.tooltip-source').href = item.source;
-        
-        // Position tooltip
-        const rect = this.plotContainer.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        
-        // Temporarily make tooltip visible to measure its dimensions
-        this.tooltip.style.visibility = 'hidden';
-        this.tooltip.style.display = 'block';
-        const tooltipWidth = this.tooltip.offsetWidth;
-        const tooltipHeight = this.tooltip.offsetHeight;
-        this.tooltip.style.visibility = '';
-        
-        // Check if tooltip will fit on the right, otherwise position on the left
-        const spaceOnRight = rect.width - x;
-        
-        if (spaceOnRight < tooltipWidth + CONFIG.TOOLTIP_OFFSET_X * 2) {
-            // Position to the left of the cursor
-            this.tooltip.style.left = `${x - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X}px`;
+        const sourceLink = this.tooltip.querySelector('.tooltip-source');
+        const showSourceText = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
+            || ('ontouchstart' in window)
+            || window.matchMedia('(hover: none)').matches;
+        if (item.source) {
+            sourceLink.href = item.source;
+            sourceLink.textContent = showSourceText ? 'Source' : '';
+            sourceLink.style.display = showSourceText ? 'inline' : 'none';
         } else {
-            // Position to the right of the cursor
-            this.tooltip.style.left = `${x + CONFIG.TOOLTIP_OFFSET_X}px`;
+            sourceLink.removeAttribute('href');
+            sourceLink.textContent = '';
+            sourceLink.style.display = 'none';
         }
         
-        // Position tooltip near the cursor's Y position
-        const tooltipTop = y - (tooltipHeight / 2);
-        
-        // Ensure tooltip stays within bounds
-        const minTop = CONFIG.TOOLTIP_MIN_TOP;
-        const maxTop = rect.height - tooltipHeight - CONFIG.TOOLTIP_OFFSET_Y;
-        
-        this.tooltip.style.top = `${Math.max(minTop, Math.min(maxTop, tooltipTop))}px`;
+        // Position tooltip
+        const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
+            || ('ontouchstart' in window)
+            || window.matchMedia('(hover: none)').matches;
+        if (isTouchPrimary) {
+            // Pin tooltip to viewport top center on mobile via CSS class
+            this.tooltip.classList.add('mobile-pinned');
+            // Clear any previous desktop inline positioning that could push it off-screen
+            this.tooltip.style.left = '';
+            this.tooltip.style.top = '';
+            this.tooltip.style.transform = '';
+            this.tooltip.style.position = '';
+        } else {
+            const rect = this.plotContainer.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            
+            // Dynamically cap tooltip width to available plot width
+            const maxAllowed = Math.max(160, rect.width - 2 * CONFIG.TOOLTIP_OFFSET_X);
+            this.tooltip.style.maxWidth = `${Math.min(400, maxAllowed)}px`;
+            
+            // Temporarily make tooltip visible to measure its dimensions
+            this.tooltip.style.visibility = 'hidden';
+            this.tooltip.style.display = 'block';
+            const tooltipWidth = this.tooltip.offsetWidth;
+            const tooltipHeight = this.tooltip.offsetHeight;
+            this.tooltip.style.visibility = '';
+            
+            // Prefer right of cursor; fallback left if not enough space
+            const spaceOnRight = rect.width - x;
+            let desiredLeft;
+            if (spaceOnRight < tooltipWidth + CONFIG.TOOLTIP_OFFSET_X * 2) {
+                desiredLeft = x - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+            } else {
+                desiredLeft = x + CONFIG.TOOLTIP_OFFSET_X;
+            }
+            
+            // Clamp horizontally inside plot container
+            const minLeft = CONFIG.TOOLTIP_OFFSET_X;
+            const maxLeft = rect.width - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+            const clampedLeft = Math.max(minLeft, Math.min(maxLeft, desiredLeft));
+            this.tooltip.style.left = `${clampedLeft}px`;
+            
+            // Position tooltip near the cursor's Y position and clamp vertically
+            const tooltipTop = y - (tooltipHeight / 2);
+            const minTop = CONFIG.TOOLTIP_MIN_TOP;
+            const maxTop = rect.height - tooltipHeight - CONFIG.TOOLTIP_OFFSET_Y;
+            this.tooltip.style.top = `${Math.max(minTop, Math.min(maxTop, tooltipTop))}px`;
+            
+            this.tooltip.style.position = 'absolute';
+            this.tooltip.style.transform = '';
+            this.tooltip.style.pointerEvents = 'none';
+        }
         
         this.tooltip.classList.add('visible');
     }
     
     hideTooltip() {
         this.tooltip.classList.remove('visible');
+        // Reset mobile-specific class
+        this.tooltip.classList.remove('mobile-pinned');
     }
     
     getImagePath(itemName) {
@@ -817,5 +896,5 @@ class UniversalScales {
 
 // Initialize the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new UniversalScales();
+    window.app = new UniversalScales();
 });

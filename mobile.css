@@ -1,0 +1,162 @@
+/* Mobile-only overrides to keep desktop CSS clean */
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .controls {
+        flex-direction: row; /* keep items in a row on mobile */
+        flex-wrap: wrap;
+        gap: 0.75rem; /* tighter spacing */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tooltip.mobile-pinned,
+    .band-popup {
+        max-width: 80vw;
+    }
+
+    /* Compact tooltip on mobile */
+    .tooltip.mobile-pinned {
+        padding: 0.5rem;
+    }
+    /* Pinned mobile tooltip to avoid off-screen jumps */
+    .tooltip.mobile-pinned {
+        position: fixed;
+        top: 12px;
+        left: 50%;
+        transform: translate(-50%, 0) !important;
+        max-width: 90vw;
+        pointer-events: auto;
+        z-index: 2000;
+    }
+    .tooltip.mobile-pinned.visible {
+        opacity: 1;
+        transform: translate(-50%, 0) !important;
+    }
+    .tooltip-title {
+        font-size: 1rem;
+    }
+    .tooltip-value,
+    .tooltip-description,
+    .tooltip-source {
+        font-size: 0.85rem;
+    }
+    .tooltip-image {
+        max-height: 160px;
+    }
+
+    /* Slightly smaller axis labels to reduce overlap */
+    .axis {
+        font-size: 11px;
+    }
+
+    /* Let SVG grow; do not clip content at this breakpoint */
+    .plot-container {
+        height: auto;
+        min-height: 520px;
+        overflow: visible;
+    }
+
+    /* Optional: keep controls accessible */
+    /*
+    .controls {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: var(--bg-primary);
+        padding: 0.5rem 0.25rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    */
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1.25rem 0;
+        margin-bottom: 1.25rem;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .controls {
+        width: 100%;
+        flex-direction: row; /* ensure buttons don't stack */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .control-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #dimension-select,
+    #unit-select {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.65rem 0.9rem;
+    }
+
+    .dark-mode-toggle,
+    .music-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    .plot-container {
+        height: auto; /* allow SVG to dictate height */
+        min-height: 360px;
+        overflow: visible;
+    }
+
+    .unit-selector-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tooltip.mobile-pinned,
+    .band-popup {
+        max-width: 74vw;
+    }
+
+    /* Smaller axis font on very small screens */
+    .axis {
+        font-size: 10px;
+    }
+
+    /* Extra compact tooltip on very small screens */
+    .tooltip-title {
+        font-size: 0.95rem;
+    }
+    .tooltip-value,
+    .tooltip-description,
+    .tooltip-source {
+        font-size: 0.8rem;
+    }
+    .tooltip-image {
+        max-height: 120px;
+    }
+
+    .footer {
+        padding: 1.25rem 0;
+        margin-top: 2rem;
+    }
+
+    .footer-attribution {
+        font-size: 0.85rem;
+    }
+}
+
+
