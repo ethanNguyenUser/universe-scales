@@ -1218,13 +1218,6 @@ class UniversalScales {
         
         this.xScale.range([0, this.width]);
         
-        // Update zoom background rectangle size
-        if (this.zoomBackground) {
-            this.zoomBackground
-                .attr('width', this.width)
-                .attr('height', this.height);
-        }
-        
         // Update zoom behavior translate extent for new width
         if (this.zoomBehavior) {
             this.zoomBehavior.translateExtent([[0, -Infinity], [this.width, Infinity]]);
@@ -1233,7 +1226,43 @@ class UniversalScales {
         // Only update plot if not zoomed, or update while preserving zoom state
         if (wasZoomed) {
             // Preserve zoom by updating plot without resetting domain
-            // Just update the visual elements, not the domain
+            // But we still need to update SVG height and yScale for proper item positioning
+            if (this.dimensionData) {
+                const allItems = this.getAllItems();
+                const numItems = allItems.length;
+                
+                // Calculate required height for items using fixed spacing
+                const itemsHeight = (numItems > 0) ? CONFIG.BOTTOM_PADDING + ((numItems - 1) * CONFIG.FIXED_VERTICAL_SPACING) + CONFIG.TOP_PADDING : CONFIG.BOTTOM_PADDING + CONFIG.TOP_PADDING;
+                
+                // Calculate total SVG height (items + margins)
+                const requiredSvgHeight = itemsHeight + this.margin.top + this.margin.bottom;
+                const svgHeight = Math.max(CONFIG.MIN_SVG_HEIGHT, requiredSvgHeight);
+                
+                // Update SVG height
+                this.svg.attr('height', svgHeight);
+                
+                // Update inner plot height
+                this.height = svgHeight - this.margin.top - this.margin.bottom;
+                
+                // Update yScale range to use the new height
+                this.yScale.range([this.height, 0]);
+                
+                // Set yScale domain to match the itemsHeight so x-axis is at bottom
+                this.yScale.domain([0, itemsHeight]);
+                
+                // Update zoom background rectangle height
+                if (this.zoomBackground) {
+                    this.zoomBackground
+                        .attr('width', this.width)
+                        .attr('height', this.height);
+                }
+                
+                // Update axes positions
+                this.xAxis.attr('transform', `translate(0,${this.yScale(0)})`);
+                this.xAxisTop.attr('transform', `translate(0,${this.yScale(itemsHeight)})`);
+            }
+            
+            // Now update the visual elements with correct heights
             this.updatePlotAfterZoom();
         } else {
             this.updatePlot();
