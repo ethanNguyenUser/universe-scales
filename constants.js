@@ -6,7 +6,7 @@ const CONFIG = {
     MIN_SVG_HEIGHT: 200,
     
     // Item positioning
-    FIXED_VERTICAL_SPACING: 15,
+    FIXED_VERTICAL_SPACING: 14,
     BOTTOM_PADDING: 20,
     TOP_PADDING: 20,
     
