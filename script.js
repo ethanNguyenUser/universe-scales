@@ -1009,22 +1009,39 @@ class UniversalScales {
         const tooltipImage = this.tooltip.querySelector('.tooltip-image');
         const imagePath = this.getImagePath(item.name);
         
+        // Immediately hide the image and clear src to prevent showing previous image
+        tooltipImage.style.display = 'none';
+        tooltipImage.src = '';
+        tooltipImage.alt = '';
+        
         if (imagePath) {
             // Check if image exists before setting src
             this.checkImageExists(imagePath).then(fullImagePath => {
                 if (fullImagePath) {
-                    tooltipImage.src = fullImagePath;
-                    tooltipImage.alt = item.name;
-                    tooltipImage.style.display = 'block';
+                    // Create a new image object to preload and only show when loaded
+                    const img = new Image();
+                    img.onload = () => {
+                        // Only set the image if this tooltip is still showing the same item
+                        // Check by comparing the current tooltip title
+                        if (this.tooltip.querySelector('.tooltip-title').textContent === item.name) {
+                            tooltipImage.src = fullImagePath;
+                            tooltipImage.alt = item.name;
+                            tooltipImage.style.display = 'block';
+                        }
+                    };
+                    img.onerror = () => {
+                        // Image failed to load, keep it hidden
+                        tooltipImage.style.display = 'none';
+                    };
+                    // Start loading the image
+                    img.src = fullImagePath;
                 } else {
-                    tooltipImage.src = '';
-                    tooltipImage.alt = '';
+                    // Image doesn't exist, keep it hidden
                     tooltipImage.style.display = 'none';
                 }
             });
         } else {
-            tooltipImage.src = '';
-            tooltipImage.alt = '';
+            // No image path, keep it hidden
             tooltipImage.style.display = 'none';
         }
         
