@@ -440,7 +440,7 @@ class UniversalScales {
             // Negative because dragging right should move the view left (show higher values)
             const logPan = -(transform.x / this.width) * currentVisibleLogRange;
             
-            // Calculate new log domain
+            // Calculate new log domain based on original domain
             let newLogMin = logOriginalMin + logPan;
             let newLogMax = newLogMin + currentVisibleLogRange;
             let constrained = false;
@@ -453,24 +453,17 @@ class UniversalScales {
                 newLogMax = logActualMax;
                 constrained = true;
             } else {
-                // Constrain panning to keep items visible
+                // TEMPORARILY REMOVED: Constrain panning to keep items visible
+                // Only constrain the minimum (left edge) to debug upper limit issue
+                
+                // Check if we're trying to go below the minimum (left edge)
                 if (newLogMin < logActualMin) {
                     newLogMin = logActualMin;
                     newLogMax = newLogMin + currentVisibleLogRange;
                     constrained = true;
                 }
-                if (newLogMax > logActualMax) {
-                    newLogMax = logActualMax;
-                    newLogMin = newLogMax - currentVisibleLogRange;
-                    // Re-check min constraint
-                    if (newLogMin < logActualMin) {
-                        newLogMin = logActualMin;
-                        newLogMax = logActualMax;
-                        constrained = true;
-                    } else {
-                        constrained = true;
-                    }
-                }
+                // REMOVED: Maximum constraint to test if there's another limit
+                // Allow panning beyond logActualMax to see if there's another constraint
             }
             
             // Convert back to linear space
@@ -480,24 +473,24 @@ class UniversalScales {
             // Update xScale domain
             this.xScale.domain([newMin, newMax]);
             
-            // If we constrained the domain, we need to update the zoom transform to match
-            // This prevents the transform from storing "extra" zoom that doesn't affect the display
+            // If we constrained the domain, we need to decide whether to update the transform
+            // Only update the transform when zoomed out (to prevent "stored" zoom)
+            // When zoomed in at boundaries, don't update transform to allow further panning
             if (constrained) {
-                // Calculate what the transform should be to match the constrained domain
                 const constrainedLogRange = newLogMax - newLogMin;
+                const isZoomedOut = currentVisibleLogRange >= (logActualMax - logActualMin);
+                
+                // Always update transform to match constrained domain
+                // This ensures the transform and domain stay in sync
                 const constrainedK = logOriginalRange / constrainedLogRange;
-                
-                // Calculate the pan offset needed to match the constrained domain
                 const constrainedLogPan = newLogMin - logOriginalMin;
-                const constrainedX = -(constrainedLogPan / logOriginalRange) * this.width;
+                // Use constrainedLogRange to match the constrained domain
+                const constrainedX = -(constrainedLogPan / constrainedLogRange) * this.width;
                 
-                // Create a new transform that matches the constrained domain
                 const constrainedTransform = d3.zoomIdentity
                     .translate(constrainedX, 0)
                     .scale(constrainedK);
                 
-                // Update the transform without triggering another zoom event
-                // Use a flag to prevent recursive calls
                 if (!this.isUpdatingTransform) {
                     this.isUpdatingTransform = true;
                     this.mainGroup.call(this.zoomBehavior.transform, constrainedTransform);
@@ -693,7 +686,7 @@ class UniversalScales {
         this.actualItemExtent = [...extent];
         
         // Extend the lower bound to provide more space for text labels
-        const extendedExtent = [extent[0] * CONFIG.EXTENT_LOWER_MULTIPLIER, extent[1]];
+        const extendedExtent = [extent[0] * CONFIG.EXTENT_LOWER_MULTIPLIER, extent[1] * 1e10];
         
         // Store original domain for zoom reset
         // Reset original domain when dimension/unit changes (check if domain changed significantly)
