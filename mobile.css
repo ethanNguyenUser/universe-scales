@@ -51,27 +51,38 @@
     /* Smaller tooltips in portrait mode */
     @media (orientation: portrait) {
         .tooltip.mobile-pinned {
-            max-width: 70vw;
+            max-width: 75vw;
+            padding: 0.4rem;
+        }
+        .tooltip-title {
+            font-size: 0.9rem;
+        }
+        .tooltip-value,
+        .tooltip-description,
+        .tooltip-source {
+            font-size: 0.75rem;
+        }
+        .tooltip-image {
+            max-height: 100px;
+        }
+    }
+    
+    /* Even smaller tooltips in landscape mode on mobile */
+    @media (orientation: landscape) {
+        .tooltip.mobile-pinned {
+            max-width: 60vw;
             padding: 0.35rem;
         }
         .tooltip-title {
             font-size: 0.85rem;
-            margin-bottom: 0.3rem;
         }
         .tooltip-value,
         .tooltip-description,
         .tooltip-source {
             font-size: 0.7rem;
         }
-        .tooltip-value {
-            margin-bottom: 0.3rem;
-        }
-        .tooltip-description {
-            margin-bottom: 0.4rem;
-        }
         .tooltip-image {
             max-height: 80px;
-            margin-bottom: 0.5rem;
         }
     }
 
@@ -174,33 +185,6 @@
     }
     .tooltip-image {
         max-height: 120px;
-    }
-    
-    /* Even smaller tooltips in portrait mode on very small phones */
-    @media (orientation: portrait) and (max-width: 480px) {
-        .tooltip.mobile-pinned {
-            max-width: 65vw;
-            padding: 0.3rem;
-        }
-        .tooltip-title {
-            font-size: 0.8rem;
-            margin-bottom: 0.25rem;
-        }
-        .tooltip-value,
-        .tooltip-description,
-        .tooltip-source {
-            font-size: 0.65rem;
-        }
-        .tooltip-value {
-            margin-bottom: 0.25rem;
-        }
-        .tooltip-description {
-            margin-bottom: 0.35rem;
-        }
-        .tooltip-image {
-            max-height: 60px;
-            margin-bottom: 0.4rem;
-        }
     }
 
     .footer {
