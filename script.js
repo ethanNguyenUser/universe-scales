@@ -26,6 +26,8 @@ class UniversalScales {
         this.isVerticalDrag = false; // Track if current drag is primarily vertical
         this.lastScrollDeltaY = null; // Track last scroll delta to prevent double-scrolling
         this.dragStartTransform = null; // Store transform at drag start to restore if vertical
+        this.axisClipId = `axis-clip-${Math.random().toString(36).slice(2)}`;
+        this.axisClipRect = null;
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -277,6 +279,13 @@ class UniversalScales {
             .attr('height', this.height + this.margin.top + this.margin.bottom)
             .style('overflow', 'visible'); // Allow labels to extend beyond SVG bounds
         
+        // Create defs and clip path for axes
+        this.defs = this.svg.append('defs');
+        this.axisClipRect = this.defs.append('clipPath')
+            .attr('id', this.axisClipId)
+            .append('rect');
+        this.updateAxisClip();
+        
         // Create main group
         this.mainGroup = this.svg.append('g')
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
@@ -292,26 +301,33 @@ class UniversalScales {
         this.xAxis = this.mainGroup.append('g')
             .attr('class', 'axis')
             .attr('transform', `translate(0,${this.height})`)
-            .style('pointer-events', 'none'); // Don't block zoom events
+            .style('pointer-events', 'none') // Don't block zoom events
+            .attr('clip-path', `url(#${this.axisClipId})`);
         
         this.xAxisTop = this.mainGroup.append('g')
             .attr('class', 'axis')
             .attr('transform', `translate(0,0)`)
-            .style('pointer-events', 'none'); // Don't block zoom events
-        
-        this.yAxis = this.mainGroup.append('g')
-            .attr('class', 'axis')
-            .style('pointer-events', 'none'); // Don't block zoom events
-        
+            .style('pointer-events', 'none') // Don't block zoom events
+            .attr('clip-path', `url(#${this.axisClipId})`);
         // Add grid lines
         this.gridGroup = this.mainGroup.append('g')
             .attr('class', 'grid')
-            .style('pointer-events', 'none'); // Don't block zoom events
+            .style('pointer-events', 'none') // Don't block zoom events
+            .attr('clip-path', `url(#${this.axisClipId})`);
         
         // Set up zoom behavior (horizontal only)
         // Apply zoom to the main group itself - it will receive events in empty areas
         // Items on top will still receive their own events
         this.setupZoom();
+    }
+
+    updateAxisClip() {
+        if (!this.axisClipRect) return;
+        this.axisClipRect
+            .attr('x', -this.margin.left)
+            .attr('y', -this.margin.top)
+            .attr('width', this.width + this.margin.left + this.margin.right)
+            .attr('height', this.height + this.margin.top + this.margin.bottom);
     }
     
     setupZoom() {
@@ -319,13 +335,14 @@ class UniversalScales {
         this.actualItemExtent = null;
         
         // Create a background rectangle for visual feedback and event capture
-        // This will be added to the main group but kept behind everything
+        // This covers the entire container (including margins) for seamless panning
+        // Positioned relative to mainGroup (which is translated by margins)
         this.zoomBackground = this.mainGroup.insert('rect', ':first-child')
             .attr('class', 'zoom-background')
-            .attr('x', 0)
-            .attr('y', 0)
-            .attr('width', this.width)
-            .attr('height', this.height)
+            .attr('x', -this.margin.left)
+            .attr('y', -this.margin.top)
+            .attr('width', this.width + this.margin.left + this.margin.right)
+            .attr('height', this.height + this.margin.top + this.margin.bottom)
             .attr('fill', 'transparent')
             .attr('cursor', 'grab')
             .style('pointer-events', 'all');
@@ -556,6 +573,9 @@ class UniversalScales {
     }
     
     updatePlotAfterZoom() {
+        // Ensure axis clip path stays aligned with current dimensions
+        this.updateAxisClip();
+        
         // Generate ticks that are only powers of 10 (1eX format) for even spacing
         const tickValues = this.generatePowerOfTenTicks();
 
@@ -564,12 +584,16 @@ class UniversalScales {
                 .tickValues(tickValues)
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
+        this.xAxis.select('.domain')
+            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
+        this.xAxisTop.select('.domain')
+            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
         
         // Update grid
         this.updateGrid();
@@ -578,6 +602,9 @@ class UniversalScales {
         const allItems = this.getAllItems();
         const positionedItems = this.positionItems(allItems);
         this.calculateHorizontalOffsets(positionedItems);
+        const yDomain = this.yScale.domain();
+        const yTop = this.yScale(yDomain[1]);
+        const yBottom = this.yScale(0);
         
         // Update item positions based on new scale
         this.mainGroup.selectAll('.item-group')
@@ -593,10 +620,9 @@ class UniversalScales {
             .data(positionedItems)
             .attr('x1', d => this.xScale(d.convertedValue))
             .attr('x2', d => this.xScale(d.convertedValue))
-            .attr('stroke-opacity', d => {
-                const xPos = this.xScale(d.convertedValue);
-                return xPos >= 0 ? CONFIG.VERTICAL_LINE_OPACITY : 0; // Hide if past left edge
-            });
+            .attr('y1', yTop)
+            .attr('y2', yBottom)
+            .attr('stroke-opacity', CONFIG.VERTICAL_LINE_OPACITY);
         
         // Update label positions - labels should follow their points
         // The label x position is relative to the item-group transform, so it automatically follows
@@ -623,21 +649,21 @@ class UniversalScales {
             
             // If zoom level hasn't changed, we're panning - reuse the tick set and just filter to visible domain
             if (!zoomLevelChanged) {
-                const filteredTicks = this.lastTickSet.filter(tick => tick >= min && tick <= max);
-                // Check if we have enough ticks in the visible area
-                // If we have at least the minimum, return them (seamless panning)
-                // If we have very few, it might mean we've panned into an area with sparse ticks
-                // but that's okay - the pattern is consistent, so ticks will appear as we continue panning
-                if (filteredTicks.length >= CONFIG.TICK_MIN_COUNT || filteredTicks.length > 0) {
-                    // Update the stored domain for reference, but DON'T update lastTickLogRange
-                    // (we need to keep lastTickLogRange to detect zoom changes)
+                const ticksInDomain = this.lastTickSet.filter(tick => tick >= min && tick <= max);
+                if (ticksInDomain.length >= CONFIG.TICK_MIN_COUNT) {
+                    const firstTick = ticksInDomain[0];
+                    const lastTick = ticksInDomain[ticksInDomain.length - 1];
+                    const firstIndex = this.lastTickSet.indexOf(firstTick);
+                    const lastIndex = this.lastTickSet.indexOf(lastTick);
+                    const bufferStart = Math.max(0, firstIndex - 1);
+                    const bufferEnd = Math.min(this.lastTickSet.length - 1, lastIndex + 1);
+                    const ticksWithBuffer = this.lastTickSet.slice(bufferStart, bufferEnd + 1);
+                    
                     if (this.lastTickDomain) {
                         this.lastTickDomain = [min, max];
                     }
-                    return filteredTicks;
+                    return ticksWithBuffer;
                 }
-                // If we have no ticks at all, something went wrong - regenerate
-                // (This shouldn't happen with proper full-range generation, but safety check)
             }
             // If zoom level changed, continue to generate new ticks below
         }
@@ -712,8 +738,21 @@ class UniversalScales {
         this.lastTickDomain = [min, max];
         this.lastTickLogRange = logRange;
         
-        // Return only ticks that are actually visible in the current domain
-        return filteredTicks.filter(tick => tick >= min && tick <= max);
+        // Return ticks for the visible domain plus a buffer on each side
+        let startIndex = filteredTicks.findIndex(tick => tick >= min);
+        if (startIndex === -1) {
+            startIndex = 0;
+        }
+        let endIndex = filteredTicks.length - 1;
+        for (let i = filteredTicks.length - 1; i >= 0; i--) {
+            if (filteredTicks[i] <= max) {
+                endIndex = i;
+                break;
+            }
+        }
+        const bufferedStart = Math.max(0, startIndex - 1);
+        const bufferedEnd = Math.min(filteredTicks.length - 1, endIndex + 1);
+        return filteredTicks.slice(bufferedStart, bufferedEnd + 1);
     }
     
     updateDimensions() {
@@ -803,10 +842,15 @@ class UniversalScales {
         // Set yScale domain to match the itemsHeight so x-axis is at bottom
         this.yScale.domain([0, itemsHeight]);
         
-        // Update zoom background rectangle height
+        // Update zoom background rectangle to cover full container
         if (this.zoomBackground) {
-            this.zoomBackground.attr('height', this.height);
+            this.zoomBackground
+                .attr('width', this.width + this.margin.left + this.margin.right)
+                .attr('height', this.height + this.margin.top + this.margin.bottom);
         }
+        
+        // Update axis clip path to match new dimensions
+        this.updateAxisClip();
         
         // Update axes
         const currentUnit = this.dimensionData.units.find(u => u.name === this.currentUnit);
@@ -825,14 +869,16 @@ class UniversalScales {
                 .tickValues(tickValues)
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
+        this.xAxis.select('.domain')
+            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
-        
-        this.yAxis.call(d3.axisLeft(this.yScale).tickFormat(() => '')); // Hide y-axis labels
+        this.xAxisTop.select('.domain')
+            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
         
         // Update grid
         this.updateGrid();
@@ -846,14 +892,17 @@ class UniversalScales {
         
         // Vertical grid lines
         const xTicks = this.xScale.ticks(CONFIG.GRID_TICKS);
+        const yDomain = this.yScale.domain();
+        const yTop = this.yScale(yDomain[1]);
+        const yBottom = this.yScale(0);
         this.gridGroup.selectAll('.grid-line-x')
             .data(xTicks)
             .enter().append('line')
             .attr('class', 'grid-line')
             .attr('x1', d => this.xScale(d))
             .attr('x2', d => this.xScale(d))
-            .attr('y1', this.yScale(this.yScale.domain()[1])) // Top of plot
-            .attr('y2', this.yScale(0)) // Bottom of plot (x-axis)
+            .attr('y1', yTop) // Top horizontal axis
+            .attr('y2', yBottom) // Bottom horizontal axis
             .style('pointer-events', 'none'); // Don't block zoom events
         
         // Horizontal grid lines (simplified)
@@ -862,8 +911,8 @@ class UniversalScales {
             .data(yTicks)
             .enter().append('line')
             .attr('class', 'grid-line')
-            .attr('x1', 0)
-            .attr('x2', this.width)
+            .attr('x1', -this.margin.left)
+            .attr('x2', this.width + this.margin.right)
             .attr('y1', d => this.yScale(d))
             .attr('y2', d => this.yScale(d))
             .style('pointer-events', 'none'); // Don't block zoom events
@@ -889,6 +938,9 @@ class UniversalScales {
         // Draw vertical lines first (behind everything else)
         const verticalLinesGroup = this.mainGroup.append('g')
             .attr('class', 'vertical-lines-group');
+        const yDomain = this.yScale.domain();
+        const yTop = this.yScale(yDomain[1]);
+        const yBottom = this.yScale(0);
         
         verticalLinesGroup.selectAll('.vertical-line')
             .data(positionedItems)
@@ -896,14 +948,11 @@ class UniversalScales {
             .attr('class', 'vertical-line')
             .attr('x1', d => this.xScale(d.convertedValue))
             .attr('x2', d => this.xScale(d.convertedValue))
-            .attr('y1', 0) // From top axis
-            .attr('y2', this.height) // To bottom axis
+            .attr('y1', yTop) // Align with top horizontal axis
+            .attr('y2', yBottom) // Align with bottom horizontal axis
             .attr('stroke', CONFIG.POINT_FILL_COLOR)
             .attr('stroke-width', CONFIG.VERTICAL_LINE_STROKE_WIDTH)
-            .attr('stroke-opacity', d => {
-                const xPos = this.xScale(d.convertedValue);
-                return xPos >= 0 ? CONFIG.VERTICAL_LINE_OPACITY : 0; // Hide if past left edge
-            })
+            .attr('stroke-opacity', CONFIG.VERTICAL_LINE_OPACITY)
             .attr('stroke-dasharray', CONFIG.VERTICAL_LINE_DASH_ARRAY)
             .attr('pointer-events', 'none'); // Disable pointer events on line
         
@@ -1334,11 +1383,11 @@ class UniversalScales {
                 // Set yScale domain to match the itemsHeight so x-axis is at bottom
                 this.yScale.domain([0, itemsHeight]);
                 
-                // Update zoom background rectangle height
+                // Update zoom background rectangle to cover full container
                 if (this.zoomBackground) {
                     this.zoomBackground
-                        .attr('width', this.width)
-                        .attr('height', this.height);
+                        .attr('width', this.width + this.margin.left + this.margin.right)
+                        .attr('height', this.height + this.margin.top + this.margin.bottom);
                 }
                 
                 // Update axes positions

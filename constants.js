@@ -2,7 +2,7 @@
 
 const CONFIG = {
     // Plot dimensions and margins
-    MARGIN: { top: 40, right: 40, bottom: 60, left: 120 },
+    MARGIN: { top: 24, right: 40, bottom: 20, left: 120 },
     MIN_SVG_HEIGHT: 200,
     
     // Item positioning
