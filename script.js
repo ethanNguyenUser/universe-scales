@@ -93,9 +93,13 @@ class UniversalScales {
             }
         });
         
-        // Handle window resize
+        // Handle window resize with debouncing to prevent zoom reset on mobile scroll
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            this.resizePlot();
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                this.resizePlot();
+            }, 150); // Debounce resize events
         });
     }
     
@@ -1183,6 +1187,13 @@ class UniversalScales {
     }
     
     resizePlot() {
+        // Preserve current zoom state before resizing
+        const currentDomain = this.xScale.domain();
+        const wasZoomed = this.originalXDomain && (
+            Math.abs(currentDomain[0] - this.originalXDomain[0]) / this.originalXDomain[0] > CONFIG.ZOOM_DETECTION_THRESHOLD ||
+            Math.abs(currentDomain[1] - this.originalXDomain[1]) / this.originalXDomain[1] > CONFIG.ZOOM_DETECTION_THRESHOLD
+        );
+        
         this.updateDimensions();
         
         this.svg
@@ -1202,7 +1213,14 @@ class UniversalScales {
             this.zoomBehavior.translateExtent([[0, -Infinity], [this.width, Infinity]]);
         }
         
-        this.updatePlot();
+        // Only update plot if not zoomed, or update while preserving zoom state
+        if (wasZoomed) {
+            // Preserve zoom by updating plot without resetting domain
+            // Just update the visual elements, not the domain
+            this.updatePlotAfterZoom();
+        } else {
+            this.updatePlot();
+        }
     }
     
     updatePlotColors() {

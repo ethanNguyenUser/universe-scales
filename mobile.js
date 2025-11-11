@@ -34,11 +34,15 @@
     document.addEventListener('DOMContentLoaded', () => {
         applyMobileTuning();
         // Apply tuning and re-render on resize so ticks/spacing update live
+        // Use debouncing to prevent excessive calls during mobile scrolling
+        let mobileResizeTimeout;
         window.addEventListener('resize', () => {
-            applyMobileTuning();
-            if (window.app && typeof window.app.resizePlot === 'function') {
-                window.app.resizePlot();
-            }
+            clearTimeout(mobileResizeTimeout);
+            mobileResizeTimeout = setTimeout(() => {
+                applyMobileTuning();
+                // resizePlot is already debounced in script.js, so we don't need to call it here
+                // The resize event in script.js will handle it
+            }, 150);
         });
 
         // Ensure initial render reflects mobile tuning when loading on a small screen
