@@ -6,10 +6,13 @@ An interactive logarithmic visualization of the universe's dimensions, from quan
 
 - **Interactive Logarithmic Plots**: Visualize items across 12 different dimensions on logarithmic scales
 - **Multiple Dimensions**: Length, Duration, Speed, Acceleration, Jerk, Brightness, Force, Energy, Costs, Pressure, Young's Modulus, Yield Strength
+- **Pan & Zoom**: Drag to pan horizontally, scroll to zoom in/out, double-click to reset zoom
+- **Item Editor**: Visual editor to add, edit, and delete items with image upload support
+- **YAML Import/Export**: Import and export YAML files for easy data management
 - **Unit Conversion**: Switch between different units (meters/feet, seconds/minutes, etc.)
-- **Live Currency Conversion**: Real-time exchange rates for cost comparisons
-- **Band System**: Hover over bands to see detailed sub-scales
+- **Number Notation Toggle**: Switch between scientific notation (1e10) and standard notation
 - **Dark Mode**: Toggle between light and dark themes
+- **Background Music**: Optional ambient background music
 - **Responsive Design**: Works on desktop and mobile devices
 - **URL Management**: Shareable links for specific dimensions
 
@@ -39,10 +42,15 @@ Each dimension is defined in a YAML file with:
 
 1. Select a dimension from the dropdown
 2. Choose your preferred unit
-3. Hover over items for descriptions and source links
-4. Hover over bands for detailed sub-scales
-5. Click items to open source links in new tabs
-6. Toggle dark mode with the moon/sun button
+3. **Navigate the plot**: Drag to pan horizontally, scroll to zoom in/out, double-click to reset zoom
+4. Hover over items for descriptions and source links
+5. Hover over bands for detailed sub-scales
+6. Click items to open source links in new tabs
+7. **Edit items**: Click "Edit Items" to open the visual editor where you can add, edit, or delete items
+8. **Import/Export**: Use the editor to import YAML files or export your customizations
+9. Toggle number notation with the 1e10 button
+10. Toggle dark mode with the moon/sun button
+11. Toggle background music with the music button
 
 ## Technical Details
 
@@ -57,8 +65,16 @@ Each dimension is defined in a YAML file with:
 ```
 /
 ├── index.html          # Main HTML file
-├── styles.css          # CSS styling with dark mode
-├── script.js           # Main JavaScript application
+├── css/
+│   ├── styles.css      # Main CSS styling with dark mode
+│   └── mobile.css      # Mobile-specific styles
+├── js/
+│   ├── constants.js    # Configuration constants
+│   ├── script.js       # Main JavaScript application
+│   ├── plot.js         # D3.js plot rendering and zoom/pan handling
+│   ├── editor.js       # Item editor functionality
+│   ├── formatting.js   # Number formatting utilities
+│   └── mobile.js       # Mobile-specific functionality
 ├── data/               # YAML data files
 │   ├── length.yaml
 │   ├── duration.yaml
@@ -72,16 +88,35 @@ Each dimension is defined in a YAML file with:
 │   ├── pressure.yaml
 │   ├── youngs-modulus.yaml
 │   └── yield-strength.yaml
+├── scripts/            # Python utility scripts
+│   ├── download_images.py    # Automatic image downloader
+│   └── sort_yaml_items.py    # YAML item sorter
+├── images/             # Item images
 └── README.md           # This file
 ```
 
 ## Contributing
 
 To add new items or dimensions:
+
+**Using the Visual Editor (Recommended):**
+1. Open the "Edit Items" panel in the browser
+2. Click "+ Add Item" to create a new item
+3. Fill in the item details (name, value, description, source)
+4. Upload an image if desired
+5. Click "Save All Changes" to persist your edits
+6. Export YAML to save your changes to a file
+
+**Using YAML Files:**
 1. Edit the appropriate YAML file in the `data/` directory
 2. Follow the existing structure with bands and items
 3. Include accurate values, descriptions, and source links
-4. Test the visualization in the browser
+4. Use `scripts/sort_yaml_items.py` to automatically sort items by value
+5. Test the visualization in the browser
+
+**Utility Scripts:**
+- `scripts/download_images.py`: Automatically downloads images for items from Wikipedia and Unsplash
+- `scripts/sort_yaml_items.py`: Sorts YAML file items by their value field
 
 ## License
 

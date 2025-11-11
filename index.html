@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universe Scales</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -66,6 +66,27 @@
             
             <p id="unit-description" class="unit-description"></p>
             
+            <!-- Visual Editor Panel -->
+            <div id="editor-panel" class="editor-panel">
+                <button id="editor-toggle" class="editor-toggle" aria-label="Toggle editor" title="Toggle editor">
+                    <span class="editor-toggle-text">Edit Items</span>
+                    <span class="editor-toggle-icon">▼</span>
+                </button>
+                <div id="editor-content" class="editor-content" style="display: none;">
+                    <div class="editor-header">
+                        <h3>Item Editor</h3>
+                        <div class="editor-actions">
+                            <button id="add-item-btn" class="btn btn-primary">+ Add Item</button>
+                            <button id="import-yaml-btn" class="btn btn-secondary">Import YAML</button>
+                            <button id="export-yaml-btn" class="btn btn-secondary">Export YAML</button>
+                        </div>
+                    </div>
+                    <div id="items-list" class="items-list">
+                        <!-- Items will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+            
             <div id="tooltip" class="tooltip">
                 <div class="tooltip-content">
                     <img class="tooltip-image" src="" alt="">
@@ -93,7 +114,7 @@
         
         <footer class="footer">
             <p class="footer-attribution">
-                Made by <a href="https://github.com/ethanNguyenUser" target="_blank">Ethan Nguyen</a> • 1.1 • Last updated: November 10, 2025
+                Made by <a href="https://github.com/ethanNguyenUser" target="_blank">Ethan Nguyen</a> • 1.2 • Last updated: November 11, 2025
             </p>
             <p class="footer-attribution">
                 Background music: <a href="https://www.youtube.com/watch?v=Ay1D30B8shE&list=OLAK5uy_nYP5dNYsXFBY3C6bEoLXkHxdNSPS6QQLo&index=15" target="_blank">"Frozen Star"</a> by Kevin MacLeod</a>
@@ -116,8 +137,11 @@
         </footer>
     </div>
     
-    <script src="constants.js" defer></script>
-    <script src="script.js" defer></script>
-    <script src="mobile.js" defer></script>
+    <script src="js/constants.js" defer></script>
+    <script src="js/formatting.js" defer></script>
+    <script src="js/editor.js" defer></script>
+    <script src="js/plot.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/mobile.js" defer></script>
 </body>
 </html>

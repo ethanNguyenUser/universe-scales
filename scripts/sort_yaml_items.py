@@ -89,9 +89,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python sort_yaml_items.py data/duration.yaml
-  python sort_yaml_items.py data/length.yaml
-  python sort_yaml_items.py --backup data/duration.yaml
+  python scripts/sort_yaml_items.py data/duration.yaml
+  python scripts/sort_yaml_items.py data/length.yaml
+  python scripts/sort_yaml_items.py --backup data/duration.yaml
         """
     )
     

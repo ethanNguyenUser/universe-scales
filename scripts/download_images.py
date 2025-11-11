@@ -64,8 +64,13 @@ def parse_yaml_simple(file_path):
 
 class ImageDownloader:
     def __init__(self, data_dir="data", images_dir="images"):
-        self.data_dir = Path(data_dir)
-        self.images_dir = Path(images_dir)
+        # Get the project root (parent of scripts directory)
+        script_dir = Path(__file__).parent
+        project_root = script_dir.parent
+        
+        # Make paths relative to project root
+        self.data_dir = project_root / data_dir
+        self.images_dir = project_root / images_dir
         
         # Create images directory if it doesn't exist
         self.images_dir.mkdir(exist_ok=True)
