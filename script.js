@@ -134,12 +134,17 @@ class UniversalScales {
         this.notationMode = savedMode;
         
         // Update button text to show current mode
-        const buttonTexts = {
-            'scientific': '1e10',
-            'mathematical': '1×10¹⁰',
-            'human': '10B'
-        };
-        this.notationToggle.textContent = buttonTexts[this.notationMode];
+        this.updateNotationButton();
+    }
+    
+    updateNotationButton() {
+        if (this.notationMode === 'mathematical') {
+            // For mathematical notation, use HTML with superscript
+            this.notationToggle.innerHTML = '1×10<sup>10</sup>';
+        } else {
+            // For other modes, use plain text
+            this.notationToggle.textContent = CONFIG.NOTATION_BUTTON_TEXTS[this.notationMode];
+        }
     }
     
     toggleDarkMode() {
@@ -179,12 +184,7 @@ class UniversalScales {
         this.notationMode = modes[(currentIndex + 1) % modes.length];
         
         // Update button text to show current mode
-        const buttonTexts = {
-            'scientific': '1e10',
-            'mathematical': '1×10¹⁰',
-            'human': '10B'
-        };
-        this.notationToggle.textContent = buttonTexts[this.notationMode];
+        this.updateNotationButton();
         
         // Save to localStorage
         localStorage.setItem('notationMode', this.notationMode);
@@ -193,7 +193,7 @@ class UniversalScales {
         this.updatePlotAfterZoom();
     }
     
-    formatNumber(value, precision = 0) {
+    formatNumber(value, precision = 0, forTooltip = false) {
         if (value === 0) return '0';
         
         const absValue = Math.abs(value);
@@ -212,36 +212,14 @@ class UniversalScales {
                 // Round mantissa to appropriate precision
                 const roundedMantissa = Math.round(mantissa * Math.pow(10, precision)) / Math.pow(10, precision);
                 
-                // Format exponent with superscript - handle negative and positive separately
-                // Using proper Unicode superscript characters
-                const superscripts = {
-                    '0': '\u2070',  // ⁰
-                    '1': '\u00B9',  // ¹
-                    '2': '\u00B2',  // ²
-                    '3': '\u00B3',  // ³
-                    '4': '\u2074',  // ⁴
-                    '5': '\u2075',  // ⁵
-                    '6': '\u2076',  // ⁶
-                    '7': '\u2077',  // ⁷
-                    '8': '\u2078',  // ⁸
-                    '9': '\u2079'   // ⁹
-                };
-                const minusSuperscript = '\u207B'; // ⁻
-                
-                let expStr = '';
-                if (exponent < 0) {
-                    expStr = minusSuperscript;
-                    const expAbs = Math.abs(exponent);
-                    expStr += expAbs.toString().split('').map(c => superscripts[c] || c).join('');
-                } else if (exponent === 0) {
-                    expStr = superscripts['0'];
+                if (forTooltip) {
+                    // For tooltips and buttons, return HTML with superscripts
+                    return this.formatMathematicalHTML(sign, roundedMantissa, exponent);
                 } else {
-                    expStr = exponent.toString().split('').map(c => superscripts[c] || c).join('');
+                    // For axes, return a special format that we'll process into SVG tspan elements
+                    // Format: "mantissa×10|exponent" where | is a delimiter
+                    return `${sign}${roundedMantissa}×10|${exponent}`;
                 }
-                
-                // Return a special format that we'll process into SVG tspan elements
-                // Format: "mantissa×10|exponent" where | is a delimiter
-                return `${sign}${roundedMantissa}×10|${exponent}`;
             
             case 'human':
                 // Format as human-readable numbers (billion, million, etc.)
@@ -250,6 +228,12 @@ class UniversalScales {
             default:
                 return d3.format(`.${precision}e`)(value);
         }
+    }
+    
+    formatMathematicalHTML(sign, mantissa, exponent) {
+        // Format as HTML with superscript: 1×10<sup>-22</sup>
+        const exponentStr = exponent.toString();
+        return `${sign}${mantissa}×10<sup>${exponentStr}</sup>`;
     }
     
     formatHumanReadable(value, precision = 2) {
@@ -330,19 +314,12 @@ class UniversalScales {
                     const isNegative = exponent.startsWith('-');
                     const expValue = isNegative ? exponent.substring(1) : exponent;
                     
-                    // Add minus sign if negative (also as superscript)
-                    if (isNegative) {
-                        textElement.append('tspan')
-                            .attr('baseline-shift', 'super')
-                            .attr('font-size', '0.7em')
-                            .text('⁻');
-                    }
-                    
-                    // Add the exponent value as superscript
+                    // Combine negative sign and exponent digits in one tspan for proper alignment
+                    const exponentText = isNegative ? `-${expValue}` : expValue;
                     textElement.append('tspan')
                         .attr('baseline-shift', 'super')
                         .attr('font-size', '0.7em')
-                        .text(expValue);
+                        .text(exponentText);
                 }
             }
         });
@@ -1656,10 +1633,17 @@ class UniversalScales {
             tooltipImage.style.display = 'none';
         }
         
-        // Format and display the exact value
-        const formattedValue = this.formatNumber(convertedValue, 2);
+        // Format and display the exact value (use forTooltip=true to get HTML superscripts in tooltips)
+        const formattedValue = this.formatNumber(convertedValue, 2, true);
         const unitSymbol = unit ? unit.symbol : '';
-        this.tooltip.querySelector('.tooltip-value').textContent = `${formattedValue} ${unitSymbol}`;
+        const tooltipValueElement = this.tooltip.querySelector('.tooltip-value');
+        if (this.notationMode === 'mathematical') {
+            // Use innerHTML for mathematical notation to render superscripts
+            tooltipValueElement.innerHTML = `${formattedValue} ${unitSymbol}`;
+        } else {
+            // Use textContent for other notations
+            tooltipValueElement.textContent = `${formattedValue} ${unitSymbol}`;
+        }
         
         this.tooltip.querySelector('.tooltip-description').textContent = item.description;
         const sourceLink = this.tooltip.querySelector('.tooltip-source');

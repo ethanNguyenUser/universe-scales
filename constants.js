@@ -110,5 +110,12 @@ const CONFIG = {
             STROKE: '#ffffff',
             LINE: '#4dabf7'
         }
+    },
+    
+    // Notation toggle button texts
+    NOTATION_BUTTON_TEXTS: {
+        'scientific': '1e10',
+        'mathematical': '1×10^10',
+        'human': '10B'
     }
 };
