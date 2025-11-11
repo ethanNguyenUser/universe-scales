@@ -86,5 +86,3 @@
         plotSvg.addEventListener('click', handler, { capture: true });
     });
 })();
-
-
