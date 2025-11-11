@@ -386,9 +386,10 @@ class UniversalScales {
                     this.zoomBackground.attr('cursor', 'grabbing');
                 }
                 // Track initial drag position for vertical scrolling
-                if (event.sourceEvent) {
-                    this.dragStartY = event.sourceEvent.clientY;
-                    this.dragStartX = event.sourceEvent.clientX;
+                const startPosition = this.getSourceEventPosition(event.sourceEvent);
+                if (startPosition) {
+                    this.dragStartY = startPosition.y;
+                    this.dragStartX = startPosition.x;
                 } else {
                     this.dragStartY = null;
                     this.dragStartX = null;
@@ -397,12 +398,9 @@ class UniversalScales {
             })
             .on('zoom', (event) => {
                 // Handle vertical scrolling independently from horizontal panning
-                if (this.dragStartY !== null && event.sourceEvent) {
-                    const currentY = event.sourceEvent.clientY;
-                    const deltaY = currentY - this.dragStartY;
-                    
-                    // Scroll the page vertically based on incremental drag distance
-                    // Only scroll if there's meaningful vertical movement
+                const currentPosition = this.getSourceEventPosition(event.sourceEvent);
+                if (this.dragStartY !== null && currentPosition) {
+                    const deltaY = currentPosition.y - this.dragStartY;
                     if (Math.abs(deltaY) > CONFIG.VERTICAL_SCROLL_THRESHOLD) {
                         const scrollAmount = deltaY - (this.lastScrollDeltaY || 0);
                         window.scrollBy(0, -scrollAmount);
@@ -460,6 +458,33 @@ class UniversalScales {
                 this.resetZoom();
             }
         });
+    }
+
+    getSourceEventPosition(sourceEvent) {
+        if (!sourceEvent) return null;
+        
+        // Handle touch events (prefer current touches; fall back to changed touches)
+        if (sourceEvent.touches) {
+            if (sourceEvent.touches.length !== 1) {
+                return null; // Ignore multi-touch gestures (pinch zoom, etc.)
+            }
+            const touch = sourceEvent.touches[0];
+            return { x: touch.clientX, y: touch.clientY };
+        }
+        if (sourceEvent.changedTouches) {
+            if (sourceEvent.changedTouches.length !== 1) {
+                return null;
+            }
+            const touch = sourceEvent.changedTouches[0];
+            return { x: touch.clientX, y: touch.clientY };
+        }
+        
+        // Pointer and mouse events
+        if (typeof sourceEvent.clientX === 'number' && typeof sourceEvent.clientY === 'number') {
+            return { x: sourceEvent.clientX, y: sourceEvent.clientY };
+        }
+        
+        return null;
     }
     
     handleZoom(event) {
