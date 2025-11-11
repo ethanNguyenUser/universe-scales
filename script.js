@@ -34,6 +34,7 @@ class UniversalScales {
         this.touchStartOnItem = null; // Track if touch started on item/label for mobile drag detection
         this.touchStartPosition = null; // Track initial touch position for drag detection
         this.enableAudioHandler = null; // Store reference to enableAudio handler for cleanup
+        this.zoomUpdatePending = false; // Throttle zoom updates for performance
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -857,18 +858,10 @@ class UniversalScales {
                 newLogMin = logActualMin;
                 newLogMax = logActualMax;
                 constrained = true;
-            } else {
-                // TEMPORARILY REMOVED: Constrain panning to keep items visible
-                // Only constrain the minimum (left edge) to debug upper limit issue
-                
-                // Check if we're trying to go below the minimum (left edge)
-                if (newLogMin < logActualMin) {
-                    newLogMin = logActualMin;
-                    newLogMax = newLogMin + currentVisibleLogRange;
-                    constrained = true;
-                }
-                // REMOVED: Maximum constraint to test if there's another limit
-                // Allow panning beyond logActualMax to see if there's another constraint
+            } else if (newLogMin < logActualMin) {
+                newLogMin = logActualMin;
+                newLogMax = newLogMin + currentVisibleLogRange;
+                constrained = true;
             }
             
             // Convert back to linear space
@@ -903,8 +896,15 @@ class UniversalScales {
                 }
             }
             
-            // Update the plot
-            this.updatePlotAfterZoom();
+            // Throttle plot updates during zoom for better performance on mobile
+            // Use requestAnimationFrame to batch updates
+            if (!this.zoomUpdatePending) {
+                this.zoomUpdatePending = true;
+                requestAnimationFrame(() => {
+                    this.updatePlotAfterZoom();
+                    this.zoomUpdatePending = false;
+                });
+            }
         }
     }
     
@@ -1639,37 +1639,6 @@ class UniversalScales {
         tooltipImage.src = '';
         tooltipImage.alt = '';
         
-        if (imagePath) {
-            // Check if image exists before setting src
-            this.checkImageExists(imagePath).then(fullImagePath => {
-                if (fullImagePath) {
-                    // Create a new image object to preload and only show when loaded
-                    const img = new Image();
-                    img.onload = () => {
-                        // Only set the image if this tooltip is still showing the same item
-                        // Check by comparing the current tooltip title
-                        if (this.tooltip.querySelector('.tooltip-title').textContent === item.name) {
-                            tooltipImage.src = fullImagePath;
-                            tooltipImage.alt = item.name;
-                            tooltipImage.style.display = 'block';
-                        }
-                    };
-                    img.onerror = () => {
-                        // Image failed to load, keep it hidden
-                        tooltipImage.style.display = 'none';
-                    };
-                    // Start loading the image
-                    img.src = fullImagePath;
-                } else {
-                    // Image doesn't exist, keep it hidden
-                    tooltipImage.style.display = 'none';
-                }
-            });
-        } else {
-            // No image path, keep it hidden
-            tooltipImage.style.display = 'none';
-        }
-        
         // Format and display the exact value (use forTooltip=true to get HTML superscripts in tooltips)
         const formattedValue = this.formatNumber(convertedValue, 2, true);
         const unitSymbol = unit ? unit.symbol : '';
@@ -1697,60 +1666,137 @@ class UniversalScales {
             sourceLink.style.display = 'none';
         }
         
-        // Position tooltip
+        // Position tooltip (will be repositioned after image loads if image exists)
         const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
             || ('ontouchstart' in window)
             || window.matchMedia('(hover: none)').matches;
-        if (isTouchPrimary) {
-            // Pin tooltip to viewport top center on mobile via CSS class
-            this.tooltip.classList.add('mobile-pinned');
-            // Clear any previous desktop inline positioning that could push it off-screen
-            this.tooltip.style.left = '';
-            this.tooltip.style.top = '';
-            this.tooltip.style.transform = '';
-            this.tooltip.style.position = '';
-        } else {
-            const rect = this.plotContainer.getBoundingClientRect();
-            
-            // Dynamically cap tooltip width to available plot width
-            const maxAllowed = Math.max(CONFIG.TOOLTIP_MIN_WIDTH, rect.width - 2 * CONFIG.TOOLTIP_OFFSET_X);
-            this.tooltip.style.maxWidth = `${Math.min(CONFIG.TOOLTIP_MAX_WIDTH, maxAllowed)}px`;
-            
-            // Temporarily make tooltip visible to measure its dimensions
-            this.tooltip.style.visibility = 'hidden';
-            this.tooltip.style.display = 'block';
-            const tooltipWidth = this.tooltip.offsetWidth;
-            const tooltipHeight = this.tooltip.offsetHeight;
-            this.tooltip.style.visibility = '';
-            
-            // Use viewport coordinates for robust clamping
-            const clientX = event.clientX;
-            const clientY = event.clientY;
-            
-            // Horizontal: prefer right of cursor; fallback left if not enough space
-            const spaceOnRightVp = window.innerWidth - clientX;
-            let desiredLeftVp;
-            if (spaceOnRightVp < tooltipWidth + CONFIG.TOOLTIP_OFFSET_X * 2) {
-                desiredLeftVp = clientX - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+        
+        const positionTooltip = () => {
+            if (isTouchPrimary) {
+                // Pin tooltip to viewport top center on mobile via CSS class
+                this.tooltip.classList.add('mobile-pinned');
+                // Clear any previous desktop inline positioning that could push it off-screen
+                this.tooltip.style.left = '';
+                this.tooltip.style.top = '';
+                this.tooltip.style.transform = '';
+                this.tooltip.style.position = '';
             } else {
-                desiredLeftVp = clientX + CONFIG.TOOLTIP_OFFSET_X;
+                // Use viewport coordinates for robust clamping
+                const clientX = event.clientX;
+                const clientY = event.clientY;
+                
+                // Measure tooltip dimensions once (avoid multiple layout recalculations)
+                // Use a single measurement by setting display and visibility together
+                const wasVisible = this.tooltip.style.display === 'block';
+                if (!wasVisible) {
+                    this.tooltip.style.display = 'block';
+                    this.tooltip.style.visibility = 'hidden';
+                    this.tooltip.style.position = 'fixed';
+                    this.tooltip.style.left = '-9999px';
+                    this.tooltip.style.top = '-9999px';
+                }
+                
+                // Set maxWidth to full width to measure natural size
+                this.tooltip.style.maxWidth = `${CONFIG.TOOLTIP_MAX_WIDTH}px`;
+                
+                // Force a single layout calculation by reading dimensions
+                const naturalTooltipWidth = this.tooltip.offsetWidth;
+                const naturalTooltipHeight = this.tooltip.offsetHeight;
+                
+                // Check if tooltip would be cut off on the right when positioned to the right of cursor
+                const spaceOnRight = window.innerWidth - clientX - CONFIG.TOOLTIP_OFFSET_X;
+                const wouldBeCutOff = spaceOnRight < naturalTooltipWidth;
+                
+                // If it would be cut off, move to left of cursor (don't squish)
+                // Otherwise, position to the right and potentially reduce width if needed
+                let desiredLeftVp;
+                let finalTooltipWidth = naturalTooltipWidth;
+                let finalTooltipHeight = naturalTooltipHeight;
+                
+                if (wouldBeCutOff) {
+                    // Position to the left of cursor
+                    desiredLeftVp = clientX - naturalTooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+                    // Keep full width - don't squish
+                    this.tooltip.style.maxWidth = `${CONFIG.TOOLTIP_MAX_WIDTH}px`;
+                } else {
+                    // Position to the right of cursor
+                    desiredLeftVp = clientX + CONFIG.TOOLTIP_OFFSET_X;
+                    // Dynamically cap tooltip width to available space
+                    const maxAllowed = Math.max(CONFIG.TOOLTIP_MIN_WIDTH, spaceOnRight);
+                    const newMaxWidth = Math.min(CONFIG.TOOLTIP_MAX_WIDTH, maxAllowed);
+                    this.tooltip.style.maxWidth = `${newMaxWidth}px`;
+                    // Only remeasure if width actually changed
+                    if (newMaxWidth < CONFIG.TOOLTIP_MAX_WIDTH) {
+                        finalTooltipWidth = this.tooltip.offsetWidth;
+                        finalTooltipHeight = this.tooltip.offsetHeight;
+                    }
+                    // Ensure it doesn't go off the right edge
+                    if (desiredLeftVp + finalTooltipWidth > window.innerWidth - CONFIG.TOOLTIP_OFFSET_X) {
+                        desiredLeftVp = window.innerWidth - finalTooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+                    }
+                }
+                
+                // Clamp horizontal position to ensure it doesn't go off the left edge
+                const minLeftVp = CONFIG.TOOLTIP_OFFSET_X;
+                desiredLeftVp = Math.max(minLeftVp, desiredLeftVp);
+                
+                // Default vertical position: below cursor
+                let desiredTopVp = clientY + CONFIG.TOOLTIP_OFFSET_Y;
+                
+                // Clamp vertical position to keep tooltip within viewport
+                const minTopVp = CONFIG.TOOLTIP_MIN_TOP;
+                const maxTopVp = window.innerHeight - CONFIG.TOOLTIP_VIEWPORT_BOTTOM_MARGIN - finalTooltipHeight;
+                desiredTopVp = Math.max(minTopVp, Math.min(maxTopVp, desiredTopVp));
+                
+                // Apply all styles at once to minimize layout recalculations
+                this.tooltip.style.left = `${desiredLeftVp}px`;
+                this.tooltip.style.top = `${desiredTopVp}px`;
+                this.tooltip.style.position = 'fixed';
+                this.tooltip.style.transform = '';
+                this.tooltip.style.pointerEvents = 'none';
+                if (!wasVisible) {
+                    this.tooltip.style.visibility = '';
+                }
             }
-            const minLeftVp = CONFIG.TOOLTIP_OFFSET_X;
-            const maxLeftVp = window.innerWidth - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
-            const clampedLeftVp = Math.max(minLeftVp, Math.min(maxLeftVp, desiredLeftVp));
-            this.tooltip.style.left = `${clampedLeftVp}px`;
-            
-            // Vertical: center on cursor Y, clamp to viewport with bottom margin
-            const desiredTopVp = clientY - (tooltipHeight / 2);
-            const minTopVp = CONFIG.TOOLTIP_MIN_TOP;
-            const maxTopVp = window.innerHeight - CONFIG.TOOLTIP_VIEWPORT_BOTTOM_MARGIN - tooltipHeight;
-            const clampedTopVp = Math.max(minTopVp, Math.min(maxTopVp, desiredTopVp));
-            this.tooltip.style.top = `${clampedTopVp}px`;
-            
-            // Fixed positioning so viewport clamping is honored regardless of container scroll/position
-            this.tooltip.style.position = 'fixed';
-            this.tooltip.style.transform = '';
-            this.tooltip.style.pointerEvents = 'none';
+        };
+        
+        // Position tooltip initially
+        positionTooltip();
+        
+        // Handle image loading - reposition tooltip after image loads to account for image height
+        if (imagePath) {
+            // Check if image exists before setting src
+            this.checkImageExists(imagePath).then(fullImagePath => {
+                if (fullImagePath) {
+                    // Create a new image object to preload and only show when loaded
+                    const img = new Image();
+                    img.onload = () => {
+                        // Only set the image if this tooltip is still showing the same item
+                        // Check by comparing the current tooltip title
+                        if (this.tooltip.querySelector('.tooltip-title').textContent === item.name) {
+                            tooltipImage.src = fullImagePath;
+                            tooltipImage.alt = item.name;
+                            tooltipImage.style.display = 'block';
+                            // Reposition tooltip now that image is loaded and height has changed
+                            if (!isTouchPrimary) {
+                                positionTooltip();
+                            }
+                        }
+                    };
+                    img.onerror = () => {
+                        // Image failed to load, keep it hidden
+                        tooltipImage.style.display = 'none';
+                    };
+                    // Start loading the image
+                    img.src = fullImagePath;
+                } else {
+                    // Image doesn't exist, keep it hidden
+                    tooltipImage.style.display = 'none';
+                }
+            });
+        } else {
+            // No image path, keep it hidden
+            tooltipImage.style.display = 'none';
         }
         
         this.tooltip.classList.add('visible');

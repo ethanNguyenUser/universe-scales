@@ -518,11 +518,5 @@ select:focus {
     100% { transform: rotate(360deg); }
 }
 
-/* Smooth transitions for theme changes */
-svg text {
-    transition: fill 0.3s ease;
-}
-
-svg .axis text {
-    transition: fill 0.3s ease;
-}
+/* Removed CSS transitions on SVG text for better performance on mobile */
+/* Theme changes are handled via direct style updates in JavaScript */
