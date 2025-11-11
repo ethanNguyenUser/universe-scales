@@ -21,6 +21,11 @@ class UniversalScales {
         this.lastTickSet = null; // Store last tick set for stability
         this.lastTickDomain = null; // Store domain when ticks were last calculated
         this.lastTickLogRange = null; // Store log range for zoom level tracking
+        this.dragStartY = null; // Track vertical drag start position for scrolling
+        this.dragStartX = null; // Track horizontal drag start position
+        this.isVerticalDrag = false; // Track if current drag is primarily vertical
+        this.lastScrollDeltaY = null; // Track last scroll delta to prevent double-scrolling
+        this.dragStartTransform = null; // Store transform at drag start to restore if vertical
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -99,7 +104,7 @@ class UniversalScales {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
                 this.resizePlot();
-            }, 150); // Debounce resize events
+            }, CONFIG.RESIZE_DEBOUNCE_MS);
         });
     }
     
@@ -346,7 +351,7 @@ class UniversalScales {
                     }
                     // Check parent elements
                     let current = target;
-                    for (let i = 0; i < 5 && current; i++) {
+                    for (let i = 0; i < CONFIG.PARENT_CHECK_DEPTH && current; i++) {
                         if (current.classList && (
                             current.classList.contains('item-group') || 
                             current.classList.contains('label-group')
@@ -358,20 +363,48 @@ class UniversalScales {
                 }
                 return true;
             })
-            .on('start', () => {
+            .on('start', (event) => {
                 // Change cursor when dragging starts
                 if (this.zoomBackground) {
                     this.zoomBackground.attr('cursor', 'grabbing');
                 }
+                // Track initial drag position for vertical scrolling
+                if (event.sourceEvent) {
+                    this.dragStartY = event.sourceEvent.clientY;
+                    this.dragStartX = event.sourceEvent.clientX;
+                } else {
+                    this.dragStartY = null;
+                    this.dragStartX = null;
+                }
+                this.lastScrollDeltaY = null;
+            })
+            .on('zoom', (event) => {
+                // Handle vertical scrolling independently from horizontal panning
+                if (this.dragStartY !== null && event.sourceEvent) {
+                    const currentY = event.sourceEvent.clientY;
+                    const deltaY = currentY - this.dragStartY;
+                    
+                    // Scroll the page vertically based on incremental drag distance
+                    // Only scroll if there's meaningful vertical movement
+                    if (Math.abs(deltaY) > CONFIG.VERTICAL_SCROLL_THRESHOLD) {
+                        const scrollAmount = deltaY - (this.lastScrollDeltaY || 0);
+                        window.scrollBy(0, -scrollAmount);
+                        this.lastScrollDeltaY = deltaY;
+                    }
+                }
+                
+                // Always handle horizontal zoom/pan (works simultaneously with vertical scrolling)
+                this.handleZoom(event);
             })
             .on('end', () => {
                 // Change cursor back when dragging ends
                 if (this.zoomBackground) {
                     this.zoomBackground.attr('cursor', 'grab');
                 }
-            })
-            .on('zoom', (event) => {
-                this.handleZoom(event);
+                // Reset drag tracking
+                this.dragStartY = null;
+                this.dragStartX = null;
+                this.lastScrollDeltaY = null;
             });
         
         // Apply zoom to the main group - it will receive events
@@ -394,7 +427,7 @@ class UniversalScales {
             
             if (!isInteractive) {
                 let current = target;
-                for (let i = 0; i < 5 && current; i++) {
+                for (let i = 0; i < CONFIG.PARENT_CHECK_DEPTH && current; i++) {
                     if (current.classList && (
                         current.classList.contains('item-group') || 
                         current.classList.contains('label-group')
@@ -581,74 +614,100 @@ class UniversalScales {
         const logMax = Math.log10(max);
         const logRange = logMax - logMin;
         
-        // Check if we should reuse the last tick set (hysteresis to prevent flickering)
-        if (this.lastTickSet && this.lastTickDomain && this.lastTickLogRange !== null) {
-            const [lastMin, lastMax] = this.lastTickDomain;
-            const lastLogMin = Math.log10(lastMin);
-            const lastLogMax = Math.log10(lastMax);
-            const lastLogRange = lastLogMax - lastLogMin;
-            
-            // Check if a new power of 10 has entered/exited the visible range
-            const currentMinPower = Math.floor(logMin);
-            const currentMaxPower = Math.ceil(logMax);
-            const lastMinPower = Math.floor(lastLogMin);
-            const lastMaxPower = Math.ceil(lastLogMax);
-            
-            const minPowerChanged = currentMinPower !== lastMinPower;
-            const maxPowerChanged = currentMaxPower !== lastMaxPower;
-            
+        // Check if we should reuse the last tick set (for seamless panning)
+        // If zoom level hasn't changed, we're just panning - reuse the same tick set
+        if (this.lastTickSet && this.lastTickLogRange !== null) {
             // Check if zoom level has changed significantly
-            const zoomLevelChanged = Math.abs(logRange - lastLogRange) / Math.max(logRange, lastLogRange) > CONFIG.TICK_ZOOM_LEVEL_CHANGE_THRESHOLD;
+            const relativeChange = Math.abs(logRange - this.lastTickLogRange) / Math.max(logRange, this.lastTickLogRange);
+            const zoomLevelChanged = relativeChange > CONFIG.TICK_ZOOM_LEVEL_CHANGE_THRESHOLD;
             
-            // Check if domain has shifted significantly
-            const domainShifted = Math.abs(logMin - lastLogMin) / logRange > CONFIG.TICK_DOMAIN_SHIFT_THRESHOLD || 
-                                 Math.abs(logMax - lastLogMax) / logRange > CONFIG.TICK_DOMAIN_SHIFT_THRESHOLD;
-            
-            // Only update ticks if:
-            // 1. A new power of 10 entered/exited the range, OR
-            // 2. Zoom level changed significantly, OR
-            // 3. Domain shifted significantly
-            if (!minPowerChanged && !maxPowerChanged && !zoomLevelChanged && !domainShifted) {
-                // Reuse last tick set, but filter to only show ticks in current domain
+            // If zoom level hasn't changed, we're panning - reuse the tick set and just filter to visible domain
+            if (!zoomLevelChanged) {
                 const filteredTicks = this.lastTickSet.filter(tick => tick >= min && tick <= max);
-                // Only reuse if we still have at least minimum ticks
-                if (filteredTicks.length >= CONFIG.TICK_MIN_COUNT) {
+                // Check if we have enough ticks in the visible area
+                // If we have at least the minimum, return them (seamless panning)
+                // If we have very few, it might mean we've panned into an area with sparse ticks
+                // but that's okay - the pattern is consistent, so ticks will appear as we continue panning
+                if (filteredTicks.length >= CONFIG.TICK_MIN_COUNT || filteredTicks.length > 0) {
+                    // Update the stored domain for reference, but DON'T update lastTickLogRange
+                    // (we need to keep lastTickLogRange to detect zoom changes)
+                    if (this.lastTickDomain) {
+                        this.lastTickDomain = [min, max];
+                    }
                     return filteredTicks;
                 }
+                // If we have no ticks at all, something went wrong - regenerate
+                // (This shouldn't happen with proper full-range generation, but safety check)
             }
+            // If zoom level changed, continue to generate new ticks below
         }
         
-        // Calculate the range of powers of 10 we should consider
-        // Use a slightly expanded range to create a buffer for stability
-        const expandedLogMin = Math.floor(logMin) - CONFIG.TICK_EXPANDED_RANGE_BUFFER;
-        const expandedLogMax = Math.ceil(logMax) + CONFIG.TICK_EXPANDED_RANGE_BUFFER;
-        const minPower = Math.floor(expandedLogMin);
-        const maxPower = Math.ceil(expandedLogMax);
-        
-        // Generate all powers of 10 in the expanded range
-        const powerOfTenTicks = [];
-        for (let power = minPower; power <= maxPower; power++) {
-            const value = Math.pow(10, power);
-            powerOfTenTicks.push(value);
-        }
-        
-        // Filter to avoid too many ticks based on available width
+        // Calculate target density based on the CURRENT visible range
         const minLabelSpacing = window.matchMedia(`(max-width: ${CONFIG.MOBILE_BREAKPOINT}px)`).matches 
             ? CONFIG.LABEL_SPACING_MOBILE 
             : CONFIG.LABEL_SPACING_DESKTOP;
         const maxByWidth = Math.max(CONFIG.TICK_MIN_COUNT, Math.floor(this.width / minLabelSpacing));
         const targetCount = Math.max(CONFIG.TICK_MIN_COUNT, Math.min(CONFIG.AXIS_TICKS, maxByWidth));
         
-        // If we have too many ticks, intelligently skip some
-        let filteredTicks = powerOfTenTicks;
-        if (powerOfTenTicks.length > targetCount) {
-            // Prefer showing every other tick (1e6, 1e8, 1e10) over every third (1e6, 1e9, 1e12)
-            // Calculate step to get close to target count
-            const step = Math.ceil(powerOfTenTicks.length / targetCount);
-            filteredTicks = powerOfTenTicks.filter((_, i) => i % step === 0);
+        // First, generate ticks for the visible range to determine density
+        const visibleMinPower = Math.floor(logMin);
+        const visibleMaxPower = Math.ceil(logMax);
+        const visiblePowerOfTenTicks = [];
+        for (let power = visibleMinPower; power <= visibleMaxPower; power++) {
+            const value = Math.pow(10, power);
+            if (value >= min && value <= max) {
+                visiblePowerOfTenTicks.push(value);
+            }
+        }
+        const visibleTickCount = visiblePowerOfTenTicks.length;
+        
+        // Determine step size based on visible range needs
+        let step = 1;
+        if (visibleTickCount > targetCount) {
+            step = Math.ceil(visibleTickCount / targetCount);
         }
         
-        // Store the tick set and domain for next time
+        // Generate ticks for the FULL item range (from lowest to highest item)
+        // This ensures ticks are available when panning to any part of the data
+        let fullRangeMin, fullRangeMax;
+        if (this.actualItemExtent) {
+            // Use actual item extent, with lower bound extended for label space (same as plot domain)
+            const [itemMin, itemMax] = this.actualItemExtent;
+            fullRangeMin = itemMin * CONFIG.EXTENT_LOWER_MULTIPLIER;
+            fullRangeMax = itemMax * CONFIG.EXTENT_UPPER_MULTIPLIER; // Match the extended extent used in updatePlot
+        } else {
+            // Fallback: use current domain if item extent not available yet
+            fullRangeMin = min;
+            fullRangeMax = max;
+        }
+        
+        const fullLogMin = Math.log10(fullRangeMin);
+        const fullLogMax = Math.log10(fullRangeMax);
+        const minPower = Math.floor(fullLogMin);
+        const maxPower = Math.ceil(fullLogMax);
+        
+        // Generate all powers of 10 in the full item range
+        const allPowerOfTenTicks = [];
+        for (let power = minPower; power <= maxPower; power++) {
+            const value = Math.pow(10, power);
+            allPowerOfTenTicks.push(value);
+        }
+        
+        // Apply the step to maintain density (same as visible range)
+        // Always start from the beginning of the full range to ensure consistent coverage
+        // This ensures ticks are available when panning in any direction
+        let filteredTicks = allPowerOfTenTicks;
+        if (step > 1) {
+            // Start from the beginning (index 0) to ensure consistent pattern throughout
+            // This way, when panning left or right, the tick pattern is always consistent
+            filteredTicks = [];
+            for (let i = 0; i < allPowerOfTenTicks.length; i += step) {
+                filteredTicks.push(allPowerOfTenTicks[i]);
+            }
+        }
+        
+        // Store the FULL filtered tick set (for the full item range) for seamless panning
+        // This set covers from the lowest to highest item, so ticks are always available when panning
         this.lastTickSet = filteredTicks;
         this.lastTickDomain = [min, max];
         this.lastTickLogRange = logRange;
@@ -690,7 +749,7 @@ class UniversalScales {
         this.actualItemExtent = [...extent];
         
         // Extend the lower bound to provide more space for text labels
-        const extendedExtent = [extent[0] * CONFIG.EXTENT_LOWER_MULTIPLIER, extent[1] * 1e10];
+        const extendedExtent = [extent[0] * CONFIG.EXTENT_LOWER_MULTIPLIER, extent[1] * CONFIG.EXTENT_UPPER_MULTIPLIER];
         
         // Store original domain for zoom reset
         // Reset original domain when dimension/unit changes (check if domain changed significantly)
@@ -911,6 +970,14 @@ class UniversalScales {
             }) // Height to encompass circle and text
             .attr('fill', 'transparent')
             .attr('cursor', 'pointer')
+            .on('pointerdown', (event, d) => {
+                // Store that pointerdown occurred on this element
+                // Use a data attribute to track which element was clicked
+                event.target.setAttribute('data-pointer-down', 'true');
+                // Store initial position to detect drag
+                event.target.setAttribute('data-pointer-down-x', event.clientX);
+                event.target.setAttribute('data-pointer-down-y', event.clientY);
+            })
             .on('pointerenter', (event, d) => {
                 if (window.matchMedia('(hover: hover)').matches) {
                     this.showTooltip(event, d);
@@ -936,6 +1003,8 @@ class UniversalScales {
                             .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH);
                     }
                 }
+                // Clear pointerdown flag when leaving the element
+                event.target.removeAttribute('data-pointer-down');
             })
             .on('pointerup', (event, d) => {
                 const isTouchPrimary = window.matchMedia('(hover: none)').matches;
@@ -944,8 +1013,23 @@ class UniversalScales {
                     event.stopPropagation();
                     this.showTooltip(event, d);
                 } else {
-                    window.open(d.source, '_blank');
+                    // Only open source if pointerdown also occurred on this element
+                    // and the pointer didn't move too far (to distinguish from drag)
+                    const wasPointerDown = event.target.getAttribute('data-pointer-down') === 'true';
+                    const downX = parseFloat(event.target.getAttribute('data-pointer-down-x') || '0');
+                    const downY = parseFloat(event.target.getAttribute('data-pointer-down-y') || '0');
+                    const moveDistance = Math.sqrt(
+                        Math.pow(event.clientX - downX, 2) + 
+                        Math.pow(event.clientY - downY, 2)
+                    );
+                    if (wasPointerDown && moveDistance <= CONFIG.MAX_CLICK_DISTANCE) {
+                        window.open(d.source, '_blank');
+                    }
                 }
+                // Clear pointerdown flag after handling
+                event.target.removeAttribute('data-pointer-down');
+                event.target.removeAttribute('data-pointer-down-x');
+                event.target.removeAttribute('data-pointer-down-y');
             });
         
         // Add the actual text with smart positioning
