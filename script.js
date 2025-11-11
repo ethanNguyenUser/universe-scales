@@ -7,6 +7,7 @@ class UniversalScales {
         this.currentUnit = null;
         this.dimensionData = null;
         this.exchangeRates = null;
+        this.notationMode = 'scientific'; // 'scientific', 'mathematical', 'human'
         
         // D3.js setup
         this.margin = CONFIG.MARGIN;
@@ -30,10 +31,13 @@ class UniversalScales {
         this.axisClipRect = null;
         this.itemsClipId = `items-clip-${Math.random().toString(36).slice(2)}`;
         this.itemsClipRect = null;
+        this.touchStartOnItem = null; // Track if touch started on item/label for mobile drag detection
+        this.touchStartPosition = null; // Track initial touch position for drag detection
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
         this.unitSelect = document.getElementById('unit-select');
+        this.notationToggle = document.getElementById('notation-toggle');
         this.darkModeToggle = document.getElementById('dark-mode-toggle');
         this.musicToggle = document.getElementById('music-toggle');
         this.backgroundMusic = document.getElementById('background-music');
@@ -55,6 +59,9 @@ class UniversalScales {
         
         // Initialize music
         this.initMusic();
+        
+        // Initialize notation
+        this.initNotation();
         
         // Set up URL management first
         this.setupURLManagement();
@@ -95,6 +102,10 @@ class UniversalScales {
             this.toggleMusic();
         });
         
+        this.notationToggle.addEventListener('click', () => {
+            this.toggleNotation();
+        });
+        
         // Hide tooltips when clicking elsewhere
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area')) {
@@ -116,6 +127,19 @@ class UniversalScales {
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
         this.updateDarkModeButton(savedTheme);
+    }
+    
+    initNotation() {
+        const savedMode = localStorage.getItem('notationMode') || 'scientific';
+        this.notationMode = savedMode;
+        
+        // Update button text to show current mode
+        const buttonTexts = {
+            'scientific': '1e10',
+            'mathematical': '1×10¹⁰',
+            'human': '10B'
+        };
+        this.notationToggle.textContent = buttonTexts[this.notationMode];
     }
     
     toggleDarkMode() {
@@ -147,6 +171,181 @@ class UniversalScales {
             this.musicToggle.classList.remove('playing');
             this.musicToggle.textContent = '🎵';
         }
+    }
+    
+    toggleNotation() {
+        const modes = ['scientific', 'mathematical', 'human'];
+        const currentIndex = modes.indexOf(this.notationMode);
+        this.notationMode = modes[(currentIndex + 1) % modes.length];
+        
+        // Update button text to show current mode
+        const buttonTexts = {
+            'scientific': '1e10',
+            'mathematical': '1×10¹⁰',
+            'human': '10B'
+        };
+        this.notationToggle.textContent = buttonTexts[this.notationMode];
+        
+        // Save to localStorage
+        localStorage.setItem('notationMode', this.notationMode);
+        
+        // Update plot to reflect new notation
+        this.updatePlotAfterZoom();
+    }
+    
+    formatNumber(value, precision = 0) {
+        if (value === 0) return '0';
+        
+        const absValue = Math.abs(value);
+        const sign = value < 0 ? '-' : '';
+        
+        switch (this.notationMode) {
+            case 'scientific':
+                // Use d3 format for scientific notation
+                return d3.format(`.${precision}e`)(value);
+            
+            case 'mathematical':
+                // Format as 1×10^10 or 1×10⁻¹⁰
+                const exponent = Math.floor(Math.log10(absValue));
+                const mantissa = absValue / Math.pow(10, exponent);
+                
+                // Round mantissa to appropriate precision
+                const roundedMantissa = Math.round(mantissa * Math.pow(10, precision)) / Math.pow(10, precision);
+                
+                // Format exponent with superscript - handle negative and positive separately
+                // Using proper Unicode superscript characters
+                const superscripts = {
+                    '0': '\u2070',  // ⁰
+                    '1': '\u00B9',  // ¹
+                    '2': '\u00B2',  // ²
+                    '3': '\u00B3',  // ³
+                    '4': '\u2074',  // ⁴
+                    '5': '\u2075',  // ⁵
+                    '6': '\u2076',  // ⁶
+                    '7': '\u2077',  // ⁷
+                    '8': '\u2078',  // ⁸
+                    '9': '\u2079'   // ⁹
+                };
+                const minusSuperscript = '\u207B'; // ⁻
+                
+                let expStr = '';
+                if (exponent < 0) {
+                    expStr = minusSuperscript;
+                    const expAbs = Math.abs(exponent);
+                    expStr += expAbs.toString().split('').map(c => superscripts[c] || c).join('');
+                } else if (exponent === 0) {
+                    expStr = superscripts['0'];
+                } else {
+                    expStr = exponent.toString().split('').map(c => superscripts[c] || c).join('');
+                }
+                
+                // Return a special format that we'll process into SVG tspan elements
+                // Format: "mantissa×10|exponent" where | is a delimiter
+                return `${sign}${roundedMantissa}×10|${exponent}`;
+            
+            case 'human':
+                // Format as human-readable numbers (billion, million, etc.)
+                return this.formatHumanReadable(value, precision);
+            
+            default:
+                return d3.format(`.${precision}e`)(value);
+        }
+    }
+    
+    formatHumanReadable(value, precision = 2) {
+        if (value === 0) return '0';
+        
+        const absValue = Math.abs(value);
+        const sign = value < 0 ? '-' : '';
+        
+        // For very small numbers (< 0.001), use scientific notation format (e.g., 1.5e-10)
+        if (absValue < 0.001 && absValue > 0) {
+            return d3.format(`.${precision}e`)(value);
+        }
+        
+        // For very large numbers (> 1e15), use scientific notation format (e.g., 1.5e15)
+        if (absValue >= 1e15) {
+            return d3.format(`.${precision}e`)(value);
+        }
+        
+        // Define thresholds and labels for human-readable format
+        const units = [
+            { value: 1e12, label: 'T' }, // Trillion
+            { value: 1e9, label: 'B' },  // Billion
+            { value: 1e6, label: 'M' },   // Million
+            { value: 1e3, label: 'K' },  // Thousand
+            { value: 1, label: '' }
+        ];
+        
+        // Find appropriate unit
+        let unit = units[units.length - 1];
+        for (let i = 0; i < units.length; i++) {
+            if (absValue >= units[i].value) {
+                unit = units[i];
+                break;
+            }
+        }
+        
+        // Format with unit
+        const scaledValue = absValue / unit.value;
+        const roundedValue = Math.round(scaledValue * Math.pow(10, precision)) / Math.pow(10, precision);
+        
+        // Remove trailing zeros, but keep at least one digit after decimal if precision > 0
+        let formatted;
+        if (precision > 0) {
+            formatted = roundedValue.toFixed(precision).replace(/\.?0+$/, '');
+            // Ensure at least one decimal place for values < 1
+            if (absValue < 1 && !formatted.includes('.')) {
+                formatted = roundedValue.toFixed(1);
+            }
+        } else {
+            formatted = Math.round(scaledValue).toString();
+        }
+        
+        return `${sign}${formatted}${unit.label}`;
+    }
+    
+    processMathematicalLabels(axis) {
+        // Process all text elements in the axis to convert mathematical notation
+        // from "mantissa×10|exponent" format to proper SVG with tspan superscripts
+        axis.selectAll('text').each(function() {
+            const textElement = d3.select(this);
+            const originalText = textElement.text();
+            
+            // Check if this is a mathematical notation label (contains "|")
+            if (originalText.includes('|')) {
+                const parts = originalText.split('|');
+                if (parts.length === 2) {
+                    const base = parts[0]; // e.g., "1×10"
+                    const exponent = parts[1]; // e.g., "15" or "-10"
+                    
+                    // Clear the text content
+                    textElement.text('');
+                    
+                    // Add the base text
+                    textElement.append('tspan')
+                        .text(base);
+                    
+                    // Add the exponent as a superscript tspan
+                    const isNegative = exponent.startsWith('-');
+                    const expValue = isNegative ? exponent.substring(1) : exponent;
+                    
+                    // Add minus sign if negative (also as superscript)
+                    if (isNegative) {
+                        textElement.append('tspan')
+                            .attr('baseline-shift', 'super')
+                            .attr('font-size', '0.7em')
+                            .text('⁻');
+                    }
+                    
+                    // Add the exponent value as superscript
+                    textElement.append('tspan')
+                        .attr('baseline-shift', 'super')
+                        .attr('font-size', '0.7em')
+                        .text(expValue);
+                }
+            }
+        });
     }
     
     initMusic() {
@@ -395,8 +594,9 @@ class UniversalScales {
             .filter((event) => {
                 // Allow wheel events (zooming) anywhere
                 if (event.type === 'wheel') return true;
-                // For drag events, only allow on background (not on items)
-                if (event.type === 'mousedown' || event.type === 'touchstart') {
+                
+                // For mouse events, only allow on background (not on items)
+                if (event.type === 'mousedown') {
                     const target = event.target;
                     // Check if clicking on an interactive element
                     if (target.classList && (
@@ -419,6 +619,75 @@ class UniversalScales {
                         current = current.parentNode;
                     }
                 }
+                
+                // For touch events on mobile, allow panning even if starting on items/labels
+                // We'll detect drag vs tap in the touch handlers
+                if (event.type === 'touchstart') {
+                    const isMobile = ('ontouchstart' in window) || window.matchMedia('(hover: none)').matches;
+                    if (isMobile) {
+                        // Always allow touchstart - we'll handle drag detection in touchmove
+                        const target = event.target;
+                        const isOnItem = target.classList && (
+                            target.classList.contains('plot-item') || 
+                            target.classList.contains('label-hover-area') || 
+                            target.classList.contains('tap-target') ||
+                            target.classList.contains('item-label')
+                        );
+                        
+                        // Check parent elements
+                        let isOnItemGroup = false;
+                        if (!isOnItem) {
+                            let current = target;
+                            for (let i = 0; i < CONFIG.PARENT_CHECK_DEPTH && current; i++) {
+                                if (current.classList && (
+                                    current.classList.contains('item-group') || 
+                                    current.classList.contains('label-group')
+                                )) {
+                                    isOnItemGroup = true;
+                                    break;
+                                }
+                                current = current.parentNode;
+                            }
+                        }
+                        
+                        // Store that touch started on item for later drag detection
+                        if (isOnItem || isOnItemGroup) {
+                            this.touchStartOnItem = true;
+                            const touch = event.touches && event.touches[0];
+                            if (touch) {
+                                this.touchStartPosition = { x: touch.clientX, y: touch.clientY };
+                            }
+                        } else {
+                            this.touchStartOnItem = false;
+                            this.touchStartPosition = null;
+                        }
+                        
+                        // Always allow touchstart on mobile - we'll handle drag vs tap later
+                        return true;
+                    } else {
+                        // Desktop touch: same as mouse
+                        const target = event.target;
+                        if (target.classList && (
+                            target.classList.contains('plot-item') || 
+                            target.classList.contains('label-hover-area') || 
+                            target.classList.contains('tap-target') ||
+                            target.classList.contains('item-label')
+                        )) {
+                            return false;
+                        }
+                        let current = target;
+                        for (let i = 0; i < CONFIG.PARENT_CHECK_DEPTH && current; i++) {
+                            if (current.classList && (
+                                current.classList.contains('item-group') || 
+                                current.classList.contains('label-group')
+                            )) {
+                                return false;
+                            }
+                            current = current.parentNode;
+                        }
+                    }
+                }
+                
                 return true;
             })
             .on('start', (event) => {
@@ -461,6 +730,8 @@ class UniversalScales {
                 this.dragStartY = null;
                 this.dragStartX = null;
                 this.lastScrollDeltaY = null;
+                this.touchStartOnItem = null;
+                this.touchStartPosition = null;
             });
         
         // Apply zoom to the main group - it will receive events
@@ -683,18 +954,28 @@ class UniversalScales {
         this.xAxis.call(
             d3.axisBottom(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+                .tickFormat(d => this.formatNumber(d, 0))
         );
         this.xAxis.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
+        // Post-process mathematical notation labels to use proper SVG superscripts
+        if (this.notationMode === 'mathematical') {
+            this.processMathematicalLabels(this.xAxis);
+        }
+        
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+                .tickFormat(d => this.formatNumber(d, 0))
         );
         this.xAxisTop.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
+        
+        // Post-process mathematical notation labels to use proper SVG superscripts
+        if (this.notationMode === 'mathematical') {
+            this.processMathematicalLabels(this.xAxisTop);
+        }
         
         // Update grid
         this.updateGrid();
@@ -1000,7 +1281,7 @@ class UniversalScales {
         this.xAxis.call(
             d3.axisBottom(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+                .tickFormat(d => this.formatNumber(d, 0))
         );
         // Extend axis domain lines to full container width
         const svgWidth = +this.svg.attr('width') || 0;
@@ -1009,13 +1290,23 @@ class UniversalScales {
         this.xAxis.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
+        // Post-process mathematical notation labels to use proper SVG superscripts
+        if (this.notationMode === 'mathematical') {
+            this.processMathematicalLabels(this.xAxis);
+        }
+        
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+                .tickFormat(d => this.formatNumber(d, 0))
         );
         this.xAxisTop.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
+        
+        // Post-process mathematical notation labels to use proper SVG superscripts
+        if (this.notationMode === 'mathematical') {
+            this.processMathematicalLabels(this.xAxisTop);
+        }
         
         // Update grid
         this.updateGrid();
@@ -1118,15 +1409,41 @@ class UniversalScales {
 
         // On touch devices, add a generous invisible tap target around each item
         if (('ontouchstart' in window) || window.matchMedia('(hover: none)').matches) {
-            itemGroup.append('circle')
+            const tapTarget = itemGroup.append('circle')
                 .attr('class', 'tap-target')
                 .attr('r', CONFIG.TAP_TARGET_RADIUS) // larger hit area for fingers
                 .attr('fill', 'transparent')
                 .attr('pointer-events', 'all')
+                .on('pointerdown', (event) => {
+                    // Store initial position for drag detection
+                    event.target.setAttribute('data-touch-start-x', event.clientX);
+                    event.target.setAttribute('data-touch-start-y', event.clientY);
+                    event.target.setAttribute('data-was-drag', 'false');
+                })
+                .on('pointermove', (event) => {
+                    // Detect if this is a drag
+                    const startX = parseFloat(event.target.getAttribute('data-touch-start-x') || '0');
+                    const startY = parseFloat(event.target.getAttribute('data-touch-start-y') || '0');
+                    const moveDistance = Math.sqrt(
+                        Math.pow(event.clientX - startX, 2) + 
+                        Math.pow(event.clientY - startY, 2)
+                    );
+                    if (moveDistance > CONFIG.MAX_CLICK_DISTANCE * 2) {
+                        event.target.setAttribute('data-was-drag', 'true');
+                    }
+                })
                 .on('pointerup', (event, d) => {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    this.showTooltip(event, d);
+                    // Only show tooltip if it wasn't a drag
+                    const wasDrag = event.target.getAttribute('data-was-drag') === 'true';
+                    if (!wasDrag) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        this.showTooltip(event, d);
+                    }
+                    // Clean up
+                    event.target.removeAttribute('data-touch-start-x');
+                    event.target.removeAttribute('data-touch-start-y');
+                    event.target.removeAttribute('data-was-drag');
                 });
         }
         
@@ -1167,6 +1484,22 @@ class UniversalScales {
                 // Store initial position to detect drag
                 event.target.setAttribute('data-pointer-down-x', event.clientX);
                 event.target.setAttribute('data-pointer-down-y', event.clientY);
+                event.target.setAttribute('data-was-drag', 'false');
+            })
+            .on('pointermove', (event) => {
+                // Detect if this is a drag (on mobile)
+                const isMobile = ('ontouchstart' in window) || window.matchMedia('(hover: none)').matches;
+                if (isMobile) {
+                    const downX = parseFloat(event.target.getAttribute('data-pointer-down-x') || '0');
+                    const downY = parseFloat(event.target.getAttribute('data-pointer-down-y') || '0');
+                    const moveDistance = Math.sqrt(
+                        Math.pow(event.clientX - downX, 2) + 
+                        Math.pow(event.clientY - downY, 2)
+                    );
+                    if (moveDistance > CONFIG.MAX_CLICK_DISTANCE * 2) {
+                        event.target.setAttribute('data-was-drag', 'true');
+                    }
+                }
             })
             .on('pointerenter', (event, d) => {
                 if (window.matchMedia('(hover: hover)').matches) {
@@ -1198,12 +1531,15 @@ class UniversalScales {
             })
             .on('pointerup', (event, d) => {
                 const isTouchPrimary = window.matchMedia('(hover: none)').matches;
-                if (isTouchPrimary) {
+                const wasDrag = event.target.getAttribute('data-was-drag') === 'true';
+                
+                // On mobile, only show tooltip if it wasn't a drag
+                if (isTouchPrimary && !wasDrag) {
                     event.preventDefault();
                     event.stopPropagation();
                     this.showTooltip(event, d);
-                } else {
-                    // Only open source if pointerdown also occurred on this element
+                } else if (!isTouchPrimary) {
+                    // Desktop: Only open source if pointerdown also occurred on this element
                     // and the pointer didn't move too far (to distinguish from drag)
                     const wasPointerDown = event.target.getAttribute('data-pointer-down') === 'true';
                     const downX = parseFloat(event.target.getAttribute('data-pointer-down-x') || '0');
@@ -1220,6 +1556,7 @@ class UniversalScales {
                 event.target.removeAttribute('data-pointer-down');
                 event.target.removeAttribute('data-pointer-down-x');
                 event.target.removeAttribute('data-pointer-down-y');
+                event.target.removeAttribute('data-was-drag');
             });
         
         // Add the actual text with smart positioning
@@ -1320,7 +1657,7 @@ class UniversalScales {
         }
         
         // Format and display the exact value
-        const formattedValue = d3.format(CONFIG.VALUE_FORMAT)(convertedValue);
+        const formattedValue = this.formatNumber(convertedValue, 2);
         const unitSymbol = unit ? unit.symbol : '';
         this.tooltip.querySelector('.tooltip-value').textContent = `${formattedValue} ${unitSymbol}`;
         
