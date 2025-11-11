@@ -1,76 +1,5 @@
 // Universal Scales - Main JavaScript Application
-
-// Configuration Constants
-const CONFIG = {
-    // Plot dimensions and margins
-    MARGIN: { top: 40, right: 40, bottom: 60, left: 120 },
-    MIN_SVG_HEIGHT: 200,
-    
-    // Item positioning
-    FIXED_VERTICAL_SPACING: 15,
-    BOTTOM_PADDING: 20,
-    TOP_PADDING: 20,
-    
-    // Visual styling
-    POINT_RADIUS: 6,
-    POINT_RADIUS_HOVER: 8,
-    POINT_STROKE_WIDTH: 1.5,
-    POINT_STROKE_WIDTH_HOVER: 3,
-    POINT_FILL_COLOR: '#007bff',
-    POINT_STROKE_COLOR: '#000000',
-    
-    // Vertical lines
-    VERTICAL_LINE_STROKE_WIDTH: 1,
-    VERTICAL_LINE_OPACITY: 0.2,
-    VERTICAL_LINE_DASH_ARRAY: '3,3',
-    
-    // Text labels
-    LABEL_FONT_SIZE: '9px',
-    LABEL_OFFSET_X: -10,
-    LABEL_OFFSET_Y: -12,
-    LABEL_HEIGHT: 24,
-    LABEL_PADDING: 20,
-    LABEL_CIRCLE_PADDING: 10,
-    TEXT_WIDTH_ESTIMATE: 6, // pixels per character
-    
-    // Horizontal positioning
-    TEXT_BUFFER: 5,
-    
-    // Tooltip positioning
-    TOOLTIP_OFFSET_X: 10,
-    TOOLTIP_OFFSET_Y: 10,
-    TOOLTIP_MIN_TOP: 10,
-    
-    // Animation
-    HOVER_TRANSITION_DURATION: 100,
-    
-    // Grid
-    GRID_TICKS: 10,
-    AXIS_TICKS: 10,
-    
-    // Number formatting
-    VALUE_FORMAT: '.2e',
-    AXIS_FORMAT: '.0e',
-    
-    // Debug threshold
-    DEBUG_SMALL_VALUE_THRESHOLD: 1e-10,
-    
-    // Colors
-    COLORS: {
-        LIGHT: {
-            TEXT: '#212529',
-            AXIS: '#6c757d',
-            STROKE: '#000000',
-            LINE: '#007bff'
-        },
-        DARK: {
-            TEXT: '#ffffff',
-            AXIS: '#adb5bd',
-            STROKE: '#ffffff',
-            LINE: '#4dabf7'
-        }
-    }
-};
+// Constants are imported from constants.js
 
 class UniversalScales {
     constructor() {
@@ -86,6 +15,12 @@ class UniversalScales {
         this.svg = null;
         this.xScale = null;
         this.yScale = null;
+        this.originalXDomain = null; // Store original domain for zoom reset
+        this.zoomBehavior = null;
+        this.isUpdatingTransform = false; // Flag to prevent recursive zoom updates
+        this.lastTickSet = null; // Store last tick set for stability
+        this.lastTickDomain = null; // Store domain when ticks were last calculated
+        this.lastTickLogRange = null; // Store log range for zoom level tracking
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -136,6 +71,10 @@ class UniversalScales {
             this.currentUnit = e.target.value;
             this.updateUnitDescription();
             this.updateURL();
+            // Reset tick cache when unit changes
+            this.lastTickSet = null;
+            this.lastTickDomain = null;
+            this.lastTickLogRange = null;
             this.updatePlot();
         });
         
@@ -267,6 +206,14 @@ class UniversalScales {
             const yamlText = await response.text();
             this.dimensionData = jsyaml.load(yamlText);
             
+            // Reset zoom when dimension changes
+            this.resetZoom();
+            
+            // Reset tick cache when dimension changes
+            this.lastTickSet = null;
+            this.lastTickDomain = null;
+            this.lastTickLogRange = null;
+            
             // Update dimension description
             if (this.dimensionData.dimension_description) {
                 this.dimensionDescription.textContent = this.dimensionData.dimension_description;
@@ -318,7 +265,8 @@ class UniversalScales {
         
         this.svg = d3.select('#plot-svg')
             .attr('width', this.width + this.margin.left + this.margin.right)
-            .attr('height', this.height + this.margin.top + this.margin.bottom);
+            .attr('height', this.height + this.margin.top + this.margin.bottom)
+            .style('overflow', 'visible'); // Allow labels to extend beyond SVG bounds
         
         // Create main group
         this.mainGroup = this.svg.append('g')
@@ -334,18 +282,382 @@ class UniversalScales {
         // Add axes
         this.xAxis = this.mainGroup.append('g')
             .attr('class', 'axis')
-            .attr('transform', `translate(0,${this.height})`);
+            .attr('transform', `translate(0,${this.height})`)
+            .style('pointer-events', 'none'); // Don't block zoom events
         
         this.xAxisTop = this.mainGroup.append('g')
             .attr('class', 'axis')
-            .attr('transform', `translate(0,0)`);
+            .attr('transform', `translate(0,0)`)
+            .style('pointer-events', 'none'); // Don't block zoom events
         
         this.yAxis = this.mainGroup.append('g')
-            .attr('class', 'axis');
+            .attr('class', 'axis')
+            .style('pointer-events', 'none'); // Don't block zoom events
         
         // Add grid lines
         this.gridGroup = this.mainGroup.append('g')
-            .attr('class', 'grid');
+            .attr('class', 'grid')
+            .style('pointer-events', 'none'); // Don't block zoom events
+        
+        // Set up zoom behavior (horizontal only)
+        // Apply zoom to the main group itself - it will receive events in empty areas
+        // Items on top will still receive their own events
+        this.setupZoom();
+    }
+    
+    setupZoom() {
+        // Store actual item extent (without the 0.1 multiplier) for zoom limits
+        this.actualItemExtent = null;
+        
+        // Create a background rectangle for visual feedback and event capture
+        // This will be added to the main group but kept behind everything
+        this.zoomBackground = this.mainGroup.insert('rect', ':first-child')
+            .attr('class', 'zoom-background')
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('width', this.width)
+            .attr('height', this.height)
+            .attr('fill', 'transparent')
+            .attr('cursor', 'grab')
+            .style('pointer-events', 'all');
+        
+        // Create zoom behavior that only affects x-axis
+        this.zoomBehavior = d3.zoom()
+            .scaleExtent([CONFIG.ZOOM_SCALE_MIN, CONFIG.ZOOM_SCALE_MAX]) // Will be constrained further in handleZoom
+            .translateExtent([[0, -Infinity], [this.width, Infinity]]) // Allow panning horizontally
+            .filter((event) => {
+                // Allow wheel events (zooming) anywhere
+                if (event.type === 'wheel') return true;
+                // For drag events, only allow on background (not on items)
+                if (event.type === 'mousedown' || event.type === 'touchstart') {
+                    const target = event.target;
+                    // Check if clicking on an interactive element
+                    if (target.classList && (
+                        target.classList.contains('plot-item') || 
+                        target.classList.contains('label-hover-area') || 
+                        target.classList.contains('tap-target') ||
+                        target.classList.contains('item-label')
+                    )) {
+                        return false;
+                    }
+                    // Check parent elements
+                    let current = target;
+                    for (let i = 0; i < 5 && current; i++) {
+                        if (current.classList && (
+                            current.classList.contains('item-group') || 
+                            current.classList.contains('label-group')
+                        )) {
+                            return false;
+                        }
+                        current = current.parentNode;
+                    }
+                }
+                return true;
+            })
+            .on('start', () => {
+                // Change cursor when dragging starts
+                if (this.zoomBackground) {
+                    this.zoomBackground.attr('cursor', 'grabbing');
+                }
+            })
+            .on('end', () => {
+                // Change cursor back when dragging ends
+                if (this.zoomBackground) {
+                    this.zoomBackground.attr('cursor', 'grab');
+                }
+            })
+            .on('zoom', (event) => {
+                this.handleZoom(event);
+            });
+        
+        // Apply zoom to the main group - it will receive events
+        // Items on top will still receive their own pointer events
+        this.mainGroup.call(this.zoomBehavior);
+        
+        // Add double-click to reset zoom (only on background)
+        this.mainGroup.on('dblclick', (event) => {
+            // Only reset if not clicking on an item
+            const target = event.target;
+            let isInteractive = false;
+            
+            if (target.classList && (
+                target.classList.contains('plot-item') || 
+                target.classList.contains('label-hover-area') || 
+                target.classList.contains('tap-target')
+            )) {
+                isInteractive = true;
+            }
+            
+            if (!isInteractive) {
+                let current = target;
+                for (let i = 0; i < 5 && current; i++) {
+                    if (current.classList && (
+                        current.classList.contains('item-group') || 
+                        current.classList.contains('label-group')
+                    )) {
+                        isInteractive = true;
+                        break;
+                    }
+                    current = current.parentNode;
+                }
+            }
+            
+            if (!isInteractive) {
+                this.resetZoom();
+            }
+        });
+    }
+    
+    handleZoom(event) {
+        // Skip if we're in the middle of updating the transform to avoid recursion
+        if (this.isUpdatingTransform) {
+            return;
+        }
+        
+        // Get the transform from the zoom event
+        const transform = event.transform;
+        
+        // Apply transform to xScale domain only (horizontal zoom/pan)
+        // For log scales, we need to work in log space
+        if (this.originalXDomain && this.actualItemExtent) {
+            const [originalMin, originalMax] = this.originalXDomain;
+            const [actualMin, actualMax] = this.actualItemExtent;
+            
+            // Convert to log space for calculations
+            const logOriginalMin = Math.log10(originalMin);
+            const logOriginalMax = Math.log10(originalMax);
+            const logOriginalRange = logOriginalMax - logOriginalMin;
+            
+            const logActualMin = Math.log10(actualMin);
+            const logActualMax = Math.log10(actualMax);
+            
+            // For log scales: transform.x represents pixel translation
+            // We need to convert this to a log-space translation
+            // The current visible range in log space determines the translation
+            const currentVisibleLogRange = logOriginalRange / transform.k;
+            
+            // Calculate pan offset: transform.x is pixels, convert to log units
+            // Negative because dragging right should move the view left (show higher values)
+            const logPan = -(transform.x / this.width) * currentVisibleLogRange;
+            
+            // Calculate new log domain
+            let newLogMin = logOriginalMin + logPan;
+            let newLogMax = newLogMin + currentVisibleLogRange;
+            let constrained = false;
+            
+            // Constrain to actual item extent (can't zoom out beyond items)
+            // First, check if we're trying to zoom out too far
+            if (currentVisibleLogRange > (logActualMax - logActualMin)) {
+                // Zoomed out to max - show full item range
+                newLogMin = logActualMin;
+                newLogMax = logActualMax;
+                constrained = true;
+            } else {
+                // Constrain panning to keep items visible
+                if (newLogMin < logActualMin) {
+                    newLogMin = logActualMin;
+                    newLogMax = newLogMin + currentVisibleLogRange;
+                    constrained = true;
+                }
+                if (newLogMax > logActualMax) {
+                    newLogMax = logActualMax;
+                    newLogMin = newLogMax - currentVisibleLogRange;
+                    // Re-check min constraint
+                    if (newLogMin < logActualMin) {
+                        newLogMin = logActualMin;
+                        newLogMax = logActualMax;
+                        constrained = true;
+                    } else {
+                        constrained = true;
+                    }
+                }
+            }
+            
+            // Convert back to linear space
+            const newMin = Math.pow(10, newLogMin);
+            const newMax = Math.pow(10, newLogMax);
+            
+            // Update xScale domain
+            this.xScale.domain([newMin, newMax]);
+            
+            // If we constrained the domain, we need to update the zoom transform to match
+            // This prevents the transform from storing "extra" zoom that doesn't affect the display
+            if (constrained) {
+                // Calculate what the transform should be to match the constrained domain
+                const constrainedLogRange = newLogMax - newLogMin;
+                const constrainedK = logOriginalRange / constrainedLogRange;
+                
+                // Calculate the pan offset needed to match the constrained domain
+                const constrainedLogPan = newLogMin - logOriginalMin;
+                const constrainedX = -(constrainedLogPan / logOriginalRange) * this.width;
+                
+                // Create a new transform that matches the constrained domain
+                const constrainedTransform = d3.zoomIdentity
+                    .translate(constrainedX, 0)
+                    .scale(constrainedK);
+                
+                // Update the transform without triggering another zoom event
+                // Use a flag to prevent recursive calls
+                if (!this.isUpdatingTransform) {
+                    this.isUpdatingTransform = true;
+                    this.mainGroup.call(this.zoomBehavior.transform, constrainedTransform);
+                    this.isUpdatingTransform = false;
+                }
+            }
+            
+            // Update the plot
+            this.updatePlotAfterZoom();
+        }
+    }
+    
+    resetZoom() {
+        if (this.originalXDomain && this.zoomBehavior) {
+            // Reset xScale to original domain
+            this.xScale.domain(this.originalXDomain);
+            
+            // Reset zoom transform
+            this.mainGroup.transition()
+                .duration(CONFIG.RESET_ZOOM_TRANSITION_DURATION)
+                .call(this.zoomBehavior.transform, d3.zoomIdentity);
+            
+            // Update the plot
+            this.updatePlotAfterZoom();
+        }
+    }
+    
+    updatePlotAfterZoom() {
+        // Generate ticks that are only powers of 10 (1eX format) for even spacing
+        const tickValues = this.generatePowerOfTenTicks();
+
+        this.xAxis.call(
+            d3.axisBottom(this.xScale)
+                .tickValues(tickValues)
+                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+        );
+        
+        this.xAxisTop.call(
+            d3.axisTop(this.xScale)
+                .tickValues(tickValues)
+                .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
+        );
+        
+        // Update grid
+        this.updateGrid();
+        
+        // Update vertical lines and item positions
+        const allItems = this.getAllItems();
+        const positionedItems = this.positionItems(allItems);
+        this.calculateHorizontalOffsets(positionedItems);
+        
+        // Update item positions based on new scale
+        this.mainGroup.selectAll('.item-group')
+            .data(positionedItems)
+            .attr('transform', d => {
+                const x = this.xScale(d.convertedValue);
+                const y = this.height - d.yPosition;
+                return `translate(${x},${y})`;
+            });
+        
+        // Update vertical lines
+        this.mainGroup.selectAll('.vertical-line')
+            .data(positionedItems)
+            .attr('x1', d => this.xScale(d.convertedValue))
+            .attr('x2', d => this.xScale(d.convertedValue))
+            .attr('stroke-opacity', d => {
+                const xPos = this.xScale(d.convertedValue);
+                return xPos >= 0 ? CONFIG.VERTICAL_LINE_OPACITY : 0; // Hide if past left edge
+            });
+        
+        // Update label positions - labels should follow their points
+        // The label x position is relative to the item-group transform, so it automatically follows
+        // We just need to ensure it uses the correct offset
+        this.mainGroup.selectAll('.item-label')
+            .attr('x', CONFIG.LABEL_OFFSET_X);
+    }
+    
+    generatePowerOfTenTicks() {
+        // Get the current domain
+        const [min, max] = this.xScale.domain();
+        
+        // Convert to log space to find the power-of-10 range
+        const logMin = Math.log10(min);
+        const logMax = Math.log10(max);
+        const logRange = logMax - logMin;
+        
+        // Check if we should reuse the last tick set (hysteresis to prevent flickering)
+        if (this.lastTickSet && this.lastTickDomain && this.lastTickLogRange !== null) {
+            const [lastMin, lastMax] = this.lastTickDomain;
+            const lastLogMin = Math.log10(lastMin);
+            const lastLogMax = Math.log10(lastMax);
+            const lastLogRange = lastLogMax - lastLogMin;
+            
+            // Check if a new power of 10 has entered/exited the visible range
+            const currentMinPower = Math.floor(logMin);
+            const currentMaxPower = Math.ceil(logMax);
+            const lastMinPower = Math.floor(lastLogMin);
+            const lastMaxPower = Math.ceil(lastLogMax);
+            
+            const minPowerChanged = currentMinPower !== lastMinPower;
+            const maxPowerChanged = currentMaxPower !== lastMaxPower;
+            
+            // Check if zoom level has changed significantly
+            const zoomLevelChanged = Math.abs(logRange - lastLogRange) / Math.max(logRange, lastLogRange) > CONFIG.TICK_ZOOM_LEVEL_CHANGE_THRESHOLD;
+            
+            // Check if domain has shifted significantly
+            const domainShifted = Math.abs(logMin - lastLogMin) / logRange > CONFIG.TICK_DOMAIN_SHIFT_THRESHOLD || 
+                                 Math.abs(logMax - lastLogMax) / logRange > CONFIG.TICK_DOMAIN_SHIFT_THRESHOLD;
+            
+            // Only update ticks if:
+            // 1. A new power of 10 entered/exited the range, OR
+            // 2. Zoom level changed significantly, OR
+            // 3. Domain shifted significantly
+            if (!minPowerChanged && !maxPowerChanged && !zoomLevelChanged && !domainShifted) {
+                // Reuse last tick set, but filter to only show ticks in current domain
+                const filteredTicks = this.lastTickSet.filter(tick => tick >= min && tick <= max);
+                // Only reuse if we still have at least minimum ticks
+                if (filteredTicks.length >= CONFIG.TICK_MIN_COUNT) {
+                    return filteredTicks;
+                }
+            }
+        }
+        
+        // Calculate the range of powers of 10 we should consider
+        // Use a slightly expanded range to create a buffer for stability
+        const expandedLogMin = Math.floor(logMin) - CONFIG.TICK_EXPANDED_RANGE_BUFFER;
+        const expandedLogMax = Math.ceil(logMax) + CONFIG.TICK_EXPANDED_RANGE_BUFFER;
+        const minPower = Math.floor(expandedLogMin);
+        const maxPower = Math.ceil(expandedLogMax);
+        
+        // Generate all powers of 10 in the expanded range
+        const powerOfTenTicks = [];
+        for (let power = minPower; power <= maxPower; power++) {
+            const value = Math.pow(10, power);
+            powerOfTenTicks.push(value);
+        }
+        
+        // Filter to avoid too many ticks based on available width
+        const minLabelSpacing = window.matchMedia(`(max-width: ${CONFIG.MOBILE_BREAKPOINT}px)`).matches 
+            ? CONFIG.LABEL_SPACING_MOBILE 
+            : CONFIG.LABEL_SPACING_DESKTOP;
+        const maxByWidth = Math.max(CONFIG.TICK_MIN_COUNT, Math.floor(this.width / minLabelSpacing));
+        const targetCount = Math.max(CONFIG.TICK_MIN_COUNT, Math.min(CONFIG.AXIS_TICKS, maxByWidth));
+        
+        // If we have too many ticks, intelligently skip some
+        let filteredTicks = powerOfTenTicks;
+        if (powerOfTenTicks.length > targetCount) {
+            // Prefer showing every other tick (1e6, 1e8, 1e10) over every third (1e6, 1e9, 1e12)
+            // Calculate step to get close to target count
+            const step = Math.ceil(powerOfTenTicks.length / targetCount);
+            filteredTicks = powerOfTenTicks.filter((_, i) => i % step === 0);
+        }
+        
+        // Store the tick set and domain for next time
+        this.lastTickSet = filteredTicks;
+        this.lastTickDomain = [min, max];
+        this.lastTickLogRange = logRange;
+        
+        // Return only ticks that are actually visible in the current domain
+        return filteredTicks.filter(tick => tick >= min && tick <= max);
     }
     
     updateDimensions() {
@@ -376,9 +688,36 @@ class UniversalScales {
         // Update scales
         const values = allItems.map(item => item.convertedValue);
         const extent = d3.extent(values);
+        
+        // Store actual item extent (for zoom limits)
+        this.actualItemExtent = [...extent];
+        
         // Extend the lower bound to provide more space for text labels
-        const extendedExtent = [extent[0] * 0.1, extent[1]];
-        this.xScale.domain(extendedExtent);
+        const extendedExtent = [extent[0] * CONFIG.EXTENT_LOWER_MULTIPLIER, extent[1]];
+        
+        // Store original domain for zoom reset
+        // Reset original domain when dimension/unit changes (check if domain changed significantly)
+        const currentDomain = this.xScale.domain();
+        if (!this.originalXDomain || 
+            Math.abs(currentDomain[1] - extendedExtent[1]) / extendedExtent[1] > CONFIG.DOMAIN_CHANGE_THRESHOLD) {
+            // Domain changed significantly, reset zoom
+            this.originalXDomain = [...extendedExtent];
+            this.xScale.domain(extendedExtent);
+            // Reset zoom transform to identity
+            if (this.zoomBehavior) {
+                this.mainGroup.call(this.zoomBehavior.transform, d3.zoomIdentity);
+            }
+        } else {
+            // Check if currently zoomed
+            const isZoomed = Math.abs(currentDomain[0] - this.originalXDomain[0]) / this.originalXDomain[0] > CONFIG.ZOOM_DETECTION_THRESHOLD ||
+                           Math.abs(currentDomain[1] - this.originalXDomain[1]) / this.originalXDomain[1] > CONFIG.ZOOM_DETECTION_THRESHOLD;
+            
+            if (!isZoomed) {
+                // Not zoomed, use original domain
+                this.xScale.domain(extendedExtent);
+            }
+            // If zoomed, keep current domain
+        }
         
         // Position items with collision avoidance
         const positionedItems = this.positionItems(allItems);
@@ -408,6 +747,11 @@ class UniversalScales {
         // Set yScale domain to match the itemsHeight so x-axis is at bottom
         this.yScale.domain([0, itemsHeight]);
         
+        // Update zoom background rectangle height
+        if (this.zoomBackground) {
+            this.zoomBackground.attr('height', this.height);
+        }
+        
         // Update axes
         const currentUnit = this.dimensionData.units.find(u => u.name === this.currentUnit);
         
@@ -417,13 +761,8 @@ class UniversalScales {
         // Position x-axis at the top
         this.xAxisTop.attr('transform', `translate(0,${this.yScale(itemsHeight)})`);
         
-        // Build controlled tick set for log scale; adapt to width to avoid overlap
-        const candidateTicks = this.xScale.ticks(50);
-        const minLabelSpacing = window.matchMedia('(max-width: 480px)').matches ? 56 : 72; // px between labels
-        const maxByWidth = Math.max(2, Math.floor(this.width / minLabelSpacing));
-        const targetCount = Math.max(2, Math.min(CONFIG.AXIS_TICKS, maxByWidth));
-        const step = Math.max(1, Math.floor(candidateTicks.length / targetCount));
-        const tickValues = candidateTicks.filter((_, i) => i % step === 0);
+        // Generate ticks that are only powers of 10 (1eX format) for even spacing
+        const tickValues = this.generatePowerOfTenTicks();
 
         this.xAxis.call(
             d3.axisBottom(this.xScale)
@@ -458,7 +797,8 @@ class UniversalScales {
             .attr('x1', d => this.xScale(d))
             .attr('x2', d => this.xScale(d))
             .attr('y1', this.yScale(this.yScale.domain()[1])) // Top of plot
-            .attr('y2', this.yScale(0)); // Bottom of plot (x-axis)
+            .attr('y2', this.yScale(0)) // Bottom of plot (x-axis)
+            .style('pointer-events', 'none'); // Don't block zoom events
         
         // Horizontal grid lines (simplified)
         const yTicks = this.yScale.ticks(CONFIG.GRID_TICKS);
@@ -469,7 +809,8 @@ class UniversalScales {
             .attr('x1', 0)
             .attr('x2', this.width)
             .attr('y1', d => this.yScale(d))
-            .attr('y2', d => this.yScale(d));
+            .attr('y2', d => this.yScale(d))
+            .style('pointer-events', 'none'); // Don't block zoom events
     }
     
     
@@ -497,13 +838,16 @@ class UniversalScales {
             .data(positionedItems)
             .enter().append('line')
             .attr('class', 'vertical-line')
-            .attr('x1', d => this.xScale(d.convertedValue)) // Use true value position, not offset
-            .attr('x2', d => this.xScale(d.convertedValue)) // Use true value position, not offset
+            .attr('x1', d => this.xScale(d.convertedValue))
+            .attr('x2', d => this.xScale(d.convertedValue))
             .attr('y1', 0) // From top axis
             .attr('y2', this.height) // To bottom axis
             .attr('stroke', CONFIG.POINT_FILL_COLOR)
             .attr('stroke-width', CONFIG.VERTICAL_LINE_STROKE_WIDTH)
-            .attr('stroke-opacity', CONFIG.VERTICAL_LINE_OPACITY)
+            .attr('stroke-opacity', d => {
+                const xPos = this.xScale(d.convertedValue);
+                return xPos >= 0 ? CONFIG.VERTICAL_LINE_OPACITY : 0; // Hide if past left edge
+            })
             .attr('stroke-dasharray', CONFIG.VERTICAL_LINE_DASH_ARRAY)
             .attr('pointer-events', 'none'); // Disable pointer events on line
         
@@ -530,7 +874,7 @@ class UniversalScales {
         if (('ontouchstart' in window) || window.matchMedia('(hover: none)').matches) {
             itemGroup.append('circle')
                 .attr('class', 'tap-target')
-                .attr('r', 24) // larger hit area for fingers
+                .attr('r', CONFIG.TAP_TARGET_RADIUS) // larger hit area for fingers
                 .attr('fill', 'transparent')
                 .attr('pointer-events', 'all')
                 .on('pointerup', (event, d) => {
@@ -554,7 +898,9 @@ class UniversalScales {
             })
             .attr('y', () => {
                 // Slightly enlarge vertical hitbox on small screens
-                return window.matchMedia('(max-width: 480px)').matches ? (CONFIG.LABEL_OFFSET_Y - 6) : CONFIG.LABEL_OFFSET_Y;
+                return window.matchMedia(`(max-width: ${CONFIG.MOBILE_BREAKPOINT}px)`).matches 
+                    ? (CONFIG.LABEL_OFFSET_Y + CONFIG.LABEL_OFFSET_Y_MOBILE_ADJUSTMENT) 
+                    : CONFIG.LABEL_OFFSET_Y;
             }) // Start above the circle
             .attr('width', d => {
                 const estimatedTextWidth = d.name.length * CONFIG.TEXT_WIDTH_ESTIMATE;
@@ -562,7 +908,9 @@ class UniversalScales {
                 return estimatedTextWidth + CONFIG.LABEL_PADDING + (CONFIG.POINT_RADIUS * 2) + CONFIG.LABEL_CIRCLE_PADDING;
             })
             .attr('height', () => {
-                return window.matchMedia('(max-width: 480px)').matches ? Math.max(32, CONFIG.LABEL_HEIGHT) : CONFIG.LABEL_HEIGHT;
+                return window.matchMedia(`(max-width: ${CONFIG.MOBILE_BREAKPOINT}px)`).matches 
+                    ? Math.max(CONFIG.LABEL_HEIGHT_MOBILE_MIN, CONFIG.LABEL_HEIGHT) 
+                    : CONFIG.LABEL_HEIGHT;
             }) // Height to encompass circle and text
             .attr('fill', 'transparent')
             .attr('cursor', 'pointer')
@@ -721,8 +1069,8 @@ class UniversalScales {
             const y = event.clientY - rect.top;
             
             // Dynamically cap tooltip width to available plot width
-            const maxAllowed = Math.max(160, rect.width - 2 * CONFIG.TOOLTIP_OFFSET_X);
-            this.tooltip.style.maxWidth = `${Math.min(400, maxAllowed)}px`;
+            const maxAllowed = Math.max(CONFIG.TOOLTIP_MIN_WIDTH, rect.width - 2 * CONFIG.TOOLTIP_OFFSET_X);
+            this.tooltip.style.maxWidth = `${Math.min(CONFIG.TOOLTIP_MAX_WIDTH, maxAllowed)}px`;
             
             // Temporarily make tooltip visible to measure its dimensions
             this.tooltip.style.visibility = 'hidden';
@@ -848,6 +1196,18 @@ class UniversalScales {
             .attr('width', this.width + this.margin.left + this.margin.right);
         
         this.xScale.range([0, this.width]);
+        
+        // Update zoom background rectangle size
+        if (this.zoomBackground) {
+            this.zoomBackground
+                .attr('width', this.width)
+                .attr('height', this.height);
+        }
+        
+        // Update zoom behavior translate extent for new width
+        if (this.zoomBehavior) {
+            this.zoomBehavior.translateExtent([[0, -Infinity], [this.width, Infinity]]);
+        }
         
         this.updatePlot();
     }

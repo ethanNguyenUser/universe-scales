@@ -179,8 +179,13 @@ select:focus {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--bg-secondary);
-    overflow: hidden;
+    overflow: hidden; /* Allow labels to extend beyond container when points go off-screen */
     position: relative;
+}
+
+/* Allow SVG content to extend beyond bounds for labels */
+.plot-container svg {
+    overflow: visible;
 }
 
 #plot-svg {
