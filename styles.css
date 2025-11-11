@@ -48,8 +48,7 @@ body {
 .header {
     text-align: center;
     padding: 2rem 0;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem; /* Reduced from 2rem to decrease space after header */
 }
 
 .header h1 {
@@ -113,6 +112,7 @@ select:focus {
     height: 40px;
     font-size: 0.85rem;
     font-weight: 500;
+    color: var(--text-primary); /* Use theme-aware text color */
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
@@ -171,7 +171,6 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
 }
 
 .music-toggle:hover {
@@ -190,8 +189,14 @@ select:focus {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* Reduced from 0.5rem to decrease space before graph */
     font-style: italic;
+    min-height: 0; /* Allow element to collapse when empty */
+}
+
+.dimension-description:empty {
+    display: none; /* Hide completely when empty to remove spacing */
+    margin: 0;
 }
 
 .unit-description {
@@ -199,13 +204,18 @@ select:focus {
     color: var(--text-secondary);
     font-size: 0.9rem;
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduced from 1rem to decrease space before footer */
+    min-height: 0; /* Allow element to collapse when empty */
+}
+
+.unit-description:empty {
+    display: none; /* Hide completely when empty to remove spacing */
+    margin: 0;
 }
 
 /* Main Content */
 .main {
     position: relative;
-    min-height: 600px;
 }
 
 .plot-container {
@@ -437,7 +447,7 @@ select:focus {
 .footer {
     text-align: center;
     padding: 2rem 0;
-    margin-top: 3rem;
+    margin-top: 1.5rem; /* Reduced from 3rem to decrease space above footer */
     border-top: 1px solid var(--border-color);
     color: var(--text-secondary);
 }

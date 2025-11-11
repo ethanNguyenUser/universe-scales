@@ -33,6 +33,7 @@ class UniversalScales {
         this.itemsClipRect = null;
         this.touchStartOnItem = null; // Track if touch started on item/label for mobile drag detection
         this.touchStartPosition = null; // Track initial touch position for drag detection
+        this.enableAudioHandler = null; // Store reference to enableAudio handler for cleanup
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -164,6 +165,14 @@ class UniversalScales {
     }
     
     toggleMusic() {
+        // Remove enableAudio listeners if they exist (user is explicitly toggling)
+        if (this.enableAudioHandler) {
+            document.removeEventListener('click', this.enableAudioHandler);
+            document.removeEventListener('keydown', this.enableAudioHandler);
+            document.removeEventListener('touchstart', this.enableAudioHandler);
+            this.enableAudioHandler = null;
+        }
+        
         if (this.backgroundMusic.paused) {
             this.backgroundMusic.play().catch(e => {
                 console.log('Audio play failed:', e);
@@ -171,10 +180,14 @@ class UniversalScales {
             });
             this.musicToggle.classList.add('playing');
             this.musicToggle.textContent = '🔊';
+            // Save music state to localStorage
+            localStorage.setItem('musicEnabled', 'true');
         } else {
             this.backgroundMusic.pause();
             this.musicToggle.classList.remove('playing');
             this.musicToggle.textContent = '🎵';
+            // Save music state to localStorage
+            localStorage.setItem('musicEnabled', 'false');
         }
     }
     
@@ -326,25 +339,43 @@ class UniversalScales {
     }
     
     initMusic() {
-        // Set initial button state to not playing (since autoplay is blocked)
-        this.musicToggle.classList.remove('playing');
-        this.musicToggle.textContent = '🎵';
+        // Load saved music state from localStorage
+        // Default to true (music on) if no saved state exists
+        const savedMusicState = localStorage.getItem('musicEnabled');
+        const musicWasEnabled = savedMusicState === null || savedMusicState === 'true';
         
-        // Try to play immediately - this will likely fail due to browser restrictions
-        this.backgroundMusic.play().catch(e => {
-            console.log('Autoplay blocked by browser:', e);
-            // This is expected - we'll wait for user interaction
-        });
-        
-        // Add click listener to any element to enable audio
-        this.enableAudioOnInteraction();
+        if (musicWasEnabled) {
+            // Music should be on - set button state to "on"
+            this.musicToggle.classList.add('playing');
+            this.musicToggle.textContent = '🔊';
+            
+            // Try to play immediately - this will likely fail due to browser restrictions
+            this.backgroundMusic.play().catch(e => {
+                console.log('Autoplay blocked by browser:', e);
+                // This is expected - we'll wait for user interaction
+            });
+            
+            // Add click listener to any element to enable audio on first interaction
+            this.enableAudioOnInteraction(true);
+        } else {
+            // Music was explicitly turned off - set button state to "off"
+            this.musicToggle.classList.remove('playing');
+            this.musicToggle.textContent = '🎵';
+            // Don't try to autoplay
+        }
     }
     
-    enableAudioOnInteraction() {
-        const enableAudio = () => {
-            // Only try to play if not already playing
-            if (this.backgroundMusic.paused) {
+    enableAudioOnInteraction(shouldPlay = false) {
+        const enableAudio = (event) => {
+            // Don't handle clicks on the music toggle button - let toggleMusic handle it
+            if (event.target === this.musicToggle || this.musicToggle.contains(event.target)) {
+                return;
+            }
+            
+            // Only try to play if music should be enabled and is not already playing
+            if (shouldPlay && this.backgroundMusic.paused) {
                 this.backgroundMusic.play().then(() => {
+                    // Button state should already be correct, but ensure it is
                     this.musicToggle.classList.add('playing');
                     this.musicToggle.textContent = '🔊';
                 }).catch(e => {
@@ -355,7 +386,11 @@ class UniversalScales {
             document.removeEventListener('click', enableAudio);
             document.removeEventListener('keydown', enableAudio);
             document.removeEventListener('touchstart', enableAudio);
+            this.enableAudioHandler = null;
         };
+        
+        // Store reference for cleanup
+        this.enableAudioHandler = enableAudio;
         
         // Listen for any user interaction
         document.addEventListener('click', enableAudio);
@@ -406,8 +441,10 @@ class UniversalScales {
             // Update dimension description
             if (this.dimensionData.dimension_description) {
                 this.dimensionDescription.textContent = this.dimensionData.dimension_description;
+                this.dimensionDescription.style.display = '';
             } else {
                 this.dimensionDescription.textContent = '';
+                this.dimensionDescription.style.display = 'none'; // Hide when empty
             }
             
             // Update unit selector
@@ -1903,13 +1940,19 @@ class UniversalScales {
     }
     
     updateUnitDescription() {
-        if (!this.currentUnit || !this.dimensionData) return;
+        if (!this.currentUnit || !this.dimensionData) {
+            this.unitDescription.textContent = '';
+            this.unitDescription.style.display = 'none'; // Hide when empty
+            return;
+        }
         
         const unit = this.dimensionData.units.find(u => u.name === this.currentUnit);
         if (unit && unit.description) {
             this.unitDescription.textContent = unit.description;
+            this.unitDescription.style.display = '';
         } else {
             this.unitDescription.textContent = '';
+            this.unitDescription.style.display = 'none'; // Hide when empty
         }
     }
     
