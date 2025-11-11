@@ -623,6 +623,35 @@ class UniversalScales {
         }
     }
     
+    // Calculate zoom transform from a domain (used after resize to sync transform with domain)
+    calculateTransformFromDomain(domain) {
+        if (!this.originalXDomain || !domain) {
+            return d3.zoomIdentity;
+        }
+        
+        const [originalMin, originalMax] = this.originalXDomain;
+        const [currentMin, currentMax] = domain;
+        
+        // Convert to log space
+        const logOriginalMin = Math.log10(originalMin);
+        const logOriginalMax = Math.log10(originalMax);
+        const logOriginalRange = logOriginalMax - logOriginalMin;
+        
+        const logCurrentMin = Math.log10(currentMin);
+        const logCurrentMax = Math.log10(currentMax);
+        const logCurrentRange = logCurrentMax - logCurrentMin;
+        
+        // Calculate scale: how much we've zoomed
+        const k = logOriginalRange / logCurrentRange;
+        
+        // Calculate translation: how much we've panned
+        // transform.x represents pixel offset, convert from log space
+        const logPan = logCurrentMin - logOriginalMin;
+        const x = -(logPan / logCurrentRange) * this.width;
+        
+        return d3.zoomIdentity.translate(x, 0).scale(k);
+    }
+    
     resetZoom() {
         if (this.originalXDomain && this.zoomBehavior) {
             // Reset xScale to original domain
@@ -1462,11 +1491,23 @@ class UniversalScales {
         
         // SVG width is now updated in updateDimensions() to match container exactly
         
+        // Update xScale range with new width (domain stays the same - preserves data view)
         this.xScale.range([0, this.width]);
         
         // Update zoom behavior translate extent for new width
         if (this.zoomBehavior) {
             this.zoomBehavior.translateExtent([[0, -Infinity], [this.width, Infinity]]);
+        }
+        
+        // Recalculate transform to match current domain with new width
+        // This prevents teleportation when panning after resize
+        if (wasZoomed && this.zoomBehavior) {
+            const newTransform = this.calculateTransformFromDomain(currentDomain);
+            if (!this.isUpdatingTransform) {
+                this.isUpdatingTransform = true;
+                this.mainGroup.call(this.zoomBehavior.transform, newTransform);
+                this.isUpdatingTransform = false;
+            }
         }
         
         // Only update plot if not zoomed, or update while preserving zoom state
