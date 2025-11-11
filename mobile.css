@@ -91,11 +91,11 @@
         font-size: 11px;
     }
 
-    /* Let SVG grow; do not clip content at this breakpoint */
+    /* Let SVG grow; clip content to prevent axis labels from extending beyond container */
     .plot-container {
         height: auto;
         min-height: 520px;
-        overflow: visible;
+        overflow: hidden; /* Changed from visible to hidden to clip axis labels */
     }
 
     /* Optional: keep controls accessible */
@@ -162,8 +162,8 @@
 
     .plot-container {
         height: auto; /* allow SVG to dictate height */
-        min-height: 360px;
-        overflow: visible;
+        min-height: 10px;
+        overflow: hidden; /* Changed from visible to hidden to clip axis labels */
     }
 
     .unit-selector-container {

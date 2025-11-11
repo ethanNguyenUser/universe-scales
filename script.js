@@ -527,15 +527,17 @@ class UniversalScales {
         this.yScale = d3.scaleLinear()
             .range([this.height, 0]);
         
-        // Add axes (no clip path - let labels render freely, container will handle overflow)
+        // Add axes with clip path to prevent labels from extending beyond container
         this.xAxis = this.mainGroup.append('g')
             .attr('class', 'axis')
             .attr('transform', `translate(0,${this.height})`)
+            .attr('clip-path', `url(#${this.axisClipId})`)
             .style('pointer-events', 'none'); // Don't block zoom events
         
         this.xAxisTop = this.mainGroup.append('g')
             .attr('class', 'axis')
             .attr('transform', `translate(0,0)`)
+            .attr('clip-path', `url(#${this.axisClipId})`)
             .style('pointer-events', 'none'); // Don't block zoom events
         
         // Add grid lines (no clip path needed - they're within plot area)
