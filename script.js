@@ -28,6 +28,8 @@ class UniversalScales {
         this.dragStartTransform = null; // Store transform at drag start to restore if vertical
         this.axisClipId = `axis-clip-${Math.random().toString(36).slice(2)}`;
         this.axisClipRect = null;
+        this.itemsClipId = `items-clip-${Math.random().toString(36).slice(2)}`;
+        this.itemsClipRect = null;
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -274,21 +276,35 @@ class UniversalScales {
     initPlot() {
         this.updateDimensions();
         
+        // Get container width directly to ensure SVG matches exactly
+        const containerRect = this.plotContainer.getBoundingClientRect();
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+        
         this.svg = d3.select('#plot-svg')
-            .attr('width', this.width + this.margin.left + this.margin.right)
-            .attr('height', this.height + this.margin.top + this.margin.bottom)
+            .attr('width', containerWidth)
+            .attr('height', containerHeight)
             .style('overflow', 'visible'); // Allow labels to extend beyond SVG bounds
         
-        // Create defs and clip path for axes
+        // Create defs and clip paths
         this.defs = this.svg.append('defs');
+        
+        // Clip path for axes and grid
         this.axisClipRect = this.defs.append('clipPath')
             .attr('id', this.axisClipId)
             .append('rect');
         this.updateAxisClip();
         
+        // Clip path for items to prevent overflow
+        this.itemsClipRect = this.defs.append('clipPath')
+            .attr('id', this.itemsClipId)
+            .append('rect');
+        this.updateItemsClip();
+        
         // Create main group
         this.mainGroup = this.svg.append('g')
-            .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
+            .attr('transform', `translate(${this.margin.left},${this.margin.top})`)
+            .attr('clip-path', `url(#${this.itemsClipId})`);
         
         // Create scales
         this.xScale = d3.scaleLog()
@@ -297,23 +313,21 @@ class UniversalScales {
         this.yScale = d3.scaleLinear()
             .range([this.height, 0]);
         
-        // Add axes
+        // Add axes (no clip path - let labels render freely, container will handle overflow)
         this.xAxis = this.mainGroup.append('g')
             .attr('class', 'axis')
             .attr('transform', `translate(0,${this.height})`)
-            .style('pointer-events', 'none') // Don't block zoom events
-            .attr('clip-path', `url(#${this.axisClipId})`);
+            .style('pointer-events', 'none'); // Don't block zoom events
         
         this.xAxisTop = this.mainGroup.append('g')
             .attr('class', 'axis')
             .attr('transform', `translate(0,0)`)
-            .style('pointer-events', 'none') // Don't block zoom events
-            .attr('clip-path', `url(#${this.axisClipId})`);
-        // Add grid lines
+            .style('pointer-events', 'none'); // Don't block zoom events
+        
+        // Add grid lines (no clip path needed - they're within plot area)
         this.gridGroup = this.mainGroup.append('g')
             .attr('class', 'grid')
-            .style('pointer-events', 'none') // Don't block zoom events
-            .attr('clip-path', `url(#${this.axisClipId})`);
+            .style('pointer-events', 'none'); // Don't block zoom events
         
         // Set up zoom behavior (horizontal only)
         // Apply zoom to the main group itself - it will receive events in empty areas
@@ -322,12 +336,38 @@ class UniversalScales {
     }
 
     updateAxisClip() {
-        if (!this.axisClipRect) return;
-        this.axisClipRect
-            .attr('x', -this.margin.left)
-            .attr('y', -this.margin.top)
-            .attr('width', this.width + this.margin.left + this.margin.right)
-            .attr('height', this.height + this.margin.top + this.margin.bottom);
+        if (!this.axisClipRect || !this.svg) return;
+        // Use SVG dimensions to ensure clip covers full SVG (which matches container)
+        // Clip paths are relative to the element they're applied to, so coordinates
+        // need to account for the mainGroup translation
+        const svgWidth = +this.svg.attr('width') || 0;
+        const svgHeight = +this.svg.attr('height') || 0;
+        
+        // Only update if we have valid dimensions
+        if (svgWidth > 0 && svgHeight > 0) {
+            this.axisClipRect
+                .attr('x', -this.margin.left)
+                .attr('y', -this.margin.top)
+                .attr('width', svgWidth)
+                .attr('height', svgHeight);
+        }
+    }
+    
+    updateItemsClip() {
+        if (!this.itemsClipRect || !this.svg) return;
+        // Clip items to the full container (including margins) so plot edge matches container
+        const svgWidth = +this.svg.attr('width') || 0;
+        const svgHeight = +this.svg.attr('height') || 0;
+        
+        // Clip path coordinates are relative to mainGroup (which is translated by margins)
+        // So we need to account for that translation
+        if (svgWidth > 0 && svgHeight > 0) {
+            this.itemsClipRect
+                .attr('x', -this.margin.left)
+                .attr('y', -this.margin.top)
+                .attr('width', svgWidth)
+                .attr('height', svgHeight);
+        }
     }
     
     setupZoom() {
@@ -337,11 +377,12 @@ class UniversalScales {
         // Create a background rectangle for visual feedback and event capture
         // This covers the entire container (including margins) for seamless panning
         // Positioned relative to mainGroup (which is translated by margins)
+        const svgWidth = +this.svg.attr('width') || 0;
         this.zoomBackground = this.mainGroup.insert('rect', ':first-child')
             .attr('class', 'zoom-background')
             .attr('x', -this.margin.left)
             .attr('y', -this.margin.top)
-            .attr('width', this.width + this.margin.left + this.margin.right)
+            .attr('width', svgWidth)
             .attr('height', this.height + this.margin.top + this.margin.bottom)
             .attr('fill', 'transparent')
             .attr('cursor', 'grab')
@@ -598,11 +639,17 @@ class UniversalScales {
     }
     
     updatePlotAfterZoom() {
-        // Ensure axis clip path stays aligned with current dimensions
+        // Ensure clip paths stay aligned with current dimensions
         this.updateAxisClip();
+        this.updateItemsClip();
         
         // Generate ticks that are only powers of 10 (1eX format) for even spacing
         const tickValues = this.generatePowerOfTenTicks();
+        
+        // Get SVG dimensions for axis lines (SVG matches container)
+        const svgWidth = +this.svg.attr('width') || 0;
+        const axisLeft = -this.margin.left;
+        const axisRight = svgWidth - this.margin.left;
 
         this.xAxis.call(
             d3.axisBottom(this.xScale)
@@ -610,7 +657,7 @@ class UniversalScales {
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
         this.xAxis.select('.domain')
-            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
+            .attr('d', `M${axisLeft},0H${axisRight}`);
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
@@ -618,7 +665,7 @@ class UniversalScales {
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
         this.xAxisTop.select('.domain')
-            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
+            .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Update grid
         this.updateGrid();
@@ -665,6 +712,26 @@ class UniversalScales {
         const logMax = Math.log10(max);
         const logRange = logMax - logMin;
         
+        // Calculate container bounds (including margins) early so both reuse and main paths can use them
+        // Return ticks that would be visible in the container (including margins)
+        // For a log scale: x = (log(domain) - log(min)) / (log(max) - log(min)) * width
+        // So: log(domain) = log(min) + (x / width) * logRange
+        // The container extends from -margin.left to width + margin.right in mainGroup coordinates
+        // xScale maps [min, max] to [0, width], so we extrapolate for margins
+        let containerMinDomain = min;
+        let containerMaxDomain = max;
+        
+        if (this.width > 0 && logRange > 0) {
+            // Calculate what domain values map to the container edges
+            // Left edge: x = -margin.left
+            const leftEdgeLog = logMin + (-this.margin.left / this.width) * logRange;
+            containerMinDomain = Math.pow(10, leftEdgeLog);
+            
+            // Right edge: x = width + margin.right
+            const rightEdgeLog = logMax + (this.margin.right / this.width) * logRange;
+            containerMaxDomain = Math.pow(10, rightEdgeLog);
+        }
+        
         // Check if we should reuse the last tick set (for seamless panning)
         // If zoom level hasn't changed, we're just panning - reuse the same tick set
         if (this.lastTickSet && this.lastTickLogRange !== null) {
@@ -672,12 +739,13 @@ class UniversalScales {
             const relativeChange = Math.abs(logRange - this.lastTickLogRange) / Math.max(logRange, this.lastTickLogRange);
             const zoomLevelChanged = relativeChange > CONFIG.TICK_ZOOM_LEVEL_CHANGE_THRESHOLD;
             
-            // If zoom level hasn't changed, we're panning - reuse the tick set and just filter to visible domain
+            // If zoom level hasn't changed, we're panning - reuse the tick set and filter to container bounds
             if (!zoomLevelChanged) {
-                const ticksInDomain = this.lastTickSet.filter(tick => tick >= min && tick <= max);
-                if (ticksInDomain.length >= CONFIG.TICK_MIN_COUNT) {
-                    const firstTick = ticksInDomain[0];
-                    const lastTick = ticksInDomain[ticksInDomain.length - 1];
+                // Filter to container bounds (including margins) not just visible domain
+                const ticksInContainer = this.lastTickSet.filter(tick => tick >= containerMinDomain && tick <= containerMaxDomain);
+                if (ticksInContainer.length >= CONFIG.TICK_MIN_COUNT) {
+                    const firstTick = ticksInContainer[0];
+                    const lastTick = ticksInContainer[ticksInContainer.length - 1];
                     const firstIndex = this.lastTickSet.indexOf(firstTick);
                     const lastIndex = this.lastTickSet.indexOf(lastTick);
                     const bufferStart = Math.max(0, firstIndex - 1);
@@ -763,27 +831,34 @@ class UniversalScales {
         this.lastTickDomain = [min, max];
         this.lastTickLogRange = logRange;
         
-        // Return ticks for the visible domain plus a buffer on each side
-        let startIndex = filteredTicks.findIndex(tick => tick >= min);
-        if (startIndex === -1) {
-            startIndex = 0;
+        // Filter ticks that fall within the container domain range (container bounds already calculated above)
+        const visibleTicks = filteredTicks.filter(tick => {
+            return tick >= containerMinDomain && tick <= containerMaxDomain;
+        });
+        
+        // If we have valid ticks, return them; otherwise return a safe subset
+        if (visibleTicks.length > 0) {
+            return visibleTicks;
         }
-        let endIndex = filteredTicks.length - 1;
-        for (let i = filteredTicks.length - 1; i >= 0; i--) {
-            if (filteredTicks[i] <= max) {
-                endIndex = i;
-                break;
-            }
-        }
-        const bufferedStart = Math.max(0, startIndex - 1);
-        const bufferedEnd = Math.min(filteredTicks.length - 1, endIndex + 1);
-        return filteredTicks.slice(bufferedStart, bufferedEnd + 1);
+        
+        // Fallback: return ticks in the visible domain if no ticks are in container bounds
+        // This can happen at extreme zoom levels
+        return filteredTicks.filter(tick => tick >= min && tick <= max);
     }
     
     updateDimensions() {
         const containerRect = this.plotContainer.getBoundingClientRect();
-        this.width = containerRect.width - this.margin.left - this.margin.right;
-        this.height = containerRect.height - this.margin.top - this.margin.bottom;
+        // Calculate plot area dimensions (excluding margins)
+        // Ensure width and height are never negative
+        this.width = Math.max(0, containerRect.width - this.margin.left - this.margin.right);
+        this.height = Math.max(0, containerRect.height - this.margin.top - this.margin.bottom);
+        
+        // Update SVG dimensions to match container exactly
+        if (this.svg) {
+            this.svg
+                .attr('width', containerRect.width)
+                .attr('height', containerRect.height);
+        }
     }
     
     updatePlot() {
@@ -855,7 +930,9 @@ class UniversalScales {
         const requiredSvgHeight = itemsHeight + this.margin.top + this.margin.bottom;
         const svgHeight = Math.max(CONFIG.MIN_SVG_HEIGHT, requiredSvgHeight);
         
-        // Update SVG height
+        // Update SVG height (width is handled by updateDimensions)
+        // Ensure updateDimensions is called to sync SVG width with container
+        this.updateDimensions();
         this.svg.attr('height', svgHeight);
         
         // Update inner plot height
@@ -869,13 +946,15 @@ class UniversalScales {
         
         // Update zoom background rectangle to cover full container
         if (this.zoomBackground) {
+            const svgWidth = +this.svg.attr('width') || 0;
             this.zoomBackground
-                .attr('width', this.width + this.margin.left + this.margin.right)
+                .attr('width', svgWidth)
                 .attr('height', this.height + this.margin.top + this.margin.bottom);
         }
         
-        // Update axis clip path to match new dimensions
+        // Update clip paths to match new dimensions
         this.updateAxisClip();
+        this.updateItemsClip();
         
         // Update axes
         const currentUnit = this.dimensionData.units.find(u => u.name === this.currentUnit);
@@ -894,8 +973,12 @@ class UniversalScales {
                 .tickValues(tickValues)
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
+        // Extend axis domain lines to full container width
+        const svgWidth = +this.svg.attr('width') || 0;
+        const axisLeft = -this.margin.left;
+        const axisRight = svgWidth - this.margin.left;
         this.xAxis.select('.domain')
-            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
+            .attr('d', `M${axisLeft},0H${axisRight}`);
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
@@ -903,7 +986,7 @@ class UniversalScales {
                 .tickFormat(d => d3.format(CONFIG.AXIS_FORMAT)(d))
         );
         this.xAxisTop.select('.domain')
-            .attr('d', `M${-this.margin.left},0H${this.width + this.margin.right}`);
+            .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Update grid
         this.updateGrid();
@@ -915,13 +998,13 @@ class UniversalScales {
     updateGrid() {
         this.gridGroup.selectAll('.grid-line').remove();
         
-        // Vertical grid lines
-        const xTicks = this.xScale.ticks(CONFIG.GRID_TICKS);
+        // Vertical grid lines - use the same tick values as axes for consistency
+        const tickValues = this.generatePowerOfTenTicks();
         const yDomain = this.yScale.domain();
         const yTop = this.yScale(yDomain[1]);
         const yBottom = this.yScale(0);
         this.gridGroup.selectAll('.grid-line-x')
-            .data(xTicks)
+            .data(tickValues)
             .enter().append('line')
             .attr('class', 'grid-line')
             .attr('x1', d => this.xScale(d))
@@ -931,13 +1014,17 @@ class UniversalScales {
             .style('pointer-events', 'none'); // Don't block zoom events
         
         // Horizontal grid lines (simplified)
+        // Extend to full container width
+        const svgWidth = +this.svg.attr('width') || 0;
+        const gridLeft = -this.margin.left;
+        const gridRight = svgWidth - this.margin.left;
         const yTicks = this.yScale.ticks(CONFIG.GRID_TICKS);
         this.gridGroup.selectAll('.grid-line-y')
             .data(yTicks)
             .enter().append('line')
             .attr('class', 'grid-line')
-            .attr('x1', -this.margin.left)
-            .attr('x2', this.width + this.margin.right)
+            .attr('x1', gridLeft)
+            .attr('x2', gridRight)
             .attr('y1', d => this.yScale(d))
             .attr('y2', d => this.yScale(d))
             .style('pointer-events', 'none'); // Don't block zoom events
@@ -1237,8 +1324,6 @@ class UniversalScales {
             this.tooltip.style.position = '';
         } else {
             const rect = this.plotContainer.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
             
             // Dynamically cap tooltip width to available plot width
             const maxAllowed = Math.max(CONFIG.TOOLTIP_MIN_WIDTH, rect.width - 2 * CONFIG.TOOLTIP_OFFSET_X);
@@ -1251,28 +1336,32 @@ class UniversalScales {
             const tooltipHeight = this.tooltip.offsetHeight;
             this.tooltip.style.visibility = '';
             
-            // Prefer right of cursor; fallback left if not enough space
-            const spaceOnRight = rect.width - x;
-            let desiredLeft;
-            if (spaceOnRight < tooltipWidth + CONFIG.TOOLTIP_OFFSET_X * 2) {
-                desiredLeft = x - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+            // Use viewport coordinates for robust clamping
+            const clientX = event.clientX;
+            const clientY = event.clientY;
+            
+            // Horizontal: prefer right of cursor; fallback left if not enough space
+            const spaceOnRightVp = window.innerWidth - clientX;
+            let desiredLeftVp;
+            if (spaceOnRightVp < tooltipWidth + CONFIG.TOOLTIP_OFFSET_X * 2) {
+                desiredLeftVp = clientX - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
             } else {
-                desiredLeft = x + CONFIG.TOOLTIP_OFFSET_X;
+                desiredLeftVp = clientX + CONFIG.TOOLTIP_OFFSET_X;
             }
+            const minLeftVp = CONFIG.TOOLTIP_OFFSET_X;
+            const maxLeftVp = window.innerWidth - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
+            const clampedLeftVp = Math.max(minLeftVp, Math.min(maxLeftVp, desiredLeftVp));
+            this.tooltip.style.left = `${clampedLeftVp}px`;
             
-            // Clamp horizontally inside plot container
-            const minLeft = CONFIG.TOOLTIP_OFFSET_X;
-            const maxLeft = rect.width - tooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
-            const clampedLeft = Math.max(minLeft, Math.min(maxLeft, desiredLeft));
-            this.tooltip.style.left = `${clampedLeft}px`;
+            // Vertical: center on cursor Y, clamp to viewport with bottom margin
+            const desiredTopVp = clientY - (tooltipHeight / 2);
+            const minTopVp = CONFIG.TOOLTIP_MIN_TOP;
+            const maxTopVp = window.innerHeight - CONFIG.TOOLTIP_VIEWPORT_BOTTOM_MARGIN - tooltipHeight;
+            const clampedTopVp = Math.max(minTopVp, Math.min(maxTopVp, desiredTopVp));
+            this.tooltip.style.top = `${clampedTopVp}px`;
             
-            // Position tooltip near the cursor's Y position and clamp vertically
-            const tooltipTop = y - (tooltipHeight / 2);
-            const minTop = CONFIG.TOOLTIP_MIN_TOP;
-            const maxTop = rect.height - tooltipHeight - CONFIG.TOOLTIP_OFFSET_Y;
-            this.tooltip.style.top = `${Math.max(minTop, Math.min(maxTop, tooltipTop))}px`;
-            
-            this.tooltip.style.position = 'absolute';
+            // Fixed positioning so viewport clamping is honored regardless of container scroll/position
+            this.tooltip.style.position = 'fixed';
             this.tooltip.style.transform = '';
             this.tooltip.style.pointerEvents = 'none';
         }
@@ -1371,8 +1460,7 @@ class UniversalScales {
         
         this.updateDimensions();
         
-        this.svg
-            .attr('width', this.width + this.margin.left + this.margin.right);
+        // SVG width is now updated in updateDimensions() to match container exactly
         
         this.xScale.range([0, this.width]);
         
@@ -1410,8 +1498,9 @@ class UniversalScales {
                 
                 // Update zoom background rectangle to cover full container
                 if (this.zoomBackground) {
+                    const svgWidth = +this.svg.attr('width') || 0;
                     this.zoomBackground
-                        .attr('width', this.width + this.margin.left + this.margin.right)
+                        .attr('width', svgWidth)
                         .attr('height', this.height + this.margin.top + this.margin.bottom);
                 }
                 
