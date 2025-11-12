@@ -201,8 +201,6 @@ class ItemEditor {
         
         // Update the plot
         this.app.plot.updatePlot();
-        
-        alert('All changes have been undone!');
     }
     
     toggleEditor() {
@@ -617,10 +615,6 @@ class ItemEditor {
     }
     
     deleteUnit(index) {
-        if (!confirm(`Are you sure you want to delete this unit?`)) {
-            return;
-        }
-        
         // Mark unit as deleted in overrides
         if (!this.unitOverrides[this.app.currentDimension]) {
             this.unitOverrides[this.app.currentDimension] = {};
@@ -653,8 +647,8 @@ class ItemEditor {
             conversion_factor: 1
         };
         
-        // Add to units array
-        this.app.dimensionData.units.push(newUnit);
+        // Add to units array at position 1 (beginning)
+        this.app.dimensionData.units.unshift(newUnit);
         
         // Re-render units
         this.renderUnits();
@@ -1140,14 +1134,9 @@ class ItemEditor {
         this.app.updateUnitDescription();
         
         this.app.plot.updatePlot();
-        alert('All changes saved successfully!');
     }
     
     deleteItem(event) {
-        if (!confirm('Are you sure you want to delete this item?')) {
-            return;
-        }
-        
         const card = event.target.closest('.item-editor-card');
         const isCustom = card.dataset.isCustom === 'true';
         const customId = card.dataset.customId;
@@ -1249,22 +1238,39 @@ class ItemEditor {
             const isCustom = card.dataset.isCustom === 'true';
             const customId = card.dataset.customId;
             
+            // Read current form values before updating
+            const form = card.querySelector('.item-editor-form');
+            const nameInput = form?.querySelector('input[name="name"]');
+            const valueInput = form?.querySelector('input[name="value"]');
+            const descriptionInput = form?.querySelector('textarea[name="description"]');
+            const sourceInput = form?.querySelector('input[name="source"]');
+            
+            const currentName = nameInput?.value?.trim() || '';
+            const currentValue = valueInput?.value ? parseFloat(valueInput.value) : 0;
+            const currentDescription = descriptionInput?.value?.trim() || '';
+            const currentSource = sourceInput?.value?.trim() || '';
+            
             if (isCustom && customId) {
                 const customItems = this.app.customItems[this.app.currentDimension] || [];
                 let item = customItems.find(item => item.customId === customId);
                 if (!item) {
-                    // Item not found, create a new custom item entry
+                    // Item not found, create a new custom item entry with current form values
                     item = {
-                        name: '',
-                        value: 0,
-                        description: '',
-                        source: '',
+                        name: currentName,
+                        value: currentValue,
+                        description: currentDescription,
+                        source: currentSource,
                         isCustom: true,
                         customId: customId,
                         imageData: imageData
                     };
                     customItems.push(item);
                 } else {
+                    // Update existing item with current form values and new image
+                    item.name = currentName;
+                    item.value = currentValue;
+                    item.description = currentDescription;
+                    item.source = currentSource;
                     item.imageData = imageData;
                 }
                 this.saveCustomItems();
