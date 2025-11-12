@@ -936,6 +936,7 @@ select:focus {
     cursor: pointer;
     transition: all 0.2s ease;
     vertical-align: middle;
+    text-align: center; /* Center the text in the button */
 }
 
 .image-upload-controls .file-input-label.btn:hover {
@@ -977,9 +978,11 @@ select:focus {
 }
 
 .image-preview {
-    height: 100%;
+    max-width: 100%; /* Never exceed container width */
+    max-height: 100%; /* Never exceed container height */
     width: auto;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain; /* Change from cover to contain to show full image within bounds */
     display: block;
 }
 

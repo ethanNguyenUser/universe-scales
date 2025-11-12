@@ -65,6 +65,19 @@
         .tooltip-image {
             max-height: 100px;
         }
+
+        /* More vertical space between header and buttons in portrait mode */
+        #units-section .section-header,
+        #items-section .section-header {
+            margin-bottom: 1rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+        
+        /* More space between header text and buttons when they wrap */
+        #units-section .section-header-right,
+        #items-section .section-header-right {
+            margin-top: 0.75rem !important;
+        }
     }
     
     /* Even smaller tooltips in landscape mode on mobile */
@@ -117,6 +130,26 @@
         border-bottom: 1px solid var(--border-color);
     }
     */
+
+    /* Smaller font for image upload buttons on mobile */
+    .image-upload-controls * {
+        font-size: 0.7rem !important;
+    }
+    .image-upload-controls .file-input-label.btn,
+    .image-upload-controls label.btn,
+    .image-upload-controls .btn-small,
+    .image-upload-controls button.btn-small,
+    .image-upload-controls button.btn.btn-small,
+    .image-upload-controls button.btn.btn-small.btn-danger,
+    .image-upload-controls button {
+        font-size: 0.7rem !important;
+        padding: 0.2rem 0.4rem !important;
+    }
+    /* Center text in Choose Image button on mobile */
+    .image-upload-controls .file-input-label.btn,
+    .image-upload-controls label.btn {
+        text-align: center !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -210,6 +243,24 @@
     .footer-attribution {
         font-size: 0.85rem;
     }
+
+    /* Smaller font for image upload buttons on mobile */
+    .image-upload-controls * {
+        font-size: 0.5rem !important;
+    }
+    .image-upload-controls .file-input-label.btn,
+    .image-upload-controls label.btn,
+    .image-upload-controls .btn-small,
+    .image-upload-controls button.btn-small,
+    .image-upload-controls button.btn.btn-small,
+    .image-upload-controls button.btn.btn-small.btn-danger,
+    .image-upload-controls button {
+        font-size: 0.5rem !important;
+        padding: 0.2rem 0.4rem !important;
+    }
+    /* Center text in Choose Image button on mobile */
+    .image-upload-controls .file-input-label.btn,
+    .image-upload-controls label.btn {
+        text-align: center !important;
+    }
 }
-
-
