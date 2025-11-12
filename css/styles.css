@@ -215,7 +215,7 @@ select:focus {
 
 /* Editor Panel Styles */
 .editor-panel {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0.5rem 0; /* Reduced bottom margin to decrease space before footer */
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--bg-secondary);
@@ -239,28 +239,62 @@ select:focus {
     transition: background-color 0.2s ease;
 }
 
+.editor-toggle-text {
+    font-size: 1rem;
+    font-weight: 500; /* Not bold, same as section headers */
+}
+
 .editor-toggle:hover {
     background-color: var(--bg-secondary);
 }
 
 .editor-toggle-icon {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--text-secondary);
     transition: transform 0.2s ease;
-    font-size: 0.8rem;
+    flex-shrink: 0;
+    display: inline-block;
+    border-radius: 1px; /* Slight rounding for smoother appearance */
+}
+
+.editor-toggle:not(.expanded) .editor-toggle-icon {
+    transform: rotate(-90deg); /* Rotate from down to right when collapsed */
 }
 
 .editor-toggle.expanded .editor-toggle-icon {
-    transform: rotate(180deg);
+    transform: rotate(0deg); /* Point down when expanded */
 }
 
 .editor-content {
     padding: 0;
-    max-height: 600px;
+    max-height: 2025px; /* Increased from 1350px (50% more) */
     overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     border-radius: 0 0 8px 8px;
+}
+
+.editor-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.editor-content::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+.editor-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.editor-content::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
 }
 
 .editor-header {
@@ -272,14 +306,16 @@ select:focus {
     gap: 0.5rem;
     position: sticky;
     top: 0;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary); /* White background for header */
     z-index: 10;
     border-bottom: 1px solid var(--border-color);
 }
 
 .editor-header h3 {
     margin: 0;
-    font-size: 1.2rem;
+    padding-left: 0.5rem; /* Match section-header left padding for alignment */
+    font-size: 1rem; /* Same size as section headers */
+    font-weight: 500; /* Not bold, same as section headers */
     color: var(--text-primary);
 }
 
@@ -287,6 +323,393 @@ select:focus {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+}
+
+/* Editor Sections */
+.editor-section {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin: 0; /* Ensure no margin */
+}
+
+.editor-section:last-child {
+    border-bottom: none;
+}
+
+.editor-section h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+/* Collapsible Sections */
+.collapsible-section {
+    position: relative;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.35rem 0.5rem; /* Reduced vertical padding to make rows shorter */
+    margin: 0; /* Remove all margins - no negative margins */
+    margin-bottom: 0.35rem; /* Only bottom margin for spacing */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    user-select: none;
+    min-height: auto; /* Ensure no minimum height */
+    height: auto;
+    line-height: 1; /* Tight line-height for the container */
+    background-color: var(--bg-primary); /* White background for section headers */
+}
+
+/* Make section headers sticky for Units and Items sections */
+#units-section .section-header,
+#items-section .section-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: var(--bg-primary); /* Ensure background is solid */
+    margin-bottom: 0.5rem; /* Add space between header and content */
+    padding-bottom: 0.5rem; /* Add padding below header */
+    border: none; /* Remove any border */
+}
+
+/* Apply hover effect to all section headers */
+.section-header:hover {
+    background-color: var(--hover-bg) !important; /* Lighter grey on hover - use !important to override sticky background */
+}
+
+/* But don't apply hover when hovering over action button containers */
+.section-header:has(.items-section-actions:hover):hover,
+.section-header:has(.units-section-actions:hover):hover,
+.section-header:has(.dimension-section-actions:hover):hover {
+    background-color: var(--bg-primary) !important; /* Keep white background when hovering buttons */
+}
+
+.section-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.section-header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-header h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem; /* Slightly smaller to differentiate from Edit Plot */
+    font-weight: 500; /* Match the weight of other UI text */
+    color: var(--text-primary);
+    /* Match editor-header h3 exactly - no line-height override, let flex handle centering */
+}
+
+.section-toggle-icon {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--text-secondary);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    display: inline-block;
+    border-radius: 1px; /* Slight rounding for smoother appearance */
+}
+
+.collapsible-section.collapsed .section-toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.section-content {
+    overflow: visible; /* Changed from hidden to allow proper scrolling */
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+    max-height: 10000px;
+    opacity: 1;
+}
+
+/* Make section content scrollable for Units and Items */
+#units-section .section-content,
+#items-section .section-content {
+    max-height: 600px; /* Increased from 400px (50% more) */
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid var(--border-color); /* Gray border around scrolling area */
+    border-radius: 4px;
+    padding: 0.5rem; /* Add some padding inside the border */
+    background-color: var(--bg-primary); /* White background for the scrollable area */
+}
+
+.collapsible-section.collapsed .section-content {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    overflow: hidden; /* Only hide overflow when collapsed */
+}
+
+/* Override max-height for collapsed Units and Items sections */
+#units-section.collapsible-section.collapsed .section-content,
+#items-section.collapsible-section.collapsed .section-content {
+    max-height: 0 !important;
+    overflow: hidden;
+    padding: 0 !important; /* Remove padding when collapsed */
+    border: none !important; /* Remove border when collapsed */
+    margin: 0 !important; /* Remove margin when collapsed */
+    border-radius: 0 !important; /* Remove border-radius when collapsed */
+}
+
+.editor-form-group {
+    margin-bottom: 1rem;
+}
+
+.editor-form-group:last-child {
+    margin-bottom: 0;
+}
+
+.editor-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.editor-input,
+.editor-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+.editor-input:focus,
+.editor-textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.editor-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Dimension Editor Card - matches unit/item card styling */
+.dimension-editor-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: var(--bg-secondary); /* Grey background for card container */
+}
+
+.dimension-editor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.dimension-editor-form .editor-form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.dimension-input,
+.dimension-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: var(--bg-primary); /* White background for input fields */
+    color: var(--text-primary);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.dimension-textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.dimension-input:focus,
+.dimension-textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Items Section */
+.items-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.items-section-actions,
+.units-section-actions,
+.dimension-section-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Section headers can wrap to accommodate buttons */
+#items-section .section-header,
+#units-section .section-header,
+#dimension-metadata-section .section-header {
+    flex-wrap: wrap;
+}
+
+#items-section .section-header-right,
+#units-section .section-header-right,
+#dimension-metadata-section .section-header-right {
+    flex-wrap: wrap;
+}
+
+/* Units Section */
+.units-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0; /* Remove padding since section-content now has padding */
+}
+
+.unit-editor-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: var(--bg-secondary); /* Grey background for card container */
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.unit-editor-card.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.unit-editor-card:not(.dragging):hover {
+    border-color: var(--accent-color);
+}
+
+.unit-editor-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.unit-editor-card-title-row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.unit-editor-card-title-row h5 {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+}
+
+.unit-editor-card-title-row .unit-drag-handle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-shrink: 0;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.unit-editor-card-title-row .btn {
+    flex-shrink: 0;
+    margin-left: auto; /* Push to the right */
+}
+
+.unit-drag-handle {
+    cursor: grab;
+    color: var(--text-secondary);
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.unit-drag-handle:active {
+    cursor: grabbing;
+}
+
+.drag-handle-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.unit-editor-card-header h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.unit-editor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.unit-name-symbol-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.unit-name-group,
+.unit-symbol-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.unit-editor-form .editor-form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.unit-editor-form .editor-form-group input,
+.unit-editor-form .editor-form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: var(--bg-primary); /* White background for input fields */
+    color: var(--text-primary);
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.unit-editor-form .editor-form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.unit-editor-form .editor-form-group input:focus,
+.unit-editor-form .editor-form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
 .btn {
@@ -318,7 +741,8 @@ select:focus {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0; /* Remove padding since section-content now has padding */
+    padding-bottom: 1rem; /* Small padding at bottom to ensure last item is fully visible */
     flex: 1;
 }
 
@@ -326,7 +750,7 @@ select:focus {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary); /* Grey background for card container */
 }
 
 .item-editor-card-header {
@@ -359,6 +783,11 @@ select:focus {
     font-size: 0.8rem;
     line-height: 1.5;
     box-sizing: border-box;
+}
+
+/* Only apply default hover to buttons that aren't primary or danger */
+.btn:hover:not(.btn-primary):not(.btn-danger) {
+    background-color: var(--bg-secondary);
 }
 
 .btn-danger {
@@ -414,7 +843,7 @@ select:focus {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 0.9rem;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary); /* White background for input fields */
     color: var(--text-primary);
     font-family: inherit;
 }
@@ -498,7 +927,7 @@ select:focus {
     justify-content: center;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary); /* White background for images */
     overflow: hidden;
     position: relative;
 }
@@ -593,6 +1022,29 @@ select:focus {
     max-width: 600px;
     max-height: 80vh;
     overflow-y: auto;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.yaml-modal-content.drag-over {
+    border: 2px dashed var(--accent-color);
+    background-color: var(--bg-secondary);
+}
+
+.yaml-drop-hint {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px dashed var(--border-color);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background-color: var(--bg-secondary);
+}
+
+.yaml-modal-content.drag-over .yaml-drop-hint {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: var(--bg-primary);
 }
 
 .yaml-modal-header {
@@ -902,8 +1354,8 @@ select:focus {
 .footer {
     text-align: center;
     padding: 2rem 0;
-    margin-top: 1.5rem; /* Reduced from 3rem to decrease space above footer */
-    border-top: 1px solid var(--border-color);
+    margin-top: 0.5rem; /* Reduced from 1.5rem to decrease space above footer */
+    border-top: none; /* Removed border line above footer */
     color: var(--text-secondary);
 }
 

@@ -69,20 +69,87 @@
             <!-- Visual Editor Panel -->
             <div id="editor-panel" class="editor-panel">
                 <button id="editor-toggle" class="editor-toggle" aria-label="Toggle editor" title="Toggle editor">
-                    <span class="editor-toggle-text">Edit Items</span>
-                    <span class="editor-toggle-icon">▼</span>
+                    <span class="editor-toggle-text">Edit Plot</span>
+                    <span class="editor-toggle-icon"></span>
                 </button>
                 <div id="editor-content" class="editor-content" style="display: none;">
                     <div class="editor-header">
-                        <h3>Item Editor</h3>
+                        <h3>Dimension Editor</h3>
                         <div class="editor-actions">
-                            <button id="add-item-btn" class="btn btn-primary">+ Add Item</button>
                             <button id="import-yaml-btn" class="btn btn-secondary">Import YAML</button>
                             <button id="export-yaml-btn" class="btn btn-secondary">Export YAML</button>
                         </div>
                     </div>
-                    <div id="items-list" class="items-list">
-                        <!-- Items will be dynamically added here -->
+                    
+                    <!-- Dimension Metadata Section -->
+                    <div id="dimension-metadata-section" class="editor-section collapsible-section">
+                        <div class="section-header" onclick="window.app.editor.toggleSection('dimension-metadata')">
+                            <div class="section-header-left">
+                                <h4>Dimension</h4>
+                            </div>
+                            <div class="section-header-right">
+                                <div class="dimension-section-actions" onclick="event.stopPropagation()">
+                                    <button id="clear-dimension-info-btn" class="btn btn-danger">Clear Information</button>
+                                </div>
+                                <span class="section-toggle-icon"></span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="dimension-editor-card">
+                                <div class="dimension-editor-form">
+                                    <div class="editor-form-group">
+                                        <label>Dimension Name</label>
+                                        <input type="text" id="dimension-name-input" class="dimension-input">
+                                    </div>
+                                    <div class="editor-form-group">
+                                        <label>Dimension Description</label>
+                                        <textarea id="dimension-description-input" class="dimension-textarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Units Section -->
+                    <div id="units-section" class="editor-section collapsible-section">
+                        <div class="section-header" onclick="window.app.editor.toggleSection('units')">
+                            <div class="section-header-left">
+                                <h4>Units</h4>
+                            </div>
+                            <div class="section-header-right">
+                                <div class="units-section-actions" onclick="event.stopPropagation()">
+                                    <button id="add-unit-btn" class="btn btn-primary">+ Add Unit</button>
+                                    <button id="delete-all-units-btn" class="btn btn-danger">Delete All Units</button>
+                                </div>
+                                <span class="section-toggle-icon"></span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div id="units-list" class="units-list">
+                                <!-- Units will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Items Section -->
+                    <div id="items-section" class="editor-section collapsible-section">
+                        <div class="section-header" onclick="window.app.editor.toggleSection('items')">
+                            <div class="section-header-left">
+                                <h4>Items</h4>
+                            </div>
+                            <div class="section-header-right">
+                                <div class="items-section-actions" onclick="event.stopPropagation()">
+                                    <button id="add-item-btn" class="btn btn-primary">+ Add Item</button>
+                                    <button id="delete-all-items-btn" class="btn btn-danger">Delete All Items</button>
+                                </div>
+                                <span class="section-toggle-icon"></span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div id="items-list" class="items-list">
+                                <!-- Items will be dynamically added here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

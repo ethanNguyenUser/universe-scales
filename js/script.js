@@ -348,9 +348,14 @@ class UniversalScales {
             this.plot.lastTickDomain = null;
             this.plot.lastTickLogRange = null;
             
-            // Update dimension description
-            if (this.dimensionData.dimension_description) {
-                this.dimensionDescription.textContent = this.dimensionData.dimension_description;
+            // Update dimension description (check for overrides)
+            const dimensionDescOverride = this.editor?.dimensionOverrides[this.currentDimension]?.description;
+            const dimensionDesc = dimensionDescOverride !== undefined 
+                ? dimensionDescOverride 
+                : (this.dimensionData.dimension_description || '');
+            
+            if (dimensionDesc) {
+                this.dimensionDescription.textContent = dimensionDesc;
                 this.dimensionDescription.style.display = '';
             } else {
                 this.dimensionDescription.textContent = '';
@@ -380,20 +385,38 @@ class UniversalScales {
     updateUnitSelector() {
         this.unitSelect.innerHTML = '';
         
-        this.dimensionData.units.forEach(unit => {
+        // Filter out deleted units
+        const visibleUnits = [];
+        if (this.editor && this.editor.unitOverrides[this.currentDimension]) {
+            this.dimensionData.units.forEach((unit, index) => {
+                const isDeleted = this.editor.unitOverrides[this.currentDimension]?.[index]?.isDeleted;
+                if (!isDeleted) {
+                    visibleUnits.push({ unit, index });
+                }
+            });
+        } else {
+            // No overrides, all units are visible
+            this.dimensionData.units.forEach((unit, index) => {
+                visibleUnits.push({ unit, index });
+            });
+        }
+        
+        visibleUnits.forEach(({ unit }) => {
             const option = document.createElement('option');
             option.value = unit.name;
-            option.textContent = `${unit.name} (${unit.symbol})`;
+            // Capitalize first letter for display
+            const unitNameCapitalized = unit.name.charAt(0).toUpperCase() + unit.name.slice(1).toLowerCase();
+            option.textContent = `${unitNameCapitalized} (${unit.symbol})`;
             this.unitSelect.appendChild(option);
         });
         
-        // Set unit from URL if pending, otherwise use first unit
-        if (this.pendingUnit && this.dimensionData.units.some(u => u.name === this.pendingUnit)) {
+        // Set unit from URL if pending, otherwise use first visible unit
+        if (this.pendingUnit && visibleUnits.some(({ unit }) => unit.name === this.pendingUnit)) {
             this.currentUnit = this.pendingUnit;
             this.unitSelect.value = this.currentUnit;
             this.pendingUnit = null; // Clear pending unit
-        } else {
-            this.currentUnit = this.dimensionData.units[0].name;
+        } else if (visibleUnits.length > 0) {
+            this.currentUnit = visibleUnits[0].unit.name;
             this.unitSelect.value = this.currentUnit;
         }
         
@@ -590,6 +613,11 @@ class UniversalScales {
         if (this.editor) {
             const allItems = this.editor.getAllItemsForEditor();
             const item = allItems.find(i => i.name === itemName);
+            
+            // Check if imageData is explicitly null (image was removed)
+            if (item && item.imageData === null) {
+                return null;
+            }
             
             if (item && item.imageData) {
                 // Return the data URL directly
@@ -830,8 +858,21 @@ class UniversalScales {
         }
         
         const unit = this.dimensionData.units.find(u => u.name === this.currentUnit);
-        if (unit && unit.description) {
-            this.unitDescription.textContent = unit.description;
+        if (!unit) {
+            this.unitDescription.textContent = '';
+            this.unitDescription.style.display = 'none';
+            return;
+        }
+        
+        // Check for unit description override
+        const unitIndex = this.dimensionData.units.indexOf(unit);
+        const unitDescOverride = this.editor?.unitOverrides[this.currentDimension]?.[unitIndex]?.description;
+        const unitDesc = unitDescOverride !== undefined 
+            ? unitDescOverride 
+            : (unit.description || '');
+        
+        if (unitDesc) {
+            this.unitDescription.textContent = unitDesc;
             this.unitDescription.style.display = '';
         } else {
             this.unitDescription.textContent = '';
