@@ -439,8 +439,46 @@ select:focus {
     overflow-x: hidden;
     border: 1px solid var(--border-color); /* Gray border around scrolling area */
     border-radius: 4px;
-    padding: 0.5rem; /* Add some padding inside the border */
+    padding: 0.75rem; /* Add some padding inside the border - increased for more space */
+    padding-right: 0rem; /* Extra padding on right to account for thicker scrollbar */
     background-color: var(--bg-primary); /* White background for the scrollable area */
+    scrollbar-gutter: stable; /* Reserve space for scrollbar */
+    /* Align with section-header by negating editor-section padding */
+    margin-left: -1.1rem;
+    margin-right: -1.1rem;
+    margin-top: 0; /* Ensure no top margin that could create gap */
+}
+
+/* Custom scrollbar styling for section-content to make it less intrusive */
+#units-section .section-content::-webkit-scrollbar,
+#items-section .section-content::-webkit-scrollbar {
+    width: 18px !important; /* Wider scrollbar for better usability */
+}
+
+#units-section .section-content::-webkit-scrollbar-track,
+#items-section .section-content::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+    margin: 0.25rem 0; /* Add some margin from edges */
+}
+
+#units-section .section-content::-webkit-scrollbar-thumb,
+#items-section .section-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px; /* Slightly larger radius for thicker scrollbar */
+    opacity: 0.5; /* Make it more subtle */
+}
+
+#units-section .section-content::-webkit-scrollbar-thumb:hover,
+#items-section .section-content::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+    opacity: 0.8; /* Slightly more visible on hover */
+}
+
+/* Firefox scrollbar styling */
+#units-section .section-content,
+#items-section .section-content {
+    scrollbar-width: auto; /* Use auto instead of thin for thicker scrollbar */
+    scrollbar-color: var(--border-color) transparent;
 }
 
 .collapsible-section.collapsed .section-content {
