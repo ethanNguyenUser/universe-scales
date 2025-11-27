@@ -34,6 +34,7 @@ class UniversalScales {
         this.actualItemExtent = null; // Store actual item extent (for zoom limits)
         this.mainGroup = null; // Will be set by plot renderer
         this.zoomBackground = null; // Will be set by setupZoom
+        this.tooltipPinned = false; // Track if tooltip is pinned (clicked on desktop)
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -119,9 +120,9 @@ class UniversalScales {
             this.toggleNotation();
         });
         
-        // Hide tooltips when clicking elsewhere
+        // Hide tooltips when clicking elsewhere (but allow clicks on tooltip itself)
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area')) {
+            if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area') && !e.target.closest('.tooltip')) {
                 this.hideTooltip();
             }
         });
@@ -424,9 +425,12 @@ class UniversalScales {
         this.updateUnitDescription();
     }
     
-    showTooltip(event, item) {
+    showTooltip(event, item, pinned = false) {
         const unit = this.dimensionData.units.find(u => u.name === this.currentUnit);
         const convertedValue = this.convertValue(item.value);
+        
+        // Set pinned state
+        this.tooltipPinned = pinned;
         
         this.tooltip.querySelector('.tooltip-title').textContent = item.name;
         
@@ -438,6 +442,7 @@ class UniversalScales {
         tooltipImage.style.display = 'none';
         tooltipImage.src = '';
         tooltipImage.alt = '';
+        tooltipImage.draggable = false; // Prevent native image dragging
         
         // Format and display the exact value (use forTooltip=true to get HTML superscripts in tooltips)
         const formattedValue = this.formatNumber(convertedValue, 2, true);
@@ -453,9 +458,10 @@ class UniversalScales {
         
         this.tooltip.querySelector('.tooltip-description').textContent = item.description;
         const sourceLink = this.tooltip.querySelector('.tooltip-source');
-        const showSourceText = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
+        const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
             || ('ontouchstart' in window)
             || window.matchMedia('(hover: none)').matches;
+        const showSourceText = isTouchPrimary || pinned; // Show source on mobile or when pinned on desktop
         if (item.source) {
             sourceLink.href = item.source;
             sourceLink.textContent = showSourceText ? 'Source' : '';
@@ -467,19 +473,16 @@ class UniversalScales {
         }
         
         // Position tooltip (will be repositioned after image loads if image exists)
-        const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
-            || ('ontouchstart' in window)
-            || window.matchMedia('(hover: none)').matches;
-        
         const positionTooltip = () => {
             if (isTouchPrimary) {
                 // Pin tooltip to viewport top center on mobile via CSS class
                 this.tooltip.classList.add('mobile-pinned');
                 // Clear any previous desktop inline positioning that could push it off-screen
+                // But explicitly set position: fixed for mobile to ensure it's positioned relative to viewport
                 this.tooltip.style.left = '';
                 this.tooltip.style.top = '';
                 this.tooltip.style.transform = '';
-                this.tooltip.style.position = '';
+                this.tooltip.style.position = 'fixed';
             } else {
                 // Use viewport coordinates for robust clamping
                 const clientX = event.clientX;
@@ -553,7 +556,10 @@ class UniversalScales {
                 this.tooltip.style.top = `${desiredTopVp}px`;
                 this.tooltip.style.position = 'fixed';
                 this.tooltip.style.transform = '';
-                this.tooltip.style.pointerEvents = 'none';
+                // Enable pointer events when pinned so source link is clickable
+                // Also increase z-index when pinned to ensure it's on top
+                this.tooltip.style.pointerEvents = pinned ? 'auto' : 'none';
+                this.tooltip.style.zIndex = pinned ? '2000' : '1000';
                 if (!wasVisible) {
                     this.tooltip.style.visibility = '';
                 }
@@ -606,6 +612,12 @@ class UniversalScales {
         this.tooltip.classList.remove('visible');
         // Reset mobile-specific class
         this.tooltip.classList.remove('mobile-pinned');
+        // Clear pinned state
+        this.tooltipPinned = false;
+        // Reset z-index to default
+        this.tooltip.style.zIndex = '';
+        // Reset pointer-events to none so tooltip doesn't block interactions when hidden
+        this.tooltip.style.pointerEvents = 'none';
     }
     
     getImagePath(itemName) {

@@ -499,20 +499,26 @@ class PlotRenderer {
             })
             .on('pointerenter', (event, d) => {
                 if (window.matchMedia('(hover: hover)').matches) {
-                    this.app.showTooltip(event, d);
-                    const itemGroupElement = event.target.closest('.item-group');
-                    if (itemGroupElement) {
-                        d3.select(itemGroupElement).select('circle')
-                            .transition()
-                            .duration(CONFIG.HOVER_TRANSITION_DURATION)
-                            .attr('r', CONFIG.POINT_RADIUS_HOVER)
-                            .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH_HOVER);
+                    // Don't show hover tooltip if a tooltip is already pinned
+                    if (!this.app.tooltipPinned) {
+                        this.app.showTooltip(event, d);
+                        const itemGroupElement = event.target.closest('.item-group');
+                        if (itemGroupElement) {
+                            d3.select(itemGroupElement).select('circle')
+                                .transition()
+                                .duration(CONFIG.HOVER_TRANSITION_DURATION)
+                                .attr('r', CONFIG.POINT_RADIUS_HOVER)
+                                .attr('stroke-width', CONFIG.POINT_STROKE_WIDTH_HOVER);
+                        }
                     }
                 }
             })
             .on('pointerleave', (event) => {
                 if (window.matchMedia('(hover: hover)').matches) {
-                    this.app.hideTooltip();
+                    // Don't hide tooltip if it's pinned (clicked on desktop)
+                    if (!this.app.tooltipPinned) {
+                        this.app.hideTooltip();
+                    }
                     const itemGroupElement = event.target.closest('.item-group');
                     if (itemGroupElement) {
                         d3.select(itemGroupElement).select('circle')
@@ -535,8 +541,8 @@ class PlotRenderer {
                     event.stopPropagation();
                     this.app.showTooltip(event, d);
                 } else if (!isTouchPrimary) {
-                    // Desktop: Only open source if pointerdown also occurred on this element
-                    // and the pointer didn't move too far (to distinguish from drag)
+                    // Desktop: Show and pin tooltip on click (instead of opening source directly)
+                    // Only if pointerdown also occurred on this element and the pointer didn't move too far
                     const wasPointerDown = event.target.getAttribute('data-pointer-down') === 'true';
                     const downX = parseFloat(event.target.getAttribute('data-pointer-down-x') || '0');
                     const downY = parseFloat(event.target.getAttribute('data-pointer-down-y') || '0');
@@ -545,7 +551,10 @@ class PlotRenderer {
                         Math.pow(event.clientY - downY, 2)
                     );
                     if (wasPointerDown && moveDistance <= CONFIG.MAX_CLICK_DISTANCE) {
-                        window.open(d.source, '_blank');
+                        event.preventDefault();
+                        event.stopPropagation();
+                        // Show tooltip pinned so it stays on screen and source link is clickable
+                        this.app.showTooltip(event, d, true);
                     }
                 }
                 // Clear pointerdown flag after handling
