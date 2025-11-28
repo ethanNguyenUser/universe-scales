@@ -532,7 +532,9 @@ class PlotRenderer {
                 event.target.removeAttribute('data-pointer-down');
             })
             .on('pointerup', (event, d) => {
-                const isTouchPrimary = window.matchMedia('(hover: none)').matches;
+                const pointerType = (event.pointerType || '').toLowerCase();
+                const isTouchPointer = pointerType === 'touch' || pointerType === 'pen';
+                const isTouchPrimary = isTouchPointer || window.matchMedia('(hover: none)').matches;
                 const wasDrag = event.target.getAttribute('data-was-drag') === 'true';
                 
                 // On mobile, only show tooltip if it wasn't a drag

@@ -35,6 +35,7 @@ class UniversalScales {
         this.mainGroup = null; // Will be set by plot renderer
         this.zoomBackground = null; // Will be set by setupZoom
         this.tooltipPinned = false; // Track if tooltip is pinned (clicked on desktop)
+        this.isResettingView = false; // Track when a programmatic reset is in progress
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -44,7 +45,6 @@ class UniversalScales {
         this.musicToggle = document.getElementById('music-toggle');
         this.backgroundMusic = document.getElementById('background-music');
         this.tooltip = document.getElementById('tooltip');
-        this.bandPopup = document.getElementById('band-popup');
         this.plotContainer = document.getElementById('plot-container');
         this.dimensionDescription = document.getElementById('dimension-description');
         this.unitDescription = document.getElementById('unit-description');
@@ -82,6 +82,7 @@ class UniversalScales {
         
         // Set up zoom after plot is initialized
         this.setupZoom();
+        this.setupZoomControls();
         
         // Load initial dimension
         await this.loadDimension(this.currentDimension);
@@ -429,8 +430,13 @@ class UniversalScales {
         const unit = this.dimensionData.units.find(u => u.name === this.currentUnit);
         const convertedValue = this.convertValue(item.value);
         
-        // Set pinned state
-        this.tooltipPinned = pinned;
+        // Determine if this is a touch/mobile device
+        const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
+            || ('ontouchstart' in window)
+            || window.matchMedia('(hover: none)').matches;
+        
+        // Set pinned state - on mobile, tooltips are always "pinned" (interactive)
+        this.tooltipPinned = pinned || isTouchPrimary;
         
         this.tooltip.querySelector('.tooltip-title').textContent = item.name;
         
@@ -458,9 +464,7 @@ class UniversalScales {
         
         this.tooltip.querySelector('.tooltip-description').textContent = item.description;
         const sourceLink = this.tooltip.querySelector('.tooltip-source');
-        const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
-            || ('ontouchstart' in window)
-            || window.matchMedia('(hover: none)').matches;
+        // isTouchPrimary is already defined above
         const showSourceText = isTouchPrimary || pinned; // Show source on mobile or when pinned on desktop
         if (item.source) {
             sourceLink.href = item.source;
@@ -483,6 +487,12 @@ class UniversalScales {
                 this.tooltip.style.top = '';
                 this.tooltip.style.transform = '';
                 this.tooltip.style.position = 'fixed';
+                // Enable pointer events on mobile so source link is clickable
+                this.tooltip.style.pointerEvents = 'auto';
+                // Use CSS variable for z-index (matches --z-tooltip-pinned in styles.css)
+                const tooltipZIndex = getComputedStyle(document.documentElement)
+                    .getPropertyValue('--z-tooltip-pinned').trim() || '4000';
+                this.tooltip.style.zIndex = tooltipZIndex;
             } else {
                 // Use viewport coordinates for robust clamping
                 const clientX = event.clientX;
@@ -559,7 +569,10 @@ class UniversalScales {
                 // Enable pointer events when pinned so source link is clickable
                 // Also increase z-index when pinned to ensure it's on top
                 this.tooltip.style.pointerEvents = pinned ? 'auto' : 'none';
-                this.tooltip.style.zIndex = pinned ? '2000' : '1000';
+                // Use CSS variable for z-index (matches --z-tooltip-pinned in styles.css)
+                const tooltipZIndex = getComputedStyle(document.documentElement)
+                    .getPropertyValue('--z-tooltip-pinned').trim() || '4000';
+                this.tooltip.style.zIndex = tooltipZIndex;
                 if (!wasVisible) {
                     this.tooltip.style.visibility = '';
                 }
@@ -914,7 +927,8 @@ class UniversalScales {
             .attr('height', this.height + this.margin.top + this.margin.bottom)
             .attr('fill', 'transparent')
             .attr('cursor', 'grab')
-            .style('pointer-events', 'all');
+            .style('pointer-events', 'all')
+            .style('touch-action', 'pan-y pinch-zoom');
         
         // Create zoom behavior that only affects x-axis
         this.zoomBehavior = d3.zoom()
@@ -923,6 +937,13 @@ class UniversalScales {
             .filter((event) => {
                 // Allow wheel events (zooming) anywhere
                 if (event.type === 'wheel') return true;
+                
+                const pointerType = (event.pointerType || '').toLowerCase();
+                const isTouchPointer = pointerType === 'touch' || pointerType === 'pen';
+                if (event.type === 'touchstart' || isTouchPointer) {
+                    // Let the browser handle scrolling/pinch-zoom on touch devices
+                    return false;
+                }
                 
                 // For mouse events, only allow on background (not on items)
                 if (event.type === 'mousedown') {
@@ -949,74 +970,6 @@ class UniversalScales {
                     }
                 }
                 
-                // For touch events on mobile, allow panning even if starting on items/labels
-                // We'll detect drag vs tap in the touch handlers
-                if (event.type === 'touchstart') {
-                    const isMobile = ('ontouchstart' in window) || window.matchMedia('(hover: none)').matches;
-                    if (isMobile) {
-                        // Always allow touchstart - we'll handle drag detection in touchmove
-                        const target = event.target;
-                        const isOnItem = target.classList && (
-                            target.classList.contains('plot-item') || 
-                            target.classList.contains('label-hover-area') || 
-                            target.classList.contains('tap-target') ||
-                            target.classList.contains('item-label')
-                        );
-                        
-                        // Check parent elements
-                        let isOnItemGroup = false;
-                        if (!isOnItem) {
-                            let current = target;
-                            for (let i = 0; i < CONFIG.PARENT_CHECK_DEPTH && current; i++) {
-                                if (current.classList && (
-                                    current.classList.contains('item-group') || 
-                                    current.classList.contains('label-group')
-                                )) {
-                                    isOnItemGroup = true;
-                                    break;
-                                }
-                                current = current.parentNode;
-                            }
-                        }
-                        
-                        // Store that touch started on item for later drag detection
-                        if (isOnItem || isOnItemGroup) {
-                            this.touchStartOnItem = true;
-                            const touch = event.touches && event.touches[0];
-                            if (touch) {
-                                this.touchStartPosition = { x: touch.clientX, y: touch.clientY };
-                            }
-                        } else {
-                            this.touchStartOnItem = false;
-                            this.touchStartPosition = null;
-                        }
-                        
-                        // Always allow touchstart on mobile - we'll handle drag vs tap later
-                        return true;
-                    } else {
-                        // Desktop touch: same as mouse
-                        const target = event.target;
-                        if (target.classList && (
-                            target.classList.contains('plot-item') || 
-                            target.classList.contains('label-hover-area') || 
-                            target.classList.contains('tap-target') ||
-                            target.classList.contains('item-label')
-                        )) {
-                            return false;
-                        }
-                        let current = target;
-                        for (let i = 0; i < CONFIG.PARENT_CHECK_DEPTH && current; i++) {
-                            if (current.classList && (
-                                current.classList.contains('item-group') || 
-                                current.classList.contains('label-group')
-                            )) {
-                                return false;
-                            }
-                            current = current.parentNode;
-                        }
-                    }
-                }
-                
                 return true;
             })
             .on('start', (event) => {
@@ -1036,14 +989,21 @@ class UniversalScales {
                 this.lastScrollDeltaY = null;
             })
             .on('zoom', (event) => {
-                // Handle vertical scrolling independently from horizontal panning
-                const currentPosition = this.getSourceEventPosition(event.sourceEvent);
-                if (this.dragStartY !== null && currentPosition) {
-                    const deltaY = currentPosition.y - this.dragStartY;
-                    if (Math.abs(deltaY) > CONFIG.VERTICAL_SCROLL_THRESHOLD) {
-                        const scrollAmount = deltaY - (this.lastScrollDeltaY || 0);
-                        window.scrollBy(0, -scrollAmount);
-                        this.lastScrollDeltaY = deltaY;
+                // Handle vertical scrolling independently from horizontal panning (desktop only)
+                const sourceEvent = event.sourceEvent;
+                const pointerType = sourceEvent && sourceEvent.pointerType ? sourceEvent.pointerType.toLowerCase() : '';
+                const isTouchLike = (sourceEvent && sourceEvent.type && sourceEvent.type.startsWith('touch')) 
+                    || pointerType === 'touch' 
+                    || pointerType === 'pen';
+                if (!isTouchLike) {
+                    const currentPosition = this.getSourceEventPosition(sourceEvent);
+                    if (this.dragStartY !== null && currentPosition) {
+                        const deltaY = currentPosition.y - this.dragStartY;
+                        if (Math.abs(deltaY) > CONFIG.VERTICAL_SCROLL_THRESHOLD) {
+                            const scrollAmount = deltaY - (this.lastScrollDeltaY || 0);
+                            window.scrollBy(0, -scrollAmount);
+                            this.lastScrollDeltaY = deltaY;
+                        }
                     }
                 }
                 
@@ -1065,7 +1025,9 @@ class UniversalScales {
         
         // Apply zoom to the main group - it will receive events
         // Items on top will still receive their own pointer events
-        this.mainGroup.call(this.zoomBehavior);
+        this.mainGroup
+            .call(this.zoomBehavior)
+            .style('touch-action', 'pan-y pinch-zoom');
         
         // Add double-click to reset zoom (only on background)
         this.mainGroup.on('dblclick', (event) => {
@@ -1099,6 +1061,94 @@ class UniversalScales {
                 this.resetZoom();
             }
         });
+    }
+
+    setupZoomControls() {
+        const controls = document.querySelector('.zoom-controls');
+        const plotContainer = document.getElementById('plot-container');
+        if (!controls || !plotContainer) return;
+
+        // Ensure consistent grid layout even if CSS fails to load (Safari quirks)
+        controls.style.display = 'grid';
+        controls.style.gridTemplateColumns = 'repeat(3, 1fr)';
+        controls.style.gridTemplateRows = 'repeat(2, 1fr)';
+        controls.style.gridTemplateAreas = '"left right plus" "reset reset minus"';
+
+        // Move controls to body so they can float independently of plot container
+        if (controls.parentNode !== document.body) {
+            document.body.appendChild(controls);
+        }
+        controls.classList.add('zoom-controls-floating');
+
+        const buttons = controls.querySelectorAll('.zoom-btn');
+        const areaMap = {
+            'pan-left': 'left',
+            'pan-right': 'right',
+            'zoom-in': 'plus',
+            'zoom-out': 'minus',
+            'reset': 'reset'
+        };
+
+        buttons.forEach(button => {
+            const action = button.getAttribute('data-action');
+            if (!action) return;
+
+            button.type = 'button';
+            button.style.display = 'flex';
+            button.style.alignItems = 'center';
+            button.style.justifyContent = 'center';
+            if (areaMap[action]) {
+                button.style.gridArea = areaMap[action];
+            }
+
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (!this.zoomBehavior || !this.mainGroup) return;
+
+                switch (action) {
+                    case 'zoom-in':
+                        this.mainGroup.transition()
+                            .duration(200)
+                            .call(this.zoomBehavior.scaleBy, 1.5);
+                        break;
+                    case 'zoom-out':
+                        this.mainGroup.transition()
+                            .duration(200)
+                            .call(this.zoomBehavior.scaleBy, 1 / 1.5);
+                        break;
+                    case 'pan-left':
+                        this.mainGroup.transition()
+                            .duration(200)
+                            .call(this.zoomBehavior.translateBy, this.width * 0.1, 0);
+                        break;
+                    case 'pan-right':
+                        this.mainGroup.transition()
+                            .duration(200)
+                            .call(this.zoomBehavior.translateBy, -this.width * 0.1, 0);
+                        break;
+                    case 'reset':
+                        this.resetZoom();
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        controls.classList.add('is-visible');
+                    } else {
+                        controls.classList.remove('is-visible');
+                    }
+                });
+            }, { root: null, threshold: 0.1 });
+            observer.observe(plotContainer);
+        } else {
+            controls.classList.add('is-visible');
+        }
     }
 
     getSourceEventPosition(sourceEvent) {
@@ -1165,17 +1215,20 @@ class UniversalScales {
             let newLogMax = newLogMin + currentVisibleLogRange;
             let constrained = false;
             
-            // Constrain to actual item extent (can't zoom out beyond items)
-            // First, check if we're trying to zoom out too far
-            if (currentVisibleLogRange > (logActualMax - logActualMin)) {
-                // Zoomed out to max - show full item range
-                newLogMin = logActualMin;
-                newLogMax = logActualMax;
-                constrained = true;
-            } else if (newLogMin < logActualMin) {
-                newLogMin = logActualMin;
-                newLogMax = newLogMin + currentVisibleLogRange;
-                constrained = true;
+            const shouldConstrain = !this.isResettingView;
+            
+            // Constrain to actual item extent (can't zoom out beyond items) unless we're resetting
+            if (shouldConstrain) {
+                if (currentVisibleLogRange > (logActualMax - logActualMin)) {
+                    // Zoomed out to max - show full item range
+                    newLogMin = logActualMin;
+                    newLogMax = logActualMax;
+                    constrained = true;
+                } else if (newLogMin < logActualMin) {
+                    newLogMin = logActualMin;
+                    newLogMax = newLogMin + currentVisibleLogRange;
+                    constrained = true;
+                }
             }
             
             // Convert back to linear space
@@ -1252,18 +1305,27 @@ class UniversalScales {
     }
     
     resetZoom() {
-        if (this.originalXDomain && this.zoomBehavior) {
-            // Reset xScale to original domain
-            this.xScale.domain(this.originalXDomain);
-            
-            // Reset zoom transform
-            this.mainGroup.transition()
-                .duration(CONFIG.RESET_ZOOM_TRANSITION_DURATION)
-                .call(this.zoomBehavior.transform, d3.zoomIdentity);
-            
-            // Update the plot
+        if (!this.originalXDomain || !this.zoomBehavior) return;
+
+        // Stop any in-progress zoom transitions so reset isn't interrupted
+        this.mainGroup.interrupt();
+
+        // Ensure domain returns to original extent before re-render
+        this.xScale.domain(this.originalXDomain);
+        this.isResettingView = true;
+
+        const transition = this.mainGroup.transition()
+            .duration(CONFIG.RESET_ZOOM_TRANSITION_DURATION)
+            .call(this.zoomBehavior.transform, d3.zoomIdentity);
+        
+        const finalize = () => {
+            this.isResettingView = false;
             this.plot.updatePlotAfterZoom();
-        }
+        };
+
+        transition.on('end', finalize).on('interrupt', finalize).on('start', () => {
+            this.isResettingView = true;
+        });
     }
 }
 

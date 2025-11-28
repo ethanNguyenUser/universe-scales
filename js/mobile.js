@@ -84,5 +84,6 @@
         };
         plotSvg.addEventListener('pointerup', handler, { capture: true });
         plotSvg.addEventListener('click', handler, { capture: true });
+
     });
 })();

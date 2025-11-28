@@ -10,6 +10,18 @@
     --hover-bg: #e9ecef;
     --shadow: 0 2px 4px rgba(0,0,0,0.1);
     --shadow-lg: 0 4px 8px rgba(0,0,0,0.15);
+    
+    /* Z-index scale - organized by layer */
+    --z-base: 1;
+    --z-sticky-header: 5;
+    --z-sticky-section: 5;
+    --z-editor-header: 10;
+    --z-editor-save: 10;
+    --z-zoom-controls: 1100;
+    --z-zoom-controls-floating: 1300;
+    --z-modal: 2000;
+    --z-tooltip: 3000;
+    --z-tooltip-pinned: 4000;
 }
 
 [data-theme="dark"] {
@@ -307,7 +319,7 @@ select:focus {
     position: sticky;
     top: 0;
     background-color: var(--bg-primary); /* White background for header */
-    z-index: 10;
+    z-index: var(--z-editor-header);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -369,7 +381,7 @@ select:focus {
 #items-section .section-header {
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: var(--z-sticky-section);
     background-color: var(--bg-primary); /* Ensure background is solid */
     margin-bottom: 0.5rem; /* Add space between header and content */
     padding-bottom: 0.5rem; /* Add padding below header */
@@ -668,7 +680,7 @@ select:focus {
     left: 50%;
     transform: translateX(-50%);
     flex-shrink: 0;
-    z-index: 1; /* Ensure it's above other elements */
+    z-index: var(--z-base); /* Ensure it's above other elements */
 }
 
 .unit-editor-card-title-row .btn {
@@ -1044,7 +1056,7 @@ select:focus {
 .yaml-modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: var(--z-modal);
     left: 0;
     top: 0;
     width: 100%;
@@ -1151,7 +1163,7 @@ select:focus {
     border-top: 1px solid var(--border-color);
     font-size: 1rem;
     font-weight: 600;
-    z-index: 10;
+    z-index: var(--z-editor-save);
     background-color: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
@@ -1179,6 +1191,96 @@ select:focus {
 /* Allow SVG content to extend beyond bounds for labels */
 .plot-container svg {
     overflow: visible;
+}
+
+.zoom-controls {
+    position: absolute;
+    bottom: 3rem;
+    right: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+    grid-template-rows: repeat(2, 48px);
+    grid-template-areas:
+        "left right plus"
+        "reset reset minus";
+    gap: 0.4rem;
+    z-index: var(--z-zoom-controls);
+    pointer-events: auto;
+}
+.zoom-controls-floating {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    left: auto;
+    transform: none;
+    width: clamp(240px, 30vw, 360px);
+    gap: 0.5rem;
+    z-index: var(--z-zoom-controls-floating);
+    box-shadow: var(--shadow-lg);
+    border-radius: 18px;
+    padding: 0.25rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.zoom-controls-floating.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.zoom-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.zoom-btn--reset { grid-area: reset; }
+.zoom-btn--plus { grid-area: plus; }
+.zoom-btn--left { grid-area: left; }
+.zoom-btn--right { grid-area: right; }
+.zoom-btn--minus { grid-area: minus; }
+
+[data-theme="dark"] .zoom-btn {
+    background: rgba(40, 40, 45, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.zoom-btn:hover,
+.zoom-btn:focus-visible {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .zoom-btn:hover,
+[data-theme="dark"] .zoom-btn:focus-visible {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.zoom-btn:active {
+    transform: translateY(1px);
+}
+
+.zoom-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+#plot-svg .zoom-background,
+.zoom-background {
+    touch-action: pan-y pinch-zoom;
 }
 
 #plot-svg {
@@ -1234,7 +1336,7 @@ select:focus {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: 1000;
+    z-index: var(--z-tooltip);
     max-width: 400px;
 }
 
@@ -1283,60 +1385,6 @@ select:focus {
 
 .tooltip-source:hover {
     text-decoration: underline;
-}
-
-/* Band Popup Styles */
-.band-popup {
-    position: absolute;
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow-lg);
-    pointer-events: none;
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1001;
-    max-width: 400px;
-}
-
-.band-popup.visible {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto;
-}
-
-.band-popup-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.band-popup-plot {
-    height: 200px;
-    margin-bottom: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background-color: var(--bg-secondary);
-}
-
-.band-popup-button {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    width: 100%;
-}
-
-.band-popup-button:hover {
-    background-color: #0056b3;
 }
 
 /* Plot Elements */
@@ -1434,11 +1482,7 @@ select:focus {
     .plot-container {
         height: 500px;
     }
-    
-    .tooltip.mobile-pinned,
-    .band-popup {
-        max-width: 90vw;
-    }
+
 }
 
 /* Loading Animation */

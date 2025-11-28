@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universe Scales</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.3">
+<link rel="stylesheet" href="css/mobile.css?v=1.3">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -55,6 +55,13 @@
         <main class="main">
             <div id="plot-container" class="plot-container">
                 <svg id="plot-svg"></svg>
+                <div class="zoom-controls" aria-label="Plot zoom and pan controls">
+                    <button class="zoom-btn zoom-btn--left" data-action="pan-left" aria-label="Pan left">←</button>
+                    <button class="zoom-btn zoom-btn--reset" data-action="reset" aria-label="Reset zoom">⟳</button>
+                    <button class="zoom-btn zoom-btn--right" data-action="pan-right" aria-label="Pan right">→</button>
+                    <button class="zoom-btn zoom-btn--plus" data-action="zoom-in" aria-label="Zoom in">+</button>
+                    <button class="zoom-btn zoom-btn--minus" data-action="zoom-out" aria-label="Zoom out">−</button>
+                </div>
             </div>
             
             <div class="unit-selector-container">
@@ -161,14 +168,6 @@
                     <p class="tooltip-value"></p>
                     <p class="tooltip-description"></p>
                     <a class="tooltip-source" href="#" target="_blank"></a>
-                </div>
-            </div>
-            
-            <div id="band-popup" class="band-popup">
-                <div class="band-popup-content">
-                    <h3 class="band-popup-title"></h3>
-                    <div class="band-popup-plot"></div>
-                    <button class="band-popup-button">Open Detailed View</button>
                 </div>
             </div>
         </main>
