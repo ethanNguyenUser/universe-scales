@@ -1,5 +1,13 @@
 /* Mobile-only overrides to keep desktop CSS clean */
 
+/* Disable pinch zoom on mobile - only allow button-based zooming */
+@media (max-width: 1024px) {
+    #plot-svg .zoom-background,
+    .zoom-background {
+        touch-action: pan-y !important; /* Remove pinch-zoom on mobile */
+    }
+}
+
 @media (max-width: 1024px) {
     .header h1 {
         font-size: 2rem;
@@ -12,8 +20,6 @@
         justify-content: center;
         align-items: center;
     }
-
-
 
     .zoom-controls {
         position: absolute;

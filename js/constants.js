@@ -63,6 +63,7 @@ const CONFIG = {
     // Zoom behavior
     ZOOM_SCALE_MIN: 0.1,
     ZOOM_SCALE_MAX: 100,
+    ZOOM_TRANSLATE_PADDING_RATIO: 0.15, // Allow slight overscroll so button zooms can re-center
     
     // Domain extent
     EXTENT_LOWER_MULTIPLIER: 0.1, // Extend lower bound for text label space

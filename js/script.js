@@ -743,7 +743,7 @@ class UniversalScales {
         
         // Update zoom behavior translate extent for new width
         if (this.zoomBehavior) {
-            this.zoomBehavior.translateExtent([[0, -Infinity], [this.width, Infinity]]);
+            this.zoomBehavior.translateExtent(this.getZoomTranslateExtent());
         }
         
         // Recalculate transform to match current domain with new width
@@ -911,9 +911,17 @@ class UniversalScales {
         alert(message);
     }
     
+    isMobileDevice() {
+        // Detect if we're on a mobile/touch device
+        return ('ontouchstart' in window) || window.matchMedia('(hover: none)').matches;
+    }
+    
     setupZoom() {
         // Store actual item extent (without the 0.1 multiplier) for zoom limits
         this.actualItemExtent = null;
+        
+        // Detect if we're on mobile to disable pinch zoom
+        const isMobile = this.isMobileDevice();
         
         // Create a background rectangle for visual feedback and event capture
         // This covers the entire container (including margins) for seamless panning
@@ -928,20 +936,15 @@ class UniversalScales {
             .attr('fill', 'transparent')
             .attr('cursor', 'grab')
             .style('pointer-events', 'all')
-            .style('touch-action', 'pan-y pinch-zoom');
+            .style('touch-action', isMobile ? 'pan-y' : 'pan-y pinch-zoom');
         
         // Create zoom behavior that only affects x-axis
         this.zoomBehavior = d3.zoom()
             .scaleExtent([CONFIG.ZOOM_SCALE_MIN, CONFIG.ZOOM_SCALE_MAX]) // Will be constrained further in handleZoom
-            .translateExtent([[0, -Infinity], [this.width, Infinity]]) // Allow panning horizontally
+            .translateExtent(this.getZoomTranslateExtent()) // Allow panning horizontally with padding
             .filter((event) => {
-                // Allow wheel events (zooming) anywhere
-                if (event.type === 'wheel') return true;
-                
-                const pointerType = (event.pointerType || '').toLowerCase();
-                const isTouchPointer = pointerType === 'touch' || pointerType === 'pen';
-                if (event.type === 'touchstart' || isTouchPointer) {
-                    // Let the browser handle scrolling/pinch-zoom on touch devices
+                // On mobile, block wheel events and multi-touch gestures (pinch zoom)
+                if (isMobile && (event.type === 'touchstart' || isTouchPointer)) {
                     return false;
                 }
                 
@@ -995,6 +998,7 @@ class UniversalScales {
                 const isTouchLike = (sourceEvent && sourceEvent.type && sourceEvent.type.startsWith('touch')) 
                     || pointerType === 'touch' 
                     || pointerType === 'pen';
+
                 if (!isTouchLike) {
                     const currentPosition = this.getSourceEventPosition(sourceEvent);
                     if (this.dragStartY !== null && currentPosition) {
@@ -1027,7 +1031,7 @@ class UniversalScales {
         // Items on top will still receive their own pointer events
         this.mainGroup
             .call(this.zoomBehavior)
-            .style('touch-action', 'pan-y pinch-zoom');
+            .style('touch-action', isMobile ? 'pan-y' : 'pan-y pinch-zoom');
         
         // Add double-click to reset zoom (only on background)
         this.mainGroup.on('dblclick', (event) => {
@@ -1105,16 +1109,21 @@ class UniversalScales {
                 event.preventDefault();
                 if (!this.zoomBehavior || !this.mainGroup) return;
 
+                const zoomCenter = [
+                    (this.width || 0) / 2,
+                    (this.height || 0) / 2
+                ];
+
                 switch (action) {
                     case 'zoom-in':
                         this.mainGroup.transition()
                             .duration(200)
-                            .call(this.zoomBehavior.scaleBy, 1.5);
+                            .call(this.zoomBehavior.scaleBy, 1.5, zoomCenter);
                         break;
                     case 'zoom-out':
                         this.mainGroup.transition()
                             .duration(200)
-                            .call(this.zoomBehavior.scaleBy, 1 / 1.5);
+                            .call(this.zoomBehavior.scaleBy, 1 / 1.5, zoomCenter);
                         break;
                     case 'pan-left':
                         this.mainGroup.transition()
@@ -1151,6 +1160,16 @@ class UniversalScales {
         }
     }
 
+    getZoomTranslateExtent() {
+        const paddingRatio = CONFIG.ZOOM_TRANSLATE_PADDING_RATIO || 0;
+        const padding = (this.width || 0) * paddingRatio;
+        const plotWidth = this.width || 0;
+        return [
+            [-padding, -Infinity],
+            [plotWidth + padding, Infinity]
+        ];
+    }
+    
     getSourceEventPosition(sourceEvent) {
         if (!sourceEvent) return null;
         
