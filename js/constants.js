@@ -63,11 +63,14 @@ const CONFIG = {
     // Zoom behavior
     ZOOM_SCALE_MIN: 0.1,
     ZOOM_SCALE_MAX: 100,
-    ZOOM_TRANSLATE_PADDING_RATIO: 0.15, // Allow slight overscroll so button zooms can re-center
+    // Allow generous horizontal overscroll so zoom/pan can reach both min and max items,
+    // even on narrow mobile portrait at high zoom levels. Domain clamping in handleZoom
+    // still ensures we never see beyond the actual item extent.
+    ZOOM_TRANSLATE_PADDING_RATIO: 10,
     
     // Domain extent
     EXTENT_LOWER_MULTIPLIER: 0.1, // Extend lower bound for text label space
-    EXTENT_UPPER_MULTIPLIER: 1e10, // Extend upper bound for domain
+    EXTENT_UPPER_MULTIPLIER: 1e1, // Extend upper bound for domain
     
     // Tick generation thresholds
     TICK_ZOOM_LEVEL_CHANGE_THRESHOLD: 0.15, // 15% change in range (lower for more responsive tick updates)

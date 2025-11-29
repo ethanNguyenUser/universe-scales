@@ -331,19 +331,15 @@ class UniversalScales {
             const response = await fetch(`data/${dimension}.yaml`);
             const yamlText = await response.text();
             this.dimensionData = jsyaml.load(yamlText);
-            
-            // Reset zoom when dimension changes
-            if (this.originalXDomain && this.zoomBehavior) {
-                // Reset xScale to original domain
-                this.xScale.domain(this.originalXDomain);
-                
-                // Reset zoom transform
-                this.mainGroup.transition()
-                    .duration(CONFIG.RESET_ZOOM_TRANSITION_DURATION)
-                    .call(this.zoomBehavior.transform, d3.zoomIdentity);
-                
-                // Update the plot
-                this.plot.updatePlotAfterZoom();
+
+            // Fully reset zoom state when dimension changes so new plots start zoomed out
+            this.originalXDomain = null;
+            this.actualItemExtent = null;
+            if (this.zoomBehavior && this.mainGroup) {
+                // Immediately reset transform to identity (no animation) so updatePlot
+                // can establish a fresh domain based on the new dimension data
+                this.mainGroup.interrupt();
+                this.mainGroup.call(this.zoomBehavior.transform, d3.zoomIdentity);
             }
             
             // Reset tick cache when dimension changes
@@ -1106,8 +1102,8 @@ class UniversalScales {
                 button.style.gridArea = areaMap[action];
             }
 
-            // Helper function to perform the action
-            const performAction = () => {
+            // Helper function to perform a single step of the action
+            const performAction = (useTransition = false) => {
                 if (!this.zoomBehavior || !this.mainGroup) return;
 
                 const zoomCenter = [
@@ -1117,14 +1113,24 @@ class UniversalScales {
 
                 switch (action) {
                     case 'zoom-in':
-                        this.mainGroup.transition()
-                            .duration(200)
-                            .call(this.zoomBehavior.scaleBy, 1.5, zoomCenter);
+                        if (useTransition) {
+                            this.mainGroup.transition()
+                                .duration(200)
+                                .call(this.zoomBehavior.scaleBy, 1.5, zoomCenter);
+                        } else {
+                            this.mainGroup
+                                .call(this.zoomBehavior.scaleBy, 1.03, zoomCenter);
+                        }
                         break;
                     case 'zoom-out':
-                        this.mainGroup.transition()
-                            .duration(200)
-                            .call(this.zoomBehavior.scaleBy, 1 / 1.5, zoomCenter);
+                        if (useTransition) {
+                            this.mainGroup.transition()
+                                .duration(200)
+                                .call(this.zoomBehavior.scaleBy, 1 / 1.5, zoomCenter);
+                        } else {
+                            this.mainGroup
+                                .call(this.zoomBehavior.scaleBy, 1 / 1.03, zoomCenter);
+                        }
                         break;
                     case 'pan-left':
                     case 'pan-right': {
@@ -1132,11 +1138,16 @@ class UniversalScales {
                         const currentTransform = d3.zoomTransform(this.mainGroup.node());
                         const zoomLevel = currentTransform ? currentTransform.k : 1;
                         // Pan distance is inversely proportional to zoom level (more zoomed in = smaller pan)
-                        const basePanDistance = (this.width * 0.1) / zoomLevel;
+                        const basePanDistance = (this.width * 0.04) / zoomLevel;
                         const panDistance = action === 'pan-left' ? basePanDistance : -basePanDistance;
-                        this.mainGroup.transition()
-                            .duration(200)
-                            .call(this.zoomBehavior.translateBy, panDistance, 0);
+                        if (useTransition) {
+                            this.mainGroup.transition()
+                                .duration(200)
+                                .call(this.zoomBehavior.translateBy, panDistance, 0);
+                        } else {
+                            this.mainGroup
+                                .call(this.zoomBehavior.translateBy, panDistance, 0);
+                        }
                         break;
                     }
                     case 'reset':
@@ -1160,17 +1171,17 @@ class UniversalScales {
                 event.preventDefault();
                 if (action === 'reset') {
                     // Reset button works on click only
-                    performAction();
+                    performAction(true);
                     return;
                 }
 
-                // Perform action immediately
-                performAction();
+                // Perform one smooth step immediately (no transition for responsiveness)
+                performAction(false);
 
-                // Then repeat at intervals
+                // Then repeat with small, transition-free steps
                 const intervalId = setInterval(() => {
-                    performAction();
-                }, 100); // Repeat every 100ms
+                    performAction(false);
+                }, 40); // Repeat every 40ms for smooth motion
 
                 this.buttonIntervals[action] = intervalId;
             };
@@ -1193,7 +1204,7 @@ class UniversalScales {
             if (action === 'reset') {
                 button.addEventListener('click', (event) => {
                     event.preventDefault();
-                    performAction();
+                    performAction(true);
                 });
             }
         });
@@ -1292,14 +1303,22 @@ class UniversalScales {
             
             // Constrain to actual item extent (can't zoom out beyond items) unless we're resetting
             if (shouldConstrain) {
-                if (currentVisibleLogRange > (logActualMax - logActualMin)) {
+                const logItemRange = logActualMax - logActualMin;
+                
+                if (currentVisibleLogRange > logItemRange) {
                     // Zoomed out to max - show full item range
                     newLogMin = logActualMin;
                     newLogMax = logActualMax;
                     constrained = true;
                 } else if (newLogMin < logActualMin) {
+                    // Clamp left side: keep window width, align to min
                     newLogMin = logActualMin;
                     newLogMax = newLogMin + currentVisibleLogRange;
+                    constrained = true;
+                } else if (newLogMax > logActualMax) {
+                    // Clamp right side: keep window width, align to max
+                    newLogMax = logActualMax;
+                    newLogMin = newLogMax - currentVisibleLogRange;
                     constrained = true;
                 }
             }
@@ -1383,22 +1402,19 @@ class UniversalScales {
         // Stop any in-progress zoom transitions so reset isn't interrupted
         this.mainGroup.interrupt();
 
-        // Ensure domain returns to original extent before re-render
-        this.xScale.domain(this.originalXDomain);
-        this.isResettingView = true;
-
+        // Smoothly animate transform back to identity; handleZoom will update the domain
+        // based on the zoom transform so we don't need to manually change xScale here.
         const transition = this.mainGroup.transition()
             .duration(CONFIG.RESET_ZOOM_TRANSITION_DURATION)
             .call(this.zoomBehavior.transform, d3.zoomIdentity);
-        
-        const finalize = () => {
-            this.isResettingView = false;
-            this.plot.updatePlotAfterZoom();
-        };
 
-        transition.on('end', finalize).on('interrupt', finalize).on('start', () => {
-            this.isResettingView = true;
-        });
+        transition
+            .on('start', () => {
+                this.isResettingView = true;
+            })
+            .on('end interrupt', () => {
+                this.isResettingView = false;
+            });
     }
 }
 
