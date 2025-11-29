@@ -1,4 +1,4 @@
-# Universal Scales
+# [Universe Scales](https://ethannguyenuser.github.io/universe-scales/)
 
 An interactive logarithmic visualization of the universe's dimensions, from quantum to cosmic scales.
 

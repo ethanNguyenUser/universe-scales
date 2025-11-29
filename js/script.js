@@ -36,6 +36,7 @@ class UniversalScales {
         this.zoomBackground = null; // Will be set by setupZoom
         this.tooltipPinned = false; // Track if tooltip is pinned (clicked on desktop)
         this.isResettingView = false; // Track when a programmatic reset is in progress
+        this.buttonIntervals = {}; // Track active intervals for hold-down buttons
         
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
@@ -1105,8 +1106,8 @@ class UniversalScales {
                 button.style.gridArea = areaMap[action];
             }
 
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
+            // Helper function to perform the action
+            const performAction = () => {
                 if (!this.zoomBehavior || !this.mainGroup) return;
 
                 const zoomCenter = [
@@ -1126,22 +1127,75 @@ class UniversalScales {
                             .call(this.zoomBehavior.scaleBy, 1 / 1.5, zoomCenter);
                         break;
                     case 'pan-left':
+                    case 'pan-right': {
+                        // Get current zoom level to adjust pan distance
+                        const currentTransform = d3.zoomTransform(this.mainGroup.node());
+                        const zoomLevel = currentTransform ? currentTransform.k : 1;
+                        // Pan distance is inversely proportional to zoom level (more zoomed in = smaller pan)
+                        const basePanDistance = (this.width * 0.1) / zoomLevel;
+                        const panDistance = action === 'pan-left' ? basePanDistance : -basePanDistance;
                         this.mainGroup.transition()
                             .duration(200)
-                            .call(this.zoomBehavior.translateBy, this.width * 0.1, 0);
+                            .call(this.zoomBehavior.translateBy, panDistance, 0);
                         break;
-                    case 'pan-right':
-                        this.mainGroup.transition()
-                            .duration(200)
-                            .call(this.zoomBehavior.translateBy, -this.width * 0.1, 0);
-                        break;
+                    }
                     case 'reset':
                         this.resetZoom();
                         break;
                     default:
                         break;
                 }
+            };
+
+            // Stop continuous action
+            const stopAction = () => {
+                if (this.buttonIntervals[action]) {
+                    clearInterval(this.buttonIntervals[action]);
+                    delete this.buttonIntervals[action];
+                }
+            };
+
+            // Start continuous action (for pan/zoom buttons only, not reset)
+            const startAction = (event) => {
+                event.preventDefault();
+                if (action === 'reset') {
+                    // Reset button works on click only
+                    performAction();
+                    return;
+                }
+
+                // Perform action immediately
+                performAction();
+
+                // Then repeat at intervals
+                const intervalId = setInterval(() => {
+                    performAction();
+                }, 100); // Repeat every 100ms
+
+                this.buttonIntervals[action] = intervalId;
+            };
+
+            // Handle mouse events
+            button.addEventListener('mousedown', startAction);
+            button.addEventListener('mouseup', stopAction);
+            button.addEventListener('mouseleave', stopAction); // Stop if mouse leaves button
+
+            // Handle touch events for mobile
+            button.addEventListener('touchstart', (event) => {
+                startAction(event);
+                // Prevent click event from firing after touch
+                event.preventDefault();
             });
+            button.addEventListener('touchend', stopAction);
+            button.addEventListener('touchcancel', stopAction);
+
+            // Also keep click handler for reset button and as fallback
+            if (action === 'reset') {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    performAction();
+                });
+            }
         });
 
         if ('IntersectionObserver' in window) {
