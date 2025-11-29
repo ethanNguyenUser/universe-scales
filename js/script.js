@@ -32,6 +32,7 @@ class UniversalScales {
         this.enableAudioHandler = null; // Store reference to enableAudio handler for cleanup
         this.zoomUpdatePending = false; // Throttle zoom updates for performance
         this.actualItemExtent = null; // Store actual item extent (for zoom limits)
+        this.originalItemsHeight = null; // Store original itemsHeight to preserve vertical layout when zoomed
         this.mainGroup = null; // Will be set by plot renderer
         this.zoomBackground = null; // Will be set by setupZoom
         this.tooltipPinned = false; // Track if tooltip is pinned (clicked on desktop)
@@ -756,16 +757,13 @@ class UniversalScales {
         
         // Only update plot if not zoomed, or update while preserving zoom state
         if (wasZoomed) {
-            // Preserve zoom by updating plot without resetting domain
-            // But we still need to update SVG height and yScale for proper item positioning
-            if (this.dimensionData) {
-                const allItems = this.getAllItems();
-                const numItems = allItems.length;
+            // Preserve current zoom level and vertical layout; just adapt to new size
+            if (this.dimensionData && this.yScale && this.originalItemsHeight !== null) {
+                // Use the stored original itemsHeight to preserve exact vertical layout
+                // This prevents items from shifting when mobile config changes FIXED_VERTICAL_SPACING
+                const itemsHeight = this.originalItemsHeight;
                 
-                // Calculate required height for items using fixed spacing
-                const itemsHeight = (numItems > 0) ? CONFIG.BOTTOM_PADDING + ((numItems - 1) * CONFIG.FIXED_VERTICAL_SPACING) + CONFIG.TOP_PADDING : CONFIG.BOTTOM_PADDING + CONFIG.TOP_PADDING;
-                
-                // Calculate total SVG height (items + margins)
+                // Recompute SVG height from original vertical extent (don't change layout)
                 const requiredSvgHeight = itemsHeight + this.margin.top + this.margin.bottom;
                 const svgHeight = Math.max(CONFIG.MIN_SVG_HEIGHT, requiredSvgHeight);
                 
@@ -775,10 +773,9 @@ class UniversalScales {
                 // Update inner plot height
                 this.height = svgHeight - this.margin.top - this.margin.bottom;
                 
-                // Update yScale range to use the new height
+                // Update yScale range to use the new height, keeping the same domain
                 this.yScale.range([this.height, 0]);
-                
-                // Set yScale domain to match the itemsHeight so x-axis is at bottom
+                // Ensure domain matches original itemsHeight exactly
                 this.yScale.domain([0, itemsHeight]);
                 
                 // Update zoom background rectangle to cover full container
@@ -789,7 +786,7 @@ class UniversalScales {
                         .attr('height', this.height + this.margin.top + this.margin.bottom);
                 }
                 
-                // Update axes positions
+                // Update axes positions based on yScale
                 this.xAxis.attr('transform', `translate(0,${this.yScale(0)})`);
                 this.xAxisTop.attr('transform', `translate(0,${this.yScale(itemsHeight)})`);
             }

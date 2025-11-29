@@ -21,6 +21,7 @@ class PlotRenderer {
         this.lastTickDomain = null; // Store domain when ticks were last calculated
         this.lastTickLogRange = null; // Store log range for zoom level tracking
         this.actualItemExtent = null; // Store actual item extent (for zoom limits)
+        this.originalItemsHeight = null; // Store original itemsHeight to preserve vertical layout when zoomed
     }
     
     initPlot() {
@@ -390,7 +391,9 @@ class PlotRenderer {
             .attr('class', 'item-group')
             .attr('transform', d => {
                 const x = this.xScale(d.convertedValue); // Keep points at true position
-                const y = this.height - d.yPosition; // Convert from bottom-up to top-down coordinates
+                // Use yScale to convert yPosition (in domain units) to screen coordinates
+                // This ensures consistent positioning even when height changes
+                const y = this.yScale(d.yPosition);
                 return `translate(${x},${y})`;
             });
         
@@ -639,6 +642,10 @@ class PlotRenderer {
         // Calculate required height for items using fixed spacing
         const itemsHeight = (numItems > 0) ? CONFIG.BOTTOM_PADDING + ((numItems - 1) * CONFIG.FIXED_VERTICAL_SPACING) + CONFIG.TOP_PADDING : CONFIG.BOTTOM_PADDING + CONFIG.TOP_PADDING;
         
+        // Store original itemsHeight to preserve vertical layout when zoomed and resizing
+        this.originalItemsHeight = itemsHeight;
+        this.app.originalItemsHeight = itemsHeight;
+        
         // Calculate total SVG height (items + margins)
         const requiredSvgHeight = itemsHeight + this.margin.top + this.margin.bottom;
         const svgHeight = Math.max(CONFIG.MIN_SVG_HEIGHT, requiredSvgHeight);
@@ -761,26 +768,25 @@ class PlotRenderer {
         // Update grid
         this.updateGrid();
         
-        // Update vertical lines and item positions
-        const allItems = this.app.getAllItems();
-        const positionedItems = this.positionItems(allItems);
-        this.calculateHorizontalOffsets(positionedItems);
+        // Update vertical lines and item positions using existing layout data
         const yDomain = this.yScale.domain();
         const yTop = this.yScale(yDomain[1]);
         const yBottom = this.yScale(0);
         
         // Update item positions based on new scale
+        // Use yScale to convert yPosition (which is in domain units) to screen coordinates
+        // This ensures items stay in the same relative position even when height changes
         this.mainGroup.selectAll('.item-group')
-            .data(positionedItems)
             .attr('transform', d => {
                 const x = this.xScale(d.convertedValue);
-                const y = this.height - d.yPosition;
+                // yPosition is stored as distance from bottom in domain units (0 to itemsHeight)
+                // Use yScale to convert to screen coordinates, accounting for any height changes
+                const y = this.yScale(d.yPosition);
                 return `translate(${x},${y})`;
             });
         
         // Update vertical lines
         this.mainGroup.selectAll('.vertical-line')
-            .data(positionedItems)
             .attr('x1', d => this.xScale(d.convertedValue))
             .attr('x2', d => this.xScale(d.convertedValue))
             .attr('y1', yTop)
