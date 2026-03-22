@@ -4,7 +4,7 @@ An interactive logarithmic visualization of the universe's dimensions, from quan
 
 ## Features
 
-- **Interactive Logarithmic Plots**: Visualize items across 12 different dimensions on logarithmic scales
+- **Interactive Logarithmic Plots**: Visualize items across 16 different dimensions on logarithmic scales
 - **Multiple Dimensions**: Length, Duration, Speed, Acceleration, Jerk, Brightness, Force, Energy, Costs, Pressure, Young's Modulus, Yield Strength
 - **Pan & Zoom**: Drag to pan horizontally, scroll to zoom in/out, double-click to reset zoom
 - **Item Editor**: Visual editor to add, edit, and delete items with image upload support
@@ -15,6 +15,7 @@ An interactive logarithmic visualization of the universe's dimensions, from quan
 - **Background Music**: Optional ambient background music
 - **Responsive Design**: Works on desktop and mobile devices
 - **URL Management**: Shareable links for specific dimensions
+- **Canonical Dataset Pipeline**: Build a normalized SQLite corpus and derive the site YAML from it
 
 ## Dimensions Covered
 
@@ -30,6 +31,10 @@ An interactive logarithmic visualization of the universe's dimensions, from quan
 10. **Pressure**: From vacuum to black hole pressure
 11. **Young's Modulus**: Material stiffness from rubber to neutron stars
 12. **Yield Strength**: Material strength from foam to cosmic extremes
+13. **Mass**: From electrons to the observable universe
+14. **Area**: From particle cross-sections to cosmic boundaries
+15. **Volume**: From molecules to cosmological structures
+16. **Density**: From intergalactic gas to neutron star matter
 
 ## Data Structure
 
@@ -59,6 +64,16 @@ Each dimension is defined in a YAML file with:
 - **Data**: YAML files parsed with js-yaml
 - **Currency API**: exchangerate-api.com for live rates
 - **Deployment**: GitHub Pages compatible
+
+## Canonical Dataset
+
+The project now includes a normalized SQLite-backed data pipeline for the flagship dimensions `length`, `mass`, `area`, `volume`, `density`, and `duration`.
+
+- Build the dataset: `./venv/bin/python scripts/dataset/build_dataset.py`
+- Verify the generated artifacts: `./venv/bin/python scripts/dataset/verify_dataset.py`
+- Query the dataset: `./venv/bin/python scripts/query_dataset.py between mass 1e-9 1e9 --selected-only`
+
+See [DATASET_PIPELINE.md](/Users/ethan/Documents/GitHub/universe-scales/DATASET_PIPELINE.md) for the source model, output artifacts, and contributor workflow.
 
 ## File Structure
 
@@ -90,8 +105,10 @@ Each dimension is defined in a YAML file with:
 │   └── yield-strength.yaml
 ├── scripts/            # Python utility scripts
 │   ├── download_images.py    # Automatic image downloader
-│   └── sort_yaml_items.py    # YAML item sorter
+│   ├── sort_yaml_items.py    # YAML item sorter
+│   └── generate_thumbnails.py # Generate optimized thumbnails for bandwidth savings
 ├── images/             # Item images
+│   └── thumbs/         # Optimized thumbnail versions (generated)
 └── README.md           # This file
 ```
 
@@ -117,6 +134,15 @@ To add new items or dimensions:
 **Utility Scripts:**
 - `scripts/download_images.py`: Automatically downloads images for items from Wikipedia and Unsplash
 - `scripts/sort_yaml_items.py`: Sorts YAML file items by their value field
+- `scripts/generate_thumbnails.py`: Generates optimized thumbnail versions of images to reduce bandwidth usage (see SCALABILITY_ANALYSIS.md)
+- `scripts/suppress_broken_pipe.py`: HTTP server wrapper that suppresses harmless BrokenPipeError exceptions for cleaner logs
+
+## Performance & Scalability
+
+The site uses optimized thumbnails by default to reduce bandwidth usage:
+- Thumbnails load automatically (faster, lower bandwidth)
+- Click thumbnails to view full-resolution images
+- See `SCALABILITY_ANALYSIS.md` for detailed scalability analysis and optimization strategies
 
 ## License
 

@@ -1,0 +1,1069 @@
+dimension: mass
+base_unit: kilograms
+dimension_description: Mass tracks inertia and the amount of matter under a stated definition, from subatomic particles to galaxies. Some entries are direct measurements, while others are derived estimates such as the mass of a lake from its volume and density. Every item names the object and the measurement basis so the scale remains comparable.
+related_resources:
+- name: Wikidata mass property
+  url: https://www.wikidata.org/wiki/Property:P2067
+- name: Mass
+  url: https://en.wikipedia.org/wiki/Mass
+show_limitations: true
+units:
+- conversion_factor: 1.0
+  description: The kilogram is the SI base unit of mass. All canonical mass values in this dataset are stored in kilograms before conversion.
+  name: kilograms
+  symbol: kg
+- conversion_factor: 1000.0
+  description: Grams are convenient for laboratory and everyday masses.
+  name: grams
+  symbol: g
+- conversion_factor: 1000000.0
+  description: Milligrams make very small biological and chemical masses readable.
+  name: milligrams
+  symbol: mg
+- conversion_factor: 0.001
+  description: Metric tons are useful for vehicles, buildings, and cargo.
+  name: metric tons
+  symbol: t
+- conversion_factor: 1.6744248350691536e-25
+  description: Earth masses are convenient for planetary comparisons.
+  name: earth masses
+  symbol: M_earth
+- conversion_factor: 5.027652086475616e-31
+  description: Solar masses are convenient for stars, galaxies, and cosmology.
+  name: solar masses
+  symbol: M_sun
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+items:
+- id: obs:mass:entity-electron
+  name: Electron
+  value: 9.109e-31
+  description: Rest mass of a single electron.
+  summary_short: Rest mass of a single electron.
+  description_medium: Rest mass of a single electron.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Electron
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Electron
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-electron
+    url: https://en.wikipedia.org/wiki/Electron
+    title: Electron
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: rest mass
+- id: obs:mass:entity-proton
+  name: Proton
+  value: 1.673e-27
+  description: Rest mass of a single proton.
+  summary_short: Rest mass of a single proton.
+  description_medium: Rest mass of a single proton.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Proton
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Proton
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-proton
+    url: https://en.wikipedia.org/wiki/Proton
+    title: Proton
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: rest mass
+- id: obs:mass:entity-water
+  name: Water molecule
+  value: 2.9915e-26
+  description: Mass of one H2O molecule.
+  summary_short: Mass of one H2O molecule.
+  description_medium: Mass of one H2O molecule.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Water molecule
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q283
+  value_type: derived
+  qualifiers:
+    derivation: 18 u converted to kilograms
+    measurement: single molecule
+- id: obs:mass:entity-ribosome
+  name: Ribosome
+  value: 4.0e-21
+  description: Characteristic mass of a bacterial ribosome.
+  summary_short: Characteristic mass of a bacterial ribosome.
+  description_medium: Characteristic mass of a bacterial ribosome.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ribosome
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Ribosome
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ribosome
+    url: https://en.wikipedia.org/wiki/Ribosome
+    title: Ribosome
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: representative bacterial ribosome
+- id: obs:mass:entity-influenza-virus
+  name: Influenza virion
+  value: 1.0e-18
+  description: Representative mass of a single influenza virus particle.
+  summary_short: Representative mass of a single influenza virus particle.
+  description_medium: Representative mass of a single influenza virus particle.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Influenza virion
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Influenza
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-influenza
+    url: https://en.wikipedia.org/wiki/Influenza
+    title: Influenza
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: single virion
+- id: obs:mass:entity-e-coli
+  name: Escherichia coli cell
+  value: 1.0e-15
+  description: Approximate wet mass of one E. coli cell.
+  summary_short: Approximate wet mass of one E.
+  description_medium: Approximate wet mass of one E. coli cell.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Escherichia coli cell
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Escherichia_coli
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escherichia-coli
+    url: https://en.wikipedia.org/wiki/Escherichia_coli
+    title: Escherichia coli
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    condition: wet mass
+    measurement: single cell
+- id: obs:mass:entity-human-ovum
+  name: Human ovum
+  value: 5.0e-10
+  description: Approximate mass of a single human egg cell.
+  summary_short: Approximate mass of a single human egg cell.
+  description_medium: Approximate mass of a single human egg cell.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human ovum
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Egg_cell
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-egg-cell
+    url: https://en.wikipedia.org/wiki/Egg_cell
+    title: Egg cell
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: single cell
+- id: obs:mass:scenario-grain-of-rice
+  name: Grain of rice
+  value: 2.0e-05
+  description: Representative mass of one dry grain of rice.
+  summary_short: Representative mass of one dry grain of rice.
+  description_medium: Representative mass of one dry grain of rice.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Grain of rice
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Rice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rice
+    url: https://en.wikipedia.org/wiki/Rice
+    title: Rice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    condition: dry
+    measurement: single grain
+- id: obs:mass:entity-honey-bee
+  name: Honey bee
+  value: 0.0001
+  description: Representative mass of an adult worker honey bee.
+  summary_short: Representative mass of an adult worker honey bee.
+  description_medium: Representative mass of an adult worker honey bee.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Honey bee
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Honey_bee
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-honey-bee
+    url: https://en.wikipedia.org/wiki/Honey_bee
+    title: Honey bee
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: worker adult
+- id: obs:mass:entity-house-mouse
+  name: House mouse
+  value: 0.02
+  description: Representative body mass of an adult house mouse.
+  summary_short: Representative body mass of an adult house mouse.
+  description_medium: Representative body mass of an adult house mouse.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: House mouse
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/House_mouse
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-house-mouse
+    url: https://en.wikipedia.org/wiki/House_mouse
+    title: House mouse
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: adult body mass
+- id: obs:mass:entity-cat
+  name: Cat
+  value: 4.0
+  description: Representative mass of an adult domestic cat.
+  summary_short: Representative mass of an adult domestic cat.
+  description_medium: Representative mass of an adult domestic cat.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cat
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Cat
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cat
+    url: https://en.wikipedia.org/wiki/Cat
+    title: Cat
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q146
+  value_type: derived
+  qualifiers:
+    measurement: adult body mass
+- id: obs:mass:entity-human
+  name: Human
+  value: 70.0
+  description: Representative mass of an adult human.
+  summary_short: Representative mass of an adult human.
+  description_medium: Representative mass of an adult human.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Human_body_weight
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body-weight
+    url: https://en.wikipedia.org/wiki/Human_body_weight
+    title: Human body weight
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q5
+  value_type: derived
+  qualifiers:
+    measurement: adult body mass
+- id: obs:mass:entity-giraffe
+  name: Giraffe
+  value: 1200.0
+  description: Representative mass of an adult giraffe.
+  summary_short: Representative mass of an adult giraffe.
+  description_medium: Representative mass of an adult giraffe.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Giraffe
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Giraffe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-giraffe
+    url: https://en.wikipedia.org/wiki/Giraffe
+    title: Giraffe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: adult body mass
+- id: obs:mass:scenario-family-car
+  name: Family car
+  value: 1500.0
+  description: Representative curb mass of a family sedan or hatchback.
+  summary_short: Representative curb mass of a family sedan or hatchback.
+  description_medium: Representative curb mass of a family sedan or hatchback.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Family car
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Car
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-car
+    url: https://en.wikipedia.org/wiki/Car
+    title: Car
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: curb mass
+- id: obs:mass:entity-blue-whale
+  name: Blue whale
+  value: 150000.0
+  description: Representative mass of a large adult blue whale.
+  summary_short: Representative mass of a large adult blue whale.
+  description_medium: Representative mass of a large adult blue whale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blue whale
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Blue_whale
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blue-whale
+    url: https://en.wikipedia.org/wiki/Blue_whale
+    title: Blue whale
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: adult body mass
+- id: obs:mass:scenario-boeing-747
+  name: Boeing 747
+  value: 400000.0
+  description: Approximate maximum takeoff mass of a Boeing 747.
+  summary_short: Approximate maximum takeoff mass of a Boeing 747.
+  description_medium: Approximate maximum takeoff mass of a Boeing 747.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Boeing 747
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Boeing_747
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-boeing-747
+    url: https://en.wikipedia.org/wiki/Boeing_747
+    title: Boeing 747
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: maximum takeoff mass
+- id: obs:mass:entity-eiffel-tower
+  name: Eiffel Tower
+  value: 10100000.0
+  description: Approximate structural mass of the Eiffel Tower.
+  summary_short: Approximate structural mass of the Eiffel Tower.
+  description_medium: Approximate structural mass of the Eiffel Tower.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Eiffel Tower
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Eiffel_Tower
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-eiffel-tower
+    url: https://en.wikipedia.org/wiki/Eiffel_Tower
+    title: Eiffel Tower
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: structural mass
+- id: obs:mass:entity-great-pyramid-of-giza
+  name: Great Pyramid of Giza
+  value: 5750000000.0
+  description: Approximate mass of the Great Pyramid of Giza.
+  summary_short: Approximate mass of the Great Pyramid of Giza.
+  description_medium: Approximate mass of the Great Pyramid of Giza.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Great Pyramid of Giza
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-great-pyramid-of-giza
+    url: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+    title: Great Pyramid of Giza
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: estimated total stone mass
+- id: obs:mass:entity-lake-superior
+  name: Lake Superior
+  value: 1.2e+16
+  description: Mass of Lake Superior's water using its volume and freshwater density.
+  summary_short: Mass of Lake Superior's water using its volume and freshwater density.
+  description_medium: Mass of Lake Superior's water using its volume and freshwater density.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lake Superior
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Lake_Superior
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lake-superior
+    url: https://en.wikipedia.org/wiki/Lake_Superior
+    title: Lake Superior
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: volume times density
+    measurement: water mass
+- id: obs:mass:entity-ceres
+  name: Ceres
+  value: 9.38e+20
+  description: Mass of the dwarf planet Ceres.
+  summary_short: Mass of the dwarf planet Ceres.
+  description_medium: Mass of the dwarf planet Ceres.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ceres
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ceres-dwarf-planet
+    url: https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)
+    title: Ceres (dwarf planet)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q596
+  value_type: measured
+  qualifiers:
+    measurement: gravitationally inferred mass
+- id: obs:mass:entity-moon
+  name: Moon
+  value: 7.35e+22
+  description: Mass of Earth's Moon.
+  summary_short: Mass of Earth's Moon.
+  description_medium: Mass of Earth's Moon.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Moon
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Moon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-moon
+    url: https://en.wikipedia.org/wiki/Moon
+    title: Moon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q405
+  value_type: measured
+  qualifiers:
+    measurement: gravitationally inferred mass
+- id: obs:mass:entity-earth
+  name: Earth
+  value: 5.972e+24
+  description: Mass of Earth.
+  summary_short: Mass of Earth.
+  description_medium: Mass of Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q2
+  value_type: measured
+  qualifiers:
+    measurement: planetary mass
+- id: obs:mass:entity-jupiter
+  name: Jupiter
+  value: 1.898e+27
+  description: Mass of Jupiter.
+  summary_short: Mass of Jupiter.
+  description_medium: Mass of Jupiter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Jupiter
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Jupiter
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jupiter
+    url: https://en.wikipedia.org/wiki/Jupiter
+    title: Jupiter
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q319
+  value_type: measured
+  qualifiers:
+    measurement: planetary mass
+- id: obs:mass:entity-sun
+  name: Sun
+  value: 1.989e+30
+  description: Mass of the Sun.
+  summary_short: Mass of the Sun.
+  description_medium: Mass of the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sun
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q525
+  value_type: measured
+  qualifiers:
+    measurement: stellar mass
+- id: obs:mass:entity-milky-way
+  name: Milky Way
+  value: 2.98e+42
+  description: Representative mass of the Milky Way including dark matter.
+  summary_short: Representative mass of the Milky Way including dark matter.
+  description_medium: Representative mass of the Milky Way including dark matter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Milky Way
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milky-way
+    url: https://en.wikipedia.org/wiki/Milky_Way
+    title: Milky Way
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: total estimated mass
+- id: obs:mass:entity-virgo-supercluster
+  name: Virgo Supercluster
+  value: 2.0e+45
+  description: Order-of-magnitude mass of the Virgo Supercluster.
+  summary_short: Order-of-magnitude mass of the Virgo Supercluster.
+  description_medium: Order-of-magnitude mass of the Virgo Supercluster.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Virgo Supercluster
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Virgo_Supercluster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-virgo-supercluster
+    url: https://en.wikipedia.org/wiki/Virgo_Supercluster
+    title: Virgo Supercluster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: estimated total mass
+- id: obs:mass:entity-universe
+  name: Observable universe
+  value: 1.0e+53
+  description: Order-of-magnitude mass of matter in the observable universe.
+  summary_short: Order-of-magnitude mass of matter in the observable universe.
+  description_medium: Order-of-magnitude mass of matter in the observable universe.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Observable universe
+    ingest_source: dataset/raw/curated/mass.json
+  source: https://en.wikipedia.org/wiki/Universe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-universe
+    url: https://en.wikipedia.org/wiki/Universe
+    title: Universe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q1
+  value_type: derived
+  qualifiers:
+    measurement: observable universe mass estimate

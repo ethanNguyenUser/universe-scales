@@ -4,7 +4,7 @@
 class ItemEditor {
     constructor(app) {
         this.app = app; // Reference to main UniversalScales instance
-        
+
         // DOM elements
         this.editorToggle = document.getElementById('editor-toggle');
         this.editorContent = document.getElementById('editor-content');
@@ -19,63 +19,70 @@ class ItemEditor {
         this.addUnitBtn = document.getElementById('add-unit-btn');
         this.deleteAllUnitsBtn = document.getElementById('delete-all-units-btn');
         this.clearDimensionInfoBtn = document.getElementById('clear-dimension-info-btn');
-        
+        this.sharePlotBtn = document.getElementById('share-plot-btn');
+
         // Store dimension and unit overrides
         this.dimensionOverrides = {};
         this.unitOverrides = {};
-        
+
         // Store section collapsed states
         this.sectionStates = {};
-        
+
         this.setupEventListeners();
         this.loadCustomItems();
         this.loadSectionStates();
         this.applySectionStates();
     }
-    
+
     setupEventListeners() {
         this.editorToggle.addEventListener('click', () => {
             this.toggleEditor();
         });
-        
+
         this.addItemBtn.addEventListener('click', () => {
             this.addNewItem();
         });
-        
+
         this.deleteAllItemsBtn.addEventListener('click', () => {
             this.deleteAllItems(true);
         });
-        
+
         this.addUnitBtn.addEventListener('click', () => {
             this.addNewUnit();
         });
-        
+
         this.deleteAllUnitsBtn.addEventListener('click', () => {
             this.deleteAllUnits(true);
         });
-        
+
         this.clearDimensionInfoBtn.addEventListener('click', () => {
             this.clearDimensionInfo();
         });
-        
+
         this.importYamlBtn.addEventListener('click', () => {
             this.showYamlImportModal();
         });
-        
+
         this.exportYamlBtn.addEventListener('click', () => {
             this.exportToYaml();
         });
-        
+
+        if (this.sharePlotBtn) {
+            this.sharePlotBtn.addEventListener('click', () => {
+                this.generateShareLink();
+            });
+        }
+
         // Setup save button
         this.setupSaveButton();
         // Setup undo button
         this.setupUndoButton();
     }
-    
+
     setupSaveButton() {
         // Check if button already exists
         let saveButton = document.getElementById('editor-save-all-btn');
-        
+
         if (!saveButton) {
             // Create save button and add it to the header
             saveButton = document.createElement('button');
@@ -83,7 +90,7 @@ class ItemEditor {
             saveButton.className = 'btn btn-primary';
             saveButton.textContent = 'Save All Changes';
             saveButton.onclick = () => this.saveAllItems();
-            
+
             // Add to editor-actions div
             const editorActions = document.querySelector('.editor-actions');
             if (editorActions) {
@@ -91,11 +98,11 @@ class ItemEditor {
             }
         }
     }
-    
+
     setupUndoButton() {
         // Check if button already exists
         let undoButton = document.getElementById('editor-undo-all-btn');
-        
+
         if (!undoButton) {
             // Create undo button and add it to the header
             undoButton = document.createElement('button');
@@ -103,7 +110,7 @@ class ItemEditor {
             undoButton.className = 'btn btn-secondary';
             undoButton.textContent = 'Undo All Changes';
             undoButton.onclick = () => this.undoAllChanges();
-            
+
             // Add to editor-actions div (before save button)
             const editorActions = document.querySelector('.editor-actions');
             if (editorActions) {
@@ -116,29 +123,29 @@ class ItemEditor {
             }
         }
     }
-    
+
     deleteAllItems(showConfirmation = true) {
         if (showConfirmation) {
             if (!confirm('Are you sure you want to delete ALL items? This will remove all original and custom items for this dimension.')) {
                 return;
             }
         }
-        
+
         // Initialize custom items array if needed
         if (!this.app.customItems[this.app.currentDimension]) {
             this.app.customItems[this.app.currentDimension] = [];
         }
-        
+
         // Get all original items
         const originalItems = this.app.dimensionData?.items || [];
-        
+
         // Mark all original items as deleted
         originalItems.forEach((item, index) => {
             // Check if there's already a marker for this item
             const existingMarker = this.app.customItems[this.app.currentDimension].find(
                 custom => custom.originalIndex === index
             );
-            
+
             if (existingMarker) {
                 // Update existing marker to mark as deleted
                 existingMarker.isDeleted = true;
@@ -153,36 +160,36 @@ class ItemEditor {
                 });
             }
         });
-        
+
         // Remove all standalone custom items (items with isCustom: true and no originalIndex)
         this.app.customItems[this.app.currentDimension] = this.app.customItems[this.app.currentDimension].filter(
             item => item.originalIndex !== undefined
         );
-        
+
         // Save to localStorage
         this.saveCustomItems();
-        
+
         // Refresh the editor display
         this.renderEditorItems();
-        
+
         // Update the plot
         this.app.plot.updatePlot();
-        
+
         if (showConfirmation) {
             alert('All items have been deleted!');
         }
     }
-    
+
     undoAllChanges() {
         if (!confirm('Are you sure you want to undo all changes? This will remove all custom items, edits, deletions, and metadata changes for this dimension.')) {
             return;
         }
-        
+
         // Clear all custom items for the current dimension
         if (this.app.customItems[this.app.currentDimension]) {
             this.app.customItems[this.app.currentDimension] = [];
         }
-        
+
         // Clear dimension and unit overrides for the current dimension
         if (this.dimensionOverrides[this.app.currentDimension]) {
             delete this.dimensionOverrides[this.app.currentDimension];
@@ -190,24 +197,24 @@ class ItemEditor {
         if (this.unitOverrides[this.app.currentDimension]) {
             delete this.unitOverrides[this.app.currentDimension];
         }
-        
+
         // Save to localStorage
         this.saveCustomItems();
-        
+
         // Refresh the editor display
         this.renderDimensionMetadata();
         this.renderUnits();
         this.renderEditorItems();
-        
+
         // Update the plot
         this.app.plot.updatePlot();
     }
-    
+
     toggleEditor() {
         const isExpanded = this.editorContent.style.display !== 'none';
         this.editorContent.style.display = isExpanded ? 'none' : 'block';
         this.editorToggle.classList.toggle('expanded', !isExpanded);
-        
+
         if (!isExpanded) {
             this.renderDimensionMetadata();
             this.renderUnits();
@@ -215,19 +222,19 @@ class ItemEditor {
             this.applySectionStates();
         }
     }
-    
+
     toggleSection(sectionId) {
         const section = document.getElementById(`${sectionId}-section`);
         if (!section) return;
-        
+
         const isCollapsed = section.classList.contains('collapsed');
         const newState = !isCollapsed; // Toggle: if collapsed, expand; if expanded, collapse
-        
+
         this.sectionStates[sectionId] = newState;
         section.classList.toggle('collapsed', newState);
         this.saveSectionStates();
     }
-    
+
     loadSectionStates() {
         const saved = localStorage.getItem('editorSectionStates');
         if (saved) {
@@ -246,7 +253,7 @@ class ItemEditor {
             };
         }
     }
-    
+
     saveSectionStates() {
         try {
             localStorage.setItem('editorSectionStates', JSON.stringify(this.sectionStates));
@@ -254,7 +261,7 @@ class ItemEditor {
             console.error('Error saving section states:', e);
         }
     }
-    
+
     applySectionStates() {
         Object.keys(this.sectionStates).forEach(sectionId => {
             const section = document.getElementById(`${sectionId}-section`);
@@ -263,88 +270,88 @@ class ItemEditor {
             }
         });
     }
-    
+
     renderDimensionMetadata() {
         if (!this.app.dimensionData) return;
-        
+
         // Get dimension name (from currentDimension or override)
-        const dimensionName = this.dimensionOverrides[this.app.currentDimension]?.name || 
-                             this.app.currentDimension;
-        const dimensionDescription = this.dimensionOverrides[this.app.currentDimension]?.description || 
-                                    this.app.dimensionData.dimension_description || '';
-        
+        const dimensionName = this.dimensionOverrides[this.app.currentDimension]?.name ||
+            this.app.currentDimension;
+        const dimensionDescription = this.dimensionOverrides[this.app.currentDimension]?.description ||
+            this.app.dimensionData.dimension_description || '';
+
         if (this.dimensionNameInput) {
             this.dimensionNameInput.value = dimensionName;
         }
         if (this.dimensionDescriptionInput) {
             this.dimensionDescriptionInput.value = dimensionDescription;
         }
-        
+
         // Update header to reflect dimension name
         this.updateEditorHeader();
     }
-    
+
     renderUnits() {
         if (!this.app.dimensionData || !this.unitsList) return;
-        
+
         // Clear the list completely
         this.unitsList.innerHTML = '';
-        
+
         // Get the current units array (which may have been reordered)
         const units = this.app.dimensionData.units || [];
         const overrides = this.unitOverrides[this.app.currentDimension] || {};
-        
+
         // Calculate display index based on visible units only
         let displayIndex = 1;
-        
+
         units.forEach((unit, arrayIndex) => {
             // Check if unit is deleted using the current array index
             const isDeleted = overrides[arrayIndex]?.isDeleted === true;
-            
+
             // Skip if unit is undefined or deleted
             if (!unit || isDeleted) {
                 return;
             }
-            
+
             // Create card with current array index and sequential display index
             const unitCard = this.createUnitEditorCard(unit, arrayIndex, displayIndex);
             this.unitsList.appendChild(unitCard);
             displayIndex++; // Increment only for visible units
         });
-        
+
         // Update header to reflect unit count
         this.updateEditorHeader();
     }
-    
+
     updateEditorHeader() {
         const editorHeader = document.querySelector('.editor-header h3');
         if (!editorHeader || !this.app.dimensionData) return;
-        
+
         // Get dimension name (from override or current dimension)
-        const dimensionName = this.dimensionOverrides[this.app.currentDimension]?.name || 
-                             this.app.currentDimension;
+        const dimensionName = this.dimensionOverrides[this.app.currentDimension]?.name ||
+            this.app.currentDimension;
         // Capitalize only first letter
         const dimensionNameCapitalized = dimensionName.charAt(0).toUpperCase() + dimensionName.slice(1).toLowerCase();
-        
+
         editorHeader.textContent = dimensionNameCapitalized;
-        
+
         // Update section headers with counts
         this.updateSectionHeaders();
-        
+
         // Update dimension dropdown
         this.updateDimensionSelector();
     }
-    
+
     updateDimensionSelector() {
         if (!this.app.dimensionSelect) return;
-        
+
         // Find the option for the current dimension
         const option = this.app.dimensionSelect.querySelector(`option[value="${this.app.currentDimension}"]`);
         if (!option) return;
-        
+
         // Get dimension name (from override or use default)
         const dimensionName = this.dimensionOverrides[this.app.currentDimension]?.name;
-        
+
         if (dimensionName) {
             // Use the override name, capitalize first letter
             const dimensionNameCapitalized = dimensionName.charAt(0).toUpperCase() + dimensionName.slice(1).toLowerCase();
@@ -359,58 +366,58 @@ class ItemEditor {
                     this.originalDimensionNames[opt.value] = opt.textContent;
                 });
             }
-            
+
             // Restore original name if available, otherwise use fallback
             const originalName = this.originalDimensionNames[this.app.currentDimension];
             if (originalName) {
                 option.textContent = originalName;
             } else {
                 // Fallback: capitalize dimension value
-                const defaultName = this.app.currentDimension.charAt(0).toUpperCase() + 
-                                  this.app.currentDimension.slice(1).replace(/-/g, ' ');
+                const defaultName = this.app.currentDimension.charAt(0).toUpperCase() +
+                    this.app.currentDimension.slice(1).replace(/-/g, ' ');
                 option.textContent = defaultName;
             }
         }
     }
-    
+
     updateSectionHeaders() {
         // Count units (excluding deleted ones)
         const units = this.app.dimensionData?.units || [];
-        const unitCount = units.filter((unit, idx) => 
+        const unitCount = units.filter((unit, idx) =>
             !this.unitOverrides[this.app.currentDimension]?.[idx]?.isDeleted
         ).length;
-        
+
         // Count items
         const allItems = this.getAllItemsForEditor();
         const itemCount = allItems.length;
-        
+
         // Update Units section header
         const unitsHeader = document.querySelector('#units-section .section-header-left h4');
         if (unitsHeader) {
             unitsHeader.textContent = `Units (${unitCount})`;
         }
-        
+
         // Update Items section header
         const itemsHeader = document.querySelector('#items-section .section-header-left h4');
         if (itemsHeader) {
             itemsHeader.textContent = `Items (${itemCount})`;
         }
     }
-    
+
     createUnitEditorCard(unit, index, displayIndex) {
         const card = document.createElement('div');
         card.className = 'unit-editor-card';
         card.dataset.unitIndex = index;
-        
+
         // Get override values if they exist
         const override = this.unitOverrides[this.app.currentDimension]?.[index];
         const unitName = override?.name !== undefined ? override.name : unit.name;
         const unitSymbol = override?.symbol !== undefined ? override.symbol : unit.symbol;
         const unitDescription = override?.description !== undefined ? override.description : (unit.description || '');
-        
+
         // Capitalize first letter for display
         const unitNameCapitalized = unitName ? unitName.charAt(0).toUpperCase() + unitName.slice(1).toLowerCase() : 'Unnamed Unit';
-        
+
         card.innerHTML = `
             <div class="unit-editor-card-header">
                 <div class="unit-editor-card-title-row">
@@ -438,11 +445,11 @@ class ItemEditor {
                 </div>
             </div>
         `;
-        
+
         // Add drag event listeners to the card for drop zones
         card.addEventListener('dragover', (e) => this.handleUnitDragOver(e));
         card.addEventListener('drop', (e) => this.handleUnitDrop(e, index));
-        
+
         // Make only the drag handle draggable
         const dragHandle = card.querySelector('.unit-drag-handle');
         if (dragHandle) {
@@ -456,16 +463,16 @@ class ItemEditor {
                 this.handleUnitDragEnd(e);
             });
         }
-        
+
         // Prevent dragging on inputs/textareas/buttons
         const inputs = card.querySelectorAll('input, textarea, button');
         inputs.forEach(input => {
             input.draggable = false;
         });
-        
+
         return card;
     }
-    
+
     handleUnitDragStart(e, index) {
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.setData('text/plain', index.toString());
@@ -475,26 +482,26 @@ class ItemEditor {
             card.classList.add('dragging');
         }
     }
-    
+
     handleUnitDragOver(e) {
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
-        
+
         const draggingCard = document.querySelector('.unit-editor-card.dragging');
         if (!draggingCard) return;
-        
+
         const cards = Array.from(document.querySelectorAll('.unit-editor-card:not(.dragging)'));
         const afterElement = cards.reduce((closest, card) => {
             const box = card.getBoundingClientRect();
             const offset = e.clientY - box.top - box.height / 2;
-            
+
             if (offset < 0 && offset > closest.offset) {
                 return { offset: offset, element: card };
             } else {
                 return closest;
             }
         }, { offset: Number.NEGATIVE_INFINITY }).element;
-        
+
         const unitsList = document.getElementById('units-list');
         if (afterElement == null) {
             unitsList.appendChild(draggingCard);
@@ -502,35 +509,35 @@ class ItemEditor {
             unitsList.insertBefore(draggingCard, afterElement);
         }
     }
-    
+
     handleUnitDrop(e, dropIndex) {
         e.preventDefault();
         e.stopPropagation();
-        
+
         const draggedIndex = parseInt(e.dataTransfer.getData('text/plain'));
-        
+
         // Get the dragged card (it's still in the DOM with the dragging class)
         const draggedCard = document.querySelector('.unit-editor-card.dragging');
         if (!draggedCard) return;
-        
+
         // Use setTimeout to ensure DOM has fully updated after handleUnitDragOver
         setTimeout(() => {
             // Get the final DOM order - include ALL cards in their current visual order
             // The dragged card is already in its new position due to handleUnitDragOver
             const unitsList = document.getElementById('units-list');
             if (!unitsList) return;
-            
+
             const allCards = Array.from(unitsList.querySelectorAll('.unit-editor-card'));
             const finalOrder = allCards.map(card => parseInt(card.dataset.unitIndex));
-            
+
             // Get current state
             const units = [...this.app.dimensionData.units];
             const oldOverrides = this.unitOverrides[this.app.currentDimension] || {};
-            
+
             // Separate visible and deleted units with their original indices
             const visibleUnits = [];
             const deletedUnits = [];
-            
+
             units.forEach((unit, idx) => {
                 const isDeleted = oldOverrides[idx]?.isDeleted;
                 if (isDeleted) {
@@ -539,12 +546,12 @@ class ItemEditor {
                     visibleUnits.push({ unit, originalIndex: idx });
                 }
             });
-            
+
             // Reorder visible units based on the final DOM order
             // finalOrder contains the old indices in their new visual order
             const reorderedVisibleUnits = [];
             const reorderedVisibleIndices = [];
-            
+
             finalOrder.forEach(oldIndex => {
                 const found = visibleUnits.find(v => v.originalIndex === oldIndex);
                 if (found) {
@@ -552,7 +559,7 @@ class ItemEditor {
                     reorderedVisibleIndices.push(found.originalIndex);
                 }
             });
-            
+
             // Make sure we didn't lose any units
             if (reorderedVisibleUnits.length !== visibleUnits.length) {
                 console.error('Unit reordering error: lost some units during reorder', {
@@ -563,14 +570,14 @@ class ItemEditor {
                 });
                 return;
             }
-            
+
             // Combine reordered visible units with deleted units
             // reorderedVisibleUnits is already an array of unit objects, not {unit, originalIndex}
             const reorderedUnits = [...reorderedVisibleUnits, ...deletedUnits.map(d => d.unit)];
-            
+
             // Remap overrides: old index -> new index
             const newOverrides = {};
-            
+
             // Map visible units' overrides to their new positions
             reorderedVisibleIndices.forEach((oldIndex, newIndex) => {
                 if (oldOverrides[oldIndex]) {
@@ -579,7 +586,7 @@ class ItemEditor {
                     newOverrides[newIndex].isDeleted = false;
                 }
             });
-            
+
             // Map deleted units' overrides to their positions (after visible units)
             deletedUnits.forEach((deleted, deletedIndex) => {
                 const newIndex = reorderedVisibleUnits.length + deletedIndex;
@@ -592,20 +599,20 @@ class ItemEditor {
                     newOverrides[newIndex] = { isDeleted: true };
                 }
             });
-            
+
             // Update the units array and overrides
             this.app.dimensionData.units = reorderedUnits;
             this.unitOverrides[this.app.currentDimension] = newOverrides;
-            
+
             this.saveCustomItems();
-            
+
             // Force a complete re-render - this will update numbering and recreate all cards
             this.renderUnits();
             this.app.updateUnitSelector();
             this.app.plot.updatePlot();
         }, 0);
     }
-    
+
     handleUnitDragEnd(e) {
         // Remove dragging class from the parent card
         const card = e.currentTarget.closest('.unit-editor-card');
@@ -613,7 +620,7 @@ class ItemEditor {
             card.classList.remove('dragging');
         }
     }
-    
+
     deleteUnit(index) {
         // Mark unit as deleted in overrides
         if (!this.unitOverrides[this.app.currentDimension]) {
@@ -623,22 +630,22 @@ class ItemEditor {
             this.unitOverrides[this.app.currentDimension][index] = {};
         }
         this.unitOverrides[this.app.currentDimension][index].isDeleted = true;
-        
+
         this.saveCustomItems();
         this.renderUnits();
         // Note: We'd need to update the unit selector in script.js, but for now just re-render
         this.app.updateUnitSelector();
         // Header is updated in renderUnits
     }
-    
+
     addNewUnit() {
         if (!this.app.dimensionData) return;
-        
+
         // Initialize units array if it doesn't exist
         if (!this.app.dimensionData.units) {
             this.app.dimensionData.units = [];
         }
-        
+
         // Create new unit with default values
         const newUnit = {
             name: '',
@@ -646,29 +653,29 @@ class ItemEditor {
             description: '',
             conversion_factor: 1
         };
-        
+
         // Add to units array at position 1 (beginning)
         this.app.dimensionData.units.unshift(newUnit);
-        
+
         // Re-render units
         this.renderUnits();
         this.app.updateUnitSelector();
     }
-    
+
     deleteAllUnits(showConfirmation = true) {
         if (showConfirmation) {
             if (!confirm('Are you sure you want to delete ALL units? This will remove all units for this dimension.')) {
                 return;
             }
         }
-        
+
         if (!this.app.dimensionData || !this.app.dimensionData.units) return;
-        
+
         // Initialize unit overrides if needed
         if (!this.unitOverrides[this.app.currentDimension]) {
             this.unitOverrides[this.app.currentDimension] = {};
         }
-        
+
         // Mark all units as deleted
         this.app.dimensionData.units.forEach((unit, index) => {
             if (!this.unitOverrides[this.app.currentDimension][index]) {
@@ -676,21 +683,21 @@ class ItemEditor {
             }
             this.unitOverrides[this.app.currentDimension][index].isDeleted = true;
         });
-        
+
         this.saveCustomItems();
         this.renderUnits();
         this.app.updateUnitSelector();
-        
+
         if (showConfirmation) {
             alert('All units have been deleted!');
         }
     }
-    
+
     clearDimensionInfo() {
         if (!confirm('Are you sure you want to clear the dimension name and description?')) {
             return;
         }
-        
+
         // Clear the input fields
         if (this.dimensionNameInput) {
             this.dimensionNameInput.value = '';
@@ -698,65 +705,65 @@ class ItemEditor {
         if (this.dimensionDescriptionInput) {
             this.dimensionDescriptionInput.value = '';
         }
-        
+
         // Remove dimension overrides
         if (this.dimensionOverrides[this.app.currentDimension]) {
             delete this.dimensionOverrides[this.app.currentDimension].name;
             delete this.dimensionOverrides[this.app.currentDimension].description;
-            
+
             // If the override object is now empty, remove it
             if (Object.keys(this.dimensionOverrides[this.app.currentDimension]).length === 0) {
                 delete this.dimensionOverrides[this.app.currentDimension];
             }
         }
-        
+
         this.saveCustomItems();
         this.renderDimensionMetadata();
     }
-    
+
     renderEditorItems() {
         if (!this.app.dimensionData) return;
-        
+
         this.itemsList.innerHTML = '';
-        
+
         // Get all items (original + custom)
         const allItems = this.getAllItemsForEditor();
-        
+
         // Sort items by value (smallest to largest) to match the plot order
         const sortedItems = [...allItems].sort((a, b) => {
             const valueA = parseFloat(a.value) || 0;
             const valueB = parseFloat(b.value) || 0;
             return valueA - valueB;
         });
-        
+
         // Update header to reflect counts
         this.updateEditorHeader();
-        
+
         sortedItems.forEach((item, index) => {
             const card = this.createItemEditorCard(item, index + 1); // Use 1-based numbering
             this.itemsList.appendChild(card);
         });
     }
-    
+
     getAllItemsForEditor() {
         const originalItems = this.app.dimensionData.items || [];
         const customItems = this.app.customItems[this.app.currentDimension] || [];
-        
+
         // Merge original and custom items, applying overrides and excluding deleted items
         const allItems = [];
-        
+
         originalItems.forEach((item, index) => {
             // Check if this item is deleted
             const isDeleted = customItems.some(
                 custom => custom.originalIndex === index && custom.isDeleted
             );
-            
+
             if (!isDeleted) {
                 // Check if there's an override
                 const override = customItems.find(
                     custom => custom.originalIndex === index && custom.isOverride && !custom.isDeleted
                 );
-                
+
                 if (override) {
                     // Merge override with original
                     allItems.push({
@@ -774,7 +781,7 @@ class ItemEditor {
                 }
             }
         });
-        
+
         // Add custom items (not overrides, not deleted)
         customItems.forEach(customItem => {
             if (customItem.isCustom && !customItem.isOverride && !customItem.isDeleted) {
@@ -789,52 +796,52 @@ class ItemEditor {
                 });
             }
         });
-        
+
         return allItems;
     }
-    
+
     getCurrentImagePath(item) {
         // Check if imageData is explicitly null (image was removed)
         // This handles the case where an override has imageData: null
         if (item.imageData === null) {
             return null;
         }
-        
+
         // Also check if there's an override that explicitly removed the image
         // This is a safety check in case the merge didn't work as expected
         if (item.originalIndex !== undefined) {
             const customItems = this.app.customItems[this.app.currentDimension] || [];
             const override = customItems.find(
-                custom => custom.originalIndex === item.originalIndex && 
-                         custom.isOverride && 
-                         !custom.isDeleted &&
-                         custom.imageData === null
+                custom => custom.originalIndex === item.originalIndex &&
+                    custom.isOverride &&
+                    !custom.isDeleted &&
+                    custom.imageData === null
             );
             if (override) {
                 return null;
             }
         }
-        
+
         // First check if there's imageData (custom uploaded image)
         if (item.imageData) {
             return item.imageData;
         }
-        
+
         // Otherwise use the same logic as getImagePath in script.js
         const sanitizedDimension = this.app.currentDimension
             .replace(/[^\w\s-]/g, '')  // Remove special characters
             .replace(/[-\s]+/g, '_')    // Replace spaces and dashes with underscores
             .toLowerCase();
-        
+
         const sanitizedName = (item.name || '')
             .replace(/[^\w\s-]/g, '')  // Remove special characters
             .replace(/[-\s]+/g, '_')    // Replace spaces and dashes with underscores
             .toLowerCase();
-        
+
         const baseFilename = `${sanitizedDimension}_${sanitizedName}`;
-        return `images/${baseFilename}.jpg`;
+        return `images/${baseFilename}`;
     }
-    
+
     createItemEditorCard(item, itemNumber) {
         const card = document.createElement('div');
         card.className = 'item-editor-card';
@@ -851,12 +858,40 @@ class ItemEditor {
         } else if (item.customId) {
             card.dataset.customId = item.customId;
         }
-        
+
         // Get current image path (either imageData or file path)
         const currentImagePath = this.getCurrentImagePath(item);
         const hasImageData = !!item.imageData;
-        const imagePreview = currentImagePath ? `<img src="${currentImagePath}" alt="Preview" class="image-preview" onerror="this.style.display='none'">` : '';
-        
+
+        // Build image preview with smart fallback and caching
+        let imagePreview = '';
+        if (currentImagePath) {
+            let imagePreviewSrc = currentImagePath;
+            let thumbPath = '';
+
+            if (!currentImagePath.startsWith('data:image')) {
+                const basePath = currentImagePath.replace(/\.(jpg|jpeg|png)$/i, '');
+                thumbPath = basePath.replace('images/', 'images/thumbs/') + '.jpg';
+
+                // If we know the thumbnail fails, skip it
+                if (window.app.failedUrls?.has(thumbPath)) {
+                    imagePreviewSrc = currentImagePath;
+                } else {
+                    imagePreviewSrc = thumbPath;
+                }
+            }
+
+            // Check if we know both versions fail
+            const isFullFailed = window.app.failedUrls?.has(currentImagePath);
+            const isThumbFailed = thumbPath && window.app.failedUrls?.has(thumbPath);
+
+            // If the only option we have is already failed, don't even create the img tag
+            if (!(isFullFailed && (imagePreviewSrc === currentImagePath || isThumbFailed))) {
+                const onerror = `window.app.recordImageFailure(this.src); if(this.src!=='${currentImagePath}'){ if(!window.app.failedUrls?.has('${currentImagePath}')){ this.src='${currentImagePath}' } else { this.style.display='none' } }else{this.style.display='none'}`;
+                imagePreview = `<img src="${imagePreviewSrc}" alt="Preview" class="image-preview" onerror="${onerror}">`;
+            }
+        }
+
         const header = document.createElement('div');
         header.className = 'item-editor-card-header';
         header.innerHTML = `
@@ -865,7 +900,7 @@ class ItemEditor {
                 <button class="btn btn-small btn-danger" onclick="window.app.editor.deleteItem(event)">Delete Item</button>
             </div>
         `;
-        
+
         const form = document.createElement('form');
         form.className = 'item-editor-form';
         form.innerHTML = `
@@ -900,19 +935,50 @@ class ItemEditor {
                 </div>
             </div>
         `;
-        
+
         card.appendChild(header);
         card.appendChild(form);
-        
+
+        // After card is added to DOM, set up image preview click handler
+        setTimeout(() => {
+            const imagePreview = card.querySelector('.image-preview');
+            if (imagePreview && currentImagePath && !currentImagePath.startsWith('data:image')) {
+                // Check if this is a thumbnail by checking if src contains 'thumbs'
+                const isThumbnail = imagePreview.src.includes('/thumbs/');
+                if (isThumbnail) {
+                    imagePreview.classList.add('thumbnail-image');
+                    imagePreview.style.cursor = 'zoom-in';
+                    imagePreview.title = 'Click to view full resolution';
+
+                    imagePreview.addEventListener('click', async (e) => {
+                        e.stopPropagation();
+                        if (imagePreview.dataset.loading === 'true') {
+                            return;
+                        }
+
+                        // Get full-resolution image path
+                        let basePath = currentImagePath;
+                        if (basePath && !basePath.startsWith('data:image')) {
+                            if (basePath.includes('.')) {
+                                basePath = basePath.replace(/\.(jpg|jpeg|png)$/i, '');
+                            }
+                            // Open modal with full-resolution image
+                            this.app.openImageModal(basePath, item.name || 'Image');
+                        }
+                    });
+                }
+            }
+        }, 0);
+
         return card;
     }
-    
+
     escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
     }
-    
+
     addNewItem() {
         const newItem = {
             name: '',
@@ -922,43 +988,43 @@ class ItemEditor {
             isCustom: true,
             customId: `custom-${Date.now()}-${Math.random()}`
         };
-        
+
         if (!this.app.customItems[this.app.currentDimension]) {
             this.app.customItems[this.app.currentDimension] = [];
         }
-        
+
         this.app.customItems[this.app.currentDimension].push(newItem);
         this.saveCustomItems();
         this.renderEditorItems();
         this.app.plot.updatePlot();
     }
-    
+
     saveAllItems() {
         // Save dimension metadata
         if (this.dimensionNameInput && this.dimensionDescriptionInput) {
             const dimensionName = this.dimensionNameInput.value.trim();
             const dimensionDescription = this.dimensionDescriptionInput.value.trim();
-            
+
             if (!this.dimensionOverrides[this.app.currentDimension]) {
                 this.dimensionOverrides[this.app.currentDimension] = {};
             }
-            
+
             if (dimensionName && dimensionName !== this.app.currentDimension) {
                 this.dimensionOverrides[this.app.currentDimension].name = dimensionName;
             } else {
                 delete this.dimensionOverrides[this.app.currentDimension].name;
             }
-            
+
             if (dimensionDescription && dimensionDescription !== (this.app.dimensionData?.dimension_description || '')) {
                 this.dimensionOverrides[this.app.currentDimension].description = dimensionDescription;
             } else {
                 delete this.dimensionOverrides[this.app.currentDimension].description;
             }
-            
+
             // Update dimension selector dropdown after saving name
             this.updateDimensionSelector();
         }
-        
+
         // Save unit metadata
         if (this.unitsList) {
             const unitCards = this.unitsList.querySelectorAll('.unit-editor-card');
@@ -966,27 +1032,27 @@ class ItemEditor {
                 const unitIndex = parseInt(card.dataset.unitIndex);
                 const form = card.querySelector('.unit-editor-form');
                 if (!form) return;
-                
+
                 // Read input values directly since it's a div, not a form element
                 const nameInput = form.querySelector('input[name="unit-name"]');
                 const symbolInput = form.querySelector('input[name="unit-symbol"]');
                 const descriptionInput = form.querySelector('textarea[name="unit-description"]');
-                
+
                 const unitData = {
                     name: nameInput?.value?.trim() || '',
                     symbol: symbolInput?.value?.trim() || '',
                     description: descriptionInput?.value?.trim() || ''
                 };
-                
+
                 // Validate
                 if (!unitData.name || !unitData.symbol) {
                     return; // Skip invalid units
                 }
-                
+
                 // Get original unit for comparison
                 const originalUnit = this.app.dimensionData?.units?.[unitIndex];
                 if (!originalUnit) return;
-                
+
                 // Initialize unit overrides if needed
                 if (!this.unitOverrides[this.app.currentDimension]) {
                     this.unitOverrides[this.app.currentDimension] = {};
@@ -994,20 +1060,20 @@ class ItemEditor {
                 if (!this.unitOverrides[this.app.currentDimension][unitIndex]) {
                     this.unitOverrides[this.app.currentDimension][unitIndex] = {};
                 }
-                
+
                 // Save only if changed
                 if (unitData.name !== originalUnit.name) {
                     this.unitOverrides[this.app.currentDimension][unitIndex].name = unitData.name;
                 } else {
                     delete this.unitOverrides[this.app.currentDimension][unitIndex].name;
                 }
-                
+
                 if (unitData.symbol !== originalUnit.symbol) {
                     this.unitOverrides[this.app.currentDimension][unitIndex].symbol = unitData.symbol;
                 } else {
                     delete this.unitOverrides[this.app.currentDimension][unitIndex].symbol;
                 }
-                
+
                 if (unitData.description !== (originalUnit.description || '')) {
                     this.unitOverrides[this.app.currentDimension][unitIndex].description = unitData.description;
                 } else {
@@ -1015,16 +1081,16 @@ class ItemEditor {
                 }
             });
         }
-        
+
         // Collect all item data from all cards
         const allCards = this.itemsList.querySelectorAll('.item-editor-card');
         const itemsToSave = [];
         const errors = [];
-        
+
         allCards.forEach((card, index) => {
             const form = card.querySelector('.item-editor-form');
             if (!form) return;
-            
+
             const formData = new FormData(form);
             const itemData = {
                 name: formData.get('name'),
@@ -1032,17 +1098,17 @@ class ItemEditor {
                 description: formData.get('description') || '',
                 source: formData.get('source') || ''
             };
-            
+
             // Validate
             if (!itemData.name || isNaN(itemData.value)) {
                 errors.push(`Item ${index + 1}: Name and Value are required`);
                 return;
             }
-            
+
             const isCustom = card.dataset.isCustom === 'true';
             const originalIndex = parseInt(card.dataset.itemIndex);
             const customId = card.dataset.customId;
-            
+
             itemsToSave.push({
                 itemData,
                 isCustom,
@@ -1051,24 +1117,24 @@ class ItemEditor {
                 card
             });
         });
-        
+
         if (errors.length > 0) {
             alert('Validation errors:\n' + errors.join('\n'));
             return;
         }
-        
+
         // Initialize custom items array if needed
         if (!this.app.customItems[this.app.currentDimension]) {
             this.app.customItems[this.app.currentDimension] = [];
         }
-        
+
         // Save each item
         itemsToSave.forEach(({ itemData, isCustom, originalIndex, customId, card }) => {
             if (isCustom && customId) {
                 // Update existing custom item
                 const customItems = this.app.customItems[this.app.currentDimension];
                 const itemIndex = customItems.findIndex(item => item.customId === customId);
-                
+
                 if (itemIndex !== -1) {
                     // Preserve image data if it exists
                     if (customItems[itemIndex].imageData) {
@@ -1085,7 +1151,7 @@ class ItemEditor {
                 const existing = this.app.customItems[this.app.currentDimension].find(
                     item => item.originalIndex === originalIndex
                 );
-                
+
                 if (existing) {
                     // Preserve image data if it exists
                     if (existing.imageData) {
@@ -1108,19 +1174,19 @@ class ItemEditor {
                 }
             }
         });
-        
+
         this.saveCustomItems();
         this.renderDimensionMetadata();
         this.renderUnits();
         this.renderEditorItems();
-        
+
         // Update dimension and unit descriptions in the main app
         if (this.app.dimensionDescription) {
             const dimensionDescOverride = this.dimensionOverrides[this.app.currentDimension]?.description;
-            const dimensionDesc = dimensionDescOverride !== undefined 
-                ? dimensionDescOverride 
+            const dimensionDesc = dimensionDescOverride !== undefined
+                ? dimensionDescOverride
                 : (this.app.dimensionData?.dimension_description || '');
-            
+
             if (dimensionDesc) {
                 this.app.dimensionDescription.textContent = dimensionDesc;
                 this.app.dimensionDescription.style.display = '';
@@ -1129,22 +1195,22 @@ class ItemEditor {
                 this.app.dimensionDescription.style.display = 'none';
             }
         }
-        
+
         // Update unit description
         this.app.updateUnitDescription();
-        
+
         this.app.plot.updatePlot();
     }
-    
+
     deleteItem(event) {
         const card = event.target.closest('.item-editor-card');
         const isCustom = card.dataset.isCustom === 'true';
         const customId = card.dataset.customId;
-        
+
         if (!this.app.customItems[this.app.currentDimension]) {
             this.app.customItems[this.app.currentDimension] = [];
         }
-        
+
         if (isCustom && customId) {
             // Delete custom item completely
             const customItems = this.app.customItems[this.app.currentDimension];
@@ -1155,12 +1221,12 @@ class ItemEditor {
         } else {
             // For original items, mark as deleted
             const originalIndex = parseInt(card.dataset.itemIndex);
-            
+
             // Check if there's already an override or deletion marker
             const existing = this.app.customItems[this.app.currentDimension].find(
                 item => item.originalIndex === originalIndex
             );
-            
+
             if (existing) {
                 // Mark as deleted, preserve any override data
                 existing.isDeleted = true;
@@ -1174,12 +1240,12 @@ class ItemEditor {
                 });
             }
         }
-        
+
         this.saveCustomItems();
         this.renderEditorItems();
         this.app.plot.updatePlot();
     }
-    
+
     compressImage(file, maxWidth = 800, maxHeight = 800, quality = 0.7) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
@@ -1189,7 +1255,7 @@ class ItemEditor {
                     const canvas = document.createElement('canvas');
                     let width = img.width;
                     let height = img.height;
-                    
+
                     // Calculate new dimensions
                     if (width > height) {
                         if (width > maxWidth) {
@@ -1202,13 +1268,13 @@ class ItemEditor {
                             height = maxHeight;
                         }
                     }
-                    
+
                     canvas.width = width;
                     canvas.height = height;
-                    
+
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, width, height);
-                    
+
                     // Convert to JPEG (smaller than PNG) with quality setting
                     const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
                     resolve(compressedDataUrl);
@@ -1220,36 +1286,36 @@ class ItemEditor {
             reader.readAsDataURL(file);
         });
     }
-    
+
     async handleImageUpload(event, index) {
         const file = event.target.files[0];
         if (!file) return;
-        
+
         if (!file.type.startsWith('image/')) {
             alert('Please select an image file');
             return;
         }
-        
+
         try {
             // Compress image before storing
             const imageData = await this.compressImage(file);
-            
+
             const card = event.target.closest('.item-editor-card');
             const isCustom = card.dataset.isCustom === 'true';
             const customId = card.dataset.customId;
-            
+
             // Read current form values before updating
             const form = card.querySelector('.item-editor-form');
             const nameInput = form?.querySelector('input[name="name"]');
             const valueInput = form?.querySelector('input[name="value"]');
             const descriptionInput = form?.querySelector('textarea[name="description"]');
             const sourceInput = form?.querySelector('input[name="source"]');
-            
+
             const currentName = nameInput?.value?.trim() || '';
             const currentValue = valueInput?.value ? parseFloat(valueInput.value) : 0;
             const currentDescription = descriptionInput?.value?.trim() || '';
             const currentSource = sourceInput?.value?.trim() || '';
-            
+
             if (isCustom && customId) {
                 const customItems = this.app.customItems[this.app.currentDimension] || [];
                 let item = customItems.find(item => item.customId === customId);
@@ -1281,11 +1347,11 @@ class ItemEditor {
                 if (!this.app.customItems[this.app.currentDimension]) {
                     this.app.customItems[this.app.currentDimension] = [];
                 }
-                
+
                 const existingOverride = this.app.customItems[this.app.currentDimension].find(
                     item => item.originalIndex === originalIndex
                 );
-                
+
                 if (existingOverride) {
                     existingOverride.imageData = imageData;
                 } else {
@@ -1304,20 +1370,20 @@ class ItemEditor {
             alert('Error processing image. Please try a different image file.');
         }
     }
-    
+
     removeImage(event, index) {
         event.preventDefault();
         event.stopPropagation();
-        
+
         const card = event.target.closest('.item-editor-card');
         if (!card) {
             console.error('Could not find item card');
             return;
         }
-        
+
         const isCustom = card.dataset.isCustom === 'true';
         const customId = card.dataset.customId;
-        
+
         if (isCustom && customId) {
             const customItems = this.app.customItems[this.app.currentDimension] || [];
             const item = customItems.find(item => item.customId === customId);
@@ -1332,16 +1398,16 @@ class ItemEditor {
                 console.error('Invalid originalIndex:', card.dataset.itemIndex);
                 return;
             }
-            
+
             if (!this.app.customItems[this.app.currentDimension]) {
                 this.app.customItems[this.app.currentDimension] = [];
             }
-            
+
             // Look for an existing override (not a deletion marker)
             const override = this.app.customItems[this.app.currentDimension].find(
                 item => item.originalIndex === originalIndex && !item.isDeleted
             );
-            
+
             if (override) {
                 // Mark image as explicitly removed by setting to null
                 // Ensure isOverride is set so it's recognized as an override
@@ -1358,24 +1424,24 @@ class ItemEditor {
                     imageData: null
                 });
             }
-                this.saveCustomItems();
-                this.renderEditorItems();
+            this.saveCustomItems();
+            this.renderEditorItems();
         }
     }
-    
+
     exportToYaml() {
         if (!this.app.dimensionData) return;
-        
+
         // Create YAML structure with custom items merged
         const allItems = this.getAllItemsForEditor();
-        
+
         // Sort items by value (smallest to largest) to match the plot order
         const sortedItems = [...allItems].sort((a, b) => {
             const valueA = parseFloat(a.value) || 0;
             const valueB = parseFloat(b.value) || 0;
             return valueA - valueB;
         });
-        
+
         const yamlData = {
             dimension_description: this.app.dimensionData.dimension_description,
             units: this.app.dimensionData.units,
@@ -1391,15 +1457,77 @@ class ItemEditor {
                 return itemData;
             })
         };
-        
+
         const yamlText = jsyaml.dump(yamlData, { indent: 2 });
         this.showYamlModal('Export YAML', yamlText, false);
     }
-    
+
+    generateShareLink() {
+        // Step 1: Collect what we want to share
+        // We share current dimension data + overrides.
+        const dataToShare = {
+            customItems: {
+                [this.app.currentDimension]: this.app.customItems[this.app.currentDimension] || []
+            },
+            dimensionOverrides: {
+                [this.app.currentDimension]: this.dimensionOverrides[this.app.currentDimension]
+            },
+            unitOverrides: {
+                [this.app.currentDimension]: this.unitOverrides[this.app.currentDimension]
+            }
+        };
+
+        // Step 2: Strip image data (Base64) from the clones
+        const stripImages = (obj) => {
+            if (!obj || typeof obj !== 'object') return;
+            if (Array.isArray(obj)) {
+                obj.forEach(item => stripImages(item));
+            } else {
+                if (obj.imageData) {
+                    delete obj.imageData;
+                    this._hadStrippedImages = true;
+                }
+                for (const key in obj) {
+                    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                        stripImages(obj[key]);
+                    }
+                }
+            }
+        };
+
+        this._hadStrippedImages = false;
+        const cleanData = JSON.parse(JSON.stringify(dataToShare));
+        stripImages(cleanData);
+
+        // Step 3: Compress and generate link
+        try {
+            const jsonStr = JSON.stringify(cleanData);
+            const compressed = LZString.compressToEncodedURIComponent(jsonStr);
+            const shareUrl = `${window.location.origin}${window.location.pathname}${window.location.search}#data=${compressed}`;
+
+            // Step 4: Copy to clipboard
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                let msg = 'Shareable link copied to clipboard!';
+                if (this._hadStrippedImages) {
+                    msg += '\n\nNote: Uploaded images were excluded from the link to keep it short.';
+                }
+                alert(msg);
+            }).catch(err => {
+                console.error('Clipboard error:', err);
+                // Fallback: show in a modal or just console
+                alert('Could not copy to clipboard. Link available in console.');
+                console.log('Share Link:', shareUrl);
+            });
+        } catch (e) {
+            console.error('Sharing failed:', e);
+            alert('Sharing failed. The data might be too large.');
+        }
+    }
+
     showYamlImportModal() {
         this.showYamlModal('Import YAML', '', true);
     }
-    
+
     showYamlModal(title, content, isImport) {
         // Create modal if it doesn't exist
         let modal = document.getElementById('yaml-modal');
@@ -1422,7 +1550,7 @@ class ItemEditor {
                 </div>
             `;
             document.body.appendChild(modal);
-            
+
             // Close modal when clicking outside
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
@@ -1430,23 +1558,23 @@ class ItemEditor {
                 }
             });
         }
-        
+
         const header = modal.querySelector('.yaml-modal-header h3');
         const textarea = modal.querySelector('#yaml-textarea');
         const actionBtn = modal.querySelector('.yaml-modal-actions .btn-primary');
         const modalContent = modal.querySelector('.yaml-modal-content');
         const dropHint = modal.querySelector('#yaml-drop-hint');
-        
+
         header.textContent = title;
         textarea.value = content;
         actionBtn.textContent = isImport ? 'Import' : 'Download';
         actionBtn.onclick = () => isImport ? this.importYaml() : this.downloadYaml();
-        
+
         // Show/hide drag-and-drop hint based on mode
         if (dropHint) {
             dropHint.style.display = isImport ? 'block' : 'none';
         }
-        
+
         // Set up drag-and-drop for import mode
         if (isImport) {
             this.setupYamlDragAndDrop(modalContent, textarea);
@@ -1454,21 +1582,21 @@ class ItemEditor {
             // Remove drag-and-drop handlers if switching to export mode
             this.removeYamlDragAndDrop(modalContent);
         }
-        
+
         modal.style.display = 'block';
     }
-    
+
     setupYamlDragAndDrop(modalContent, textarea) {
         // Remove existing handlers if any
         this.removeYamlDragAndDrop(modalContent);
-        
+
         // Add drag-over class for visual feedback
         const handleDragOver = (e) => {
             e.preventDefault();
             e.stopPropagation();
             modalContent.classList.add('drag-over');
         };
-        
+
         const handleDragLeave = (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -1477,12 +1605,12 @@ class ItemEditor {
                 modalContent.classList.remove('drag-over');
             }
         };
-        
+
         const handleDrop = (e) => {
             e.preventDefault();
             e.stopPropagation();
             modalContent.classList.remove('drag-over');
-            
+
             const files = e.dataTransfer.files;
             if (files.length > 0) {
                 const file = files[0];
@@ -1501,17 +1629,17 @@ class ItemEditor {
                 }
             }
         };
-        
+
         // Store handlers for cleanup
         modalContent._dragOverHandler = handleDragOver;
         modalContent._dragLeaveHandler = handleDragLeave;
         modalContent._dropHandler = handleDrop;
-        
+
         modalContent.addEventListener('dragover', handleDragOver);
         modalContent.addEventListener('dragleave', handleDragLeave);
         modalContent.addEventListener('drop', handleDrop);
     }
-    
+
     removeYamlDragAndDrop(modalContent) {
         if (modalContent._dragOverHandler) {
             modalContent.removeEventListener('dragover', modalContent._dragOverHandler);
@@ -1527,29 +1655,29 @@ class ItemEditor {
         }
         modalContent.classList.remove('drag-over');
     }
-    
+
     closeYamlModal() {
         const modal = document.getElementById('yaml-modal');
         if (modal) {
             modal.style.display = 'none';
         }
     }
-    
+
     importYaml() {
         const textarea = document.getElementById('yaml-textarea');
         const yamlText = textarea.value;
-        
+
         try {
             const importedData = jsyaml.load(yamlText);
-            
+
             if (!importedData.items || !Array.isArray(importedData.items)) {
                 alert('Invalid YAML format: items array is required');
                 return;
             }
-            
+
             // Clear all existing items (both original and custom)
             this.deleteAllItems(false); // false = don't show confirmation, we're importing
-            
+
             // Add all imported items as custom items
             importedData.items.forEach(item => {
                 this.app.customItems[this.app.currentDimension].push({
@@ -1558,7 +1686,7 @@ class ItemEditor {
                     customId: `custom-${Date.now()}-${Math.random()}`
                 });
             });
-            
+
             this.saveCustomItems();
             this.closeYamlModal();
             this.renderEditorItems();
@@ -1568,11 +1696,11 @@ class ItemEditor {
             alert('Error parsing YAML: ' + error.message);
         }
     }
-    
+
     downloadYaml() {
         const textarea = document.getElementById('yaml-textarea');
         const yamlText = textarea.value;
-        
+
         const blob = new Blob([yamlText], { type: 'text/yaml' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -1582,22 +1710,22 @@ class ItemEditor {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-        
+
         this.closeYamlModal();
     }
-    
+
     saveCustomItems() {
         try {
             const dataToSave = JSON.stringify(this.app.customItems);
             // Check approximate size (rough estimate: 1 character ≈ 1 byte for ASCII, but base64 is larger)
             const sizeInMB = new Blob([dataToSave]).size / (1024 * 1024);
-            
+
             if (sizeInMB > 4) {
                 console.warn(`Custom items data is ${sizeInMB.toFixed(2)}MB. Consider removing some images to avoid quota issues.`);
             }
-            
+
             localStorage.setItem('customItems', dataToSave);
-            
+
             // Save dimension and unit overrides separately
             const overridesToSave = {
                 dimensionOverrides: this.dimensionOverrides,
@@ -1614,7 +1742,7 @@ class ItemEditor {
             }
         }
     }
-    
+
     loadCustomItems() {
         const saved = localStorage.getItem('customItems');
         if (saved) {
@@ -1625,7 +1753,7 @@ class ItemEditor {
                 this.app.customItems = {};
             }
         }
-        
+
         // Load dimension and unit overrides
         const overridesSaved = localStorage.getItem('dimensionUnitOverrides');
         if (overridesSaved) {
@@ -1640,7 +1768,7 @@ class ItemEditor {
             }
         }
     }
-    
+
     // Called when dimension changes to refresh editor
     onDimensionChange() {
         if (this.editorContent && this.editorContent.style.display !== 'none') {

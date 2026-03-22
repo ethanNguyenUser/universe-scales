@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universe Scales</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/styles.css?v=1.3">
-<link rel="stylesheet" href="css/mobile.css?v=1.3">
+    <link rel="stylesheet" href="css/mobile.css?v=1.3">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
 </head>
+
 <body>
     <div class="container">
         <header class="header">
             <h1>Universe Scales</h1>
             <p class="subtitle">Interactive logarithmic visualizations of the universe's dimensions</p>
-            
+
             <div class="controls">
                 <div class="control-group">
                     <label for="dimension-select">Dimension:</label>
@@ -25,8 +28,13 @@
                         <optgroup label="Fundamental SI Units">
                             <option value="length">Length</option>
                             <option value="duration">Duration (Time)</option>
+                            <option value="mass">Mass</option>
                             <option value="energy">Energy</option>
                             <option value="force">Force</option>
+                        </optgroup>
+                        <optgroup label="Geometric Quantities">
+                            <option value="area">Area</option>
+                            <option value="volume">Volume</option>
                         </optgroup>
                         <optgroup label="Kinematics">
                             <option value="speed">Speed</option>
@@ -39,19 +47,23 @@
                             <option value="yield-strength">Yield Strength</option>
                         </optgroup>
                         <optgroup label="Other Physical Quantities">
+                            <option value="density">Density</option>
                             <option value="brightness">Brightness</option>
                             <option value="costs">Costs</option>
                         </optgroup>
                     </select>
                 </div>
-                
-                <button id="notation-toggle" class="notation-toggle" aria-label="Toggle number notation" title="Toggle number notation">1e10</button>
-                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
-                <button id="music-toggle" class="music-toggle" aria-label="Play or pause background music" title="Play or pause music">🎵</button>
+
+                <button id="notation-toggle" class="notation-toggle" aria-label="Toggle number notation"
+                    title="Toggle number notation">1e10</button>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark mode">🌙</button>
+                <button id="music-toggle" class="music-toggle" aria-label="Play or pause background music"
+                    title="Play or pause music">🎵</button>
             </div>
             <p id="dimension-description" class="dimension-description"></p>
         </header>
-        
+
         <main class="main">
             <div id="plot-container" class="plot-container">
                 <svg id="plot-svg"></svg>
@@ -63,16 +75,16 @@
                     <button class="zoom-btn zoom-btn--minus" data-action="zoom-out" aria-label="Zoom out">−</button>
                 </div>
             </div>
-            
+
             <div class="unit-selector-container">
                 <label for="unit-select">Unit:</label>
                 <select id="unit-select">
                     <!-- Units will be populated dynamically -->
                 </select>
             </div>
-            
+
             <p id="unit-description" class="unit-description"></p>
-            
+
             <!-- Visual Editor Panel -->
             <div id="editor-panel" class="editor-panel">
                 <button id="editor-toggle" class="editor-toggle" aria-label="Toggle editor" title="Toggle editor">
@@ -83,11 +95,12 @@
                     <div class="editor-header">
                         <h3>Dimension Editor</h3>
                         <div class="editor-actions">
+                            <button id="share-plot-btn" class="btn btn-secondary">Share Plot</button>
                             <button id="import-yaml-btn" class="btn btn-secondary">Import YAML</button>
                             <button id="export-yaml-btn" class="btn btn-secondary">Export YAML</button>
                         </div>
                     </div>
-                    
+
                     <!-- Dimension Metadata Section -->
                     <div id="dimension-metadata-section" class="editor-section collapsible-section">
                         <div class="section-header" onclick="window.app.editor.toggleSection('dimension-metadata')">
@@ -96,7 +109,8 @@
                             </div>
                             <div class="section-header-right">
                                 <div class="dimension-section-actions" onclick="event.stopPropagation()">
-                                    <button id="clear-dimension-info-btn" class="btn btn-danger">Clear Information</button>
+                                    <button id="clear-dimension-info-btn" class="btn btn-danger">Clear
+                                        Information</button>
                                 </div>
                                 <span class="section-toggle-icon"></span>
                             </div>
@@ -110,13 +124,14 @@
                                     </div>
                                     <div class="editor-form-group">
                                         <label>Dimension Description</label>
-                                        <textarea id="dimension-description-input" class="dimension-textarea"></textarea>
+                                        <textarea id="dimension-description-input"
+                                            class="dimension-textarea"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Units Section -->
                     <div id="units-section" class="editor-section collapsible-section">
                         <div class="section-header" onclick="window.app.editor.toggleSection('units')">
@@ -137,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Items Section -->
                     <div id="items-section" class="editor-section collapsible-section">
                         <div class="section-header" onclick="window.app.editor.toggleSection('items')">
@@ -160,7 +175,19 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Related Resources Panel -->
+            <div id="resources-panel" class="editor-panel resources-panel" style="display: none;">
+                <button id="resources-toggle" class="editor-toggle" aria-label="Toggle resources"
+                    title="Toggle resources">
+                    <span class="editor-toggle-text">Explore More</span>
+                    <span class="editor-toggle-icon"></span>
+                </button>
+                <div id="resources-content" class="editor-content resources-content" style="display: none;">
+                    <div id="related-resources" class="related-resources"></div>
+                </div>
+            </div>
+
             <div id="tooltip" class="tooltip">
                 <div class="tooltip-content">
                     <img class="tooltip-image" src="" alt="">
@@ -170,39 +197,61 @@
                     <a class="tooltip-source" href="#" target="_blank"></a>
                 </div>
             </div>
+
+            <!-- Image Modal/Lightbox -->
+            <div id="image-modal" class="image-modal">
+                <div class="image-modal-backdrop"></div>
+                <div class="image-modal-content">
+                    <button class="image-modal-close" aria-label="Close image">×</button>
+                    <img id="image-modal-img" src="" alt="" class="image-modal-image">
+                </div>
+            </div>
         </main>
-        
+
         <!-- Background Music -->
         <audio id="background-music" loop>
             <source src="Frozen Star.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-        
+
         <footer class="footer">
             <p class="footer-attribution">
-                Made by <a href="https://github.com/ethanNguyenUser" target="_blank">Ethan Nguyen</a> • 1.2 • Last updated: November 11, 2025
+                Made by <a href="https://github.com/ethanNguyenUser" target="_blank">Ethan Nguyen</a> • 1.2 • Last
+                updated: November 29, 2025
             </p>
             <p class="footer-attribution">
-                Background music: <a href="https://www.youtube.com/watch?v=Ay1D30B8shE&list=OLAK5uy_nYP5dNYsXFBY3C6bEoLXkHxdNSPS6QQLo&index=15" target="_blank">"Frozen Star"</a> by Kevin MacLeod</a>
+                Background music: <a
+                    href="https://www.youtube.com/watch?v=Ay1D30B8shE&list=OLAK5uy_nYP5dNYsXFBY3C6bEoLXkHxdNSPS6QQLo&index=15"
+                    target="_blank">"Frozen Star"</a> by Kevin MacLeod</a>
             </p>
             <p class="footer-attribution">
-                This project was inspired by <a href="https://scaleofuniverse.com" target="_blank">scaleofuniverse.com</a>, created by Carey and Michael Huang
+                This project was inspired by <a href="https://scaleofuniverse.com"
+                    target="_blank">scaleofuniverse.com</a>, created by Carey and Michael Huang
             </p>
             <p class="footer-attribution">
                 The images come from Wikipedia and Unsplash
             </p>
             <p class="footer-attribution">
-                The code is available in <a href="https://github.com/ethanNguyenUser/universe-scales" target="_blank">this GitHub repository</a>
+                The code is available in <a href="https://github.com/ethanNguyenUser/universe-scales"
+                    target="_blank">this GitHub repository</a>
             </p>
             <p class="footer-attribution">
-                If you have any suggestions or feedback, please fill <a href="https://forms.gle/AsKVCmmxzE2drWbC8" target="_blank">this Google form</a>
+                If you have any suggestions or feedback, please fill <a href="https://forms.gle/AsKVCmmxzE2drWbC8"
+                    target="_blank">this Google form</a>
             </p>
             <p class="footer-attribution">
-                If you enjoy this project or found it useful, please consider <a href="https://buymeacoffee.com/ethannguyen" target="_blank" rel="noopener noreferrer">buying me a coffee</a> ☕
+                If you enjoy this project or found it useful, please consider <a
+                    href="https://buymeacoffee.com/ethannguyen" target="_blank" rel="noopener noreferrer">buying me a
+                    coffee</a> ☕
             </p>
+            <div id="limitations-note" class="limitations-note footer-limitations" style="display: none;">
+                <p><strong>Note on Scale:</strong> These visualizations use logarithmic scales to bridge vast
+                    differences. Physical dimensions are often complex; for example, "size" can refer to radius,
+                    diameter, or wavelength. This tool provides general comparisons for intuition.</p>
+            </div>
         </footer>
     </div>
-    
+
     <script src="js/constants.js" defer></script>
     <script src="js/formatting.js" defer></script>
     <script src="js/editor.js" defer></script>
@@ -210,4 +259,5 @@
     <script src="js/script.js" defer></script>
     <script src="js/mobile.js" defer></script>
 </body>
+
 </html>

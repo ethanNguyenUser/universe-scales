@@ -77,6 +77,10 @@ class PlotRenderer {
             .attr('clip-path', `url(#${this.axisClipId})`)
             .style('pointer-events', 'none'); // Don't block zoom events
         
+        // Create background rectangle for top axis (to cover items when axis moves down)
+        // Will be created/positioned in drawItems to ensure it's above items but below axis
+        this.xAxisTopBackground = null; // Will be created when needed
+        
         // Add grid lines (no clip path needed - they're within plot area)
         this.gridGroup = this.mainGroup.append('g')
             .attr('class', 'grid')
@@ -724,6 +728,32 @@ class PlotRenderer {
         
         // Draw items only (no bands for now)
         this.drawItems(positionedItems);
+        
+        // Create/update background rectangle for top axis after items are drawn
+        // Append it after items so it's above items, then move axis after it so axis is on top
+        if (!this.xAxisTopBackground) {
+            this.xAxisTopBackground = this.mainGroup.append('rect')
+                .attr('class', 'axis-top-background')
+                .attr('x', -this.margin.left)
+                .attr('y', 0)
+                .attr('width', 0)
+                .attr('height', 0)
+                .style('pointer-events', 'none')
+                .style('opacity', 0);
+        }
+        
+        // Move top axis to be after background (so it renders on top)
+        // This ensures rendering order: items < background < axis
+        const topAxisNode = this.xAxisTop.node();
+        const backgroundNode = this.xAxisTopBackground.node();
+        if (topAxisNode.parentNode && backgroundNode.nextSibling !== topAxisNode) {
+            topAxisNode.parentNode.insertBefore(topAxisNode, backgroundNode.nextSibling);
+        }
+        
+        // Update sticky top axis after plot update
+        if (this.app.updateStickyAxis) {
+            this.app.updateStickyAxis();
+        }
     }
     
     updatePlotAfterZoom() {
@@ -798,6 +828,11 @@ class PlotRenderer {
         // We just need to ensure it uses the correct offset
         this.mainGroup.selectAll('.item-label')
             .attr('x', CONFIG.LABEL_OFFSET_X);
+        
+        // Update sticky top axis after zoom update
+        if (this.app.updateStickyAxis) {
+            this.app.updateStickyAxis();
+        }
     }
     
     updatePlotColors() {

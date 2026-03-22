@@ -1,0 +1,1112 @@
+dimension: area
+base_unit: square_meters
+dimension_description: Area here means a characteristic area under explicit qualifiers, often a surface area, cross-section, footprint, or geographic extent. Mixing those notions blindly would be misleading, so each entry states what kind of area is being used. The point is coverage across scales, not a claim that all areas answer the same question.
+related_resources:
+- name: Wikidata area property
+  url: https://www.wikidata.org/wiki/Property:P2046
+- name: Area
+  url: https://en.wikipedia.org/wiki/Area
+show_limitations: true
+units:
+- conversion_factor: 1.0
+  description: Square meters are the canonical storage unit for all area observations.
+  name: square meters
+  symbol: m^2
+- conversion_factor: 10000.0
+  description: Square centimeters are useful for small surfaces and cross-sections.
+  name: square centimeters
+  symbol: cm^2
+- conversion_factor: 1.0e-06
+  description: Square kilometers are useful for geography and astronomy.
+  name: square kilometers
+  symbol: km^2
+- conversion_factor: 0.0001
+  description: Hectares are common for land area and agriculture.
+  name: hectares
+  symbol: ha
+- conversion_factor: 0.000247105
+  description: Acres are widely used in land records and real estate.
+  name: acres
+  symbol: ac
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+items:
+- id: obs:area:entity-proton
+  name: Proton cross-section
+  value: 2.2e-30
+  description: Characteristic geometric cross-section implied by the proton charge radius.
+  summary_short: Characteristic geometric cross-section implied by the proton charge radius.
+  description_medium: Characteristic geometric cross-section implied by the proton charge radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Proton cross-section
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Proton
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-proton
+    url: https://en.wikipedia.org/wiki/Proton
+    title: Proton
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
+- id: obs:area:entity-water
+  name: Water molecule cross-section
+  value: 5.9e-20
+  description: Characteristic molecular cross-section of a water molecule.
+  summary_short: Characteristic molecular cross-section of a water molecule.
+  description_medium: Characteristic molecular cross-section of a water molecule.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Water molecule cross-section
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q283
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
+- id: obs:area:entity-dna
+  name: DNA helix cross-section
+  value: 3.1e-18
+  description: Cross-sectional area of the DNA double helix using a 2 nm diameter.
+  summary_short: Cross-sectional area of the DNA double helix using a 2 nm diameter.
+  description_medium: Cross-sectional area of the DNA double helix using a 2 nm diameter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: DNA helix cross-section
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/DNA
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dna
+    url: https://en.wikipedia.org/wiki/DNA
+    title: DNA
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q7430
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
+- id: obs:area:entity-influenza-virus
+  name: Influenza virion surface area
+  value: 4.5e-14
+  description: Approximate surface area of a spherical influenza virion.
+  summary_short: Approximate surface area of a spherical influenza virion.
+  description_medium: Approximate surface area of a spherical influenza virion.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Influenza virion surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Influenza
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-influenza
+    url: https://en.wikipedia.org/wiki/Influenza
+    title: Influenza
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    measurement: surface area
+- id: obs:area:entity-red-blood-cell
+  name: Red blood cell surface area
+  value: 1.4e-10
+  description: Characteristic membrane surface area of a red blood cell.
+  summary_short: Characteristic membrane surface area of a red blood cell.
+  description_medium: Characteristic membrane surface area of a red blood cell.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Red blood cell surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Red_blood_cell
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-red-blood-cell
+    url: https://en.wikipedia.org/wiki/Red_blood_cell
+    title: Red blood cell
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface area
+- id: obs:area:scenario-grain-of-sand-surface
+  name: Grain of sand surface area
+  value: 3.0e-06
+  description: Surface area of a representative 1 mm sand grain treated as a sphere.
+  summary_short: Surface area of a representative 1 mm sand grain treated as a sphere.
+  description_medium: Surface area of a representative 1 mm sand grain treated as a sphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Grain of sand surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Sand
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sand
+    url: https://en.wikipedia.org/wiki/Sand
+    title: Sand
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    measurement: surface area
+- id: obs:area:scenario-postage-stamp
+  name: Postage stamp face area
+  value: 0.0004
+  description: Front-face area of a representative postage stamp.
+  summary_short: Front-face area of a representative postage stamp.
+  description_medium: Front-face area of a representative postage stamp.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Postage stamp face area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Postage_stamp
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-postage-stamp
+    url: https://en.wikipedia.org/wiki/Postage_stamp
+    title: Postage stamp
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: rectangular face area
+- id: obs:area:scenario-credit-card
+  name: Credit card face area
+  value: 0.004998
+  description: Front-face area of an ISO ID-1 payment card.
+  summary_short: Front-face area of an ISO ID-1 payment card.
+  description_medium: Front-face area of an ISO ID-1 payment card.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Credit card face area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Payment_card_number
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-payment-card-number
+    url: https://en.wikipedia.org/wiki/Payment_card_number
+    title: Payment card number
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: rectangular face area
+- id: obs:area:scenario-smartphone-screen
+  name: Smartphone screen area
+  value: 0.011
+  description: Representative active display area of a modern smartphone.
+  summary_short: Representative active display area of a modern smartphone.
+  description_medium: Representative active display area of a modern smartphone.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Smartphone screen area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Smartphone
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-smartphone
+    url: https://en.wikipedia.org/wiki/Smartphone
+    title: Smartphone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: display area
+- id: obs:area:scenario-a4-paper
+  name: A4 sheet area
+  value: 0.0624
+  description: Area of one A4 sheet of paper.
+  summary_short: Area of one A4 sheet of paper.
+  description_medium: Area of one A4 sheet of paper.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A4 sheet area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Paper_size
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper-size
+    url: https://en.wikipedia.org/wiki/Paper_size
+    title: Paper size
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: sheet area
+- id: obs:area:entity-human
+  name: Human skin area
+  value: 1.7
+  description: Representative total skin surface area of an adult human.
+  summary_short: Representative total skin surface area of an adult human.
+  description_medium: Representative total skin surface area of an adult human.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human skin area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Human_skin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-skin
+    url: https://en.wikipedia.org/wiki/Human_skin
+    title: Human skin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q5
+  value_type: derived
+  qualifiers:
+    measurement: skin surface area
+- id: obs:area:scenario-parking-space
+  name: Parking space
+  value: 12.5
+  description: Representative footprint area of one parking space.
+  summary_short: Representative footprint area of one parking space.
+  description_medium: Representative footprint area of one parking space.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Parking space
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Parking_space
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-parking-space
+    url: https://en.wikipedia.org/wiki/Parking_space
+    title: Parking space
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: footprint area
+- id: obs:area:scenario-tennis-court
+  name: Tennis court
+  value: 260.9
+  description: Total doubles court area including playing surface.
+  summary_short: Total doubles court area including playing surface.
+  description_medium: Total doubles court area including playing surface.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tennis court
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Tennis_court
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tennis-court
+    url: https://en.wikipedia.org/wiki/Tennis_court
+    title: Tennis court
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: court area
+- id: obs:area:scenario-football-field
+  name: American football field
+  value: 5351.0
+  description: Total area of a 120 by 53 1/3 yard American football field.
+  summary_short: Total area of a 120 by 53 1/3 yard American football field.
+  description_medium: Total area of a 120 by 53 1/3 yard American football field.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: American football field
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/American_football_field
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-american-football-field
+    url: https://en.wikipedia.org/wiki/American_football_field
+    title: American football field
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: field area including end zones
+- id: obs:area:entity-manhattan
+  name: Manhattan
+  value: 59100000.0
+  description: Land area of Manhattan.
+  summary_short: Land area of Manhattan.
+  description_medium: Land area of Manhattan.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Manhattan
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Manhattan
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-manhattan
+    url: https://en.wikipedia.org/wiki/Manhattan
+    title: Manhattan
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
+- id: obs:area:entity-lake-tahoe
+  name: Lake Tahoe surface
+  value: 496000000.0
+  description: Surface area of Lake Tahoe.
+  summary_short: Surface area of Lake Tahoe.
+  description_medium: Surface area of Lake Tahoe.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lake Tahoe surface
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Lake_Tahoe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lake-tahoe
+    url: https://en.wikipedia.org/wiki/Lake_Tahoe
+    title: Lake Tahoe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface area
+- id: obs:area:entity-rhode-island
+  name: Rhode Island
+  value: 4000000000.0
+  description: Land area of the state of Rhode Island.
+  summary_short: Land area of the state of Rhode Island.
+  description_medium: Land area of the state of Rhode Island.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rhode Island
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Rhode_Island
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rhode-island
+    url: https://en.wikipedia.org/wiki/Rhode_Island
+    title: Rhode Island
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
+- id: obs:area:entity-caspian-sea
+  name: Caspian Sea surface
+  value: 371000000000.0
+  description: Surface area of the Caspian Sea.
+  summary_short: Surface area of the Caspian Sea.
+  description_medium: Surface area of the Caspian Sea.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Caspian Sea surface
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Caspian_Sea
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-caspian-sea
+    url: https://en.wikipedia.org/wiki/Caspian_Sea
+    title: Caspian Sea
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface area
+- id: obs:area:entity-australia
+  name: Australia
+  value: 7690000000000.0
+  description: Land area of Australia.
+  summary_short: Land area of Australia.
+  description_medium: Land area of Australia.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Australia
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Australia
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-australia
+    url: https://en.wikipedia.org/wiki/Australia
+    title: Australia
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
+- id: obs:area:entity-moon
+  name: Moon surface area
+  value: 37900000000000.0
+  description: Total surface area of the Moon.
+  summary_short: Total surface area of the Moon.
+  description_medium: Total surface area of the Moon.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Moon surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Moon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-moon
+    url: https://en.wikipedia.org/wiki/Moon
+    title: Moon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q405
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    measurement: surface area
+- id: obs:area:entity-earth
+  name: Earth surface area
+  value: 510000000000000.0
+  description: Total surface area of Earth.
+  summary_short: Total surface area of Earth.
+  description_medium: Total surface area of Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q2
+  value_type: measured
+  qualifiers:
+    measurement: surface area
+- id: obs:area:entity-jupiter
+  name: Jupiter surface area
+  value: 6.14e+16
+  description: Total surface area of Jupiter using its mean radius.
+  summary_short: Total surface area of Jupiter using its mean radius.
+  description_medium: Total surface area of Jupiter using its mean radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Jupiter surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Jupiter
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jupiter
+    url: https://en.wikipedia.org/wiki/Jupiter
+    title: Jupiter
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q319
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    measurement: surface area
+- id: obs:area:entity-sun
+  name: Sun surface area
+  value: 6.09e+18
+  description: Photospheric surface area of the Sun.
+  summary_short: Photospheric surface area of the Sun.
+  description_medium: Photospheric surface area of the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sun surface area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q525
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    measurement: surface area
+- id: obs:area:scenario-solar-system-disk-neptune
+  name: Solar system disk to Neptune
+  value: 6.34e+25
+  description: Disk area enclosed by Neptune's mean orbital radius.
+  summary_short: Disk area enclosed by Neptune's mean orbital radius.
+  description_medium: Disk area enclosed by Neptune's mean orbital radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Solar system disk to Neptune
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Neptune
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-neptune
+    url: https://en.wikipedia.org/wiki/Neptune
+    title: Neptune
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: orbital disk area
+- id: obs:area:entity-milky-way
+  name: Milky Way stellar disk area
+  value: 7.0e+41
+  description: Disk area implied by the Milky Way's characteristic radius.
+  summary_short: Disk area implied by the Milky Way's characteristic radius.
+  description_medium: Disk area implied by the Milky Way's characteristic radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Milky Way stellar disk area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milky-way
+    url: https://en.wikipedia.org/wiki/Milky_Way
+    title: Milky Way
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: disk area
+- id: obs:area:entity-local-group
+  name: Local Group cross-sectional area
+  value: 6.6e+45
+  description: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.
+  summary_short: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.
+  description_medium: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Local Group cross-sectional area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Local_Group
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-local-group
+    url: https://en.wikipedia.org/wiki/Local_Group
+    title: Local Group
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
+- id: obs:area:entity-virgo-supercluster
+  name: Virgo Supercluster cross-sectional area
+  value: 8.2e+47
+  description: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.
+  summary_short: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.
+  description_medium: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Virgo Supercluster cross-sectional area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Virgo_Supercluster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-virgo-supercluster
+    url: https://en.wikipedia.org/wiki/Virgo_Supercluster
+    title: Virgo Supercluster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
+- id: obs:area:entity-universe
+  name: Observable universe boundary area
+  value: 2.44e+54
+  description: Surface area of the observable universe treated as a sphere.
+  summary_short: Surface area of the observable universe treated as a sphere.
+  description_medium: Surface area of the observable universe treated as a sphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Observable universe boundary area
+    ingest_source: dataset/raw/curated/area.json
+  source: https://en.wikipedia.org/wiki/Universe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-universe
+    url: https://en.wikipedia.org/wiki/Universe
+    title: Universe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q1
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    measurement: surface area
