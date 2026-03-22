@@ -21,8 +21,8 @@ units:
   conversion_factor: 1.0
   description: Nits are equivalent to candela per square meter and common for displays.
 required_min_items: 24
-preferred_target_items: 24
-preferred_max_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 frontend_group: fields
@@ -43,6 +43,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Deep Space
+    source_trace:
+      method: derived
+      original_value_text: 1e-10
+      source_url: https://en.wikipedia.org/wiki/Outer_space
   source: https://en.wikipedia.org/wiki/Outer_space
   source_count: 2
   sources:
@@ -81,6 +85,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Moonless Night
+    source_trace:
+      method: derived
+      original_value_text: 1e-4
+      source_url: https://en.wikipedia.org/wiki/Night
   source: https://en.wikipedia.org/wiki/Night
   source_count: 2
   sources:
@@ -119,6 +127,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Full Moon
+    source_trace:
+      method: derived
+      original_value_text: '0.25'
+      source_url: https://en.wikipedia.org/wiki/Moon
   source: https://en.wikipedia.org/wiki/Moon
   source_count: 2
   sources:
@@ -157,6 +169,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Candle
+    source_trace:
+      method: derived
+      original_value_text: '1'
+      source_url: https://en.wikipedia.org/wiki/Candle
   source: https://en.wikipedia.org/wiki/Candle
   source_count: 2
   sources:
@@ -195,6 +211,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: City Street Twilight
+    source_trace:
+      method: derived
+      original_value_text: '10'
+      source_url: https://en.wikipedia.org/wiki/Twilight
   source: https://en.wikipedia.org/wiki/Twilight
   source_count: 2
   sources:
@@ -233,6 +253,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Movie Screen
+    source_trace:
+      method: derived
+      original_value_text: '50'
+      source_url: https://en.wikipedia.org/wiki/Movie_theater
   source: https://en.wikipedia.org/wiki/Movie_theater
   source_count: 2
   sources:
@@ -271,6 +295,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Room Lighting
+    source_trace:
+      method: derived
+      original_value_text: '100'
+      source_url: https://en.wikipedia.org/wiki/Lighting
   source: https://en.wikipedia.org/wiki/Lighting
   source_count: 2
   sources:
@@ -309,6 +337,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Paper by Window
+    source_trace:
+      method: derived
+      original_value_text: '200'
+      source_url: https://en.wikipedia.org/wiki/Reading
   source: https://en.wikipedia.org/wiki/Reading
   source_count: 2
   sources:
@@ -347,6 +379,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: LED Screen
+    source_trace:
+      method: derived
+      original_value_text: '300'
+      source_url: https://en.wikipedia.org/wiki/LED_display
   source: https://en.wikipedia.org/wiki/LED_display
   source_count: 2
   sources:
@@ -385,6 +421,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Office Lighting
+    source_trace:
+      method: derived
+      original_value_text: '500'
+      source_url: https://en.wikipedia.org/wiki/Office
   source: https://en.wikipedia.org/wiki/Office
   source_count: 2
   sources:
@@ -423,6 +463,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Fluorescent Light
+    source_trace:
+      method: derived
+      original_value_text: '1000'
+      source_url: https://en.wikipedia.org/wiki/Fluorescent_lamp
   source: https://en.wikipedia.org/wiki/Fluorescent_lamp
   source_count: 2
   sources:
@@ -461,6 +505,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Overcast Day
+    source_trace:
+      method: derived
+      original_value_text: '1000'
+      source_url: https://en.wikipedia.org/wiki/Overcast
   source: https://en.wikipedia.org/wiki/Overcast
   source_count: 2
   sources:
@@ -499,6 +547,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Smartphone Max Boost
+    source_trace:
+      method: derived
+      original_value_text: '1200'
+      source_url: https://en.wikipedia.org/wiki/Display_brightness
   source: https://en.wikipedia.org/wiki/Display_brightness
   source_count: 2
   sources:
@@ -537,6 +589,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Operating Room Field
+    source_trace:
+      method: derived
+      original_value_text: '60000'
+      source_url: https://en.wikipedia.org/wiki/Surgical_light
   source: https://en.wikipedia.org/wiki/Surgical_light
   source_count: 2
   sources:
@@ -575,6 +631,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Sunny Day
+    source_trace:
+      method: derived
+      original_value_text: '100000'
+      source_url: https://en.wikipedia.org/wiki/Sunlight
   source: https://en.wikipedia.org/wiki/Sunlight
   source_count: 2
   sources:
@@ -613,6 +673,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Snow Reflection
+    source_trace:
+      method: derived
+      original_value_text: '150000'
+      source_url: https://en.wikipedia.org/wiki/Snow
   source: https://en.wikipedia.org/wiki/Snow
   source_count: 2
   sources:
@@ -651,6 +715,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Arc Welding
+    source_trace:
+      method: derived
+      original_value_text: '1000000'
+      source_url: https://en.wikipedia.org/wiki/Arc_welding
   source: https://en.wikipedia.org/wiki/Arc_welding
   source_count: 2
   sources:
@@ -689,6 +757,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Sirius
+    source_trace:
+      method: derived
+      original_value_text: 1e8
+      source_url: https://en.wikipedia.org/wiki/Sirius
   source: https://en.wikipedia.org/wiki/Sirius
   source_count: 2
   sources:
@@ -727,6 +799,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Sun
+    source_trace:
+      method: derived
+      original_value_text: 1.6e9
+      source_url: https://en.wikipedia.org/wiki/Sun
   source: https://en.wikipedia.org/wiki/Sun
   source_count: 2
   sources:
@@ -765,6 +841,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Supernova
+    source_trace:
+      method: derived
+      original_value_text: 1e15
+      source_url: https://en.wikipedia.org/wiki/Supernova
   source: https://en.wikipedia.org/wiki/Supernova
   source_count: 2
   sources:
@@ -803,6 +883,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
     legacy_item_name: Gamma Ray Burst
+    source_trace:
+      method: derived
+      original_value_text: 1e20
+      source_url: https://en.wikipedia.org/wiki/Gamma-ray_burst
   source: https://en.wikipedia.org/wiki/Gamma-ray_burst
   source_count: 2
   sources:

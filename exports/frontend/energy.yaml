@@ -41,8 +41,8 @@ units:
   conversion_factor: 2.3900573613767e-10
   description: TNT equivalent helps compare explosions and energetic events.
 required_min_items: 24
-preferred_target_items: 24
-preferred_max_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 frontend_group: motion
@@ -63,6 +63,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Photon (Radio)
+    source_trace:
+      method: derived
+      original_value_text: 1e-24
+      source_url: https://en.wikipedia.org/wiki/Photon
   source: https://en.wikipedia.org/wiki/Photon
   source_count: 2
   sources:
@@ -101,6 +105,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: ATP Hydrolysis
+    source_trace:
+      method: derived
+      original_value_text: 5e-20
+      source_url: https://en.wikipedia.org/wiki/Adenosine_triphosphate
   source: https://en.wikipedia.org/wiki/Adenosine_triphosphate
   source_count: 2
   sources:
@@ -139,6 +147,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Photon (Visible)
+    source_trace:
+      method: derived
+      original_value_text: 3e-19
+      source_url: https://en.wikipedia.org/wiki/Photon
   source: https://en.wikipedia.org/wiki/Photon
   source_count: 2
   sources:
@@ -177,6 +189,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Chemical Bond
+    source_trace:
+      method: derived
+      original_value_text: 1e-18
+      source_url: https://en.wikipedia.org/wiki/Chemical_bond
   source: https://en.wikipedia.org/wiki/Chemical_bond
   source_count: 2
   sources:
@@ -215,6 +231,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Hydrogen Ionization
+    source_trace:
+      method: derived
+      original_value_text: '2.18e-18'
+      source_url: https://en.wikipedia.org/wiki/Ionization_energy
   source: https://en.wikipedia.org/wiki/Ionization_energy
   source_count: 2
   sources:
@@ -253,6 +273,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Glucose Oxidation
+    source_trace:
+      method: derived
+      original_value_text: '2.9e-18'
+      source_url: https://en.wikipedia.org/wiki/Cellular_respiration
   source: https://en.wikipedia.org/wiki/Cellular_respiration
   source_count: 2
   sources:
@@ -291,6 +315,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: X-ray Photon
+    source_trace:
+      method: derived
+      original_value_text: 1e-15
+      source_url: https://en.wikipedia.org/wiki/X-ray
   source: https://en.wikipedia.org/wiki/X-ray
   source_count: 2
   sources:
@@ -329,6 +357,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Apple Drop
+    source_trace:
+      method: derived
+      original_value_text: '1'
+      source_url: https://en.wikipedia.org/wiki/Kinetic_energy
   source: https://en.wikipedia.org/wiki/Kinetic_energy
   source_count: 2
   sources:
@@ -367,6 +399,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Heartbeat
+    source_trace:
+      method: derived
+      original_value_text: '1'
+      source_url: https://en.wikipedia.org/wiki/Heart
   source: https://en.wikipedia.org/wiki/Heart
   source_count: 2
   sources:
@@ -405,6 +441,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Lift Bag of Rice
+    source_trace:
+      method: derived
+      original_value_text: '100'
+      source_url: https://en.wikipedia.org/wiki/Work_(physics)
   source: https://en.wikipedia.org/wiki/Work_(physics)
   source_count: 2
   sources:
@@ -443,6 +483,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Fastball Pitch
+    source_trace:
+      method: derived
+      original_value_text: '150'
+      source_url: https://en.wikipedia.org/wiki/Baseball
   source: https://en.wikipedia.org/wiki/Baseball
   source_count: 2
   sources:
@@ -481,6 +525,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Football Kick
+    source_trace:
+      method: derived
+      original_value_text: '400'
+      source_url: https://en.wikipedia.org/wiki/Projectile_motion
   source: https://en.wikipedia.org/wiki/Projectile_motion
   source_count: 2
   sources:
@@ -519,6 +567,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Warm Room Air (1 m3, plus 10 C)
+    source_trace:
+      method: derived
+      original_value_text: 7e3
+      source_url: https://en.wikipedia.org/wiki/Heat_capacity
   source: https://en.wikipedia.org/wiki/Heat_capacity
   source_count: 2
   sources:
@@ -557,6 +609,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Elevator Ride (10 floors)
+    source_trace:
+      method: derived
+      original_value_text: 2.1e4
+      source_url: https://en.wikipedia.org/wiki/Gravitational_potential
   source: https://en.wikipedia.org/wiki/Gravitational_potential
   source_count: 2
   sources:
@@ -595,6 +651,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Smartphone Battery
+    source_trace:
+      method: derived
+      original_value_text: 4.3e4
+      source_url: https://en.wikipedia.org/wiki/Battery_(electricity)
   source: https://en.wikipedia.org/wiki/Battery_(electricity)
   source_count: 2
   sources:
@@ -633,6 +693,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Laptop Charge
+    source_trace:
+      method: derived
+      original_value_text: 2e5
+      source_url: https://en.wikipedia.org/wiki/Laptop
   source: https://en.wikipedia.org/wiki/Laptop
   source_count: 2
   sources:
@@ -671,6 +735,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Boiling Kettle (1 liter)
+    source_trace:
+      method: derived
+      original_value_text: 3e5
+      source_url: https://en.wikipedia.org/wiki/Specific_heat_capacity
   source: https://en.wikipedia.org/wiki/Specific_heat_capacity
   source_count: 2
   sources:
@@ -709,6 +777,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Light Bulb (1 hour)
+    source_trace:
+      method: derived
+      original_value_text: '360000'
+      source_url: https://en.wikipedia.org/wiki/Incandescent_light_bulb
   source: https://en.wikipedia.org/wiki/Incandescent_light_bulb
   source_count: 2
   sources:
@@ -747,6 +819,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Car at 60 mph
+    source_trace:
+      method: derived
+      original_value_text: 5.5e5
+      source_url: https://en.wikipedia.org/wiki/Kinetic_energy
   source: https://en.wikipedia.org/wiki/Kinetic_energy
   source_count: 2
   sources:
@@ -785,6 +861,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Bread Baking (1 loaf)
+    source_trace:
+      method: derived
+      original_value_text: 8e5
+      source_url: https://en.wikipedia.org/wiki/Baking
   source: https://en.wikipedia.org/wiki/Baking
   source_count: 2
   sources:
@@ -823,6 +903,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Workday Computing
+    source_trace:
+      method: derived
+      original_value_text: 1e6
+      source_url: https://en.wikipedia.org/wiki/Computer_energy_use
   source: https://en.wikipedia.org/wiki/Computer_energy_use
   source_count: 2
   sources:
@@ -861,6 +945,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Car Battery
+    source_trace:
+      method: derived
+      original_value_text: 1.8e6
+      source_url: https://en.wikipedia.org/wiki/Car_battery
   source: https://en.wikipedia.org/wiki/Car_battery
   source_count: 2
   sources:
@@ -899,6 +987,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Bus Stop Recovery
+    source_trace:
+      method: derived
+      original_value_text: 2e6
+      source_url: https://en.wikipedia.org/wiki/Regenerative_brake
   source: https://en.wikipedia.org/wiki/Regenerative_brake
   source_count: 2
   sources:
@@ -937,6 +1029,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: TNT (1 kg)
+    source_trace:
+      method: derived
+      original_value_text: 4.2e6
+      source_url: https://en.wikipedia.org/wiki/TNT_equivalent
   source: https://en.wikipedia.org/wiki/TNT_equivalent
   source_count: 2
   sources:
@@ -975,6 +1071,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Human Daily
+    source_trace:
+      method: derived
+      original_value_text: 8.4e6
+      source_url: https://en.wikipedia.org/wiki/Human_nutrition
   source: https://en.wikipedia.org/wiki/Human_nutrition
   source_count: 2
   sources:
@@ -1013,6 +1113,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Marathon Effort
+    source_trace:
+      method: derived
+      original_value_text: 1e7
+      source_url: https://en.wikipedia.org/wiki/Marathon
   source: https://en.wikipedia.org/wiki/Marathon
   source_count: 2
   sources:
@@ -1051,6 +1155,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Household (Daily)
+    source_trace:
+      method: derived
+      original_value_text: 3.6e7
+      source_url: https://en.wikipedia.org/wiki/Electricity
   source: https://en.wikipedia.org/wiki/Electricity
   source_count: 2
   sources:
@@ -1089,6 +1197,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: EV Battery Pack
+    source_trace:
+      method: derived
+      original_value_text: 2.7e8
+      source_url: https://en.wikipedia.org/wiki/Electric_vehicle_battery
   source: https://en.wikipedia.org/wiki/Electric_vehicle_battery
   source_count: 2
   sources:
@@ -1127,6 +1239,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Jet Flight (per passenger)
+    source_trace:
+      method: derived
+      original_value_text: 1e9
+      source_url: https://en.wikipedia.org/wiki/Fuel_economy_in_aircraft
   source: https://en.wikipedia.org/wiki/Fuel_economy_in_aircraft
   source_count: 2
   sources:
@@ -1165,6 +1281,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Lightning Bolt
+    source_trace:
+      method: derived
+      original_value_text: 1e9
+      source_url: https://en.wikipedia.org/wiki/Lightning
   source: https://en.wikipedia.org/wiki/Lightning
   source_count: 2
   sources:
@@ -1203,6 +1323,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Refrigerator (Annual)
+    source_trace:
+      method: derived
+      original_value_text: 1.5e9
+      source_url: https://en.wikipedia.org/wiki/Refrigerator
   source: https://en.wikipedia.org/wiki/Refrigerator
   source_count: 2
   sources:
@@ -1241,6 +1365,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Nuclear Bomb (1 kt)
+    source_trace:
+      method: derived
+      original_value_text: 4.2e12
+      source_url: https://en.wikipedia.org/wiki/Nuclear_weapon
   source: https://en.wikipedia.org/wiki/Nuclear_weapon
   source_count: 2
   sources:
@@ -1279,6 +1407,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Solar Flare
+    source_trace:
+      method: derived
+      original_value_text: 1e25
+      source_url: https://en.wikipedia.org/wiki/Solar_flare
   source: https://en.wikipedia.org/wiki/Solar_flare
   source_count: 2
   sources:
@@ -1317,6 +1449,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Sun (1 second)
+    source_trace:
+      method: derived
+      original_value_text: 3.8e26
+      source_url: https://en.wikipedia.org/wiki/Sun
   source: https://en.wikipedia.org/wiki/Sun
   source_count: 2
   sources:
@@ -1355,6 +1491,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Supernova
+    source_trace:
+      method: derived
+      original_value_text: 1e44
+      source_url: https://en.wikipedia.org/wiki/Supernova
   source: https://en.wikipedia.org/wiki/Supernova
   source_count: 2
   sources:
@@ -1393,6 +1533,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Gamma Ray Burst
+    source_trace:
+      method: derived
+      original_value_text: 1e47
+      source_url: https://en.wikipedia.org/wiki/Gamma-ray_burst
   source: https://en.wikipedia.org/wiki/Gamma-ray_burst
   source_count: 2
   sources:

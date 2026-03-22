@@ -1,6 +1,22 @@
 {
   "base_unit": "pascals",
-  "coverage_report": {},
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 17,
+    "candidate_shortfall_to_preferred_target": 33,
+    "empty_bin_count": 18,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 17,
+    "selected_primary_count": 6,
+    "selected_secondary_count": 11,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 17
+    },
+    "target_selected_count": 17
+  },
   "description_format": "markdown",
   "dimension": "youngs-modulus",
   "dimension_description": "Youngs modulus describes linear elastic stiffness, the ratio of stress to strain for small reversible deformations. It is the slope of the initial part of a stress strain curve under uniaxial load at stated temperature and rate. Microstructure, porosity, and moisture can shift it dramatically for natural materials. Each value below includes a representative condition so comparisons hold water.",
@@ -17,7 +33,12 @@
       "description_medium": "Polymer foams behave like springs in a scaffold of cells, so their effective modulus is tiny until densification. Cell size, gas content, and skin layers matter as much as chemistry. Designers tune this for pillows versus helmet liners. The value is for a flexible open cell foam in small strain compression.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Foam"
+        "legacy_item_name": "Foam",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e5",
+          "source_url": "https://en.wikipedia.org/wiki/Foam"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-foam",
@@ -63,7 +84,12 @@
       "description_medium": "Cartilage combines a collagen network with pressurized water to form a poroelastic material with low instantaneous modulus. Under sustained load the modulus rises as fluid drains. Healthy joints depend on this time dependence for shock absorption. The value is an initial small strain tangent.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Cartilage"
+        "legacy_item_name": "Cartilage",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Cartilage"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-cartilage",
@@ -109,7 +135,12 @@
       "description_medium": "Soft rubber stores little energy per strain because chains uncoil easily, leading to a very low modulus. As strain rises, entropic elasticity stiffens the response. Fillers like carbon black raise the modulus by reinforcing the network. The value given is for an unfilled gum rubber at room temperature.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Rubber"
+        "legacy_item_name": "Rubber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Rubber"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-rubber",
@@ -155,7 +186,12 @@
       "description_medium": "Tendon stores elastic energy for locomotion with a modulus around a gigapascal that rises with strain. Warm tissues display higher extensibility and lower stiffness initially. Training induces remodeling that tunes this property. The figure is a small strain slope for Achilles tendon.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Tendon"
+        "legacy_item_name": "Tendon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e9",
+          "source_url": "https://en.wikipedia.org/wiki/Tendon"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-tendon",
@@ -201,7 +237,12 @@
       "description_medium": "Softwoods are anisotropic; along the grain the modulus is moderate, across the grain it is an order lower. Moisture acts like a plasticizer that reduces stiffness. Builders season wood to stabilize this property. The value is longitudinal for dried spruce.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Wood (Soft)"
+        "legacy_item_name": "Wood (Soft)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e9",
+          "source_url": "https://en.wikipedia.org/wiki/Wood"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-wood-soft",
@@ -247,7 +288,12 @@
       "description_medium": "Cortical bone has a modulus in the tens of gigapascals along the osteon direction due to mineralized collagen. Age and disease reduce both stiffness and toughness. Implant designers choose alloys to match this to avoid stress shielding. The value is for human femoral cortical bone in tension.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Bone"
+        "legacy_item_name": "Bone",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e10",
+          "source_url": "https://en.wikipedia.org/wiki/Bone"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-bone",
@@ -293,7 +339,12 @@
       "description_medium": "Concrete\u2019s modulus depends on aggregate and curing; it is not a pure material constant. Codes use empirical formulas tied to compressive strength. Long term creep lowers effective stiffness in service. The value is a short term tangent for a structural mix.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Concrete"
+        "legacy_item_name": "Concrete",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e10",
+          "source_url": "https://en.wikipedia.org/wiki/Concrete"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-concrete",
@@ -339,7 +390,12 @@
       "description_medium": "Aluminum alloys share a modulus near seventy gigapascals regardless of strength grade because stiffness depends on bonding, not microstructure alone. This constancy simplifies deflection calculations. Temperature reduces modulus slightly. The value is for a typical wrought alloy.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Aluminum"
+        "legacy_item_name": "Aluminum",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7e10",
+          "source_url": "https://en.wikipedia.org/wiki/Aluminium"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-aluminum",
@@ -385,7 +441,12 @@
       "description_medium": "Glass is relatively stiff with a modulus similar to some metals despite brittleness. Defects control strength but not this initial slope. Temperature near the glass transition softens it dramatically. The value is for soda lime glass at room temperature.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Glass"
+        "legacy_item_name": "Glass",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7e10",
+          "source_url": "https://en.wikipedia.org/wiki/Glass"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-glass",
@@ -431,7 +492,12 @@
       "description_medium": "Titanium alloys are roughly half as stiff as steel at similar densities, giving good specific stiffness. Designers exploit this for weight sensitive parts that must flex without yielding. Temperature and phase mix set exact values. The number is for Ti 6Al 4V.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Titanium"
+        "legacy_item_name": "Titanium",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.1e11",
+          "source_url": "https://en.wikipedia.org/wiki/Titanium"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-titanium",
@@ -477,7 +543,12 @@
       "description_medium": "Unidirectional carbon fiber composites have an effective modulus near two hundred gigapascals along the fiber direction, while transverse is far lower. Rule of mixtures gives a first estimate based on fiber volume. Layup choices tailor stiffness to load paths. The number is for a high modulus fiber epoxy lamina.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Carbon Fiber"
+        "legacy_item_name": "Carbon Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e11",
+          "source_url": "https://en.wikipedia.org/wiki/Carbon_fiber"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-carbon-fiber",
@@ -523,7 +594,12 @@
       "description_medium": "Steels cluster near two hundred gigapascals in modulus across many alloys and tempers. Heat treatment alters yield and toughness but not this slope much. That is why beams deflect similarly before yield regardless of grade. The value is the canonical handbook number.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Steel"
+        "legacy_item_name": "Steel",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e11",
+          "source_url": "https://en.wikipedia.org/wiki/Steel"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-steel",
@@ -569,7 +645,12 @@
       "description_medium": "Engineering ceramics achieve very high modulus due to strong ionic and covalent bonds. Their stiffness remains high even at heat where metals soften. Designers trade brittleness against this stiffness for cutting tools. The value is for alumina.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Ceramic"
+        "legacy_item_name": "Ceramic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e11",
+          "source_url": "https://en.wikipedia.org/wiki/Ceramic"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-ceramic",
@@ -615,7 +696,12 @@
       "description_medium": "Diamond is among the stiffest known solids because of its dense sp3 network. Small strains store huge elastic energy before fracture. Microelectromechanical resonators exploit this for high frequency stability. The value is a polycrystalline average.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Diamond"
+        "legacy_item_name": "Diamond",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e12",
+          "source_url": "https://en.wikipedia.org/wiki/Diamond"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-diamond",
@@ -661,7 +747,12 @@
       "description_medium": "Graphene\u2019s in plane modulus approaches the theoretical limit for a two dimensional lattice. Out of plane bending is much softer, illustrating geometric effects. Large area films reduce modulus due to wrinkles and defects. The value is from nanoindentation on monolayers.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Graphene"
+        "legacy_item_name": "Graphene",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e12",
+          "source_url": "https://en.wikipedia.org/wiki/Graphene"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-graphene",
@@ -707,7 +798,12 @@
       "description_medium": "The crust of a neutron star has a colossal effective shear modulus in models, reflecting interactions in a dense nuclear lattice. Starquakes excite oscillations that encode this stiffness indirectly. Laboratory analogies are qualitative at best. The value is an estimate from astrophysical constraints.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Neutron Star Crust"
+        "legacy_item_name": "Neutron Star Crust",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e30",
+          "source_url": "https://en.wikipedia.org/wiki/Neutron_star"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-neutron-star-crust",
@@ -753,7 +849,12 @@
       "description_medium": "Near a black hole horizon, describing spacetime response with an effective modulus is metaphorical yet useful for order of magnitude. Accretion disk magneto turbulence sets stress strain like relations for the fluid. These ideas guide simulations of jets and spectra. The number is a heuristic extreme for comparison.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
-        "legacy_item_name": "Black Hole Horizon"
+        "legacy_item_name": "Black Hole Horizon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e35",
+          "source_url": "https://en.wikipedia.org/wiki/Black_hole"
+        }
       },
       "hook": null,
       "id": "obs:youngs-modulus:scenario-youngs-modulus-black-hole-horizon",
@@ -791,8 +892,8 @@
       "wikidata_qid": null
     }
   ],
-  "preferred_max_items": 24,
-  "preferred_target_items": 24,
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
   "selection_bin_count": 24,

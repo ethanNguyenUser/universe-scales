@@ -39,8 +39,8 @@ units:
   conversion_factor: 0.001
   description: Kilometers per second squared help compare very large accelerations.
 required_min_items: 24
-preferred_target_items: 24
-preferred_max_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 frontend_group: motion
@@ -61,6 +61,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Accelerating Universe (Dark Energy)
+    source_trace:
+      method: derived
+      original_value_text: 7e-10
+      source_url: https://avi-loeb.medium.com
   source: https://avi-loeb.medium.com
   source_count: 2
   sources:
@@ -99,6 +103,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Pioneer Anomaly (extra Sunward drift)
+    source_trace:
+      method: derived
+      original_value_text: '8.74e-10'
+      source_url: https://en.wikipedia.org/wiki/Pioneer_anomaly
   source: https://en.wikipedia.org/wiki/Pioneer_anomaly
   source_count: 2
   sources:
@@ -137,6 +145,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Solar Sail (IKAROS spacecraft)
+    source_trace:
+      method: derived
+      original_value_text: '3.6e-06'
+      source_url: https://global.jaxa.jp/press/2010/07/20100709_ikaros_e.html
   source: https://global.jaxa.jp/press/2010/07/20100709_ikaros_e.html
   source_count: 2
   sources:
@@ -175,6 +187,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Moon's Gravity at Earth
+    source_trace:
+      method: derived
+      original_value_text: '3.31e-05'
+      source_url: https://hep.physics.utoronto.ca/~pekka/phy140y/lectures/Lecture_6.pdf
   source: https://hep.physics.utoronto.ca/~pekka/phy140y/lectures/Lecture_6.pdf
   source_count: 2
   sources:
@@ -213,6 +229,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Ion Engine Thrust (Deep-Space Ion Thruster)
+    source_trace:
+      method: derived
+      original_value_text: '9.2e-05'
+      source_url: https://en.wikipedia.org/wiki/Ion_thruster
   source: https://en.wikipedia.org/wiki/Ion_thruster
   source_count: 2
   sources:
@@ -251,6 +271,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Phobos Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '0.0057'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -289,6 +313,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Earth's Orbit (Centripetal around Sun)
+    source_trace:
+      method: derived
+      original_value_text: '0.00593'
+      source_url: https://physics.stackexchange.com
   source: https://physics.stackexchange.com
   source_count: 2
   sources:
@@ -327,6 +355,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Earth's Rotation at Equator
+    source_trace:
+      method: derived
+      original_value_text: '0.034'
+      source_url: https://www.wtamu.edu/~cbaird/sq/2014/01/07/do-i-weigh-less-on-the-equator-than-at-the-north-pole/
   source: https://www.wtamu.edu/~cbaird/sq/2014/01/07/do-i-weigh-less-on-the-equator-than-at-the-north-pole/
   source_count: 2
   sources:
@@ -365,6 +397,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Ceres Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '0.27'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -403,6 +439,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Moon Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '1.62'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -441,6 +481,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Mars Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '3.71'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -479,6 +523,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Earth Surface Gravity (1 g)
+    source_trace:
+      method: derived
+      original_value_text: '9.81'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -517,6 +565,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Cheetah's Burst Acceleration
+    source_trace:
+      method: derived
+      original_value_text: '13.0'
+      source_url: https://www.sciencedaily.com/releases/2013/06/130614082900.htm
   source: https://www.sciencedaily.com/releases/2013/06/130614082900.htm
   source_count: 2
   sources:
@@ -555,6 +607,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Jupiter Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '25.28'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -593,6 +649,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Saturn V Rocket (Launch Acceleration)
+    source_trace:
+      method: derived
+      original_value_text: '39.8'
+      source_url: https://en.wikipedia.org/wiki/Saturn_V
   source: https://en.wikipedia.org/wiki/Saturn_V
   source_count: 2
   sources:
@@ -631,6 +691,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Top Fuel Dragster
+    source_trace:
+      method: derived
+      original_value_text: '50.0'
+      source_url: https://www.nhra.com/news/2021/how-many-g-s-does-modern-11-000-hp-top-fuel-dragster-pull
   source: https://www.nhra.com/news/2021/how-many-g-s-does-modern-11-000-hp-top-fuel-dragster-pull
   source_count: 2
   sources:
@@ -669,6 +733,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Fighter Jet Turn (High-G Maneuver)
+    source_trace:
+      method: derived
+      original_value_text: '98.0'
+      source_url: https://avi-loeb.medium.com
   source: https://avi-loeb.medium.com
   source_count: 2
   sources:
@@ -707,6 +775,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Sun's Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '274.0'
+      source_url: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source: https://en.wikipedia.org/wiki/Gravity_of_Earth
   source_count: 2
   sources:
@@ -745,6 +817,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Rocket Sled Deceleration (Col. Stapp, 1954)
+    source_trace:
+      method: derived
+      original_value_text: '392.0'
+      source_url: https://www.thiot-ingenierie.com/en/2016/09/22/embedded-electronics-tested-at-100000-g-2/
   source: https://www.thiot-ingenierie.com/en/2016/09/22/embedded-electronics-tested-at-100000-g-2/
   source_count: 2
   sources:
@@ -783,6 +859,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Froghopper Jump (Champion Leaper)
+    source_trace:
+      method: derived
+      original_value_text: '5400.0'
+      source_url: https://www.sciencedaily.com/releases/2013/06/130614082900.htm
   source: https://www.sciencedaily.com/releases/2013/06/130614082900.htm
   source_count: 2
   sources:
@@ -821,6 +901,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Woodpecker Pecking Deceleration
+    source_trace:
+      method: derived
+      original_value_text: '12000.0'
+      source_url: https://www.fieldmuseum.org/blog/what-woodpecker-brains-can-tell-us-about-concussions
   source: https://www.fieldmuseum.org/blog/what-woodpecker-brains-can-tell-us-about-concussions
   source_count: 2
   sources:
@@ -859,6 +943,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Baseball Bat Impact (Ball Acceleration)
+    source_trace:
+      method: derived
+      original_value_text: '33000.0'
+      source_url: https://avi-loeb.medium.com
   source: https://avi-loeb.medium.com
   source_count: 2
   sources:
@@ -897,6 +985,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Artillery Shell Launch
+    source_trace:
+      method: derived
+      original_value_text: '200000.0'
+      source_url: https://www.thiot-ingenierie.com/en/2016/09/22/embedded-electronics-tested-at-100000-g-2/
   source: https://www.thiot-ingenierie.com/en/2016/09/22/embedded-electronics-tested-at-100000-g-2/
   source_count: 2
   sources:
@@ -935,6 +1027,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: White Dwarf Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '1000000.0'
+      source_url: https://en.wikipedia.org/wiki/Surface_gravity#Variations
   source: https://en.wikipedia.org/wiki/Surface_gravity#Variations
   source_count: 2
   sources:
@@ -973,6 +1069,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Fungal Spore Launch (Pilobolus)
+    source_trace:
+      method: derived
+      original_value_text: '1760000.0'
+      source_url: https://www.scientificamerican.com/article/fungus-spores-fast-speedy-mold/
   source: https://www.scientificamerican.com/article/fungus-spores-fast-speedy-mold/
   source_count: 2
   sources:
@@ -1011,6 +1111,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Jellyfish Stinger (Nematocyst)
+    source_trace:
+      method: derived
+      original_value_text: '49000000.0'
+      source_url: https://www.nationalgeographic.com/animals/article/animals-stingers-bees-jellyfish-wasps
   source: https://www.nationalgeographic.com/animals/article/animals-stingers-bees-jellyfish-wasps
   source_count: 2
   sources:
@@ -1049,6 +1153,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Neutron Star Surface Gravity
+    source_trace:
+      method: derived
+      original_value_text: '1000000000000.0'
+      source_url: https://en.wikipedia.org/wiki/Surface_gravity#Variations
   source: https://en.wikipedia.org/wiki/Surface_gravity#Variations
   source_count: 2
   sources:
@@ -1089,6 +1197,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Large Hadron Collider (Proton Beam)
+    source_trace:
+      method: derived
+      original_value_text: '23000000000000.0'
+      source_url: https://lhc-closer.es/taking_a_closer_look_at_lhc/0.simple_movement
   source: https://lhc-closer.es/taking_a_closer_look_at_lhc/0.simple_movement
   source_count: 2
   sources:
@@ -1127,6 +1239,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Schwinger Limit (Critical E-field)
+    source_trace:
+      method: derived
+      original_value_text: '2.45e+29'
+      source_url: https://avi-loeb.medium.com
   source: https://avi-loeb.medium.com
   source_count: 2
   sources:
@@ -1165,6 +1281,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Planck Acceleration (Theoretical Maximum)
+    source_trace:
+      method: derived
+      original_value_text: '5.56e+51'
+      source_url: https://en.wikipedia.org/wiki/Planck_units
   source: https://en.wikipedia.org/wiki/Planck_units
   source_count: 2
   sources:

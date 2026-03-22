@@ -1,6 +1,22 @@
 {
   "base_unit": "newtons",
-  "coverage_report": {},
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 20,
+    "candidate_shortfall_to_preferred_target": 30,
+    "empty_bin_count": 13,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 20,
+    "selected_primary_count": 11,
+    "selected_secondary_count": 9,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 20
+    },
+    "target_selected_count": 20
+  },
   "description_format": "markdown",
   "dimension": "force",
   "dimension_description": "Force quantifies how strongly an interaction changes motion or shape, linking directly to acceleration by Newton\u2019s second law. In contact problems it is the agency behind pushes, pulls, and pressures; at a distance it expresses gravity and electromagnetism. Engineers budget forces to keep bridges stable and joints safe. Each entry below states the object and condition so the number is actionable, not abstract.",
@@ -17,7 +33,12 @@
       "description_medium": "Intermolecular attractions in liquids and soft solids often manifest at piconewton scales per interacting pair. This is the regime probed by optical tweezers and single molecule experiments. Such forces set surface tension and viscosity that we experience in droplets and gels. The value represents a typical cohesive tug between nearby molecules.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Molecular Force"
+        "legacy_item_name": "Molecular Force",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-12",
+          "source_url": "https://en.wikipedia.org/wiki/Intermolecular_force"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-molecular-force",
@@ -63,7 +84,12 @@
       "description_medium": "Atomic force microscopy measures nanonewton level tipsurface forces as a cantilever skims a surface. The interaction includes van der Waals, electrostatic, and sometimes chemical bonding contributions. Mapping these tiny forces builds images one atom wide. The number here is a representative contact force in gentle AFM tapping mode.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Atomic Force"
+        "legacy_item_name": "Atomic Force",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-9",
+          "source_url": "https://en.wikipedia.org/wiki/Atomic_force_microscopy"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-atomic-force",
@@ -109,7 +135,12 @@
       "description_medium": "The solar wind imparts a minuscule steady force on a square meter of reflective sail near Earth. Over months this whisper builds real speed in deep space. Bright sunlight and high reflectivity maximize the small push. The number is the order of magnitude per square meter at 1 astronomical unit.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Solar Wind"
+        "legacy_item_name": "Solar Wind",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-7",
+          "source_url": "https://en.wikipedia.org/wiki/Solar_wind"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-solar-wind",
@@ -155,7 +186,12 @@
       "description_medium": "An ant\u2019s leg can exert a millinewton scale force while carrying a crumb relative to its body mass. Leveraged by multiple legs the insect achieves impressive load fractions. The force per leg pulses with gait, not steady like a motor. This figure captures a single leg contact during a step.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Ant Force"
+        "legacy_item_name": "Ant Force",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.001",
+          "source_url": "https://en.wikipedia.org/wiki/Ant"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-ant-force",
@@ -201,7 +237,12 @@
       "description_medium": "Pressing a key on a mechanical keyboard often requires around this force at the finger pad at actuation. Human fingertips control such forces with high precision using tactile feedback. Prolonged work comfort depends on keeping this below fatigue thresholds. The number corresponds to medium switch springs.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Keyboard Keypress"
+        "legacy_item_name": "Keyboard Keypress",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.5",
+          "source_url": "https://en.wikipedia.org/wiki/Computer_keyboard"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-keyboard-keypress",
@@ -247,7 +288,12 @@
       "description_medium": "The drag force on a cyclist at racing speed is a few tens of newtons and grows with speed squared. Aerobars and tight clothing shave newtons off this budget. Hills convert the problem into gravity dominated force instead. The value assumes flat road and no wind at 12 meters per second.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Cyclist Aerodynamic Drag"
+        "legacy_item_name": "Cyclist Aerodynamic Drag",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "30",
+          "source_url": "https://en.wikipedia.org/wiki/Bicycle_performance"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-cyclist-aerodynamic-drag",
@@ -293,7 +339,12 @@
       "description_medium": "Opening a heavy door with a long handle needs only tens of newtons because torque gives leverage. Short knobs demand higher force for the same latch. Designers tune springs to balance child safety and accessibility. The number is typical for public building doors.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Door Handle Pull"
+        "legacy_item_name": "Door Handle Pull",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "40",
+          "source_url": "https://en.wikipedia.org/wiki/Door_handle"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-door-handle-pull",
@@ -339,7 +390,12 @@
       "description_medium": "A firm handshake produces a sustained grip force of this order per hand for an average adult. Social norms modulate it within a wide comfortable band. Force sensors show brief spikes at initial contact and release. The value is a steady mid portion, not the peak squeeze.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Handshake"
+        "legacy_item_name": "Handshake",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "50",
+          "source_url": "https://en.wikipedia.org/wiki/Handshake"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-handshake",
@@ -385,7 +441,12 @@
       "description_medium": "Pulling a bowstring to full draw on a traditional longbow requires on this order of force at the fingers. Modern compound bows use cams to reduce peak hold. Archers condition grip and back muscles to manage the load smoothly. The value states the hold at anchor, not the initial pull.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Bow Draw"
+        "legacy_item_name": "Bow Draw",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "300",
+          "source_url": "https://en.wikipedia.org/wiki/Bow_(archery)"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-bow-draw",
@@ -431,7 +492,12 @@
       "description_medium": "Biting a carrot uses hundreds of newtons at the molars for a brief crush. Muscles generate the force through a lever system that trades distance for advantage. Diet and training affect peak values only modestly. The figure is an average adult bite under deliberate effort.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Human Bite"
+        "legacy_item_name": "Human Bite",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000",
+          "source_url": "https://en.wikipedia.org/wiki/Bite_force_quotient"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-human-bite",
@@ -477,7 +543,12 @@
       "description_medium": "A strong gust on a pedestrian exerts around a kilonewton of horizontal drag integrated over body area. Leaning and planting feet counters this to avoid slipping. Urban canyons can funnel and amplify such forces. The number matches a stormy day that turns umbrellas inside out.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Wind Force"
+        "legacy_item_name": "Wind Force",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000",
+          "source_url": "https://en.wikipedia.org/wiki/Wind"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-wind-force",
@@ -523,7 +594,12 @@
       "description_medium": "A competitive weightlifter holding a 200 kilogram bar at rest supports roughly this downward force through the skeleton. The bar\u2019s motion adds dynamic peaks beyond the static weight. Training centers design platforms and collars with these loads in mind. The figure quotes the sustained portion during a clean hold.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Weight Lifter"
+        "legacy_item_name": "Weight Lifter",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2000",
+          "source_url": "https://en.wikipedia.org/wiki/Weightlifting"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-weight-lifter",
@@ -569,7 +645,12 @@
       "description_medium": "A typical car brake pedal can transmit a few kilonewtons to the hydraulic system when a driver stomps in an emergency. Booster systems scale the foot input to caliper clamping force. Anti lock control modulates it rapidly to keep traction. The number is a representative pedal to master cylinder load.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Car Brake"
+        "legacy_item_name": "Car Brake",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3000",
+          "source_url": "https://en.wikipedia.org/wiki/Brake"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-car-brake",
@@ -615,7 +696,12 @@
       "description_medium": "Ground reaction forces during a jump landing can spike to several times body weight over milliseconds, totaling thousands of newtons. Good shoes and bent knees stretch the impulse out in time. Force plates in sports labs measure these peaks to tune training. The figure quotes a single foot impact for an adult athlete.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Jump Landing Peak"
+        "legacy_item_name": "Jump Landing Peak",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4000",
+          "source_url": "https://en.wikipedia.org/wiki/Ground_reaction_force"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-jump-landing-peak",
@@ -661,7 +747,12 @@
       "description_medium": "The tractive push at the wheels of a compact car during strong acceleration totals around this many newtons. Engine torque, gear ratio, and tire radius all contribute. Traction limits, not engine power alone, cap the usable force. The value reflects a brief burst merging into traffic.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Car Engine"
+        "legacy_item_name": "Car Engine",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10000",
+          "source_url": "https://en.wikipedia.org/wiki/Internal_combustion_engine"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-car-engine",
@@ -707,7 +798,12 @@
       "description_medium": "A shop hydraulic press concentrates input into a compressive force reaching about a meganewton on a small workpiece. Dies and fixtures must distribute it to avoid cracking. Safety cages exist because stored energy can release abruptly. The number is a practical mid size press capacity.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Hydraulic Press"
+        "legacy_item_name": "Hydraulic Press",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000000",
+          "source_url": "https://en.wikipedia.org/wiki/Hydraulic_press"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-hydraulic-press",
@@ -753,7 +849,12 @@
       "description_medium": "A tower crane can lift loads with cable tensions summing to this many newtons without overstress. Operators derate with radius because torque at the mast grows with reach. Wind side loads add vector components that must be considered. The figure is a round number for heavy picks at close radius.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Crane"
+        "legacy_item_name": "Crane",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10000000",
+          "source_url": "https://en.wikipedia.org/wiki/Crane_(machine)"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-crane",
@@ -799,7 +900,12 @@
       "description_medium": "The thrust of a large rocket engine cluster during liftoff sums to about ten meganewtons. This overcomes weight and provides margin to climb. Nozzles and turbopumps channel enormous mass flow to produce it. The number places human launch capability on a single line.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Rocket Thrust"
+        "legacy_item_name": "Rocket Thrust",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e7",
+          "source_url": "https://en.wikipedia.org/wiki/Rocket_engine"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-rocket-thrust",
@@ -845,7 +951,12 @@
       "description_medium": "Tidal forces stretching Earth arise from the Moon and Sun acting across the planet\u2019s diameter. The integrated effect lifts oceans by meters despite small per kilogram forces. Engineers consider tides when scheduling marine operations. The value here is an effective global scale force budget, illustrative rather than local.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Tidal Force"
+        "legacy_item_name": "Tidal Force",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e18",
+          "source_url": "https://en.wikipedia.org/wiki/Tidal_force"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-tidal-force",
@@ -891,7 +1002,12 @@
       "description_medium": "Near a black hole event horizon, gradients in gravity create extreme tidal forces on extended objects. Over short lengths the force difference can exceed anything materials can bear. Astronomers model these fields without touching them. The number is a conceptual scale, not a laboratory measurement.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
-        "legacy_item_name": "Black Hole"
+        "legacy_item_name": "Black Hole",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e30",
+          "source_url": "https://en.wikipedia.org/wiki/Black_hole"
+        }
       },
       "hook": null,
       "id": "obs:force:scenario-force-black-hole",
@@ -929,8 +1045,8 @@
       "wikidata_qid": null
     }
   ],
-  "preferred_max_items": 24,
-  "preferred_target_items": 24,
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
   "selection_bin_count": 24,

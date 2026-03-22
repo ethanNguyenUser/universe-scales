@@ -313,10 +313,15 @@ class DatasetBuilder:
 
     def dimension_preferences(self, slug: str) -> dict[str, int]:
         raw = self.flagship_config_by_slug.get(slug, {})
-        required_min = int(raw.get("required_min_items", DEFAULT_REQUIRED_MIN_ITEMS))
-        preferred_target = int(raw.get("preferred_target_items", required_min or DEFAULT_PREFERRED_TARGET_ITEMS))
-        preferred_max = int(raw.get("preferred_max_items", max(preferred_target, required_min, DEFAULT_PREFERRED_MAX_ITEMS)))
-        selection_bin_count = int(raw.get("selection_bin_count", DEFAULT_SELECTION_BIN_COUNT))
+        profile = self.dimension_profile(slug)
+        required_min = int(raw.get("required_min_items", profile.get("required_min_items", DEFAULT_REQUIRED_MIN_ITEMS)))
+        preferred_target = int(
+            raw.get("preferred_target_items", profile.get("preferred_target_items", required_min or DEFAULT_PREFERRED_TARGET_ITEMS))
+        )
+        preferred_max = int(
+            raw.get("preferred_max_items", profile.get("preferred_max_items", max(preferred_target, required_min, DEFAULT_PREFERRED_MAX_ITEMS)))
+        )
+        selection_bin_count = int(raw.get("selection_bin_count", profile.get("selection_bin_count", DEFAULT_SELECTION_BIN_COUNT)))
         return {
             "required_min_items": required_min,
             "preferred_target_items": max(required_min, preferred_target),
@@ -510,6 +515,7 @@ class DatasetBuilder:
         qualifiers = deepcopy(override.get("qualifiers", {}))
         display_eligible = bool(override.get("display_eligible", True))
         category = override.get("category", self.infer_category(name, dimension_slug))
+        external_url = item.get("source")
         content = self.resolve_content_seed(
             dimension_slug=dimension_slug,
             subject_key=subject_key,
@@ -523,6 +529,14 @@ class DatasetBuilder:
                 "ingest_source": str(yaml_path.relative_to(ROOT)),
                 "legacy_item_name": name,
             },
+            source_trace=self.build_source_trace(
+                source_url=external_url,
+                value_type=value_type,
+                original_value_text=str(item["value"]),
+                qualifiers=qualifiers,
+                raw_payload=override,
+                legacy=True,
+            ),
         )
         self.insert_observation(
             observation_id=observation_id,
@@ -543,7 +557,6 @@ class DatasetBuilder:
             content=content,
         )
 
-        external_url = item.get("source")
         if external_url:
             publisher, license_text = derive_publisher(external_url)
             external_source_id = self.ensure_source(
@@ -616,6 +629,13 @@ class DatasetBuilder:
                     "ingest_source": payload["_raw_path"],
                     "canonical_name": payload["canonical_name"],
                 },
+                source_trace=self.build_source_trace(
+                    source_url=str(payload["source_url"]),
+                    value_type=str(payload["value_type"]),
+                    original_value_text=str(payload.get("original_value_text") or payload["value_base"]),
+                    qualifiers=deepcopy(payload.get("qualifiers", {})),
+                    raw_payload=payload,
+                ),
             )
             self.insert_observation(
                 observation_id=observation_id,
@@ -802,6 +822,46 @@ class DatasetBuilder:
             text = f"{text}."
         return f"{text} {' '.join(notes)}".strip()
 
+    def build_source_trace(
+        self,
+        *,
+        source_url: str | None,
+        value_type: str,
+        original_value_text: str | None,
+        qualifiers: dict[str, Any],
+        raw_payload: dict[str, Any] | None = None,
+        legacy: bool = False,
+    ) -> dict[str, Any]:
+        payload = raw_payload or {}
+        derivation = payload.get("derivation_note") or qualifiers.get("derivation")
+        source_basis = payload.get("source_basis")
+        source_value_text = payload.get("source_value_text")
+        source_unit = payload.get("source_unit")
+        conversion_note = payload.get("conversion_note")
+        source_locator = payload.get("source_locator")
+
+        if derivation or value_type == "derived":
+            method = "derived"
+        elif conversion_note:
+            method = "converted"
+        elif legacy:
+            method = "legacy_seed"
+        else:
+            method = "direct"
+
+        trace = {
+            "method": method,
+            "source_url": source_url,
+            "source_basis": source_basis,
+            "source_value_text": source_value_text,
+            "source_unit": source_unit,
+            "conversion_note": conversion_note,
+            "derivation_note": derivation,
+            "source_locator": source_locator,
+            "original_value_text": original_value_text,
+        }
+        return {key: value for key, value in trace.items() if value not in (None, "", [])}
+
     def resolve_content_seed(
         self,
         *,
@@ -814,6 +874,7 @@ class DatasetBuilder:
         qualifiers: dict[str, Any],
         default_origin: str,
         facts: dict[str, Any] | None = None,
+        source_trace: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
         override = self.content_overrides_by_subject.get((dimension_slug, subject_key))
         if override is None:
@@ -832,6 +893,8 @@ class DatasetBuilder:
         content_origin = str((override or {}).get("content_origin") or (override or {}).get("_raw_path") or default_origin)
 
         merged_facts = deepcopy(facts or {})
+        if source_trace:
+            merged_facts["source_trace"] = source_trace
         override_facts = (override or {}).get("facts")
         if isinstance(override_facts, dict):
             merged_facts.update(deepcopy(override_facts))
@@ -1014,7 +1077,7 @@ class DatasetBuilder:
         return min(eligible_count, preferred_target, preferred_max)
 
     def compute_flagship_selection(self) -> None:
-        for slug in self.flagship_dimensions:
+        for slug in sorted(self.dimension_lookup):
             dimension = self.dimension_lookup.get(slug)
             if not dimension:
                 continue

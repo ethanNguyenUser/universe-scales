@@ -1,6 +1,22 @@
 {
   "base_unit": "pascals",
-  "coverage_report": {},
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 20,
+    "candidate_shortfall_to_preferred_target": 30,
+    "empty_bin_count": 14,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 20,
+    "selected_primary_count": 10,
+    "selected_secondary_count": 10,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 20
+    },
+    "target_selected_count": 20
+  },
   "description_format": "markdown",
   "dimension": "pressure",
   "dimension_description": "Pressure is force per unit area, the intensity with which a surface is pressed. It explains why a stiletto heel dents wood while a snowshoe floats, even with the same weight. In fluids, pressure transmits uniformly and drives flow from high to low according to gradients. Every value below names a setting and condition so the number connects to daily life or specific experiments.",
@@ -17,7 +33,12 @@
       "description_medium": "Between galaxies, particle densities are so low that mechanical pressure approaches zero for human purposes. Radiation fields and magnetic stresses still act, but as a pressure they are vanishingly small. Spacecraft enjoy this quiet except when hit by solar storms. The value is an order of magnitude benchmark for deep space plasma pressure.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Deep Space"
+        "legacy_item_name": "Deep Space",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-17",
+          "source_url": "https://en.wikipedia.org/wiki/Outer_space"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-deep-space",
@@ -63,7 +84,12 @@
       "description_medium": "Ultra high vacuum chambers in surface physics reach pressures near this value after long pumping and bakeout. Molecules arrive so rarely that clean crystal faces can be studied for minutes before contamination. Leak checking becomes an art at these numbers. The figure represents a good day on a research instrument.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Laboratory Vacuum"
+        "legacy_item_name": "Laboratory Vacuum",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-6",
+          "source_url": "https://en.wikipedia.org/wiki/Vacuum"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-laboratory-vacuum",
@@ -109,7 +135,12 @@
       "description_medium": "On the Martian surface the thin atmosphere presses at only a few hundred pascals, less than one percent of Earth sea level. Water boils at body temperature under such conditions without a suit. Weather there is driven by dust, not by dense air. The number is for a typical day at the equator.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Mars Surface"
+        "legacy_item_name": "Mars Surface",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "600",
+          "source_url": "https://en.wikipedia.org/wiki/Atmosphere_of_Mars"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-mars-surface",
@@ -155,7 +186,12 @@
       "description_medium": "Systolic blood pressure in a healthy adult corresponds to this pressure difference in arteries during a heartbeat. The body regulates it with hormones and vessel elasticity. Long term elevations increase risk for stroke and heart disease. The number is a familiar medical baseline expressed in pascals.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Human Blood Pressure (systolic)"
+        "legacy_item_name": "Human Blood Pressure (systolic)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.6e4",
+          "source_url": "https://en.wikipedia.org/wiki/Blood_pressure"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-human-blood-pressure-systolic",
@@ -201,7 +237,12 @@
       "description_medium": "The water above you in a swimming pool adds pressure linearly with depth, so a few meters already feels on your ears. Lungs equalize by pushing air into sinuses, a skill every diver learns. Lifeguards know headaches often come from poor equalization rather than chlorine. The number is for a depth of two meters.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Swimming Pool"
+        "legacy_item_name": "Swimming Pool",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "20000",
+          "source_url": "https://en.wikipedia.org/wiki/Swimming_pool"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-swimming-pool",
@@ -247,7 +288,12 @@
       "description_medium": "Airplane cabins are pressurized to an equivalent altitude of two to three kilometers, which is lower than sea level but comfortable for most passengers. The compromise reduces structural stress and weight while keeping oxygen levels acceptable. Sensitive travelers feel mild headache or fatigue at these numbers. The value is a typical cruise cabin pressure.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Airplane Cabin"
+        "legacy_item_name": "Airplane Cabin",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7.5e4",
+          "source_url": "https://en.wikipedia.org/wiki/Cabin_pressurization"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-airplane-cabin",
@@ -293,7 +339,12 @@
       "description_medium": "At sea level on Earth, standard atmospheric pressure is about one hundred thousand pascals by definition. It sets boiling points, cooking times, and aircraft calibration. Weather systems drift a few percent above and below. The number is the canonical reference for pressure units.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Earth Sea Level"
+        "legacy_item_name": "Earth Sea Level",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "101325",
+          "source_url": "https://en.wikipedia.org/wiki/Atmospheric_pressure"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-earth-sea-level",
@@ -339,7 +390,12 @@
       "description_medium": "A pressure cooker increases internal pressure modestly so water boils hotter and dinner finishes faster. Safety valves and lids are engineered against accidental opening under load. Recipes account for altitude and cooker setting. The number is for a common kitchen unit at operating pressure.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Pressure Cooker"
+        "legacy_item_name": "Pressure Cooker",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.2e5",
+          "source_url": "https://en.wikipedia.org/wiki/Pressure_cooking"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-pressure-cooker",
@@ -385,7 +441,12 @@
       "description_medium": "A typical can of carbonated soda holds an overpressure relative to air that keeps bubbles dissolved. Warming the can raises this pressure and makes foaming more likely on opening. Manufacturers choose levels to balance fizz and safety. The value is for a chilled sealed can.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Soda Can (sealed)"
+        "legacy_item_name": "Soda Can (sealed)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e5",
+          "source_url": "https://en.wikipedia.org/wiki/Carbonated_water"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-soda-can-sealed",
@@ -431,7 +492,12 @@
       "description_medium": "A passenger car tire is inflated to a few bars over atmospheric pressure to balance grip, wear, and comfort. Underinflation wastes fuel and overheats sidewalls, while overinflation reduces contact patch. Temperature changes during driving shift the number significantly. The value is for a warm tire after highway travel.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Tire Pressure"
+        "legacy_item_name": "Tire Pressure",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e5",
+          "source_url": "https://en.wikipedia.org/wiki/Tire"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-tire-pressure",
@@ -477,7 +543,12 @@
       "description_medium": "A hyperbaric chamber used for diving medicine runs at a few atmospheres to treat decompression sickness. Breathing pure oxygen at these pressures accelerates nitrogen washout. Operators monitor for oxygen toxicity risks. The value is a representative treatment pressure.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Hyperbaric Chamber"
+        "legacy_item_name": "Hyperbaric Chamber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e5",
+          "source_url": "https://en.wikipedia.org/wiki/Hyperbaric_medicine"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-hyperbaric-chamber",
@@ -523,7 +594,12 @@
       "description_medium": "At one hundred meters in the ocean, divers and submersibles face about ten times atmospheric pressure from the water column. Steel hulls and polymer seals are sized with generous safety margins. Breathing gas composition must change to avoid nitrogen narcosis. The value is a round figure for this depth.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Ocean Depth (100m)"
+        "legacy_item_name": "Ocean Depth (100m)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Ocean"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-ocean-depth-100m",
@@ -569,7 +645,12 @@
       "description_medium": "Venus wears a blanket of carbon dioxide so thick that the surface experiences pressures dozens of times higher than Earth. Metals soften and electronics require special cooling even before the heat is considered. Probes survive only hours with heroic engineering. The value is for the mean surface under cloud cover.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Venus Surface"
+        "legacy_item_name": "Venus Surface",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "9.2e6",
+          "source_url": "https://en.wikipedia.org/wiki/Atmosphere_of_Venus"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-venus-surface",
@@ -615,7 +696,12 @@
       "description_medium": "Industrial hydraulic systems routinely operate at tens to hundreds of bars to move heavy loads precisely. Hoses and fittings are rated well above working pressure to prevent catastrophic sprays. Small leaks feel deceptively gentle but can inject fluid into skin. The number is a mid range for shop presses and lifts.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Hydraulic System"
+        "legacy_item_name": "Hydraulic System",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e7",
+          "source_url": "https://en.wikipedia.org/wiki/Hydraulics"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-hydraulic-system",
@@ -661,7 +747,12 @@
       "description_medium": "At the bottom of the Mariana Trench, the weight of nearly eleven kilometers of water piles up a crushing pressure. Only specialized research vessels and adapted organisms operate here. Material imperfections become critical under such loads. The number gives the scale at the deepest natural point on Earth.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Mariana Trench"
+        "legacy_item_name": "Mariana Trench",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.1e8",
+          "source_url": "https://en.wikipedia.org/wiki/Mariana_Trench"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-mariana-trench",
@@ -707,7 +798,12 @@
       "description_medium": "Deep in Earth\u2019s mantle, carbon transforms into diamond under gigapascal class pressures and high temperatures. The combination stabilizes the crystal structure that sparkles on rings. Laboratory presses reproduce these conditions in tiny anvils. The value indicates the lower bound for natural formation.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Diamond Formation"
+        "legacy_item_name": "Diamond Formation",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e9",
+          "source_url": "https://en.wikipedia.org/wiki/Diamond"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-diamond-formation",
@@ -753,7 +849,12 @@
       "description_medium": "At Earth\u2019s core, pressure from the overlying rock squeezes iron into exotic phases and drives a slowly convecting outer layer. Seismic waves reveal the magnitude indirectly. This pressure and temperature together power the geodynamo. The number is a standard estimate for the center.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Earth's Core"
+        "legacy_item_name": "Earth's Core",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.6e11",
+          "source_url": "https://en.wikipedia.org/wiki/Earth%27s_core"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-earth-s-core",
@@ -799,7 +900,12 @@
       "description_medium": "The solar core carries stupendous pressure that enables fusion by pushing nuclei close despite their repulsion. Energy leaks outward over hundreds of thousands of years as heat and light. Surface storms above are gentle by comparison. The value is the order of magnitude for models of the Sun\u2019s interior.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Sun's Core"
+        "legacy_item_name": "Sun's Core",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5e16",
+          "source_url": "https://en.wikipedia.org/wiki/Sun"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-sun-s-core",
@@ -845,7 +951,12 @@
       "description_medium": "Matter inside a neutron star is compressed beyond atomic structure, reaching pressures that defy ordinary materials science. Equations of state are constrained by astronomy rather than laboratory tests. The crust behaves like a bizarre ceramic under these loads. The number situates this extreme on the pressure scale.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Neutron Star"
+        "legacy_item_name": "Neutron Star",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e34",
+          "source_url": "https://en.wikipedia.org/wiki/Neutron_star"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-neutron-star",
@@ -891,7 +1002,12 @@
       "description_medium": "Near a black hole, pressures defined in usual material terms become meaningless as spacetime curvature dominates. Still, models of accretion disks describe effective pressures that are astronomical. Observations of x ray spectra inform these estimates. The value here is illustrative of those extremes.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/pressure.yaml",
-        "legacy_item_name": "Black Hole"
+        "legacy_item_name": "Black Hole",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e40",
+          "source_url": "https://en.wikipedia.org/wiki/Black_hole"
+        }
       },
       "hook": null,
       "id": "obs:pressure:scenario-pressure-black-hole",
@@ -929,8 +1045,8 @@
       "wikidata_qid": null
     }
   ],
-  "preferred_max_items": 24,
-  "preferred_target_items": 24,
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
   "selection_bin_count": 24,

@@ -29,8 +29,8 @@ units:
   conversion_factor: 100000.0
   description: Dynes are the cgs force unit still seen in older literature.
 required_min_items: 24
-preferred_target_items: 24
-preferred_max_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 frontend_group: motion
@@ -51,6 +51,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Molecular Force
+    source_trace:
+      method: derived
+      original_value_text: 1e-12
+      source_url: https://en.wikipedia.org/wiki/Intermolecular_force
   source: https://en.wikipedia.org/wiki/Intermolecular_force
   source_count: 2
   sources:
@@ -89,6 +93,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Atomic Force
+    source_trace:
+      method: derived
+      original_value_text: 1e-9
+      source_url: https://en.wikipedia.org/wiki/Atomic_force_microscopy
   source: https://en.wikipedia.org/wiki/Atomic_force_microscopy
   source_count: 2
   sources:
@@ -127,6 +135,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Solar Wind
+    source_trace:
+      method: derived
+      original_value_text: 1e-7
+      source_url: https://en.wikipedia.org/wiki/Solar_wind
   source: https://en.wikipedia.org/wiki/Solar_wind
   source_count: 2
   sources:
@@ -165,6 +177,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Ant Force
+    source_trace:
+      method: derived
+      original_value_text: '0.001'
+      source_url: https://en.wikipedia.org/wiki/Ant
   source: https://en.wikipedia.org/wiki/Ant
   source_count: 2
   sources:
@@ -203,6 +219,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Keyboard Keypress
+    source_trace:
+      method: derived
+      original_value_text: '0.5'
+      source_url: https://en.wikipedia.org/wiki/Computer_keyboard
   source: https://en.wikipedia.org/wiki/Computer_keyboard
   source_count: 2
   sources:
@@ -241,6 +261,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Cyclist Aerodynamic Drag
+    source_trace:
+      method: derived
+      original_value_text: '30'
+      source_url: https://en.wikipedia.org/wiki/Bicycle_performance
   source: https://en.wikipedia.org/wiki/Bicycle_performance
   source_count: 2
   sources:
@@ -279,6 +303,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Door Handle Pull
+    source_trace:
+      method: derived
+      original_value_text: '40'
+      source_url: https://en.wikipedia.org/wiki/Door_handle
   source: https://en.wikipedia.org/wiki/Door_handle
   source_count: 2
   sources:
@@ -317,6 +345,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Handshake
+    source_trace:
+      method: derived
+      original_value_text: '50'
+      source_url: https://en.wikipedia.org/wiki/Handshake
   source: https://en.wikipedia.org/wiki/Handshake
   source_count: 2
   sources:
@@ -355,6 +387,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Bow Draw
+    source_trace:
+      method: derived
+      original_value_text: '300'
+      source_url: https://en.wikipedia.org/wiki/Bow_(archery)
   source: https://en.wikipedia.org/wiki/Bow_(archery)
   source_count: 2
   sources:
@@ -393,6 +429,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Human Bite
+    source_trace:
+      method: derived
+      original_value_text: '1000'
+      source_url: https://en.wikipedia.org/wiki/Bite_force_quotient
   source: https://en.wikipedia.org/wiki/Bite_force_quotient
   source_count: 2
   sources:
@@ -431,6 +471,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Wind Force
+    source_trace:
+      method: derived
+      original_value_text: '1000'
+      source_url: https://en.wikipedia.org/wiki/Wind
   source: https://en.wikipedia.org/wiki/Wind
   source_count: 2
   sources:
@@ -469,6 +513,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Weight Lifter
+    source_trace:
+      method: derived
+      original_value_text: '2000'
+      source_url: https://en.wikipedia.org/wiki/Weightlifting
   source: https://en.wikipedia.org/wiki/Weightlifting
   source_count: 2
   sources:
@@ -507,6 +555,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Car Brake
+    source_trace:
+      method: derived
+      original_value_text: '3000'
+      source_url: https://en.wikipedia.org/wiki/Brake
   source: https://en.wikipedia.org/wiki/Brake
   source_count: 2
   sources:
@@ -545,6 +597,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Jump Landing Peak
+    source_trace:
+      method: derived
+      original_value_text: '4000'
+      source_url: https://en.wikipedia.org/wiki/Ground_reaction_force
   source: https://en.wikipedia.org/wiki/Ground_reaction_force
   source_count: 2
   sources:
@@ -583,6 +639,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Car Engine
+    source_trace:
+      method: derived
+      original_value_text: '10000'
+      source_url: https://en.wikipedia.org/wiki/Internal_combustion_engine
   source: https://en.wikipedia.org/wiki/Internal_combustion_engine
   source_count: 2
   sources:
@@ -621,6 +681,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Hydraulic Press
+    source_trace:
+      method: derived
+      original_value_text: '1000000'
+      source_url: https://en.wikipedia.org/wiki/Hydraulic_press
   source: https://en.wikipedia.org/wiki/Hydraulic_press
   source_count: 2
   sources:
@@ -659,6 +723,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Crane
+    source_trace:
+      method: derived
+      original_value_text: '10000000'
+      source_url: https://en.wikipedia.org/wiki/Crane_(machine)
   source: https://en.wikipedia.org/wiki/Crane_(machine)
   source_count: 2
   sources:
@@ -697,6 +765,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Rocket Thrust
+    source_trace:
+      method: derived
+      original_value_text: 1e7
+      source_url: https://en.wikipedia.org/wiki/Rocket_engine
   source: https://en.wikipedia.org/wiki/Rocket_engine
   source_count: 2
   sources:
@@ -735,6 +807,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Tidal Force
+    source_trace:
+      method: derived
+      original_value_text: 1e18
+      source_url: https://en.wikipedia.org/wiki/Tidal_force
   source: https://en.wikipedia.org/wiki/Tidal_force
   source_count: 2
   sources:
@@ -773,6 +849,10 @@ items:
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Black Hole
+    source_trace:
+      method: derived
+      original_value_text: 1e30
+      source_url: https://en.wikipedia.org/wiki/Black_hole
   source: https://en.wikipedia.org/wiki/Black_hole
   source_count: 2
   sources:

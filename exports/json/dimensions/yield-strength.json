@@ -1,6 +1,22 @@
 {
   "base_unit": "pascals",
-  "coverage_report": {},
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 21,
+    "candidate_shortfall_to_preferred_target": 29,
+    "empty_bin_count": 17,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 21,
+    "selected_primary_count": 7,
+    "selected_secondary_count": 14,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 21
+    },
+    "target_selected_count": 21
+  },
   "description_format": "markdown",
   "dimension": "yield-strength",
   "dimension_description": "Yield strength marks the stress where a material stops returning to its original shape and begins to deform permanently. Engineers usually define it by a 0.2 percent offset on a tensile test curve at room temperature unless noted. The value depends strongly on processing, microstructure, and loading rate. Each entry states a representative condition so comparisons are meaningful.",
@@ -17,7 +33,12 @@
       "description_medium": "Flexible polymer foams yield when cell walls buckle and collapse, absorbing energy as they densify. The stress plateau around this value is prized for cushioning. Strain rate and temperature swing the response in real products. The number is for an open cell polyurethane foam in compression.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Foam"
+        "legacy_item_name": "Foam",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e5",
+          "source_url": "https://en.wikipedia.org/wiki/Foam"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-foam",
@@ -63,7 +84,12 @@
       "description_medium": "Articular cartilage yields at low stress in compression because it is mostly water constrained by a collagen network. Permeability and rate control the response, which is why joints feel different under fast and slow loading. Degeneration lowers this threshold further. The value is for healthy tissue under confined compression.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Cartilage"
+        "legacy_item_name": "Cartilage",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Cartilage"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-cartilage",
@@ -109,7 +135,12 @@
       "description_medium": "Soft elastomeric rubber shows a low apparent yield because long polymer chains uncoil and slide instead of breaking. Under slow uniaxial tension at room temperature it flows at stresses near this level. Fillers and crosslink density can raise the value substantially. The number is for a common natural rubber compound.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Rubber"
+        "legacy_item_name": "Rubber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Rubber"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-rubber",
@@ -155,7 +186,12 @@
       "description_medium": "Ordinary concrete carries little tensile yield because cracks propagate early, so reinforcement carries tension. In compression its apparent yield is higher due to microcrack closure and friction. Curing conditions dominate strength variation on site. The number is a compressive yield proxy for structural mixes.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Concrete"
+        "legacy_item_name": "Concrete",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e7",
+          "source_url": "https://en.wikipedia.org/wiki/Concrete"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-concrete",
@@ -201,7 +237,12 @@
       "description_medium": "Softwood loaded along the grain yields around this stress as lignin and cellulose microfibrils begin to slip. Across the grain the value is far lower due to anisotropy. Moisture content and knots matter greatly for real beams. The number assumes clear spruce in tension parallel to grain.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Wood (Soft)"
+        "legacy_item_name": "Wood (Soft)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e7",
+          "source_url": "https://en.wikipedia.org/wiki/Wood"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-wood-soft",
@@ -247,7 +288,12 @@
       "description_medium": "Tendons behave viscoelastically and yield when collagen fibrils begin to slide irreversibly. Warm up raises extensibility and delays yield onset. Rehabilitation protocols keep loads well below this value for safety. The number is for bovine Achilles tendon in tension.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Tendon"
+        "legacy_item_name": "Tendon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e7",
+          "source_url": "https://en.wikipedia.org/wiki/Tendon"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-tendon",
@@ -293,7 +339,12 @@
       "description_medium": "Annealed copper yields at lower stress than steels but offers excellent electrical and thermal conduction. Cold work raises yield at the cost of ductility, a trade used in springs and connectors. Purity and grain size are decisive. The number is for oxygen free copper in tension.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Copper"
+        "legacy_item_name": "Copper",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7e7",
+          "source_url": "https://en.wikipedia.org/wiki/Copper"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-copper",
@@ -339,7 +390,12 @@
       "description_medium": "Nylon yields when polymer chains slide past each other after straightening, a process sensitive to moisture. Conditioned samples can appear tougher but softer. Designers account for this by specifying conditioning state. The value is for dry as molded nylon 6.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Nylon"
+        "legacy_item_name": "Nylon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e7",
+          "source_url": "https://en.wikipedia.org/wiki/Nylon"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-nylon",
@@ -385,7 +441,12 @@
       "description_medium": "Cortical bone in tension yields near this stress when microcracks coalesce, while compression values are higher. Age, mineralization, and loading direction all shift the number. Implants are designed to share load to stay below this limit. The value quoted is longitudinal tension at body temperature.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Bone"
+        "legacy_item_name": "Bone",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e8",
+          "source_url": "https://en.wikipedia.org/wiki/Bone"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-bone",
@@ -431,7 +492,12 @@
       "description_medium": "Mild low carbon steel yields at a few hundred megapascals and then work hardens, giving it a forgiving ductile plateau. This makes it ideal for beams and automobile bodies. Strain aging and temperature can introduce a L\u00fcders band, the familiar yield point elongation. The value reflects a classic structural grade.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Steel (Mild)"
+        "legacy_item_name": "Steel (Mild)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5e8",
+          "source_url": "https://en.wikipedia.org/wiki/Steel"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-steel-mild",
@@ -477,7 +543,12 @@
       "description_medium": "Commercially pure aluminum has a modest yield, but work hardening and alloying create big gains. The value here is for a common 6061 T6 alloy in tension at room temperature using the 0.2 percent offset. Welding locally erases this strengthening unless re treated. The number is a staple in mechanical design tables.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Aluminum"
+        "legacy_item_name": "Aluminum",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.8e8",
+          "source_url": "https://en.wikipedia.org/wiki/Aluminium"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-aluminum",
@@ -523,7 +594,12 @@
       "description_medium": "Glass lacks a conventional yield in tension because flaws trigger brittle fracture before plastic flow. Under high hydrostatic pressure or in compression it can withstand much higher stresses. Surface treatments like tempering raise the effective limit. The value shown is an upper bound in compression before crushing.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Glass"
+        "legacy_item_name": "Glass",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7e8",
+          "source_url": "https://en.wikipedia.org/wiki/Glass"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-glass",
@@ -569,7 +645,12 @@
       "description_medium": "Titanium alloys combine moderate density with high yield and corrosion resistance, perfect for airframes and implants. Microstructure from alpha beta processing controls the plateau. At cryogenic temperatures yield rises further. The value is for Ti 6Al 4V in the annealed condition.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Titanium"
+        "legacy_item_name": "Titanium",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e8",
+          "source_url": "https://en.wikipedia.org/wiki/Titanium"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-titanium",
@@ -615,7 +696,12 @@
       "description_medium": "High strength low alloy steels and martensitic grades push yield into the gigapascal range. Toughness becomes the balancing act to avoid brittle failures. Heat treatment recipes tune both yield and impact resistance. The number represents a quenched and tempered structural steel.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Steel (High Strength)"
+        "legacy_item_name": "Steel (High Strength)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e9",
+          "source_url": "https://en.wikipedia.org/wiki/Steel"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-steel-high-strength",
@@ -661,7 +747,12 @@
       "description_medium": "Engineering ceramics exhibit very high apparent yield in compression with limited ductility. Their grain boundaries and defects set failure in tension. Designers exploit them where hot hardness matters more than give. The value is for alumina under compressive loading.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Ceramic"
+        "legacy_item_name": "Ceramic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e9",
+          "source_url": "https://en.wikipedia.org/wiki/Ceramic"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-ceramic",
@@ -707,7 +798,12 @@
       "description_medium": "Kevlar fiber under tension shows a high apparent yield due to oriented aromatic chains. In composites it carries loads efficiently along the fiber direction while the matrix supports shear. Impact helmets exploit this anisotropy. The number is for single fiber tensile yield.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Kevlar Fiber"
+        "legacy_item_name": "Kevlar Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.6e9",
+          "source_url": "https://en.wikipedia.org/wiki/Kevlar"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-kevlar-fiber",
@@ -753,7 +849,12 @@
       "description_medium": "Carbon fiber composites have no single yield value; it depends on fiber direction and matrix. Along the fibers, stress at first matrix cracking is far below fiber failure. Layup design sets the usable envelope. The number is a unidirectional tensile yield along the fiber direction.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Carbon Fiber"
+        "legacy_item_name": "Carbon Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e9",
+          "source_url": "https://en.wikipedia.org/wiki/Carbon_fiber"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-carbon-fiber",
@@ -799,7 +900,12 @@
       "description_medium": "Diamond has extraordinary theoretical strength, but practical yield depends on flaws and direction. Under compression tiny samples sustain immense stresses without plasticity. Machining diamond relies on brittle fracture, not yielding. The value shown is an upper bound inferred from indentation.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Diamond"
+        "legacy_item_name": "Diamond",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e10",
+          "source_url": "https://en.wikipedia.org/wiki/Diamond"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-diamond",
@@ -845,7 +951,12 @@
       "description_medium": "Graphene sheets approach ideal strength at nanoscale, with yield set by breaking sp2 bonds. Defects and grain boundaries reduce the value in larger films. Experiments use nanoindenters to probe this regime. The number represents pristine monolayer strength in tension.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Graphene"
+        "legacy_item_name": "Graphene",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e11",
+          "source_url": "https://en.wikipedia.org/wiki/Graphene"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-graphene",
@@ -891,7 +1002,12 @@
       "description_medium": "The neutron star crust behaves like an ultra strong lattice where yield refers to the onset of plastic flow under astronomical shear. Models connect this to starquakes that glitch pulsar rotation. No terrestrial lab can reproduce the conditions. The value is a theoretical estimate.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Neutron Star Crust"
+        "legacy_item_name": "Neutron Star Crust",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e25",
+          "source_url": "https://en.wikipedia.org/wiki/Neutron_star"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-neutron-star-crust",
@@ -937,7 +1053,12 @@
       "description_medium": "Near a black hole event horizon, conventional material concepts blur, but effective stresses in accretion flows can be cast as yields. Magnetic fields and radiation pressure set the limits rather than crystalline defects. The language is metaphorical but useful for order of magnitude. The value signals a physics extreme.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
-        "legacy_item_name": "Black Hole Horizon"
+        "legacy_item_name": "Black Hole Horizon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e30",
+          "source_url": "https://en.wikipedia.org/wiki/Black_hole"
+        }
       },
       "hook": null,
       "id": "obs:yield-strength:scenario-yield-strength-black-hole-horizon",
@@ -975,8 +1096,8 @@
       "wikidata_qid": null
     }
   ],
-  "preferred_max_items": 24,
-  "preferred_target_items": 24,
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
   "selection_bin_count": 24,

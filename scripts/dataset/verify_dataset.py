@@ -177,6 +177,7 @@ def verify_cli() -> None:
         [sys.executable, str(ROOT / "scripts" / "query_dataset.py"), "nearest", "density", "1000", "--selected-only"],
         [sys.executable, str(ROOT / "scripts" / "query_dataset.py"), "dimension-stats", "area"],
         [sys.executable, str(ROOT / "scripts" / "query_dataset.py"), "subject", "sub:entity-earth", "--selected-only"],
+        [sys.executable, str(ROOT / "scripts" / "query_dataset.py"), "observation", "obs:frequency:entity-cesium-clock-transition"],
     ]
     for command in commands:
         result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, check=False)

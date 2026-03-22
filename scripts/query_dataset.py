@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sqlite3
 from pathlib import Path
 
@@ -146,6 +147,76 @@ def cmd_subject(conn: sqlite3.Connection, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_observation(conn: sqlite3.Connection, args: argparse.Namespace) -> int:
+    rows = conn.execute(
+        """
+        SELECT
+            o.id,
+            o.label,
+            o.value_base,
+            o.original_value_text,
+            o.value_type,
+            o.summary,
+            o.rationale,
+            d.slug AS dimension_slug,
+            d.base_unit,
+            sub.canonical_name AS subject_name,
+            sub.wikidata_qid,
+            oc.summary_short,
+            oc.description_medium,
+            oc.description_long,
+            oc.facts_json
+          FROM observations o
+          JOIN dimensions d ON d.id = o.dimension_id
+          JOIN subjects sub ON sub.id = o.subject_id
+          LEFT JOIN observation_content oc ON oc.observation_id = o.id
+         WHERE o.id = ?
+            OR o.label = ?
+            OR o.label LIKE ?
+         ORDER BY CASE WHEN o.id = ? THEN 0 WHEN o.label = ? THEN 1 ELSE 2 END, o.id
+        """,
+        (args.observation, args.observation, f"%{args.observation}%", args.observation, args.observation),
+    ).fetchall()
+    if not rows:
+        return 1
+
+    for row in rows:
+        print(
+            f"observation\t{row['id']}\t{row['dimension_slug']}\t{row['value_base']:.6g}\t"
+            f"{row['base_unit']}\t{row['label']}\t{row['value_type']}"
+        )
+        print(f"subject\t{row['subject_name']}\t{row['wikidata_qid'] or ''}")
+        if row["summary_short"]:
+            print(f"summary_short\t{row['summary_short']}")
+        if row["summary"]:
+            print(f"summary\t{row['summary']}")
+        facts = json.loads(row["facts_json"] or "{}")
+        source_trace = facts.get("source_trace")
+        if source_trace:
+            print(f"source_trace\t{json.dumps(source_trace, sort_keys=True)}")
+        sources = conn.execute(
+            """
+            SELECT s.url, s.title, s.source_class, os.role
+              FROM observation_sources os
+              JOIN sources s ON s.id = os.source_id
+             WHERE os.observation_id = ?
+             ORDER BY
+                CASE s.source_class
+                    WHEN 'official_dataset' THEN 4
+                    WHEN 'secondary_reference' THEN 3
+                    WHEN 'wikidata' THEN 2
+                    WHEN 'legacy_manual' THEN 1
+                    ELSE 0
+                END DESC,
+                s.url
+            """,
+            (row["id"],),
+        ).fetchall()
+        for source in sources:
+            print(f"source\t{source['source_class']}\t{source['role']}\t{source['title']}\t{source['url']}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Query the canonical Universe Scales dataset.")
     parser.add_argument("--db", type=Path, default=DEFAULT_DB, help="Path to the SQLite dataset.")
@@ -172,6 +243,10 @@ def build_parser() -> argparse.ArgumentParser:
     subject.add_argument("subject")
     subject.add_argument("--selected-only", action="store_true")
     subject.set_defaults(func=cmd_subject)
+
+    observation = subparsers.add_parser("observation", help="Show one observation and its source trace.")
+    observation.add_argument("observation")
+    observation.set_defaults(func=cmd_observation)
 
     return parser
 

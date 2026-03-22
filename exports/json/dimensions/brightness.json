@@ -1,6 +1,22 @@
 {
   "base_unit": "candela_per_square_meter",
-  "coverage_report": {},
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 21,
+    "candidate_shortfall_to_preferred_target": 29,
+    "empty_bin_count": 12,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 21,
+    "selected_primary_count": 12,
+    "selected_secondary_count": 9,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 21
+    },
+    "target_selected_count": 21
+  },
   "description_format": "markdown",
   "dimension": "brightness",
   "dimension_description": "Brightness here refers to luminance, the light leaving or reflected by a surface per unit area in a given direction. It connects what your eye perceives on a screen or page to the photometric power behind it. Unlike illuminance on a desk, luminance belongs to the surface itself under stated conditions. Each item below specifies the scene and viewing context so the number has a clear meaning.",
@@ -17,7 +33,12 @@
       "description_medium": "Deep intergalactic space away from stars and dust is functionally dark, with only stray photons from the cosmic background. The luminance is near zero for human perception even after dark adaptation. Instruments still register faint glows from zodiacal light and unresolved galaxies. This number expresses the ideal empty field reference for contrast.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Deep Space"
+        "legacy_item_name": "Deep Space",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-10",
+          "source_url": "https://en.wikipedia.org/wiki/Outer_space"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-deep-space",
@@ -63,7 +84,12 @@
       "description_medium": "A moonless rural night sky under clear air provides this approximate surface luminance to the ground as seen by a dark adapted eye. It is dominated by starlight and airglow rather than artificial sources. Photographers call it a long exposure regime where noise matters. The value is a practical baseline for night vision performance.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Moonless Night"
+        "legacy_item_name": "Moonless Night",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-4",
+          "source_url": "https://en.wikipedia.org/wiki/Night"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-moonless-night",
@@ -109,7 +135,12 @@
       "description_medium": "Landscapes lit by a full moon at high altitude reflect enough light to reach this luminance when viewed directly. Snow and pale rock can run higher because of albedo. For reading outdoors some people find it barely sufficient at peak lunar elevation. The number assumes clear skies and a bright moon near opposition.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Full Moon"
+        "legacy_item_name": "Full Moon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.25",
+          "source_url": "https://en.wikipedia.org/wiki/Moon"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-full-moon",
@@ -155,7 +186,12 @@
       "description_medium": "A candle flame near the wick presents this luminance when viewed from a short distance along the bright axis. The value varies with wax composition and airflow, which is why candles flicker. Artists learned to stage scenes with this small source for mood long before meters existed. The number ties ambiance to measurable output.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Candle"
+        "legacy_item_name": "Candle",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1",
+          "source_url": "https://en.wikipedia.org/wiki/Candle"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-candle",
@@ -201,7 +237,12 @@
       "description_medium": "Civil twilight on a city street with modest lamppost spacing often leaves building facades near this luminance. Human eyes still color render well but shadows deepen. Photographers consider it a handheld borderline without stabilization. The number captures the feel of evening errands.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "City Street Twilight"
+        "legacy_item_name": "City Street Twilight",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10",
+          "source_url": "https://en.wikipedia.org/wiki/Twilight"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-city-street-twilight",
@@ -247,7 +288,12 @@
       "description_medium": "A calibrated cinema projection screen in a dark theater operates near this luminance to preserve contrast and comfort. Going brighter would wash out blacks in large rooms. The standard aims to match human adaptation in that environment. The value underpins projector and screen design.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Movie Screen"
+        "legacy_item_name": "Movie Screen",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "50",
+          "source_url": "https://en.wikipedia.org/wiki/Movie_theater"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-movie-screen",
@@ -293,7 +339,12 @@
       "description_medium": "Typical evening room lighting on walls and book pages yields this luminance when using warm bulbs and shaded fixtures. Eyes adapt within minutes to make print comfortable at this level. Screens at matching brightness reduce strain compared with much higher settings. The value presumes matte surfaces to avoid specular glare.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Room Lighting"
+        "legacy_item_name": "Room Lighting",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "100",
+          "source_url": "https://en.wikipedia.org/wiki/Lighting"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-room-lighting",
@@ -339,7 +390,12 @@
       "description_medium": "A white sheet of paper near a window on a cloudy morning reflects to this luminance and makes for pleasant reading. Graphic designers proof prints against such conditions to judge tone. The value is a simple domestic check for comfortable lighting. It is also a good target for home offices.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Paper by Window"
+        "legacy_item_name": "Paper by Window",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "200",
+          "source_url": "https://en.wikipedia.org/wiki/Reading"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-paper-by-window",
@@ -385,7 +441,12 @@
       "description_medium": "A calibrated LCD or OLED screen for comfortable indoor reading is near this luminance when set to a neutral profile. Raising it further helps outdoors but wastes battery inside. Color grading suites fix this level to keep perception consistent across rooms. The number ties display practice to visual science.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "LED Screen"
+        "legacy_item_name": "LED Screen",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "300",
+          "source_url": "https://en.wikipedia.org/wiki/LED_display"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-led-screen",
@@ -431,7 +492,12 @@
       "description_medium": "Modern offices target this luminance on task surfaces to balance alertness with comfort for long work periods. The level supports fine handwriting and screen use without harsh reflections. Designers achieve it with a mix of overhead panels and indirect lamps. The number reflects both standards and accumulated workplace experience.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Office Lighting"
+        "legacy_item_name": "Office Lighting",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "500",
+          "source_url": "https://en.wikipedia.org/wiki/Office"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-office-lighting",
@@ -477,7 +543,12 @@
       "description_medium": "A ceiling mounted fluorescent panel behind a diffuser produces about this luminance on its emitting surface. The light is even and cost effective, which is why schools and labs used it for decades. Spectrum and flicker now matter more than the raw number for comfort. The figure provides a benchmark when retrofitting to LED.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Fluorescent Light"
+        "legacy_item_name": "Fluorescent Light",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000",
+          "source_url": "https://en.wikipedia.org/wiki/Fluorescent_lamp"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-fluorescent-light",
@@ -523,7 +594,12 @@
       "description_medium": "An overcast sky acts like a giant diffuser, making outdoor surfaces roughly uniform at this luminance. Photographers appreciate the soft shadows and gentle skin tones it brings. The level is bright to the eye but tame for cameras compared with direct sun. The value assumes midday and thick cloud cover.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Overcast Day"
+        "legacy_item_name": "Overcast Day",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000",
+          "source_url": "https://en.wikipedia.org/wiki/Overcast"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-overcast-day",
@@ -569,7 +645,12 @@
       "description_medium": "Smartphone screens at maximum boost for outdoor readability can reach this luminance for short periods. Thermal throttling often reduces it to protect the panel. In bright sun this margin makes the difference between usable and squint. The number explains marketing claims about nits.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Smartphone Max Boost"
+        "legacy_item_name": "Smartphone Max Boost",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1200",
+          "source_url": "https://en.wikipedia.org/wiki/Display_brightness"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-smartphone-max-boost",
@@ -615,7 +696,12 @@
       "description_medium": "Surgical task lighting focuses high luminance onto a small field to reveal low contrast features in tissue. Heat management and color fidelity matter as much as the raw value. Teams balance glare against visibility under long procedures. The figure is representative for modern LED operating lamps.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Operating Room Field"
+        "legacy_item_name": "Operating Room Field",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "60000",
+          "source_url": "https://en.wikipedia.org/wiki/Surgical_light"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-operating-room-field",
@@ -661,7 +747,12 @@
       "description_medium": "Under direct midday sun, many natural surfaces reach this luminance or more, especially pale stone and sand. Shadows are hard edged and contrast is high which can exceed camera dynamic range. Human pupils constrict and sunglasses become useful. The number marks a typical clear summer noon on land.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Sunny Day"
+        "legacy_item_name": "Sunny Day",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "100000",
+          "source_url": "https://en.wikipedia.org/wiki/Sunlight"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-sunny-day",
@@ -707,7 +798,12 @@
       "description_medium": "Fresh snow in direct sun reflects so efficiently that luminance climbs to this level, causing glare and risk of snow blindness. Ski goggles and high albedo roofs are designed with these values in mind. Photovoltaic panels nearby can harvest substantial power because the field is bright and wide. The number assumes clean snow and clear air.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Snow Reflection"
+        "legacy_item_name": "Snow Reflection",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "150000",
+          "source_url": "https://en.wikipedia.org/wiki/Snow"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-snow-reflection",
@@ -753,7 +849,12 @@
       "description_medium": "An active arc welding pool radiates intensely with luminance near this value at the brightest spot. It emits ultraviolet that can damage eyes and skin in seconds. Helmets and curtains attenuate both brightness and spectrum to safe levels. The number conveys why brief glances feel painful.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Arc Welding"
+        "legacy_item_name": "Arc Welding",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000000",
+          "source_url": "https://en.wikipedia.org/wiki/Arc_welding"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-arc-welding",
@@ -799,7 +900,12 @@
       "description_medium": "The apparent luminance of Sirius as a disk is a modeling construct since the star is unresolved to the eye. As seen through a telescope with finite aperture, diffraction spreads the light into an Airy pattern. The central peak behaves as if it had an extremely high surface luminance. This number expresses that conceptual peak for comparison only.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Sirius"
+        "legacy_item_name": "Sirius",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e8",
+          "source_url": "https://en.wikipedia.org/wiki/Sirius"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-sirius",
@@ -845,7 +951,12 @@
       "description_medium": "The solar photosphere has an effective surface luminance of this order across visible wavelengths. It sets the reference for daylight vision and the upper bound of common sensors. Atmospheric scattering and eye safety make direct viewing unwise. The number is a standard astrophysical parameter for the Sun.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Sun"
+        "legacy_item_name": "Sun",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.6e9",
+          "source_url": "https://en.wikipedia.org/wiki/Sun"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-sun",
@@ -891,7 +1002,12 @@
       "description_medium": "Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool. The light curve evolves rapidly so the number applies during peak days only. Spectra are line rich and depart from blackbody assumptions. The figure situates stellar explosions against the Sun on a surface basis.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Supernova"
+        "legacy_item_name": "Supernova",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e15",
+          "source_url": "https://en.wikipedia.org/wiki/Supernova"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-supernova",
@@ -937,7 +1053,12 @@
       "description_medium": "Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
-        "legacy_item_name": "Gamma Ray Burst"
+        "legacy_item_name": "Gamma Ray Burst",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e20",
+          "source_url": "https://en.wikipedia.org/wiki/Gamma-ray_burst"
+        }
       },
       "hook": null,
       "id": "obs:brightness:scenario-brightness-gamma-ray-burst",
@@ -975,8 +1096,8 @@
       "wikidata_qid": null
     }
   ],
-  "preferred_max_items": 24,
-  "preferred_target_items": 24,
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
   "selection_bin_count": 24,

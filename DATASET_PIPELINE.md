@@ -77,6 +77,12 @@ The main tables are:
 
 This is the layer intended to feed future writing agents. The default content format is markdown, and the frontend now renders richer markdown plus math-friendly text.
 
+The `facts_json` payload can also carry `source_trace`, which explains whether a number was:
+
+- read directly from the source
+- converted from source units into the canonical base unit
+- derived from a source-reported quantity such as a period, wavelength, star count, or solar-mass count
+
 ## Commands
 
 Build the canonical dataset and regenerate exports:
@@ -99,6 +105,7 @@ Query the SQLite artifact directly through the CLI:
 ./venv/bin/python scripts/query_dataset.py nearest density 1000 --selected-only
 ./venv/bin/python scripts/query_dataset.py dimension-stats area
 ./venv/bin/python scripts/query_dataset.py subject sub:entity-earth --selected-only
+./venv/bin/python scripts/query_dataset.py observation obs:frequency:entity-cesium-clock-transition
 ```
 
 ## Contributor Workflow
