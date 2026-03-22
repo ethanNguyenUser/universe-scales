@@ -19,6 +19,18 @@ def open_db(db_path: Path) -> sqlite3.Connection:
     return conn
 
 
+def format_source_value(source_value_text: str | None, source_unit: str | None) -> str:
+    value_text = str(source_value_text or "").strip()
+    unit_text = str(source_unit or "").strip()
+    if not unit_text or not value_text:
+        return value_text
+
+    numeric_candidate = value_text.replace("+", "").replace("-", "").replace(".", "").replace("e", "").replace("E", "")
+    if numeric_candidate.isdigit():
+        return f"{value_text} {unit_text}"
+    return value_text
+
+
 def selected_clause(selected_only: bool) -> str:
     return "AND o.rationale IS NOT NULL" if selected_only else ""
 
@@ -193,6 +205,19 @@ def cmd_observation(conn: sqlite3.Connection, args: argparse.Namespace) -> int:
         facts = json.loads(row["facts_json"] or "{}")
         source_trace = facts.get("source_trace")
         if source_trace:
+            print(f"source_method\t{source_trace.get('method', '')}")
+            source_value_text = source_trace.get("source_value_text")
+            source_unit = source_trace.get("source_unit")
+            if source_value_text:
+                print(f"source_value\t{format_source_value(source_value_text, source_unit)}")
+            if source_trace.get("source_basis"):
+                print(f"source_basis\t{source_trace['source_basis']}")
+            if source_trace.get("conversion_note"):
+                print(f"conversion_note\t{source_trace['conversion_note']}")
+            if source_trace.get("derivation_note"):
+                print(f"derivation_note\t{source_trace['derivation_note']}")
+            if source_trace.get("source_locator"):
+                print(f"source_locator\t{source_trace['source_locator']}")
             print(f"source_trace\t{json.dumps(source_trace, sort_keys=True)}")
         sources = conn.execute(
             """

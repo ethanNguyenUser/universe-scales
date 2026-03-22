@@ -480,7 +480,44 @@
     "frontend_group": "fields",
     "frontend_group_label": "Fields, Waves & Radiation",
     "frontend_order": 230,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "celsius",
+        "symbol": "deg C",
+        "conversion_factor": 1.0,
+        "offset": -273.15,
+        "description": "Celsius is the most intuitive everyday temperature scale."
+      },
+      {
+        "name": "fahrenheit",
+        "symbol": "deg F",
+        "conversion_factor": 1.8,
+        "offset": -459.67,
+        "description": "Fahrenheit remains common for weather and household temperatures in the United States."
+      },
+      {
+        "name": "millikelvin",
+        "symbol": "mK",
+        "conversion_factor": 1000.0,
+        "description": "Millikelvin are useful for cryogenic and quantum systems."
+      },
+      {
+        "name": "microkelvin",
+        "symbol": "uK",
+        "conversion_factor": 1000000.0,
+        "description": "Microkelvin are useful for ultracold atoms and precision experiments."
+      },
+      {
+        "name": "megakelvin",
+        "symbol": "MK",
+        "conversion_factor": 1e-06,
+        "description": "Megakelvin are useful for stellar interiors and hot plasmas."
+      }
+    ]
   },
   "viscosity": {
     "name": "Viscosity",
@@ -641,7 +678,60 @@
     "frontend_group": "information",
     "frontend_group_label": "Information & Computation",
     "frontend_order": 460,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "bytes per second",
+        "symbol": "B/s",
+        "conversion_factor": 0.125,
+        "description": "Bytes per second are useful for storage devices, downloads, and memory bandwidth."
+      },
+      {
+        "name": "kilobits per second",
+        "symbol": "kbit/s",
+        "conversion_factor": 0.001,
+        "description": "Kilobits per second are common for older modems, audio codecs, and navigation messages."
+      },
+      {
+        "name": "megabits per second",
+        "symbol": "Mbit/s",
+        "conversion_factor": 1e-06,
+        "description": "Megabits per second are common for household internet and media streams."
+      },
+      {
+        "name": "gigabits per second",
+        "symbol": "Gbit/s",
+        "conversion_factor": 1e-09,
+        "description": "Gigabits per second are useful for modern networking, display links, and high-speed I/O."
+      },
+      {
+        "name": "terabits per second",
+        "symbol": "Tbit/s",
+        "conversion_factor": 1e-12,
+        "description": "Terabits per second are useful for memory stacks and backbone-scale interfaces."
+      },
+      {
+        "name": "kilobytes per second",
+        "symbol": "kB/s",
+        "conversion_factor": 0.000125,
+        "description": "Kilobytes per second remain intuitive for small file transfers and legacy devices."
+      },
+      {
+        "name": "megabytes per second",
+        "symbol": "MB/s",
+        "conversion_factor": 1.25e-07,
+        "description": "Megabytes per second are useful for storage and memory comparisons."
+      },
+      {
+        "name": "gigabytes per second",
+        "symbol": "GB/s",
+        "conversion_factor": 1.25e-10,
+        "description": "Gigabytes per second are useful for high-end memory and interconnect bandwidth."
+      }
+    ]
   },
   "flops": {
     "name": "FLOPs",

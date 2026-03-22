@@ -1,0 +1,2966 @@
+{
+  "base_unit": "bits_per_second",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 61,
+    "candidate_shortfall_to_preferred_target": 0,
+    "empty_bin_count": 6,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 50,
+    "selected_primary_count": 18,
+    "selected_secondary_count": 32,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 50
+    },
+    "target_selected_count": 50
+  },
+  "description_format": "markdown",
+  "dimension": "information-rate",
+  "dimension_description": "Information rate measures how quickly symbols, bits, or higher-level messages move through a channel. Some entries here are literal interface or codec rates quoted directly by a standard, while others are derived from a source-side rate such as bytes per second or DNA bases per second. That lets one logarithmic axis connect teletypes, genomes, display links, Ethernet, and modern memory buses.",
+  "frontend_group": "information",
+  "frontend_group_label": "Information & Computation",
+  "frontend_order": 460,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single bit transmitted over the course of an entire year. Derived using `bit rate = 1 bit / 1 Julian year`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per Julian year` for Reference scenario using one bit spread over one year. Converted Julian years to seconds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single bit transmitted over the course of an entire year. Derived using `bit rate = 1 bit / 1 Julian year`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per Julian year` for Reference scenario using one bit spread over one year. Converted Julian years to seconds.",
+      "facts": {
+        "canonical_name": "One bit per year",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted Julian years to seconds.",
+          "derivation_note": "bit rate = 1 bit / 1 Julian year",
+          "method": "derived",
+          "original_value_text": "3.168808781402895e-08",
+          "source_basis": "Reference scenario using one bit spread over one year.",
+          "source_unit": "bit/year",
+          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
+          "source_value_text": "1 bit per Julian year"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:scenario-information-rate-one-bit-per-year",
+      "name": "One bit per year",
+      "qualifiers": {
+        "derivation": "bit rate = 1 bit / 1 Julian year",
+        "measurement": "transfer rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bit_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bit rate",
+          "url": "https://en.wikipedia.org/wiki/Bit_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single bit transmitted over the course of an entire year.",
+      "value": 3.168808781402895e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single bit transmitted over one day. Derived using `bit rate = 1 bit / 1 day`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per day` for Reference scenario using one bit spread over one day. Converted days to seconds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single bit transmitted over one day. Derived using `bit rate = 1 bit / 1 day`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per day` for Reference scenario using one bit spread over one day. Converted days to seconds.",
+      "facts": {
+        "canonical_name": "One bit per day",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted days to seconds.",
+          "derivation_note": "bit rate = 1 bit / 1 day",
+          "method": "derived",
+          "original_value_text": "1.1574074074074073e-05",
+          "source_basis": "Reference scenario using one bit spread over one day.",
+          "source_unit": "bit/day",
+          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
+          "source_value_text": "1 bit per day"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:scenario-information-rate-one-bit-per-day",
+      "name": "One bit per day",
+      "qualifiers": {
+        "derivation": "bit rate = 1 bit / 1 day",
+        "measurement": "transfer rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bit_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bit rate",
+          "url": "https://en.wikipedia.org/wiki/Bit_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single bit transmitted over one day.",
+      "value": 1.1574074074074073e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single bit transmitted over one hour. Derived using `bit rate = 1 bit / 1 hour`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per hour` for Reference scenario using one bit spread over one hour. Converted hours to seconds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single bit transmitted over one hour. Derived using `bit rate = 1 bit / 1 hour`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per hour` for Reference scenario using one bit spread over one hour. Converted hours to seconds.",
+      "facts": {
+        "canonical_name": "One bit per hour",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted hours to seconds.",
+          "derivation_note": "bit rate = 1 bit / 1 hour",
+          "method": "derived",
+          "original_value_text": "0.0002777777777777778",
+          "source_basis": "Reference scenario using one bit spread over one hour.",
+          "source_unit": "bit/hour",
+          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
+          "source_value_text": "1 bit per hour"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:scenario-information-rate-one-bit-per-hour",
+      "name": "One bit per hour",
+      "qualifiers": {
+        "derivation": "bit rate = 1 bit / 1 hour",
+        "measurement": "transfer rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bit_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bit rate",
+          "url": "https://en.wikipedia.org/wiki/Bit_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single bit transmitted over one hour.",
+      "value": 0.0002777777777777778,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single bit transmitted over one minute. Derived using `bit rate = 1 bit / 1 minute`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per minute` for Reference scenario using one bit spread over one minute. Converted minutes to seconds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single bit transmitted over one minute. Derived using `bit rate = 1 bit / 1 minute`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per minute` for Reference scenario using one bit spread over one minute. Converted minutes to seconds.",
+      "facts": {
+        "canonical_name": "One bit per minute",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted minutes to seconds.",
+          "derivation_note": "bit rate = 1 bit / 1 minute",
+          "method": "derived",
+          "original_value_text": "0.016666666666666666",
+          "source_basis": "Reference scenario using one bit spread over one minute.",
+          "source_unit": "bit/min",
+          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
+          "source_value_text": "1 bit per minute"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:scenario-information-rate-one-bit-per-minute",
+      "name": "One bit per minute",
+      "qualifiers": {
+        "derivation": "bit rate = 1 bit / 1 minute",
+        "measurement": "transfer rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bit_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bit rate",
+          "url": "https://en.wikipedia.org/wiki/Bit_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single bit transmitted over one minute.",
+      "value": 0.016666666666666666,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The literal baseline of one bit every second. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit/s` for Reference bit-rate baseline.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The literal baseline of one bit every second. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit/s` for Reference bit-rate baseline.",
+      "facts": {
+        "canonical_name": "One bit per second",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.0",
+          "source_basis": "Reference bit-rate baseline.",
+          "source_unit": "bit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
+          "source_value_text": "1 bit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:scenario-information-rate-one-bit-per-second",
+      "name": "One bit per second",
+      "qualifiers": {
+        "measurement": "transfer rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bit_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bit rate",
+          "url": "https://en.wikipedia.org/wiki/Bit_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "The literal baseline of one bit every second.",
+      "value": 1.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A classic electromechanical teletype communicating at 110 bits per second. Here the quantity refers to `serial data rate`. Source-side figure: `110 bit/s` for Reported Teletype Model 33 communication speed.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A classic electromechanical teletype communicating at 110 bits per second. Here the quantity refers to `serial data rate`. Source-side figure: `110 bit/s` for Reported Teletype Model 33 communication speed.",
+      "facts": {
+        "canonical_name": "Teletype Model 33",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "110.0",
+          "source_basis": "Reported Teletype Model 33 communication speed.",
+          "source_unit": "bit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Teletype_Model_33",
+          "source_value_text": "110 bit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-teletype-model-33",
+      "name": "Teletype Model 33",
+      "qualifiers": {
+        "measurement": "serial data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Teletype_Model_33",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-teletype-model-33",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Teletype Model 33",
+          "url": "https://en.wikipedia.org/wiki/Teletype_Model_33"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A classic electromechanical teletype communicating at 110 bits per second.",
+      "value": 110.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single nanopore reading roughly 450 DNA bases each second corresponds to about 900 bits/s of raw sequence information. Derived using `bit rate = 450 bases/s x 2 bits/base`. Here the quantity refers to `single-pore base-calling rate`. Source-side figure: `450 bases/s` for Representative single-pore nanopore sequencing speed. Used 2 bits per DNA base for an information-theoretic estimate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single nanopore reading roughly 450 DNA bases each second corresponds to about 900 bits/s of raw sequence information. Derived using `bit rate = 450 bases/s x 2 bits/base`. Here the quantity refers to `single-pore base-calling rate`. Source-side figure: `450 bases/s` for Representative single-pore nanopore sequencing speed. Used 2 bits per DNA base for an information-theoretic estimate.",
+      "facts": {
+        "canonical_name": "Nanopore sequencing pore",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Used 2 bits per DNA base for an information-theoretic estimate.",
+          "derivation_note": "bit rate = 450 bases/s x 2 bits/base",
+          "method": "derived",
+          "original_value_text": "900.0",
+          "source_basis": "Representative single-pore nanopore sequencing speed.",
+          "source_unit": "bases/s",
+          "source_url": "https://en.wikipedia.org/wiki/Nanopore_sequencing",
+          "source_value_text": "450 bases/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-nanopore-sequencing-pore",
+      "name": "Nanopore sequencing pore",
+      "qualifiers": {
+        "derivation": "bit rate = 450 bases/s x 2 bits/base",
+        "measurement": "single-pore base-calling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Nanopore_sequencing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nanopore-sequencing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nanopore sequencing",
+          "url": "https://en.wikipedia.org/wiki/Nanopore_sequencing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single nanopore reading roughly 450 DNA bases each second corresponds to about 900 bits/s of raw sequence information.",
+      "value": 900.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Bell 212A modems raised dial-up data rates to 1200 bit/s. Here the quantity refers to `maximum modem data rate`. Source-side figure: `1200 bit/s` for Reported Bell 212A modem speed.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Bell 212A modems raised dial-up data rates to 1200 bit/s. Here the quantity refers to `maximum modem data rate`. Source-side figure: `1200 bit/s` for Reported Bell 212A modem speed.",
+      "facts": {
+        "canonical_name": "Bell 212A modem",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1200.0",
+          "source_basis": "Reported Bell 212A modem speed.",
+          "source_unit": "bit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Bell_212A",
+          "source_value_text": "1200 bit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-bell-212a-modem",
+      "name": "Bell 212A modem",
+      "qualifiers": {
+        "measurement": "maximum modem data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bell_212A",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bell-212a",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bell 212A",
+          "url": "https://en.wikipedia.org/wiki/Bell_212A"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Bell 212A modems raised dial-up data rates to 1200 bit/s.",
+      "value": 1200.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A bacterial-style replication fork copying about 1000 bases per second corresponds to roughly 2000 bits/s of sequence information. Derived using `bit rate = 1000 bases/s x 2 bits/base`. Here the quantity refers to `genetic copying rate`. Source-side figure: `1000 bases/s` for Representative DNA replication speed in bacteria. Used 2 bits per DNA base for an information-theoretic estimate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A bacterial-style replication fork copying about 1000 bases per second corresponds to roughly 2000 bits/s of sequence information. Derived using `bit rate = 1000 bases/s x 2 bits/base`. Here the quantity refers to `genetic copying rate`. Source-side figure: `1000 bases/s` for Representative DNA replication speed in bacteria. Used 2 bits per DNA base for an information-theoretic estimate.",
+      "facts": {
+        "canonical_name": "DNA replication fork",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Used 2 bits per DNA base for an information-theoretic estimate.",
+          "derivation_note": "bit rate = 1000 bases/s x 2 bits/base",
+          "method": "derived",
+          "original_value_text": "2000.0",
+          "source_basis": "Representative DNA replication speed in bacteria.",
+          "source_unit": "bases/s",
+          "source_url": "https://en.wikipedia.org/wiki/DNA_replication",
+          "source_value_text": "1000 bases/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-dna-replication-fork",
+      "name": "DNA replication fork",
+      "qualifiers": {
+        "derivation": "bit rate = 1000 bases/s x 2 bits/base",
+        "measurement": "genetic copying rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/DNA_replication",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dna-replication",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DNA replication",
+          "url": "https://en.wikipedia.org/wiki/DNA_replication"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A bacterial-style replication fork copying about 1000 bases per second corresponds to roughly 2000 bits/s of sequence information.",
+      "value": 2000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The V.22bis standard delivered 2400 bit/s over ordinary telephone lines. Here the quantity refers to `maximum modem data rate`. Source-side figure: `2400 bit/s` for Reported V.22bis modem speed.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The V.22bis standard delivered 2400 bit/s over ordinary telephone lines. Here the quantity refers to `maximum modem data rate`. Source-side figure: `2400 bit/s` for Reported V.22bis modem speed.",
+      "facts": {
+        "canonical_name": "V.22bis modem",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2400.0",
+          "source_basis": "Reported V.22bis modem speed.",
+          "source_unit": "bit/s",
+          "source_url": "https://en.wikipedia.org/wiki/V.22",
+          "source_value_text": "2400 bit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-v22bis-modem",
+      "name": "V.22bis modem",
+      "qualifiers": {
+        "measurement": "maximum modem data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/V.22",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-v-22",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "V.22",
+          "url": "https://en.wikipedia.org/wiki/V.22"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "The V.22bis standard delivered 2400 bit/s over ordinary telephone lines.",
+      "value": 2400.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative Group 3 fax modem transmits at 9600 bit/s. Here the quantity refers to `fax transmission rate`. Source-side figure: `9600 bit/s` for Representative Group 3 fax modem rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative Group 3 fax modem transmits at 9600 bit/s. Here the quantity refers to `fax transmission rate`. Source-side figure: `9600 bit/s` for Representative Group 3 fax modem rate.",
+      "facts": {
+        "canonical_name": "Group 3 fax modem",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9600.0",
+          "source_basis": "Representative Group 3 fax modem rate.",
+          "source_unit": "bit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Fax",
+          "source_value_text": "9600 bit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-group-3-fax-modem",
+      "name": "Group 3 fax modem",
+      "qualifiers": {
+        "measurement": "fax transmission rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Fax",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fax",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fax",
+          "url": "https://en.wikipedia.org/wiki/Fax"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A representative Group 3 fax modem transmits at 9600 bit/s.",
+      "value": 9600.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The original GSM full-rate speech codec compresses voice to 13 kbit/s. Here the quantity refers to `speech codec bit rate`. Source-side figure: `13 kbit/s` for Reported GSM full-rate codec bit rate. Converted kilobits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The original GSM full-rate speech codec compresses voice to 13 kbit/s. Here the quantity refers to `speech codec bit rate`. Source-side figure: `13 kbit/s` for Reported GSM full-rate codec bit rate. Converted kilobits per second to bits per second.",
+      "facts": {
+        "canonical_name": "GSM full-rate speech codec",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted kilobits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "13000.0",
+          "source_basis": "Reported GSM full-rate codec bit rate.",
+          "source_unit": "kbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Full_Rate",
+          "source_value_text": "13 kbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-gsm-full-rate-codec",
+      "name": "GSM full-rate speech codec",
+      "qualifiers": {
+        "measurement": "speech codec bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Full_Rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-full-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Full Rate",
+          "url": "https://en.wikipedia.org/wiki/Full_Rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "The original GSM full-rate speech codec compresses voice to 13 kbit/s.",
+      "value": 13000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Classic 5-pin DIN MIDI runs at 31.25 kbit/s. Here the quantity refers to `serial transport bit rate`. Source-side figure: `31.25 kbit/s` for Reported MIDI serial line speed. Converted kilobits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Classic 5-pin DIN MIDI runs at 31.25 kbit/s. Here the quantity refers to `serial transport bit rate`. Source-side figure: `31.25 kbit/s` for Reported MIDI serial line speed. Converted kilobits per second to bits per second.",
+      "facts": {
+        "canonical_name": "MIDI DIN link",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted kilobits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "31250.0",
+          "source_basis": "Reported MIDI serial line speed.",
+          "source_unit": "kbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/MIDI",
+          "source_value_text": "31.25 kbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-midi-din-link",
+      "name": "MIDI DIN link",
+      "qualifiers": {
+        "measurement": "serial transport bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/MIDI",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-midi",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "MIDI",
+          "url": "https://en.wikipedia.org/wiki/MIDI"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Classic 5-pin DIN MIDI runs at 31.25 kbit/s.",
+      "value": 31250.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "V.34 modems reached 33.6 kbit/s near the end of the dial-up era. Here the quantity refers to `maximum modem data rate`. Source-side figure: `33.6 kbit/s` for Reported V.34 modem speed. Converted kilobits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "V.34 modems reached 33.6 kbit/s near the end of the dial-up era. Here the quantity refers to `maximum modem data rate`. Source-side figure: `33.6 kbit/s` for Reported V.34 modem speed. Converted kilobits per second to bits per second.",
+      "facts": {
+        "canonical_name": "V.34 modem",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted kilobits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "33600.0",
+          "source_basis": "Reported V.34 modem speed.",
+          "source_unit": "kbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/V.34",
+          "source_value_text": "33.6 kbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-v34-modem",
+      "name": "V.34 modem",
+      "qualifiers": {
+        "measurement": "maximum modem data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/V.34",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-v-34",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "V.34",
+          "url": "https://en.wikipedia.org/wiki/V.34"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "V.34 modems reached 33.6 kbit/s near the end of the dial-up era.",
+      "value": 33600.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Late dial-up modems topped out around 56 kbit/s. Here the quantity refers to `maximum modem data rate`. Source-side figure: `56 kbit/s` for Reported V.90 modem speed. Converted kilobits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Late dial-up modems topped out around 56 kbit/s. Here the quantity refers to `maximum modem data rate`. Source-side figure: `56 kbit/s` for Reported V.90 modem speed. Converted kilobits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Dial-up modem (V.90)",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted kilobits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "56000.0",
+          "source_basis": "Reported V.90 modem speed.",
+          "source_unit": "kbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/V.90",
+          "source_value_text": "56 kbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-v90-modem",
+      "name": "Dial-up modem (V.90)",
+      "qualifiers": {
+        "measurement": "maximum modem data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/V.90",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-v-90",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "V.90",
+          "url": "https://en.wikipedia.org/wiki/V.90"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Late dial-up modems topped out around 56 kbit/s.",
+      "value": 56000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One basic-rate ISDN bearer channel carries 64 kbit/s. Here the quantity refers to `channel bit rate`. Source-side figure: `64 kbit/s` for Reported ISDN B-channel rate. Converted kilobits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One basic-rate ISDN bearer channel carries 64 kbit/s. Here the quantity refers to `channel bit rate`. Source-side figure: `64 kbit/s` for Reported ISDN B-channel rate. Converted kilobits per second to bits per second.",
+      "facts": {
+        "canonical_name": "ISDN B channel",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted kilobits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "64000.0",
+          "source_basis": "Reported ISDN B-channel rate.",
+          "source_unit": "kbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Integrated_Services_Digital_Network",
+          "source_value_text": "64 kbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-isdn-b-channel",
+      "name": "ISDN B channel",
+      "qualifiers": {
+        "measurement": "channel bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Integrated_Services_Digital_Network",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-integrated-services-digital-network",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Integrated Services Digital Network",
+          "url": "https://en.wikipedia.org/wiki/Integrated_Services_Digital_Network"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "One basic-rate ISDN bearer channel carries 64 kbit/s.",
+      "value": 64000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Classic Bluetooth 1.2 supported a peak payload rate of 721 kbit/s in one direction. Here the quantity refers to `maximum asymmetric user data rate`. Source-side figure: `721 kbit/s` for Reported Bluetooth 1.2 asymmetric payload rate. Converted kilobits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Classic Bluetooth 1.2 supported a peak payload rate of 721 kbit/s in one direction. Here the quantity refers to `maximum asymmetric user data rate`. Source-side figure: `721 kbit/s` for Reported Bluetooth 1.2 asymmetric payload rate. Converted kilobits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Bluetooth 1.2 payload",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted kilobits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "721000.0",
+          "source_basis": "Reported Bluetooth 1.2 asymmetric payload rate.",
+          "source_unit": "kbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Bluetooth",
+          "source_value_text": "721 kbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-bluetooth-1-2-payload",
+      "name": "Bluetooth 1.2 payload",
+      "qualifiers": {
+        "measurement": "maximum asymmetric user data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bluetooth",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bluetooth",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bluetooth",
+          "url": "https://en.wikipedia.org/wiki/Bluetooth"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Classic Bluetooth 1.2 supported a peak payload rate of 721 kbit/s in one direction.",
+      "value": 721000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Stereo CD audio at 44.1 kHz and 16 bits per sample comes to 1.4112 Mbit/s. Here the quantity refers to `raw stereo PCM data rate`. Source-side figure: `1.4112 Mbit/s` for Computed from standard CD sampling and bit depth, commonly quoted as the CD audio data rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Stereo CD audio at 44.1 kHz and 16 bits per sample comes to 1.4112 Mbit/s. Here the quantity refers to `raw stereo PCM data rate`. Source-side figure: `1.4112 Mbit/s` for Computed from standard CD sampling and bit depth, commonly quoted as the CD audio data rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Compact Disc audio",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "1411200.0",
+          "source_basis": "Computed from standard CD sampling and bit depth, commonly quoted as the CD audio data rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio",
+          "source_value_text": "1.4112 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-compact-disc-audio",
+      "name": "Compact Disc audio",
+      "qualifiers": {
+        "measurement": "raw stereo PCM data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-compact-disc-digital-audio",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Compact Disc Digital Audio",
+          "url": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Stereo CD audio at 44.1 kHz and 16 bits per sample comes to 1.4112 Mbit/s.",
+      "value": 1411200.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB low-speed mode runs at 1.5 Mbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `1.5 Mbit/s` for Reported USB low-speed signaling rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB low-speed mode runs at 1.5 Mbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `1.5 Mbit/s` for Reported USB low-speed signaling rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "USB low-speed",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "1500000.0",
+          "source_basis": "Reported USB low-speed signaling rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/USB",
+          "source_value_text": "1.5 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-usb-low-speed",
+      "name": "USB low-speed",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB",
+          "url": "https://en.wikipedia.org/wiki/USB"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "USB low-speed mode runs at 1.5 Mbit/s.",
+      "value": 1500000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A North American T1 line carries 1.544 Mbit/s. Here the quantity refers to `line bit rate`. Source-side figure: `1.544 Mbit/s` for Reported T1 line rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A North American T1 line carries 1.544 Mbit/s. Here the quantity refers to `line bit rate`. Source-side figure: `1.544 Mbit/s` for Reported T1 line rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "T1 line",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "1544000.0",
+          "source_basis": "Reported T1 line rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/T-carrier",
+          "source_value_text": "1.544 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-t1-line",
+      "name": "T1 line",
+      "qualifiers": {
+        "measurement": "line bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/T-carrier",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-t-carrier",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "T-carrier",
+          "url": "https://en.wikipedia.org/wiki/T-carrier"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A North American T1 line carries 1.544 Mbit/s.",
+      "value": 1544000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An E1 line in the E-carrier system carries 2.048 Mbit/s. Here the quantity refers to `line bit rate`. Source-side figure: `2.048 Mbit/s` for Reported E1 line rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An E1 line in the E-carrier system carries 2.048 Mbit/s. Here the quantity refers to `line bit rate`. Source-side figure: `2.048 Mbit/s` for Reported E1 line rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "E1 line",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "2048000.0",
+          "source_basis": "Reported E1 line rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/E-carrier",
+          "source_value_text": "2.048 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-e1-line",
+      "name": "E1 line",
+      "qualifiers": {
+        "measurement": "line bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/E-carrier",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-e-carrier",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "E-carrier",
+          "url": "https://en.wikipedia.org/wiki/E-carrier"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "An E1 line in the E-carrier system carries 2.048 Mbit/s.",
+      "value": 2048000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative first-generation ADSL line tops out around 8 Mbit/s downstream. Here the quantity refers to `maximum downstream bit rate`. Source-side figure: `8 Mbit/s` for Reported maximum downstream ADSL rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative first-generation ADSL line tops out around 8 Mbit/s downstream. Here the quantity refers to `maximum downstream bit rate`. Source-side figure: `8 Mbit/s` for Reported maximum downstream ADSL rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "ADSL connection",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "8000000.0",
+          "source_basis": "Reported maximum downstream ADSL rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/ADSL",
+          "source_value_text": "8 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-adsl-connection",
+      "name": "ADSL connection",
+      "qualifiers": {
+        "measurement": "maximum downstream bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/ADSL",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-adsl",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "ADSL",
+          "url": "https://en.wikipedia.org/wiki/ADSL"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A representative first-generation ADSL line tops out around 8 Mbit/s downstream.",
+      "value": 8000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The original mainstream Wi-Fi generation 802.11b reached 11 Mbit/s. Here the quantity refers to `maximum physical layer bit rate`. Source-side figure: `11 Mbit/s` for Reported 802.11b physical layer rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The original mainstream Wi-Fi generation 802.11b reached 11 Mbit/s. Here the quantity refers to `maximum physical layer bit rate`. Source-side figure: `11 Mbit/s` for Reported 802.11b physical layer rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "802.11b Wi-Fi",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "11000000.0",
+          "source_basis": "Reported 802.11b physical layer rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/IEEE_802.11b-1999",
+          "source_value_text": "11 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-80211b-wifi",
+      "name": "802.11b Wi-Fi",
+      "qualifiers": {
+        "measurement": "maximum physical layer bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/IEEE_802.11b-1999",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ieee-802-11b-1999",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "IEEE 802.11b-1999",
+          "url": "https://en.wikipedia.org/wiki/IEEE_802.11b-1999"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "The original mainstream Wi-Fi generation 802.11b reached 11 Mbit/s.",
+      "value": 11000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB full-speed mode runs at 12 Mbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `12 Mbit/s` for Reported USB full-speed signaling rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB full-speed mode runs at 12 Mbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `12 Mbit/s` for Reported USB full-speed signaling rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "USB full-speed",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "12000000.0",
+          "source_basis": "Reported USB full-speed signaling rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/USB",
+          "source_value_text": "12 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-usb-full-speed",
+      "name": "USB full-speed",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB",
+          "url": "https://en.wikipedia.org/wiki/USB"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "USB full-speed mode runs at 12 Mbit/s.",
+      "value": 12000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A 1x Blu-ray Disc data stream is 54 Mbit/s. Here the quantity refers to `maximum transfer rate at 1x speed`. Source-side figure: `54 Mbit/s` for Reported 1x Blu-ray transfer rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A 1x Blu-ray Disc data stream is 54 Mbit/s. Here the quantity refers to `maximum transfer rate at 1x speed`. Source-side figure: `54 Mbit/s` for Reported 1x Blu-ray transfer rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Blu-ray Disc",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "54000000.0",
+          "source_basis": "Reported 1x Blu-ray transfer rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Blu-ray",
+          "source_value_text": "54 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-blu-ray-disc",
+      "name": "Blu-ray Disc",
+      "qualifiers": {
+        "measurement": "maximum transfer rate at 1x speed"
+      },
+      "source": "https://en.wikipedia.org/wiki/Blu-ray",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-blu-ray",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Blu-ray",
+          "url": "https://en.wikipedia.org/wiki/Blu-ray"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A 1x Blu-ray Disc data stream is 54 Mbit/s.",
+      "value": 54000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fast Ethernet standardized 100 Mbit/s local networking. Here the quantity refers to `line rate`. Source-side figure: `100 Mbit/s` for Reported Fast Ethernet line rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fast Ethernet standardized 100 Mbit/s local networking. Here the quantity refers to `line rate`. Source-side figure: `100 Mbit/s` for Reported Fast Ethernet line rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Fast Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "100000000.0",
+          "source_basis": "Reported Fast Ethernet line rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Fast_Ethernet",
+          "source_value_text": "100 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-fast-ethernet",
+      "name": "Fast Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Fast_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fast-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fast Ethernet",
+          "url": "https://en.wikipedia.org/wiki/Fast_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Fast Ethernet standardized 100 Mbit/s local networking.",
+      "value": 100000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB 2.0 high-speed signaling reaches 480 Mbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `480 Mbit/s` for Reported USB high-speed signaling rate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB 2.0 high-speed signaling reaches 480 Mbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `480 Mbit/s` for Reported USB high-speed signaling rate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "USB high-speed",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "480000000.0",
+          "source_basis": "Reported USB high-speed signaling rate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/USB",
+          "source_value_text": "480 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-usb-high-speed",
+      "name": "USB high-speed",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB",
+          "url": "https://en.wikipedia.org/wiki/USB"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "USB 2.0 high-speed signaling reaches 480 Mbit/s.",
+      "value": 480000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Gigabit Ethernet carries one billion bits each second. Here the quantity refers to `line rate`. Source-side figure: `1 Gbit/s` for Reported Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Gigabit Ethernet carries one billion bits each second. Here the quantity refers to `line rate`. Source-side figure: `1 Gbit/s` for Reported Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "1000000000.0",
+          "source_basis": "Reported Gigabit Ethernet line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Gigabit_Ethernet",
+          "source_value_text": "1 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-gigabit-ethernet",
+      "name": "Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Gigabit_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gigabit-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gigabit Ethernet",
+          "url": "https://en.wikipedia.org/wiki/Gigabit_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Gigabit Ethernet carries one billion bits each second.",
+      "value": 1000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "2.5GBASE-T carries 2.5 Gbit/s over twisted-pair cabling. Here the quantity refers to `line rate`. Source-side figure: `2.5 Gbit/s` for Reported 2.5GBASE-T line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "2.5GBASE-T carries 2.5 Gbit/s over twisted-pair cabling. Here the quantity refers to `line rate`. Source-side figure: `2.5 Gbit/s` for Reported 2.5GBASE-T line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "2.5 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "2500000000.0",
+          "source_basis": "Reported 2.5GBASE-T line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
+          "source_value_text": "2.5 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-2-5-gigabit-ethernet",
+      "name": "2.5 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-2-5gbase-t-and-5gbase-t",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "2.5GBASE-T and 5GBASE-T",
+          "url": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "2.5GBASE-T carries 2.5 Gbit/s over twisted-pair cabling.",
+      "value": 2500000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Second-generation Serial ATA doubled the signaling rate to 3 Gbit/s. Source-side figure: `3 Gbit/s` for Reported SATA II signaling rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Second-generation Serial ATA doubled the signaling rate to 3 Gbit/s. Source-side figure: `3 Gbit/s` for Reported SATA II signaling rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "SATA II",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "3000000000.0",
+          "source_basis": "Reported SATA II signaling rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Serial_ATA",
+          "source_value_text": "3 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-sata-ii",
+      "name": "SATA II",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Serial_ATA",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-serial-ata",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Serial ATA",
+          "url": "https://en.wikipedia.org/wiki/Serial_ATA"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Second-generation Serial ATA doubled the signaling rate to 3 Gbit/s.",
+      "value": 3000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The first HDMI specification carried up to 4.95 Gbit/s. Here the quantity refers to `maximum aggregate data rate`. Source-side figure: `4.95 Gbit/s` for Reported HDMI 1.0 aggregate data rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The first HDMI specification carried up to 4.95 Gbit/s. Here the quantity refers to `maximum aggregate data rate`. Source-side figure: `4.95 Gbit/s` for Reported HDMI 1.0 aggregate data rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "HDMI 1.0",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "4950000000.0",
+          "source_basis": "Reported HDMI 1.0 aggregate data rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/HDMI",
+          "source_value_text": "4.95 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-hdmi-1-0",
+      "name": "HDMI 1.0",
+      "qualifiers": {
+        "measurement": "maximum aggregate data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/HDMI",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hdmi",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "HDMI",
+          "url": "https://en.wikipedia.org/wiki/HDMI"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "The first HDMI specification carried up to 4.95 Gbit/s.",
+      "value": 4950000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB 3.0 SuperSpeed signaling runs at 5 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `5 Gbit/s` for Reported USB 3.0 signaling rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB 3.0 SuperSpeed signaling runs at 5 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `5 Gbit/s` for Reported USB 3.0 signaling rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "USB 3.0 SuperSpeed",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "5000000000.0",
+          "source_basis": "Reported USB 3.0 signaling rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/USB_3.0",
+          "source_value_text": "5 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-usb-3-0-superspeed",
+      "name": "USB 3.0 SuperSpeed",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB_3.0",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-3-0",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB 3.0",
+          "url": "https://en.wikipedia.org/wiki/USB_3.0"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "USB 3.0 SuperSpeed signaling runs at 5 Gbit/s.",
+      "value": 5000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Third-generation Serial ATA links signal at 6 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `6 Gbit/s` for Reported SATA III signaling rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Third-generation Serial ATA links signal at 6 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `6 Gbit/s` for Reported SATA III signaling rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "SATA III",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "6000000000.0",
+          "source_basis": "Reported SATA III signaling rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Serial_ATA",
+          "source_value_text": "6 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-sata-iii",
+      "name": "SATA III",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Serial_ATA",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-serial-ata",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Serial ATA",
+          "url": "https://en.wikipedia.org/wiki/Serial_ATA"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Third-generation Serial ATA links signal at 6 Gbit/s.",
+      "value": 6000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Wi-Fi 5 under 802.11ac reaches a theoretical 6.93 Gbit/s. Here the quantity refers to `maximum physical layer bit rate`. Source-side figure: `6.93 Gbit/s` for Reported maximum 802.11ac physical layer rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Wi-Fi 5 under 802.11ac reaches a theoretical 6.93 Gbit/s. Here the quantity refers to `maximum physical layer bit rate`. Source-side figure: `6.93 Gbit/s` for Reported maximum 802.11ac physical layer rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "802.11ac Wi-Fi",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "6930000000.0",
+          "source_basis": "Reported maximum 802.11ac physical layer rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/IEEE_802.11ac-2013",
+          "source_value_text": "6.93 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-80211ac-wifi",
+      "name": "802.11ac Wi-Fi",
+      "qualifiers": {
+        "measurement": "maximum physical layer bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/IEEE_802.11ac-2013",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ieee-802-11ac-2013",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "IEEE 802.11ac-2013",
+          "url": "https://en.wikipedia.org/wiki/IEEE_802.11ac-2013"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Wi-Fi 5 under 802.11ac reaches a theoretical 6.93 Gbit/s.",
+      "value": 6930000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB 3.1 Gen 2 doubles SuperSpeed to 10 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `10 Gbit/s` for Reported USB 3.1 Gen 2 signaling rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB 3.1 Gen 2 doubles SuperSpeed to 10 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `10 Gbit/s` for Reported USB 3.1 Gen 2 signaling rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "USB 3.1 Gen 2",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "10000000000.0",
+          "source_basis": "Reported USB 3.1 Gen 2 signaling rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/USB_3.0",
+          "source_value_text": "10 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-usb-3-1-gen-2",
+      "name": "USB 3.1 Gen 2",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB_3.0",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-3-0",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB 3.0",
+          "url": "https://en.wikipedia.org/wiki/USB_3.0"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "USB 3.1 Gen 2 doubles SuperSpeed to 10 Gbit/s.",
+      "value": 10000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "HDMI 2.0 increased aggregate data rate to 18 Gbit/s. Here the quantity refers to `maximum aggregate data rate`. Source-side figure: `18 Gbit/s` for Reported HDMI 2.0 aggregate data rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "HDMI 2.0 increased aggregate data rate to 18 Gbit/s. Here the quantity refers to `maximum aggregate data rate`. Source-side figure: `18 Gbit/s` for Reported HDMI 2.0 aggregate data rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "HDMI 2.0",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "18000000000.0",
+          "source_basis": "Reported HDMI 2.0 aggregate data rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/HDMI",
+          "source_value_text": "18 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-hdmi-2-0",
+      "name": "HDMI 2.0",
+      "qualifiers": {
+        "measurement": "maximum aggregate data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/HDMI",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hdmi",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "HDMI",
+          "url": "https://en.wikipedia.org/wiki/HDMI"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "HDMI 2.0 increased aggregate data rate to 18 Gbit/s.",
+      "value": 18000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB 3.2 Gen 2x2 reaches 20 Gbit/s by using two 10 Gbit/s lanes. Here the quantity refers to `signaling rate`. Source-side figure: `20 Gbit/s` for Reported USB 3.2 Gen 2x2 aggregate rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB 3.2 Gen 2x2 reaches 20 Gbit/s by using two 10 Gbit/s lanes. Here the quantity refers to `signaling rate`. Source-side figure: `20 Gbit/s` for Reported USB 3.2 Gen 2x2 aggregate rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "USB 3.2 Gen 2x2",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "20000000000.0",
+          "source_basis": "Reported USB 3.2 Gen 2x2 aggregate rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/USB_3.0",
+          "source_value_text": "20 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-usb-3-2-gen-2x2",
+      "name": "USB 3.2 Gen 2x2",
+      "qualifiers": {
+        "measurement": "signaling rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB_3.0",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-3-0",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB 3.0",
+          "url": "https://en.wikipedia.org/wiki/USB_3.0"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "USB 3.2 Gen 2x2 reaches 20 Gbit/s by using two 10 Gbit/s lanes.",
+      "value": 20000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "DisplayPort 1.2 supports 21.6 Gbit/s across four lanes. Here the quantity refers to `maximum aggregate lane rate`. Source-side figure: `21.6 Gbit/s` for Reported DisplayPort 1.2 aggregate lane rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "DisplayPort 1.2 supports 21.6 Gbit/s across four lanes. Here the quantity refers to `maximum aggregate lane rate`. Source-side figure: `21.6 Gbit/s` for Reported DisplayPort 1.2 aggregate lane rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "DisplayPort 1.2",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "21600000000.0",
+          "source_basis": "Reported DisplayPort 1.2 aggregate lane rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/DisplayPort",
+          "source_value_text": "21.6 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-displayport-1-2",
+      "name": "DisplayPort 1.2",
+      "qualifiers": {
+        "measurement": "maximum aggregate lane rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/DisplayPort",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-displayport",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DisplayPort",
+          "url": "https://en.wikipedia.org/wiki/DisplayPort"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "DisplayPort 1.2 supports 21.6 Gbit/s across four lanes.",
+      "value": 21600000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Thunderbolt 3 links carry up to 40 Gbit/s. Here the quantity refers to `aggregate interface bandwidth`. Source-side figure: `40 Gbit/s` for Reported Thunderbolt 3 bandwidth. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Thunderbolt 3 links carry up to 40 Gbit/s. Here the quantity refers to `aggregate interface bandwidth`. Source-side figure: `40 Gbit/s` for Reported Thunderbolt 3 bandwidth. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Thunderbolt 3",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "40000000000.0",
+          "source_basis": "Reported Thunderbolt 3 bandwidth.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/Thunderbolt_(interface)",
+          "source_value_text": "40 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-thunderbolt-3",
+      "name": "Thunderbolt 3",
+      "qualifiers": {
+        "measurement": "aggregate interface bandwidth"
+      },
+      "source": "https://en.wikipedia.org/wiki/Thunderbolt_(interface)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-thunderbolt-interface",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Thunderbolt (interface)",
+          "url": "https://en.wikipedia.org/wiki/Thunderbolt_(interface)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "Thunderbolt 3 links carry up to 40 Gbit/s.",
+      "value": 40000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "IEEE 802.11be, marketed as Wi-Fi 7, is specified up to 46 Gbit/s. Here the quantity refers to `maximum theoretical physical layer bit rate`. Source-side figure: `46 Gbit/s` for Reported 802.11be maximum physical layer rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "IEEE 802.11be, marketed as Wi-Fi 7, is specified up to 46 Gbit/s. Here the quantity refers to `maximum theoretical physical layer bit rate`. Source-side figure: `46 Gbit/s` for Reported 802.11be maximum physical layer rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "Wi-Fi 7",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "46000000000.0",
+          "source_basis": "Reported 802.11be maximum physical layer rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/IEEE_802.11be",
+          "source_value_text": "46 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-wifi-7",
+      "name": "Wi-Fi 7",
+      "qualifiers": {
+        "measurement": "maximum theoretical physical layer bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/IEEE_802.11be",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ieee-802-11be",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "IEEE 802.11be",
+          "url": "https://en.wikipedia.org/wiki/IEEE_802.11be"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "IEEE 802.11be, marketed as Wi-Fi 7, is specified up to 46 Gbit/s.",
+      "value": 46000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "HDMI 2.1 carries up to 48 Gbit/s. Here the quantity refers to `maximum aggregate data rate`. Source-side figure: `48 Gbit/s` for Reported HDMI 2.1 aggregate data rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "HDMI 2.1 carries up to 48 Gbit/s. Here the quantity refers to `maximum aggregate data rate`. Source-side figure: `48 Gbit/s` for Reported HDMI 2.1 aggregate data rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "HDMI 2.1",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "48000000000.0",
+          "source_basis": "Reported HDMI 2.1 aggregate data rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/HDMI",
+          "source_value_text": "48 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-hdmi-2-1",
+      "name": "HDMI 2.1",
+      "qualifiers": {
+        "measurement": "maximum aggregate data rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/HDMI",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hdmi",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "HDMI",
+          "url": "https://en.wikipedia.org/wiki/HDMI"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "HDMI 2.1 carries up to 48 Gbit/s.",
+      "value": 48000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "DisplayPort 2.1 reaches 80 Gbit/s across four UHBR20 lanes. Here the quantity refers to `maximum aggregate lane rate`. Source-side figure: `80 Gbit/s` for Reported DisplayPort 2.1 aggregate lane rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "DisplayPort 2.1 reaches 80 Gbit/s across four UHBR20 lanes. Here the quantity refers to `maximum aggregate lane rate`. Source-side figure: `80 Gbit/s` for Reported DisplayPort 2.1 aggregate lane rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "DisplayPort 2.1",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "80000000000.0",
+          "source_basis": "Reported DisplayPort 2.1 aggregate lane rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/DisplayPort",
+          "source_value_text": "80 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-displayport-2-1",
+      "name": "DisplayPort 2.1",
+      "qualifiers": {
+        "measurement": "maximum aggregate lane rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/DisplayPort",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-displayport",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DisplayPort",
+          "url": "https://en.wikipedia.org/wiki/DisplayPort"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "DisplayPort 2.1 reaches 80 Gbit/s across four UHBR20 lanes.",
+      "value": 80000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "200 Gigabit Ethernet carries 200 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `200 Gbit/s` for Reported 200 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "200 Gigabit Ethernet carries 200 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `200 Gbit/s` for Reported 200 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "200 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "200000000000.0",
+          "source_basis": "Reported 200 Gigabit Ethernet line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/200_Gigabit_Ethernet",
+          "source_value_text": "200 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-200-gigabit-ethernet",
+      "name": "200 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/200_Gigabit_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-200-gigabit-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "200 Gigabit Ethernet",
+          "url": "https://en.wikipedia.org/wiki/200_Gigabit_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "200 Gigabit Ethernet carries 200 Gbit/s.",
+      "value": 200000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single DDR4-3200 memory channel moves 25.6 GB each second, or 204.8 Gbit/s. Derived using `bit rate = 25.6 GB/s x 8 bits/byte`. Here the quantity refers to `single-channel peak transfer bandwidth`. Source-side figure: `25.6 GB/s` for Reported single-channel DDR4-3200 peak bandwidth. Converted gigabytes per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single DDR4-3200 memory channel moves 25.6 GB each second, or 204.8 Gbit/s. Derived using `bit rate = 25.6 GB/s x 8 bits/byte`. Here the quantity refers to `single-channel peak transfer bandwidth`. Source-side figure: `25.6 GB/s` for Reported single-channel DDR4-3200 peak bandwidth. Converted gigabytes per second to bits per second.",
+      "facts": {
+        "canonical_name": "DDR4-3200 memory channel",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabytes per second to bits per second.",
+          "derivation_note": "bit rate = 25.6 GB/s x 8 bits/byte",
+          "method": "derived",
+          "original_value_text": "204800000000.0",
+          "source_basis": "Reported single-channel DDR4-3200 peak bandwidth.",
+          "source_unit": "GB/s",
+          "source_url": "https://en.wikipedia.org/wiki/DDR4_SDRAM",
+          "source_value_text": "25.6 GB/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-ddr4-3200-memory-channel",
+      "name": "DDR4-3200 memory channel",
+      "qualifiers": {
+        "derivation": "bit rate = 25.6 GB/s x 8 bits/byte",
+        "measurement": "single-channel peak transfer bandwidth"
+      },
+      "source": "https://en.wikipedia.org/wiki/DDR4_SDRAM",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ddr4-sdram",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DDR4 SDRAM",
+          "url": "https://en.wikipedia.org/wiki/DDR4_SDRAM"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single DDR4-3200 memory channel moves 25.6 GB each second, or 204.8 Gbit/s.",
+      "value": 204800000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "400 Gigabit Ethernet carries 400 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `400 Gbit/s` for Reported 400 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "400 Gigabit Ethernet carries 400 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `400 Gbit/s` for Reported 400 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "400 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "400000000000.0",
+          "source_basis": "Reported 400 Gigabit Ethernet line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/400_Gigabit_Ethernet",
+          "source_value_text": "400 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-400-gigabit-ethernet",
+      "name": "400 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/400_Gigabit_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-400-gigabit-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "400 Gigabit Ethernet",
+          "url": "https://en.wikipedia.org/wiki/400_Gigabit_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "400 Gigabit Ethernet carries 400 Gbit/s.",
+      "value": 400000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single DDR5-6400 memory channel moves 51.2 GB each second, or 409.6 Gbit/s. Derived using `bit rate = 51.2 GB/s x 8 bits/byte`. Here the quantity refers to `single-channel peak transfer bandwidth`. Source-side figure: `51.2 GB/s` for Reported single-channel DDR5-6400 peak bandwidth. Converted gigabytes per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single DDR5-6400 memory channel moves 51.2 GB each second, or 409.6 Gbit/s. Derived using `bit rate = 51.2 GB/s x 8 bits/byte`. Here the quantity refers to `single-channel peak transfer bandwidth`. Source-side figure: `51.2 GB/s` for Reported single-channel DDR5-6400 peak bandwidth. Converted gigabytes per second to bits per second.",
+      "facts": {
+        "canonical_name": "DDR5-6400 memory channel",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabytes per second to bits per second.",
+          "derivation_note": "bit rate = 51.2 GB/s x 8 bits/byte",
+          "method": "derived",
+          "original_value_text": "409600000000.0",
+          "source_basis": "Reported single-channel DDR5-6400 peak bandwidth.",
+          "source_unit": "GB/s",
+          "source_url": "https://en.wikipedia.org/wiki/DDR5_SDRAM",
+          "source_value_text": "51.2 GB/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-ddr5-6400-memory-channel",
+      "name": "DDR5-6400 memory channel",
+      "qualifiers": {
+        "derivation": "bit rate = 51.2 GB/s x 8 bits/byte",
+        "measurement": "single-channel peak transfer bandwidth"
+      },
+      "source": "https://en.wikipedia.org/wiki/DDR5_SDRAM",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ddr5-sdram",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DDR5 SDRAM",
+          "url": "https://en.wikipedia.org/wiki/DDR5_SDRAM"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single DDR5-6400 memory channel moves 51.2 GB each second, or 409.6 Gbit/s.",
+      "value": 409600000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A PCIe 5.0 x16 link carries about 63.0 GB/s one way, or roughly 504 Gbit/s. Derived using `bit rate = 63.015 GB/s x 8 bits/byte`. Here the quantity refers to `one-direction peak payload bandwidth`. Source-side figure: `63.015 GB/s` for Reported one-direction PCIe 5.0 x16 payload bandwidth. Converted gigabytes per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A PCIe 5.0 x16 link carries about 63.0 GB/s one way, or roughly 504 Gbit/s. Derived using `bit rate = 63.015 GB/s x 8 bits/byte`. Here the quantity refers to `one-direction peak payload bandwidth`. Source-side figure: `63.015 GB/s` for Reported one-direction PCIe 5.0 x16 payload bandwidth. Converted gigabytes per second to bits per second.",
+      "facts": {
+        "canonical_name": "PCI Express 5.0 x16",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabytes per second to bits per second.",
+          "derivation_note": "bit rate = 63.015 GB/s x 8 bits/byte",
+          "method": "derived",
+          "original_value_text": "504123076923.0",
+          "source_basis": "Reported one-direction PCIe 5.0 x16 payload bandwidth.",
+          "source_unit": "GB/s",
+          "source_url": "https://en.wikipedia.org/wiki/PCI_Express",
+          "source_value_text": "63.015 GB/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-pcie-5-x16",
+      "name": "PCI Express 5.0 x16",
+      "qualifiers": {
+        "derivation": "bit rate = 63.015 GB/s x 8 bits/byte",
+        "measurement": "one-direction peak payload bandwidth"
+      },
+      "source": "https://en.wikipedia.org/wiki/PCI_Express",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pci-express",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "PCI Express",
+          "url": "https://en.wikipedia.org/wiki/PCI_Express"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A PCIe 5.0 x16 link carries about 63.0 GB/s one way, or roughly 504 Gbit/s.",
+      "value": 504123076923.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "800 Gigabit Ethernet carries 800 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `800 Gbit/s` for Reported 800 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "800 Gigabit Ethernet carries 800 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `800 Gbit/s` for Reported 800 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "800 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "800000000000.0",
+          "source_basis": "Reported 800 Gigabit Ethernet line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/800_Gigabit_Ethernet",
+          "source_value_text": "800 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-800-gigabit-ethernet",
+      "name": "800 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/800_Gigabit_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-800-gigabit-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "800 Gigabit Ethernet",
+          "url": "https://en.wikipedia.org/wiki/800_Gigabit_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "800 Gigabit Ethernet carries 800 Gbit/s.",
+      "value": 800000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A PCIe 6.0 x16 link carries about 126 GB/s one way, or just over one terabit per second. Derived using `bit rate = 126.031 GB/s x 8 bits/byte`. Here the quantity refers to `one-direction peak payload bandwidth`. Source-side figure: `126.031 GB/s` for Reported one-direction PCIe 6.0 x16 payload bandwidth. Converted gigabytes per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A PCIe 6.0 x16 link carries about 126 GB/s one way, or just over one terabit per second. Derived using `bit rate = 126.031 GB/s x 8 bits/byte`. Here the quantity refers to `one-direction peak payload bandwidth`. Source-side figure: `126.031 GB/s` for Reported one-direction PCIe 6.0 x16 payload bandwidth. Converted gigabytes per second to bits per second.",
+      "facts": {
+        "canonical_name": "PCI Express 6.0 x16",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabytes per second to bits per second.",
+          "derivation_note": "bit rate = 126.031 GB/s x 8 bits/byte",
+          "method": "derived",
+          "original_value_text": "1008246153846.0",
+          "source_basis": "Reported one-direction PCIe 6.0 x16 payload bandwidth.",
+          "source_unit": "GB/s",
+          "source_url": "https://en.wikipedia.org/wiki/PCI_Express",
+          "source_value_text": "126.031 GB/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-pcie-6-x16",
+      "name": "PCI Express 6.0 x16",
+      "qualifiers": {
+        "derivation": "bit rate = 126.031 GB/s x 8 bits/byte",
+        "measurement": "one-direction peak payload bandwidth"
+      },
+      "source": "https://en.wikipedia.org/wiki/PCI_Express",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pci-express",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "PCI Express",
+          "url": "https://en.wikipedia.org/wiki/PCI_Express"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A PCIe 6.0 x16 link carries about 126 GB/s one way, or just over one terabit per second.",
+      "value": 1008246153846.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single HBM3 stack reaches 819 GB/s, or about 6.55 Tbit/s. Derived using `bit rate = 819 GB/s x 8 bits/byte`. Here the quantity refers to `peak stack bandwidth`. Source-side figure: `819 GB/s` for Reported HBM3 stack bandwidth. Converted gigabytes per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single HBM3 stack reaches 819 GB/s, or about 6.55 Tbit/s. Derived using `bit rate = 819 GB/s x 8 bits/byte`. Here the quantity refers to `peak stack bandwidth`. Source-side figure: `819 GB/s` for Reported HBM3 stack bandwidth. Converted gigabytes per second to bits per second.",
+      "facts": {
+        "canonical_name": "HBM3 memory stack",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabytes per second to bits per second.",
+          "derivation_note": "bit rate = 819 GB/s x 8 bits/byte",
+          "method": "derived",
+          "original_value_text": "6552000000000.0",
+          "source_basis": "Reported HBM3 stack bandwidth.",
+          "source_unit": "GB/s",
+          "source_url": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory",
+          "source_value_text": "819 GB/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-hbm3-memory-stack",
+      "name": "HBM3 memory stack",
+      "qualifiers": {
+        "derivation": "bit rate = 819 GB/s x 8 bits/byte",
+        "measurement": "peak stack bandwidth"
+      },
+      "source": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-high-bandwidth-memory",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "High Bandwidth Memory",
+          "url": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A single HBM3 stack reaches 819 GB/s, or about 6.55 Tbit/s.",
+      "value": 6552000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Bit rate",
+      "url": "https://en.wikipedia.org/wiki/Bit_rate"
+    },
+    {
+      "name": "Data-rate units",
+      "url": "https://en.wikipedia.org/wiki/Data-rate_units"
+    }
+  ],
+  "required_min_items": 24,
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Bits per second are the canonical storage unit for information-rate observations.",
+      "name": "bits per second",
+      "symbol": "bit/s"
+    },
+    {
+      "conversion_factor": 0.125,
+      "description": "Bytes per second are useful for storage devices, downloads, and memory bandwidth.",
+      "name": "bytes per second",
+      "symbol": "B/s"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Kilobits per second are common for older modems, audio codecs, and navigation messages.",
+      "name": "kilobits per second",
+      "symbol": "kbit/s"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Megabits per second are common for household internet and media streams.",
+      "name": "megabits per second",
+      "symbol": "Mbit/s"
+    },
+    {
+      "conversion_factor": 1e-09,
+      "description": "Gigabits per second are useful for modern networking, display links, and high-speed I/O.",
+      "name": "gigabits per second",
+      "symbol": "Gbit/s"
+    },
+    {
+      "conversion_factor": 1e-12,
+      "description": "Terabits per second are useful for memory stacks and backbone-scale interfaces.",
+      "name": "terabits per second",
+      "symbol": "Tbit/s"
+    },
+    {
+      "conversion_factor": 0.000125,
+      "description": "Kilobytes per second remain intuitive for small file transfers and legacy devices.",
+      "name": "kilobytes per second",
+      "symbol": "kB/s"
+    },
+    {
+      "conversion_factor": 1.25e-07,
+      "description": "Megabytes per second are useful for storage and memory comparisons.",
+      "name": "megabytes per second",
+      "symbol": "MB/s"
+    },
+    {
+      "conversion_factor": 1.25e-10,
+      "description": "Gigabytes per second are useful for high-end memory and interconnect bandwidth.",
+      "name": "gigabytes per second",
+      "symbol": "GB/s"
+    }
+  ]
+}

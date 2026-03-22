@@ -58,9 +58,15 @@ CATEGORY_RECOGNIZABILITY = {
     "architecture": 0.88,
     "infrastructure": 0.85,
     "engineering": 0.82,
+    "interface": 0.83,
+    "telecommunications": 0.82,
+    "media": 0.81,
+    "computing": 0.8,
+    "storage": 0.78,
     "geography": 0.8,
     "astronomy": 0.78,
     "cosmology": 0.72,
+    "fields": 0.72,
     "materials": 0.7,
     "biology": 0.68,
     "molecule": 0.6,
@@ -131,6 +137,18 @@ def first_sentence(text: str) -> str:
             if head:
                 return head.rstrip(".!?") + "."
     return normalized
+
+
+def format_source_value(source_value_text: Any, source_unit: Any) -> str:
+    value_text = str(source_value_text or "").strip()
+    unit_text = str(source_unit or "").strip()
+    if not unit_text or not value_text:
+        return value_text
+
+    numeric_candidate = value_text.replace("+", "").replace("-", "").replace(".", "").replace("e", "").replace("E", "")
+    if numeric_candidate.isdigit():
+        return f"{value_text} {unit_text}"
+    return value_text
 
 
 class DatasetBuilder:
@@ -795,7 +813,13 @@ class DatasetBuilder:
             candidate = f"{base}:{counter}"
         return candidate
 
-    def augment_default_description(self, base_text: str, value_type: str, qualifiers: dict[str, Any]) -> str:
+    def augment_default_description(
+        self,
+        base_text: str,
+        value_type: str,
+        qualifiers: dict[str, Any],
+        source_trace: dict[str, Any] | None = None,
+    ) -> str:
         text = " ".join((base_text or "").split())
         if not text:
             text = ""
@@ -815,6 +839,22 @@ class DatasetBuilder:
 
         if assumption:
             notes.append(f"Assumes `{assumption}`.")
+
+        if source_trace:
+            source_value_text = source_trace.get("source_value_text")
+            source_unit = source_trace.get("source_unit")
+            source_basis = source_trace.get("source_basis")
+            conversion_note = source_trace.get("conversion_note")
+
+            if source_value_text:
+                value_display = format_source_value(source_value_text, source_unit)
+                if source_basis:
+                    notes.append(f"Source-side figure: `{value_display}` for {source_basis.rstrip('.')}.")
+                else:
+                    notes.append(f"Source-side figure: `{value_display}`.")
+
+            if conversion_note:
+                notes.append(f"{str(conversion_note).rstrip('.')}.")
 
         if not notes:
             return text
@@ -883,7 +923,12 @@ class DatasetBuilder:
         summary_short = str((override or {}).get("summary_short") or first_sentence(default_summary or label))
         description_medium = str(
             (override or {}).get("description_medium")
-            or self.augment_default_description(default_description or summary_short, value_type, qualifiers)
+            or self.augment_default_description(
+                default_description or summary_short,
+                value_type,
+                qualifiers,
+                source_trace=source_trace,
+            )
             or summary_short
         )
         description_long = (override or {}).get("description_long")

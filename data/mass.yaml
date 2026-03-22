@@ -847,6 +847,52 @@ items:
   value_type: derived
   qualifiers:
     measurement: estimated total stone mass
+- id: obs:mass:entity-halleys-comet-mass
+  name: Halley's Comet
+  value: 220000000000000.0
+  description: 'Representative mass estimate for Halley''s Comet. Here the quantity refers to `estimated comet mass`. Source-side figure: `2.2 x 10^14 kg` for Reported approximate mass of Halley''s Comet.'
+  description_format: markdown
+  summary_short: Representative mass estimate for Halley's Comet.
+  description_medium: 'Representative mass estimate for Halley''s Comet. Here the quantity refers to `estimated comet mass`. Source-side figure: `2.2 x 10^14 kg` for Reported approximate mass of Halley''s Comet.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Halley's Comet
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      method: direct
+      original_value_text: '220000000000000.0'
+      source_basis: Reported approximate mass of Halley's Comet.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Halley%27s_Comet
+      source_value_text: 2.2 x 10^14 kg
+  source: https://en.wikipedia.org/wiki/Halley%27s_Comet
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-halley-27s-comet
+    url: https://en.wikipedia.org/wiki/Halley%27s_Comet
+    title: Halley's Comet
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: estimated comet mass
 - id: obs:mass:entity-lake-superior
   name: Lake Superior
   value: 1.2e+16
@@ -935,6 +981,52 @@ items:
   value_type: measured
   qualifiers:
     measurement: gravitationally inferred mass
+- id: obs:mass:entity-pluto
+  name: Pluto
+  value: 1.309e+22
+  description: 'Mass of the dwarf planet Pluto. Here the quantity refers to `dwarf-planet mass`. Source-side figure: `1.309 x 10^22 kg` for Reported Pluto mass.'
+  description_format: markdown
+  summary_short: Mass of the dwarf planet Pluto.
+  description_medium: 'Mass of the dwarf planet Pluto. Here the quantity refers to `dwarf-planet mass`. Source-side figure: `1.309 x 10^22 kg` for Reported Pluto mass.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pluto
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      method: direct
+      original_value_text: '1.309e+22'
+      source_basis: Reported Pluto mass.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Pluto
+      source_value_text: 1.309 x 10^22 kg
+  source: https://en.wikipedia.org/wiki/Pluto
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pluto
+    url: https://en.wikipedia.org/wiki/Pluto
+    title: Pluto
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dwarf-planet mass
 - id: obs:mass:entity-moon
   name: Moon
   value: 7.35e+22
@@ -978,30 +1070,33 @@ items:
   value_type: measured
   qualifiers:
     measurement: gravitationally inferred mass
-- id: obs:mass:entity-earth
-  name: Earth
-  value: 5.972e+24
-  description: Mass of Earth. Here the quantity refers to `planetary mass`.
+- id: obs:mass:entity-mercury
+  name: Mercury
+  value: 3.3011e+23
+  description: 'Mass of Mercury. Here the quantity refers to `planetary mass`. Source-side figure: `3.3011 x 10^23 kg` for Reported Mercury mass.'
   description_format: markdown
-  summary_short: Mass of Earth.
-  description_medium: Mass of Earth. Here the quantity refers to `planetary mass`.
+  summary_short: Mass of Mercury.
+  description_medium: 'Mass of Mercury. Here the quantity refers to `planetary mass`. Source-side figure: `3.3011 x 10^23 kg` for Reported Mercury mass.'
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Earth
+    canonical_name: Mercury
     ingest_source: dataset/raw/curated/mass.json
     source_trace:
       method: direct
-      original_value_text: '5.972e+24'
-      source_url: https://en.wikipedia.org/wiki/Earth
-  source: https://en.wikipedia.org/wiki/Earth
+      original_value_text: '3.3011e+23'
+      source_basis: Reported Mercury mass.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Mercury_(planet)
+      source_value_text: 3.3011 x 10^23 kg
+  source: https://en.wikipedia.org/wiki/Mercury_(planet)
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-earth
-    url: https://en.wikipedia.org/wiki/Earth
-    title: Earth
+  - id: src:https-en-wikipedia-org-wiki-mercury-planet
+    url: https://en.wikipedia.org/wiki/Mercury_(planet)
+    title: Mercury (planet)
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1017,34 +1112,37 @@ items:
     source_type: local_file
     role: curation_manifest
     note: null
-  wikidata_qid: Q2
+  wikidata_qid: null
   value_type: measured
   qualifiers:
     measurement: planetary mass
-- id: obs:mass:entity-jupiter
-  name: Jupiter
-  value: 1.898e+27
-  description: Mass of Jupiter. Here the quantity refers to `planetary mass`.
+- id: obs:mass:entity-venus
+  name: Venus
+  value: 4.8675e+24
+  description: 'Mass of Venus. Here the quantity refers to `planetary mass`. Source-side figure: `4.8675 x 10^24 kg` for Reported Venus mass.'
   description_format: markdown
-  summary_short: Mass of Jupiter.
-  description_medium: Mass of Jupiter. Here the quantity refers to `planetary mass`.
+  summary_short: Mass of Venus.
+  description_medium: 'Mass of Venus. Here the quantity refers to `planetary mass`. Source-side figure: `4.8675 x 10^24 kg` for Reported Venus mass.'
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Jupiter
+    canonical_name: Venus
     ingest_source: dataset/raw/curated/mass.json
     source_trace:
       method: direct
-      original_value_text: '1.898e+27'
-      source_url: https://en.wikipedia.org/wiki/Jupiter
-  source: https://en.wikipedia.org/wiki/Jupiter
+      original_value_text: '4.8675e+24'
+      source_basis: Reported Venus mass.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Venus
+      source_value_text: 4.8675 x 10^24 kg
+  source: https://en.wikipedia.org/wiki/Venus
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-jupiter
-    url: https://en.wikipedia.org/wiki/Jupiter
-    title: Jupiter
+  - id: src:https-en-wikipedia-org-wiki-venus
+    url: https://en.wikipedia.org/wiki/Venus
+    title: Venus
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1060,10 +1158,244 @@ items:
     source_type: local_file
     role: curation_manifest
     note: null
-  wikidata_qid: Q319
+  wikidata_qid: null
   value_type: measured
   qualifiers:
     measurement: planetary mass
+- id: obs:mass:entity-uranus
+  name: Uranus
+  value: 8.681e+25
+  description: 'Mass of Uranus. Here the quantity refers to `planetary mass`. Source-side figure: `8.681 x 10^25 kg` for Reported Uranus mass.'
+  description_format: markdown
+  summary_short: Mass of Uranus.
+  description_medium: 'Mass of Uranus. Here the quantity refers to `planetary mass`. Source-side figure: `8.681 x 10^25 kg` for Reported Uranus mass.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Uranus
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      method: direct
+      original_value_text: '8.681e+25'
+      source_basis: Reported Uranus mass.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Uranus
+      source_value_text: 8.681 x 10^25 kg
+  source: https://en.wikipedia.org/wiki/Uranus
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-uranus
+    url: https://en.wikipedia.org/wiki/Uranus
+    title: Uranus
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: planetary mass
+- id: obs:mass:entity-neptune
+  name: Neptune
+  value: 1.024e+26
+  description: 'Mass of Neptune. Here the quantity refers to `planetary mass`. Source-side figure: `1.024 x 10^26 kg` for Reported Neptune mass.'
+  description_format: markdown
+  summary_short: Mass of Neptune.
+  description_medium: 'Mass of Neptune. Here the quantity refers to `planetary mass`. Source-side figure: `1.024 x 10^26 kg` for Reported Neptune mass.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Neptune
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      method: direct
+      original_value_text: '1.024e+26'
+      source_basis: Reported Neptune mass.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Neptune
+      source_value_text: 1.024 x 10^26 kg
+  source: https://en.wikipedia.org/wiki/Neptune
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-neptune
+    url: https://en.wikipedia.org/wiki/Neptune
+    title: Neptune
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: planetary mass
+- id: obs:mass:entity-saturn
+  name: Saturn
+  value: 5.683e+26
+  description: 'Mass of Saturn. Here the quantity refers to `planetary mass`. Source-side figure: `5.683 x 10^26 kg` for Reported Saturn mass.'
+  description_format: markdown
+  summary_short: Mass of Saturn.
+  description_medium: 'Mass of Saturn. Here the quantity refers to `planetary mass`. Source-side figure: `5.683 x 10^26 kg` for Reported Saturn mass.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Saturn
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      method: direct
+      original_value_text: '5.683e+26'
+      source_basis: Reported Saturn mass.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Saturn
+      source_value_text: 5.683 x 10^26 kg
+  source: https://en.wikipedia.org/wiki/Saturn
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-saturn
+    url: https://en.wikipedia.org/wiki/Saturn
+    title: Saturn
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: planetary mass
+- id: obs:mass:entity-brown-dwarf-deuterium-limit
+  name: Brown dwarf at the deuterium limit
+  value: 2.4674e+28
+  description: 'A representative lower-bound brown dwarf mass near the deuterium-burning limit. Derived using `13 jupiter_masses converted to kilograms`. Here the quantity refers to `threshold brown-dwarf mass`. Source-side figure: `13 Jupiter masses` for Brown dwarfs are commonly defined above about 13 Jupiter masses. Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.'
+  description_format: markdown
+  summary_short: A representative lower-bound brown dwarf mass near the deuterium-burning limit.
+  description_medium: 'A representative lower-bound brown dwarf mass near the deuterium-burning limit. Derived using `13 jupiter_masses converted to kilograms`. Here the quantity refers to `threshold brown-dwarf mass`. Source-side figure: `13 Jupiter masses` for Brown dwarfs are commonly defined above about 13 Jupiter masses. Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Brown dwarf at the deuterium limit
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      conversion_note: Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.
+      derivation_note: 13 jupiter_masses converted to kilograms
+      method: derived
+      original_value_text: '2.4674e+28'
+      source_basis: Brown dwarfs are commonly defined above about 13 Jupiter masses.
+      source_unit: M_jup
+      source_url: https://en.wikipedia.org/wiki/Brown_dwarf
+      source_value_text: 13 Jupiter masses
+  source: https://en.wikipedia.org/wiki/Brown_dwarf
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brown-dwarf
+    url: https://en.wikipedia.org/wiki/Brown_dwarf
+    title: Brown dwarf
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 13 jupiter_masses converted to kilograms
+    measurement: threshold brown-dwarf mass
+- id: obs:mass:entity-trappist-1
+  name: TRAPPIST-1
+  value: 1.77021e+29
+  description: 'Mass of the ultracool red dwarf star TRAPPIST-1. Here the quantity refers to `stellar mass`. Source-side figure: `0.089 solar masses` for Reported TRAPPIST-1 stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_format: markdown
+  summary_short: Mass of the ultracool red dwarf star TRAPPIST-1.
+  description_medium: 'Mass of the ultracool red dwarf star TRAPPIST-1. Here the quantity refers to `stellar mass`. Source-side figure: `0.089 solar masses` for Reported TRAPPIST-1 stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: TRAPPIST-1
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      conversion_note: Converted solar masses to kilograms using the canonical solar-mass constant.
+      method: converted
+      original_value_text: '1.77021e+29'
+      source_basis: Reported TRAPPIST-1 stellar mass.
+      source_unit: M_sun
+      source_url: https://en.wikipedia.org/wiki/TRAPPIST-1
+      source_value_text: 0.089 solar masses
+  source: https://en.wikipedia.org/wiki/TRAPPIST-1
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-trappist-1
+    url: https://en.wikipedia.org/wiki/TRAPPIST-1
+    title: TRAPPIST-1
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: stellar mass
 - id: obs:mass:entity-sun
   name: Sun
   value: 1.989e+30
@@ -1107,13 +1439,60 @@ items:
   value_type: measured
   qualifiers:
     measurement: stellar mass
+- id: obs:mass:entity-sirius-a
+  name: Sirius A
+  value: 4.103307e+30
+  description: 'Mass of the A-type main-sequence star Sirius A. Here the quantity refers to `stellar mass`. Source-side figure: `2.063 solar masses` for Reported Sirius A stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_format: markdown
+  summary_short: Mass of the A-type main-sequence star Sirius A.
+  description_medium: 'Mass of the A-type main-sequence star Sirius A. Here the quantity refers to `stellar mass`. Source-side figure: `2.063 solar masses` for Reported Sirius A stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sirius A
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      conversion_note: Converted solar masses to kilograms using the canonical solar-mass constant.
+      method: converted
+      original_value_text: '4.103307e+30'
+      source_basis: Reported Sirius A stellar mass.
+      source_unit: M_sun
+      source_url: https://en.wikipedia.org/wiki/Sirius
+      source_value_text: 2.063 solar masses
+  source: https://en.wikipedia.org/wiki/Sirius
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sirius
+    url: https://en.wikipedia.org/wiki/Sirius
+    title: Sirius
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: stellar mass
 - id: obs:mass:entity-cygnus-x-1
   name: Cygnus X-1 black hole
   value: 2.94372e+31
-  description: Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`.
+  description: 'Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`. Source-side figure: `14.8 solar masses` for NASA states the black hole has about 14.8 times the mass of the Sun. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_format: markdown
   summary_short: Estimated mass of the Cygnus X-1 stellar-mass black hole.
-  description_medium: Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`.
+  description_medium: 'Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`. Source-side figure: `14.8 solar masses` for NASA states the black hole has about 14.8 times the mass of the Sun. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_long: null
   hook: null
   caveats: null
@@ -1154,13 +1533,60 @@ items:
   value_type: measured
   qualifiers:
     measurement: black hole mass
+- id: obs:mass:entity-betelgeuse
+  name: Betelgeuse
+  value: 3.28185e+31
+  description: 'Representative mass estimate for the red supergiant Betelgeuse. Here the quantity refers to `stellar mass`. Source-side figure: `16.5 solar masses` for Reported Betelgeuse mass estimate. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_format: markdown
+  summary_short: Representative mass estimate for the red supergiant Betelgeuse.
+  description_medium: 'Representative mass estimate for the red supergiant Betelgeuse. Here the quantity refers to `stellar mass`. Source-side figure: `16.5 solar masses` for Reported Betelgeuse mass estimate. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Betelgeuse
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      conversion_note: Converted solar masses to kilograms using the canonical solar-mass constant.
+      method: converted
+      original_value_text: '3.28185e+31'
+      source_basis: Reported Betelgeuse mass estimate.
+      source_unit: M_sun
+      source_url: https://en.wikipedia.org/wiki/Betelgeuse
+      source_value_text: 16.5 solar masses
+  source: https://en.wikipedia.org/wiki/Betelgeuse
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-betelgeuse
+    url: https://en.wikipedia.org/wiki/Betelgeuse
+    title: Betelgeuse
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: stellar mass
 - id: obs:mass:entity-r136a1
   name: R136a1
   value: 5.27085e+32
-  description: Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`.
+  description: 'Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`. Source-side figure: `265 solar masses` for ESO describes R136a1 as having a current mass of about 265 Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_format: markdown
   summary_short: Current mass of the extreme star R136a1 in the Tarantula Nebula.
-  description_medium: Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`.
+  description_medium: 'Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`. Source-side figure: `265 solar masses` for ESO describes R136a1 as having a current mass of about 265 Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_long: null
   hook: null
   caveats: null
@@ -1204,10 +1630,10 @@ items:
 - id: obs:mass:entity-r136-cluster
   name: R136 star cluster
   value: 9.945e+34
-  description: Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`.
+  description: 'Approximate stellar mass of the R136 cluster, using ESO''s note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`. Source-side figure: `50,000 stars` for Derived from ESO''s description that the cluster packs tens of thousands of stars into the region.'
   description_format: markdown
   summary_short: Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.
-  description_medium: Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`.
+  description_medium: 'Approximate stellar mass of the R136 cluster, using ESO''s note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`. Source-side figure: `50,000 stars` for Derived from ESO''s description that the cluster packs tens of thousands of stars into the region.'
   description_long: null
   hook: null
   caveats: null
@@ -1253,10 +1679,10 @@ items:
 - id: obs:mass:entity-messier-14
   name: Messier 14
   value: 2.9835e+35
-  description: Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`.
+  description: 'Approximate stellar mass implied by NASA''s statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`. Source-side figure: `150,000 stars` for Derived from NASA''s statement that Messier 14 is home to over 150,000 stars.'
   description_format: markdown
   summary_short: Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.
-  description_medium: Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`.
+  description_medium: 'Approximate stellar mass implied by NASA''s statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`. Source-side figure: `150,000 stars` for Derived from NASA''s statement that Messier 14 is home to over 150,000 stars.'
   description_long: null
   hook: null
   caveats: null
@@ -1302,10 +1728,10 @@ items:
 - id: obs:mass:entity-sagittarius-a-star
   name: Sagittarius A*
   value: 7.956e+36
-  description: Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`.
+  description: 'Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `4 million solar masses` for NASA states Sagittarius A* contains about 4 million solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_format: markdown
   summary_short: Mass of the supermassive black hole at the center of the Milky Way.
-  description_medium: Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`.
+  description_medium: 'Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `4 million solar masses` for NASA states Sagittarius A* contains about 4 million solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_long: null
   hook: null
   caveats: null
@@ -1349,10 +1775,10 @@ items:
 - id: obs:mass:entity-omega-centauri
   name: Omega Centauri
   value: 9.945e+36
-  description: Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`.
+  description: 'Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`. Source-side figure: `5 million solar masses` for ESO reports a total cluster mass of about five million Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_format: markdown
   summary_short: Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way.
-  description_medium: Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`.
+  description_medium: 'Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`. Source-side figure: `5 million solar masses` for ESO reports a total cluster mass of about five million Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_long: null
   hook: null
   caveats: null
@@ -1396,10 +1822,10 @@ items:
 - id: obs:mass:entity-m60-ucd1
   name: M60-UCD1
   value: 2.7846e+38
-  description: Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`.
+  description: 'Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA''s count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`. Source-side figure: `140 million stars` for Derived from NASA''s statement that M60-UCD1 contains 140 million stars.'
   description_format: markdown
   summary_short: Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars.
-  description_medium: Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`.
+  description_medium: 'Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA''s count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`. Source-side figure: `140 million stars` for Derived from NASA''s statement that M60-UCD1 contains 140 million stars.'
   description_long: null
   hook: null
   caveats: null
@@ -1445,10 +1871,10 @@ items:
 - id: obs:mass:entity-ngc-5474
   name: NGC 5474
   value: 9.945e+39
-  description: Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`.
+  description: 'Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA''s description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`. Source-side figure: `5 billion stars` for Derived from NASA''s description that NGC 5474 contains several billion stars.'
   description_format: markdown
   summary_short: Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.
-  description_medium: Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`.
+  description_medium: 'Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA''s description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`. Source-side figure: `5 billion stars` for Derived from NASA''s description that NGC 5474 contains several billion stars.'
   description_long: null
   hook: null
   caveats: null
@@ -1494,10 +1920,10 @@ items:
 - id: obs:mass:entity-m87-star
   name: M87*
   value: 1.29285e+40
-  description: Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`.
+  description: 'Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `6.5 billion solar masses` for NASA reports that M87* contains 6.5 billion solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_format: markdown
   summary_short: Mass of the supermassive black hole at the center of Messier 87.
-  description_medium: Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`.
+  description_medium: 'Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `6.5 billion solar masses` for NASA reports that M87* contains 6.5 billion solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
   description_long: null
   hook: null
   caveats: null
@@ -1538,13 +1964,160 @@ items:
   value_type: measured
   qualifiers:
     measurement: supermassive black hole mass
+- id: obs:mass:entity-large-magellanic-cloud
+  name: Large Magellanic Cloud
+  value: 1.989e+40
+  description: 'Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `10 billion stars at about one solar mass each`. Source-side figure: `10 billion stars` for Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.'
+  description_format: markdown
+  summary_short: Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.
+  description_medium: 'Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `10 billion stars at about one solar mass each`. Source-side figure: `10 billion stars` for Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Large Magellanic Cloud
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      derivation_note: Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.
+      method: derived
+      original_value_text: '1.989e+40'
+      source_basis: Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.
+      source_unit: stars
+      source_url: https://en.wikipedia.org/wiki/Large_Magellanic_Cloud
+      source_value_text: 10 billion stars
+  source: https://en.wikipedia.org/wiki/Large_Magellanic_Cloud
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-large-magellanic-cloud
+    url: https://en.wikipedia.org/wiki/Large_Magellanic_Cloud
+    title: Large Magellanic Cloud
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 10 billion stars at about one solar mass each
+    derivation: star_count * solar_mass
+    measurement: stellar mass proxy from star count
+- id: obs:mass:entity-triangulum-galaxy
+  name: Triangulum Galaxy
+  value: 7.956e+40
+  description: 'Approximate stellar mass of the Triangulum Galaxy using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `40 billion stars at about one solar mass each`. Source-side figure: `40 billion stars` for Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.'
+  description_format: markdown
+  summary_short: Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.
+  description_medium: 'Approximate stellar mass of the Triangulum Galaxy using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `40 billion stars at about one solar mass each`. Source-side figure: `40 billion stars` for Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Triangulum Galaxy
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      derivation_note: Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.
+      method: derived
+      original_value_text: '7.956e+40'
+      source_basis: Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.
+      source_unit: stars
+      source_url: https://en.wikipedia.org/wiki/Triangulum_Galaxy
+      source_value_text: 40 billion stars
+  source: https://en.wikipedia.org/wiki/Triangulum_Galaxy
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-triangulum-galaxy
+    url: https://en.wikipedia.org/wiki/Triangulum_Galaxy
+    title: Triangulum Galaxy
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 40 billion stars at about one solar mass each
+    derivation: star_count * solar_mass
+    measurement: stellar mass proxy from star count
+- id: obs:mass:entity-whirlpool-galaxy
+  name: Whirlpool Galaxy
+  value: 1.989e+41
+  description: 'Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `100 billion stars at about one solar mass each`. Source-side figure: `100 billion stars` for Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.'
+  description_format: markdown
+  summary_short: Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.
+  description_medium: 'Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `100 billion stars at about one solar mass each`. Source-side figure: `100 billion stars` for Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Whirlpool Galaxy
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      derivation_note: Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.
+      method: derived
+      original_value_text: '1.989e+41'
+      source_basis: Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.
+      source_unit: stars
+      source_url: https://en.wikipedia.org/wiki/Whirlpool_Galaxy
+      source_value_text: 100 billion stars
+  source: https://en.wikipedia.org/wiki/Whirlpool_Galaxy
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-whirlpool-galaxy
+    url: https://en.wikipedia.org/wiki/Whirlpool_Galaxy
+    title: Whirlpool Galaxy
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 100 billion stars at about one solar mass each
+    derivation: star_count * solar_mass
+    measurement: stellar mass proxy from star count
 - id: obs:mass:entity-m60
   name: M60
   value: 7.956e+41
-  description: Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`.
+  description: 'Approximate stellar mass of the giant elliptical galaxy M60, using NASA''s estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`. Source-side figure: `400 billion stars` for Derived from NASA''s estimate that M60 contains 400 billion stars.'
   description_format: markdown
   summary_short: Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.
-  description_medium: Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`.
+  description_medium: 'Approximate stellar mass of the giant elliptical galaxy M60, using NASA''s estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`. Source-side figure: `400 billion stars` for Derived from NASA''s estimate that M60 contains 400 billion stars.'
   description_long: null
   hook: null
   caveats: null
@@ -1590,10 +2163,10 @@ items:
 - id: obs:mass:entity-andromeda
   name: Andromeda galaxy
   value: 1.989e+42
-  description: Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`.
+  description: 'Approximate stellar mass implied by NASA''s estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`. Source-side figure: `1 trillion stars` for Derived from NASA''s estimate that Andromeda contains over one trillion stars.'
   description_format: markdown
   summary_short: Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars.
-  description_medium: Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`.
+  description_medium: 'Approximate stellar mass implied by NASA''s estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`. Source-side figure: `1 trillion stars` for Derived from NASA''s estimate that Andromeda contains over one trillion stars.'
   description_long: null
   hook: null
   caveats: null
