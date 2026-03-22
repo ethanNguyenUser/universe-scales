@@ -21,6 +21,7 @@ CONTENT_DIR = RAW_DIR / "content"
 class RawCatalog:
     flagship_dimensions: list[dict[str, Any]]
     dimension_catalog: dict[str, dict[str, Any]]
+    dimension_profiles: dict[str, dict[str, Any]]
     legacy_overrides: dict[str, dict[str, Any]]
     wikidata_subjects: dict[str, dict[str, Any]]
     curated_observations: list[dict[str, Any]]
@@ -84,6 +85,7 @@ def _load_content_overrides() -> list[dict[str, Any]]:
 def load_raw_catalog() -> RawCatalog:
     flagship_dimensions = _load_json(CONFIG_DIR / "flagship_dimensions.json", [])
     dimension_catalog = _load_json(CONFIG_DIR / "dimensions.json", {})
+    dimension_profiles = _load_json(CONFIG_DIR / "dimension_profiles.json", {})
     legacy_overrides = _load_json(CONFIG_DIR / "legacy_overrides.json", {})
     wikidata_subjects = _load_json(CONFIG_DIR / "wikidata_subjects.json", {})
     curated_observations = _load_curated_observations()
@@ -91,6 +93,7 @@ def load_raw_catalog() -> RawCatalog:
     return RawCatalog(
         flagship_dimensions=flagship_dimensions,
         dimension_catalog=dimension_catalog,
+        dimension_profiles=dimension_profiles,
         legacy_overrides=legacy_overrides,
         wikidata_subjects=wikidata_subjects,
         curated_observations=curated_observations,

@@ -1696,6 +1696,58 @@ select:focus {
     color: var(--text-secondary);
     margin-bottom: 0.75rem;
     font-size: 0.9rem;
+    max-height: min(40vh, 24rem);
+    overflow-y: auto;
+    padding-right: 0.35rem;
+    line-height: 1.45;
+}
+
+.tooltip-description h1,
+.tooltip-description h2,
+.tooltip-description h3 {
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin: 0.75rem 0 0.35rem;
+}
+
+.tooltip-description h1 {
+    font-size: 1rem;
+}
+
+.tooltip-description h2 {
+    font-size: 0.95rem;
+}
+
+.tooltip-description h3 {
+    font-size: 0.9rem;
+}
+
+.tooltip-description p,
+.tooltip-description ul,
+.tooltip-description ol {
+    margin: 0 0 0.6rem;
+}
+
+.tooltip-description ul,
+.tooltip-description ol {
+    padding-left: 1.1rem;
+}
+
+.tooltip-description code {
+    background: rgba(0, 123, 255, 0.08);
+    border-radius: 4px;
+    padding: 0.05rem 0.3rem;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.85em;
+}
+
+.tooltip-description::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tooltip-description::-webkit-scrollbar-thumb {
+    background: rgba(108, 117, 125, 0.45);
+    border-radius: 999px;
 }
 
 .tooltip-source {

@@ -1,0 +1,829 @@
+dimension: brightness
+base_unit: candela_per_square_meter
+dimension_description: Brightness here refers to luminance, the light leaving or reflected by a surface per unit area in a given direction. It connects what your eye perceives on a screen or page to the photometric power behind it. Unlike illuminance on a desk, luminance belongs to the surface itself under stated conditions. Each item below specifies the scene and viewing context so the number has a clear meaning.
+related_resources: []
+show_limitations: true
+units:
+- conversion_factor: 1
+  description: Candela per square meter is the SI unit of luminance, linking photometric intensity to emitting area. It matches how displays and light boxes are specified. Using this base unit keeps comparisons between screens, walls, and skies consistent. All item values are recorded in this unit before conversion.
+  name: candela per square meter
+  symbol: cd/m2
+- conversion_factor: 3.14159
+  description: Lux measures illuminance on a surface and relates to luminance by a factor near pi for a perfectly diffusing surface. In practice the mapping depends on reflectance and geometry, so treat converted values as scene dependent. Lux is convenient for workplace and architectural standards. The factor shown provides a common reference for diffuse assumptions.
+  name: lux
+  symbol: lx
+- conversion_factor: 0.092903
+  description: Foot candles are illuminance in the imperial system, equal to lumens per square foot. Historical lighting tables use this unit, especially in North America. Conversions follow from the square foot to square meter area ratio. The factor here aligns with the diffuse relation used for lux.
+  name: foot-candles
+  symbol: fc
+- name: nits
+  symbol: nt
+  conversion_factor: 1.0
+  description: Nits are equivalent to candela per square meter and common for displays.
+required_min_items: 24
+preferred_target_items: 24
+preferred_max_items: 24
+selection_bin_count: 24
+description_format: markdown
+frontend_group: fields
+frontend_group_label: Fields, Waves & Radiation
+frontend_order: 150
+items:
+- id: obs:brightness:scenario-brightness-deep-space
+  name: Deep Space
+  value: 1.0e-10
+  description: Deep intergalactic space away from stars and dust is functionally dark, with only stray photons from the cosmic background. The luminance is near zero for human perception even after dark adaptation. Instruments still register faint glows from zodiacal light and unresolved galaxies. This number expresses the ideal empty field reference for contrast.
+  description_format: markdown
+  summary_short: Deep intergalactic space away from stars and dust is functionally dark, with only stray photons from the cosmic background.
+  description_medium: Deep intergalactic space away from stars and dust is functionally dark, with only stray photons from the cosmic background. The luminance is near zero for human perception even after dark adaptation. Instruments still register faint glows from zodiacal light and unresolved galaxies. This number expresses the ideal empty field reference for contrast.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Deep Space
+  source: https://en.wikipedia.org/wiki/Outer_space
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-outer-space
+    url: https://en.wikipedia.org/wiki/Outer_space
+    title: Outer space
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-moonless-night
+  name: Moonless Night
+  value: 0.0001
+  description: A moonless rural night sky under clear air provides this approximate surface luminance to the ground as seen by a dark adapted eye. It is dominated by starlight and airglow rather than artificial sources. Photographers call it a long exposure regime where noise matters. The value is a practical baseline for night vision performance.
+  description_format: markdown
+  summary_short: A moonless rural night sky under clear air provides this approximate surface luminance to the ground as seen by a dark adapted eye.
+  description_medium: A moonless rural night sky under clear air provides this approximate surface luminance to the ground as seen by a dark adapted eye. It is dominated by starlight and airglow rather than artificial sources. Photographers call it a long exposure regime where noise matters. The value is a practical baseline for night vision performance.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Moonless Night
+  source: https://en.wikipedia.org/wiki/Night
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-night
+    url: https://en.wikipedia.org/wiki/Night
+    title: Night
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-full-moon
+  name: Full Moon
+  value: 0.25
+  description: Landscapes lit by a full moon at high altitude reflect enough light to reach this luminance when viewed directly. Snow and pale rock can run higher because of albedo. For reading outdoors some people find it barely sufficient at peak lunar elevation. The number assumes clear skies and a bright moon near opposition.
+  description_format: markdown
+  summary_short: Landscapes lit by a full moon at high altitude reflect enough light to reach this luminance when viewed directly.
+  description_medium: Landscapes lit by a full moon at high altitude reflect enough light to reach this luminance when viewed directly. Snow and pale rock can run higher because of albedo. For reading outdoors some people find it barely sufficient at peak lunar elevation. The number assumes clear skies and a bright moon near opposition.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Full Moon
+  source: https://en.wikipedia.org/wiki/Moon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-moon
+    url: https://en.wikipedia.org/wiki/Moon
+    title: Moon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-candle
+  name: Candle
+  value: 1.0
+  description: A candle flame near the wick presents this luminance when viewed from a short distance along the bright axis. The value varies with wax composition and airflow, which is why candles flicker. Artists learned to stage scenes with this small source for mood long before meters existed. The number ties ambiance to measurable output.
+  description_format: markdown
+  summary_short: A candle flame near the wick presents this luminance when viewed from a short distance along the bright axis.
+  description_medium: A candle flame near the wick presents this luminance when viewed from a short distance along the bright axis. The value varies with wax composition and airflow, which is why candles flicker. Artists learned to stage scenes with this small source for mood long before meters existed. The number ties ambiance to measurable output.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Candle
+  source: https://en.wikipedia.org/wiki/Candle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-candle
+    url: https://en.wikipedia.org/wiki/Candle
+    title: Candle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-city-street-twilight
+  name: City Street Twilight
+  value: 10.0
+  description: Civil twilight on a city street with modest lamppost spacing often leaves building facades near this luminance. Human eyes still color render well but shadows deepen. Photographers consider it a handheld borderline without stabilization. The number captures the feel of evening errands.
+  description_format: markdown
+  summary_short: Civil twilight on a city street with modest lamppost spacing often leaves building facades near this luminance.
+  description_medium: Civil twilight on a city street with modest lamppost spacing often leaves building facades near this luminance. Human eyes still color render well but shadows deepen. Photographers consider it a handheld borderline without stabilization. The number captures the feel of evening errands.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: City Street Twilight
+  source: https://en.wikipedia.org/wiki/Twilight
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-twilight
+    url: https://en.wikipedia.org/wiki/Twilight
+    title: Twilight
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-movie-screen
+  name: Movie Screen
+  value: 50.0
+  description: A calibrated cinema projection screen in a dark theater operates near this luminance to preserve contrast and comfort. Going brighter would wash out blacks in large rooms. The standard aims to match human adaptation in that environment. The value underpins projector and screen design.
+  description_format: markdown
+  summary_short: A calibrated cinema projection screen in a dark theater operates near this luminance to preserve contrast and comfort.
+  description_medium: A calibrated cinema projection screen in a dark theater operates near this luminance to preserve contrast and comfort. Going brighter would wash out blacks in large rooms. The standard aims to match human adaptation in that environment. The value underpins projector and screen design.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Movie Screen
+  source: https://en.wikipedia.org/wiki/Movie_theater
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-movie-theater
+    url: https://en.wikipedia.org/wiki/Movie_theater
+    title: Movie theater
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-room-lighting
+  name: Room Lighting
+  value: 100.0
+  description: Typical evening room lighting on walls and book pages yields this luminance when using warm bulbs and shaded fixtures. Eyes adapt within minutes to make print comfortable at this level. Screens at matching brightness reduce strain compared with much higher settings. The value presumes matte surfaces to avoid specular glare.
+  description_format: markdown
+  summary_short: Typical evening room lighting on walls and book pages yields this luminance when using warm bulbs and shaded fixtures.
+  description_medium: Typical evening room lighting on walls and book pages yields this luminance when using warm bulbs and shaded fixtures. Eyes adapt within minutes to make print comfortable at this level. Screens at matching brightness reduce strain compared with much higher settings. The value presumes matte surfaces to avoid specular glare.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Room Lighting
+  source: https://en.wikipedia.org/wiki/Lighting
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lighting
+    url: https://en.wikipedia.org/wiki/Lighting
+    title: Lighting
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-paper-by-window
+  name: Paper by Window
+  value: 200.0
+  description: A white sheet of paper near a window on a cloudy morning reflects to this luminance and makes for pleasant reading. Graphic designers proof prints against such conditions to judge tone. The value is a simple domestic check for comfortable lighting. It is also a good target for home offices.
+  description_format: markdown
+  summary_short: A white sheet of paper near a window on a cloudy morning reflects to this luminance and makes for pleasant reading.
+  description_medium: A white sheet of paper near a window on a cloudy morning reflects to this luminance and makes for pleasant reading. Graphic designers proof prints against such conditions to judge tone. The value is a simple domestic check for comfortable lighting. It is also a good target for home offices.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Paper by Window
+  source: https://en.wikipedia.org/wiki/Reading
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-reading
+    url: https://en.wikipedia.org/wiki/Reading
+    title: Reading
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-led-screen
+  name: LED Screen
+  value: 300.0
+  description: A calibrated LCD or OLED screen for comfortable indoor reading is near this luminance when set to a neutral profile. Raising it further helps outdoors but wastes battery inside. Color grading suites fix this level to keep perception consistent across rooms. The number ties display practice to visual science.
+  description_format: markdown
+  summary_short: A calibrated LCD or OLED screen for comfortable indoor reading is near this luminance when set to a neutral profile.
+  description_medium: A calibrated LCD or OLED screen for comfortable indoor reading is near this luminance when set to a neutral profile. Raising it further helps outdoors but wastes battery inside. Color grading suites fix this level to keep perception consistent across rooms. The number ties display practice to visual science.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: LED Screen
+  source: https://en.wikipedia.org/wiki/LED_display
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-led-display
+    url: https://en.wikipedia.org/wiki/LED_display
+    title: LED display
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-office-lighting
+  name: Office Lighting
+  value: 500.0
+  description: Modern offices target this luminance on task surfaces to balance alertness with comfort for long work periods. The level supports fine handwriting and screen use without harsh reflections. Designers achieve it with a mix of overhead panels and indirect lamps. The number reflects both standards and accumulated workplace experience.
+  description_format: markdown
+  summary_short: Modern offices target this luminance on task surfaces to balance alertness with comfort for long work periods.
+  description_medium: Modern offices target this luminance on task surfaces to balance alertness with comfort for long work periods. The level supports fine handwriting and screen use without harsh reflections. Designers achieve it with a mix of overhead panels and indirect lamps. The number reflects both standards and accumulated workplace experience.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Office Lighting
+  source: https://en.wikipedia.org/wiki/Office
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-office
+    url: https://en.wikipedia.org/wiki/Office
+    title: Office
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-fluorescent-light
+  name: Fluorescent Light
+  value: 1000.0
+  description: A ceiling mounted fluorescent panel behind a diffuser produces about this luminance on its emitting surface. The light is even and cost effective, which is why schools and labs used it for decades. Spectrum and flicker now matter more than the raw number for comfort. The figure provides a benchmark when retrofitting to LED.
+  description_format: markdown
+  summary_short: A ceiling mounted fluorescent panel behind a diffuser produces about this luminance on its emitting surface.
+  description_medium: A ceiling mounted fluorescent panel behind a diffuser produces about this luminance on its emitting surface. The light is even and cost effective, which is why schools and labs used it for decades. Spectrum and flicker now matter more than the raw number for comfort. The figure provides a benchmark when retrofitting to LED.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Fluorescent Light
+  source: https://en.wikipedia.org/wiki/Fluorescent_lamp
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-fluorescent-lamp
+    url: https://en.wikipedia.org/wiki/Fluorescent_lamp
+    title: Fluorescent lamp
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-overcast-day
+  name: Overcast Day
+  value: 1000.0
+  description: An overcast sky acts like a giant diffuser, making outdoor surfaces roughly uniform at this luminance. Photographers appreciate the soft shadows and gentle skin tones it brings. The level is bright to the eye but tame for cameras compared with direct sun. The value assumes midday and thick cloud cover.
+  description_format: markdown
+  summary_short: An overcast sky acts like a giant diffuser, making outdoor surfaces roughly uniform at this luminance.
+  description_medium: An overcast sky acts like a giant diffuser, making outdoor surfaces roughly uniform at this luminance. Photographers appreciate the soft shadows and gentle skin tones it brings. The level is bright to the eye but tame for cameras compared with direct sun. The value assumes midday and thick cloud cover.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Overcast Day
+  source: https://en.wikipedia.org/wiki/Overcast
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-overcast
+    url: https://en.wikipedia.org/wiki/Overcast
+    title: Overcast
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-smartphone-max-boost
+  name: Smartphone Max Boost
+  value: 1200.0
+  description: Smartphone screens at maximum boost for outdoor readability can reach this luminance for short periods. Thermal throttling often reduces it to protect the panel. In bright sun this margin makes the difference between usable and squint. The number explains marketing claims about nits.
+  description_format: markdown
+  summary_short: Smartphone screens at maximum boost for outdoor readability can reach this luminance for short periods.
+  description_medium: Smartphone screens at maximum boost for outdoor readability can reach this luminance for short periods. Thermal throttling often reduces it to protect the panel. In bright sun this margin makes the difference between usable and squint. The number explains marketing claims about nits.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Smartphone Max Boost
+  source: https://en.wikipedia.org/wiki/Display_brightness
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-display-brightness
+    url: https://en.wikipedia.org/wiki/Display_brightness
+    title: Display brightness
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-operating-room-field
+  name: Operating Room Field
+  value: 60000.0
+  description: Surgical task lighting focuses high luminance onto a small field to reveal low contrast features in tissue. Heat management and color fidelity matter as much as the raw value. Teams balance glare against visibility under long procedures. The figure is representative for modern LED operating lamps.
+  description_format: markdown
+  summary_short: Surgical task lighting focuses high luminance onto a small field to reveal low contrast features in tissue.
+  description_medium: Surgical task lighting focuses high luminance onto a small field to reveal low contrast features in tissue. Heat management and color fidelity matter as much as the raw value. Teams balance glare against visibility under long procedures. The figure is representative for modern LED operating lamps.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Operating Room Field
+  source: https://en.wikipedia.org/wiki/Surgical_light
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-surgical-light
+    url: https://en.wikipedia.org/wiki/Surgical_light
+    title: Surgical light
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-sunny-day
+  name: Sunny Day
+  value: 100000.0
+  description: Under direct midday sun, many natural surfaces reach this luminance or more, especially pale stone and sand. Shadows are hard edged and contrast is high which can exceed camera dynamic range. Human pupils constrict and sunglasses become useful. The number marks a typical clear summer noon on land.
+  description_format: markdown
+  summary_short: Under direct midday sun, many natural surfaces reach this luminance or more, especially pale stone and sand.
+  description_medium: Under direct midday sun, many natural surfaces reach this luminance or more, especially pale stone and sand. Shadows are hard edged and contrast is high which can exceed camera dynamic range. Human pupils constrict and sunglasses become useful. The number marks a typical clear summer noon on land.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Sunny Day
+  source: https://en.wikipedia.org/wiki/Sunlight
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sunlight
+    url: https://en.wikipedia.org/wiki/Sunlight
+    title: Sunlight
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-snow-reflection
+  name: Snow Reflection
+  value: 150000.0
+  description: Fresh snow in direct sun reflects so efficiently that luminance climbs to this level, causing glare and risk of snow blindness. Ski goggles and high albedo roofs are designed with these values in mind. Photovoltaic panels nearby can harvest substantial power because the field is bright and wide. The number assumes clean snow and clear air.
+  description_format: markdown
+  summary_short: Fresh snow in direct sun reflects so efficiently that luminance climbs to this level, causing glare and risk of snow blindness.
+  description_medium: Fresh snow in direct sun reflects so efficiently that luminance climbs to this level, causing glare and risk of snow blindness. Ski goggles and high albedo roofs are designed with these values in mind. Photovoltaic panels nearby can harvest substantial power because the field is bright and wide. The number assumes clean snow and clear air.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Snow Reflection
+  source: https://en.wikipedia.org/wiki/Snow
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-snow
+    url: https://en.wikipedia.org/wiki/Snow
+    title: Snow
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-arc-welding
+  name: Arc Welding
+  value: 1000000.0
+  description: An active arc welding pool radiates intensely with luminance near this value at the brightest spot. It emits ultraviolet that can damage eyes and skin in seconds. Helmets and curtains attenuate both brightness and spectrum to safe levels. The number conveys why brief glances feel painful.
+  description_format: markdown
+  summary_short: An active arc welding pool radiates intensely with luminance near this value at the brightest spot.
+  description_medium: An active arc welding pool radiates intensely with luminance near this value at the brightest spot. It emits ultraviolet that can damage eyes and skin in seconds. Helmets and curtains attenuate both brightness and spectrum to safe levels. The number conveys why brief glances feel painful.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Arc Welding
+  source: https://en.wikipedia.org/wiki/Arc_welding
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-arc-welding
+    url: https://en.wikipedia.org/wiki/Arc_welding
+    title: Arc welding
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-sirius
+  name: Sirius
+  value: 100000000.0
+  description: The apparent luminance of Sirius as a disk is a modeling construct since the star is unresolved to the eye. As seen through a telescope with finite aperture, diffraction spreads the light into an Airy pattern. The central peak behaves as if it had an extremely high surface luminance. This number expresses that conceptual peak for comparison only.
+  description_format: markdown
+  summary_short: The apparent luminance of Sirius as a disk is a modeling construct since the star is unresolved to the eye.
+  description_medium: The apparent luminance of Sirius as a disk is a modeling construct since the star is unresolved to the eye. As seen through a telescope with finite aperture, diffraction spreads the light into an Airy pattern. The central peak behaves as if it had an extremely high surface luminance. This number expresses that conceptual peak for comparison only.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Sirius
+  source: https://en.wikipedia.org/wiki/Sirius
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sirius
+    url: https://en.wikipedia.org/wiki/Sirius
+    title: Sirius
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-sun
+  name: Sun
+  value: 1600000000.0
+  description: The solar photosphere has an effective surface luminance of this order across visible wavelengths. It sets the reference for daylight vision and the upper bound of common sensors. Atmospheric scattering and eye safety make direct viewing unwise. The number is a standard astrophysical parameter for the Sun.
+  description_format: markdown
+  summary_short: The solar photosphere has an effective surface luminance of this order across visible wavelengths.
+  description_medium: The solar photosphere has an effective surface luminance of this order across visible wavelengths. It sets the reference for daylight vision and the upper bound of common sensors. Atmospheric scattering and eye safety make direct viewing unwise. The number is a standard astrophysical parameter for the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Sun
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-supernova
+  name: Supernova
+  value: 1000000000000000.0
+  description: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool. The light curve evolves rapidly so the number applies during peak days only. Spectra are line rich and depart from blackbody assumptions. The figure situates stellar explosions against the Sun on a surface basis.
+  description_format: markdown
+  summary_short: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool.
+  description_medium: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool. The light curve evolves rapidly so the number applies during peak days only. Spectra are line rich and depart from blackbody assumptions. The figure situates stellar explosions against the Sun on a surface basis.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Supernova
+  source: https://en.wikipedia.org/wiki/Supernova
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-supernova
+    url: https://en.wikipedia.org/wiki/Supernova
+    title: Supernova
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-gamma-ray-burst
+  name: Gamma Ray Burst
+  value: 1.0e+20
+  description: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
+  description_format: markdown
+  summary_short: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient.
+  description_medium: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Gamma Ray Burst
+  source: https://en.wikipedia.org/wiki/Gamma-ray_burst
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gamma-ray-burst
+    url: https://en.wikipedia.org/wiki/Gamma-ray_burst
+    title: Gamma-ray burst
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

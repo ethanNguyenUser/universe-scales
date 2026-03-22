@@ -16,17 +16,30 @@ units:
   description: Grams per cubic centimeter are common in chemistry and materials science.
   name: grams per cubic centimeter
   symbol: g/cm^3
+- name: kilograms per liter
+  symbol: kg/L
+  conversion_factor: 0.001
+  description: Kilograms per liter are intuitive for liquids and bulk materials.
+- name: pounds per cubic foot
+  symbol: lb/ft^3
+  conversion_factor: 0.0624279605761
+  description: Pounds per cubic foot are common in construction and fluid handling.
 required_min_items: 24
 preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
+description_format: markdown
+frontend_group: materials
+frontend_group_label: Materials & Matter
+frontend_order: 140
 items:
 - id: obs:density:entity-intergalactic-medium
   name: Intergalactic medium
   value: 1.0e-27
-  description: Characteristic baryonic density of intergalactic space.
+  description: Characteristic baryonic density of intergalactic space. Here the quantity refers to `characteristic bulk density`.
+  description_format: markdown
   summary_short: Characteristic baryonic density of intergalactic space.
-  description_medium: Characteristic baryonic density of intergalactic space.
+  description_medium: Characteristic baryonic density of intergalactic space. Here the quantity refers to `characteristic bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -62,9 +75,10 @@ items:
 - id: obs:density:entity-interstellar-medium
   name: Interstellar medium
   value: 1.0e-21
-  description: Characteristic density of the diffuse interstellar medium.
+  description: Characteristic density of the diffuse interstellar medium. Here the quantity refers to `characteristic bulk density`.
+  description_format: markdown
   summary_short: Characteristic density of the diffuse interstellar medium.
-  description_medium: Characteristic density of the diffuse interstellar medium.
+  description_medium: Characteristic density of the diffuse interstellar medium. Here the quantity refers to `characteristic bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -100,9 +114,10 @@ items:
 - id: obs:density:scenario-laboratory-vacuum
   name: Laboratory ultra-high vacuum
   value: 1.0e-17
-  description: Characteristic mass density of an ultra-high laboratory vacuum.
+  description: Characteristic mass density of an ultra-high laboratory vacuum. Here the quantity refers to `residual gas density`.
+  description_format: markdown
   summary_short: Characteristic mass density of an ultra-high laboratory vacuum.
-  description_medium: Characteristic mass density of an ultra-high laboratory vacuum.
+  description_medium: Characteristic mass density of an ultra-high laboratory vacuum. Here the quantity refers to `residual gas density`.
   description_long: null
   hook: null
   caveats: null
@@ -138,9 +153,10 @@ items:
 - id: obs:density:entity-thermosphere
   name: Thermosphere at ISS altitude
   value: 1.0e-12
-  description: Order-of-magnitude density of the upper thermosphere near low Earth orbit.
+  description: Order-of-magnitude density of the upper thermosphere near low Earth orbit. Here the quantity refers to `bulk gas density`.
+  description_format: markdown
   summary_short: Order-of-magnitude density of the upper thermosphere near low Earth orbit.
-  description_medium: Order-of-magnitude density of the upper thermosphere near low Earth orbit.
+  description_medium: Order-of-magnitude density of the upper thermosphere near low Earth orbit. Here the quantity refers to `bulk gas density`.
   description_long: null
   hook: null
   caveats: null
@@ -178,6 +194,7 @@ items:
   name: Silica aerogel
   value: 1.0
   description: Characteristic bulk density of a very light silica aerogel.
+  description_format: markdown
   summary_short: Characteristic bulk density of a very light silica aerogel.
   description_medium: Characteristic bulk density of a very light silica aerogel.
   description_long: null
@@ -215,9 +232,10 @@ items:
 - id: obs:density:entity-air
   name: Air at sea level
   value: 1.225
-  description: Density of dry air near sea level under standard conditions.
+  description: Density of dry air near sea level under standard conditions. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of dry air near sea level under standard conditions.
-  description_medium: Density of dry air near sea level under standard conditions.
+  description_medium: Density of dry air near sea level under standard conditions. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -255,6 +273,7 @@ items:
   name: Balsa wood
   value: 160.0
   description: Characteristic bulk density of balsa wood.
+  description_format: markdown
   summary_short: Characteristic bulk density of balsa wood.
   description_medium: Characteristic bulk density of balsa wood.
   description_long: null
@@ -293,6 +312,7 @@ items:
   name: Cork
   value: 240.0
   description: Characteristic bulk density of cork.
+  description_format: markdown
   summary_short: Characteristic bulk density of cork.
   description_medium: Characteristic bulk density of cork.
   description_long: null
@@ -330,9 +350,10 @@ items:
 - id: obs:density:entity-saturn
   name: Saturn average density
   value: 687.0
-  description: Average density of Saturn.
+  description: Average density of Saturn. Here the quantity refers to `mean density`.
+  description_format: markdown
   summary_short: Average density of Saturn.
-  description_medium: Average density of Saturn.
+  description_medium: Average density of Saturn. Here the quantity refers to `mean density`.
   description_long: null
   hook: null
   caveats: null
@@ -369,6 +390,7 @@ items:
   name: Oak wood
   value: 750.0
   description: Characteristic bulk density of oak wood.
+  description_format: markdown
   summary_short: Characteristic bulk density of oak wood.
   description_medium: Characteristic bulk density of oak wood.
   description_long: null
@@ -407,6 +429,7 @@ items:
   name: Olive oil
   value: 910.0
   description: Characteristic bulk density of olive oil.
+  description_format: markdown
   summary_short: Characteristic bulk density of olive oil.
   description_medium: Characteristic bulk density of olive oil.
   description_long: null
@@ -444,9 +467,10 @@ items:
 - id: obs:density:entity-ice
   name: Ice
   value: 917.0
-  description: Density of ordinary ice near its melting point.
+  description: Density of ordinary ice near its melting point. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of ordinary ice near its melting point.
-  description_medium: Density of ordinary ice near its melting point.
+  description_medium: Density of ordinary ice near its melting point. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -482,9 +506,10 @@ items:
 - id: obs:density:entity-human
   name: Human body
   value: 985.0
-  description: Representative average density of a human body.
+  description: Representative average density of a human body. Here the quantity refers to `average body density`.
+  description_format: markdown
   summary_short: Representative average density of a human body.
-  description_medium: Representative average density of a human body.
+  description_medium: Representative average density of a human body. Here the quantity refers to `average body density`.
   description_long: null
   hook: null
   caveats: null
@@ -520,9 +545,10 @@ items:
 - id: obs:density:entity-water
   name: Liquid water
   value: 1000.0
-  description: Density of liquid water near 4 C.
+  description: Density of liquid water near 4 C. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of liquid water near 4 C.
-  description_medium: Density of liquid water near 4 C.
+  description_medium: Density of liquid water near 4 C. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -559,9 +585,10 @@ items:
 - id: obs:density:entity-sun
   name: Sun average density
   value: 1408.0
-  description: Mean density of the Sun.
+  description: Mean density of the Sun. Here the quantity refers to `mean density`.
+  description_format: markdown
   summary_short: Mean density of the Sun.
-  description_medium: Mean density of the Sun.
+  description_medium: Mean density of the Sun. Here the quantity refers to `mean density`.
   description_long: null
   hook: null
   caveats: null
@@ -597,9 +624,10 @@ items:
 - id: obs:density:entity-aluminium
   name: Aluminium
   value: 2700.0
-  description: Density of aluminium metal.
+  description: Density of aluminium metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of aluminium metal.
-  description_medium: Density of aluminium metal.
+  description_medium: Density of aluminium metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -635,9 +663,10 @@ items:
 - id: obs:density:entity-granite
   name: Granite
   value: 2700.0
-  description: Characteristic density of granite.
+  description: Characteristic density of granite. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Characteristic density of granite.
-  description_medium: Characteristic density of granite.
+  description_medium: Characteristic density of granite. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -673,9 +702,10 @@ items:
 - id: obs:density:entity-earth
   name: Earth average density
   value: 5514.0
-  description: Mean density of Earth.
+  description: Mean density of Earth. Here the quantity refers to `mean density`.
+  description_format: markdown
   summary_short: Mean density of Earth.
-  description_medium: Mean density of Earth.
+  description_medium: Mean density of Earth. Here the quantity refers to `mean density`.
   description_long: null
   hook: null
   caveats: null
@@ -711,9 +741,10 @@ items:
 - id: obs:density:entity-iron
   name: Iron
   value: 7870.0
-  description: Density of iron metal.
+  description: Density of iron metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of iron metal.
-  description_medium: Density of iron metal.
+  description_medium: Density of iron metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -749,9 +780,10 @@ items:
 - id: obs:density:entity-copper
   name: Copper
   value: 8960.0
-  description: Density of copper metal.
+  description: Density of copper metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of copper metal.
-  description_medium: Density of copper metal.
+  description_medium: Density of copper metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -787,9 +819,10 @@ items:
 - id: obs:density:entity-silver
   name: Silver
   value: 10490.0
-  description: Density of silver metal.
+  description: Density of silver metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of silver metal.
-  description_medium: Density of silver metal.
+  description_medium: Density of silver metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -825,9 +858,10 @@ items:
 - id: obs:density:entity-lead
   name: Lead
   value: 11340.0
-  description: Density of lead metal.
+  description: Density of lead metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of lead metal.
-  description_medium: Density of lead metal.
+  description_medium: Density of lead metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -863,9 +897,10 @@ items:
 - id: obs:density:entity-mercury
   name: Mercury
   value: 13534.0
-  description: Density of liquid mercury.
+  description: Density of liquid mercury. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of liquid mercury.
-  description_medium: Density of liquid mercury.
+  description_medium: Density of liquid mercury. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -901,9 +936,10 @@ items:
 - id: obs:density:entity-gold
   name: Gold
   value: 19320.0
-  description: Density of gold metal.
+  description: Density of gold metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of gold metal.
-  description_medium: Density of gold metal.
+  description_medium: Density of gold metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -939,9 +975,10 @@ items:
 - id: obs:density:entity-osmium
   name: Osmium
   value: 22590.0
-  description: Density of osmium metal.
+  description: Density of osmium metal. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Density of osmium metal.
-  description_medium: Density of osmium metal.
+  description_medium: Density of osmium metal. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -977,9 +1014,10 @@ items:
 - id: obs:density:entity-sun-core
   name: Sun core
   value: 150000.0
-  description: Characteristic density near the center of the Sun.
+  description: Characteristic density near the center of the Sun. Here the quantity refers to `core density`.
+  description_format: markdown
   summary_short: Characteristic density near the center of the Sun.
-  description_medium: Characteristic density near the center of the Sun.
+  description_medium: Characteristic density near the center of the Sun. Here the quantity refers to `core density`.
   description_long: null
   hook: null
   caveats: null
@@ -1015,9 +1053,10 @@ items:
 - id: obs:density:entity-white-dwarf
   name: White dwarf matter
   value: 1000000000.0
-  description: Characteristic average density of white dwarf matter.
+  description: Characteristic average density of white dwarf matter. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Characteristic average density of white dwarf matter.
-  description_medium: Characteristic average density of white dwarf matter.
+  description_medium: Characteristic average density of white dwarf matter. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null
@@ -1053,9 +1092,10 @@ items:
 - id: obs:density:entity-neutron-star
   name: Neutron star matter
   value: 4.0e+17
-  description: Characteristic average density of neutron star matter.
+  description: Characteristic average density of neutron star matter. Here the quantity refers to `bulk density`.
+  description_format: markdown
   summary_short: Characteristic average density of neutron star matter.
-  description_medium: Characteristic average density of neutron star matter.
+  description_medium: Characteristic average density of neutron star matter. Here the quantity refers to `bulk density`.
   description_long: null
   hook: null
   caveats: null

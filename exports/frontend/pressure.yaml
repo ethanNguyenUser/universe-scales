@@ -1,0 +1,803 @@
+dimension: pressure
+base_unit: pascals
+dimension_description: Pressure is force per unit area, the intensity with which a surface is pressed. It explains why a stiletto heel dents wood while a snowshoe floats, even with the same weight. In fluids, pressure transmits uniformly and drives flow from high to low according to gradients. Every value below names a setting and condition so the number connects to daily life or specific experiments.
+related_resources: []
+show_limitations: true
+units:
+- conversion_factor: 1
+  description: The pascal is the SI pressure unit equal to one newton per square meter of area. It connects force and geometry directly for analysis. Using pascals allows pressures in gases, liquids, and solids to be compared consistently. All item values are recorded in pascals before conversion.
+  name: pascals
+  symbol: Pa
+- conversion_factor: 9.86923e-06
+  description: Atmospheres are tied to mean sea level air pressure on Earth and remain convenient for diving and meteorology. They give an intuitive sense of how many Earth atmospheres a device or body experiences. Converting to pascals is linear by definition. Values here use the conventional standard atmosphere.
+  name: atmospheres
+  symbol: atm
+- conversion_factor: 0.000145038
+  description: Pounds per square inch is the imperial unit used for tires, hydraulics, and tools in North America. Gauges on cars and compressors often display psi prominently. Conversions help align those readings with SI calculations. The factor assumes exact definitions of pound and inch.
+  name: pounds per square inch
+  symbol: psi
+- conversion_factor: 1e-5
+  description: The bar equals one hundred thousand pascals and is common in engineering because round numbers are convenient. Weather maps and compressor ratings often use bars. It is not an SI unit but is compatible by a simple factor. We include it to make comparisons readable.
+  name: bars
+  symbol: bar
+- conversion_factor: 0.00750062
+  description: Torr measures pressure based on mercury columns, with one torr equal to one seven hundred sixtieth of an atmosphere. Vacuum technology still uses it because old gauges and tables were calibrated this way. Modern sensors output pascals but many labs speak in torr out of habit. The conversion factor links the two worlds cleanly.
+  name: torr
+  symbol: Torr
+- name: kilopascals
+  symbol: kPa
+  conversion_factor: 0.001
+  description: Kilopascals are common in weather, tires, and engineering contexts.
+- name: megapascals
+  symbol: MPa
+  conversion_factor: 1.0e-06
+  description: Megapascals are useful for high-pressure engineering and materials.
+required_min_items: 24
+preferred_target_items: 24
+preferred_max_items: 24
+selection_bin_count: 24
+description_format: markdown
+frontend_group: materials
+frontend_group_label: Materials & Matter
+frontend_order: 110
+items:
+- id: obs:pressure:scenario-pressure-deep-space
+  name: Deep Space
+  value: 1.0e-17
+  description: Between galaxies, particle densities are so low that mechanical pressure approaches zero for human purposes. Radiation fields and magnetic stresses still act, but as a pressure they are vanishingly small. Spacecraft enjoy this quiet except when hit by solar storms. The value is an order of magnitude benchmark for deep space plasma pressure.
+  description_format: markdown
+  summary_short: Between galaxies, particle densities are so low that mechanical pressure approaches zero for human purposes.
+  description_medium: Between galaxies, particle densities are so low that mechanical pressure approaches zero for human purposes. Radiation fields and magnetic stresses still act, but as a pressure they are vanishingly small. Spacecraft enjoy this quiet except when hit by solar storms. The value is an order of magnitude benchmark for deep space plasma pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Deep Space
+  source: https://en.wikipedia.org/wiki/Outer_space
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-outer-space
+    url: https://en.wikipedia.org/wiki/Outer_space
+    title: Outer space
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-laboratory-vacuum
+  name: Laboratory Vacuum
+  value: 1.0e-06
+  description: Ultra high vacuum chambers in surface physics reach pressures near this value after long pumping and bakeout. Molecules arrive so rarely that clean crystal faces can be studied for minutes before contamination. Leak checking becomes an art at these numbers. The figure represents a good day on a research instrument.
+  description_format: markdown
+  summary_short: Ultra high vacuum chambers in surface physics reach pressures near this value after long pumping and bakeout.
+  description_medium: Ultra high vacuum chambers in surface physics reach pressures near this value after long pumping and bakeout. Molecules arrive so rarely that clean crystal faces can be studied for minutes before contamination. Leak checking becomes an art at these numbers. The figure represents a good day on a research instrument.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Laboratory Vacuum
+  source: https://en.wikipedia.org/wiki/Vacuum
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vacuum
+    url: https://en.wikipedia.org/wiki/Vacuum
+    title: Vacuum
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-mars-surface
+  name: Mars Surface
+  value: 600.0
+  description: On the Martian surface the thin atmosphere presses at only a few hundred pascals, less than one percent of Earth sea level. Water boils at body temperature under such conditions without a suit. Weather there is driven by dust, not by dense air. The number is for a typical day at the equator.
+  description_format: markdown
+  summary_short: On the Martian surface the thin atmosphere presses at only a few hundred pascals, less than one percent of Earth sea level.
+  description_medium: On the Martian surface the thin atmosphere presses at only a few hundred pascals, less than one percent of Earth sea level. Water boils at body temperature under such conditions without a suit. Weather there is driven by dust, not by dense air. The number is for a typical day at the equator.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Mars Surface
+  source: https://en.wikipedia.org/wiki/Atmosphere_of_Mars
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atmosphere-of-mars
+    url: https://en.wikipedia.org/wiki/Atmosphere_of_Mars
+    title: Atmosphere of Mars
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-human-blood-pressure-systolic
+  name: Human Blood Pressure (systolic)
+  value: 16000.0
+  description: Systolic blood pressure in a healthy adult corresponds to this pressure difference in arteries during a heartbeat. The body regulates it with hormones and vessel elasticity. Long term elevations increase risk for stroke and heart disease. The number is a familiar medical baseline expressed in pascals.
+  description_format: markdown
+  summary_short: Systolic blood pressure in a healthy adult corresponds to this pressure difference in arteries during a heartbeat.
+  description_medium: Systolic blood pressure in a healthy adult corresponds to this pressure difference in arteries during a heartbeat. The body regulates it with hormones and vessel elasticity. Long term elevations increase risk for stroke and heart disease. The number is a familiar medical baseline expressed in pascals.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Human Blood Pressure (systolic)
+  source: https://en.wikipedia.org/wiki/Blood_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-pressure
+    url: https://en.wikipedia.org/wiki/Blood_pressure
+    title: Blood pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-swimming-pool
+  name: Swimming Pool
+  value: 20000.0
+  description: The water above you in a swimming pool adds pressure linearly with depth, so a few meters already feels on your ears. Lungs equalize by pushing air into sinuses, a skill every diver learns. Lifeguards know headaches often come from poor equalization rather than chlorine. The number is for a depth of two meters.
+  description_format: markdown
+  summary_short: The water above you in a swimming pool adds pressure linearly with depth, so a few meters already feels on your ears.
+  description_medium: The water above you in a swimming pool adds pressure linearly with depth, so a few meters already feels on your ears. Lungs equalize by pushing air into sinuses, a skill every diver learns. Lifeguards know headaches often come from poor equalization rather than chlorine. The number is for a depth of two meters.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Swimming Pool
+  source: https://en.wikipedia.org/wiki/Swimming_pool
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-swimming-pool
+    url: https://en.wikipedia.org/wiki/Swimming_pool
+    title: Swimming pool
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-airplane-cabin
+  name: Airplane Cabin
+  value: 75000.0
+  description: Airplane cabins are pressurized to an equivalent altitude of two to three kilometers, which is lower than sea level but comfortable for most passengers. The compromise reduces structural stress and weight while keeping oxygen levels acceptable. Sensitive travelers feel mild headache or fatigue at these numbers. The value is a typical cruise cabin pressure.
+  description_format: markdown
+  summary_short: Airplane cabins are pressurized to an equivalent altitude of two to three kilometers, which is lower than sea level but comfortable for most passengers.
+  description_medium: Airplane cabins are pressurized to an equivalent altitude of two to three kilometers, which is lower than sea level but comfortable for most passengers. The compromise reduces structural stress and weight while keeping oxygen levels acceptable. Sensitive travelers feel mild headache or fatigue at these numbers. The value is a typical cruise cabin pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Airplane Cabin
+  source: https://en.wikipedia.org/wiki/Cabin_pressurization
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cabin-pressurization
+    url: https://en.wikipedia.org/wiki/Cabin_pressurization
+    title: Cabin pressurization
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-earth-sea-level
+  name: Earth Sea Level
+  value: 101325.0
+  description: At sea level on Earth, standard atmospheric pressure is about one hundred thousand pascals by definition. It sets boiling points, cooking times, and aircraft calibration. Weather systems drift a few percent above and below. The number is the canonical reference for pressure units.
+  description_format: markdown
+  summary_short: At sea level on Earth, standard atmospheric pressure is about one hundred thousand pascals by definition.
+  description_medium: At sea level on Earth, standard atmospheric pressure is about one hundred thousand pascals by definition. It sets boiling points, cooking times, and aircraft calibration. Weather systems drift a few percent above and below. The number is the canonical reference for pressure units.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Earth Sea Level
+  source: https://en.wikipedia.org/wiki/Atmospheric_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atmospheric-pressure
+    url: https://en.wikipedia.org/wiki/Atmospheric_pressure
+    title: Atmospheric pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-pressure-cooker
+  name: Pressure Cooker
+  value: 120000.0
+  description: A pressure cooker increases internal pressure modestly so water boils hotter and dinner finishes faster. Safety valves and lids are engineered against accidental opening under load. Recipes account for altitude and cooker setting. The number is for a common kitchen unit at operating pressure.
+  description_format: markdown
+  summary_short: A pressure cooker increases internal pressure modestly so water boils hotter and dinner finishes faster.
+  description_medium: A pressure cooker increases internal pressure modestly so water boils hotter and dinner finishes faster. Safety valves and lids are engineered against accidental opening under load. Recipes account for altitude and cooker setting. The number is for a common kitchen unit at operating pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Pressure Cooker
+  source: https://en.wikipedia.org/wiki/Pressure_cooking
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pressure-cooking
+    url: https://en.wikipedia.org/wiki/Pressure_cooking
+    title: Pressure cooking
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-soda-can-sealed
+  name: Soda Can (sealed)
+  value: 200000.0
+  description: A typical can of carbonated soda holds an overpressure relative to air that keeps bubbles dissolved. Warming the can raises this pressure and makes foaming more likely on opening. Manufacturers choose levels to balance fizz and safety. The value is for a chilled sealed can.
+  description_format: markdown
+  summary_short: A typical can of carbonated soda holds an overpressure relative to air that keeps bubbles dissolved.
+  description_medium: A typical can of carbonated soda holds an overpressure relative to air that keeps bubbles dissolved. Warming the can raises this pressure and makes foaming more likely on opening. Manufacturers choose levels to balance fizz and safety. The value is for a chilled sealed can.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Soda Can (sealed)
+  source: https://en.wikipedia.org/wiki/Carbonated_water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-carbonated-water
+    url: https://en.wikipedia.org/wiki/Carbonated_water
+    title: Carbonated water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-tire-pressure
+  name: Tire Pressure
+  value: 200000.0
+  description: A passenger car tire is inflated to a few bars over atmospheric pressure to balance grip, wear, and comfort. Underinflation wastes fuel and overheats sidewalls, while overinflation reduces contact patch. Temperature changes during driving shift the number significantly. The value is for a warm tire after highway travel.
+  description_format: markdown
+  summary_short: A passenger car tire is inflated to a few bars over atmospheric pressure to balance grip, wear, and comfort.
+  description_medium: A passenger car tire is inflated to a few bars over atmospheric pressure to balance grip, wear, and comfort. Underinflation wastes fuel and overheats sidewalls, while overinflation reduces contact patch. Temperature changes during driving shift the number significantly. The value is for a warm tire after highway travel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Tire Pressure
+  source: https://en.wikipedia.org/wiki/Tire
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tire
+    url: https://en.wikipedia.org/wiki/Tire
+    title: Tire
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-hyperbaric-chamber
+  name: Hyperbaric Chamber
+  value: 300000.0
+  description: A hyperbaric chamber used for diving medicine runs at a few atmospheres to treat decompression sickness. Breathing pure oxygen at these pressures accelerates nitrogen washout. Operators monitor for oxygen toxicity risks. The value is a representative treatment pressure.
+  description_format: markdown
+  summary_short: A hyperbaric chamber used for diving medicine runs at a few atmospheres to treat decompression sickness.
+  description_medium: A hyperbaric chamber used for diving medicine runs at a few atmospheres to treat decompression sickness. Breathing pure oxygen at these pressures accelerates nitrogen washout. Operators monitor for oxygen toxicity risks. The value is a representative treatment pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Hyperbaric Chamber
+  source: https://en.wikipedia.org/wiki/Hyperbaric_medicine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hyperbaric-medicine
+    url: https://en.wikipedia.org/wiki/Hyperbaric_medicine
+    title: Hyperbaric medicine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-ocean-depth-100m
+  name: Ocean Depth (100m)
+  value: 1000000.0
+  description: At one hundred meters in the ocean, divers and submersibles face about ten times atmospheric pressure from the water column. Steel hulls and polymer seals are sized with generous safety margins. Breathing gas composition must change to avoid nitrogen narcosis. The value is a round figure for this depth.
+  description_format: markdown
+  summary_short: At one hundred meters in the ocean, divers and submersibles face about ten times atmospheric pressure from the water column.
+  description_medium: At one hundred meters in the ocean, divers and submersibles face about ten times atmospheric pressure from the water column. Steel hulls and polymer seals are sized with generous safety margins. Breathing gas composition must change to avoid nitrogen narcosis. The value is a round figure for this depth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Ocean Depth (100m)
+  source: https://en.wikipedia.org/wiki/Ocean
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ocean
+    url: https://en.wikipedia.org/wiki/Ocean
+    title: Ocean
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-venus-surface
+  name: Venus Surface
+  value: 9200000.0
+  description: Venus wears a blanket of carbon dioxide so thick that the surface experiences pressures dozens of times higher than Earth. Metals soften and electronics require special cooling even before the heat is considered. Probes survive only hours with heroic engineering. The value is for the mean surface under cloud cover.
+  description_format: markdown
+  summary_short: Venus wears a blanket of carbon dioxide so thick that the surface experiences pressures dozens of times higher than Earth.
+  description_medium: Venus wears a blanket of carbon dioxide so thick that the surface experiences pressures dozens of times higher than Earth. Metals soften and electronics require special cooling even before the heat is considered. Probes survive only hours with heroic engineering. The value is for the mean surface under cloud cover.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Venus Surface
+  source: https://en.wikipedia.org/wiki/Atmosphere_of_Venus
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atmosphere-of-venus
+    url: https://en.wikipedia.org/wiki/Atmosphere_of_Venus
+    title: Atmosphere of Venus
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-hydraulic-system
+  name: Hydraulic System
+  value: 20000000.0
+  description: Industrial hydraulic systems routinely operate at tens to hundreds of bars to move heavy loads precisely. Hoses and fittings are rated well above working pressure to prevent catastrophic sprays. Small leaks feel deceptively gentle but can inject fluid into skin. The number is a mid range for shop presses and lifts.
+  description_format: markdown
+  summary_short: Industrial hydraulic systems routinely operate at tens to hundreds of bars to move heavy loads precisely.
+  description_medium: Industrial hydraulic systems routinely operate at tens to hundreds of bars to move heavy loads precisely. Hoses and fittings are rated well above working pressure to prevent catastrophic sprays. Small leaks feel deceptively gentle but can inject fluid into skin. The number is a mid range for shop presses and lifts.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Hydraulic System
+  source: https://en.wikipedia.org/wiki/Hydraulics
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydraulics
+    url: https://en.wikipedia.org/wiki/Hydraulics
+    title: Hydraulics
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-mariana-trench
+  name: Mariana Trench
+  value: 110000000.0
+  description: At the bottom of the Mariana Trench, the weight of nearly eleven kilometers of water piles up a crushing pressure. Only specialized research vessels and adapted organisms operate here. Material imperfections become critical under such loads. The number gives the scale at the deepest natural point on Earth.
+  description_format: markdown
+  summary_short: At the bottom of the Mariana Trench, the weight of nearly eleven kilometers of water piles up a crushing pressure.
+  description_medium: At the bottom of the Mariana Trench, the weight of nearly eleven kilometers of water piles up a crushing pressure. Only specialized research vessels and adapted organisms operate here. Material imperfections become critical under such loads. The number gives the scale at the deepest natural point on Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Mariana Trench
+  source: https://en.wikipedia.org/wiki/Mariana_Trench
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mariana-trench
+    url: https://en.wikipedia.org/wiki/Mariana_Trench
+    title: Mariana Trench
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-diamond-formation
+  name: Diamond Formation
+  value: 5000000000.0
+  description: Deep in Earth’s mantle, carbon transforms into diamond under gigapascal class pressures and high temperatures. The combination stabilizes the crystal structure that sparkles on rings. Laboratory presses reproduce these conditions in tiny anvils. The value indicates the lower bound for natural formation.
+  description_format: markdown
+  summary_short: Deep in Earth’s mantle, carbon transforms into diamond under gigapascal class pressures and high temperatures.
+  description_medium: Deep in Earth’s mantle, carbon transforms into diamond under gigapascal class pressures and high temperatures. The combination stabilizes the crystal structure that sparkles on rings. Laboratory presses reproduce these conditions in tiny anvils. The value indicates the lower bound for natural formation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Diamond Formation
+  source: https://en.wikipedia.org/wiki/Diamond
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-diamond
+    url: https://en.wikipedia.org/wiki/Diamond
+    title: Diamond
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-earth-s-core
+  name: Earth's Core
+  value: 360000000000.0
+  description: At Earth’s core, pressure from the overlying rock squeezes iron into exotic phases and drives a slowly convecting outer layer. Seismic waves reveal the magnitude indirectly. This pressure and temperature together power the geodynamo. The number is a standard estimate for the center.
+  description_format: markdown
+  summary_short: At Earth’s core, pressure from the overlying rock squeezes iron into exotic phases and drives a slowly convecting outer layer.
+  description_medium: At Earth’s core, pressure from the overlying rock squeezes iron into exotic phases and drives a slowly convecting outer layer. Seismic waves reveal the magnitude indirectly. This pressure and temperature together power the geodynamo. The number is a standard estimate for the center.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Earth's Core
+  source: https://en.wikipedia.org/wiki/Earth%27s_core
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth-27s-core
+    url: https://en.wikipedia.org/wiki/Earth%27s_core
+    title: Earth's core
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-sun-s-core
+  name: Sun's Core
+  value: 2.5e+16
+  description: The solar core carries stupendous pressure that enables fusion by pushing nuclei close despite their repulsion. Energy leaks outward over hundreds of thousands of years as heat and light. Surface storms above are gentle by comparison. The value is the order of magnitude for models of the Sun’s interior.
+  description_format: markdown
+  summary_short: The solar core carries stupendous pressure that enables fusion by pushing nuclei close despite their repulsion.
+  description_medium: The solar core carries stupendous pressure that enables fusion by pushing nuclei close despite their repulsion. Energy leaks outward over hundreds of thousands of years as heat and light. Surface storms above are gentle by comparison. The value is the order of magnitude for models of the Sun’s interior.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Sun's Core
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-neutron-star
+  name: Neutron Star
+  value: 1.0e+34
+  description: Matter inside a neutron star is compressed beyond atomic structure, reaching pressures that defy ordinary materials science. Equations of state are constrained by astronomy rather than laboratory tests. The crust behaves like a bizarre ceramic under these loads. The number situates this extreme on the pressure scale.
+  description_format: markdown
+  summary_short: Matter inside a neutron star is compressed beyond atomic structure, reaching pressures that defy ordinary materials science.
+  description_medium: Matter inside a neutron star is compressed beyond atomic structure, reaching pressures that defy ordinary materials science. Equations of state are constrained by astronomy rather than laboratory tests. The crust behaves like a bizarre ceramic under these loads. The number situates this extreme on the pressure scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Neutron Star
+  source: https://en.wikipedia.org/wiki/Neutron_star
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-neutron-star
+    url: https://en.wikipedia.org/wiki/Neutron_star
+    title: Neutron star
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-black-hole
+  name: Black Hole
+  value: 1.0e+40
+  description: Near a black hole, pressures defined in usual material terms become meaningless as spacetime curvature dominates. Still, models of accretion disks describe effective pressures that are astronomical. Observations of x ray spectra inform these estimates. The value here is illustrative of those extremes.
+  description_format: markdown
+  summary_short: Near a black hole, pressures defined in usual material terms become meaningless as spacetime curvature dominates.
+  description_medium: Near a black hole, pressures defined in usual material terms become meaningless as spacetime curvature dominates. Still, models of accretion disks describe effective pressures that are astronomical. Observations of x ray spectra inform these estimates. The value here is illustrative of those extremes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Black Hole
+  source: https://en.wikipedia.org/wiki/Black_hole
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-black-hole
+    url: https://en.wikipedia.org/wiki/Black_hole
+    title: Black hole
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

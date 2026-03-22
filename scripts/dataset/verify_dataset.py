@@ -29,6 +29,7 @@ GENERATED_FILES = [
     ROOT / "dataset" / "universe_scales.sqlite",
     ROOT / "exports" / "sqlite" / "universe_scales.sqlite",
     ROOT / "exports" / "json" / "subjects.jsonl",
+    ROOT / "exports" / "json" / "dimension_catalog.json",
     ROOT / "exports" / "json" / "observations.jsonl",
     ROOT / "exports" / "json" / "observation_content.jsonl",
     ROOT / "exports" / "json" / "writer_packets.jsonl",
@@ -85,6 +86,7 @@ def verify_sqlite(conn: sqlite3.Connection) -> None:
                     OR o.value_base <= 0
                     OR o.value_type NOT IN ('measured', 'derived')
                     OR oc.observation_id IS NULL
+                    OR COALESCE(oc.content_format, '') = ''
                     OR COALESCE(oc.summary_short, '') = ''
                     OR COALESCE(oc.description_medium, '') = ''
                     OR NOT EXISTS (
@@ -152,6 +154,11 @@ def verify_yaml_files() -> None:
 
 
 def verify_json_exports() -> None:
+    catalog_path = ROOT / "exports" / "json" / "dimension_catalog.json"
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    assert isinstance(catalog, list) and catalog, "dimension catalog export is empty"
+    assert any(entry.get("available") for entry in catalog), "dimension catalog has no available dimensions"
+
     writer_path = ROOT / "exports" / "json" / "writer_packets.jsonl"
     writer_lines = [json.loads(line) for line in writer_path.read_text(encoding="utf-8").splitlines() if line.strip()]
     assert writer_lines, "writer packet export is empty"
@@ -161,6 +168,7 @@ def verify_json_exports() -> None:
         assert packet["content"]["summary_short"], "writer packet missing summary_short"
         assert packet["sources"], "writer packet missing sources"
         assert packet["unit_conversions"], "writer packet missing unit conversions"
+        assert packet["content"]["content_format"] == "markdown", "writer packet missing content format"
 
 
 def verify_cli() -> None:

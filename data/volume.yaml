@@ -24,17 +24,42 @@ units:
   description: Cubic kilometers are convenient for lakes, planets, and nebulae.
   name: cubic kilometers
   symbol: km^3
+- name: cubic centimeters
+  symbol: cm^3
+  conversion_factor: 1000000.0
+  description: Cubic centimeters are common for engines, syringes, and lab volumes.
+- name: cubic inches
+  symbol: in^3
+  conversion_factor: 61023.7440947323
+  description: Cubic inches are useful for displacement and small mechanical volumes.
+- name: cubic feet
+  symbol: ft^3
+  conversion_factor: 35.3146667215
+  description: Cubic feet are useful for rooms, refrigerators, and gas volumes.
+- name: gallons
+  symbol: gal
+  conversion_factor: 264.1720523581
+  description: Gallons are a familiar unit for household and fuel volumes.
+- name: teaspoons
+  symbol: tsp
+  conversion_factor: 202884.13621106
+  description: Teaspoons are useful for tiny everyday cooking-scale volumes.
 required_min_items: 24
 preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
+description_format: markdown
+frontend_group: geometry
+frontend_group_label: Geometry & Scale
+frontend_order: 70
 items:
 - id: obs:volume:entity-proton
   name: Proton volume
   value: 2.5e-45
-  description: Geometric volume implied by the proton charge radius.
+  description: Geometric volume implied by the proton charge radius. Derived using `(4/3)*pi*r^3`.
+  description_format: markdown
   summary_short: Geometric volume implied by the proton charge radius.
-  description_medium: Geometric volume implied by the proton charge radius.
+  description_medium: Geometric volume implied by the proton charge radius. Derived using `(4/3)*pi*r^3`.
   description_long: null
   hook: null
   caveats: null
@@ -71,9 +96,10 @@ items:
 - id: obs:volume:entity-water
   name: Water molecule volume
   value: 1.1e-29
-  description: Characteristic occupied volume of one water molecule.
+  description: Characteristic occupied volume of one water molecule. Here the quantity refers to `single molecule volume`.
+  description_format: markdown
   summary_short: Characteristic occupied volume of one water molecule.
-  description_medium: Characteristic occupied volume of one water molecule.
+  description_medium: Characteristic occupied volume of one water molecule. Here the quantity refers to `single molecule volume`.
   description_long: null
   hook: null
   caveats: null
@@ -109,9 +135,10 @@ items:
 - id: obs:volume:entity-influenza-virus
   name: Influenza virion volume
   value: 9.0e-22
-  description: Approximate volume of a spherical influenza virion.
+  description: Approximate volume of a spherical influenza virion. Derived using `(4/3)*pi*r^3`.
+  description_format: markdown
   summary_short: Approximate volume of a spherical influenza virion.
-  description_medium: Approximate volume of a spherical influenza virion.
+  description_medium: Approximate volume of a spherical influenza virion. Derived using `(4/3)*pi*r^3`.
   description_long: null
   hook: null
   caveats: null
@@ -148,9 +175,10 @@ items:
 - id: obs:volume:entity-e-coli
   name: Escherichia coli cell volume
   value: 1.0e-18
-  description: Characteristic volume of one E. coli cell.
+  description: Characteristic volume of one E. coli cell. Here the quantity refers to `single cell volume`.
+  description_format: markdown
   summary_short: Characteristic volume of one E.
-  description_medium: Characteristic volume of one E. coli cell.
+  description_medium: Characteristic volume of one E. coli cell. Here the quantity refers to `single cell volume`.
   description_long: null
   hook: null
   caveats: null
@@ -186,9 +214,10 @@ items:
 - id: obs:volume:entity-human-cell
   name: Human cell volume
   value: 4.0e-15
-  description: Representative volume of a typical human cell.
+  description: Representative volume of a typical human cell. Here the quantity refers to `single cell volume`.
+  description_format: markdown
   summary_short: Representative volume of a typical human cell.
-  description_medium: Representative volume of a typical human cell.
+  description_medium: Representative volume of a typical human cell. Here the quantity refers to `single cell volume`.
   description_long: null
   hook: null
   caveats: null
@@ -224,9 +253,10 @@ items:
 - id: obs:volume:scenario-grain-of-sand-volume
   name: Grain of sand volume
   value: 5.0e-10
-  description: Volume of a representative 1 mm sand grain treated as a sphere.
+  description: Volume of a representative 1 mm sand grain treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_format: markdown
   summary_short: Volume of a representative 1 mm sand grain treated as a sphere.
-  description_medium: Volume of a representative 1 mm sand grain treated as a sphere.
+  description_medium: Volume of a representative 1 mm sand grain treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
   description_long: null
   hook: null
   caveats: null
@@ -263,9 +293,10 @@ items:
 - id: obs:volume:scenario-raindrop
   name: Raindrop volume
   value: 6.5e-08
-  description: Volume of a 5 mm raindrop treated as a sphere.
+  description: Volume of a 5 mm raindrop treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_format: markdown
   summary_short: Volume of a 5 mm raindrop treated as a sphere.
-  description_medium: Volume of a 5 mm raindrop treated as a sphere.
+  description_medium: Volume of a 5 mm raindrop treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
   description_long: null
   hook: null
   caveats: null
@@ -302,9 +333,10 @@ items:
 - id: obs:volume:scenario-teaspoon
   name: Teaspoon
   value: 5.0e-06
-  description: Volume of one teaspoon.
+  description: Volume of one teaspoon. Here the quantity refers to `volume`.
+  description_format: markdown
   summary_short: Volume of one teaspoon.
-  description_medium: Volume of one teaspoon.
+  description_medium: Volume of one teaspoon. Here the quantity refers to `volume`.
   description_long: null
   hook: null
   caveats: null
@@ -341,6 +373,7 @@ items:
   name: Coffee mug
   value: 0.0003
   description: Representative capacity of a coffee mug.
+  description_format: markdown
   summary_short: Representative capacity of a coffee mug.
   description_medium: Representative capacity of a coffee mug.
   description_long: null
@@ -378,9 +411,10 @@ items:
 - id: obs:volume:entity-human
   name: Human body volume
   value: 0.07
-  description: Representative displaced volume of an adult human body.
+  description: Representative displaced volume of an adult human body. Here the quantity refers to `body volume`.
+  description_format: markdown
   summary_short: Representative displaced volume of an adult human body.
-  description_medium: Representative displaced volume of an adult human body.
+  description_medium: Representative displaced volume of an adult human body. Here the quantity refers to `body volume`.
   description_long: null
   hook: null
   caveats: null
@@ -417,6 +451,7 @@ items:
   name: Family car envelope volume
   value: 12.0
   description: Approximate outer envelope volume of a family car.
+  description_format: markdown
   summary_short: Approximate outer envelope volume of a family car.
   description_medium: Approximate outer envelope volume of a family car.
   description_long: null
@@ -455,6 +490,7 @@ items:
   name: City bus envelope volume
   value: 75.0
   description: Approximate outer envelope volume of a city bus.
+  description_format: markdown
   summary_short: Approximate outer envelope volume of a city bus.
   description_medium: Approximate outer envelope volume of a city bus.
   description_long: null
@@ -493,6 +529,7 @@ items:
   name: House interior volume
   value: 400.0
   description: Representative interior volume of a modest detached house.
+  description_format: markdown
   summary_short: Representative interior volume of a modest detached house.
   description_medium: Representative interior volume of a modest detached house.
   description_long: null
@@ -530,9 +567,10 @@ items:
 - id: obs:volume:entity-great-pyramid-of-giza
   name: Great Pyramid of Giza volume
   value: 2600000.0
-  description: Geometric volume of the Great Pyramid of Giza.
+  description: Geometric volume of the Great Pyramid of Giza. Here the quantity refers to `geometric volume`.
+  description_format: markdown
   summary_short: Geometric volume of the Great Pyramid of Giza.
-  description_medium: Geometric volume of the Great Pyramid of Giza.
+  description_medium: Geometric volume of the Great Pyramid of Giza. Here the quantity refers to `geometric volume`.
   description_long: null
   hook: null
   caveats: null
@@ -568,9 +606,10 @@ items:
 - id: obs:volume:entity-lake-tahoe
   name: Lake Tahoe volume
   value: 151000000000.0
-  description: Water volume of Lake Tahoe.
+  description: Water volume of Lake Tahoe. Here the quantity refers to `water volume`.
+  description_format: markdown
   summary_short: Water volume of Lake Tahoe.
-  description_medium: Water volume of Lake Tahoe.
+  description_medium: Water volume of Lake Tahoe. Here the quantity refers to `water volume`.
   description_long: null
   hook: null
   caveats: null
@@ -607,6 +646,7 @@ items:
   name: Mount Everest envelope volume
   value: 10000000000000.0
   description: Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.
+  description_format: markdown
   summary_short: Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.
   description_medium: Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.
   description_long: null
@@ -644,9 +684,10 @@ items:
 - id: obs:volume:entity-earth-oceans
   name: Earth's oceans
   value: 1.332e+18
-  description: Total volume of Earth's oceans.
+  description: Total volume of Earth's oceans. Here the quantity refers to `water volume`.
+  description_format: markdown
   summary_short: Total volume of Earth's oceans.
-  description_medium: Total volume of Earth's oceans.
+  description_medium: Total volume of Earth's oceans. Here the quantity refers to `water volume`.
   description_long: null
   hook: null
   caveats: null
@@ -682,9 +723,10 @@ items:
 - id: obs:volume:entity-moon
   name: Moon volume
   value: 2.2e+19
-  description: Volume of the Moon.
+  description: Volume of the Moon. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_format: markdown
   summary_short: Volume of the Moon.
-  description_medium: Volume of the Moon.
+  description_medium: Volume of the Moon. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
   description_long: null
   hook: null
   caveats: null
@@ -721,9 +763,10 @@ items:
 - id: obs:volume:entity-earth
   name: Earth volume
   value: 1.083e+21
-  description: Volume of Earth.
+  description: Volume of Earth. Here the quantity refers to `planetary volume`.
+  description_format: markdown
   summary_short: Volume of Earth.
-  description_medium: Volume of Earth.
+  description_medium: Volume of Earth. Here the quantity refers to `planetary volume`.
   description_long: null
   hook: null
   caveats: null
@@ -759,9 +802,10 @@ items:
 - id: obs:volume:entity-jupiter
   name: Jupiter volume
   value: 1.431e+24
-  description: Volume of Jupiter.
+  description: Volume of Jupiter. Here the quantity refers to `planetary volume`.
+  description_format: markdown
   summary_short: Volume of Jupiter.
-  description_medium: Volume of Jupiter.
+  description_medium: Volume of Jupiter. Here the quantity refers to `planetary volume`.
   description_long: null
   hook: null
   caveats: null
@@ -797,9 +841,10 @@ items:
 - id: obs:volume:entity-sun
   name: Sun volume
   value: 1.412e+27
-  description: Volume of the Sun.
+  description: Volume of the Sun. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_format: markdown
   summary_short: Volume of the Sun.
-  description_medium: Volume of the Sun.
+  description_medium: Volume of the Sun. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
   description_long: null
   hook: null
   caveats: null
@@ -836,9 +881,10 @@ items:
 - id: obs:volume:entity-betelgeuse
   name: Betelgeuse volume
   value: 1.0e+38
-  description: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
+  description: Order-of-magnitude volume of Betelgeuse using a representative stellar radius. Derived using `(4/3)*pi*r^3`.
+  description_format: markdown
   summary_short: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
-  description_medium: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
+  description_medium: Order-of-magnitude volume of Betelgeuse using a representative stellar radius. Derived using `(4/3)*pi*r^3`.
   description_long: null
   hook: null
   caveats: null
@@ -875,9 +921,10 @@ items:
 - id: obs:volume:scenario-oort-cloud
   name: Oort Cloud volume
   value: 1.75e+48
-  description: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
+  description: Volume implied by a spherical Oort Cloud with a 50,000 AU radius. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
+  description_format: markdown
   summary_short: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
-  description_medium: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
+  description_medium: Volume implied by a spherical Oort Cloud with a 50,000 AU radius. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
   description_long: null
   hook: null
   caveats: null
@@ -914,9 +961,10 @@ items:
 - id: obs:volume:entity-orion-nebula
   name: Orion Nebula volume
   value: 5.6e+51
-  description: Order-of-magnitude volume of the Orion Nebula.
+  description: Order-of-magnitude volume of the Orion Nebula. Here the quantity refers to `nebular volume`.
+  description_format: markdown
   summary_short: Order-of-magnitude volume of the Orion Nebula.
-  description_medium: Order-of-magnitude volume of the Orion Nebula.
+  description_medium: Order-of-magnitude volume of the Orion Nebula. Here the quantity refers to `nebular volume`.
   description_long: null
   hook: null
   caveats: null
@@ -952,9 +1000,10 @@ items:
 - id: obs:volume:entity-milky-way
   name: Milky Way disk volume
   value: 7.9e+60
-  description: Disk volume implied by representative Milky Way radius and thickness.
+  description: Disk volume implied by representative Milky Way radius and thickness. Here the quantity refers to `disk volume`.
+  description_format: markdown
   summary_short: Disk volume implied by representative Milky Way radius and thickness.
-  description_medium: Disk volume implied by representative Milky Way radius and thickness.
+  description_medium: Disk volume implied by representative Milky Way radius and thickness. Here the quantity refers to `disk volume`.
   description_long: null
   hook: null
   caveats: null
@@ -990,9 +1039,10 @@ items:
 - id: obs:volume:entity-local-group
   name: Local Group volume
   value: 4.1e+68
-  description: Characteristic spherical volume of the Local Group.
+  description: Characteristic spherical volume of the Local Group. Derived using `(4/3)*pi*r^3`.
+  description_format: markdown
   summary_short: Characteristic spherical volume of the Local Group.
-  description_medium: Characteristic spherical volume of the Local Group.
+  description_medium: Characteristic spherical volume of the Local Group. Derived using `(4/3)*pi*r^3`.
   description_long: null
   hook: null
   caveats: null
@@ -1029,9 +1079,10 @@ items:
 - id: obs:volume:entity-virgo-supercluster
   name: Virgo Supercluster volume
   value: 4.2e+72
-  description: Characteristic spherical volume of the Virgo Supercluster.
+  description: Characteristic spherical volume of the Virgo Supercluster. Derived using `(4/3)*pi*r^3`.
+  description_format: markdown
   summary_short: Characteristic spherical volume of the Virgo Supercluster.
-  description_medium: Characteristic spherical volume of the Virgo Supercluster.
+  description_medium: Characteristic spherical volume of the Virgo Supercluster. Derived using `(4/3)*pi*r^3`.
   description_long: null
   hook: null
   caveats: null
@@ -1068,9 +1119,10 @@ items:
 - id: obs:volume:entity-universe
   name: Observable universe volume
   value: 3.57e+80
-  description: Volume of the observable universe treated as a sphere.
+  description: Volume of the observable universe treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
+  description_format: markdown
   summary_short: Volume of the observable universe treated as a sphere.
-  description_medium: Volume of the observable universe treated as a sphere.
+  description_medium: Volume of the observable universe treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
   description_long: null
   hook: null
   caveats: null

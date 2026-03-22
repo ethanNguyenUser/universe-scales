@@ -6,6 +6,8 @@ class UniversalScales {
         this.currentDimension = 'length';
         this.currentUnit = null;
         this.dimensionData = null;
+        this.dimensionCatalog = [];
+        this.dimensionCatalogBySlug = new Map();
         this.exchangeRates = null;
         this.notationMode = 'scientific'; // 'scientific', 'mathematical', 'human'
 
@@ -88,7 +90,10 @@ class UniversalScales {
         // Initialize plot renderer
         this.plot = new PlotRenderer(this);
 
-        // Set up URL management first
+        // Load dimension metadata before URL handling so the selector is populated dynamically
+        await this.loadDimensionCatalog();
+
+        // Set up URL management after the dimension selector exists
         this.setupURLManagement();
 
         // Initialize plot
@@ -104,6 +109,62 @@ class UniversalScales {
 
         // Load exchange rates for cost dimension
         await this.loadExchangeRates();
+    }
+
+    async loadDimensionCatalog() {
+        try {
+            const response = await fetch('exports/json/dimension_catalog.json');
+            if (!response.ok) {
+                return;
+            }
+            const catalog = await response.json();
+            if (!Array.isArray(catalog) || catalog.length === 0) {
+                return;
+            }
+            this.dimensionCatalog = catalog;
+            this.dimensionCatalogBySlug = new Map(catalog.map(entry => [entry.slug, entry]));
+            this.populateDimensionSelector(catalog);
+        } catch (error) {
+            console.warn('Falling back to static dimension selector:', error);
+        }
+    }
+
+    populateDimensionSelector(catalog) {
+        const available = catalog
+            .filter(entry => entry.available)
+            .sort((a, b) => {
+                const groupCompare = (a.frontend_group_label || '').localeCompare(b.frontend_group_label || '');
+                if (groupCompare !== 0) return groupCompare;
+                const orderCompare = (a.frontend_order || 1000) - (b.frontend_order || 1000);
+                if (orderCompare !== 0) return orderCompare;
+                return (a.name || '').localeCompare(b.name || '');
+            });
+
+        if (available.length === 0) {
+            return;
+        }
+
+        const groups = new Map();
+        for (const entry of available) {
+            const groupLabel = entry.frontend_group_label || 'Other';
+            if (!groups.has(groupLabel)) {
+                groups.set(groupLabel, []);
+            }
+            groups.get(groupLabel).push(entry);
+        }
+
+        this.dimensionSelect.innerHTML = '';
+        for (const [groupLabel, entries] of groups.entries()) {
+            const optgroup = document.createElement('optgroup');
+            optgroup.label = groupLabel;
+            for (const entry of entries) {
+                const option = document.createElement('option');
+                option.value = entry.slug;
+                option.textContent = entry.name;
+                optgroup.appendChild(option);
+            }
+            this.dimensionSelect.appendChild(optgroup);
+        }
     }
 
     setupEventListeners() {
@@ -418,7 +479,13 @@ class UniversalScales {
 
     async loadDimension(dimension) {
         try {
-            const response = await fetch(`data/${dimension}.yaml`);
+            let response = await fetch(`exports/frontend/${dimension}.yaml`);
+            if (!response.ok) {
+                response = await fetch(`data/${dimension}.yaml`);
+            }
+            if (!response.ok) {
+                throw new Error(`Missing dimension payload for ${dimension}`);
+            }
             const yamlText = await response.text();
             this.dimensionData = jsyaml.load(yamlText);
 
@@ -445,7 +512,7 @@ class UniversalScales {
                 : (this.dimensionData.dimension_description || '');
 
             if (dimensionDesc) {
-                this.dimensionDescription.innerHTML = this.renderMarkdown(dimensionDesc);
+                this.setRichText(this.dimensionDescription, dimensionDesc);
                 this.dimensionDescription.style.display = '';
             } else {
                 this.dimensionDescription.textContent = '';
@@ -594,8 +661,11 @@ class UniversalScales {
         }
 
         const descriptionElement = this.tooltip.querySelector('.tooltip-description');
-        if (item.description) {
-            descriptionElement.innerHTML = this.renderMarkdown(item.description);
+        const descriptionText = (this.tooltipPinned && item.description_long)
+            ? item.description_long
+            : (item.description_medium || item.description || item.summary_short || '');
+        if (descriptionText) {
+            this.setRichText(descriptionElement, descriptionText);
         } else {
             descriptionElement.textContent = '';
         }
@@ -1175,7 +1245,7 @@ class UniversalScales {
             : (unit.description || '');
 
         if (unitDesc) {
-            this.unitDescription.innerHTML = this.renderMarkdown(unitDesc);
+            this.setRichText(this.unitDescription, unitDesc);
             this.unitDescription.style.display = '';
         } else {
             this.unitDescription.textContent = '';
@@ -1183,28 +1253,57 @@ class UniversalScales {
         }
     }
 
+    setRichText(element, text) {
+        if (!element) return;
+        element.innerHTML = this.renderMarkdown(text);
+        this.typesetMath(element, text);
+    }
+
+    containsMath(text) {
+        if (!text) return false;
+        return /\$[^$]+\$|\\\(|\\\[/.test(text);
+    }
+
+    typesetMath(element, text) {
+        if (!this.containsMath(text)) return;
+        if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+            window.MathJax.typesetPromise([element]).catch(() => {
+                // Keep the rendered markdown even if math typesetting fails.
+            });
+        }
+    }
+
     /**
      * Render markdown-style text to HTML.
-     * Supports:
-     * - **bold** -> <strong>bold</strong>
-     * - [text](link) -> <a href="link">text</a>
      */
     renderMarkdown(text) {
         if (!text) return '';
 
-        // Escape HTML to prevent XSS, but preserve our markdown syntax
+        if (window.marked) {
+            const rawHtml = window.marked.parse(text, {
+                breaks: true,
+                gfm: true
+            });
+            if (window.DOMPurify) {
+                return window.DOMPurify.sanitize(rawHtml);
+            }
+            return rawHtml;
+        }
+
         let html = text
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
-
-        // Convert links: [text](url) -> <a href="url">text</a>
+        html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+        html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+        html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
         html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-
-        // Convert bold: **text** -> <strong>text</strong>
         html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-
-        return html;
+        html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+        html = html.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
+        html = html.replace(/\n{2,}/g, '</p><p>');
+        html = html.replace(/\n/g, '<br>');
+        return `<p>${html}</p>`;
     }
 
     async openImageModal(imagePath, itemName) {

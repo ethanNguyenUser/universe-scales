@@ -21,6 +21,7 @@ And can include:
 - `hook`
 - `caveats`
 - `facts`
+- `content_format`
 - `content_status`
 - `content_origin`
 

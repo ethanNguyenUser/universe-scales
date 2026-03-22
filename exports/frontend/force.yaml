@@ -1,0 +1,799 @@
+dimension: force
+base_unit: newtons
+dimension_description: Force quantifies how strongly an interaction changes motion or shape, linking directly to acceleration by Newton’s second law. In contact problems it is the agency behind pushes, pulls, and pressures; at a distance it expresses gravity and electromagnetism. Engineers budget forces to keep bridges stable and joints safe. Each entry below states the object and condition so the number is actionable, not abstract.
+related_resources: []
+show_limitations: true
+units:
+- conversion_factor: 1
+  description: The newton is the SI unit of force defined as the push that accelerates one kilogram by one meter per second squared. It ties dynamics directly to mass and motion. Using newtons keeps mechanical, fluid, and electromagnetic forces on a single scale. All item values are recorded in newtons before conversion.
+  name: newtons
+  symbol: N
+- conversion_factor: 0.224809
+  description: Pound force is the imperial unit equal to the weight of one pound mass in standard gravity. Many legacy specifications in the United States use it for loads and thrust. Converting to newtons makes comparisons across systems straightforward. The factor here assumes standard gravity for consistency.
+  name: pounds-force
+  symbol: lbf
+- conversion_factor: 0.101972
+  description: Kilogram force expresses the weight of a one kilogram mass under standard gravity, a convenient everyday yardstick. It persists in some fields because people intuit weights more easily than abstract newtons. The unit is not SI but converts cleanly. We include it to bridge intuition and calculation.
+  name: kilograms-force
+  symbol: kgf
+- name: kilonewtons
+  symbol: kN
+  conversion_factor: 0.001
+  description: Kilonewtons are useful for vehicles, structures, and engineering loads.
+- name: meganewtons
+  symbol: MN
+  conversion_factor: 1.0e-06
+  description: Meganewtons are useful for rocket thrust and large structural loads.
+- name: dynes
+  symbol: dyn
+  conversion_factor: 100000.0
+  description: Dynes are the cgs force unit still seen in older literature.
+required_min_items: 24
+preferred_target_items: 24
+preferred_max_items: 24
+selection_bin_count: 24
+description_format: markdown
+frontend_group: motion
+frontend_group_label: Motion & Mechanics
+frontend_order: 50
+items:
+- id: obs:force:scenario-force-molecular-force
+  name: Molecular Force
+  value: 1.0e-12
+  description: Intermolecular attractions in liquids and soft solids often manifest at piconewton scales per interacting pair. This is the regime probed by optical tweezers and single molecule experiments. Such forces set surface tension and viscosity that we experience in droplets and gels. The value represents a typical cohesive tug between nearby molecules.
+  description_format: markdown
+  summary_short: Intermolecular attractions in liquids and soft solids often manifest at piconewton scales per interacting pair.
+  description_medium: Intermolecular attractions in liquids and soft solids often manifest at piconewton scales per interacting pair. This is the regime probed by optical tweezers and single molecule experiments. Such forces set surface tension and viscosity that we experience in droplets and gels. The value represents a typical cohesive tug between nearby molecules.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Molecular Force
+  source: https://en.wikipedia.org/wiki/Intermolecular_force
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-intermolecular-force
+    url: https://en.wikipedia.org/wiki/Intermolecular_force
+    title: Intermolecular force
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-atomic-force
+  name: Atomic Force
+  value: 1.0e-09
+  description: Atomic force microscopy measures nanonewton level tipsurface forces as a cantilever skims a surface. The interaction includes van der Waals, electrostatic, and sometimes chemical bonding contributions. Mapping these tiny forces builds images one atom wide. The number here is a representative contact force in gentle AFM tapping mode.
+  description_format: markdown
+  summary_short: Atomic force microscopy measures nanonewton level tipsurface forces as a cantilever skims a surface.
+  description_medium: Atomic force microscopy measures nanonewton level tipsurface forces as a cantilever skims a surface. The interaction includes van der Waals, electrostatic, and sometimes chemical bonding contributions. Mapping these tiny forces builds images one atom wide. The number here is a representative contact force in gentle AFM tapping mode.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Atomic Force
+  source: https://en.wikipedia.org/wiki/Atomic_force_microscopy
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atomic-force-microscopy
+    url: https://en.wikipedia.org/wiki/Atomic_force_microscopy
+    title: Atomic force microscopy
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-solar-wind
+  name: Solar Wind
+  value: 1.0e-07
+  description: The solar wind imparts a minuscule steady force on a square meter of reflective sail near Earth. Over months this whisper builds real speed in deep space. Bright sunlight and high reflectivity maximize the small push. The number is the order of magnitude per square meter at 1 astronomical unit.
+  description_format: markdown
+  summary_short: The solar wind imparts a minuscule steady force on a square meter of reflective sail near Earth.
+  description_medium: The solar wind imparts a minuscule steady force on a square meter of reflective sail near Earth. Over months this whisper builds real speed in deep space. Bright sunlight and high reflectivity maximize the small push. The number is the order of magnitude per square meter at 1 astronomical unit.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Solar Wind
+  source: https://en.wikipedia.org/wiki/Solar_wind
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-solar-wind
+    url: https://en.wikipedia.org/wiki/Solar_wind
+    title: Solar wind
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-ant-force
+  name: Ant Force
+  value: 0.001
+  description: An ant’s leg can exert a millinewton scale force while carrying a crumb relative to its body mass. Leveraged by multiple legs the insect achieves impressive load fractions. The force per leg pulses with gait, not steady like a motor. This figure captures a single leg contact during a step.
+  description_format: markdown
+  summary_short: An ant’s leg can exert a millinewton scale force while carrying a crumb relative to its body mass.
+  description_medium: An ant’s leg can exert a millinewton scale force while carrying a crumb relative to its body mass. Leveraged by multiple legs the insect achieves impressive load fractions. The force per leg pulses with gait, not steady like a motor. This figure captures a single leg contact during a step.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Ant Force
+  source: https://en.wikipedia.org/wiki/Ant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ant
+    url: https://en.wikipedia.org/wiki/Ant
+    title: Ant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-keyboard-keypress
+  name: Keyboard Keypress
+  value: 0.5
+  description: Pressing a key on a mechanical keyboard often requires around this force at the finger pad at actuation. Human fingertips control such forces with high precision using tactile feedback. Prolonged work comfort depends on keeping this below fatigue thresholds. The number corresponds to medium switch springs.
+  description_format: markdown
+  summary_short: Pressing a key on a mechanical keyboard often requires around this force at the finger pad at actuation.
+  description_medium: Pressing a key on a mechanical keyboard often requires around this force at the finger pad at actuation. Human fingertips control such forces with high precision using tactile feedback. Prolonged work comfort depends on keeping this below fatigue thresholds. The number corresponds to medium switch springs.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Keyboard Keypress
+  source: https://en.wikipedia.org/wiki/Computer_keyboard
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-computer-keyboard
+    url: https://en.wikipedia.org/wiki/Computer_keyboard
+    title: Computer keyboard
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-cyclist-aerodynamic-drag
+  name: Cyclist Aerodynamic Drag
+  value: 30.0
+  description: The drag force on a cyclist at racing speed is a few tens of newtons and grows with speed squared. Aerobars and tight clothing shave newtons off this budget. Hills convert the problem into gravity dominated force instead. The value assumes flat road and no wind at 12 meters per second.
+  description_format: markdown
+  summary_short: The drag force on a cyclist at racing speed is a few tens of newtons and grows with speed squared.
+  description_medium: The drag force on a cyclist at racing speed is a few tens of newtons and grows with speed squared. Aerobars and tight clothing shave newtons off this budget. Hills convert the problem into gravity dominated force instead. The value assumes flat road and no wind at 12 meters per second.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Cyclist Aerodynamic Drag
+  source: https://en.wikipedia.org/wiki/Bicycle_performance
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bicycle-performance
+    url: https://en.wikipedia.org/wiki/Bicycle_performance
+    title: Bicycle performance
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-door-handle-pull
+  name: Door Handle Pull
+  value: 40.0
+  description: Opening a heavy door with a long handle needs only tens of newtons because torque gives leverage. Short knobs demand higher force for the same latch. Designers tune springs to balance child safety and accessibility. The number is typical for public building doors.
+  description_format: markdown
+  summary_short: Opening a heavy door with a long handle needs only tens of newtons because torque gives leverage.
+  description_medium: Opening a heavy door with a long handle needs only tens of newtons because torque gives leverage. Short knobs demand higher force for the same latch. Designers tune springs to balance child safety and accessibility. The number is typical for public building doors.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Door Handle Pull
+  source: https://en.wikipedia.org/wiki/Door_handle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-door-handle
+    url: https://en.wikipedia.org/wiki/Door_handle
+    title: Door handle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-handshake
+  name: Handshake
+  value: 50.0
+  description: A firm handshake produces a sustained grip force of this order per hand for an average adult. Social norms modulate it within a wide comfortable band. Force sensors show brief spikes at initial contact and release. The value is a steady mid portion, not the peak squeeze.
+  description_format: markdown
+  summary_short: A firm handshake produces a sustained grip force of this order per hand for an average adult.
+  description_medium: A firm handshake produces a sustained grip force of this order per hand for an average adult. Social norms modulate it within a wide comfortable band. Force sensors show brief spikes at initial contact and release. The value is a steady mid portion, not the peak squeeze.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Handshake
+  source: https://en.wikipedia.org/wiki/Handshake
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-handshake
+    url: https://en.wikipedia.org/wiki/Handshake
+    title: Handshake
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-bow-draw
+  name: Bow Draw
+  value: 300.0
+  description: Pulling a bowstring to full draw on a traditional longbow requires on this order of force at the fingers. Modern compound bows use cams to reduce peak hold. Archers condition grip and back muscles to manage the load smoothly. The value states the hold at anchor, not the initial pull.
+  description_format: markdown
+  summary_short: Pulling a bowstring to full draw on a traditional longbow requires on this order of force at the fingers.
+  description_medium: Pulling a bowstring to full draw on a traditional longbow requires on this order of force at the fingers. Modern compound bows use cams to reduce peak hold. Archers condition grip and back muscles to manage the load smoothly. The value states the hold at anchor, not the initial pull.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Bow Draw
+  source: https://en.wikipedia.org/wiki/Bow_(archery)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bow-archery
+    url: https://en.wikipedia.org/wiki/Bow_(archery)
+    title: Bow (archery)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-human-bite
+  name: Human Bite
+  value: 1000.0
+  description: Biting a carrot uses hundreds of newtons at the molars for a brief crush. Muscles generate the force through a lever system that trades distance for advantage. Diet and training affect peak values only modestly. The figure is an average adult bite under deliberate effort.
+  description_format: markdown
+  summary_short: Biting a carrot uses hundreds of newtons at the molars for a brief crush.
+  description_medium: Biting a carrot uses hundreds of newtons at the molars for a brief crush. Muscles generate the force through a lever system that trades distance for advantage. Diet and training affect peak values only modestly. The figure is an average adult bite under deliberate effort.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Human Bite
+  source: https://en.wikipedia.org/wiki/Bite_force_quotient
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bite-force-quotient
+    url: https://en.wikipedia.org/wiki/Bite_force_quotient
+    title: Bite force quotient
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-wind-force
+  name: Wind Force
+  value: 1000.0
+  description: A strong gust on a pedestrian exerts around a kilonewton of horizontal drag integrated over body area. Leaning and planting feet counters this to avoid slipping. Urban canyons can funnel and amplify such forces. The number matches a stormy day that turns umbrellas inside out.
+  description_format: markdown
+  summary_short: A strong gust on a pedestrian exerts around a kilonewton of horizontal drag integrated over body area.
+  description_medium: A strong gust on a pedestrian exerts around a kilonewton of horizontal drag integrated over body area. Leaning and planting feet counters this to avoid slipping. Urban canyons can funnel and amplify such forces. The number matches a stormy day that turns umbrellas inside out.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Wind Force
+  source: https://en.wikipedia.org/wiki/Wind
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wind
+    url: https://en.wikipedia.org/wiki/Wind
+    title: Wind
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-weight-lifter
+  name: Weight Lifter
+  value: 2000.0
+  description: A competitive weightlifter holding a 200 kilogram bar at rest supports roughly this downward force through the skeleton. The bar’s motion adds dynamic peaks beyond the static weight. Training centers design platforms and collars with these loads in mind. The figure quotes the sustained portion during a clean hold.
+  description_format: markdown
+  summary_short: A competitive weightlifter holding a 200 kilogram bar at rest supports roughly this downward force through the skeleton.
+  description_medium: A competitive weightlifter holding a 200 kilogram bar at rest supports roughly this downward force through the skeleton. The bar’s motion adds dynamic peaks beyond the static weight. Training centers design platforms and collars with these loads in mind. The figure quotes the sustained portion during a clean hold.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Weight Lifter
+  source: https://en.wikipedia.org/wiki/Weightlifting
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-weightlifting
+    url: https://en.wikipedia.org/wiki/Weightlifting
+    title: Weightlifting
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-car-brake
+  name: Car Brake
+  value: 3000.0
+  description: A typical car brake pedal can transmit a few kilonewtons to the hydraulic system when a driver stomps in an emergency. Booster systems scale the foot input to caliper clamping force. Anti lock control modulates it rapidly to keep traction. The number is a representative pedal to master cylinder load.
+  description_format: markdown
+  summary_short: A typical car brake pedal can transmit a few kilonewtons to the hydraulic system when a driver stomps in an emergency.
+  description_medium: A typical car brake pedal can transmit a few kilonewtons to the hydraulic system when a driver stomps in an emergency. Booster systems scale the foot input to caliper clamping force. Anti lock control modulates it rapidly to keep traction. The number is a representative pedal to master cylinder load.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Car Brake
+  source: https://en.wikipedia.org/wiki/Brake
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brake
+    url: https://en.wikipedia.org/wiki/Brake
+    title: Brake
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-jump-landing-peak
+  name: Jump Landing Peak
+  value: 4000.0
+  description: Ground reaction forces during a jump landing can spike to several times body weight over milliseconds, totaling thousands of newtons. Good shoes and bent knees stretch the impulse out in time. Force plates in sports labs measure these peaks to tune training. The figure quotes a single foot impact for an adult athlete.
+  description_format: markdown
+  summary_short: Ground reaction forces during a jump landing can spike to several times body weight over milliseconds, totaling thousands of newtons.
+  description_medium: Ground reaction forces during a jump landing can spike to several times body weight over milliseconds, totaling thousands of newtons. Good shoes and bent knees stretch the impulse out in time. Force plates in sports labs measure these peaks to tune training. The figure quotes a single foot impact for an adult athlete.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Jump Landing Peak
+  source: https://en.wikipedia.org/wiki/Ground_reaction_force
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ground-reaction-force
+    url: https://en.wikipedia.org/wiki/Ground_reaction_force
+    title: Ground reaction force
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-car-engine
+  name: Car Engine
+  value: 10000.0
+  description: The tractive push at the wheels of a compact car during strong acceleration totals around this many newtons. Engine torque, gear ratio, and tire radius all contribute. Traction limits, not engine power alone, cap the usable force. The value reflects a brief burst merging into traffic.
+  description_format: markdown
+  summary_short: The tractive push at the wheels of a compact car during strong acceleration totals around this many newtons.
+  description_medium: The tractive push at the wheels of a compact car during strong acceleration totals around this many newtons. Engine torque, gear ratio, and tire radius all contribute. Traction limits, not engine power alone, cap the usable force. The value reflects a brief burst merging into traffic.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Car Engine
+  source: https://en.wikipedia.org/wiki/Internal_combustion_engine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-internal-combustion-engine
+    url: https://en.wikipedia.org/wiki/Internal_combustion_engine
+    title: Internal combustion engine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-hydraulic-press
+  name: Hydraulic Press
+  value: 1000000.0
+  description: A shop hydraulic press concentrates input into a compressive force reaching about a meganewton on a small workpiece. Dies and fixtures must distribute it to avoid cracking. Safety cages exist because stored energy can release abruptly. The number is a practical mid size press capacity.
+  description_format: markdown
+  summary_short: A shop hydraulic press concentrates input into a compressive force reaching about a meganewton on a small workpiece.
+  description_medium: A shop hydraulic press concentrates input into a compressive force reaching about a meganewton on a small workpiece. Dies and fixtures must distribute it to avoid cracking. Safety cages exist because stored energy can release abruptly. The number is a practical mid size press capacity.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Hydraulic Press
+  source: https://en.wikipedia.org/wiki/Hydraulic_press
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydraulic-press
+    url: https://en.wikipedia.org/wiki/Hydraulic_press
+    title: Hydraulic press
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-crane
+  name: Crane
+  value: 10000000.0
+  description: A tower crane can lift loads with cable tensions summing to this many newtons without overstress. Operators derate with radius because torque at the mast grows with reach. Wind side loads add vector components that must be considered. The figure is a round number for heavy picks at close radius.
+  description_format: markdown
+  summary_short: A tower crane can lift loads with cable tensions summing to this many newtons without overstress.
+  description_medium: A tower crane can lift loads with cable tensions summing to this many newtons without overstress. Operators derate with radius because torque at the mast grows with reach. Wind side loads add vector components that must be considered. The figure is a round number for heavy picks at close radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Crane
+  source: https://en.wikipedia.org/wiki/Crane_(machine)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-crane-machine
+    url: https://en.wikipedia.org/wiki/Crane_(machine)
+    title: Crane (machine)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-rocket-thrust
+  name: Rocket Thrust
+  value: 10000000.0
+  description: The thrust of a large rocket engine cluster during liftoff sums to about ten meganewtons. This overcomes weight and provides margin to climb. Nozzles and turbopumps channel enormous mass flow to produce it. The number places human launch capability on a single line.
+  description_format: markdown
+  summary_short: The thrust of a large rocket engine cluster during liftoff sums to about ten meganewtons.
+  description_medium: The thrust of a large rocket engine cluster during liftoff sums to about ten meganewtons. This overcomes weight and provides margin to climb. Nozzles and turbopumps channel enormous mass flow to produce it. The number places human launch capability on a single line.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Rocket Thrust
+  source: https://en.wikipedia.org/wiki/Rocket_engine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rocket-engine
+    url: https://en.wikipedia.org/wiki/Rocket_engine
+    title: Rocket engine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-tidal-force
+  name: Tidal Force
+  value: 1.0e+18
+  description: Tidal forces stretching Earth arise from the Moon and Sun acting across the planet’s diameter. The integrated effect lifts oceans by meters despite small per kilogram forces. Engineers consider tides when scheduling marine operations. The value here is an effective global scale force budget, illustrative rather than local.
+  description_format: markdown
+  summary_short: Tidal forces stretching Earth arise from the Moon and Sun acting across the planet’s diameter.
+  description_medium: Tidal forces stretching Earth arise from the Moon and Sun acting across the planet’s diameter. The integrated effect lifts oceans by meters despite small per kilogram forces. Engineers consider tides when scheduling marine operations. The value here is an effective global scale force budget, illustrative rather than local.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Tidal Force
+  source: https://en.wikipedia.org/wiki/Tidal_force
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tidal-force
+    url: https://en.wikipedia.org/wiki/Tidal_force
+    title: Tidal force
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-black-hole
+  name: Black Hole
+  value: 1.0e+30
+  description: Near a black hole event horizon, gradients in gravity create extreme tidal forces on extended objects. Over short lengths the force difference can exceed anything materials can bear. Astronomers model these fields without touching them. The number is a conceptual scale, not a laboratory measurement.
+  description_format: markdown
+  summary_short: Near a black hole event horizon, gradients in gravity create extreme tidal forces on extended objects.
+  description_medium: Near a black hole event horizon, gradients in gravity create extreme tidal forces on extended objects. Over short lengths the force difference can exceed anything materials can bear. Astronomers model these fields without touching them. The number is a conceptual scale, not a laboratory measurement.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Black Hole
+  source: https://en.wikipedia.org/wiki/Black_hole
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-black-hole
+    url: https://en.wikipedia.org/wiki/Black_hole
+    title: Black hole
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

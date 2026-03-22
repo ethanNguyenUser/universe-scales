@@ -33,6 +33,7 @@ EXPORT_SQLITE_DIR = EXPORTS_DIR / "sqlite"
 EXPORT_JSON_DIR = EXPORTS_DIR / "json"
 EXPORT_FRONTEND_DIR = EXPORTS_DIR / "frontend"
 DIMENSIONS_EXPORT_DIR = EXPORT_JSON_DIR / "dimensions"
+DIMENSION_CATALOG_EXPORT_PATH = EXPORT_JSON_DIR / "dimension_catalog.json"
 CANONICAL_DB_PATH = DATASET_DIR / "universe_scales.sqlite"
 SQLITE_EXPORT_PATH = EXPORT_SQLITE_DIR / "universe_scales.sqlite"
 WRITER_PACKET_EXPORT_PATH = EXPORT_JSON_DIR / "writer_packets.jsonl"
@@ -196,6 +197,10 @@ class DatasetBuilder:
                 quantity_kind TEXT,
                 stable_flag INTEGER NOT NULL,
                 description TEXT,
+                description_format TEXT NOT NULL DEFAULT 'markdown',
+                frontend_group TEXT,
+                frontend_group_label TEXT,
+                frontend_order INTEGER NOT NULL DEFAULT 1000,
                 required_min_items INTEGER NOT NULL DEFAULT 24,
                 preferred_target_items INTEGER NOT NULL DEFAULT 24,
                 preferred_max_items INTEGER NOT NULL DEFAULT 24,
@@ -246,6 +251,7 @@ class DatasetBuilder:
                 observation_id TEXT NOT NULL UNIQUE REFERENCES observations(id),
                 content_origin TEXT NOT NULL,
                 content_status TEXT NOT NULL,
+                content_format TEXT NOT NULL DEFAULT 'markdown',
                 summary_short TEXT,
                 description_medium TEXT,
                 description_long TEXT,
@@ -318,6 +324,24 @@ class DatasetBuilder:
             "selection_bin_count": max(1, selection_bin_count),
         }
 
+    def dimension_profile(self, slug: str) -> dict[str, Any]:
+        return deepcopy(self.raw_catalog.dimension_profiles.get(slug, {}))
+
+    def dimension_name(self, slug: str, fallback: str) -> str:
+        profile = self.dimension_profile(slug)
+        return str(profile.get("name") or fallback)
+
+    def merge_units(self, slug: str, units: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        merged: list[dict[str, Any]] = []
+        seen_names: set[str] = set()
+        for unit in units + list(self.dimension_profile(slug).get("extra_units", [])):
+            unit_name = str(unit["name"]).strip().lower()
+            if unit_name in seen_names:
+                continue
+            seen_names.add(unit_name)
+            merged.append(deepcopy(unit))
+        return merged
+
     def upsert_dimension(
         self,
         slug: str,
@@ -330,15 +354,21 @@ class DatasetBuilder:
         units: list[dict[str, Any]],
         export_meta: dict[str, Any],
         preferences: dict[str, int],
+        profile: dict[str, Any],
     ) -> str:
         dimension_id = f"dim:{slug}"
+        description_format = str(profile.get("description_format", "markdown"))
+        frontend_group = profile.get("frontend_group")
+        frontend_group_label = profile.get("frontend_group_label")
+        frontend_order = int(profile.get("frontend_order", 1000))
         self.db.execute(
             """
             INSERT OR REPLACE INTO dimensions (
                 id, slug, name, base_unit, quantity_kind, stable_flag, description,
+                description_format, frontend_group, frontend_group_label, frontend_order,
                 required_min_items, preferred_target_items, preferred_max_items, selection_bin_count
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 dimension_id,
@@ -348,6 +378,10 @@ class DatasetBuilder:
                 quantity_kind,
                 1 if stable_flag else 0,
                 description,
+                description_format,
+                frontend_group,
+                frontend_group_label,
+                frontend_order,
                 preferences["required_min_items"],
                 preferences["preferred_target_items"],
                 preferences["preferred_max_items"],
@@ -375,12 +409,20 @@ class DatasetBuilder:
 
         export_payload = deepcopy(export_meta)
         export_payload.update(preferences)
+        export_payload["description_format"] = description_format
+        export_payload["frontend_group"] = frontend_group
+        export_payload["frontend_group_label"] = frontend_group_label
+        export_payload["frontend_order"] = frontend_order
         self.dimension_export_meta[slug] = export_payload
         self.dimension_lookup[slug] = {
             "id": dimension_id,
             "slug": slug,
             "name": name,
             "base_unit": base_unit,
+            "description_format": description_format,
+            "frontend_group": frontend_group,
+            "frontend_group_label": frontend_group_label,
+            "frontend_order": frontend_order,
             **preferences,
         }
         return dimension_id
@@ -389,8 +431,9 @@ class DatasetBuilder:
         for yaml_path in sorted(self.legacy_source_dir().glob("*.yaml")):
             payload = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
             slug = payload["dimension"]
+            profile = self.dimension_profile(slug)
             quantity_kind = slug.replace("-", "_")
-            units = payload.get("units") or [
+            base_units = payload.get("units") or [
                 {
                     "name": payload["base_unit"],
                     "symbol": payload["base_unit"],
@@ -398,6 +441,7 @@ class DatasetBuilder:
                     "description": f"Canonical base unit for {slug}.",
                 }
             ]
+            units = self.merge_units(slug, base_units)
             preferences = self.dimension_preferences(slug)
             export_meta = {
                 "dimension": slug,
@@ -409,7 +453,7 @@ class DatasetBuilder:
             }
             dimension_id = self.upsert_dimension(
                 slug,
-                name=slug.replace("-", " ").title(),
+                name=self.dimension_name(slug, slug.replace("-", " ").title()),
                 base_unit=payload["base_unit"],
                 quantity_kind=quantity_kind,
                 stable_flag=True,
@@ -417,6 +461,7 @@ class DatasetBuilder:
                 units=units,
                 export_meta=export_meta,
                 preferences=preferences,
+                profile=profile,
             )
             source_id = self.ensure_source(
                 url=f"repo://{yaml_path.relative_to(ROOT)}",
@@ -471,6 +516,8 @@ class DatasetBuilder:
             label=name,
             default_summary=summary,
             default_description=summary,
+            value_type=value_type,
+            qualifiers=qualifiers,
             default_origin=f"legacy_seed:{yaml_path.relative_to(ROOT)}",
             facts={
                 "ingest_source": str(yaml_path.relative_to(ROOT)),
@@ -518,24 +565,27 @@ class DatasetBuilder:
 
     def import_new_dimensions(self) -> None:
         for slug, payload in self.raw_catalog.dimension_catalog.items():
+            profile = self.dimension_profile(slug)
             preferences = self.dimension_preferences(slug)
+            units = self.merge_units(slug, deepcopy(payload["units"]))
             self.upsert_dimension(
                 slug,
-                name=payload["name"],
+                name=self.dimension_name(slug, payload["name"]),
                 base_unit=payload["base_unit"],
                 quantity_kind=payload["quantity_kind"],
                 stable_flag=bool(payload["stable_flag"]),
                 description=payload["dimension_description"],
-                units=deepcopy(payload["units"]),
+                units=units,
                 export_meta={
                     "dimension": slug,
                     "base_unit": payload["base_unit"],
                     "dimension_description": payload["dimension_description"],
                     "related_resources": deepcopy(payload["related_resources"]),
                     "show_limitations": payload["show_limitations"],
-                    "units": deepcopy(payload["units"]),
+                    "units": units,
                 },
                 preferences=preferences,
+                profile=profile,
             )
 
     def import_curated_observations(self) -> None:
@@ -559,6 +609,8 @@ class DatasetBuilder:
                 label=str(payload["canonical_name"]),
                 default_summary=summary,
                 default_description=summary,
+                value_type=str(payload["value_type"]),
+                qualifiers=deepcopy(payload.get("qualifiers", {})),
                 default_origin=f"curated_seed:{payload['_raw_path']}",
                 facts={
                     "ingest_source": payload["_raw_path"],
@@ -723,6 +775,33 @@ class DatasetBuilder:
             candidate = f"{base}:{counter}"
         return candidate
 
+    def augment_default_description(self, base_text: str, value_type: str, qualifiers: dict[str, Any]) -> str:
+        text = " ".join((base_text or "").split())
+        if not text:
+            text = ""
+
+        notes: list[str] = []
+        measurement = qualifiers.get("measurement")
+        derivation = qualifiers.get("derivation")
+        assumption = qualifiers.get("assumption")
+
+        if value_type == "derived" and derivation:
+            notes.append(f"Derived using `{derivation}`.")
+        elif derivation:
+            notes.append(f"Computed using `{derivation}`.")
+
+        if measurement and f"`{measurement}`" not in text and f" {measurement}" not in text:
+            notes.append(f"Here the quantity refers to `{measurement}`.")
+
+        if assumption:
+            notes.append(f"Assumes `{assumption}`.")
+
+        if not notes:
+            return text
+        if text and not text.endswith((".", "!", "?")):
+            text = f"{text}."
+        return f"{text} {' '.join(notes)}".strip()
+
     def resolve_content_seed(
         self,
         *,
@@ -731,6 +810,8 @@ class DatasetBuilder:
         label: str,
         default_summary: str,
         default_description: str,
+        value_type: str,
+        qualifiers: dict[str, Any],
         default_origin: str,
         facts: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
@@ -739,7 +820,11 @@ class DatasetBuilder:
             override = self.content_overrides_by_label.get((dimension_slug, label))
 
         summary_short = str((override or {}).get("summary_short") or first_sentence(default_summary or label))
-        description_medium = str((override or {}).get("description_medium") or default_description or summary_short)
+        description_medium = str(
+            (override or {}).get("description_medium")
+            or self.augment_default_description(default_description or summary_short, value_type, qualifiers)
+            or summary_short
+        )
         description_long = (override or {}).get("description_long")
         hook = (override or {}).get("hook")
         caveats = (override or {}).get("caveats")
@@ -754,6 +839,7 @@ class DatasetBuilder:
         return {
             "content_origin": content_origin,
             "content_status": content_status,
+            "content_format": str((override or {}).get("content_format") or "markdown"),
             "summary_short": summary_short,
             "description_medium": description_medium,
             "description_long": description_long,
@@ -816,16 +902,17 @@ class DatasetBuilder:
         self.db.execute(
             """
             INSERT INTO observation_content (
-                id, observation_id, content_origin, content_status, summary_short,
+                id, observation_id, content_origin, content_status, content_format, summary_short,
                 description_medium, description_long, hook, caveats, facts_json
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 content_id,
                 observation_id,
                 content["content_origin"],
                 content["content_status"],
+                content["content_format"],
                 content["summary_short"],
                 content["description_medium"],
                 content.get("description_long"),
@@ -1202,6 +1289,7 @@ class DatasetBuilder:
         self.db.execute("VACUUM")
         shutil.copyfile(CANONICAL_DB_PATH, SQLITE_EXPORT_PATH)
         self.export_subjects_jsonl()
+        self.export_dimension_catalog()
         self.export_observations_jsonl()
         self.export_observation_content_jsonl()
         self.export_writer_packets()
@@ -1219,6 +1307,89 @@ class DatasetBuilder:
                 payload["aliases"] = json.loads(payload.pop("aliases_json"))
                 handle.write(json.dumps(payload, sort_keys=True) + "\n")
 
+    def export_dimension_catalog(self) -> None:
+        dimension_rows = self.db.execute(
+            """
+            SELECT
+                d.slug,
+                d.name,
+                d.base_unit,
+                d.quantity_kind,
+                d.description,
+                d.description_format,
+                d.frontend_group,
+                d.frontend_group_label,
+                d.frontend_order,
+                d.required_min_items,
+                d.preferred_target_items,
+                d.preferred_max_items,
+                d.selection_bin_count,
+                COUNT(o.id) AS observation_count,
+                SUM(CASE WHEN o.display_eligible = 1 THEN 1 ELSE 0 END) AS candidate_count,
+                SUM(CASE WHEN o.rationale IS NOT NULL THEN 1 ELSE 0 END) AS selected_count
+              FROM dimensions d
+              LEFT JOIN observations o ON o.dimension_id = d.id
+             GROUP BY d.id
+             ORDER BY d.frontend_group_label, d.frontend_order, d.slug
+            """
+        ).fetchall()
+        available_by_slug = {row["slug"]: dict(row) for row in dimension_rows}
+        catalog: list[dict[str, Any]] = []
+
+        for slug, profile in self.raw_catalog.dimension_profiles.items():
+            row = available_by_slug.get(slug)
+            catalog.append(
+                {
+                    "slug": slug,
+                    "name": profile.get("name") or (row["name"] if row else slug.replace("-", " ").title()),
+                    "frontend_group": profile.get("frontend_group") or (row["frontend_group"] if row else None),
+                    "frontend_group_label": profile.get("frontend_group_label") or (row["frontend_group_label"] if row else None),
+                    "frontend_order": int(profile.get("frontend_order", row["frontend_order"] if row else 1000)),
+                    "status": profile.get("status") or ("available" if row else "planned"),
+                    "available": row is not None,
+                    "base_unit": row["base_unit"] if row else None,
+                    "quantity_kind": row["quantity_kind"] if row else None,
+                    "description": row["description"] if row else None,
+                    "description_format": row["description_format"] if row else "markdown",
+                    "observation_count": int(row["observation_count"] or 0) if row else 0,
+                    "candidate_count": int(row["candidate_count"] or 0) if row else 0,
+                    "selected_count": int(row["selected_count"] or 0) if row else 0,
+                    "required_min_items": int(row["required_min_items"]) if row else None,
+                    "preferred_target_items": int(row["preferred_target_items"]) if row else None,
+                    "preferred_max_items": int(row["preferred_max_items"]) if row else None,
+                    "selection_bin_count": int(row["selection_bin_count"]) if row else None,
+                }
+            )
+
+        for slug, row in available_by_slug.items():
+            if slug in self.raw_catalog.dimension_profiles:
+                continue
+            catalog.append(
+                {
+                    "slug": slug,
+                    "name": row["name"],
+                    "frontend_group": row["frontend_group"],
+                    "frontend_group_label": row["frontend_group_label"],
+                    "frontend_order": int(row["frontend_order"]),
+                    "status": "available",
+                    "available": True,
+                    "base_unit": row["base_unit"],
+                    "quantity_kind": row["quantity_kind"],
+                    "description": row["description"],
+                    "description_format": row["description_format"],
+                    "observation_count": int(row["observation_count"] or 0),
+                    "candidate_count": int(row["candidate_count"] or 0),
+                    "selected_count": int(row["selected_count"] or 0),
+                    "required_min_items": int(row["required_min_items"]),
+                    "preferred_target_items": int(row["preferred_target_items"]),
+                    "preferred_max_items": int(row["preferred_max_items"]),
+                    "selection_bin_count": int(row["selection_bin_count"]),
+                }
+            )
+
+        catalog.sort(key=lambda entry: (entry["frontend_group_label"] or "", entry["frontend_order"], entry["name"]))
+        DIMENSION_CATALOG_EXPORT_PATH.write_text(json.dumps(catalog, indent=2, sort_keys=True), encoding="utf-8")
+
     def export_observations_jsonl(self) -> None:
         rows = self.db.execute(
             """
@@ -1231,6 +1402,7 @@ class DatasetBuilder:
                 sub.wikidata_qid,
                 oc.content_origin,
                 oc.content_status,
+                oc.content_format,
                 oc.summary_short,
                 oc.description_medium,
                 oc.description_long,
@@ -1300,6 +1472,7 @@ class DatasetBuilder:
                 d.name AS dimension_name,
                 d.base_unit,
                 d.quantity_kind,
+                d.description_format,
                 d.required_min_items,
                 d.preferred_target_items,
                 d.preferred_max_items,
@@ -1309,6 +1482,7 @@ class DatasetBuilder:
                 sub.wikidata_qid,
                 oc.content_origin,
                 oc.content_status,
+                oc.content_format,
                 oc.summary_short,
                 oc.description_medium,
                 oc.description_long,
@@ -1342,6 +1516,7 @@ class DatasetBuilder:
                             "name": row["dimension_name"],
                             "base_unit": row["base_unit"],
                             "quantity_kind": row["quantity_kind"],
+                            "description_format": row["description_format"],
                             "required_min_items": row["required_min_items"],
                             "preferred_target_items": row["preferred_target_items"],
                             "preferred_max_items": row["preferred_max_items"],
@@ -1366,6 +1541,7 @@ class DatasetBuilder:
                         "content": {
                             "content_origin": row["content_origin"],
                             "content_status": row["content_status"],
+                            "content_format": row["content_format"],
                             "summary_short": row["summary_short"],
                             "description_medium": row["description_medium"],
                             "description_long": row["description_long"],
@@ -1408,9 +1584,7 @@ class DatasetBuilder:
         }
 
     def export_dimension_json(self) -> None:
-        for slug in self.flagship_dimensions:
-            if slug not in self.dimension_lookup:
-                continue
+        for slug in self.export_dimension_slugs():
             payload = deepcopy(self.dimension_export_meta[slug])
             payload["items"] = self.fetch_selected_dimension_items(slug)
             payload["coverage_report"] = self.coverage_report.get(slug, {})
@@ -1418,9 +1592,7 @@ class DatasetBuilder:
             output.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
 
     def export_frontend_yaml(self) -> None:
-        for slug in self.flagship_dimensions:
-            if slug not in self.dimension_lookup:
-                continue
+        for slug in self.export_dimension_slugs():
             payload = deepcopy(self.dimension_export_meta[slug])
             payload["items"] = self.fetch_selected_dimension_items(slug)
             export_path = EXPORT_FRONTEND_DIR / f"{slug}.yaml"
@@ -1428,16 +1600,38 @@ class DatasetBuilder:
                 yaml.safe_dump(payload, sort_keys=False, allow_unicode=True, width=1000),
                 encoding="utf-8",
             )
-            shutil.copyfile(export_path, ROOT / "data" / f"{slug}.yaml")
+            if slug in self.flagship_dimensions:
+                shutil.copyfile(export_path, ROOT / "data" / f"{slug}.yaml")
 
-    def fetch_selected_dimension_items(self, slug: str) -> list[dict[str, Any]]:
+    def export_dimension_slugs(self) -> list[str]:
         rows = self.db.execute(
             """
+            SELECT slug
+              FROM dimensions
+             ORDER BY frontend_group_label, frontend_order, slug
+            """
+        ).fetchall()
+        return [str(row["slug"]) for row in rows]
+
+    def fetch_selected_dimension_items(self, slug: str) -> list[dict[str, Any]]:
+        selected_count = self.db.execute(
+            """
+            SELECT COUNT(*) AS count
+              FROM observations o
+              JOIN dimensions d ON d.id = o.dimension_id
+             WHERE d.slug = ? AND o.rationale IS NOT NULL
+            """,
+            (slug,),
+        ).fetchone()["count"]
+        filter_sql = "o.rationale IS NOT NULL" if selected_count else "o.display_eligible = 1"
+        rows = self.db.execute(
+            f"""
             SELECT
                 o.*,
                 sub.canonical_name,
                 sub.wikidata_qid,
                 oc.content_status,
+                oc.content_format,
                 oc.summary_short,
                 oc.description_medium,
                 oc.description_long,
@@ -1448,7 +1642,7 @@ class DatasetBuilder:
               JOIN dimensions d ON d.id = o.dimension_id
               JOIN subjects sub ON sub.id = o.subject_id
               LEFT JOIN observation_content oc ON oc.observation_id = o.id
-             WHERE d.slug = ? AND o.rationale IS NOT NULL
+             WHERE d.slug = ? AND {filter_sql}
              ORDER BY o.value_base, o.id
             """,
             (slug,),
@@ -1465,6 +1659,7 @@ class DatasetBuilder:
                     "name": row["label"],
                     "value": row["value_base"],
                     "description": description_medium,
+                    "description_format": row["content_format"] or "markdown",
                     "summary_short": row["summary_short"],
                     "description_medium": description_medium,
                     "description_long": row["description_long"],

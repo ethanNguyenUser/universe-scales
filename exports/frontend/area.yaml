@@ -28,17 +28,34 @@ units:
   description: Acres are widely used in land records and real estate.
   name: acres
   symbol: ac
+- name: square millimeters
+  symbol: mm^2
+  conversion_factor: 1000000.0
+  description: Square millimeters are useful for apertures, wounds, and machining.
+- name: square feet
+  symbol: ft^2
+  conversion_factor: 10.7639104167
+  description: Square feet are a familiar unit for room and building floor area.
+- name: square miles
+  symbol: mi^2
+  conversion_factor: 3.8610215854e-07
+  description: Square miles are useful for large land and regional areas.
 required_min_items: 24
 preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
+description_format: markdown
+frontend_group: geometry
+frontend_group_label: Geometry & Scale
+frontend_order: 60
 items:
 - id: obs:area:entity-proton
   name: Proton cross-section
   value: 2.2e-30
-  description: Characteristic geometric cross-section implied by the proton charge radius.
+  description: Characteristic geometric cross-section implied by the proton charge radius. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_format: markdown
   summary_short: Characteristic geometric cross-section implied by the proton charge radius.
-  description_medium: Characteristic geometric cross-section implied by the proton charge radius.
+  description_medium: Characteristic geometric cross-section implied by the proton charge radius. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
   description_long: null
   hook: null
   caveats: null
@@ -75,9 +92,10 @@ items:
 - id: obs:area:entity-water
   name: Water molecule cross-section
   value: 5.9e-20
-  description: Characteristic molecular cross-section of a water molecule.
+  description: Characteristic molecular cross-section of a water molecule. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_format: markdown
   summary_short: Characteristic molecular cross-section of a water molecule.
-  description_medium: Characteristic molecular cross-section of a water molecule.
+  description_medium: Characteristic molecular cross-section of a water molecule. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
   description_long: null
   hook: null
   caveats: null
@@ -114,9 +132,10 @@ items:
 - id: obs:area:entity-dna
   name: DNA helix cross-section
   value: 3.1e-18
-  description: Cross-sectional area of the DNA double helix using a 2 nm diameter.
+  description: Cross-sectional area of the DNA double helix using a 2 nm diameter. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_format: markdown
   summary_short: Cross-sectional area of the DNA double helix using a 2 nm diameter.
-  description_medium: Cross-sectional area of the DNA double helix using a 2 nm diameter.
+  description_medium: Cross-sectional area of the DNA double helix using a 2 nm diameter. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
   description_long: null
   hook: null
   caveats: null
@@ -153,9 +172,10 @@ items:
 - id: obs:area:entity-influenza-virus
   name: Influenza virion surface area
   value: 4.5e-14
-  description: Approximate surface area of a spherical influenza virion.
+  description: Approximate surface area of a spherical influenza virion. Derived using `4*pi*r^2`.
+  description_format: markdown
   summary_short: Approximate surface area of a spherical influenza virion.
-  description_medium: Approximate surface area of a spherical influenza virion.
+  description_medium: Approximate surface area of a spherical influenza virion. Derived using `4*pi*r^2`.
   description_long: null
   hook: null
   caveats: null
@@ -193,6 +213,7 @@ items:
   name: Red blood cell surface area
   value: 1.4e-10
   description: Characteristic membrane surface area of a red blood cell.
+  description_format: markdown
   summary_short: Characteristic membrane surface area of a red blood cell.
   description_medium: Characteristic membrane surface area of a red blood cell.
   description_long: null
@@ -230,9 +251,10 @@ items:
 - id: obs:area:scenario-grain-of-sand-surface
   name: Grain of sand surface area
   value: 3.0e-06
-  description: Surface area of a representative 1 mm sand grain treated as a sphere.
+  description: Surface area of a representative 1 mm sand grain treated as a sphere. Derived using `4*pi*r^2`. Here the quantity refers to `surface area`.
+  description_format: markdown
   summary_short: Surface area of a representative 1 mm sand grain treated as a sphere.
-  description_medium: Surface area of a representative 1 mm sand grain treated as a sphere.
+  description_medium: Surface area of a representative 1 mm sand grain treated as a sphere. Derived using `4*pi*r^2`. Here the quantity refers to `surface area`.
   description_long: null
   hook: null
   caveats: null
@@ -269,9 +291,10 @@ items:
 - id: obs:area:scenario-postage-stamp
   name: Postage stamp face area
   value: 0.0004
-  description: Front-face area of a representative postage stamp.
+  description: Front-face area of a representative postage stamp. Here the quantity refers to `rectangular face area`.
+  description_format: markdown
   summary_short: Front-face area of a representative postage stamp.
-  description_medium: Front-face area of a representative postage stamp.
+  description_medium: Front-face area of a representative postage stamp. Here the quantity refers to `rectangular face area`.
   description_long: null
   hook: null
   caveats: null
@@ -307,9 +330,10 @@ items:
 - id: obs:area:scenario-credit-card
   name: Credit card face area
   value: 0.004998
-  description: Front-face area of an ISO ID-1 payment card.
+  description: Front-face area of an ISO ID-1 payment card. Here the quantity refers to `rectangular face area`.
+  description_format: markdown
   summary_short: Front-face area of an ISO ID-1 payment card.
-  description_medium: Front-face area of an ISO ID-1 payment card.
+  description_medium: Front-face area of an ISO ID-1 payment card. Here the quantity refers to `rectangular face area`.
   description_long: null
   hook: null
   caveats: null
@@ -346,6 +370,7 @@ items:
   name: Smartphone screen area
   value: 0.011
   description: Representative active display area of a modern smartphone.
+  description_format: markdown
   summary_short: Representative active display area of a modern smartphone.
   description_medium: Representative active display area of a modern smartphone.
   description_long: null
@@ -383,9 +408,10 @@ items:
 - id: obs:area:scenario-a4-paper
   name: A4 sheet area
   value: 0.0624
-  description: Area of one A4 sheet of paper.
+  description: Area of one A4 sheet of paper. Here the quantity refers to `sheet area`.
+  description_format: markdown
   summary_short: Area of one A4 sheet of paper.
-  description_medium: Area of one A4 sheet of paper.
+  description_medium: Area of one A4 sheet of paper. Here the quantity refers to `sheet area`.
   description_long: null
   hook: null
   caveats: null
@@ -422,6 +448,7 @@ items:
   name: Human skin area
   value: 1.7
   description: Representative total skin surface area of an adult human.
+  description_format: markdown
   summary_short: Representative total skin surface area of an adult human.
   description_medium: Representative total skin surface area of an adult human.
   description_long: null
@@ -460,6 +487,7 @@ items:
   name: Parking space
   value: 12.5
   description: Representative footprint area of one parking space.
+  description_format: markdown
   summary_short: Representative footprint area of one parking space.
   description_medium: Representative footprint area of one parking space.
   description_long: null
@@ -498,6 +526,7 @@ items:
   name: Tennis court
   value: 260.9
   description: Total doubles court area including playing surface.
+  description_format: markdown
   summary_short: Total doubles court area including playing surface.
   description_medium: Total doubles court area including playing surface.
   description_long: null
@@ -535,9 +564,10 @@ items:
 - id: obs:area:scenario-football-field
   name: American football field
   value: 5351.0
-  description: Total area of a 120 by 53 1/3 yard American football field.
+  description: Total area of a 120 by 53 1/3 yard American football field. Here the quantity refers to `field area including end zones`.
+  description_format: markdown
   summary_short: Total area of a 120 by 53 1/3 yard American football field.
-  description_medium: Total area of a 120 by 53 1/3 yard American football field.
+  description_medium: Total area of a 120 by 53 1/3 yard American football field. Here the quantity refers to `field area including end zones`.
   description_long: null
   hook: null
   caveats: null
@@ -573,9 +603,10 @@ items:
 - id: obs:area:entity-manhattan
   name: Manhattan
   value: 59100000.0
-  description: Land area of Manhattan.
+  description: Land area of Manhattan. Here the quantity refers to `land area`.
+  description_format: markdown
   summary_short: Land area of Manhattan.
-  description_medium: Land area of Manhattan.
+  description_medium: Land area of Manhattan. Here the quantity refers to `land area`.
   description_long: null
   hook: null
   caveats: null
@@ -611,9 +642,10 @@ items:
 - id: obs:area:entity-lake-tahoe
   name: Lake Tahoe surface
   value: 496000000.0
-  description: Surface area of Lake Tahoe.
+  description: Surface area of Lake Tahoe. Here the quantity refers to `surface area`.
+  description_format: markdown
   summary_short: Surface area of Lake Tahoe.
-  description_medium: Surface area of Lake Tahoe.
+  description_medium: Surface area of Lake Tahoe. Here the quantity refers to `surface area`.
   description_long: null
   hook: null
   caveats: null
@@ -649,9 +681,10 @@ items:
 - id: obs:area:entity-rhode-island
   name: Rhode Island
   value: 4000000000.0
-  description: Land area of the state of Rhode Island.
+  description: Land area of the state of Rhode Island. Here the quantity refers to `land area`.
+  description_format: markdown
   summary_short: Land area of the state of Rhode Island.
-  description_medium: Land area of the state of Rhode Island.
+  description_medium: Land area of the state of Rhode Island. Here the quantity refers to `land area`.
   description_long: null
   hook: null
   caveats: null
@@ -687,9 +720,10 @@ items:
 - id: obs:area:entity-caspian-sea
   name: Caspian Sea surface
   value: 371000000000.0
-  description: Surface area of the Caspian Sea.
+  description: Surface area of the Caspian Sea. Here the quantity refers to `surface area`.
+  description_format: markdown
   summary_short: Surface area of the Caspian Sea.
-  description_medium: Surface area of the Caspian Sea.
+  description_medium: Surface area of the Caspian Sea. Here the quantity refers to `surface area`.
   description_long: null
   hook: null
   caveats: null
@@ -725,9 +759,10 @@ items:
 - id: obs:area:entity-australia
   name: Australia
   value: 7690000000000.0
-  description: Land area of Australia.
+  description: Land area of Australia. Here the quantity refers to `land area`.
+  description_format: markdown
   summary_short: Land area of Australia.
-  description_medium: Land area of Australia.
+  description_medium: Land area of Australia. Here the quantity refers to `land area`.
   description_long: null
   hook: null
   caveats: null
@@ -763,9 +798,10 @@ items:
 - id: obs:area:entity-moon
   name: Moon surface area
   value: 37900000000000.0
-  description: Total surface area of the Moon.
+  description: Total surface area of the Moon. Derived using `4*pi*r^2`.
+  description_format: markdown
   summary_short: Total surface area of the Moon.
-  description_medium: Total surface area of the Moon.
+  description_medium: Total surface area of the Moon. Derived using `4*pi*r^2`.
   description_long: null
   hook: null
   caveats: null
@@ -803,6 +839,7 @@ items:
   name: Earth surface area
   value: 510000000000000.0
   description: Total surface area of Earth.
+  description_format: markdown
   summary_short: Total surface area of Earth.
   description_medium: Total surface area of Earth.
   description_long: null
@@ -840,9 +877,10 @@ items:
 - id: obs:area:entity-jupiter
   name: Jupiter surface area
   value: 6.14e+16
-  description: Total surface area of Jupiter using its mean radius.
+  description: Total surface area of Jupiter using its mean radius. Derived using `4*pi*r^2`.
+  description_format: markdown
   summary_short: Total surface area of Jupiter using its mean radius.
-  description_medium: Total surface area of Jupiter using its mean radius.
+  description_medium: Total surface area of Jupiter using its mean radius. Derived using `4*pi*r^2`.
   description_long: null
   hook: null
   caveats: null
@@ -879,9 +917,10 @@ items:
 - id: obs:area:entity-sun
   name: Sun surface area
   value: 6.09e+18
-  description: Photospheric surface area of the Sun.
+  description: Photospheric surface area of the Sun. Derived using `4*pi*r^2`.
+  description_format: markdown
   summary_short: Photospheric surface area of the Sun.
-  description_medium: Photospheric surface area of the Sun.
+  description_medium: Photospheric surface area of the Sun. Derived using `4*pi*r^2`.
   description_long: null
   hook: null
   caveats: null
@@ -918,9 +957,10 @@ items:
 - id: obs:area:scenario-solar-system-disk-neptune
   name: Solar system disk to Neptune
   value: 6.34e+25
-  description: Disk area enclosed by Neptune's mean orbital radius.
+  description: Disk area enclosed by Neptune's mean orbital radius. Derived using `pi*r^2`. Here the quantity refers to `orbital disk area`.
+  description_format: markdown
   summary_short: Disk area enclosed by Neptune's mean orbital radius.
-  description_medium: Disk area enclosed by Neptune's mean orbital radius.
+  description_medium: Disk area enclosed by Neptune's mean orbital radius. Derived using `pi*r^2`. Here the quantity refers to `orbital disk area`.
   description_long: null
   hook: null
   caveats: null
@@ -957,9 +997,10 @@ items:
 - id: obs:area:entity-milky-way
   name: Milky Way stellar disk area
   value: 7.0e+41
-  description: Disk area implied by the Milky Way's characteristic radius.
+  description: Disk area implied by the Milky Way's characteristic radius. Derived using `pi*r^2`. Here the quantity refers to `disk area`.
+  description_format: markdown
   summary_short: Disk area implied by the Milky Way's characteristic radius.
-  description_medium: Disk area implied by the Milky Way's characteristic radius.
+  description_medium: Disk area implied by the Milky Way's characteristic radius. Derived using `pi*r^2`. Here the quantity refers to `disk area`.
   description_long: null
   hook: null
   caveats: null
@@ -996,9 +1037,10 @@ items:
 - id: obs:area:entity-local-group
   name: Local Group cross-sectional area
   value: 6.6e+45
-  description: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.
+  description: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group. Derived using `pi*r^2`.
+  description_format: markdown
   summary_short: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.
-  description_medium: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.
+  description_medium: Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group. Derived using `pi*r^2`.
   description_long: null
   hook: null
   caveats: null
@@ -1035,9 +1077,10 @@ items:
 - id: obs:area:entity-virgo-supercluster
   name: Virgo Supercluster cross-sectional area
   value: 8.2e+47
-  description: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.
+  description: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius. Derived using `pi*r^2`.
+  description_format: markdown
   summary_short: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.
-  description_medium: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.
+  description_medium: Characteristic cross-sectional area implied by a representative Virgo Supercluster radius. Derived using `pi*r^2`.
   description_long: null
   hook: null
   caveats: null
@@ -1074,9 +1117,10 @@ items:
 - id: obs:area:entity-universe
   name: Observable universe boundary area
   value: 2.44e+54
-  description: Surface area of the observable universe treated as a sphere.
+  description: Surface area of the observable universe treated as a sphere. Derived using `4*pi*r^2`. Here the quantity refers to `surface area`.
+  description_format: markdown
   summary_short: Surface area of the observable universe treated as a sphere.
-  description_medium: Surface area of the observable universe treated as a sphere.
+  description_medium: Surface area of the observable universe treated as a sphere. Derived using `4*pi*r^2`. Here the quantity refers to `surface area`.
   description_long: null
   hook: null
   caveats: null

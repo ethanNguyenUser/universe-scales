@@ -1,0 +1,1865 @@
+dimension: costs
+base_unit: USD
+dimension_description: Cost translates human effort, resources, and time into a single comparable number denominated in money. It compresses supply chains, regulation, and risk into prices that move daily with geography and policy. For each entry, I specify a concrete item or service and the condition of purchase, such as retail, wholesale, or per unit time. The aim is scale and perspective rather than price quotes, so values are representative snapshots with context.
+related_resources:
+- name: Global Wealth Report
+  url: https://www.credit-suisse.com/about-us/en/reports-research/global-wealth-report.html
+- name: World Bank Open Data
+  url: https://data.worldbank.org
+- name: Our World in Data - Economy
+  url: https://ourworldindata.org/economic-growth
+show_limitations: true
+units:
+- conversion_factor: 1
+  description: USD is the base currency for this dataset and serves as a common yardstick across items. It is widely used in international trade and as a reserve unit. Conversions from other currencies are approximate snapshots, not live exchange rates. All item values are stored in USD before conversion.
+  name: USD
+  symbol: USD
+- conversion_factor: 0.85
+  description: EUR represents the euro used by many European countries and provides a useful counterpoint to USD prices. Purchasing power parity differs across members, so local costs still vary. Quoted conversion factors give only a rough mapping for scale reasoning. I list euro amounts by multiplying USD values by this factor.
+  name: EUR
+  symbol: EUR
+- conversion_factor: 0.73
+  description: GBP is the pound sterling used in the United Kingdom and some territories. Prices for education and transport often look different in GBP even after conversion due to policy. Using a fixed factor here keeps the table stable rather than timely. Multiply USD by this factor to estimate GBP equivalents.
+  name: GBP
+  symbol: GBP
+- conversion_factor: 110
+  description: JPY is the Japanese yen, a low denomination currency that results in large numerals for everyday items. Relative prices across countries do not follow simple exchange rates because of taxes and norms. The factor here is a round estimate to express scale. Multiply USD by this factor for yen values.
+  name: JPY
+  symbol: JPY
+- conversion_factor: 6.45
+  description: CNY is the Chinese yuan renminbi used in mainland China. Price controls and subsidies can make sector specific comparisons tricky. The factor supplied is an approximate cross rate for orientation. Multiplying USD values by this factor gives CNY estimates.
+  name: CNY
+  symbol: CNY
+required_min_items: 24
+preferred_target_items: 24
+preferred_max_items: 24
+selection_bin_count: 24
+description_format: markdown
+frontend_group: society
+frontend_group_label: Society, Economy & Abstract Quantities
+frontend_order: 160
+items:
+- id: obs:costs:scenario-costs-grain-of-rice
+  name: Grain of Rice
+  value: 0.0001
+  description: A grain of rice costs less than a ten-thousandth of a dollar when purchased in a 25-pound bag for about $15. Large processors such as Riceland Foods and ADM mill and package thousands of tons daily using automated equipment. The main expense lies in energy and transportation, not the grain itself. It’s an example of how mechanization and global trade have pushed the price of basic calories close to zero.
+  description_format: markdown
+  summary_short: A grain of rice costs less than a ten-thousandth of a dollar when purchased in a 25-pound bag for about $15.
+  description_medium: A grain of rice costs less than a ten-thousandth of a dollar when purchased in a 25-pound bag for about $15. Large processors such as Riceland Foods and ADM mill and package thousands of tons daily using automated equipment. The main expense lies in energy and transportation, not the grain itself. It’s an example of how mechanization and global trade have pushed the price of basic calories close to zero.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Grain of Rice
+  source: https://en.wikipedia.org/wiki/Rice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rice
+    url: https://en.wikipedia.org/wiki/Rice
+    title: Rice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-paper-clip
+  name: Paper Clip
+  value: 0.01
+  description: A standard Gem-style paper clip sells for about a cent, often less when bought in bulk from brands like ACCO or Staples. Each is made from low-carbon steel wire, cut and bent at rates of hundreds of thousands per hour by automated machines. Material and labor together cost less than the box it ships in. It’s a mature industrial product where manufacturing efficiency leaves logistics as the main cost.
+  description_format: markdown
+  summary_short: A standard Gem-style paper clip sells for about a cent, often less when bought in bulk from brands like ACCO or Staples.
+  description_medium: A standard Gem-style paper clip sells for about a cent, often less when bought in bulk from brands like ACCO or Staples. Each is made from low-carbon steel wire, cut and bent at rates of hundreds of thousands per hour by automated machines. Material and labor together cost less than the box it ships in. It’s a mature industrial product where manufacturing efficiency leaves logistics as the main cost.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Paper Clip
+  source: https://en.wikipedia.org/wiki/Paper_clip
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper-clip
+    url: https://en.wikipedia.org/wiki/Paper_clip
+    title: Paper clip
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-ssd-storage-per-gb
+  name: SSD Storage (per GB)
+  value: 0.05
+  description: One gigabyte of solid state storage purchased in bulk for data centers falls near this price. Consumer retail per gigabyte is higher due to packaging and distribution. Costs trend downward over time with new fabrication nodes. The number provides a planning figure for capacity budgets.
+  description_format: markdown
+  summary_short: One gigabyte of solid state storage purchased in bulk for data centers falls near this price.
+  description_medium: One gigabyte of solid state storage purchased in bulk for data centers falls near this price. Consumer retail per gigabyte is higher due to packaging and distribution. Costs trend downward over time with new fabrication nodes. The number provides a planning figure for capacity budgets.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: SSD Storage (per GB)
+  source: https://en.wikipedia.org/wiki/Solid-state_drive
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-solid-state-drive
+    url: https://en.wikipedia.org/wiki/Solid-state_drive
+    title: Solid-state drive
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-cloud-vm-per-hour
+  name: Cloud VM (per hour)
+  value: 0.1
+  description: A cloud virtual machine with modest CPU and memory might cost this much per hour before reserved discounts. Storage and network egress fees are separate line items. Running continuously all month turns small hourly rates into consequential totals. The number is for on demand pricing in a major cloud.
+  description_format: markdown
+  summary_short: A cloud virtual machine with modest CPU and memory might cost this much per hour before reserved discounts.
+  description_medium: A cloud virtual machine with modest CPU and memory might cost this much per hour before reserved discounts. Storage and network egress fees are separate line items. Running continuously all month turns small hourly rates into consequential totals. The number is for on demand pricing in a major cloud.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Cloud VM (per hour)
+  source: https://en.wikipedia.org/wiki/Cloud_computing
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cloud-computing
+    url: https://en.wikipedia.org/wiki/Cloud_computing
+    title: Cloud computing
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-electricity-per-kwh
+  name: Electricity (per kWh)
+  value: 0.15
+  description: Residential electricity in many regions costs around this much per kilowatt hour on the bill. Time of use pricing can make peak hours more expensive and nights cheaper. Efficiency gains reduce the number of kilowatt hours purchased rather than the price per unit. The value is an average retail rate.
+  description_format: markdown
+  summary_short: Residential electricity in many regions costs around this much per kilowatt hour on the bill.
+  description_medium: Residential electricity in many regions costs around this much per kilowatt hour on the bill. Time of use pricing can make peak hours more expensive and nights cheaper. Efficiency gains reduce the number of kilowatt hours purchased rather than the price per unit. The value is an average retail rate.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Electricity (per kWh)
+  source: https://en.wikipedia.org/wiki/Kilowatt_hour
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-kilowatt-hour
+    url: https://en.wikipedia.org/wiki/Kilowatt_hour
+    title: Kilowatt hour
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-zimbabwe-100-trillion-dollar-note-peak-street-value
+  name: Zimbabwe 100 trillion dollar note (peak street value)
+  value: 0.5
+  description: A 100 trillion dollar Zimbabwe note during peak hyperinflation exchanged on the street for less than a US dollar despite its face value. Prices lost meaning as numerals raced ahead of goods, showing that money is a social contract more than paper and ink. Today the same note sells as a collectible for its story. The value reflects a representative peak period exchange into USD.
+  description_format: markdown
+  summary_short: A 100 trillion dollar Zimbabwe note during peak hyperinflation exchanged on the street for less than a US dollar despite its face value.
+  description_medium: A 100 trillion dollar Zimbabwe note during peak hyperinflation exchanged on the street for less than a US dollar despite its face value. Prices lost meaning as numerals raced ahead of goods, showing that money is a social contract more than paper and ink. Today the same note sells as a collectible for its story. The value reflects a representative peak period exchange into USD.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Zimbabwe 100 trillion dollar note (peak street value)
+  source: https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hyperinflation-in-zimbabwe
+    url: https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe
+    title: Hyperinflation in Zimbabwe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-stamp
+  name: Stamp
+  value: 0.55
+  description: A U.S. First-Class Forever stamp currently costs about $0.68, paying for nationwide collection, sorting, and delivery of a one-ounce letter. Most of the price supports infrastructure—sorting centers, trucks, and labor—rather than paper or ink. The U.S. Postal Service adjusts rates to track inflation and fuel costs while staying self-funded. Each stamp buys access to one of the largest logistics networks in the world.
+  description_format: markdown
+  summary_short: A U.S.
+  description_medium: A U.S. First-Class Forever stamp currently costs about $0.68, paying for nationwide collection, sorting, and delivery of a one-ounce letter. Most of the price supports infrastructure—sorting centers, trucks, and labor—rather than paper or ink. The U.S. Postal Service adjusts rates to track inflation and fuel costs while staying self-funded. Each stamp buys access to one of the largest logistics networks in the world.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Stamp
+  source: https://en.wikipedia.org/wiki/Postage_stamp
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-postage-stamp
+    url: https://en.wikipedia.org/wiki/Postage_stamp
+    title: Postage stamp
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-cup-of-coffee
+  name: Cup of Coffee
+  value: 3.0
+  description: A cafe coffee commonly costs about $3 per cup even though green beans contribute only around $0.20. The remaining $2.80 pays for wages, rent, equipment amortization, and a seat with heat and wifi. At home brewing can cost around $0.50 per cup for similar quality. The value reflects a city cafe, not a convenience store urn.
+  description_format: markdown
+  summary_short: A cafe coffee commonly costs about $3 per cup even though green beans contribute only around $0.20.
+  description_medium: A cafe coffee commonly costs about $3 per cup even though green beans contribute only around $0.20. The remaining $2.80 pays for wages, rent, equipment amortization, and a seat with heat and wifi. At home brewing can cost around $0.50 per cup for similar quality. The value reflects a city cafe, not a convenience store urn.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Cup of Coffee
+  source: https://en.wikipedia.org/wiki/Coffee
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-coffee
+    url: https://en.wikipedia.org/wiki/Coffee
+    title: Coffee
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-sandwich
+  name: Sandwich
+  value: 8.0
+  description: A made to order sandwich typically costs about $8 including tax in urban delis. Protein and portion size can push it to $12, while simple vegetarian options drop to $6. Per calorie it often undercuts packaged snacks even with a higher sticker. This figure is for a single counter order with tax.
+  description_format: markdown
+  summary_short: A made to order sandwich typically costs about $8 including tax in urban delis.
+  description_medium: A made to order sandwich typically costs about $8 including tax in urban delis. Protein and portion size can push it to $12, while simple vegetarian options drop to $6. Per calorie it often undercuts packaged snacks even with a higher sticker. This figure is for a single counter order with tax.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Sandwich
+  source: https://en.wikipedia.org/wiki/Sandwich
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sandwich
+    url: https://en.wikipedia.org/wiki/Sandwich
+    title: Sandwich
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-usb-cable
+  name: USB Cable
+  value: 10.0
+  description: A certified one meter USB data and charge cable typically costs about $10 when sold separately. Shorter, thinner cables can be $5 but often charge slowly due to higher resistance. Good shielding and e marked chips add a dollar or two and prevent flaky connections. This figure assumes a certified cable from a mainstream seller.
+  description_format: markdown
+  summary_short: A certified one meter USB data and charge cable typically costs about $10 when sold separately.
+  description_medium: A certified one meter USB data and charge cable typically costs about $10 when sold separately. Shorter, thinner cables can be $5 but often charge slowly due to higher resistance. Good shielding and e marked chips add a dollar or two and prevent flaky connections. This figure assumes a certified cable from a mainstream seller.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: USB Cable
+  source: https://en.wikipedia.org/wiki/USB
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-usb
+    url: https://en.wikipedia.org/wiki/USB
+    title: USB
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-movie-ticket
+  name: Movie Ticket
+  value: 12.0
+  description: A prime time movie ticket averages about $12 at a multiplex before fees. Premium formats such as IMAX or 3D push this toward $18, while weekday matinees drop to around $8. Concessions often double the outlay, which is why theaters keep ticket prices comparatively low. This figure reflects a mainstream evening show.
+  description_format: markdown
+  summary_short: A prime time movie ticket averages about $12 at a multiplex before fees.
+  description_medium: A prime time movie ticket averages about $12 at a multiplex before fees. Premium formats such as IMAX or 3D push this toward $18, while weekday matinees drop to around $8. Concessions often double the outlay, which is why theaters keep ticket prices comparatively low. This figure reflects a mainstream evening show.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Movie Ticket
+  source: https://en.wikipedia.org/wiki/Movie_theater
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-movie-theater
+    url: https://en.wikipedia.org/wiki/Movie_theater
+    title: Movie theater
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-book
+  name: Book
+  value: 15.0
+  description: A new trade paperback commonly costs about $15, bundling years of writing with editing, printing, and distribution. Color art and coated paper can lift the price to $30, while mass market paperbacks live under $10. E books save printing but still pay editors, platforms, and rights. This figure is for a midlist title at a chain bookstore.
+  description_format: markdown
+  summary_short: A new trade paperback commonly costs about $15, bundling years of writing with editing, printing, and distribution.
+  description_medium: A new trade paperback commonly costs about $15, bundling years of writing with editing, printing, and distribution. Color art and coated paper can lift the price to $30, while mass market paperbacks live under $10. E books save printing but still pay editors, platforms, and rights. This figure is for a midlist title at a chain bookstore.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Book
+  source: https://en.wikipedia.org/wiki/Book
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-book
+    url: https://en.wikipedia.org/wiki/Book
+    title: Book
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-headphones
+  name: Headphones
+  value: 50.0
+  description: Over ear headphones without noise cancellation often cost about $50 for a comfortable, decent sounding pair. Studio reference sets start around $100, while active noise models range from $150 to $400. Fit and seal matter more for bass than driver spec sheets. This number is for a mainstream consumer pair at retail.
+  description_format: markdown
+  summary_short: Over ear headphones without noise cancellation often cost about $50 for a comfortable, decent sounding pair.
+  description_medium: Over ear headphones without noise cancellation often cost about $50 for a comfortable, decent sounding pair. Studio reference sets start around $100, while active noise models range from $150 to $400. Fit and seal matter more for bass than driver spec sheets. This number is for a mainstream consumer pair at retail.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Headphones
+  source: https://en.wikipedia.org/wiki/Headphones
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-headphones
+    url: https://en.wikipedia.org/wiki/Headphones
+    title: Headphones
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-mobile-plan-monthly
+  name: Mobile Plan (Monthly)
+  value: 60.0
+  description: A data plan for a smartphone with several gigabytes of high speed data is often billed around this per month. Taxes and device installments add to the bill. Competition among carriers creates promotions that temporarily reduce the cost. The number is for a single line without family discounts.
+  description_format: markdown
+  summary_short: A data plan for a smartphone with several gigabytes of high speed data is often billed around this per month.
+  description_medium: A data plan for a smartphone with several gigabytes of high speed data is often billed around this per month. Taxes and device installments add to the bill. Competition among carriers creates promotions that temporarily reduce the cost. The number is for a single line without family discounts.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Mobile Plan (Monthly)
+  source: https://en.wikipedia.org/wiki/Mobile_phone_plan
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mobile-phone-plan
+    url: https://en.wikipedia.org/wiki/Mobile_phone_plan
+    title: Mobile phone plan
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-used-textbook
+  name: Used Textbook
+  value: 80.0
+  description: A used textbook at a campus bookstore might sell for this amount midway through a term. Online marketplaces can undercut this with wider supply. New editions reset resale value abruptly. The number represents a common student purchase.
+  description_format: markdown
+  summary_short: A used textbook at a campus bookstore might sell for this amount midway through a term.
+  description_medium: A used textbook at a campus bookstore might sell for this amount midway through a term. Online marketplaces can undercut this with wider supply. New editions reset resale value abruptly. The number represents a common student purchase.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Used Textbook
+  source: https://en.wikipedia.org/wiki/Textbook
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-textbook
+    url: https://en.wikipedia.org/wiki/Textbook
+    title: Textbook
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-transit-pass-monthly
+  name: Transit Pass (Monthly)
+  value: 100.0
+  description: Monthly public transit pass pricing in many cities sits near this amount for unlimited rides. Zone systems and means tested discounts apply. Passes smooth cash flow for agencies and riders. The figure is a city median rather than a specific system.
+  description_format: markdown
+  summary_short: Monthly public transit pass pricing in many cities sits near this amount for unlimited rides.
+  description_medium: Monthly public transit pass pricing in many cities sits near this amount for unlimited rides. Zone systems and means tested discounts apply. Passes smooth cash flow for agencies and riders. The figure is a city median rather than a specific system.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Transit Pass (Monthly)
+  source: https://en.wikipedia.org/wiki/Public_transport_fare
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-public-transport-fare
+    url: https://en.wikipedia.org/wiki/Public_transport_fare
+    title: Public transport fare
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-concert-ticket
+  name: Concert Ticket
+  value: 120.0
+  description: A concert ticket for a popular artist at an arena averages this price before fees. Secondary markets can elevate it sharply. Venue size and production scale drive cost up as well. The number reflects a primary sale seat in the lower bowl.
+  description_format: markdown
+  summary_short: A concert ticket for a popular artist at an arena averages this price before fees.
+  description_medium: A concert ticket for a popular artist at an arena averages this price before fees. Secondary markets can elevate it sharply. Venue size and production scale drive cost up as well. The number reflects a primary sale seat in the lower bowl.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Concert Ticket
+  source: https://en.wikipedia.org/wiki/Concert_tour
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concert-tour
+    url: https://en.wikipedia.org/wiki/Concert_tour
+    title: Concert tour
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-bicycle
+  name: Bicycle
+  value: 300.0
+  description: A basic steel frame city bicycle costs about $300 at retail. A sturdy lock adds $50 to $100, and annual tune ups run $50 to $150. Adding an electric assist kit easily adds $800 to $1500. This figure is for a non electric commuter bike.
+  description_format: markdown
+  summary_short: A basic steel frame city bicycle costs about $300 at retail.
+  description_medium: A basic steel frame city bicycle costs about $300 at retail. A sturdy lock adds $50 to $100, and annual tune ups run $50 to $150. Adding an electric assist kit easily adds $800 to $1500. This figure is for a non electric commuter bike.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Bicycle
+  source: https://en.wikipedia.org/wiki/Bicycle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bicycle
+    url: https://en.wikipedia.org/wiki/Bicycle
+    title: Bicycle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-flight-ticket-transatlantic
+  name: Flight Ticket Transatlantic
+  value: 700.0
+  description: A transatlantic economy airfare purchased well in advance can be around this price round trip. Fuel, crew, and landing fees set the baseline while demand sets the premium. Flexible tickets cost more but reduce risk. The value is for shoulder season travel.
+  description_format: markdown
+  summary_short: A transatlantic economy airfare purchased well in advance can be around this price round trip.
+  description_medium: A transatlantic economy airfare purchased well in advance can be around this price round trip. Fuel, crew, and landing fees set the baseline while demand sets the premium. Flexible tickets cost more but reduce risk. The value is for shoulder season travel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Flight Ticket Transatlantic
+  source: https://en.wikipedia.org/wiki/Air_fare
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-air-fare
+    url: https://en.wikipedia.org/wiki/Air_fare
+    title: Air fare
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-smartphone
+  name: Smartphone
+  value: 800.0
+  description: A flagship smartphone at launch costs about $800 unlocked, while the bill of materials is closer to $400. The other $400 funds software, warranty, logistics, and marketing, plus the risk of building millions of units. Carriers convert this into $30 to $40 per month with embedded finance charges. This figure is for an unlocked model in a major market.
+  description_format: markdown
+  summary_short: A flagship smartphone at launch costs about $800 unlocked, while the bill of materials is closer to $400.
+  description_medium: A flagship smartphone at launch costs about $800 unlocked, while the bill of materials is closer to $400. The other $400 funds software, warranty, logistics, and marketing, plus the risk of building millions of units. Carriers convert this into $30 to $40 per month with embedded finance charges. This figure is for an unlocked model in a major market.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Smartphone
+  source: https://en.wikipedia.org/wiki/Smartphone
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-smartphone
+    url: https://en.wikipedia.org/wiki/Smartphone
+    title: Smartphone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-dental-crown
+  name: Dental Crown
+  value: 1200.0
+  description: A dental crown out of pocket expense in the United States is often around this cost. Insurance negotiated rates and materials change the bill. The price includes lab work and clinical time. The figure is for a single molar crown.
+  description_format: markdown
+  summary_short: A dental crown out of pocket expense in the United States is often around this cost.
+  description_medium: A dental crown out of pocket expense in the United States is often around this cost. Insurance negotiated rates and materials change the bill. The price includes lab work and clinical time. The figure is for a single molar crown.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Dental Crown
+  source: https://en.wikipedia.org/wiki/Dental_crown
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dental-crown
+    url: https://en.wikipedia.org/wiki/Dental_crown
+    title: Dental crown
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-laptop
+  name: Laptop
+  value: 1200.0
+  description: A mid range laptop for everyday work is about $1200 new with 16 GB RAM and a 512 GB SSD. Sales can drop this to $900, while premium ultrabooks push above $2000. Refurbished corporate machines deliver comparable utility for roughly $600. This value assumes a new unit from a major brand.
+  description_format: markdown
+  summary_short: A mid range laptop for everyday work is about $1200 new with 16 GB RAM and a 512 GB SSD.
+  description_medium: A mid range laptop for everyday work is about $1200 new with 16 GB RAM and a 512 GB SSD. Sales can drop this to $900, while premium ultrabooks push above $2000. Refurbished corporate machines deliver comparable utility for roughly $600. This value assumes a new unit from a major brand.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Laptop
+  source: https://en.wikipedia.org/wiki/Laptop
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-laptop
+    url: https://en.wikipedia.org/wiki/Laptop
+    title: Laptop
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-apartment-monthly
+  name: Apartment (Monthly)
+  value: 1500.0
+  description: A one bedroom apartment rent in a large city often lands around $1500 per month. Deposits and utilities can make the first month exceed $3000, while rent controlled stock sits below market. Proximity to transit and jobs drives the spread more than square footage. This figure assumes a mid market building with basic appliances.
+  description_format: markdown
+  summary_short: A one bedroom apartment rent in a large city often lands around $1500 per month.
+  description_medium: A one bedroom apartment rent in a large city often lands around $1500 per month. Deposits and utilities can make the first month exceed $3000, while rent controlled stock sits below market. Proximity to transit and jobs drives the spread more than square footage. This figure assumes a mid market building with basic appliances.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Apartment (Monthly)
+  source: https://en.wikipedia.org/wiki/Apartment
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-apartment
+    url: https://en.wikipedia.org/wiki/Apartment
+    title: Apartment
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-open-access-article-fee
+  name: Open Access Article Fee
+  value: 3000.0
+  description: An academic article publication fee in some open access journals is several thousand dollars. Charges cover editorial work, typesetting, and platform costs. Debates continue about equity and value in this model. The number is a representative article processing charge.
+  description_format: markdown
+  summary_short: An academic article publication fee in some open access journals is several thousand dollars.
+  description_medium: An academic article publication fee in some open access journals is several thousand dollars. Charges cover editorial work, typesetting, and platform costs. Debates continue about equity and value in this model. The number is a representative article processing charge.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Open Access Article Fee
+  source: https://en.wikipedia.org/wiki/Open_access
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-open-access
+    url: https://en.wikipedia.org/wiki/Open_access
+    title: Open access
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-university-tuition-semester
+  name: University Tuition (Semester)
+  value: 6000.0
+  description: One semester of public university tuition for in state students is commonly at this level excluding housing. Fees and textbooks add to the total. Scholarships and aid shift the net cost dramatically for many. The number is a sticker price before grants.
+  description_format: markdown
+  summary_short: One semester of public university tuition for in state students is commonly at this level excluding housing.
+  description_medium: One semester of public university tuition for in state students is commonly at this level excluding housing. Fees and textbooks add to the total. Scholarships and aid shift the net cost dramatically for many. The number is a sticker price before grants.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: University Tuition (Semester)
+  source: https://en.wikipedia.org/wiki/Tuition_payments
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tuition-payments
+    url: https://en.wikipedia.org/wiki/Tuition_payments
+    title: Tuition payments
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-motorcycle
+  name: Motorcycle
+  value: 8000.0
+  description: An entry level motorcycle begins around $8000 before fees, while used learner bikes can be $3000 to $5000. Gear and insurance add $1000 to $2000 in the first year. Displacement and brand move the base dramatically. This figure is for a small street legal commuter.
+  description_format: markdown
+  summary_short: An entry level motorcycle begins around $8000 before fees, while used learner bikes can be $3000 to $5000.
+  description_medium: An entry level motorcycle begins around $8000 before fees, while used learner bikes can be $3000 to $5000. Gear and insurance add $1000 to $2000 in the first year. Displacement and brand move the base dramatically. This figure is for a small street legal commuter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Motorcycle
+  source: https://en.wikipedia.org/wiki/Motorcycle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-motorcycle
+    url: https://en.wikipedia.org/wiki/Motorcycle
+    title: Motorcycle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-violin-student-high-end
+  name: Violin (Student High End)
+  value: 8000.0
+  description: A high quality violin suitable for conservatory students often costs this much. Handmade instruments by famous luthiers are far higher. Maintenance and bows add meaningful ongoing cost. The number marks an upper student tier, not a professional Stradivari.
+  description_format: markdown
+  summary_short: A high quality violin suitable for conservatory students often costs this much.
+  description_medium: A high quality violin suitable for conservatory students often costs this much. Handmade instruments by famous luthiers are far higher. Maintenance and bows add meaningful ongoing cost. The number marks an upper student tier, not a professional Stradivari.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Violin (Student High End)
+  source: https://en.wikipedia.org/wiki/Violin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-violin
+    url: https://en.wikipedia.org/wiki/Violin
+    title: Violin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-car
+  name: Car
+  value: 25000.0
+  description: A compact car lists near $25000 new, but the monthly payment hinges on interest rate and term. Depreciation alone can remove $3000 to $5000 in the first year. Option packages add $2000 to $5000 quickly. This value is a base model before destination and fees.
+  description_format: markdown
+  summary_short: A compact car lists near $25000 new, but the monthly payment hinges on interest rate and term.
+  description_medium: A compact car lists near $25000 new, but the monthly payment hinges on interest rate and term. Depreciation alone can remove $3000 to $5000 in the first year. Option packages add $2000 to $5000 quickly. This value is a base model before destination and fees.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Car
+  source: https://en.wikipedia.org/wiki/Automobile
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-automobile
+    url: https://en.wikipedia.org/wiki/Automobile
+    title: Automobile
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-small-business
+  name: Small Business
+  value: 50000.0
+  description: Opening a small business often requires about $50000 to cover permits, a lease deposit, equipment, and 6 months of losses. Frugal founders can start with $10000 but grow slower and risk more downtime. A sound plan budgets 10 percent for mistakes and marketing. This is a planning round number, not advice.
+  description_format: markdown
+  summary_short: Opening a small business often requires about $50000 to cover permits, a lease deposit, equipment, and 6 months of losses.
+  description_medium: Opening a small business often requires about $50000 to cover permits, a lease deposit, equipment, and 6 months of losses. Frugal founders can start with $10000 but grow slower and risk more downtime. A sound plan budgets 10 percent for mistakes and marketing. This is a planning round number, not advice.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Small Business
+  source: https://en.wikipedia.org/wiki/Small_business
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-small-business
+    url: https://en.wikipedia.org/wiki/Small_business
+    title: Small business
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-luxury-car
+  name: Luxury Car
+  value: 100000.0
+  description: Entry luxury cars begin around $100000, while hand built and exotic models run into millions. Annual maintenance and tires can total $2000 to $5000 even for modest use. Buyers pay for engineering, materials, and a story. This number marks the low end of the segment.
+  description_format: markdown
+  summary_short: Entry luxury cars begin around $100000, while hand built and exotic models run into millions.
+  description_medium: Entry luxury cars begin around $100000, while hand built and exotic models run into millions. Annual maintenance and tires can total $2000 to $5000 even for modest use. Buyers pay for engineering, materials, and a story. This number marks the low end of the segment.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Luxury Car
+  source: https://en.wikipedia.org/wiki/Luxury_car
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-luxury-car
+    url: https://en.wikipedia.org/wiki/Luxury_car
+    title: Luxury car
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-restaurant
+  name: Restaurant
+  value: 200000.0
+  description: A sit down restaurant buildout typically requires about $200000 before the first entree is sold. Ventilation, grease traps, and code compliance alone can exceed $50000. Payroll starts weeks early to train staff, burning runway quickly. This number reflects a mid market dining room.
+  description_format: markdown
+  summary_short: A sit down restaurant buildout typically requires about $200000 before the first entree is sold.
+  description_medium: A sit down restaurant buildout typically requires about $200000 before the first entree is sold. Ventilation, grease traps, and code compliance alone can exceed $50000. Payroll starts weeks early to train staff, burning runway quickly. This number reflects a mid market dining room.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Restaurant
+  source: https://en.wikipedia.org/wiki/Restaurant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-restaurant
+    url: https://en.wikipedia.org/wiki/Restaurant
+    title: Restaurant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-house
+  name: House
+  value: 300000.0
+  description: A median detached house at $300000 becomes $1600 to $2200 per month at common mortgage rates before taxes and insurance. In dense cities, land and permits outweigh lumber and labor. Closing costs of $5000 to $15000 arrive before the first night. This figure gives an order of magnitude.
+  description_format: markdown
+  summary_short: A median detached house at $300000 becomes $1600 to $2200 per month at common mortgage rates before taxes and insurance.
+  description_medium: A median detached house at $300000 becomes $1600 to $2200 per month at common mortgage rates before taxes and insurance. In dense cities, land and permits outweigh lumber and labor. Closing costs of $5000 to $15000 arrive before the first night. This figure gives an order of magnitude.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: House
+  source: https://en.wikipedia.org/wiki/House
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-house
+    url: https://en.wikipedia.org/wiki/House
+    title: House
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-mansion
+  name: Mansion
+  value: 5000000.0
+  description: Mansions in premium locations often cost $5000000 and climb to $50000000 for trophy properties. Heating, insurance, and gardening staff can exceed $100000 per year. Renovations rarely return dollar for dollar at this tier. This value labels a high end residence, not a median.
+  description_format: markdown
+  summary_short: Mansions in premium locations often cost $5000000 and climb to $50000000 for trophy properties.
+  description_medium: Mansions in premium locations often cost $5000000 and climb to $50000000 for trophy properties. Heating, insurance, and gardening staff can exceed $100000 per year. Renovations rarely return dollar for dollar at this tier. This value labels a high end residence, not a median.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Mansion
+  source: https://en.wikipedia.org/wiki/Mansion
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mansion
+    url: https://en.wikipedia.org/wiki/Mansion
+    title: Mansion
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-office-building
+  name: Office Building
+  value: 10000000.0
+  description: A mid rise office building construction budget can easily run to ten million dollars excluding land. Mechanical systems, elevators, and code compliance dominate complexity. Financing costs accrue during long build schedules. The figure is for a modest footprint in a regional city.
+  description_format: markdown
+  summary_short: A mid rise office building construction budget can easily run to ten million dollars excluding land.
+  description_medium: A mid rise office building construction budget can easily run to ten million dollars excluding land. Mechanical systems, elevators, and code compliance dominate complexity. Financing costs accrue during long build schedules. The figure is for a modest footprint in a regional city.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Office Building
+  source: https://en.wikipedia.org/wiki/Office_building
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-office-building
+    url: https://en.wikipedia.org/wiki/Office_building
+    title: Office building
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-bridge
+  name: Bridge
+  value: 100000000.0
+  description: A highway bridge project spans from tens to hundreds of millions depending on length and geology. Traffic detours and environmental mitigation are part of the price. Long lived assets like this amortize costs over decades of use. The number is a round figure for a medium span bridge.
+  description_format: markdown
+  summary_short: A highway bridge project spans from tens to hundreds of millions depending on length and geology.
+  description_medium: A highway bridge project spans from tens to hundreds of millions depending on length and geology. Traffic detours and environmental mitigation are part of the price. Long lived assets like this amortize costs over decades of use. The number is a round figure for a medium span bridge.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Bridge
+  source: https://en.wikipedia.org/wiki/Bridge
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bridge
+    url: https://en.wikipedia.org/wiki/Bridge
+    title: Bridge
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-airport
+  name: Airport
+  value: 1000000000.0
+  description: Building a major international airport terminal complex costs around a billion dollars or more. Airside infrastructure and security drive unique requirements. Construction phases keep operations running while expanding capacity. The value is emblematic of national scale projects.
+  description_format: markdown
+  summary_short: Building a major international airport terminal complex costs around a billion dollars or more.
+  description_medium: Building a major international airport terminal complex costs around a billion dollars or more. Airside infrastructure and security drive unique requirements. Construction phases keep operations running while expanding capacity. The value is emblematic of national scale projects.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Airport
+  source: https://en.wikipedia.org/wiki/Airport
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-airport
+    url: https://en.wikipedia.org/wiki/Airport
+    title: Airport
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-space-station
+  name: Space Station
+  value: 150000000000.0
+  description: The International Space Station total program cost is on the order of hundreds of billions spread across countries and decades. This includes modules, launches, operations, and resupply. Science access is precious because launch capacity is scarce. The figure gives perspective on sustained space infrastructure.
+  description_format: markdown
+  summary_short: The International Space Station total program cost is on the order of hundreds of billions spread across countries and decades.
+  description_medium: The International Space Station total program cost is on the order of hundreds of billions spread across countries and decades. This includes modules, launches, operations, and resupply. Science access is precious because launch capacity is scarce. The figure gives perspective on sustained space infrastructure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Space Station
+  source: https://en.wikipedia.org/wiki/International_Space_Station
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-international-space-station
+    url: https://en.wikipedia.org/wiki/International_Space_Station
+    title: International Space Station
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-richest-person-current
+  name: Richest Person (current)
+  value: 250000000000.0
+  description: The wealth of the richest person on Earth fluctuates by billions per day with stock prices. It is net worth on paper, not spendable cash, yet it can fund entire industries. The number changes quickly but anchors public imagination about scale. The value is a representative recent peak.
+  description_format: markdown
+  summary_short: The wealth of the richest person on Earth fluctuates by billions per day with stock prices.
+  description_medium: The wealth of the richest person on Earth fluctuates by billions per day with stock prices. It is net worth on paper, not spendable cash, yet it can fund entire industries. The number changes quickly but anchors public imagination about scale. The value is a representative recent peak.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Richest Person (current)
+  source: https://en.wikipedia.org/wiki/List_of_wealthiest_people
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-list-of-wealthiest-people
+    url: https://en.wikipedia.org/wiki/List_of_wealthiest_people
+    title: List of wealthiest people
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-richest-person-historical-adjusted
+  name: Richest Person (historical, adjusted)
+  value: 400000000000.0
+  description: The richest private fortunes in history, adjusted to todays dollars, cluster in the low hundreds of billions for industrial magnates like Rockefeller. Pre modern rulers controlled state treasuries rather than personal wealth, complicating comparisons. The point is order of magnitude, not precise ranking. The value reflects a conservative adjusted estimate for a historical peak fortune.
+  description_format: markdown
+  summary_short: The richest private fortunes in history, adjusted to todays dollars, cluster in the low hundreds of billions for industrial magnates like Rockefeller.
+  description_medium: The richest private fortunes in history, adjusted to todays dollars, cluster in the low hundreds of billions for industrial magnates like Rockefeller. Pre modern rulers controlled state treasuries rather than personal wealth, complicating comparisons. The point is order of magnitude, not precise ranking. The value reflects a conservative adjusted estimate for a historical peak fortune.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Richest Person (historical, adjusted)
+  source: https://en.wikipedia.org/wiki/John_D._Rockefeller
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-john-d-rockefeller
+    url: https://en.wikipedia.org/wiki/John_D._Rockefeller
+    title: John D. Rockefeller
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-us-military-budget-annual
+  name: US Military Budget (Annual)
+  value: 700000000000.0
+  description: The annual military budget of a large country can reach hundreds of billions of dollars. Personnel, equipment procurement, and maintenance dominate recurring expenses. Year to year changes track policy and macroeconomics. The value labels the United States case as an example.
+  description_format: markdown
+  summary_short: The annual military budget of a large country can reach hundreds of billions of dollars.
+  description_medium: The annual military budget of a large country can reach hundreds of billions of dollars. Personnel, equipment procurement, and maintenance dominate recurring expenses. Year to year changes track policy and macroeconomics. The value labels the United States case as an example.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: US Military Budget (Annual)
+  source: https://en.wikipedia.org/wiki/Military_budget_of_the_United_States
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-military-budget-of-the-united-states
+    url: https://en.wikipedia.org/wiki/Military_budget_of_the_United_States
+    title: Military budget of the United States
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-us-gdp-annual
+  name: US GDP (Annual)
+  value: 21000000000000.0
+  description: The gross domestic product of the United States per year sums to tens of trillions of dollars. It aggregates consumption, investment, government spending, and net exports. Revisions and price deflators adjust these totals after initial release. The number is a recent magnitude for context.
+  description_format: markdown
+  summary_short: The gross domestic product of the United States per year sums to tens of trillions of dollars.
+  description_medium: The gross domestic product of the United States per year sums to tens of trillions of dollars. It aggregates consumption, investment, government spending, and net exports. Revisions and price deflators adjust these totals after initial release. The number is a recent magnitude for context.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: US GDP (Annual)
+  source: https://en.wikipedia.org/wiki/Economy_of_the_United_States
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-economy-of-the-united-states
+    url: https://en.wikipedia.org/wiki/Economy_of_the_United_States
+    title: Economy of the United States
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-global-gdp-annual
+  name: Global GDP (Annual)
+  value: 84000000000000.0
+  description: The world economy generates on the order of one hundred trillion dollars per year across all nations. Exchange rates and purchasing power parity complicate cross country comparison. Growth rates compound to double totals within decades. The figure is a rounded scale for global activity.
+  description_format: markdown
+  summary_short: The world economy generates on the order of one hundred trillion dollars per year across all nations.
+  description_medium: The world economy generates on the order of one hundred trillion dollars per year across all nations. Exchange rates and purchasing power parity complicate cross country comparison. Growth rates compound to double totals within decades. The figure is a rounded scale for global activity.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Global GDP (Annual)
+  source: https://en.wikipedia.org/wiki/World_economy
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-world-economy
+    url: https://en.wikipedia.org/wiki/World_economy
+    title: World economy
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-estimated-earth-value-annual-ecosystem-services
+  name: Estimated Earth Value (annual ecosystem services)
+  value: 125000000000000.0
+  description: Attempts to value Earth price the annual flow of ecosystem services like pollination, water purification, and climate regulation. Estimates land near a hundred trillion dollars per year for services alone, without pricing the irreplaceable stock. The exercise is a guide to stewardship, not a for sale sign. The value here reflects an annual services benchmark.
+  description_format: markdown
+  summary_short: Attempts to value Earth price the annual flow of ecosystem services like pollination, water purification, and climate regulation.
+  description_medium: Attempts to value Earth price the annual flow of ecosystem services like pollination, water purification, and climate regulation. Estimates land near a hundred trillion dollars per year for services alone, without pricing the irreplaceable stock. The exercise is a guide to stewardship, not a for sale sign. The value here reflects an annual services benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Estimated Earth Value (annual ecosystem services)
+  source: https://en.wikipedia.org/wiki/Ecosystem_services
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ecosystem-services
+    url: https://en.wikipedia.org/wiki/Ecosystem_services
+    title: Ecosystem services
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-wealth-of-top-1-percent
+  name: Wealth of Top 1 percent
+  value: 225000000000000.0
+  description: The top one percent by wealth collectively holds nearly half of global household wealth, a concentration that shapes policy and markets. Their net worth moves mainly with asset prices rather than wages. This is not income but accumulated stock. The value assumes a forty five percent share of global wealth.
+  description_format: markdown
+  summary_short: The top one percent by wealth collectively holds nearly half of global household wealth, a concentration that shapes policy and markets.
+  description_medium: The top one percent by wealth collectively holds nearly half of global household wealth, a concentration that shapes policy and markets. Their net worth moves mainly with asset prices rather than wages. This is not income but accumulated stock. The value assumes a forty five percent share of global wealth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Wealth of Top 1 percent
+  source: https://en.wikipedia.org/wiki/Distribution_of_wealth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-distribution-of-wealth
+    url: https://en.wikipedia.org/wiki/Distribution_of_wealth
+    title: Distribution of wealth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-wealth-of-bottom-99-percent
+  name: Wealth of Bottom 99 percent
+  value: 275000000000000.0
+  description: The bottom ninety nine percent together hold the remaining share of household wealth, which is still a vast sum. Housing and pensions drive much of this number rather than cash. Debates about fairness often anchor to this partition. The value complements the top one percent figure.
+  description_format: markdown
+  summary_short: The bottom ninety nine percent together hold the remaining share of household wealth, which is still a vast sum.
+  description_medium: The bottom ninety nine percent together hold the remaining share of household wealth, which is still a vast sum. Housing and pensions drive much of this number rather than cash. Debates about fairness often anchor to this partition. The value complements the top one percent figure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Wealth of Bottom 99 percent
+  source: https://en.wikipedia.org/wiki/Distribution_of_wealth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-distribution-of-wealth
+    url: https://en.wikipedia.org/wiki/Distribution_of_wealth
+    title: Distribution of wealth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-global-real-estate-value
+  name: Global Real Estate Value
+  value: 300000000000000.0
+  description: The total value of residential and commercial real estate worldwide is in the low hundreds of trillions of dollars. Interest rates and urbanization shift this stock value by tens of trillions without a brick moving. For households, this asset class dominates net worth. The value is a rounded composite estimate for perspective.
+  description_format: markdown
+  summary_short: The total value of residential and commercial real estate worldwide is in the low hundreds of trillions of dollars.
+  description_medium: The total value of residential and commercial real estate worldwide is in the low hundreds of trillions of dollars. Interest rates and urbanization shift this stock value by tens of trillions without a brick moving. For households, this asset class dominates net worth. The value is a rounded composite estimate for perspective.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Global Real Estate Value
+  source: https://en.wikipedia.org/wiki/Real_estate_economics
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-real-estate-economics
+    url: https://en.wikipedia.org/wiki/Real_estate_economics
+    title: Real estate economics
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-global-household-wealth-net
+  name: Global Household Wealth (Net)
+  value: 500000000000000.0
+  description: Global household net wealth sums property and financial assets minus debts across all adults. Unlike GDP, which is a yearly flow, wealth is a stock that can rise or fall with markets overnight. Small percentage changes here move trillions on paper. The value is a representative recent magnitude.
+  description_format: markdown
+  summary_short: Global household net wealth sums property and financial assets minus debts across all adults.
+  description_medium: Global household net wealth sums property and financial assets minus debts across all adults. Unlike GDP, which is a yearly flow, wealth is a stock that can rise or fall with markets overnight. Small percentage changes here move trillions on paper. The value is a representative recent magnitude.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Global Household Wealth (Net)
+  source: https://en.wikipedia.org/wiki/Household_financial_assets
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-household-financial-assets
+    url: https://en.wikipedia.org/wiki/Household_financial_assets
+    title: Household financial assets
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:costs:scenario-costs-total-assets-of-everyone-gross
+  name: Total Assets of Everyone (gross)
+  value: 700000000000000.0
+  description: Summing gross financial and real assets across everyone on Earth gives a total in the high hundreds of trillions. Debts subtract to yield net wealth, but the gross base shows how much is at work in markets. This stock is the backdrop for savings and risk taking. The value is a rounded gross assets figure.
+  description_format: markdown
+  summary_short: Summing gross financial and real assets across everyone on Earth gives a total in the high hundreds of trillions.
+  description_medium: Summing gross financial and real assets across everyone on Earth gives a total in the high hundreds of trillions. Debts subtract to yield net wealth, but the gross base shows how much is at work in markets. This stock is the backdrop for savings and risk taking. The value is a rounded gross assets figure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/costs.yaml
+    legacy_item_name: Total Assets of Everyone (gross)
+  source: https://en.wikipedia.org/wiki/Global_financial_system
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-global-financial-system
+    url: https://en.wikipedia.org/wiki/Global_financial_system
+    title: Global financial system
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-costs-yaml
+    url: repo://dataset/raw/legacy_yaml/costs.yaml
+    title: dataset/raw/legacy_yaml/costs.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/costs.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

@@ -50,15 +50,36 @@ units:
   description: A time unit equal to 100 years, representing major historical periods and the approximate maximum human lifespan. This duration spans multiple human generations and encompasses significant cultural, technological, and environmental changes. Centuries provide the fundamental unit for historical periodization, from the "Century of Light" (18th) to the "American Century" (20th). It represents the timescale of civilizational change and long-term planning.
   name: centuries
   symbol: c
+- name: picoseconds
+  symbol: ps
+  conversion_factor: 1000000000000.0
+  description: Picoseconds are useful for fast electronics and short optical events.
+- name: months
+  symbol: mo
+  conversion_factor: 3.8026486208174e-07
+  description: Months are a familiar human-scale calendar unit.
+- name: decades
+  symbol: dec
+  conversion_factor: 3.1688087814029e-09
+  description: Decades are useful for civilizational and career-scale comparisons.
+- name: millennia
+  symbol: kyr
+  conversion_factor: 3.1688087814029e-11
+  description: Millennia are useful for archaeology and deep historical time.
 required_min_items: 24
 preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
+description_format: markdown
+frontend_group: fundamental
+frontend_group_label: Fundamental Scales
+frontend_order: 20
 items:
 - id: obs:duration:scenario-duration-planck-time
   name: Planck Time
   value: 5.39e-44
   description: The smallest time interval that makes sense in physics, derived from fundamental constants. At this scale, gravity and quantum effects become equally important, breaking our normal understanding of space and time. This duration represents the limit where classical physics breaks down and quantum gravity effects dominate. Named after Max Planck, who introduced the concept in 1899 while studying blackbody radiation.
+  description_format: markdown
   summary_short: The smallest time interval that makes sense in physics, derived from fundamental constants.
   description_medium: The smallest time interval that makes sense in physics, derived from fundamental constants. At this scale, gravity and quantum effects become equally important, breaking our normal understanding of space and time. This duration represents the limit where classical physics breaks down and quantum gravity effects dominate. Named after Max Planck, who introduced the concept in 1899 while studying blackbody radiation.
   description_long: null
@@ -96,6 +117,7 @@ items:
   name: Particle Resonance
   value: 1.0e-24
   description: The lifetime of extremely short-lived subatomic particles called resonances, which exist only briefly before decaying. These particles are detected indirectly through their decay products in particle accelerators. The duration represents the time between particle creation and decay, revealing the fundamental instability of certain quantum states.
+  description_format: markdown
   summary_short: The lifetime of extremely short-lived subatomic particles called resonances, which exist only briefly before decaying.
   description_medium: The lifetime of extremely short-lived subatomic particles called resonances, which exist only briefly before decaying. These particles are detected indirectly through their decay products in particle accelerators. The duration represents the time between particle creation and decay, revealing the fundamental instability of certain quantum states.
   description_long: null
@@ -133,6 +155,7 @@ items:
   name: Nuclear Reaction
   value: 1.0e-22
   description: The characteristic timescale for strong nuclear interactions, specifically when protons and neutrons exchange virtual particles. This duration determines how quickly nuclear forces can bind nucleons together against electromagnetic repulsion. The strong force operates over this incredibly short timescale to maintain nuclear stability in all atoms heavier than hydrogen.
+  description_format: markdown
   summary_short: The characteristic timescale for strong nuclear interactions, specifically when protons and neutrons exchange virtual particles.
   description_medium: The characteristic timescale for strong nuclear interactions, specifically when protons and neutrons exchange virtual particles. This duration determines how quickly nuclear forces can bind nucleons together against electromagnetic repulsion. The strong force operates over this incredibly short timescale to maintain nuclear stability in all atoms heavier than hydrogen.
   description_long: null
@@ -170,6 +193,7 @@ items:
   name: Electron Orbit
   value: 1.5e-16
   description: The orbital period of an electron in the ground state of a hydrogen atom, calculated using quantum mechanics. This duration represents the time for one complete quantum orbit around the nucleus. The electron's wave function completes one full oscillation in this time, defining the fundamental quantum mechanical motion that underlies all atomic structure. Niels Bohr first calculated this in 1913, revolutionizing atomic physics.
+  description_format: markdown
   summary_short: The orbital period of an electron in the ground state of a hydrogen atom, calculated using quantum mechanics.
   description_medium: The orbital period of an electron in the ground state of a hydrogen atom, calculated using quantum mechanics. This duration represents the time for one complete quantum orbit around the nucleus. The electron's wave function completes one full oscillation in this time, defining the fundamental quantum mechanical motion that underlies all atomic structure. Niels Bohr first calculated this in 1913, revolutionizing atomic physics.
   description_long: null
@@ -207,6 +231,7 @@ items:
   name: Molecular Vibration
   value: 1.0e-13
   description: The characteristic vibrational period of covalent bonds in organic molecules, such as carbon-carbon single bonds. This duration represents the natural oscillation frequency of molecular bonds at room temperature. The vibration occurs when atoms move back and forth around their equilibrium positions, creating the fundamental molecular motion that defines chemical behavior.
+  description_format: markdown
   summary_short: The characteristic vibrational period of covalent bonds in organic molecules, such as carbon-carbon single bonds.
   description_medium: The characteristic vibrational period of covalent bonds in organic molecules, such as carbon-carbon single bonds. This duration represents the natural oscillation frequency of molecular bonds at room temperature. The vibration occurs when atoms move back and forth around their equilibrium positions, creating the fundamental molecular motion that defines chemical behavior.
   description_long: null
@@ -244,6 +269,7 @@ items:
   name: Computer Clock Cycle
   value: 1.0e-09
   description: The duration of a single processor clock cycle in modern high-speed computers, typically around 1 nanosecond. This represents the fastest possible computation step in current technology. The duration determines how quickly processors can execute instructions and process data, setting fundamental limits on computational speed.
+  description_format: markdown
   summary_short: The duration of a single processor clock cycle in modern high-speed computers, typically around 1 nanosecond.
   description_medium: The duration of a single processor clock cycle in modern high-speed computers, typically around 1 nanosecond. This represents the fastest possible computation step in current technology. The duration determines how quickly processors can execute instructions and process data, setting fundamental limits on computational speed.
   description_long: null
@@ -281,6 +307,7 @@ items:
   name: Light Travel Time (1 meter)
   value: 3.33e-09
   description: The time required for light to travel one meter in vacuum, representing the fundamental speed limit of the universe. This duration defines the meter in the International System of Units, making it the basis for all length measurements. Nothing can travel faster than this speed, as established by Einstein's theory of relativity.
+  description_format: markdown
   summary_short: The time required for light to travel one meter in vacuum, representing the fundamental speed limit of the universe.
   description_medium: The time required for light to travel one meter in vacuum, representing the fundamental speed limit of the universe. This duration defines the meter in the International System of Units, making it the basis for all length measurements. Nothing can travel faster than this speed, as established by Einstein's theory of relativity.
   description_long: null
@@ -318,6 +345,7 @@ items:
   name: Weak Nuclear Decay
   value: 1.0e-08
   description: The characteristic timescale for weak nuclear interactions, responsible for radioactive beta decay and neutrino interactions. This duration determines how quickly unstable nuclei transform into more stable configurations. The weak force operates much slower than the strong force, explaining why radioactive decay takes measurable time rather than occurring instantly.
+  description_format: markdown
   summary_short: The characteristic timescale for weak nuclear interactions, responsible for radioactive beta decay and neutrino interactions.
   description_medium: The characteristic timescale for weak nuclear interactions, responsible for radioactive beta decay and neutrino interactions. This duration determines how quickly unstable nuclei transform into more stable configurations. The weak force operates much slower than the strong force, explaining why radioactive decay takes measurable time rather than occurring instantly.
   description_long: null
@@ -355,6 +383,7 @@ items:
   name: Muon Lifetime
   value: 2.2e-06
   description: The characteristic lifetime of muons, unstable elementary particles similar to electrons but 200 times heavier. Muons are created in cosmic ray interactions and decay into electrons and neutrinos. This duration is crucial for understanding cosmic ray physics and particle accelerator experiments.
+  description_format: markdown
   summary_short: The characteristic lifetime of muons, unstable elementary particles similar to electrons but 200 times heavier.
   description_medium: The characteristic lifetime of muons, unstable elementary particles similar to electrons but 200 times heavier. Muons are created in cosmic ray interactions and decay into electrons and neutrinos. This duration is crucial for understanding cosmic ray physics and particle accelerator experiments.
   description_long: null
@@ -392,6 +421,7 @@ items:
   name: Neuron Firing
   value: 0.001
   description: The complete duration of a nerve action potential, from initial depolarization to full repolarization. This includes the rapid sodium influx phase and slower potassium efflux phase. The duration ensures unidirectional signal propagation by creating a refractory period that prevents backward firing. Alan Hodgkin and Andrew Huxley won the 1963 Nobel Prize for deciphering this electrical mechanism.
+  description_format: markdown
   summary_short: The complete duration of a nerve action potential, from initial depolarization to full repolarization.
   description_medium: The complete duration of a nerve action potential, from initial depolarization to full repolarization. This includes the rapid sodium influx phase and slower potassium efflux phase. The duration ensures unidirectional signal propagation by creating a refractory period that prevents backward firing. Alan Hodgkin and Andrew Huxley won the 1963 Nobel Prize for deciphering this electrical mechanism.
   description_long: null
@@ -429,6 +459,7 @@ items:
   name: Cinema Frame
   value: 0.042
   description: The time required for a single frame in modern cinema, typically 1/24th of a second for film or 1/30th for video. This duration represents the persistence of vision threshold, below which individual images appear as continuous motion. The concept revolutionized entertainment and communication, enabling the birth of cinema in the late 19th century.
+  description_format: markdown
   summary_short: The time required for a single frame in modern cinema, typically 1/24th of a second for film or 1/30th for video.
   description_medium: The time required for a single frame in modern cinema, typically 1/24th of a second for film or 1/30th for video. This duration represents the persistence of vision threshold, below which individual images appear as continuous motion. The concept revolutionized entertainment and communication, enabling the birth of cinema in the late 19th century.
   description_long: null
@@ -466,6 +497,7 @@ items:
   name: Human Reaction Time
   value: 0.2
   description: The time required for a typical human reaction to visual stimuli, representing the speed of neural processing from eye to brain to muscle response. This duration varies with age, training, and stimulus complexity. Professional athletes and pilots often achieve reaction times significantly faster than average.
+  description_format: markdown
   summary_short: The time required for a typical human reaction to visual stimuli, representing the speed of neural processing from eye to brain to muscle response.
   description_medium: The time required for a typical human reaction to visual stimuli, representing the speed of neural processing from eye to brain to muscle response. This duration varies with age, training, and stimulus complexity. Professional athletes and pilots often achieve reaction times significantly faster than average.
   description_long: null
@@ -503,6 +535,7 @@ items:
   name: Blink
   value: 0.3
   description: The duration of a voluntary human eye blink, including both closing and opening phases of the eyelid movement. This reflex serves to moisten the cornea and remove debris from the eye surface. The timing allows for adequate tear distribution while minimizing visual interruption. Leonardo da Vinci studied this mechanism in his anatomical drawings, noting its protective function.
+  description_format: markdown
   summary_short: The duration of a voluntary human eye blink, including both closing and opening phases of the eyelid movement.
   description_medium: The duration of a voluntary human eye blink, including both closing and opening phases of the eyelid movement. This reflex serves to moisten the cornea and remove debris from the eye surface. The timing allows for adequate tear distribution while minimizing visual interruption. Leonardo da Vinci studied this mechanism in his anatomical drawings, noting its protective function.
   description_long: null
@@ -540,6 +573,7 @@ items:
   name: Musical Beat (120 BPM)
   value: 0.5
   description: The duration of a single musical beat at 120 beats per minute, a common tempo in electronic dance music. This timing creates the rhythmic foundation for most contemporary popular music. The duration represents the optimal tempo for human movement and dance, reflecting our natural biological rhythms.
+  description_format: markdown
   summary_short: The duration of a single musical beat at 120 beats per minute, a common tempo in electronic dance music.
   description_medium: The duration of a single musical beat at 120 beats per minute, a common tempo in electronic dance music. This timing creates the rhythmic foundation for most contemporary popular music. The duration represents the optimal tempo for human movement and dance, reflecting our natural biological rhythms.
   description_long: null
@@ -577,6 +611,7 @@ items:
   name: Heartbeat
   value: 0.8
   description: The duration of one complete cardiac cycle in a healthy adult at rest, including systole and diastole phases. This timing allows for proper ventricular filling and ejection of blood. The duration varies with heart rate, decreasing during exercise and increasing during rest. William Harvey first described blood circulation in 1628, overturning 1500 years of Galenic medicine.
+  description_format: markdown
   summary_short: The duration of one complete cardiac cycle in a healthy adult at rest, including systole and diastole phases.
   description_medium: The duration of one complete cardiac cycle in a healthy adult at rest, including systole and diastole phases. This timing allows for proper ventricular filling and ejection of blood. The duration varies with heart rate, decreasing during exercise and increasing during rest. William Harvey first described blood circulation in 1628, overturning 1500 years of Galenic medicine.
   description_long: null
@@ -614,6 +649,7 @@ items:
   name: Elevator Floor Travel
   value: 3.0
   description: The time required for a typical commercial elevator to travel between floors in a modern building. This duration represents the balance between speed and passenger comfort, as well as energy efficiency. Elevator technology has evolved significantly since Elisha Otis's safety brake invention in 1852.
+  description_format: markdown
   summary_short: The time required for a typical commercial elevator to travel between floors in a modern building.
   description_medium: The time required for a typical commercial elevator to travel between floors in a modern building. This duration represents the balance between speed and passenger comfort, as well as energy efficiency. Elevator technology has evolved significantly since Elisha Otis's safety brake invention in 1852.
   description_long: null
@@ -651,6 +687,7 @@ items:
   name: Breathing Cycle
   value: 4.0
   description: The duration of a single breath cycle in a healthy adult at rest, including both inhalation and exhalation phases. This timing varies with physical activity, emotional state, and health conditions. The breath cycle is fundamental to life and has been used in meditation practices for thousands of years.
+  description_format: markdown
   summary_short: The duration of a single breath cycle in a healthy adult at rest, including both inhalation and exhalation phases.
   description_medium: The duration of a single breath cycle in a healthy adult at rest, including both inhalation and exhalation phases. This timing varies with physical activity, emotional state, and health conditions. The breath cycle is fundamental to life and has been used in meditation practices for thousands of years.
   description_long: null
@@ -688,6 +725,7 @@ items:
   name: Microwave Heating Time
   value: 120.0
   description: The time required for a typical microwave oven to heat a cup of water to boiling point. This duration represents the efficiency of electromagnetic heating technology. Microwave ovens revolutionized food preparation by using radio waves to directly excite water molecules in food.
+  description_format: markdown
   summary_short: The time required for a typical microwave oven to heat a cup of water to boiling point.
   description_medium: The time required for a typical microwave oven to heat a cup of water to boiling point. This duration represents the efficiency of electromagnetic heating technology. Microwave ovens revolutionized food preparation by using radio waves to directly excite water molecules in food.
   description_long: null
@@ -725,6 +763,7 @@ items:
   name: Movie Trailer Duration
   value: 150.0
   description: The duration of a typical movie trailer, designed to capture audience attention and generate interest in upcoming films. This timing represents the optimal length for maintaining viewer engagement while providing enough information to create anticipation. Trailers have evolved from simple announcements to sophisticated marketing tools.
+  description_format: markdown
   summary_short: The duration of a typical movie trailer, designed to capture audience attention and generate interest in upcoming films.
   description_medium: The duration of a typical movie trailer, designed to capture audience attention and generate interest in upcoming films. This timing represents the optimal length for maintaining viewer engagement while providing enough information to create anticipation. Trailers have evolved from simple announcements to sophisticated marketing tools.
   description_long: null
@@ -762,6 +801,7 @@ items:
   name: Washing Machine Cycle
   value: 1800.0
   description: The time required for a typical washing machine cycle to clean clothes, representing the duration of modern laundry technology. This timing balances cleaning effectiveness with energy efficiency and fabric care. Washing machines revolutionized household labor, freeing up countless hours for other activities.
+  description_format: markdown
   summary_short: The time required for a typical washing machine cycle to clean clothes, representing the duration of modern laundry technology.
   description_medium: The time required for a typical washing machine cycle to clean clothes, representing the duration of modern laundry technology. This timing balances cleaning effectiveness with energy efficiency and fabric care. Washing machines revolutionized household labor, freeing up countless hours for other activities.
   description_long: null
@@ -799,6 +839,7 @@ items:
   name: Feature Film Duration
   value: 7200.0
   description: The duration of a typical feature-length film, representing the standard length for cinematic storytelling. This timing allows for character development and plot progression while maintaining audience attention. The feature film format has remained remarkably consistent since the early days of cinema.
+  description_format: markdown
   summary_short: The duration of a typical feature-length film, representing the standard length for cinematic storytelling.
   description_medium: The duration of a typical feature-length film, representing the standard length for cinematic storytelling. This timing allows for character development and plot progression while maintaining audience attention. The feature film format has remained remarkably consistent since the early days of cinema.
   description_long: null
@@ -836,6 +877,7 @@ items:
   name: Work Shift Duration
   value: 28800.0
   description: The duration of a typical work shift in many industries, representing the standard length of human labor periods. This timing balances productivity with worker health and safety. The eight-hour workday became standard through labor movements in the early 20th century.
+  description_format: markdown
   summary_short: The duration of a typical work shift in many industries, representing the standard length of human labor periods.
   description_medium: The duration of a typical work shift in many industries, representing the standard length of human labor periods. This timing balances productivity with worker health and safety. The eight-hour workday became standard through labor movements in the early 20th century.
   description_long: null
@@ -873,6 +915,7 @@ items:
   name: Universe Scales Website Creation
   value: 36000.0
   description: The time required to create this universe scales website, representing the duration of modern web development. This includes designing the interface, writing code, curating cosmic data, and creating visualizations that help people understand the vast scales of the universe. Modern web development tools allow rapid creation of interactive experiences that can educate and inspire many people.
+  description_format: markdown
   summary_short: The time required to create this universe scales website, representing the duration of modern web development.
   description_medium: The time required to create this universe scales website, representing the duration of modern web development. This includes designing the interface, writing code, curating cosmic data, and creating visualizations that help people understand the vast scales of the universe. Modern web development tools allow rapid creation of interactive experiences that can educate and inspire many people.
   description_long: null
@@ -910,6 +953,7 @@ items:
   name: Transatlantic Crossing
   value: 172800.0
   description: The time required for a typical ocean liner to cross the Atlantic Ocean, representing transatlantic passenger travel. This duration has varied throughout history, from weeks in sailing ships to days in modern vessels. Ocean liners played a crucial role in immigration and cultural exchange.
+  description_format: markdown
   summary_short: The time required for a typical ocean liner to cross the Atlantic Ocean, representing transatlantic passenger travel.
   description_medium: The time required for a typical ocean liner to cross the Atlantic Ocean, representing transatlantic passenger travel. This duration has varied throughout history, from weeks in sailing ships to days in modern vessels. Ocean liners played a crucial role in immigration and cultural exchange.
   description_long: null
@@ -947,6 +991,7 @@ items:
   name: Week
   value: 604800.0
   description: A seven-day period that aligns with natural human work and rest rhythms. This duration provides a convenient subdivision of longer time periods and fits well with lunar cycles. The week has deep religious significance in Judaism, Christianity, and Islam, originating from the biblical creation story and Sabbath traditions.
+  description_format: markdown
   summary_short: A seven-day period that aligns with natural human work and rest rhythms.
   description_medium: A seven-day period that aligns with natural human work and rest rhythms. This duration provides a convenient subdivision of longer time periods and fits well with lunar cycles. The week has deep religious significance in Judaism, Christianity, and Islam, originating from the biblical creation story and Sabbath traditions.
   description_long: null
@@ -984,6 +1029,7 @@ items:
   name: Gamma-Ray Burst Afterglow
   value: 1000000.0
   description: The estimated lifetime of a typical gamma-ray burst afterglow, representing the time required for the high-energy radiation to fade. Gamma-ray bursts are the most energetic explosions in the universe, releasing more energy in seconds than the Sun will in its entire lifetime. These events are associated with the deaths of massive stars.
+  description_format: markdown
   summary_short: The estimated lifetime of a typical gamma-ray burst afterglow, representing the time required for the high-energy radiation to fade.
   description_medium: The estimated lifetime of a typical gamma-ray burst afterglow, representing the time required for the high-energy radiation to fade. Gamma-ray bursts are the most energetic explosions in the universe, releasing more energy in seconds than the Sun will in its entire lifetime. These events are associated with the deaths of massive stars.
   description_long: null
@@ -1020,9 +1066,10 @@ items:
 - id: obs:duration:scenario-duration-month
   name: Month
   value: 2629746.0
-  description: The average length of a calendar month, about 30.44 days based on our 365.25-day year divided by 12 months. This duration accounts for     variations between 28, 29, 30, and 31-day months. The month has astronomical origins in lunar cycles, with the word "month" deriving from "moon." Roman emperors famously manipulated month lengths for political purposes.
+  description: The average length of a calendar month, about 30.44 days based on our 365.25-day year divided by 12 months. This duration accounts for variations between 28, 29, 30, and 31-day months. The month has astronomical origins in lunar cycles, with the word "month" deriving from "moon." Roman emperors famously manipulated month lengths for political purposes.
+  description_format: markdown
   summary_short: The average length of a calendar month, about 30.44 days based on our 365.25-day year divided by 12 months.
-  description_medium: The average length of a calendar month, about 30.44 days based on our 365.25-day year divided by 12 months. This duration accounts for     variations between 28, 29, 30, and 31-day months. The month has astronomical origins in lunar cycles, with the word "month" deriving from "moon." Roman emperors famously manipulated month lengths for political purposes.
+  description_medium: The average length of a calendar month, about 30.44 days based on our 365.25-day year divided by 12 months. This duration accounts for variations between 28, 29, 30, and 31-day months. The month has astronomical origins in lunar cycles, with the word "month" deriving from "moon." Roman emperors famously manipulated month lengths for political purposes.
   description_long: null
   hook: null
   caveats: null
@@ -1058,6 +1105,7 @@ items:
   name: Human Pregnancy
   value: 24000000.0
   description: The duration of a typical human pregnancy, representing the time required for fetal development from conception to birth. This timing is remarkably consistent across human populations and represents one of the most fundamental biological processes. Pregnancy duration has shaped human social structures and cultural practices.
+  description_format: markdown
   summary_short: The duration of a typical human pregnancy, representing the time required for fetal development from conception to birth.
   description_medium: The duration of a typical human pregnancy, representing the time required for fetal development from conception to birth. This timing is remarkably consistent across human populations and represents one of the most fundamental biological processes. Pregnancy duration has shaped human social structures and cultural practices.
   description_long: null
@@ -1095,6 +1143,7 @@ items:
   name: Decade
   value: 315576000.0
   description: A ten-year period that captures significant changes in technology, society, and personal development. This duration spans approximately one generation of technological progress and social evolution. Decades provide a useful framework for analyzing long-term trends and historical patterns, from the "Roaring Twenties" to the "Digital Decade" of the 2010s.
+  description_format: markdown
   summary_short: A ten-year period that captures significant changes in technology, society, and personal development.
   description_medium: A ten-year period that captures significant changes in technology, society, and personal development. This duration spans approximately one generation of technological progress and social evolution. Decades provide a useful framework for analyzing long-term trends and historical patterns, from the "Roaring Twenties" to the "Digital Decade" of the 2010s.
   description_long: null
@@ -1131,9 +1180,10 @@ items:
 - id: obs:duration:entity-cat
   name: Cat Lifetime
   value: 470000000.0
-  description: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature.
+  description: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature. Here the quantity refers to `representative lifespan`.
+  description_format: markdown
   summary_short: The typical lifespan of a domestic cat, representing the duration of feline companionship.
-  description_medium: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature.
+  description_medium: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature. Here the quantity refers to `representative lifespan`.
   description_long: null
   hook: null
   caveats: null
@@ -1169,9 +1219,10 @@ items:
 - id: obs:duration:entity-dog
   name: Dog Lifetime
   value: 470000000.0
-  description: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives.
+  description: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives. Here the quantity refers to `representative lifespan`.
+  description_format: markdown
   summary_short: The typical lifespan of a domestic dog, representing the duration of canine companionship.
-  description_medium: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives.
+  description_medium: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives. Here the quantity refers to `representative lifespan`.
   description_long: null
   hook: null
   caveats: null
@@ -1207,9 +1258,10 @@ items:
 - id: obs:duration:entity-human
   name: Human Lifetime
   value: 2500000000.0
-  description: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements.
+  description: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements. Here the quantity refers to `representative lifespan`.
+  description_format: markdown
   summary_short: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death.
-  description_medium: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements.
+  description_medium: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements. Here the quantity refers to `representative lifespan`.
   description_long: null
   hook: null
   caveats: null
@@ -1246,6 +1298,7 @@ items:
   name: Tree Lifetime
   value: 3150000000.0
   description: The typical lifespan of a large tree species like oak or pine, representing the duration of forest giants. These long-lived trees can survive for centuries, witnessing multiple human generations and environmental changes. Ancient trees serve as living records of climate history and provide crucial habitat for countless species.
+  description_format: markdown
   summary_short: The typical lifespan of a large tree species like oak or pine, representing the duration of forest giants.
   description_medium: The typical lifespan of a large tree species like oak or pine, representing the duration of forest giants. These long-lived trees can survive for centuries, witnessing multiple human generations and environmental changes. Ancient trees serve as living records of climate history and provide crucial habitat for countless species.
   description_long: null
@@ -1283,6 +1336,7 @@ items:
   name: Century
   value: 3155760000.0
   description: A hundred-year period that spans multiple human generations and encompasses major historical transformations. This duration represents roughly the maximum human lifespan, making it particularly meaningful for long-term planning and historical perspective. Centuries provide the fundamental unit for historical periodization, from the "Century of Light" (18th) to the "American Century" (20th).
+  description_format: markdown
   summary_short: A hundred-year period that spans multiple human generations and encompasses major historical transformations.
   description_medium: A hundred-year period that spans multiple human generations and encompasses major historical transformations. This duration represents roughly the maximum human lifespan, making it particularly meaningful for long-term planning and historical perspective. Centuries provide the fundamental unit for historical periodization, from the "Century of Light" (18th) to the "American Century" (20th).
   description_long: null
@@ -1320,6 +1374,7 @@ items:
   name: Millennium
   value: 31557600000.0
   description: A thousand-year period that represents major milestones in human civilization and geological time. This duration spans about 40 human generations and encompasses significant cultural, technological, and environmental changes. Millennia serve as important reference periods, from the "First Millennium" of Christianity to the "Third Millennium" of the Common Era.
+  description_format: markdown
   summary_short: A thousand-year period that represents major milestones in human civilization and geological time.
   description_medium: A thousand-year period that represents major milestones in human civilization and geological time. This duration spans about 40 human generations and encompasses significant cultural, technological, and environmental changes. Millennia serve as important reference periods, from the "First Millennium" of Christianity to the "Third Millennium" of the Common Era.
   description_long: null
@@ -1357,6 +1412,7 @@ items:
   name: Human Civilization
   value: 126000000000.0
   description: About 4000 years since humans developed agriculture, writing, and urban centers. This represents the time since the first civilizations emerged in Mesopotamia and Egypt. During this period, humans transitioned from hunter-gatherers to building complex societies with advanced technologies. This duration encompasses the entire span of recorded history, from the pyramids to the internet.
+  description_format: markdown
   summary_short: About 4000 years since humans developed agriculture, writing, and urban centers.
   description_medium: About 4000 years since humans developed agriculture, writing, and urban centers. This represents the time since the first civilizations emerged in Mesopotamia and Egypt. During this period, humans transitioned from hunter-gatherers to building complex societies with advanced technologies. This duration encompasses the entire span of recorded history, from the pyramids to the internet.
   description_long: null
@@ -1394,6 +1450,7 @@ items:
   name: Ice Age Cycle
   value: 12600000000000.0
   description: The characteristic duration of glacial-interglacial cycles during the Quaternary period, averaging about 100,000 years. This cycle is driven by changes in Earth's orbit and tilt that affect solar radiation distribution. The cycle includes roughly 80,000 years of glacial advance and 20,000 years of interglacial warming. Serbian scientist Milutin Milankovitch first calculated these orbital cycles in the early 1900s.
+  description_format: markdown
   summary_short: The characteristic duration of glacial-interglacial cycles during the Quaternary period, averaging about 100,000 years.
   description_medium: The characteristic duration of glacial-interglacial cycles during the Quaternary period, averaging about 100,000 years. This cycle is driven by changes in Earth's orbit and tilt that affect solar radiation distribution. The cycle includes roughly 80,000 years of glacial advance and 20,000 years of interglacial warming. Serbian scientist Milutin Milankovitch first calculated these orbital cycles in the early 1900s.
   description_long: null
@@ -1431,6 +1488,7 @@ items:
   name: Geological Epoch
   value: 31500000000000.0
   description: The duration of a typical geological epoch, representing major changes in Earth's history. Epochs are defined by significant geological or biological events, such as mass extinctions or climate changes. These periods help scientists understand Earth's long-term evolution.
+  description_format: markdown
   summary_short: The duration of a typical geological epoch, representing major changes in Earth's history.
   description_medium: The duration of a typical geological epoch, representing major changes in Earth's history. Epochs are defined by significant geological or biological events, such as mass extinctions or climate changes. These periods help scientists understand Earth's long-term evolution.
   description_long: null
@@ -1468,6 +1526,7 @@ items:
   name: Continental Drift Timescale
   value: 315000000000000.0
   description: The time required for continental drift to move continents significant distances, representing the slow movement of tectonic plates. This process shapes Earth's geography over millions of years, creating mountains, oceans, and changing climate patterns. Continental drift explains the distribution of fossils and geological features.
+  description_format: markdown
   summary_short: The time required for continental drift to move continents significant distances, representing the slow movement of tectonic plates.
   description_medium: The time required for continental drift to move continents significant distances, representing the slow movement of tectonic plates. This process shapes Earth's geography over millions of years, creating mountains, oceans, and changing climate patterns. Continental drift explains the distribution of fossils and geological features.
   description_long: null
@@ -1505,6 +1564,7 @@ items:
   name: Galactic Rotation Period
   value: 2000000000000000.0
   description: The time required for a typical galaxy to complete one full rotation around its center, representing galactic dynamics and structure. This duration varies by galaxy type and size, with smaller galaxies rotating faster than larger ones. Galactic rotation shapes spiral arms and influences star formation.
+  description_format: markdown
   summary_short: The time required for a typical galaxy to complete one full rotation around its center, representing galactic dynamics and structure.
   description_medium: The time required for a typical galaxy to complete one full rotation around its center, representing galactic dynamics and structure. This duration varies by galaxy type and size, with smaller galaxies rotating faster than larger ones. Galactic rotation shapes spiral arms and influences star formation.
   description_long: null
@@ -1542,6 +1602,7 @@ items:
   name: Dinosaurs Extinction
   value: 2080000000000000.0
   description: About 66 million years since the Cretaceous-Paleogene mass extinction event that eliminated non-avian dinosaurs. This extinction was likely caused by a combination of asteroid impact and volcanic activity. The event marked the end of the Mesozoic Era and enabled the rapid diversification of mammals that eventually led to human evolution. This is one of the "Big Five" mass extinctions in Earth's history.
+  description_format: markdown
   summary_short: About 66 million years since the Cretaceous-Paleogene mass extinction event that eliminated non-avian dinosaurs.
   description_medium: About 66 million years since the Cretaceous-Paleogene mass extinction event that eliminated non-avian dinosaurs. This extinction was likely caused by a combination of asteroid impact and volcanic activity. The event marked the end of the Mesozoic Era and enabled the rapid diversification of mammals that eventually led to human evolution. This is one of the "Big Five" mass extinctions in Earth's history.
   description_long: null
@@ -1579,6 +1640,7 @@ items:
   name: Galaxy Merger Timescale
   value: 1.0e+17
   description: The time required for a typical galaxy to merge with another galaxy, representing the slow process of galactic collision and interaction. Galaxy mergers are common events that reshape galactic structure and trigger bursts of star formation. Our Milky Way will eventually merge with the Andromeda Galaxy.
+  description_format: markdown
   summary_short: The time required for a typical galaxy to merge with another galaxy, representing the slow process of galactic collision and interaction.
   description_medium: The time required for a typical galaxy to merge with another galaxy, representing the slow process of galactic collision and interaction. Galaxy mergers are common events that reshape galactic structure and trigger bursts of star formation. Our Milky Way will eventually merge with the Andromeda Galaxy.
   description_long: null
@@ -1616,6 +1678,7 @@ items:
   name: Main Sequence Lifetime
   value: 1.0e+17
   description: The estimated lifetime of a typical main-sequence star like our Sun, representing the duration of hydrogen fusion in stellar cores. This timescale determines how long stars can sustain nuclear reactions and maintain stable luminosity. Most stars spend the majority of their lives in this phase.
+  description_format: markdown
   summary_short: The estimated lifetime of a typical main-sequence star like our Sun, representing the duration of hydrogen fusion in stellar cores.
   description_medium: The estimated lifetime of a typical main-sequence star like our Sun, representing the duration of hydrogen fusion in stellar cores. This timescale determines how long stars can sustain nuclear reactions and maintain stable luminosity. Most stars spend the majority of their lives in this phase.
   description_long: null
@@ -1653,6 +1716,7 @@ items:
   name: Planetary System Lifetime
   value: 1.0e+17
   description: The estimated lifetime of a typical planetary system, representing how long planets can maintain stable orbits around their parent star. This duration depends on stellar evolution, gravitational interactions, and external perturbations. Our solar system has remained stable for over 4 billion years.
+  description_format: markdown
   summary_short: The estimated lifetime of a typical planetary system, representing how long planets can maintain stable orbits around their parent star.
   description_medium: The estimated lifetime of a typical planetary system, representing how long planets can maintain stable orbits around their parent star. This duration depends on stellar evolution, gravitational interactions, and external perturbations. Our solar system has remained stable for over 4 billion years.
   description_long: null
@@ -1689,9 +1753,10 @@ items:
 - id: obs:duration:entity-earth
   name: Earth Age
   value: 1.45e+17
-  description: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age.
+  description: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age. Here the quantity refers to `age since formation`.
+  description_format: markdown
   summary_short: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation.
-  description_medium: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age.
+  description_medium: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age. Here the quantity refers to `age since formation`.
   description_long: null
   hook: null
   caveats: null
@@ -1727,9 +1792,10 @@ items:
 - id: obs:duration:entity-sun
   name: Sun Age
   value: 1.45e+17
-  description: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology.
+  description: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology. Here the quantity refers to `age since formation`.
+  description_format: markdown
   summary_short: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud.
-  description_medium: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology.
+  description_medium: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology. Here the quantity refers to `age since formation`.
   description_long: null
   hook: null
   caveats: null
@@ -1765,9 +1831,10 @@ items:
 - id: obs:duration:entity-universe
   name: Universe Age
   value: 4.35e+17
-  description: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time.
+  description: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time. Here the quantity refers to `age of the observable universe`.
+  description_format: markdown
   summary_short: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements.
-  description_medium: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time.
+  description_medium: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time. Here the quantity refers to `age of the observable universe`.
   description_long: null
   hook: null
   caveats: null
@@ -1804,6 +1871,7 @@ items:
   name: All Human Hours Ever
   value: 1.45e+20
   description: The total person-hours accumulated by all humans who have ever lived, estimated using Fermi-style integration of population over time. For ~300,000 years of Homo sapiens. Hunter-gatherer era (~290k yrs, avg pop ~5M) ≈ 1.45*10¹² person-years; agriculture to 1800 CE (~11.8k yrs, avg pop ~200M) ≈ 2.36*10¹² person-years; 1800-today (~225 yrs, avg pop ~3.5B) ≈ 7.9×10¹¹ person-years. Total ≈ 4.6*10¹² person-years. This represents the cumulative conscious experience of our entire species throughout history.
+  description_format: markdown
   summary_short: The total person-hours accumulated by all humans who have ever lived, estimated using Fermi-style integration of population over time.
   description_medium: The total person-hours accumulated by all humans who have ever lived, estimated using Fermi-style integration of population over time. For ~300,000 years of Homo sapiens. Hunter-gatherer era (~290k yrs, avg pop ~5M) ≈ 1.45*10¹² person-years; agriculture to 1800 CE (~11.8k yrs, avg pop ~200M) ≈ 2.36*10¹² person-years; 1800-today (~225 yrs, avg pop ~3.5B) ≈ 7.9×10¹¹ person-years. Total ≈ 4.6*10¹² person-years. This represents the cumulative conscious experience of our entire species throughout history.
   description_long: null
@@ -1840,9 +1908,10 @@ items:
 - id: obs:duration:scenario-duration-all-life-hours-ever
   name: All Life Hours Ever
   value: 1.08e+47
-  description: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago. Using Fermi-style calculation, 1e30 microbial cells at any given time  3e13 hours of biosphere existence ≈ 3e43 organism-hours. This includes every moment of every organism's existence, from single-celled bacteria to complex multicellular life. Almost all of it is microbes, adding animals, plants, and fungi barely nudges the total.
+  description: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago. Using Fermi-style calculation, 1e30 microbial cells at any given time 3e13 hours of biosphere existence ≈ 3e43 organism-hours. This includes every moment of every organism's existence, from single-celled bacteria to complex multicellular life. Almost all of it is microbes, adding animals, plants, and fungi barely nudges the total.
+  description_format: markdown
   summary_short: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago.
-  description_medium: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago. Using Fermi-style calculation, 1e30 microbial cells at any given time  3e13 hours of biosphere existence ≈ 3e43 organism-hours. This includes every moment of every organism's existence, from single-celled bacteria to complex multicellular life. Almost all of it is microbes, adding animals, plants, and fungi barely nudges the total.
+  description_medium: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago. Using Fermi-style calculation, 1e30 microbial cells at any given time 3e13 hours of biosphere existence ≈ 3e43 organism-hours. This includes every moment of every organism's existence, from single-celled bacteria to complex multicellular life. Almost all of it is microbes, adding animals, plants, and fungi barely nudges the total.
   description_long: null
   hook: null
   caveats: null

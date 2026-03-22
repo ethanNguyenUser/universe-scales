@@ -11,6 +11,9 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.7/dist/purify.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
 </head>
@@ -61,7 +64,7 @@
                 <button id="music-toggle" class="music-toggle" aria-label="Play or pause background music"
                     title="Play or pause music">🎵</button>
             </div>
-            <p id="dimension-description" class="dimension-description"></p>
+            <div id="dimension-description" class="dimension-description"></div>
         </header>
 
         <main class="main">
@@ -83,7 +86,7 @@
                 </select>
             </div>
 
-            <p id="unit-description" class="unit-description"></p>
+            <div id="unit-description" class="unit-description"></div>
 
             <!-- Visual Editor Panel -->
             <div id="editor-panel" class="editor-panel">
@@ -193,7 +196,7 @@
                     <img class="tooltip-image" src="" alt="">
                     <h3 class="tooltip-title"></h3>
                     <p class="tooltip-value"></p>
-                    <p class="tooltip-description"></p>
+                    <div class="tooltip-description"></div>
                     <a class="tooltip-source" href="#" target="_blank"></a>
                 </div>
             </div>

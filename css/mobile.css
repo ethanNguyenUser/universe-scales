@@ -113,6 +113,10 @@
     .tooltip-source {
         font-size: 0.8rem;
     }
+    .tooltip-description {
+        max-height: min(42vh, 18rem);
+        overflow-y: auto;
+    }
     .tooltip-image {
         max-height: 140px;
     }
@@ -130,6 +134,9 @@
         .tooltip-description,
         .tooltip-source {
             font-size: 0.75rem;
+        }
+        .tooltip-description {
+            max-height: min(38vh, 14rem);
         }
         .tooltip-image {
             max-height: 100px;
@@ -221,6 +228,8 @@
             grid-row: 1 / -1; /* Span from first to last row */
             margin-bottom: 0;
             align-self: start;
+            max-height: min(50vh, 14rem);
+            overflow-y: auto;
         }
         
         /* Reduce footer and unit description text size in landscape */

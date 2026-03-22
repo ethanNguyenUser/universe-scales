@@ -1,0 +1,959 @@
+dimension: speed
+base_unit: meters_per_second
+dimension_description: Speed tells how fast position changes with time, without caring about the direction of travel. It is the scalar magnitude behind commuting, sprinting, and orbiting, the number you see on a speedometer. Human bodies sense acceleration more than speed, but fatigue and safety often map back to speed limits. Each entry below identifies a specific context so the values can be tested against experience or instruments.
+related_resources: []
+show_limitations: true
+units:
+- conversion_factor: 1
+  description: Meters per second is the SI unit for speed and follows directly from distance divided by time. It keeps equations simple and converts cleanly to energy via kinetic formulas. Using it aligns laboratory and field measurements. All item values are recorded in m per s before conversion.
+  name: meters per second
+  symbol: m/s
+- conversion_factor: 3.6
+  description: Kilometers per hour is common on road signs and dashboards around the world. It maps daily travel times to map distances conveniently. Converting is a simple scale by 3.6 from SI. We include it for transportation contexts.
+  name: kilometers per hour
+  symbol: km/h
+- conversion_factor: 2.23694
+  description: Miles per hour is used in the United States and United Kingdom for road speeds. It ties to statute miles familiar from legacy maps. Simple factors connect it to SI when needed. Many instruments display both units side by side.
+  name: miles per hour
+  symbol: mph
+- conversion_factor: 3.28084
+  description: Feet per second appears in ballistics and sports timing, where small distances and short times prevail. It is convenient for quick mental arithmetic in yards and seconds. We list it for legacy comparisons. Convert directly from meters per second using the foot factor.
+  name: feet per second
+  symbol: ft/s
+- conversion_factor: 1.94384
+  description: Knots measure speed over water and in the air based on nautical miles per hour. Pilots and captains plan using this unit because charts are drawn in nautical miles. Conversions keep navigation consistent with physics. The factor provides a direct mapping from SI.
+  name: knots
+  symbol: kn
+- name: kilometers per second
+  symbol: km/s
+  conversion_factor: 0.001
+  description: Kilometers per second are useful for orbital and escape velocities.
+- name: mach
+  symbol: Ma
+  conversion_factor: 0.0029386693737562
+  description: Mach number compares speed to the speed of sound in air near sea level.
+- name: speed of light
+  symbol: c
+  conversion_factor: 3.3356409519815e-09
+  description: Using c helps compare relativistic speeds and signal propagation.
+required_min_items: 24
+preferred_target_items: 24
+preferred_max_items: 24
+selection_bin_count: 24
+description_format: markdown
+frontend_group: motion
+frontend_group_label: Motion & Mechanics
+frontend_order: 80
+items:
+- id: obs:speed:scenario-speed-continental-drift
+  name: Continental Drift
+  value: 2.0e-09
+  description: Continents creep at centimeters per year as plates slide on the mantle, which is a few nanometers per second. Over a lifetime this sums to meters, enough to redraw coastlines for future generations. GPS networks now measure this motion directly. The value represents a typical mid ocean ridge spreading rate.
+  description_format: markdown
+  summary_short: Continents creep at centimeters per year as plates slide on the mantle, which is a few nanometers per second.
+  description_medium: Continents creep at centimeters per year as plates slide on the mantle, which is a few nanometers per second. Over a lifetime this sums to meters, enough to redraw coastlines for future generations. GPS networks now measure this motion directly. The value represents a typical mid ocean ridge spreading rate.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Continental Drift
+  source: https://en.wikipedia.org/wiki/Continental_drift
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-continental-drift
+    url: https://en.wikipedia.org/wiki/Continental_drift
+    title: Continental drift
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-plant-growth
+  name: Plant Growth
+  value: 1.0e-08
+  description: Plant shoots extend by micrometers per second when conditions are kind, driven by water pressure and cell wall remodeling. To the eye it is stillness; to a timelapse it is motion. Botanists infer these rates from growth curves and hormone assays. The number captures a healthy indoor plant.
+  description_format: markdown
+  summary_short: Plant shoots extend by micrometers per second when conditions are kind, driven by water pressure and cell wall remodeling.
+  description_medium: Plant shoots extend by micrometers per second when conditions are kind, driven by water pressure and cell wall remodeling. To the eye it is stillness; to a timelapse it is motion. Botanists infer these rates from growth curves and hormone assays. The number captures a healthy indoor plant.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Plant Growth
+  source: https://en.wikipedia.org/wiki/Plant_growth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-plant-growth
+    url: https://en.wikipedia.org/wiki/Plant_growth
+    title: Plant growth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-glacier-movement
+  name: Glacier Movement
+  value: 1.0e-06
+  description: Glaciers flow down valleys at about a meter per day in temperate climates, changing with snowfall and melt. Crevasses mark places where speed gradients tear the ice. Satellites track these changes season by season. The value is a representative average rather than a surge.
+  description_format: markdown
+  summary_short: Glaciers flow down valleys at about a meter per day in temperate climates, changing with snowfall and melt.
+  description_medium: Glaciers flow down valleys at about a meter per day in temperate climates, changing with snowfall and melt. Crevasses mark places where speed gradients tear the ice. Satellites track these changes season by season. The value is a representative average rather than a surge.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Glacier Movement
+  source: https://en.wikipedia.org/wiki/Glacier
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-glacier
+    url: https://en.wikipedia.org/wiki/Glacier
+    title: Glacier
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-snail
+  name: Snail
+  value: 0.001
+  description: A garden snail travels at millimeters per second across a sidewalk, limited by muscle cycles and mucus drag. Its speed is steady over minutes but pauses often for sensing. Children learn patience by watching. The value reflects a typical unhurried crawl.
+  description_format: markdown
+  summary_short: A garden snail travels at millimeters per second across a sidewalk, limited by muscle cycles and mucus drag.
+  description_medium: A garden snail travels at millimeters per second across a sidewalk, limited by muscle cycles and mucus drag. Its speed is steady over minutes but pauses often for sensing. Children learn patience by watching. The value reflects a typical unhurried crawl.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Snail
+  source: https://en.wikipedia.org/wiki/Snail
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-snail
+    url: https://en.wikipedia.org/wiki/Snail
+    title: Snail
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-human-walking
+  name: Human Walking
+  value: 1.4
+  description: Comfortable human walking on level ground averages around one and a half meters per second. This cadence minimizes energy per distance for the human musculoskeletal system. Runners and robots use it as a planning baseline. The value assumes flat terrain and no load.
+  description_format: markdown
+  summary_short: Comfortable human walking on level ground averages around one and a half meters per second.
+  description_medium: Comfortable human walking on level ground averages around one and a half meters per second. This cadence minimizes energy per distance for the human musculoskeletal system. Runners and robots use it as a planning baseline. The value assumes flat terrain and no load.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Human Walking
+  source: https://en.wikipedia.org/wiki/Walking
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-walking
+    url: https://en.wikipedia.org/wiki/Walking
+    title: Walking
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-marathon-pace-4-h
+  name: Marathon Pace (4 h)
+  value: 2.94
+  description: A marathon finishing time of four hours corresponds to this average running speed along the course. Hills and crowds change the local pace around this mean. Training plans work backward from such averages. The number ties physics to weekend goals.
+  description_format: markdown
+  summary_short: A marathon finishing time of four hours corresponds to this average running speed along the course.
+  description_medium: A marathon finishing time of four hours corresponds to this average running speed along the course. Hills and crowds change the local pace around this mean. Training plans work backward from such averages. The number ties physics to weekend goals.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Marathon Pace (4 h)
+  source: https://en.wikipedia.org/wiki/Marathon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-marathon
+    url: https://en.wikipedia.org/wiki/Marathon
+    title: Marathon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-elevator-car
+  name: Elevator Car
+  value: 3.0
+  description: A city elevator travels around this speed to balance comfort with throughput, using careful jerk limits at start and stop. Taller buildings run faster express cars to sky lobbies. Riders barely notice speed when motion is smooth. The value applies between floors, not at doors.
+  description_format: markdown
+  summary_short: A city elevator travels around this speed to balance comfort with throughput, using careful jerk limits at start and stop.
+  description_medium: A city elevator travels around this speed to balance comfort with throughput, using careful jerk limits at start and stop. Taller buildings run faster express cars to sky lobbies. Riders barely notice speed when motion is smooth. The value applies between floors, not at doors.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Elevator Car
+  source: https://en.wikipedia.org/wiki/Elevator
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-elevator
+    url: https://en.wikipedia.org/wiki/Elevator
+    title: Elevator
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-bicycle
+  name: Bicycle
+  value: 5.5
+  description: Everyday urban cycling on level ground averages around this speed for commuters. Wind and traffic lights matter more than raw leg power. Good infrastructure increases average speed safely. The value is for a relaxed pace on a city bike.
+  description_format: markdown
+  summary_short: Everyday urban cycling on level ground averages around this speed for commuters.
+  description_medium: Everyday urban cycling on level ground averages around this speed for commuters. Wind and traffic lights matter more than raw leg power. Good infrastructure increases average speed safely. The value is for a relaxed pace on a city bike.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Bicycle
+  source: https://en.wikipedia.org/wiki/Bicycle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bicycle
+    url: https://en.wikipedia.org/wiki/Bicycle
+    title: Bicycle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-human-running
+  name: Human Running
+  value: 5.5
+  description: Recreational running settles near five to six meters per second for fit adults on a track. Sprinting peaks higher but cannot be held. Coaches train pacing by feel and watch. The number is a sustained pace for several minutes.
+  description_format: markdown
+  summary_short: Recreational running settles near five to six meters per second for fit adults on a track.
+  description_medium: Recreational running settles near five to six meters per second for fit adults on a track. Sprinting peaks higher but cannot be held. Coaches train pacing by feel and watch. The number is a sustained pace for several minutes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Human Running
+  source: https://en.wikipedia.org/wiki/Running
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-running
+    url: https://en.wikipedia.org/wiki/Running
+    title: Running
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-car-city
+  name: Car (City)
+  value: 13.9
+  description: City driving averages under fifteen meters per second when signals, stops, and congestion are counted. Drivers often overestimate their average due to brief fast segments. Travel time depends more on reliability than peak speed. The value converts to roughly thirty miles per hour.
+  description_format: markdown
+  summary_short: City driving averages under fifteen meters per second when signals, stops, and congestion are counted.
+  description_medium: City driving averages under fifteen meters per second when signals, stops, and congestion are counted. Drivers often overestimate their average due to brief fast segments. Travel time depends more on reliability than peak speed. The value converts to roughly thirty miles per hour.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Car (City)
+  source: https://en.wikipedia.org/wiki/Automobile
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-automobile
+    url: https://en.wikipedia.org/wiki/Automobile
+    title: Automobile
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-cheetah
+  name: Cheetah
+  value: 28.0
+  description: A cheetah in a short chase can exceed twenty meters per second using a flexible spine as a spring. The burst lasts only seconds before heat builds. Evolution tuned this system to ambush on open savanna. The value is a peak dash, not cruising.
+  description_format: markdown
+  summary_short: A cheetah in a short chase can exceed twenty meters per second using a flexible spine as a spring.
+  description_medium: A cheetah in a short chase can exceed twenty meters per second using a flexible spine as a spring. The burst lasts only seconds before heat builds. Evolution tuned this system to ambush on open savanna. The value is a peak dash, not cruising.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Cheetah
+  source: https://en.wikipedia.org/wiki/Cheetah
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cheetah
+    url: https://en.wikipedia.org/wiki/Cheetah
+    title: Cheetah
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-car-highway
+  name: Car (Highway)
+  value: 33.3
+  description: Highway cruising sits around thirty meters per second where legal and conditions allow. Aerodynamic drag dominates fuel economy here. Adaptive cruise control tries to keep this number steady to save energy. The value is a typical posted limit speed.
+  description_format: markdown
+  summary_short: Highway cruising sits around thirty meters per second where legal and conditions allow.
+  description_medium: Highway cruising sits around thirty meters per second where legal and conditions allow. Aerodynamic drag dominates fuel economy here. Adaptive cruise control tries to keep this number steady to save energy. The value is a typical posted limit speed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Car (Highway)
+  source: https://en.wikipedia.org/wiki/Automobile
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-automobile
+    url: https://en.wikipedia.org/wiki/Automobile
+    title: Automobile
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-fastball
+  name: Fastball
+  value: 42.0
+  description: A pitched baseball leaves the hand near forty meters per second for professional fastballs. Aerodynamics then trims speed before the plate. Catchers train to read this in fractions of a second. The value is at release, not at contact.
+  description_format: markdown
+  summary_short: A pitched baseball leaves the hand near forty meters per second for professional fastballs.
+  description_medium: A pitched baseball leaves the hand near forty meters per second for professional fastballs. Aerodynamics then trims speed before the plate. Catchers train to read this in fractions of a second. The value is at release, not at contact.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Fastball
+  source: https://en.wikipedia.org/wiki/Baseball
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-baseball
+    url: https://en.wikipedia.org/wiki/Baseball
+    title: Baseball
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-high-speed-train
+  name: High-Speed Train
+  value: 83.3
+  description: High speed rail lines in service run near eighty meters per second on straight, well maintained track. Curves and stations reduce the trip average below this peak. Quiet cabins make the experience feel slower than it is. The value states a line speed, not schedule speed.
+  description_format: markdown
+  summary_short: High speed rail lines in service run near eighty meters per second on straight, well maintained track.
+  description_medium: High speed rail lines in service run near eighty meters per second on straight, well maintained track. Curves and stations reduce the trip average below this peak. Quiet cabins make the experience feel slower than it is. The value states a line speed, not schedule speed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: High-Speed Train
+  source: https://en.wikipedia.org/wiki/High-speed_rail
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-high-speed-rail
+    url: https://en.wikipedia.org/wiki/High-speed_rail
+    title: High-speed rail
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-peregrine-falcon
+  name: Peregrine Falcon
+  value: 89.0
+  description: A peregrine falcon stooping on prey dives at speeds that approach one hundred meters per second with wings tucked. Feathers and head shape channel air to keep vision stable. The stoop converts gravitational potential into kinetic energy efficiently. The value is for a vertical dive, not level flight.
+  description_format: markdown
+  summary_short: A peregrine falcon stooping on prey dives at speeds that approach one hundred meters per second with wings tucked.
+  description_medium: A peregrine falcon stooping on prey dives at speeds that approach one hundred meters per second with wings tucked. Feathers and head shape channel air to keep vision stable. The stoop converts gravitational potential into kinetic energy efficiently. The value is for a vertical dive, not level flight.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Peregrine Falcon
+  source: https://en.wikipedia.org/wiki/Peregrine_falcon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-peregrine-falcon
+    url: https://en.wikipedia.org/wiki/Peregrine_falcon
+    title: Peregrine falcon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-commercial-jet
+  name: Commercial Jet
+  value: 250.0
+  description: A commercial jet at cruise in thin air travels near two hundred and fifty meters per second relative to the air. Tailwinds and headwinds adjust groundspeed by tens of meters per second. Pilots aim for efficient Mach numbers rather than raw speed. The value is a long haul typical.
+  description_format: markdown
+  summary_short: A commercial jet at cruise in thin air travels near two hundred and fifty meters per second relative to the air.
+  description_medium: A commercial jet at cruise in thin air travels near two hundred and fifty meters per second relative to the air. Tailwinds and headwinds adjust groundspeed by tens of meters per second. Pilots aim for efficient Mach numbers rather than raw speed. The value is a long haul typical.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Commercial Jet
+  source: https://en.wikipedia.org/wiki/Jet_aircraft
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jet-aircraft
+    url: https://en.wikipedia.org/wiki/Jet_aircraft
+    title: Jet aircraft
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-sound-in-air
+  name: Sound in Air
+  value: 343.0
+  description: Sound in dry air at room temperature travels near three hundred forty three meters per second, carrying speech and music. Temperature and humidity tweak this value predictably. Musicians sense it as hall delay between stage and back row. The number is the standard classroom reference.
+  description_format: markdown
+  summary_short: Sound in dry air at room temperature travels near three hundred forty three meters per second, carrying speech and music.
+  description_medium: Sound in dry air at room temperature travels near three hundred forty three meters per second, carrying speech and music. Temperature and humidity tweak this value predictably. Musicians sense it as hall delay between stage and back row. The number is the standard classroom reference.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Sound in Air
+  source: https://en.wikipedia.org/wiki/Speed_of_sound
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-speed-of-sound
+    url: https://en.wikipedia.org/wiki/Speed_of_sound
+    title: Speed of sound
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-concorde
+  name: Concorde
+  value: 600.0
+  description: Concorde’s supersonic cruise reached about six hundred meters per second, halving transatlantic time. Fuel burn and sonic boom constraints ended routine service. The flight numbers still inspire new designs. The value is at altitude, not near sea level.
+  description_format: markdown
+  summary_short: Concorde’s supersonic cruise reached about six hundred meters per second, halving transatlantic time.
+  description_medium: Concorde’s supersonic cruise reached about six hundred meters per second, halving transatlantic time. Fuel burn and sonic boom constraints ended routine service. The flight numbers still inspire new designs. The value is at altitude, not near sea level.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Concorde
+  source: https://en.wikipedia.org/wiki/Concorde
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concorde
+    url: https://en.wikipedia.org/wiki/Concorde
+    title: Concorde
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-sr-71-blackbird
+  name: SR-71 Blackbird
+  value: 980.0
+  description: The SR71 Blackbird set records above nine hundred meters per second in level flight. Airframe heating, not engine thrust, became the limit. Reconnaissance routes exploited this speed to outrun threats. The value is a published peak.
+  description_format: markdown
+  summary_short: The SR71 Blackbird set records above nine hundred meters per second in level flight.
+  description_medium: The SR71 Blackbird set records above nine hundred meters per second in level flight. Airframe heating, not engine thrust, became the limit. Reconnaissance routes exploited this speed to outrun threats. The value is a published peak.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: SR-71 Blackbird
+  source: https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lockheed-sr-71-blackbird
+    url: https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird
+    title: Lockheed SR-71 Blackbird
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-international-space-station
+  name: International Space Station
+  value: 7700.0
+  description: The International Space Station circles Earth at about seven thousand seven hundred meters per second to remain in low orbit. At this speed one lap takes about ninety minutes. Astronauts feel weightless because they are in continuous free fall. The number is a mean orbital speed.
+  description_format: markdown
+  summary_short: The International Space Station circles Earth at about seven thousand seven hundred meters per second to remain in low orbit.
+  description_medium: The International Space Station circles Earth at about seven thousand seven hundred meters per second to remain in low orbit. At this speed one lap takes about ninety minutes. Astronauts feel weightless because they are in continuous free fall. The number is a mean orbital speed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: International Space Station
+  source: https://en.wikipedia.org/wiki/International_Space_Station
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-international-space-station
+    url: https://en.wikipedia.org/wiki/International_Space_Station
+    title: International Space Station
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-escape-velocity-earth
+  name: Escape Velocity (Earth)
+  value: 11186.0
+  description: Escape velocity at Earth’s surface is around eleven thousand meters per second, the speed needed to outrun gravity without further thrust. Rockets reach orbit with less speed by trading some energy to climb rather than escape. The number is a theoretical threshold ignoring atmosphere. It sets a clean physics marker.
+  description_format: markdown
+  summary_short: Escape velocity at Earth’s surface is around eleven thousand meters per second, the speed needed to outrun gravity without further thrust.
+  description_medium: Escape velocity at Earth’s surface is around eleven thousand meters per second, the speed needed to outrun gravity without further thrust. Rockets reach orbit with less speed by trading some energy to climb rather than escape. The number is a theoretical threshold ignoring atmosphere. It sets a clean physics marker.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Escape Velocity (Earth)
+  source: https://en.wikipedia.org/wiki/Escape_velocity
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escape-velocity
+    url: https://en.wikipedia.org/wiki/Escape_velocity
+    title: Escape velocity
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-helios-2-spacecraft
+  name: Helios 2 Spacecraft
+  value: 70000.0
+  description: Helios 2, a solar probe, reached about seventy thousand meters per second at perihelion using gravity assists. Close to the Sun, orbital speeds soar. Such missions map the heliosphere where wind and fields originate. The value is its record setting peak.
+  description_format: markdown
+  summary_short: Helios 2, a solar probe, reached about seventy thousand meters per second at perihelion using gravity assists.
+  description_medium: Helios 2, a solar probe, reached about seventy thousand meters per second at perihelion using gravity assists. Close to the Sun, orbital speeds soar. Such missions map the heliosphere where wind and fields originate. The value is its record setting peak.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Helios 2 Spacecraft
+  source: https://en.wikipedia.org/wiki/Helios_(spacecraft)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-helios-spacecraft
+    url: https://en.wikipedia.org/wiki/Helios_(spacecraft)
+    title: Helios (spacecraft)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-light-in-vacuum
+  name: Light in Vacuum
+  value: 299792458.0
+  description: Light in vacuum moves at exactly two hundred ninety nine million seven hundred ninety two thousand four hundred fifty eight meters per second by definition. It is the ultimate speed limit of relativity, entwined with how we measure length and time. Fiber optics carry information just below this pace. The number fixes the meter itself.
+  description_format: markdown
+  summary_short: Light in vacuum moves at exactly two hundred ninety nine million seven hundred ninety two thousand four hundred fifty eight meters per second by definition.
+  description_medium: Light in vacuum moves at exactly two hundred ninety nine million seven hundred ninety two thousand four hundred fifty eight meters per second by definition. It is the ultimate speed limit of relativity, entwined with how we measure length and time. Fiber optics carry information just below this pace. The number fixes the meter itself.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Light in Vacuum
+  source: https://en.wikipedia.org/wiki/Speed_of_light
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-speed-of-light
+    url: https://en.wikipedia.org/wiki/Speed_of_light
+    title: Speed of light
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-radio-waves
+  name: Radio Waves
+  value: 299792458.0
+  description: Radio waves are light at lower frequencies and share the same vacuum speed as visible light. In air and cables they slow slightly depending on refractive index. Antennas and circuits are designed with these delays in mind. The value repeats the universal constant in a radio context.
+  description_format: markdown
+  summary_short: Radio waves are light at lower frequencies and share the same vacuum speed as visible light.
+  description_medium: Radio waves are light at lower frequencies and share the same vacuum speed as visible light. In air and cables they slow slightly depending on refractive index. Antennas and circuits are designed with these delays in mind. The value repeats the universal constant in a radio context.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Radio Waves
+  source: https://en.wikipedia.org/wiki/Radio_wave
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-radio-wave
+    url: https://en.wikipedia.org/wiki/Radio_wave
+    title: Radio wave
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
