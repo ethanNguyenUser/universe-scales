@@ -146,6 +146,46 @@ items:
   name: Warm Room Air (1 m3, plus 10 C)
   source: https://en.wikipedia.org/wiki/Heat_capacity
   value: 7e3
+- description: >-
+    A fresh AA alkaline battery stores only a few watt-hours, yet that is enough to run clocks and remote controls for months because the loads are tiny. Thinking in joules makes the scale less mysterious: it is closer to lifting luggage than to powering a car. Chemistry and cutoff voltage decide how much of it is really usable. The value here is a typical nominal capacity.
+  name: AA Battery
+  source: https://en.wikipedia.org/wiki/AA_battery
+  value: 1.5e4
+- description: >-
+    Heating a mug of water for tea takes tens of kilojoules, which is why kettles drawing a kilowatt or more can finish in a minute or two. Most of the energy budget goes directly into the water because the system is small and losses are limited. Kitchen routines are full of numbers like this even when nobody says them out loud. The value is for roughly 250 milliliters heated from room temperature to near boiling.
+  name: Boil a Mug of Water
+  source: https://en.wikipedia.org/wiki/Heat_capacity
+  value: 8e4
+- description: >-
+    A centerfire rifle cartridge delivers a few kilojoules of muzzle energy, packed into a tiny metal case and released in milliseconds. That is why the projectile’s mass can stay small while the impact remains serious. Ballistics tables usually quote this number alongside muzzle velocity because the pair explains much of the projectile’s behavior. The value is typical for a full-power rifle round.
+  name: Rifle Cartridge
+  source: https://en.wikipedia.org/wiki/Muzzle_energy
+  value: 3e3
+- description: >-
+    One liter of gasoline contains tens of megajoules of chemical energy, which is why liquid fuels remain attractive wherever range and refill speed matter. Internal combustion engines turn only part of that into motion, throwing much of the rest away as heat. The number helps compare a fuel tank with batteries or daily household electricity use. It is the lower-heating-value scale for ordinary pump gasoline.
+  name: Gasoline (1 liter)
+  source: https://en.wikipedia.org/wiki/Gasoline
+  value: 3.4e7
+- description: >-
+    Over a full lifetime, a human body metabolizes on the order of tens of billions of joules from food. Spread over decades it does not feel extreme, but accumulated total energy is substantial enough to compare with industrial machines. Most of it leaves again as heat while a small fraction becomes external work. The value assumes a long life near two thousand dietary kilocalories per day.
+  name: Human Lifetime Food
+  source: https://en.wikipedia.org/wiki/Food_energy
+  value: 2.5e10
+- description: >-
+    The Hiroshima bomb released energy equivalent to only a few kilotons of TNT, yet concentrated in place and time it reshaped a city. Nuclear history is full of this contrast between moderate total energy and overwhelming destructive power density. The value is the conventional yield estimate for Little Boy. It sits cleanly between industrial blasts and the largest thermonuclear tests.
+  name: Hiroshima Bomb
+  source: https://en.wikipedia.org/wiki/Little_Boy
+  value: 6.3e13
+- description: >-
+    Tsar Bomba remains the most energetic nuclear device ever detonated, with a yield tens of millions of tons of TNT equivalent. Fireball size, blast wave, and prompt radiation all flowed from that immense energy release. It is one of the clearest markers between human engineering and geophysical-scale events. The value is the widely cited test yield.
+  name: Tsar Bomba
+  source: https://en.wikipedia.org/wiki/Tsar_Bomba
+  value: 2.1e17
+- description: >-
+    The Chicxulub impact released energy on a scale that dwarfs all human explosives and altered Earth’s biosphere. Much of the devastation came not from the asteroid’s mass alone but from how rapidly its kinetic energy coupled into rock, air, and ocean. This is the sort of number that turns a geological event into a planetary one. The value is a representative estimate for the dinosaur-killing impact.
+  name: Chicxulub Impact
+  source: https://en.wikipedia.org/wiki/Chicxulub_crater
+  value: 4e23
 units:
 - conversion_factor: 1
   description: The joule is the SI work and energy unit defined as one newton applied over one meter. It relates directly to heat through mechanical equivalence and to electricity via watts times seconds. Counting in joules lets you add chemical, thermal, mechanical, and radiant budgets without changing units. In this dataset all item values are recorded in joules before conversion.

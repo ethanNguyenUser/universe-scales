@@ -1,0 +1,1382 @@
+{
+  "base_unit": "absolute_pearson_r",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 23,
+    "candidate_shortfall_to_preferred_target": 27,
+    "empty_bin_count": 9,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 23,
+    "selected_primary_count": 15,
+    "selected_secondary_count": 8,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 23
+    },
+    "target_selected_count": 23
+  },
+  "description_format": "markdown",
+  "dimension": "correlation",
+  "dimension_description": "This phase-one correlation scale stores the magnitude of Pearson correlation as |r|, from almost no linear association up to perfect correlation. The sign and domain context belong in qualifiers, because a strong negative correlation is just as strong as a strong positive one. This is useful pedagogically, but it is also easy to misuse: correlation depends on the variables chosen, sample definition, and whether the underlying relationship is actually linear.",
+  "frontend_group": "society",
+  "frontend_group_label": "Society, Economy & Abstract Quantities",
+  "frontend_order": 420,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A near-zero correlation anchor. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.05 |r|` for Adult shoe size and IQ are essentially unrelated once age is controlled.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A near-zero correlation anchor. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.05 |r|` for Adult shoe size and IQ are essentially unrelated once age is controlled.",
+      "facts": {
+        "canonical_name": "Shoe size and IQ",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.05",
+          "source_basis": "Adult shoe size and IQ are essentially unrelated once age is controlled.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Spurious_relationship",
+          "source_value_text": "0.05"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-shoe-size-and-iq",
+      "name": "Shoe size and IQ",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Spurious_relationship",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-spurious-relationship",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Spurious relationship",
+          "url": "https://en.wikipedia.org/wiki/Spurious_relationship"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "A near-zero correlation anchor.",
+      "value": 0.05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Many health risk factors live in the low-to-moderate range. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.35 |r|` for Higher BMI is associated with higher blood pressure, but not strongly enough to predict any one person.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Many health risk factors live in the low-to-moderate range. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.35 |r|` for Higher BMI is associated with higher blood pressure, but not strongly enough to predict any one person.",
+      "facts": {
+        "canonical_name": "BMI and blood pressure",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.35",
+          "source_basis": "Higher BMI is associated with higher blood pressure, but not strongly enough to predict any one person.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Blood_pressure",
+          "source_value_text": "0.35"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-bmi-and-blood-pressure",
+      "name": "BMI and blood pressure",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Blood_pressure",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-blood-pressure",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Blood pressure",
+          "url": "https://en.wikipedia.org/wiki/Blood_pressure"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Many health risk factors live in the low-to-moderate range.",
+      "value": 0.35,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Social variables often show meaningful but noisy correlations. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.35 |r|` for More schooling is associated with higher income but far from deterministically.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Social variables often show meaningful but noisy correlations. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.35 |r|` for More schooling is associated with higher income but far from deterministically.",
+      "facts": {
+        "canonical_name": "Education and income",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.35",
+          "source_basis": "More schooling is associated with higher income but far from deterministically.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Income",
+          "source_value_text": "0.35"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-education-and-income",
+      "name": "Education and income",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Income",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-income",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Income",
+          "url": "https://en.wikipedia.org/wiki/Income"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Social variables often show meaningful but noisy correlations.",
+      "value": 0.35,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Education outcomes often live in the middle of the correlation range. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.40 |r|` for Study time helps, but prior preparation and test skill add lots of noise.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Education outcomes often live in the middle of the correlation range. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.40 |r|` for Study time helps, but prior preparation and test skill add lots of noise.",
+      "facts": {
+        "canonical_name": "Study hours and exam score",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.4",
+          "source_basis": "Study time helps, but prior preparation and test skill add lots of noise.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.40"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-study-hours-and-exam-score",
+      "name": "Study hours and exam score",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Education outcomes often live in the middle of the correlation range.",
+      "value": 0.4,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A familiar moderate predictive correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.45 |r|` for Standardized scores predict college performance only moderately well.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A familiar moderate predictive correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.45 |r|` for Standardized scores predict college performance only moderately well.",
+      "facts": {
+        "canonical_name": "SAT score and first-year GPA",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.45",
+          "source_basis": "Standardized scores predict college performance only moderately well.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/SAT",
+          "source_value_text": "0.45"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-sat-score-and-first-year-gpa",
+      "name": "SAT score and first-year GPA",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/SAT",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "SAT",
+          "url": "https://en.wikipedia.org/wiki/SAT"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "A familiar moderate predictive correlation.",
+      "value": 0.45,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Exercise and resting pulse usually move in opposite directions. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.50 |r|` for More regular endurance exercise is associated with lower resting heart rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Exercise and resting pulse usually move in opposite directions. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.50 |r|` for More regular endurance exercise is associated with lower resting heart rate.",
+      "facts": {
+        "canonical_name": "Exercise minutes and resting heart rate",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.5",
+          "source_basis": "More regular endurance exercise is associated with lower resting heart rate.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Resting_heart_rate",
+          "source_value_text": "0.50"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-exercise-minutes-and-resting-heart-rate",
+      "name": "Exercise minutes and resting heart rate",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Resting_heart_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-resting-heart-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Resting heart rate",
+          "url": "https://en.wikipedia.org/wiki/Resting_heart_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Exercise and resting pulse usually move in opposite directions.",
+      "value": 0.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Marketing data often lives in the moderate-correlation band. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.55 |r|` for More advertising often coincides with higher sales, though causality and confounding matter.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Marketing data often lives in the moderate-correlation band. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.55 |r|` for More advertising often coincides with higher sales, though causality and confounding matter.",
+      "facts": {
+        "canonical_name": "Advertising spend and sales",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.55",
+          "source_basis": "More advertising often coincides with higher sales, though causality and confounding matter.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Advertising",
+          "source_value_text": "0.55"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-advertising-spend-and-sales",
+      "name": "Advertising spend and sales",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Advertising",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-advertising",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Advertising",
+          "url": "https://en.wikipedia.org/wiki/Advertising"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Marketing data often lives in the moderate-correlation band.",
+      "value": 0.55,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An intuitively negative human-performance correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.55 |r|` for More sleep is associated with less next-day sleepiness.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An intuitively negative human-performance correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.55 |r|` for More sleep is associated with less next-day sleepiness.",
+      "facts": {
+        "canonical_name": "Hours slept and next-day sleepiness",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.55",
+          "source_basis": "More sleep is associated with less next-day sleepiness.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Sleep_deprivation",
+          "source_value_text": "0.55"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-hours-slept-and-next-day-sleepiness",
+      "name": "Hours slept and next-day sleepiness",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sleep_deprivation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sleep-deprivation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sleep deprivation",
+          "url": "https://en.wikipedia.org/wiki/Sleep_deprivation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "An intuitively negative human-performance correlation.",
+      "value": 0.55,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Hydrology and fire danger often move in opposite directions. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.60 |r|` for Wetter conditions usually suppress fire risk.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Hydrology and fire danger often move in opposite directions. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.60 |r|` for Wetter conditions usually suppress fire risk.",
+      "facts": {
+        "canonical_name": "Rainfall and wildfire risk",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.6",
+          "source_basis": "Wetter conditions usually suppress fire risk.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Wildfire",
+          "source_value_text": "0.60"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-rainfall-and-wildfire-risk",
+      "name": "Rainfall and wildfire risk",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Wildfire",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wildfire",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wildfire",
+          "url": "https://en.wikipedia.org/wiki/Wildfire"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Hydrology and fire danger often move in opposite directions.",
+      "value": 0.6,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Height and weight are strongly but not tightly coupled. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.65 |r|` for Body mass tends to rise with height but with substantial variance.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Height and weight are strongly but not tightly coupled. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.65 |r|` for Body mass tends to rise with height but with substantial variance.",
+      "facts": {
+        "canonical_name": "Height and weight",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.65",
+          "source_basis": "Body mass tends to rise with height but with substantial variance.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.65"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-height-and-weight",
+      "name": "Height and weight",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Height and weight are strongly but not tightly coupled.",
+      "value": 0.65,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Environmental records often show moderate-to-strong climate correlations. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.65 |r|` for In water-limited regions, wetter years often produce wider tree rings.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Environmental records often show moderate-to-strong climate correlations. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.65 |r|` for In water-limited regions, wetter years often produce wider tree rings.",
+      "facts": {
+        "canonical_name": "Tree-ring width and rainfall",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.65",
+          "source_basis": "In water-limited regions, wetter years often produce wider tree rings.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Dendrochronology",
+          "source_value_text": "0.65"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-tree-ring-width-and-rainfall",
+      "name": "Tree-ring width and rainfall",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Dendrochronology",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dendrochronology",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dendrochronology",
+          "url": "https://en.wikipedia.org/wiki/Dendrochronology"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Environmental records often show moderate-to-strong climate correlations.",
+      "value": 0.65,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Older age is strongly associated with slower responses. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Reaction time typically slows with age.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Older age is strongly associated with slower responses. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Reaction time typically slows with age.",
+      "facts": {
+        "canonical_name": "Age and reaction time",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.7",
+          "source_basis": "Reaction time typically slows with age.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Reaction_time",
+          "source_value_text": "0.70"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-age-and-reaction-time",
+      "name": "Age and reaction time",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Reaction_time",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-reaction-time",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Reaction time",
+          "url": "https://en.wikipedia.org/wiki/Reaction_time"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Older age is strongly associated with slower responses.",
+      "value": 0.7,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A classic correlation-does-not-imply-causation story. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Both rise in hot weather, making this a standard confounding example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A classic correlation-does-not-imply-causation story. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Both rise in hot weather, making this a standard confounding example.",
+      "facts": {
+        "canonical_name": "Ice cream sales and drowning deaths",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.7",
+          "source_basis": "Both rise in hot weather, making this a standard confounding example.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation",
+          "source_value_text": "0.70"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-ice-cream-sales-and-drowning-deaths",
+      "name": "Ice cream sales and drowning deaths",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "note": "confounded by weather",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation-does-not-imply-causation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation does not imply causation",
+          "url": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "A classic correlation-does-not-imply-causation story.",
+      "value": 0.7,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Smoking exposure and lung harm move together clearly. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Heavier lifetime smoking is strongly associated with higher lung-cancer risk.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Smoking exposure and lung harm move together clearly. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Heavier lifetime smoking is strongly associated with higher lung-cancer risk.",
+      "facts": {
+        "canonical_name": "Smoking pack-years and lung cancer risk",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.7",
+          "source_basis": "Heavier lifetime smoking is strongly associated with higher lung-cancer risk.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Smoking_and_health",
+          "source_value_text": "0.70"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-smoking-pack-years-and-lung-cancer-risk",
+      "name": "Smoking pack-years and lung cancer risk",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Smoking_and_health",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-smoking-and-health",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Smoking and health",
+          "url": "https://en.wikipedia.org/wiki/Smoking_and_health"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Smoking exposure and lung harm move together clearly.",
+      "value": 0.7,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This is a good example of a real but mediated correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Hot weather draws more people to water and raises exposure.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is a good example of a real but mediated correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.70 |r|` for Hot weather draws more people to water and raises exposure.",
+      "facts": {
+        "canonical_name": "Temperature and drowning deaths",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.7",
+          "source_basis": "Hot weather draws more people to water and raises exposure.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation",
+          "source_value_text": "0.70"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-temperature-and-drowning-deaths",
+      "name": "Temperature and drowning deaths",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation-does-not-imply-causation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation does not imply causation",
+          "url": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "This is a good example of a real but mediated correlation.",
+      "value": 0.7,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "National wealth and lifespan are strongly related. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.75 |r|` for Richer countries often have longer life expectancy, though not perfectly.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "National wealth and lifespan are strongly related. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.75 |r|` for Richer countries often have longer life expectancy, though not perfectly.",
+      "facts": {
+        "canonical_name": "GDP per capita and life expectancy",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.75",
+          "source_basis": "Richer countries often have longer life expectancy, though not perfectly.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.75"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-gdp-per-capita-and-life-expectancy",
+      "name": "GDP per capita and life expectancy",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "National wealth and lifespan are strongly related.",
+      "value": 0.75,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A classic strong positive everyday correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.80 |r|` for Warm days usually boost ice cream demand.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A classic strong positive everyday correlation. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.80 |r|` for Warm days usually boost ice cream demand.",
+      "facts": {
+        "canonical_name": "Outdoor temperature and ice cream sales",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.8",
+          "source_basis": "Warm days usually boost ice cream demand.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.80"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-outdoor-temperature-and-ice-cream-sales",
+      "name": "Outdoor temperature and ice cream sales",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "A classic strong positive everyday correlation.",
+      "value": 0.8,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Rain and umbrella sales move together strongly. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.82 |r|` for Umbrella purchases rise when it rains.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Rain and umbrella sales move together strongly. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.82 |r|` for Umbrella purchases rise when it rains.",
+      "facts": {
+        "canonical_name": "Rainfall and umbrella sales",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.82",
+          "source_basis": "Umbrella purchases rise when it rains.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.82"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-rainfall-and-umbrella-sales",
+      "name": "Rainfall and umbrella sales",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Rain and umbrella sales move together strongly.",
+      "value": 0.82,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A climate-data correlation people often want an intuitive anchor for. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.85 |r|` for Long-run atmospheric CO2 and temperature anomaly series are strongly associated.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A climate-data correlation people often want an intuitive anchor for. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.85 |r|` for Long-run atmospheric CO2 and temperature anomaly series are strongly associated.",
+      "facts": {
+        "canonical_name": "CO2 concentration and global temperature anomaly",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.85",
+          "source_basis": "Long-run atmospheric CO2 and temperature anomaly series are strongly associated.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.85"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-co2-concentration-and-global-temperature-anomaly",
+      "name": "CO2 concentration and global temperature anomaly",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "A climate-data correlation people often want an intuitive anchor for.",
+      "value": 0.85,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Latitude is a strong negative correlate of annual temperature. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.90 |r|` for Higher latitude generally means lower average solar input and colder climate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Latitude is a strong negative correlate of annual temperature. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.90 |r|` for Higher latitude generally means lower average solar input and colder climate.",
+      "facts": {
+        "canonical_name": "Latitude and average annual temperature",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.9",
+          "source_basis": "Higher latitude generally means lower average solar input and colder climate.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.90"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-latitude-and-average-annual-temperature",
+      "name": "Latitude and average annual temperature",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Latitude is a strong negative correlate of annual temperature.",
+      "value": 0.9,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cold weather and heating bills are almost mirror images. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.92 |r|` for Heating demand rises sharply as outdoor temperature falls.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cold weather and heating bills are almost mirror images. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.92 |r|` for Heating demand rises sharply as outdoor temperature falls.",
+      "facts": {
+        "canonical_name": "Outdoor temperature and heating demand",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.92",
+          "source_basis": "Heating demand rises sharply as outdoor temperature falls.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Heating_degree_day",
+          "source_value_text": "0.92"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-outdoor-temperature-and-heating-demand",
+      "name": "Outdoor temperature and heating demand",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Heating_degree_day",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-heating-degree-day",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Heating degree day",
+          "url": "https://en.wikipedia.org/wiki/Heating_degree_day"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Cold weather and heating bills are almost mirror images.",
+      "value": 0.92,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Height and arm span are nearly locked together in adults. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.98 |r|` for Arm span is one of the strongest simple anthropometric correlates of height.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Height and arm span are nearly locked together in adults. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.98 |r|` for Arm span is one of the strongest simple anthropometric correlates of height.",
+      "facts": {
+        "canonical_name": "Height and arm span",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.98",
+          "source_basis": "Arm span is one of the strongest simple anthropometric correlates of height.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.98"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-height-and-arm-span",
+      "name": "Height and arm span",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "positive"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "Height and arm span are nearly locked together in adults.",
+      "value": 0.98,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A near-perfect negative relationship that everyone has experienced. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.99 |r|` for For a fixed route, higher speed strongly lowers travel time.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A near-perfect negative relationship that everyone has experienced. Here the quantity refers to `absolute Pearson correlation`. Source-side figure: `0.99 |r|` for For a fixed route, higher speed strongly lowers travel time.",
+      "facts": {
+        "canonical_name": "Speed and travel time for a fixed distance",
+        "ingest_source": "dataset/raw/curated/correlation.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.99",
+          "source_basis": "For a fixed route, higher speed strongly lowers travel time.",
+          "source_unit": "|r|",
+          "source_url": "https://en.wikipedia.org/wiki/Correlation",
+          "source_value_text": "0.99"
+        }
+      },
+      "hook": null,
+      "id": "obs:correlation:scenario-correlation-speed-and-travel-time-for-a-fixed-distance",
+      "name": "Speed and travel time for a fixed distance",
+      "qualifiers": {
+        "measurement": "absolute Pearson correlation",
+        "sign": "negative"
+      },
+      "source": "https://en.wikipedia.org/wiki/Correlation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-correlation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Correlation",
+          "url": "https://en.wikipedia.org/wiki/Correlation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-correlation-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/correlation.json",
+          "url": "repo://dataset/raw/curated/correlation.json"
+        }
+      ],
+      "summary_short": "A near-perfect negative relationship that everyone has experienced.",
+      "value": 0.99,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Pearson correlation coefficient",
+      "url": "https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"
+    },
+    {
+      "name": "Effect size",
+      "url": "https://en.wikipedia.org/wiki/Effect_size"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "linear",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "The canonical stored unit is the absolute magnitude of Pearson correlation.",
+      "name": "absolute Pearson correlation",
+      "symbol": "|r|"
+    },
+    {
+      "conversion_factor": 100.0,
+      "description": "100% means a perfect linear correlation magnitude of 1.",
+      "name": "percent of perfect correlation",
+      "symbol": "% perfect"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Permille is handy for very tiny correlation magnitudes.",
+      "name": "permille of perfect correlation",
+      "symbol": "permille"
+    },
+    {
+      "conversion_factor": 10000.0,
+      "description": "Basis points are useful when comparing very small correlations.",
+      "name": "basis points of perfect correlation",
+      "symbol": "bp"
+    }
+  ]
+}

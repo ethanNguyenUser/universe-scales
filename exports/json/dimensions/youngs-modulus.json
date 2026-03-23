@@ -2,20 +2,20 @@
   "base_unit": "pascals",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 17,
-    "candidate_shortfall_to_preferred_target": 33,
-    "empty_bin_count": 18,
+    "candidate_count": 36,
+    "candidate_shortfall_to_preferred_target": 14,
+    "empty_bin_count": 16,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 17,
-    "selected_primary_count": 6,
-    "selected_secondary_count": 11,
+    "selected_count": 36,
+    "selected_primary_count": 8,
+    "selected_secondary_count": 28,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 17
+      "secondary_reference": 36
     },
-    "target_selected_count": 17
+    "target_selected_count": 36
   },
   "description_format": "markdown",
   "dimension": "youngs-modulus",
@@ -180,6 +180,159 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Silica aerogel is often called solid smoke because its density is so low and its stiffness is only modestly above that of soft foams. Even so, it is a true solid with a measurable elastic slope that matters in insulation panels and particle collectors. Large strains quickly move it beyond the small-strain regime. The value is a representative low-density aerogel modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Silica aerogel is often called solid smoke because its density is so low and its stiffness is only modestly above that of soft foams. Even so, it is a true solid with a measurable elastic slope that matters in insulation panels and particle collectors. Large strains quickly move it beyond the small-strain regime. The value is a representative low-density aerogel modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Silica Aerogel",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e7",
+          "source_url": "https://en.wikipedia.org/wiki/Aerogel"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-silica-aerogel",
+      "name": "Silica Aerogel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Aerogel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aerogel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aerogel",
+          "url": "https://en.wikipedia.org/wiki/Aerogel"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Silica aerogel is often called solid smoke because its density is so low and its stiffness is only modestly above that of soft foams.",
+      "value": 10000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cork compresses easily at first because gas-filled cells collapse and recover, which is why it works so well as a bottle stopper and vibration isolator. Its modulus is far above a liquid but far below wood or plastic. Moisture and direction both matter because the cell structure is anisotropic. The value is a representative small-strain modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cork compresses easily at first because gas-filled cells collapse and recover, which is why it works so well as a bottle stopper and vibration isolator. Its modulus is far above a liquid but far below wood or plastic. Moisture and direction both matter because the cell structure is anisotropic. The value is a representative small-strain modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Cork",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e7",
+          "source_url": "https://en.wikipedia.org/wiki/Cork_(material)"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-cork",
+      "name": "Cork",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cork_(material)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cork-material",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cork (material)",
+          "url": "https://en.wikipedia.org/wiki/Cork_(material)"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Cork compresses easily at first because gas-filled cells collapse and recover, which is why it works so well as a bottle stopper and vibration isolator.",
+      "value": 20000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Polyethylene is flexible because its elastic modulus is only a few hundred megapascals, several hundred times lower than common metals. That makes it ideal for bottles, cutting boards, and films that need to bend without cracking. Crystallinity shifts the stiffness a bit but not the basic scale. The value is representative for HDPE.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Polyethylene is flexible because its elastic modulus is only a few hundred megapascals, several hundred times lower than common metals. That makes it ideal for bottles, cutting boards, and films that need to bend without cracking. Crystallinity shifts the stiffness a bit but not the basic scale. The value is representative for HDPE.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Polyethylene",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e8",
+          "source_url": "https://en.wikipedia.org/wiki/Polyethylene"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-polyethylene",
+      "name": "Polyethylene",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Polyethylene",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-polyethylene",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Polyethylene",
+          "url": "https://en.wikipedia.org/wiki/Polyethylene"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Polyethylene is flexible because its elastic modulus is only a few hundred megapascals, several hundred times lower than common metals.",
+      "value": 200000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Tendon stores elastic energy for locomotion with a modulus around a gigapascal that rises with strain. Warm tissues display higher extensibility and lower stiffness initially. Training induces remodeling that tunes this property. The figure is a small strain slope for Achilles tendon.",
       "description_format": "markdown",
       "description_long": null,
@@ -276,6 +429,465 @@
       ],
       "summary_short": "Softwoods are anisotropic; along the grain the modulus is moderate, across the grain it is an order lower.",
       "value": 1000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "ABS plastic is noticeably stiffer than polyethylene but still far softer than metals, which is why product housings feel solid while retaining some impact tolerance. Engineers like this middle ground for consumer goods and machine covers. The modulus depends on temperature and whether the part is molded or printed. The value is a common handbook figure.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "ABS plastic is noticeably stiffer than polyethylene but still far softer than metals, which is why product housings feel solid while retaining some impact tolerance. Engineers like this middle ground for consumer goods and machine covers. The modulus depends on temperature and whether the part is molded or printed. The value is a common handbook figure.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "ABS Plastic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e9",
+          "source_url": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-abs-plastic",
+      "name": "ABS Plastic",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-acrylonitrile-butadiene-styrene",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Acrylonitrile butadiene styrene",
+          "url": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "ABS plastic is noticeably stiffer than polyethylene but still far softer than metals, which is why product housings feel solid while retaining some impact tolerance.",
+      "value": 2000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Nylon sits in the low-gigapascal range, stiff enough for gears, fasteners, and bushings yet compliant enough to damp shock and noise. Moisture softens it because water acts as a plasticizer in the polymer network. That is why dry and conditioned values can differ noticeably in datasheets. The value is a representative small-strain modulus for nylon 6.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Nylon sits in the low-gigapascal range, stiff enough for gears, fasteners, and bushings yet compliant enough to damp shock and noise. Moisture softens it because water acts as a plasticizer in the polymer network. That is why dry and conditioned values can differ noticeably in datasheets. The value is a representative small-strain modulus for nylon 6.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Nylon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5e9",
+          "source_url": "https://en.wikipedia.org/wiki/Nylon"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-nylon",
+      "name": "Nylon",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Nylon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nylon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nylon",
+          "url": "https://en.wikipedia.org/wiki/Nylon"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Nylon sits in the low-gigapascal range, stiff enough for gears, fasteners, and bushings yet compliant enough to damp shock and noise.",
+      "value": 2500000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "PLA prints feel rigid because their elastic modulus reaches a few gigapascals, substantially above many household plastics. That helps small printed parts keep shape, though it does not guarantee toughness. Temperature softening remains the main weakness. The number is a representative modulus for solid PLA.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "PLA prints feel rigid because their elastic modulus reaches a few gigapascals, substantially above many household plastics. That helps small printed parts keep shape, though it does not guarantee toughness. Temperature softening remains the main weakness. The number is a representative modulus for solid PLA.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "PLA Plastic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.5e9",
+          "source_url": "https://en.wikipedia.org/wiki/Polylactic_acid"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-pla-plastic",
+      "name": "PLA Plastic",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Polylactic_acid",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-polylactic-acid",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Polylactic acid",
+          "url": "https://en.wikipedia.org/wiki/Polylactic_acid"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "PLA prints feel rigid because their elastic modulus reaches a few gigapascals, substantially above many household plastics.",
+      "value": 3500000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Water ice is much less stiff than rock or metal but far stiffer than rubber, which is why glaciers can support cracks and transmit seismic waves even while creeping over years. Planetary scientists rely on this modulus when modeling icy moons and ice shelves. Temperature shifts it meaningfully. The value is a typical terrestrial ice modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Water ice is much less stiff than rock or metal but far stiffer than rubber, which is why glaciers can support cracks and transmit seismic waves even while creeping over years. Planetary scientists rely on this modulus when modeling icy moons and ice shelves. Temperature shifts it meaningfully. The value is a typical terrestrial ice modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Ice",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "9e9",
+          "source_url": "https://en.wikipedia.org/wiki/Ice"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-ice",
+      "name": "Ice",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ice",
+          "url": "https://en.wikipedia.org/wiki/Ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Water ice is much less stiff than rock or metal but far stiffer than rubber, which is why glaciers can support cracks and transmit seismic waves even while creeping over years.",
+      "value": 9000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Spider dragline silk stretches more than most engineering fibers, but its modulus still lands around tens of gigapascals, high enough to store useful elastic energy in a light thread. Biologists care because that balance of stiffness and toughness is rare in natural materials. Humidity changes the feel quickly. The value is a representative dry-fiber modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Spider dragline silk stretches more than most engineering fibers, but its modulus still lands around tens of gigapascals, high enough to store useful elastic energy in a light thread. Biologists care because that balance of stiffness and toughness is rare in natural materials. Humidity changes the feel quickly. The value is a representative dry-fiber modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Spider Silk",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e10",
+          "source_url": "https://en.wikipedia.org/wiki/Spider_silk"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-spider-silk",
+      "name": "Spider Silk",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Spider_silk",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-spider-silk",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Spider silk",
+          "url": "https://en.wikipedia.org/wiki/Spider_silk"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Spider dragline silk stretches more than most engineering fibers, but its modulus still lands around tens of gigapascals, high enough to store useful elastic energy in a light thread.",
+      "value": 10000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Hardwoods like oak are stiffer than many softwoods because of their denser microstructure and higher latewood fraction. Furniture makers and structural engineers both feel this directly in how little a board flexes under load. Grain direction still dominates the number, so this is an along-grain figure. The value is a representative modulus for oak.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Hardwoods like oak are stiffer than many softwoods because of their denser microstructure and higher latewood fraction. Furniture makers and structural engineers both feel this directly in how little a board flexes under load. Grain direction still dominates the number, so this is an along-grain figure. The value is a representative modulus for oak.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Oak",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.2e10",
+          "source_url": "https://en.wikipedia.org/wiki/Oak"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-oak",
+      "name": "Oak",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Oak",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-oak",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Oak",
+          "url": "https://en.wikipedia.org/wiki/Oak"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Hardwoods like oak are stiffer than many softwoods because of their denser microstructure and higher latewood fraction.",
+      "value": 12000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Common fired brick behaves like a stiff brittle ceramic composite on small elastic strains. Masonry design often treats whole walls rather than brick alone, but the brick material itself lives in the low tens of gigapascals. That is enough to keep arches and facades from sagging visibly under ordinary loads. The value is a representative engineering brick modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Common fired brick behaves like a stiff brittle ceramic composite on small elastic strains. Masonry design often treats whole walls rather than brick alone, but the brick material itself lives in the low tens of gigapascals. That is enough to keep arches and facades from sagging visibly under ordinary loads. The value is a representative engineering brick modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Brick",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.5e10",
+          "source_url": "https://en.wikipedia.org/wiki/Brick"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-brick",
+      "name": "Brick",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brick",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brick",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brick",
+          "url": "https://en.wikipedia.org/wiki/Brick"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Common fired brick behaves like a stiff brittle ceramic composite on small elastic strains.",
+      "value": 15000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Lead is soft in yield strength but not infinitely floppy: its elastic modulus still sits in the tens of gigapascals. That is why lead pipes and sheets can hold shape until creep and plasticity take over. The contrast between low modulus metals and high modulus ceramics is one of the simplest material lessons to feel by hand. The value is a standard handbook number.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Lead is soft in yield strength but not infinitely floppy: its elastic modulus still sits in the tens of gigapascals. That is why lead pipes and sheets can hold shape until creep and plasticity take over. The contrast between low modulus metals and high modulus ceramics is one of the simplest material lessons to feel by hand. The value is a standard handbook number.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Lead",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.6e10",
+          "source_url": "https://en.wikipedia.org/wiki/Lead"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-lead",
+      "name": "Lead",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lead",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lead",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lead",
+          "url": "https://en.wikipedia.org/wiki/Lead"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Lead is soft in yield strength but not infinitely floppy: its elastic modulus still sits in the tens of gigapascals.",
+      "value": 16000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Bamboo is a natural fiber composite whose stiffness along the grain can rival some structural timbers and low-end engineering materials. Its geometry makes it especially effective for lightweight columns and scaffolds. Across the grain the modulus is far lower, so direction matters. The number is an along-fiber representative value.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Bamboo is a natural fiber composite whose stiffness along the grain can rival some structural timbers and low-end engineering materials. Its geometry makes it especially effective for lightweight columns and scaffolds. Across the grain the modulus is far lower, so direction matters. The number is an along-fiber representative value.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Bamboo",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e10",
+          "source_url": "https://en.wikipedia.org/wiki/Bamboo"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-bamboo",
+      "name": "Bamboo",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bamboo",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bamboo",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bamboo",
+          "url": "https://en.wikipedia.org/wiki/Bamboo"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Bamboo is a natural fiber composite whose stiffness along the grain can rival some structural timbers and low-end engineering materials.",
+      "value": 20000000000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -384,6 +996,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Magnesium alloys are attractive in vehicles and aircraft because their stiffness is lower than aluminum\u2019s but their density is lower too. That means components can still achieve respectable specific stiffness when geometry is optimized. Corrosion protection and fatigue remain important design constraints. The value is a representative modulus for structural magnesium alloys.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Magnesium alloys are attractive in vehicles and aircraft because their stiffness is lower than aluminum\u2019s but their density is lower too. That means components can still achieve respectable specific stiffness when geometry is optimized. Corrosion protection and fatigue remain important design constraints. The value is a representative modulus for structural magnesium alloys.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Magnesium Alloy",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4.5e10",
+          "source_url": "https://en.wikipedia.org/wiki/Magnesium_alloy"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-magnesium-alloy",
+      "name": "Magnesium Alloy",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnesium_alloy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnesium-alloy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnesium alloy",
+          "url": "https://en.wikipedia.org/wiki/Magnesium_alloy"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Magnesium alloys are attractive in vehicles and aircraft because their stiffness is lower than aluminum\u2019s but their density is lower too.",
+      "value": 45000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Aluminum alloys share a modulus near seventy gigapascals regardless of strength grade because stiffness depends on bonding, not microstructure alone. This constancy simplifies deflection calculations. Temperature reduces modulus slightly. The value is for a typical wrought alloy.",
       "description_format": "markdown",
       "description_long": null,
@@ -486,6 +1149,108 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Kevlar fibers are less stiff than carbon fibers but still very much engineering fibers, landing around tens of gigapascals in axial modulus. Their real advantage is the combination of stiffness, toughness, and low density. Ballistic fabrics and ropes turn that combination into practical products. The value is a representative fiber-direction modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Kevlar fibers are less stiff than carbon fibers but still very much engineering fibers, landing around tens of gigapascals in axial modulus. Their real advantage is the combination of stiffness, toughness, and low density. Ballistic fabrics and ropes turn that combination into practical products. The value is a representative fiber-direction modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Kevlar Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e10",
+          "source_url": "https://en.wikipedia.org/wiki/Kevlar"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-kevlar-fiber",
+      "name": "Kevlar Fiber",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Kevlar",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-kevlar",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Kevlar",
+          "url": "https://en.wikipedia.org/wiki/Kevlar"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Kevlar fibers are less stiff than carbon fibers but still very much engineering fibers, landing around tens of gigapascals in axial modulus.",
+      "value": 80000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Brass is mechanically between aluminum and steel in stiffness, which is why instruments, fittings, and decorative hardware feel dense and solid without becoming especially springy. Composition changes the exact number, but not by an order of magnitude. Machinists value the consistency this implies. The value is a representative modulus for cartridge brass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Brass is mechanically between aluminum and steel in stiffness, which is why instruments, fittings, and decorative hardware feel dense and solid without becoming especially springy. Composition changes the exact number, but not by an order of magnitude. Machinists value the consistency this implies. The value is a representative modulus for cartridge brass.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Brass",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e11",
+          "source_url": "https://en.wikipedia.org/wiki/Brass"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-brass",
+      "name": "Brass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brass",
+          "url": "https://en.wikipedia.org/wiki/Brass"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Brass is mechanically between aluminum and steel in stiffness, which is why instruments, fittings, and decorative hardware feel dense and solid without becoming especially springy.",
+      "value": 100000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Titanium alloys are roughly half as stiff as steel at similar densities, giving good specific stiffness. Designers exploit this for weight sensitive parts that must flex without yielding. Temperature and phase mix set exact values. The number is for Ti 6Al 4V.",
       "description_format": "markdown",
       "description_long": null,
@@ -531,6 +1296,108 @@
       ],
       "summary_short": "Titanium alloys are roughly half as stiff as steel at similar densities, giving good specific stiffness.",
       "value": 110000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Copper combines excellent electrical conduction with a modulus a bit above one hundred gigapascals, enough to make busbars and springs hold form while still yielding more readily than steels. Purity and cold work change strength much more than stiffness. That separation is why electrical and mechanical design tables both matter. The value is a representative modulus for bulk copper.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Copper combines excellent electrical conduction with a modulus a bit above one hundred gigapascals, enough to make busbars and springs hold form while still yielding more readily than steels. Purity and cold work change strength much more than stiffness. That separation is why electrical and mechanical design tables both matter. The value is a representative modulus for bulk copper.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Copper",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.2e11",
+          "source_url": "https://en.wikipedia.org/wiki/Copper"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-copper",
+      "name": "Copper",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Copper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-copper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Copper",
+          "url": "https://en.wikipedia.org/wiki/Copper"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Copper combines excellent electrical conduction with a modulus a bit above one hundred gigapascals, enough to make busbars and springs hold form while still yielding more readily than steels.",
+      "value": 120000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Crystalline silicon is the structural backbone of chips and MEMS, and its modulus is high enough that tiny beams and resonators can ring at precise frequencies. The exact value depends on crystal direction because the lattice is anisotropic. Semiconductor fabrication treats this as a design parameter, not trivia. The number is a representative orientation-averaged modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Crystalline silicon is the structural backbone of chips and MEMS, and its modulus is high enough that tiny beams and resonators can ring at precise frequencies. The exact value depends on crystal direction because the lattice is anisotropic. Semiconductor fabrication treats this as a design parameter, not trivia. The number is a representative orientation-averaged modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Silicon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.3e11",
+          "source_url": "https://en.wikipedia.org/wiki/Silicon"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-silicon",
+      "name": "Silicon",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Silicon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-silicon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Silicon",
+          "url": "https://en.wikipedia.org/wiki/Silicon"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Crystalline silicon is the structural backbone of chips and MEMS, and its modulus is high enough that tiny beams and resonators can ring at precise frequencies.",
+      "value": 130000000000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -684,6 +1551,108 @@
       ],
       "summary_short": "Engineering ceramics achieve very high modulus due to strong ionic and covalent bonds.",
       "value": 300000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tungsten is one of the stiffest practical metals, which is why it holds shape at heat and finds use in filaments, weights, and tooling. Its density is famous, but the high modulus is just as important in applications that need resistance to elastic bending. Brittleness is the tradeoff. The value is a representative room-temperature modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tungsten is one of the stiffest practical metals, which is why it holds shape at heat and finds use in filaments, weights, and tooling. Its density is famous, but the high modulus is just as important in applications that need resistance to elastic bending. Brittleness is the tradeoff. The value is a representative room-temperature modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Tungsten",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4.1e11",
+          "source_url": "https://en.wikipedia.org/wiki/Tungsten"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-tungsten",
+      "name": "Tungsten",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tungsten",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tungsten",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tungsten",
+          "url": "https://en.wikipedia.org/wiki/Tungsten"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Tungsten is one of the stiffest practical metals, which is why it holds shape at heat and finds use in filaments, weights, and tooling.",
+      "value": 410000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Silicon carbide combines ceramic hardness with very high elastic stiffness, making it valuable for armor, abrasives, mirrors, and high-temperature components. Components made from it resist small elastic strain strongly before brittle failure becomes the real limit. It is a good reminder that stiffness and toughness are separate traits. The value is a representative engineering modulus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Silicon carbide combines ceramic hardness with very high elastic stiffness, making it valuable for armor, abrasives, mirrors, and high-temperature components. Components made from it resist small elastic strain strongly before brittle failure becomes the real limit. It is a good reminder that stiffness and toughness are separate traits. The value is a representative engineering modulus.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+        "legacy_item_name": "Silicon Carbide",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4.5e11",
+          "source_url": "https://en.wikipedia.org/wiki/Silicon_carbide"
+        }
+      },
+      "hook": null,
+      "id": "obs:youngs-modulus:scenario-youngs-modulus-silicon-carbide",
+      "name": "Silicon Carbide",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Silicon_carbide",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-silicon-carbide",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Silicon carbide",
+          "url": "https://en.wikipedia.org/wiki/Silicon_carbide"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-youngs-modulus-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/youngs-modulus.yaml"
+        }
+      ],
+      "summary_short": "Silicon carbide combines ceramic hardness with very high elastic stiffness, making it valuable for armor, abrasives, mirrors, and high-temperature components.",
+      "value": 450000000000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -896,6 +1865,7 @@
   "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
+  "scale_mode": "log",
   "selection_bin_count": 24,
   "show_limitations": true,
   "units": [

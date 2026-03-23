@@ -400,28 +400,108 @@
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
     "frontend_order": 170,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "millinewton-meters",
+        "symbol": "mN*m",
+        "conversion_factor": 1000.0,
+        "description": "Millinewton-meters are useful for small motors and precision tools."
+      },
+      {
+        "name": "kilonewton-meters",
+        "symbol": "kN*m",
+        "conversion_factor": 0.001,
+        "description": "Kilonewton-meters are useful for vehicles and utility-scale machinery."
+      },
+      {
+        "name": "pound-feet",
+        "symbol": "lb*ft",
+        "conversion_factor": 0.7375621493,
+        "description": "Pound-feet are a familiar torque unit in automotive contexts."
+      }
+    ]
   },
   "moment-of-inertia": {
     "name": "Moment of Inertia",
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
     "frontend_order": 180,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "gram square centimeters",
+        "symbol": "g*cm^2",
+        "conversion_factor": 10000000.0,
+        "description": "Common small-rotor and flywheel unit."
+      }
+    ]
   },
   "angle": {
     "name": "Angle",
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
     "frontend_order": 190,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "degrees",
+        "symbol": "deg",
+        "conversion_factor": 57.2957795131,
+        "description": "Degrees are a familiar everyday angular unit."
+      },
+      {
+        "name": "milliradians",
+        "symbol": "mrad",
+        "conversion_factor": 1000.0,
+        "description": "Milliradians are useful for optics and targeting."
+      },
+      {
+        "name": "arcminutes",
+        "symbol": "arcmin",
+        "conversion_factor": 3437.74677078,
+        "description": "Arcminutes are useful for visual and astronomical angles."
+      },
+      {
+        "name": "arcseconds",
+        "symbol": "arcsec",
+        "conversion_factor": 206264.806247,
+        "description": "Arcseconds are useful for precise astronomical and optical angles."
+      }
+    ]
   },
   "angular-velocity": {
     "name": "Angular Velocity",
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
     "frontend_order": 200,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "revolutions per minute",
+        "symbol": "rpm",
+        "conversion_factor": 9.54929658551,
+        "description": "RPM is a familiar rotation-rate unit for motors and appliances."
+      },
+      {
+        "name": "degrees per second",
+        "symbol": "deg/s",
+        "conversion_factor": 57.2957795131,
+        "description": "Degrees per second are useful in motion-control systems."
+      }
+    ]
   },
   "frequency": {
     "name": "Frequency",
@@ -473,7 +553,30 @@
     "frontend_group": "fields",
     "frontend_group_label": "Fields, Waves & Radiation",
     "frontend_order": 220,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "millijoules per kelvin",
+        "symbol": "mJ/K",
+        "conversion_factor": 1000.0,
+        "description": "Millijoules per kelvin are useful for small laboratory-scale entropy changes."
+      },
+      {
+        "name": "kilojoules per kelvin",
+        "symbol": "kJ/K",
+        "conversion_factor": 0.001,
+        "description": "Kilojoules per kelvin are useful for large thermal processes."
+      },
+      {
+        "name": "Boltzmann constants",
+        "symbol": "k_B",
+        "conversion_factor": 7.242970516e+22,
+        "description": "Boltzmann-constant units are useful for microscopic entropy changes."
+      }
+    ]
   },
   "temperature": {
     "name": "Temperature",
@@ -524,154 +627,776 @@
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 240,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "millipascal-seconds",
+        "symbol": "mPa*s",
+        "conversion_factor": 1000.0,
+        "description": "Millipascal-seconds are intuitive for ordinary liquids near room temperature."
+      },
+      {
+        "name": "centipoise",
+        "symbol": "cP",
+        "conversion_factor": 1000.0,
+        "description": "Centipoise remain common in chemistry and fluid-property tables."
+      },
+      {
+        "name": "kilopascal-seconds",
+        "symbol": "kPa*s",
+        "conversion_factor": 0.001,
+        "description": "Kilopascal-seconds help with very thick fluids and soft solids."
+      },
+      {
+        "name": "megapascal-seconds",
+        "symbol": "MPa*s",
+        "conversion_factor": 1e-06,
+        "description": "Megapascal-seconds are useful for bitumen, pitch, and viscous magma."
+      }
+    ]
   },
   "flow-rate": {
     "name": "Flow Rate",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 250,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "liters per second",
+        "symbol": "L/s",
+        "conversion_factor": 1000.0,
+        "description": "Liters per second are useful for plumbing, pumps, and physiology."
+      },
+      {
+        "name": "milliliters per second",
+        "symbol": "mL/s",
+        "conversion_factor": 1000000.0,
+        "description": "Milliliters per second are useful for drips and microfluidics."
+      },
+      {
+        "name": "liters per minute",
+        "symbol": "L/min",
+        "conversion_factor": 60000.0,
+        "description": "Liters per minute are useful for household and industrial flow."
+      }
+    ]
   },
   "surface-tension": {
     "name": "Surface Tension",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 260,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "millinewtons per meter",
+        "symbol": "mN/m",
+        "conversion_factor": 1000.0,
+        "description": "Common lab and materials unit."
+      },
+      {
+        "name": "micronewtons per meter",
+        "symbol": "uN/m",
+        "conversion_factor": 1000000.0,
+        "description": "Useful for very low surface tensions."
+      }
+    ]
   },
   "salinity": {
     "name": "Salinity",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 270,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "percent salt by mass",
+        "symbol": "%",
+        "conversion_factor": 100.0,
+        "description": "Familiar percent salinity."
+      },
+      {
+        "name": "parts per thousand",
+        "symbol": "ppt",
+        "conversion_factor": 1000.0,
+        "description": "Oceanography-style salinity unit."
+      },
+      {
+        "name": "parts per million",
+        "symbol": "ppm",
+        "conversion_factor": 1000000.0,
+        "description": "Useful for freshwater trace salinity."
+      }
+    ]
   },
   "concentration": {
     "name": "Concentration",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 280,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "moles per liter",
+        "symbol": "M",
+        "conversion_factor": 0.001,
+        "description": "Molarity is the most common laboratory concentration unit."
+      },
+      {
+        "name": "millimolar",
+        "symbol": "mM",
+        "conversion_factor": 1.0,
+        "description": "Millimolar concentrations are common in biochemistry."
+      },
+      {
+        "name": "micromolar",
+        "symbol": "uM",
+        "conversion_factor": 1000.0,
+        "description": "Micromolar concentrations are common for signaling molecules and assays."
+      },
+      {
+        "name": "nanomolar",
+        "symbol": "nM",
+        "conversion_factor": 1000000.0,
+        "description": "Nanomolar concentrations are common for trace compounds."
+      }
+    ]
   },
   "charge": {
     "name": "Charge",
     "frontend_group": "fields",
     "frontend_group_label": "Fields, Waves & Radiation",
     "frontend_order": 290,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "elementary charges",
+        "symbol": "e",
+        "conversion_factor": 6.2415090744608e+18,
+        "description": "Elementary charges make microscopic charge counts intuitive."
+      },
+      {
+        "name": "microcoulombs",
+        "symbol": "uC",
+        "conversion_factor": 1000000.0,
+        "description": "Microcoulombs are useful for static electricity and small capacitors."
+      },
+      {
+        "name": "millicoulombs",
+        "symbol": "mC",
+        "conversion_factor": 1000.0,
+        "description": "Millicoulombs are useful for larger capacitors and discharge events."
+      },
+      {
+        "name": "kilocoulombs",
+        "symbol": "kC",
+        "conversion_factor": 0.001,
+        "description": "Kilocoulombs are useful for batteries and large electrical systems."
+      },
+      {
+        "name": "ampere-hours",
+        "symbol": "Ah",
+        "conversion_factor": 0.0002777777777778,
+        "description": "Ampere-hours are the familiar battery-capacity unit for large stored charge."
+      },
+      {
+        "name": "milliampere-hours",
+        "symbol": "mAh",
+        "conversion_factor": 0.2777777777778,
+        "description": "Milliampere-hours are useful for small batteries and portable electronics."
+      }
+    ]
   },
   "current": {
     "name": "Current",
     "frontend_group": "fields",
     "frontend_group_label": "Fields, Waves & Radiation",
     "frontend_order": 300,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "microamperes",
+        "symbol": "uA",
+        "conversion_factor": 1000000.0,
+        "description": "Microamperes are useful for sensors, watches, and leakage currents."
+      },
+      {
+        "name": "milliamperes",
+        "symbol": "mA",
+        "conversion_factor": 1000.0,
+        "description": "Milliamperes are useful for LEDs, small electronics, and chargers."
+      },
+      {
+        "name": "kiloamperes",
+        "symbol": "kA",
+        "conversion_factor": 0.001,
+        "description": "Kiloamperes are useful for lightning, welding, and rail systems."
+      },
+      {
+        "name": "megaamperes",
+        "symbol": "MA",
+        "conversion_factor": 1e-06,
+        "description": "Megaamperes are useful for pulsed-power and fusion-scale currents."
+      }
+    ]
   },
   "magnetic-field": {
     "name": "Magnetic Field",
     "frontend_group": "fields",
     "frontend_group_label": "Fields, Waves & Radiation",
     "frontend_order": 310,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "microtesla",
+        "symbol": "uT",
+        "conversion_factor": 1000000.0,
+        "description": "Microtesla are useful for planetary and ambient environmental fields."
+      },
+      {
+        "name": "millitesla",
+        "symbol": "mT",
+        "conversion_factor": 1000.0,
+        "description": "Millitesla are useful for everyday magnets and sensors."
+      },
+      {
+        "name": "gauss",
+        "symbol": "G",
+        "conversion_factor": 10000.0,
+        "description": "Gauss remain common in magnetics, astronomy, and older literature."
+      },
+      {
+        "name": "kilotesla",
+        "symbol": "kT",
+        "conversion_factor": 0.001,
+        "description": "Kilotesla are useful for white dwarfs and extreme laboratory fields."
+      },
+      {
+        "name": "megatesla",
+        "symbol": "MT",
+        "conversion_factor": 1e-06,
+        "description": "Megatesla are useful for neutron stars and extreme astrophysical fields."
+      },
+      {
+        "name": "gigatesla",
+        "symbol": "GT",
+        "conversion_factor": 1e-09,
+        "description": "Gigatesla are useful for magnetars and the most extreme known fields."
+      }
+    ]
   },
   "sound-intensity": {
     "name": "Sound Intensity",
     "frontend_group": "fields",
     "frontend_group_label": "Fields, Waves & Radiation",
     "frontend_order": 320,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "microwatts per square meter",
+        "symbol": "uW/m^2",
+        "conversion_factor": 1000000.0,
+        "description": "Microwatts per square meter are useful for quiet everyday sound levels."
+      },
+      {
+        "name": "milliwatts per square meter",
+        "symbol": "mW/m^2",
+        "conversion_factor": 1000.0,
+        "description": "Milliwatts per square meter are useful for loud urban or industrial sound."
+      }
+    ]
   },
   "hardness": {
     "name": "Hardness",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 330,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "megapascals",
+        "symbol": "MPa",
+        "conversion_factor": 1e-06,
+        "description": "Useful for softer materials."
+      },
+      {
+        "name": "gigapascals",
+        "symbol": "GPa",
+        "conversion_factor": 1e-09,
+        "description": "Useful for hard materials and ceramics."
+      }
+    ]
   },
   "strain": {
     "name": "Strain",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 340,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "percent strain",
+        "symbol": "%",
+        "conversion_factor": 100.0,
+        "description": "Common engineering display for larger strains."
+      },
+      {
+        "name": "microstrain",
+        "symbol": "ue",
+        "conversion_factor": 1000000.0,
+        "description": "Common metrology and structural-health unit."
+      },
+      {
+        "name": "parts per million",
+        "symbol": "ppm",
+        "conversion_factor": 1000000.0,
+        "description": "Equivalent display for small strains."
+      }
+    ]
   },
   "thermal-conductivity": {
     "name": "Thermal Conductivity",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 350,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "milliwatts per meter kelvin",
+        "symbol": "mW/(m*K)",
+        "conversion_factor": 1000.0,
+        "description": "Useful for insulators and gases."
+      },
+      {
+        "name": "kilowatts per meter kelvin",
+        "symbol": "kW/(m*K)",
+        "conversion_factor": 0.001,
+        "description": "Useful for extreme conductors."
+      }
+    ]
   },
   "specific-heat": {
     "name": "Specific Heat",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
     "frontend_order": 360,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "kilojoules per kilogram kelvin",
+        "symbol": "kJ/(kg*K)",
+        "conversion_factor": 0.001,
+        "description": "Common thermodynamics display unit."
+      },
+      {
+        "name": "joules per gram kelvin",
+        "symbol": "J/(g*K)",
+        "conversion_factor": 0.001,
+        "description": "Convenient materials-science unit."
+      },
+      {
+        "name": "calories per gram kelvin",
+        "symbol": "cal/(g*K)",
+        "conversion_factor": 0.0002390057361,
+        "description": "Older calorimetry-style unit."
+      }
+    ]
   },
   "historical-time": {
     "name": "Historical Time",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 370,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "days",
+        "symbol": "d",
+        "conversion_factor": 365.25,
+        "description": "Days are useful for recent historical offsets."
+      },
+      {
+        "name": "thousand years",
+        "symbol": "kyr",
+        "conversion_factor": 0.001,
+        "description": "Thousands of years are useful for archaeology and prehistory."
+      },
+      {
+        "name": "million years",
+        "symbol": "Myr",
+        "conversion_factor": 1e-06,
+        "description": "Millions of years are useful for geology and evolution."
+      },
+      {
+        "name": "billion years",
+        "symbol": "Gyr",
+        "conversion_factor": 1e-09,
+        "description": "Billions of years are useful for planetary and cosmic history."
+      }
+    ]
   },
   "counts": {
     "name": "Counts",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 380,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "thousands",
+        "symbol": "k",
+        "conversion_factor": 0.001,
+        "description": "Thousands are useful for populations, words, and other everyday counts."
+      },
+      {
+        "name": "millions",
+        "symbol": "M",
+        "conversion_factor": 1e-06,
+        "description": "Millions are useful for genomes, screens, and small-scale populations."
+      },
+      {
+        "name": "billions",
+        "symbol": "B",
+        "conversion_factor": 1e-09,
+        "description": "Billions are useful for human-scale civilization totals."
+      },
+      {
+        "name": "trillions",
+        "symbol": "T",
+        "conversion_factor": 1e-12,
+        "description": "Trillions are useful for cells, synapses, and large inventories."
+      },
+      {
+        "name": "quadrillions",
+        "symbol": "Qa",
+        "conversion_factor": 1e-15,
+        "description": "Quadrillions help with large state spaces and biological counts."
+      },
+      {
+        "name": "quintillions",
+        "symbol": "Qi",
+        "conversion_factor": 1e-18,
+        "description": "Quintillions help with cryptographic and combinatorial state counts."
+      },
+      {
+        "name": "sextillions",
+        "symbol": "Sx",
+        "conversion_factor": 1e-21,
+        "description": "Sextillions help compare molecular and astronomical counts."
+      },
+      {
+        "name": "septillions",
+        "symbol": "Sp",
+        "conversion_factor": 1e-24,
+        "description": "Septillions are useful for very large molecular and atomic tallies."
+      }
+    ]
   },
   "event-rate": {
     "name": "Counts per Unit Time",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 390,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "counts per minute",
+        "symbol": "1/min",
+        "conversion_factor": 60.0,
+        "description": "Counts per minute are useful for physiology and everyday repeated events."
+      },
+      {
+        "name": "counts per hour",
+        "symbol": "1/h",
+        "conversion_factor": 3600.0,
+        "description": "Counts per hour are useful for slow recurring processes."
+      },
+      {
+        "name": "counts per day",
+        "symbol": "1/day",
+        "conversion_factor": 86400.0,
+        "description": "Counts per day are useful for social and operational rates."
+      },
+      {
+        "name": "counts per year",
+        "symbol": "1/yr",
+        "conversion_factor": 31557600.0,
+        "description": "Counts per year are useful for large-scale production or civilizational activity."
+      }
+    ]
   },
   "probability": {
     "name": "Probability",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 400,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "percent",
+        "symbol": "%",
+        "conversion_factor": 100.0,
+        "description": "Percent is the most familiar display form for probability."
+      },
+      {
+        "name": "parts per million",
+        "symbol": "ppm",
+        "conversion_factor": 1000000.0,
+        "description": "PPM is useful for low-probability risks."
+      },
+      {
+        "name": "parts per billion",
+        "symbol": "ppb",
+        "conversion_factor": 1000000000.0,
+        "description": "PPB is useful for extremely small probabilities."
+      }
+    ]
   },
   "precision": {
     "name": "Precision & Accuracy",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 410,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "percent",
+        "symbol": "%",
+        "conversion_factor": 100.0,
+        "description": "Relative uncertainty shown as a percent."
+      },
+      {
+        "name": "parts per million",
+        "symbol": "ppm",
+        "conversion_factor": 1000000.0,
+        "description": "PPM is useful for clocks and electronics."
+      },
+      {
+        "name": "parts per billion",
+        "symbol": "ppb",
+        "conversion_factor": 1000000000.0,
+        "description": "PPB is useful for very high precision."
+      },
+      {
+        "name": "parts per trillion",
+        "symbol": "ppt",
+        "conversion_factor": 1000000000000.0,
+        "description": "PPT is useful for the most precise metrology references."
+      }
+    ]
   },
   "correlation": {
     "name": "Correlation Coefficient",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 420,
-    "status": "planned"
+    "scale_mode": "linear",
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "percent of perfect correlation",
+        "symbol": "% perfect",
+        "conversion_factor": 100.0,
+        "description": "100% means a perfect linear correlation magnitude of 1."
+      },
+      {
+        "name": "permille of perfect correlation",
+        "symbol": "permille",
+        "conversion_factor": 1000.0,
+        "description": "Permille is handy for very tiny correlation magnitudes."
+      },
+      {
+        "name": "basis points of perfect correlation",
+        "symbol": "bp",
+        "conversion_factor": 10000.0,
+        "description": "Basis points are useful when comparing very small correlations."
+      }
+    ]
   },
   "effect-size": {
     "name": "Effect Size",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 430,
-    "status": "planned"
+    "scale_mode": "linear",
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "deci-d",
+        "symbol": "0.1 d",
+        "conversion_factor": 10.0,
+        "description": "One deci-d is one tenth of a standard-deviation effect size."
+      },
+      {
+        "name": "centi-d",
+        "symbol": "0.01 d",
+        "conversion_factor": 100.0,
+        "description": "Centi-d is useful for very small standardized effects."
+      },
+      {
+        "name": "milli-d",
+        "symbol": "0.001 d",
+        "conversion_factor": 1000.0,
+        "description": "Milli-d captures extremely small but nonzero standardized effects."
+      }
+    ]
   },
   "utility": {
     "name": "Utility",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 440,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "healthy days equivalent",
+        "symbol": "day-eq",
+        "conversion_factor": 365.0,
+        "description": "Convert QALY-equivalent utility into full-quality days."
+      },
+      {
+        "name": "healthy hours equivalent",
+        "symbol": "hour-eq",
+        "conversion_factor": 8760.0,
+        "description": "Convert QALY-equivalent utility into full-quality hours."
+      },
+      {
+        "name": "healthy minutes equivalent",
+        "symbol": "min-eq",
+        "conversion_factor": 525600.0,
+        "description": "Convert QALY-equivalent utility into full-quality minutes."
+      }
+    ]
   },
   "information": {
     "name": "Information",
     "frontend_group": "information",
     "frontend_group_label": "Information & Computation",
     "frontend_order": 450,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "bits",
+        "symbol": "bit",
+        "conversion_factor": 8.0,
+        "description": "Bits are useful for tiny messages, hashes, and entropy-scale comparisons."
+      },
+      {
+        "name": "kilobytes",
+        "symbol": "kB",
+        "conversion_factor": 0.001,
+        "description": "Kilobytes are useful for tiny files, messages, and genome-scale examples."
+      },
+      {
+        "name": "megabytes",
+        "symbol": "MB",
+        "conversion_factor": 1e-06,
+        "description": "Megabytes are useful for songs, photos, and small datasets."
+      },
+      {
+        "name": "gigabytes",
+        "symbol": "GB",
+        "conversion_factor": 1e-09,
+        "description": "Gigabytes are useful for genomes, discs, and consumer storage."
+      },
+      {
+        "name": "terabytes",
+        "symbol": "TB",
+        "conversion_factor": 1e-12,
+        "description": "Terabytes are useful for large storage devices and archive-scale collections."
+      },
+      {
+        "name": "petabytes",
+        "symbol": "PB",
+        "conversion_factor": 1e-15,
+        "description": "Petabytes are useful for datacenter and scientific archive scales."
+      },
+      {
+        "name": "exabytes",
+        "symbol": "EB",
+        "conversion_factor": 1e-18,
+        "description": "Exabytes are useful for global-scale data comparisons."
+      },
+      {
+        "name": "zettabytes",
+        "symbol": "ZB",
+        "conversion_factor": 1e-21,
+        "description": "Zettabytes are useful for very large aggregate information scales."
+      },
+      {
+        "name": "yottabytes",
+        "symbol": "YB",
+        "conversion_factor": 1e-24,
+        "description": "Yottabytes are useful for extreme civilization-scale or physical-information comparisons."
+      }
+    ]
   },
   "information-rate": {
     "name": "Information Rate",
@@ -738,111 +1463,467 @@
     "frontend_group": "information",
     "frontend_group_label": "Information & Computation",
     "frontend_order": 470,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "megaflops",
+        "symbol": "MFLOP/s",
+        "conversion_factor": 1e-06,
+        "description": "Megaflops are useful for older computers and small embedded devices."
+      },
+      {
+        "name": "gigaflops",
+        "symbol": "GFLOP/s",
+        "conversion_factor": 1e-09,
+        "description": "Gigaflops are useful for CPUs and smaller accelerators."
+      },
+      {
+        "name": "teraflops",
+        "symbol": "TFLOP/s",
+        "conversion_factor": 1e-12,
+        "description": "Teraflops are useful for modern GPUs and consoles."
+      },
+      {
+        "name": "petaflops",
+        "symbol": "PFLOP/s",
+        "conversion_factor": 1e-15,
+        "description": "Petaflops are useful for large clusters and supercomputers."
+      },
+      {
+        "name": "exaflops",
+        "symbol": "EFLOP/s",
+        "conversion_factor": 1e-18,
+        "description": "Exaflops are useful for the largest contemporary supercomputers."
+      }
+    ]
   },
   "qalys": {
     "name": "QALYs",
     "frontend_group": "health",
     "frontend_group_label": "Health & Biology",
     "frontend_order": 480,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "milliqalys",
+        "symbol": "mQALY",
+        "conversion_factor": 1000.0,
+        "description": "MilliQALYs are useful for small health-state changes."
+      },
+      {
+        "name": "quality-adjusted days",
+        "symbol": "QAD",
+        "conversion_factor": 365.25,
+        "description": "Quality-adjusted days are intuitive for short gains or losses."
+      },
+      {
+        "name": "quality-adjusted hours",
+        "symbol": "QAH",
+        "conversion_factor": 8766.0,
+        "description": "Quality-adjusted hours are useful for very small effects."
+      }
+    ]
   },
   "scoville": {
     "name": "Scoville Heat",
     "frontend_group": "senses",
     "frontend_group_label": "Senses & Perception",
     "frontend_order": 490,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "thousand Scoville heat units",
+        "symbol": "kSHU",
+        "conversion_factor": 0.001,
+        "description": "Thousands of SHU are useful for common peppers and sauces."
+      },
+      {
+        "name": "million Scoville heat units",
+        "symbol": "MSHU",
+        "conversion_factor": 1e-06,
+        "description": "Millions of SHU are useful for extreme peppers and pepper sprays."
+      }
+    ]
   },
   "odor-concentration": {
     "name": "Odor Concentration",
     "frontend_group": "senses",
     "frontend_group_label": "Senses & Perception",
     "frontend_order": 500,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "parts per trillion by volume",
+        "symbol": "pptv",
+        "conversion_factor": 1000.0,
+        "description": "PPTV is useful for extremely potent odorants."
+      },
+      {
+        "name": "parts per million by volume",
+        "symbol": "ppmv",
+        "conversion_factor": 0.001,
+        "description": "PPMV is useful for stronger vapors."
+      }
+    ]
   },
   "sound-frequency": {
     "name": "Sound Frequency",
     "frontend_group": "senses",
     "frontend_group_label": "Senses & Perception",
     "frontend_order": 510,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "kilohertz",
+        "symbol": "kHz",
+        "conversion_factor": 0.001,
+        "description": "Kilohertz are useful for speech, audio engineering, and many animal calls."
+      },
+      {
+        "name": "megahertz",
+        "symbol": "MHz",
+        "conversion_factor": 1e-06,
+        "description": "Megahertz are useful for ultrasound systems."
+      }
+    ]
   },
   "visual-angle": {
     "name": "Visual Angle",
     "frontend_group": "senses",
     "frontend_group_label": "Senses & Perception",
     "frontend_order": 520,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "degrees",
+        "symbol": "deg",
+        "conversion_factor": 57.2957795131,
+        "description": "Degrees are a familiar everyday apparent-size unit."
+      },
+      {
+        "name": "arcminutes",
+        "symbol": "arcmin",
+        "conversion_factor": 3437.74677078,
+        "description": "Arcminutes are useful for the Moon, eyesight, and astronomy."
+      },
+      {
+        "name": "arcseconds",
+        "symbol": "arcsec",
+        "conversion_factor": 206264.806247,
+        "description": "Arcseconds are useful for telescopes and precision optical systems."
+      }
+    ]
   },
   "roughness": {
     "name": "Roughness",
     "frontend_group": "senses",
     "frontend_group_label": "Senses & Perception",
     "frontend_order": 530,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "nanometers",
+        "symbol": "nm",
+        "conversion_factor": 1000000000.0,
+        "description": "Useful for optics and semiconductors."
+      },
+      {
+        "name": "micrometers",
+        "symbol": "um",
+        "conversion_factor": 1000000.0,
+        "description": "Useful for machining and paper."
+      },
+      {
+        "name": "millimeters",
+        "symbol": "mm",
+        "conversion_factor": 1000.0,
+        "description": "Useful for concrete and coarse materials."
+      }
+    ]
   },
   "friction-coefficient": {
     "name": "Coefficient of Friction",
     "frontend_group": "senses",
     "frontend_group_label": "Senses & Perception",
     "frontend_order": 540,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "coefficient",
+        "symbol": "mu",
+        "conversion_factor": 1.0,
+        "description": "Dimensionless friction coefficient."
+      }
+    ]
   },
   "attention": {
     "name": "Attention",
     "frontend_group": "society",
     "frontend_group_label": "Society, Economy & Abstract Quantities",
     "frontend_order": 550,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "person-minutes",
+        "symbol": "person*min",
+        "conversion_factor": 0.0166666666667,
+        "description": "Person-minutes are useful for short media and tasks."
+      },
+      {
+        "name": "person-hours",
+        "symbol": "person*h",
+        "conversion_factor": 0.0002777777778,
+        "description": "Person-hours are useful for classes, meetings, and media."
+      },
+      {
+        "name": "person-days",
+        "symbol": "person*d",
+        "conversion_factor": 1.15740741e-05,
+        "description": "Person-days are useful for aggregate events and projects."
+      },
+      {
+        "name": "person-years",
+        "symbol": "person*yr",
+        "conversion_factor": 3.168808781e-08,
+        "description": "Person-years are useful for very large attention totals."
+      }
+    ]
   },
   "micromorts": {
     "name": "Micromorts",
     "frontend_group": "health",
     "frontend_group_label": "Health & Biology",
     "frontend_order": 560,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "nanomorts",
+        "symbol": "nMort",
+        "conversion_factor": 1000.0,
+        "description": "Nanomorts are useful for very small acute risks."
+      },
+      {
+        "name": "millimorts",
+        "symbol": "mMort",
+        "conversion_factor": 0.001,
+        "description": "Millimorts are useful for large acute risks."
+      },
+      {
+        "name": "death probability",
+        "symbol": "p",
+        "conversion_factor": 1e-06,
+        "description": "One micromort equals 1e-6 probability of death."
+      }
+    ]
   },
   "disease-rarity": {
     "name": "Disease Rarity",
     "frontend_group": "health",
     "frontend_group_label": "Health & Biology",
     "frontend_order": 570,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "percent",
+        "symbol": "%",
+        "conversion_factor": 100.0,
+        "description": "Percent affected under the stated prevalence qualifier."
+      },
+      {
+        "name": "per 1,000 people",
+        "symbol": "per 1k",
+        "conversion_factor": 1000.0,
+        "description": "Common public-health display unit."
+      },
+      {
+        "name": "per 100,000 people",
+        "symbol": "per 100k",
+        "conversion_factor": 100000.0,
+        "description": "Common epidemiology display unit."
+      }
+    ]
   },
   "cell-count": {
     "name": "Cell Count",
     "frontend_group": "health",
     "frontend_group_label": "Health & Biology",
     "frontend_order": 580,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "thousand cells",
+        "symbol": "k cells",
+        "conversion_factor": 0.001,
+        "description": "Thousands of cells are useful for small organisms and samples."
+      },
+      {
+        "name": "million cells",
+        "symbol": "M cells",
+        "conversion_factor": 1e-06,
+        "description": "Millions of cells are useful for cultures and tissues."
+      },
+      {
+        "name": "billion cells",
+        "symbol": "B cells",
+        "conversion_factor": 1e-09,
+        "description": "Billions of cells are useful for blood and microbiology."
+      },
+      {
+        "name": "trillion cells",
+        "symbol": "T cells",
+        "conversion_factor": 1e-12,
+        "description": "Trillions of cells are useful for whole-organism counts."
+      }
+    ]
   },
   "absorbed-dose": {
     "name": "Absorbed Dose",
     "frontend_group": "health",
     "frontend_group_label": "Health & Biology",
     "frontend_order": 590,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "milligray",
+        "symbol": "mGy",
+        "conversion_factor": 1000.0,
+        "description": "Milligray are common for medical imaging."
+      },
+      {
+        "name": "microgray",
+        "symbol": "uGy",
+        "conversion_factor": 1000000.0,
+        "description": "Microgray are useful for very small exposures."
+      },
+      {
+        "name": "centigray",
+        "symbol": "cGy",
+        "conversion_factor": 100.0,
+        "description": "Centigray are often used in radiotherapy."
+      },
+      {
+        "name": "rad",
+        "symbol": "rad",
+        "conversion_factor": 100.0,
+        "description": "The older rad unit remains common in some contexts."
+      }
+    ]
   },
   "population-density": {
     "name": "Population Density",
     "frontend_group": "global",
     "frontend_group_label": "Global & Geography",
     "frontend_order": 600,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "people per hectare",
+        "symbol": "people/ha",
+        "conversion_factor": 0.01,
+        "description": "People per hectare are useful for urban density."
+      },
+      {
+        "name": "people per square mile",
+        "symbol": "people/mi^2",
+        "conversion_factor": 2.5899881103,
+        "description": "People per square mile are familiar in the United States."
+      },
+      {
+        "name": "people per square meter",
+        "symbol": "people/m^2",
+        "conversion_factor": 1e-06,
+        "description": "People per square meter are useful only for extremely dense spaces."
+      }
+    ]
   },
   "physiological-density": {
     "name": "Physiological Density",
     "frontend_group": "global",
     "frontend_group_label": "Global & Geography",
     "frontend_order": 610,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "people per hectare of arable land",
+        "symbol": "people/ha arable",
+        "conversion_factor": 0.01,
+        "description": "People per hectare of arable land."
+      },
+      {
+        "name": "people per square mile of arable land",
+        "symbol": "people/mi^2 arable",
+        "conversion_factor": 2.5899881103,
+        "description": "People per square mile of arable land."
+      }
+    ]
   },
   "agricultural-density": {
     "name": "Agricultural Density",
     "frontend_group": "global",
     "frontend_group_label": "Global & Geography",
     "frontend_order": 620,
-    "status": "planned"
+    "status": "available",
+    "required_min_items": 24,
+    "preferred_target_items": 50,
+    "preferred_max_items": 80,
+    "extra_units": [
+      {
+        "name": "farmers per hectare of arable land",
+        "symbol": "farmers/ha arable",
+        "conversion_factor": 0.01,
+        "description": "Farmers per hectare of arable land."
+      },
+      {
+        "name": "farmers per square mile of arable land",
+        "symbol": "farmers/mi^2 arable",
+        "conversion_factor": 2.5899881103,
+        "description": "Farmers per square mile of arable land."
+      }
+    ]
   }
 }

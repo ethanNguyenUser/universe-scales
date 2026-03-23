@@ -1,0 +1,1390 @@
+dimension: thermal-conductivity
+base_unit: watts_per_meter_kelvin
+dimension_description: Thermal conductivity measures how readily heat flows through a material under a temperature gradient. It helps connect insulators, building materials, fluids, metals, semiconductors, and diamond on one scale. Values depend on temperature, porosity, and orientation, so they should be read as representative rather than universal.
+related_resources:
+- name: Thermal conductivity
+  url: https://en.wikipedia.org/wiki/Thermal_conductivity
+show_limitations: true
+units:
+- name: watts per meter kelvin
+  symbol: W/(m*K)
+  conversion_factor: 1.0
+  description: Watts per meter kelvin are the canonical storage unit for thermal conductivity.
+- name: milliwatts per meter kelvin
+  symbol: mW/(m*K)
+  conversion_factor: 1000.0
+  description: Useful for insulators and gases.
+- name: kilowatts per meter kelvin
+  symbol: kW/(m*K)
+  conversion_factor: 0.001
+  description: Useful for extreme conductors.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: materials
+frontend_group_label: Materials & Matter
+frontend_order: 350
+items:
+- id: obs:thermal-conductivity:entity-vip-thermal-conductivity
+  name: Vacuum insulation panel
+  value: 0.004
+  description: 'Vacuum panels approach the low end of practical thermal conductivity. Source-side figure: `0.004 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Vacuum panels approach the low end of practical thermal conductivity.
+  description_medium: 'Vacuum panels approach the low end of practical thermal conductivity. Source-side figure: `0.004 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Vacuum insulation panel
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.004'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Vacuum_insulation_panel
+      source_value_text: 0.004 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Vacuum_insulation_panel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vacuum-insulation-panel
+    url: https://en.wikipedia.org/wiki/Vacuum_insulation_panel
+    title: Vacuum insulation panel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-aerogel-thermal-conductivity
+  name: Silica aerogel
+  value: 0.013
+  description: 'Aerogel is one of the lowest-conductivity solids people commonly encounter. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Aerogel is one of the lowest-conductivity solids people commonly encounter.
+  description_medium: 'Aerogel is one of the lowest-conductivity solids people commonly encounter. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silica aerogel
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.013'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Aerogel
+      source_value_text: 0.013 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Aerogel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aerogel
+    url: https://en.wikipedia.org/wiki/Aerogel
+    title: Aerogel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-aerogel
+  name: Aerogel
+  value: 0.013
+  description: 'Aerogel is a dramatic thermal insulator. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity for silica aerogel.'
+  description_format: markdown
+  summary_short: Aerogel is a dramatic thermal insulator.
+  description_medium: 'Aerogel is a dramatic thermal insulator. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity for silica aerogel.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aerogel
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.013'
+      source_basis: Representative thermal conductivity for silica aerogel.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Aerogel
+      source_value_text: '0.013'
+  source: https://en.wikipedia.org/wiki/Aerogel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aerogel
+    url: https://en.wikipedia.org/wiki/Aerogel
+    title: Aerogel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-co2-thermal-conductivity
+  name: Carbon dioxide gas
+  value: 0.016
+  description: 'CO2 conducts heat poorly. Source-side figure: `0.016 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: CO2 conducts heat poorly.
+  description_medium: 'CO2 conducts heat poorly. Source-side figure: `0.016 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Carbon dioxide gas
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.016'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Carbon_dioxide
+      source_value_text: 0.016 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Carbon_dioxide
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-carbon-dioxide
+    url: https://en.wikipedia.org/wiki/Carbon_dioxide
+    title: Carbon dioxide
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-air-thermal-conductivity
+  name: Air
+  value: 0.024
+  description: 'Air is a useful everyday low-conductivity reference. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Air is a useful everyday low-conductivity reference.
+  description_medium: 'Air is a useful everyday low-conductivity reference. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Air
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.024'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Thermal_conductivity
+      source_value_text: 0.024 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Thermal_conductivity
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-thermal-conductivity
+    url: https://en.wikipedia.org/wiki/Thermal_conductivity
+    title: Thermal conductivity
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-air
+  name: Air
+  value: 0.024
+  description: 'Air is a familiar low-conductivity gas. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity of air at room temperature.'
+  description_format: markdown
+  summary_short: Air is a familiar low-conductivity gas.
+  description_medium: 'Air is a familiar low-conductivity gas. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity of air at room temperature.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Air
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.024'
+      source_basis: Representative thermal conductivity of air at room temperature.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Air
+      source_value_text: '0.024'
+  source: https://en.wikipedia.org/wiki/Air
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-air
+    url: https://en.wikipedia.org/wiki/Air
+    title: Air
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-polyurethane-thermal-conductivity
+  name: Polyurethane foam
+  value: 0.025
+  description: 'Common insulating foam sits just above air. Source-side figure: `0.025 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Common insulating foam sits just above air.
+  description_medium: 'Common insulating foam sits just above air. Source-side figure: `0.025 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Polyurethane foam
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.025'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Polyurethane
+      source_value_text: 0.025 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Polyurethane
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-polyurethane
+    url: https://en.wikipedia.org/wiki/Polyurethane
+    title: Polyurethane
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-eps-thermal-conductivity
+  name: Expanded polystyrene
+  value: 0.033
+  description: 'A familiar building-insulation benchmark. Source-side figure: `0.033 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: A familiar building-insulation benchmark.
+  description_medium: 'A familiar building-insulation benchmark. Source-side figure: `0.033 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Expanded polystyrene
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.033'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Polystyrene
+      source_value_text: 0.033 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Polystyrene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-polystyrene
+    url: https://en.wikipedia.org/wiki/Polystyrene
+    title: Polystyrene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-wood-thermal-conductivity
+  name: Wood
+  value: 0.12
+  description: 'Wood insulates far better than metals. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Wood insulates far better than metals.
+  description_medium: 'Wood insulates far better than metals. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wood
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.12'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Wood
+      source_value_text: 0.12 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Wood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wood
+    url: https://en.wikipedia.org/wiki/Wood
+    title: Wood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-wood
+  name: Wood
+  value: 0.12
+  description: 'Wood is a common everyday insulating solid. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity of dry wood.'
+  description_format: markdown
+  summary_short: Wood is a common everyday insulating solid.
+  description_medium: 'Wood is a common everyday insulating solid. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity of dry wood.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wood
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.12'
+      source_basis: Representative thermal conductivity of dry wood.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Wood
+      source_value_text: '0.12'
+  source: https://en.wikipedia.org/wiki/Wood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wood
+    url: https://en.wikipedia.org/wiki/Wood
+    title: Wood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-helium-thermal-conductivity
+  name: Helium gas
+  value: 0.15
+  description: 'Helium conducts heat unusually well for a gas. Source-side figure: `0.15 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Helium conducts heat unusually well for a gas.
+  description_medium: 'Helium conducts heat unusually well for a gas. Source-side figure: `0.15 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Helium gas
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.15'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Helium
+      source_value_text: 0.15 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Helium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-helium
+    url: https://en.wikipedia.org/wiki/Helium
+    title: Helium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-water-thermal-conductivity
+  name: Water
+  value: 0.6
+  description: 'Liquid water is much more conductive than air. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Liquid water is much more conductive than air.
+  description_medium: 'Liquid water is much more conductive than air. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Water
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Water
+      source_value_text: 0.6 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-water
+  name: Water
+  value: 0.6
+  description: 'Water is a useful thermal benchmark because it moves heat better than air but far worse than metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity of liquid water.'
+  description_format: markdown
+  summary_short: Water is a useful thermal benchmark because it moves heat better than air but far worse than metals.
+  description_medium: 'Water is a useful thermal benchmark because it moves heat better than air but far worse than metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity of liquid water.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Water
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative thermal conductivity of liquid water.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Water
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-brick
+  name: Brick
+  value: 0.72
+  description: 'Brick sits in the mid-range of common building materials. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.72 W/(m*K)` for Representative thermal conductivity of fired brick.'
+  description_format: markdown
+  summary_short: Brick sits in the mid-range of common building materials.
+  description_medium: 'Brick sits in the mid-range of common building materials. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.72 W/(m*K)` for Representative thermal conductivity of fired brick.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Brick
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '0.72'
+      source_basis: Representative thermal conductivity of fired brick.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Brick
+      source_value_text: '0.72'
+  source: https://en.wikipedia.org/wiki/Brick
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brick
+    url: https://en.wikipedia.org/wiki/Brick
+    title: Brick
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-glass-thermal-conductivity
+  name: Glass
+  value: 1.0
+  description: 'Window glass sits around one watt per meter kelvin. Source-side figure: `1.0 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Window glass sits around one watt per meter kelvin.
+  description_medium: 'Window glass sits around one watt per meter kelvin. Source-side figure: `1.0 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Glass
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Glass
+      source_value_text: 1.0 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Glass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-glass
+    url: https://en.wikipedia.org/wiki/Glass
+    title: Glass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-concrete-thermal-conductivity
+  name: Concrete
+  value: 1.7
+  description: 'Concrete is much more conductive than insulation but far less than metals. Source-side figure: `1.7 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Concrete is much more conductive than insulation but far less than metals.
+  description_medium: 'Concrete is much more conductive than insulation but far less than metals. Source-side figure: `1.7 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concrete
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '1.7'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Concrete
+      source_value_text: 1.7 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-ice-thermal-conductivity
+  name: Ice
+  value: 2.2
+  description: 'Ice conducts heat much better than liquid water. Source-side figure: `2.2 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Ice conducts heat much better than liquid water.
+  description_medium: 'Ice conducts heat much better than liquid water. Source-side figure: `2.2 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ice
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '2.2'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Ice
+      source_value_text: 2.2 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Ice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ice
+    url: https://en.wikipedia.org/wiki/Ice
+    title: Ice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-granite-thermal-conductivity
+  name: Granite
+  value: 2.8
+  description: 'A common rock benchmark. Source-side figure: `2.8 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: A common rock benchmark.
+  description_medium: 'A common rock benchmark. Source-side figure: `2.8 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Granite
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '2.8'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Granite
+      source_value_text: 2.8 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Granite
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-granite
+    url: https://en.wikipedia.org/wiki/Granite
+    title: Granite
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-stainless-steel-thermal-conductivity
+  name: Stainless steel
+  value: 16.0
+  description: 'Stainless steel is much worse than copper at conducting heat. Source-side figure: `16 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Stainless steel is much worse than copper at conducting heat.
+  description_medium: 'Stainless steel is much worse than copper at conducting heat. Source-side figure: `16 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Stainless steel
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '16.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Stainless_steel
+      source_value_text: 16 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Stainless_steel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-stainless-steel
+    url: https://en.wikipedia.org/wiki/Stainless_steel
+    title: Stainless steel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-stainless-steel
+  name: Stainless steel
+  value: 16.0
+  description: 'Stainless steel is much more conductive than insulators but far below copper. Here the quantity refers to `thermal conductivity`. Source-side figure: `16 W/(m*K)` for Representative stainless-steel thermal conductivity.'
+  description_format: markdown
+  summary_short: Stainless steel is much more conductive than insulators but far below copper.
+  description_medium: 'Stainless steel is much more conductive than insulators but far below copper. Here the quantity refers to `thermal conductivity`. Source-side figure: `16 W/(m*K)` for Representative stainless-steel thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Stainless steel
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '16.0'
+      source_basis: Representative stainless-steel thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Stainless_steel
+      source_value_text: '16'
+  source: https://en.wikipedia.org/wiki/Stainless_steel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-stainless-steel
+    url: https://en.wikipedia.org/wiki/Stainless_steel
+    title: Stainless steel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-iron-thermal-conductivity
+  name: Iron
+  value: 80.0
+  description: 'A typical conductive metal benchmark. Source-side figure: `80 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: A typical conductive metal benchmark.
+  description_medium: 'A typical conductive metal benchmark. Source-side figure: `80 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Iron
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '80.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Iron
+      source_value_text: 80 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Iron
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-iron
+    url: https://en.wikipedia.org/wiki/Iron
+    title: Iron
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-silicon-thermal-conductivity
+  name: Silicon
+  value: 149.0
+  description: 'Silicon is a surprisingly good thermal conductor for a semiconductor. Source-side figure: `149 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Silicon is a surprisingly good thermal conductor for a semiconductor.
+  description_medium: 'Silicon is a surprisingly good thermal conductor for a semiconductor. Source-side figure: `149 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silicon
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '149.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Silicon
+      source_value_text: 149 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Silicon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-silicon
+    url: https://en.wikipedia.org/wiki/Silicon
+    title: Silicon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:entity-aluminum-thermal-conductivity
+  name: Aluminum
+  value: 205.0
+  description: 'Aluminum is a common high-conductivity engineering metal. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Aluminum is a common high-conductivity engineering metal.
+  description_medium: 'Aluminum is a common high-conductivity engineering metal. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aluminum
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '205.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Aluminium
+      source_value_text: 205 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Aluminium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aluminium
+    url: https://en.wikipedia.org/wiki/Aluminium
+    title: Aluminium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-aluminum
+  name: Aluminum
+  value: 205.0
+  description: 'Aluminum is a common high-conductivity engineering metal. Here the quantity refers to `thermal conductivity`. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity of aluminum.'
+  description_format: markdown
+  summary_short: Aluminum is a common high-conductivity engineering metal.
+  description_medium: 'Aluminum is a common high-conductivity engineering metal. Here the quantity refers to `thermal conductivity`. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity of aluminum.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aluminum
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '205.0'
+      source_basis: Representative thermal conductivity of aluminum.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Aluminium
+      source_value_text: '205'
+  source: https://en.wikipedia.org/wiki/Aluminium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aluminium
+    url: https://en.wikipedia.org/wiki/Aluminium
+    title: Aluminium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-copper-thermal-conductivity
+  name: Copper
+  value: 401.0
+  description: 'Copper is one of the classic high-conductivity reference metals. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Copper is one of the classic high-conductivity reference metals.
+  description_medium: 'Copper is one of the classic high-conductivity reference metals. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Copper
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '401.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Copper
+      source_value_text: 401 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Copper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-copper
+    url: https://en.wikipedia.org/wiki/Copper
+    title: Copper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-copper
+  name: Copper
+  value: 401.0
+  description: 'Copper is the classic conductor used in heat-spreading comparisons. Here the quantity refers to `thermal conductivity`. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity of copper.'
+  description_format: markdown
+  summary_short: Copper is the classic conductor used in heat-spreading comparisons.
+  description_medium: 'Copper is the classic conductor used in heat-spreading comparisons. Here the quantity refers to `thermal conductivity`. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity of copper.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Copper
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '401.0'
+      source_basis: Representative thermal conductivity of copper.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Copper
+      source_value_text: '401'
+  source: https://en.wikipedia.org/wiki/Copper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-copper
+    url: https://en.wikipedia.org/wiki/Copper
+    title: Copper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-silver-thermal-conductivity
+  name: Silver
+  value: 429.0
+  description: 'Silver slightly exceeds copper as a heat conductor. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Silver slightly exceeds copper as a heat conductor.
+  description_medium: 'Silver slightly exceeds copper as a heat conductor. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silver
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '429.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Silver
+      source_value_text: 429 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Silver
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-silver
+    url: https://en.wikipedia.org/wiki/Silver
+    title: Silver
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-silver
+  name: Silver
+  value: 429.0
+  description: 'Silver sits near the top among common pure metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity of silver.'
+  description_format: markdown
+  summary_short: Silver sits near the top among common pure metals.
+  description_medium: 'Silver sits near the top among common pure metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity of silver.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silver
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '429.0'
+      source_basis: Representative thermal conductivity of silver.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Silver
+      source_value_text: '429'
+  source: https://en.wikipedia.org/wiki/Silver
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-silver
+    url: https://en.wikipedia.org/wiki/Silver
+    title: Silver
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity
+- id: obs:thermal-conductivity:entity-diamond-thermal-conductivity
+  name: Diamond
+  value: 2200.0
+  description: 'Diamond is an extreme thermal conductor. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity.'
+  description_format: markdown
+  summary_short: Diamond is an extreme thermal conductor.
+  description_medium: 'Diamond is an extreme thermal conductor. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Diamond
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '2200.0'
+      source_basis: Representative thermal conductivity.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Diamond
+      source_value_text: 2200 W/(m*K)
+  source: https://en.wikipedia.org/wiki/Diamond
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-diamond
+    url: https://en.wikipedia.org/wiki/Diamond
+    title: Diamond
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:thermal-conductivity:scenario-thermal-conductivity-diamond
+  name: Diamond
+  value: 2200.0
+  description: 'Diamond is an extreme heat conductor by solid-state standards. Here the quantity refers to `thermal conductivity`. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity of diamond.'
+  description_format: markdown
+  summary_short: Diamond is an extreme heat conductor by solid-state standards.
+  description_medium: 'Diamond is an extreme heat conductor by solid-state standards. Here the quantity refers to `thermal conductivity`. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity of diamond.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Diamond
+    ingest_source: dataset/raw/curated/thermal-conductivity.json
+    source_trace:
+      method: direct
+      original_value_text: '2200.0'
+      source_basis: Representative thermal conductivity of diamond.
+      source_unit: W/(m*K)
+      source_url: https://en.wikipedia.org/wiki/Diamond
+      source_value_text: '2200'
+  source: https://en.wikipedia.org/wiki/Diamond
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-diamond
+    url: https://en.wikipedia.org/wiki/Diamond
+    title: Diamond
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-thermal-conductivity-json
+    url: repo://dataset/raw/curated/thermal-conductivity.json
+    title: dataset/raw/curated/thermal-conductivity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: thermal conductivity

@@ -1,0 +1,1189 @@
+{
+  "base_unit": "prevalence_fraction",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 20,
+    "candidate_shortfall_to_preferred_target": 30,
+    "empty_bin_count": 11,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 20,
+    "selected_primary_count": 13,
+    "selected_secondary_count": 7,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 20
+    },
+    "target_selected_count": 20
+  },
+  "description_format": "markdown",
+  "dimension": "disease-rarity",
+  "dimension_description": "This scale stores disease rarity as prevalence fraction, so higher values mean more common conditions and lower values mean rarer ones. It is intentionally simple and does not collapse incidence, prevalence, lifetime risk, and carrier frequency into one number unless that qualifier is stated. The frontend can later re-express these as \u201c1 in N\u201d when helpful.",
+  "frontend_group": "health",
+  "frontend_group_label": "Health & Biology",
+  "frontend_order": 570,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Public-health control can push disease risk into the billionth range. Source-side figure: `3 per 1,000,000,000 annually` for Human rabies is now extremely rare in the US.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Public-health control can push disease risk into the billionth range. Source-side figure: `3 per 1,000,000,000 annually` for Human rabies is now extremely rare in the US.",
+      "facts": {
+        "canonical_name": "Rabies in the United States",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3e-09",
+          "source_basis": "Human rabies is now extremely rare in the US.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Rabies_in_the_United_States",
+          "source_value_text": "3 per 1,000,000,000 annually"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-rabies-in-the-united-states",
+      "name": "Rabies in the United States",
+      "qualifiers": {
+        "measure": "annual incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Rabies_in_the_United_States",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rabies-in-the-united-states",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rabies in the United States",
+          "url": "https://en.wikipedia.org/wiki/Rabies_in_the_United_States"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Public-health control can push disease risk into the billionth range.",
+      "value": 3e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An extreme-rarity anchor that still has a real clinical referent. Source-side figure: `1 in 100,000,000` for A famously ultra-rare inherited prion disease.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An extreme-rarity anchor that still has a real clinical referent. Source-side figure: `1 in 100,000,000` for A famously ultra-rare inherited prion disease.",
+      "facts": {
+        "canonical_name": "Fatal familial insomnia",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-08",
+          "source_basis": "A famously ultra-rare inherited prion disease.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Fatal_insomnia",
+          "source_value_text": "1 in 100,000,000"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-fatal-familial-insomnia",
+      "name": "Fatal familial insomnia",
+      "qualifiers": {
+        "measure": "family-level prevalence estimate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Fatal_insomnia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fatal-insomnia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fatal insomnia",
+          "url": "https://en.wikipedia.org/wiki/Fatal_insomnia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "An extreme-rarity anchor that still has a real clinical referent.",
+      "value": 1e-08,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Progeria is one of the best-known ultra-rare conditions. Source-side figure: `1 in 20,000,000` for About one in twenty million births.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Progeria is one of the best-known ultra-rare conditions. Source-side figure: `1 in 20,000,000` for About one in twenty million births.",
+      "facts": {
+        "canonical_name": "Progeria",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "derivation_note": "1 / 20000000",
+          "method": "derived",
+          "original_value_text": "5e-08",
+          "source_basis": "About one in twenty million births.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Progeria",
+          "source_value_text": "1 in 20,000,000"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-progeria",
+      "name": "Progeria",
+      "qualifiers": {
+        "measure": "birth incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Progeria",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-progeria",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Progeria",
+          "url": "https://en.wikipedia.org/wiki/Progeria"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Progeria is one of the best-known ultra-rare conditions.",
+      "value": 5e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Prion disorders sit far down the rarity scale. Source-side figure: `1 per 1,000,000 per year` for Prion disease annual incidence is about one per million.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Prion disorders sit far down the rarity scale. Source-side figure: `1 per 1,000,000 per year` for Prion disease annual incidence is about one per million.",
+      "facts": {
+        "canonical_name": "Creutzfeldt-Jakob disease",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-06",
+          "source_basis": "Prion disease annual incidence is about one per million.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Creutzfeldt%E2%80%93Jakob_disease",
+          "source_value_text": "1 per 1,000,000 per year"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-creutzfeldt-jakob-disease",
+      "name": "Creutzfeldt-Jakob disease",
+      "qualifiers": {
+        "measure": "annual incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Creutzfeldt%E2%80%93Jakob_disease",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-creutzfeldt-e2-80-93jakob-disease",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Creutzfeldt\u2013Jakob disease",
+          "url": "https://en.wikipedia.org/wiki/Creutzfeldt%E2%80%93Jakob_disease"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Prion disorders sit far down the rarity scale.",
+      "value": 1e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "ALS sits clearly in the rare-disease region. Source-side figure: `2e-5 fraction` for ALS prevalence is a few per hundred thousand.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "ALS sits clearly in the rare-disease region. Source-side figure: `2e-5 fraction` for ALS prevalence is a few per hundred thousand.",
+      "facts": {
+        "canonical_name": "Amyotrophic lateral sclerosis",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-05",
+          "source_basis": "ALS prevalence is a few per hundred thousand.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis",
+          "source_value_text": "2e-5"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-amyotrophic-lateral-sclerosis",
+      "name": "Amyotrophic lateral sclerosis",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-amyotrophic-lateral-sclerosis",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Amyotrophic lateral sclerosis",
+          "url": "https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "ALS sits clearly in the rare-disease region.",
+      "value": 2e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Huntington disease is a familiar rare inherited disorder. Source-side figure: `5 per 100,000` for Population prevalence is often estimated around five per hundred thousand.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Huntington disease is a familiar rare inherited disorder. Source-side figure: `5 per 100,000` for Population prevalence is often estimated around five per hundred thousand.",
+      "facts": {
+        "canonical_name": "Huntington disease",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "derivation_note": "5 / 100000",
+          "method": "derived",
+          "original_value_text": "5e-05",
+          "source_basis": "Population prevalence is often estimated around five per hundred thousand.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
+          "source_value_text": "5 per 100,000"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-huntington-disease",
+      "name": "Huntington disease",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-huntington-27s-disease",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Huntington's disease",
+          "url": "https://en.wikipedia.org/wiki/Huntington%27s_disease"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Huntington disease is a familiar rare inherited disorder.",
+      "value": 5e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A familiar birth-incidence rare syndrome. Source-side figure: `1 in 15,000` for A classic rare-disease benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A familiar birth-incidence rare syndrome. Source-side figure: `1 in 15,000` for A classic rare-disease benchmark.",
+      "facts": {
+        "canonical_name": "Prader-Willi syndrome",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "derivation_note": "1 / 15000",
+          "method": "derived",
+          "original_value_text": "6.666666666666667e-05",
+          "source_basis": "A classic rare-disease benchmark.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Prader%E2%80%93Willi_syndrome",
+          "source_value_text": "1 in 15,000"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-prader-willi-syndrome",
+      "name": "Prader-Willi syndrome",
+      "qualifiers": {
+        "measure": "birth incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Prader%E2%80%93Willi_syndrome",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-prader-e2-80-93willi-syndrome",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Prader\u2013Willi syndrome",
+          "url": "https://en.wikipedia.org/wiki/Prader%E2%80%93Willi_syndrome"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "A familiar birth-incidence rare syndrome.",
+      "value": 6.666666666666667e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A rare disease with a strong public profile. Source-side figure: `1 in 5,000 male births` for Duchenne is rare but visible in pediatric genetics.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A rare disease with a strong public profile. Source-side figure: `1 in 5,000 male births` for Duchenne is rare but visible in pediatric genetics.",
+      "facts": {
+        "canonical_name": "Duchenne muscular dystrophy",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0002",
+          "source_basis": "Duchenne is rare but visible in pediatric genetics.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Duchenne_muscular_dystrophy",
+          "source_value_text": "1 in 5,000 male births"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-duchenne-muscular-dystrophy",
+      "name": "Duchenne muscular dystrophy",
+      "qualifiers": {
+        "measure": "birth incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Duchenne_muscular_dystrophy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-duchenne-muscular-dystrophy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Duchenne muscular dystrophy",
+          "url": "https://en.wikipedia.org/wiki/Duchenne_muscular_dystrophy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "A rare disease with a strong public profile.",
+      "value": 0.0002,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A clear rare-disease middle anchor. Source-side figure: `1 in 5,000 male births` for Hemophilia A is one of the best-known inherited bleeding disorders.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A clear rare-disease middle anchor. Source-side figure: `1 in 5,000 male births` for Hemophilia A is one of the best-known inherited bleeding disorders.",
+      "facts": {
+        "canonical_name": "Hemophilia A",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0002",
+          "source_basis": "Hemophilia A is one of the best-known inherited bleeding disorders.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Hemophilia_A",
+          "source_value_text": "1 in 5,000 male births"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-hemophilia-a",
+      "name": "Hemophilia A",
+      "qualifiers": {
+        "measure": "birth incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hemophilia_A",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hemophilia-a",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hemophilia A",
+          "url": "https://en.wikipedia.org/wiki/Hemophilia_A"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "A clear rare-disease middle anchor.",
+      "value": 0.0002,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cystic fibrosis is rare without being at the extreme tail. Source-side figure: `1 in 2,500 births in some populations` for A rare but well-known inherited disease.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cystic fibrosis is rare without being at the extreme tail. Source-side figure: `1 in 2,500 births in some populations` for A rare but well-known inherited disease.",
+      "facts": {
+        "canonical_name": "Cystic fibrosis",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0004",
+          "source_basis": "A rare but well-known inherited disease.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Cystic_fibrosis",
+          "source_value_text": "1 in 2,500 births in some populations"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-cystic-fibrosis",
+      "name": "Cystic fibrosis",
+      "qualifiers": {
+        "measure": "birth incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cystic_fibrosis",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cystic-fibrosis",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cystic fibrosis",
+          "url": "https://en.wikipedia.org/wiki/Cystic_fibrosis"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Cystic fibrosis is rare without being at the extreme tail.",
+      "value": 0.0004,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Inflammatory bowel disease gives a good low-prevalence anchor. Source-side figure: `0.2%` for Crohn disease prevalence is often a few per thousand or below.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Inflammatory bowel disease gives a good low-prevalence anchor. Source-side figure: `0.2%` for Crohn disease prevalence is often a few per thousand or below.",
+      "facts": {
+        "canonical_name": "Crohn disease",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.002",
+          "source_basis": "Crohn disease prevalence is often a few per thousand or below.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Crohn%27s_disease",
+          "source_value_text": "0.2%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-crohn-disease",
+      "name": "Crohn disease",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Crohn%27s_disease",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-crohn-27s-disease",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Crohn's disease",
+          "url": "https://en.wikipedia.org/wiki/Crohn%27s_disease"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Inflammatory bowel disease gives a good low-prevalence anchor.",
+      "value": 0.002,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "MS is uncommon but very far from the ultra-rare tail. Source-side figure: `0.25%` for Representative prevalence in some populations.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "MS is uncommon but very far from the ultra-rare tail. Source-side figure: `0.25%` for Representative prevalence in some populations.",
+      "facts": {
+        "canonical_name": "Multiple sclerosis",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0025",
+          "source_basis": "Representative prevalence in some populations.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Multiple_sclerosis",
+          "source_value_text": "0.25%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-multiple-sclerosis",
+      "name": "Multiple sclerosis",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Multiple_sclerosis",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-multiple-sclerosis",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Multiple sclerosis",
+          "url": "https://en.wikipedia.org/wiki/Multiple_sclerosis"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "MS is uncommon but very far from the ultra-rare tail.",
+      "value": 0.0025,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Much rarer than type 2 diabetes but not an ultra-rare disease. Source-side figure: `0.4%` for A few per thousand in many populations.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Much rarer than type 2 diabetes but not an ultra-rare disease. Source-side figure: `0.4%` for A few per thousand in many populations.",
+      "facts": {
+        "canonical_name": "Type 1 diabetes",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.004",
+          "source_basis": "A few per thousand in many populations.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Type_1_diabetes",
+          "source_value_text": "0.4%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-type-1-diabetes",
+      "name": "Type 1 diabetes",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Type_1_diabetes",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-type-1-diabetes",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Type 1 diabetes",
+          "url": "https://en.wikipedia.org/wiki/Type_1_diabetes"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Much rarer than type 2 diabetes but not an ultra-rare disease.",
+      "value": 0.004,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Psychiatric conditions can be rare without being ultra-rare. Source-side figure: `0.7%` for Lifetime prevalence is often quoted around seven per thousand.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Psychiatric conditions can be rare without being ultra-rare. Source-side figure: `0.7%` for Lifetime prevalence is often quoted around seven per thousand.",
+      "facts": {
+        "canonical_name": "Schizophrenia",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.007",
+          "source_basis": "Lifetime prevalence is often quoted around seven per thousand.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Schizophrenia",
+          "source_value_text": "0.7%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-schizophrenia",
+      "name": "Schizophrenia",
+      "qualifiers": {
+        "measure": "lifetime prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Schizophrenia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-schizophrenia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Schizophrenia",
+          "url": "https://en.wikipedia.org/wiki/Schizophrenia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Psychiatric conditions can be rare without being ultra-rare.",
+      "value": 0.007,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A memorable one-in-a-hundred autoimmune condition. Source-side figure: `1%` for Celiac disease is often quoted around one percent prevalence.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A memorable one-in-a-hundred autoimmune condition. Source-side figure: `1%` for Celiac disease is often quoted around one percent prevalence.",
+      "facts": {
+        "canonical_name": "Celiac disease",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.01",
+          "source_basis": "Celiac disease is often quoted around one percent prevalence.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Celiac_disease",
+          "source_value_text": "1%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-celiac-disease",
+      "name": "Celiac disease",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Celiac_disease",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-celiac-disease",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Celiac disease",
+          "url": "https://en.wikipedia.org/wiki/Celiac_disease"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "A memorable one-in-a-hundred autoimmune condition.",
+      "value": 0.01,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Asthma is common but far from universal. Source-side figure: `8%` for Asthma prevalence is often on the order of several percent.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Asthma is common but far from universal. Source-side figure: `8%` for Asthma prevalence is often on the order of several percent.",
+      "facts": {
+        "canonical_name": "Asthma",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.08",
+          "source_basis": "Asthma prevalence is often on the order of several percent.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Asthma",
+          "source_value_text": "8%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-asthma",
+      "name": "Asthma",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Asthma",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-asthma",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Asthma",
+          "url": "https://en.wikipedia.org/wiki/Asthma"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Asthma is common but far from universal.",
+      "value": 0.08,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A globally important common chronic disease. Source-side figure: `10%` for Type 2 diabetes affects around a tenth of adults in many populations.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A globally important common chronic disease. Source-side figure: `10%` for Type 2 diabetes affects around a tenth of adults in many populations.",
+      "facts": {
+        "canonical_name": "Type 2 diabetes",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.1",
+          "source_basis": "Type 2 diabetes affects around a tenth of adults in many populations.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Type_2_diabetes",
+          "source_value_text": "10%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-type-2-diabetes",
+      "name": "Type 2 diabetes",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Type_2_diabetes",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-type-2-diabetes",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Type 2 diabetes",
+          "url": "https://en.wikipedia.org/wiki/Type_2_diabetes"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "A globally important common chronic disease.",
+      "value": 0.1,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Migraine is common enough to be socially pervasive. Source-side figure: `15%` for Migraine prevalence is often estimated in the mid-teens.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Migraine is common enough to be socially pervasive. Source-side figure: `15%` for Migraine prevalence is often estimated in the mid-teens.",
+      "facts": {
+        "canonical_name": "Migraine",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.15",
+          "source_basis": "Migraine prevalence is often estimated in the mid-teens.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Migraine",
+          "source_value_text": "15%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-migraine",
+      "name": "Migraine",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Migraine",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-migraine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Migraine",
+          "url": "https://en.wikipedia.org/wiki/Migraine"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Migraine is common enough to be socially pervasive.",
+      "value": 0.15,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A very common chronic condition. Source-side figure: `30%` for Dental decay affects a large share of people worldwide.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A very common chronic condition. Source-side figure: `30%` for Dental decay affects a large share of people worldwide.",
+      "facts": {
+        "canonical_name": "Dental caries",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.3",
+          "source_basis": "Dental decay affects a large share of people worldwide.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Tooth_decay",
+          "source_value_text": "30%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-dental-caries",
+      "name": "Dental caries",
+      "qualifiers": {
+        "measure": "prevalence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Tooth_decay",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tooth-decay",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tooth decay",
+          "url": "https://en.wikipedia.org/wiki/Tooth_decay"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "A very common chronic condition.",
+      "value": 0.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Common colds sit near the common-disease end of the rarity scale. Source-side figure: `50%` for Adults often get several colds per year, making annual infection probability very high.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Common colds sit near the common-disease end of the rarity scale. Source-side figure: `50%` for Adults often get several colds per year, making annual infection probability very high.",
+      "facts": {
+        "canonical_name": "Common cold in a year",
+        "ingest_source": "dataset/raw/curated/disease-rarity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.5",
+          "source_basis": "Adults often get several colds per year, making annual infection probability very high.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Common_cold",
+          "source_value_text": "50%"
+        }
+      },
+      "hook": null,
+      "id": "obs:disease-rarity:scenario-disease-rarity-common-cold-in-a-year",
+      "name": "Common cold in a year",
+      "qualifiers": {
+        "measure": "annual incidence"
+      },
+      "source": "https://en.wikipedia.org/wiki/Common_cold",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-common-cold",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Common cold",
+          "url": "https://en.wikipedia.org/wiki/Common_cold"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-disease-rarity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/disease-rarity.json",
+          "url": "repo://dataset/raw/curated/disease-rarity.json"
+        }
+      ],
+      "summary_short": "Common colds sit near the common-disease end of the rarity scale.",
+      "value": 0.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Rare disease",
+      "url": "https://en.wikipedia.org/wiki/Rare_disease"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Fraction of a population affected under the stated qualifier.",
+      "name": "prevalence fraction",
+      "symbol": "fraction"
+    },
+    {
+      "conversion_factor": 100.0,
+      "description": "Percent affected under the stated prevalence qualifier.",
+      "name": "percent",
+      "symbol": "%"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Common public-health display unit.",
+      "name": "per 1,000 people",
+      "symbol": "per 1k"
+    },
+    {
+      "conversion_factor": 100000.0,
+      "description": "Common epidemiology display unit.",
+      "name": "per 100,000 people",
+      "symbol": "per 100k"
+    }
+  ]
+}

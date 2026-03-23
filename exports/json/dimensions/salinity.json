@@ -1,0 +1,1796 @@
+{
+  "base_unit": "mass_fraction",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 32,
+    "candidate_shortfall_to_preferred_target": 18,
+    "empty_bin_count": 11,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 32,
+    "selected_primary_count": 13,
+    "selected_secondary_count": 19,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 32
+    },
+    "target_selected_count": 32
+  },
+  "description_format": "markdown",
+  "dimension": "salinity",
+  "dimension_description": "This salinity scale stores dissolved-salt content as mass fraction. That makes freshwater, blood plasma, seawater, brines, and hypersaline lakes comparable on one axis. The exact chemical makeup varies, so these are representative total-salinity benchmarks rather than precise ionic analyses.",
+  "frontend_group": "materials",
+  "frontend_group_label": "Materials & Matter",
+  "frontend_order": 270,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ultrapure water is the low end of practical salinity. Source-side figure: `1e-7 fraction` for Representative residual dissolved-solids fraction of ultrapure water.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ultrapure water is the low end of practical salinity. Source-side figure: `1e-7 fraction` for Representative residual dissolved-solids fraction of ultrapure water.",
+      "facts": {
+        "canonical_name": "Ultrapure water",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-07",
+          "source_basis": "Representative residual dissolved-solids fraction of ultrapure water.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Ultrapure_water",
+          "source_value_text": "1e-7 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-ultrapure-water-salinity",
+      "name": "Ultrapure water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ultrapure_water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ultrapure-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ultrapure water",
+          "url": "https://en.wikipedia.org/wiki/Ultrapure_water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Ultrapure water is the low end of practical salinity.",
+      "value": 1e-07,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Rainwater is very low salinity compared with surface waters. Source-side figure: `1e-5 fraction` for Representative rainwater salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Rainwater is very low salinity compared with surface waters. Source-side figure: `1e-5 fraction` for Representative rainwater salinity.",
+      "facts": {
+        "canonical_name": "Rainwater",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-05",
+          "source_basis": "Representative rainwater salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Rain",
+          "source_value_text": "1e-5 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-rainwater-salinity",
+      "name": "Rainwater",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Rain",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rain",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rain",
+          "url": "https://en.wikipedia.org/wiki/Rain"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Rainwater is very low salinity compared with surface waters.",
+      "value": 1e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Desalination moves seawater back toward the freshwater end of the scale. Source-side figure: `5e-5 fraction` for Representative desalinated-water salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Desalination moves seawater back toward the freshwater end of the scale. Source-side figure: `5e-5 fraction` for Representative desalinated-water salinity.",
+      "facts": {
+        "canonical_name": "Desalinated water",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative desalinated-water salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Desalination",
+          "source_value_text": "5e-5 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-desalinated-water-salinity",
+      "name": "Desalinated water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Desalination",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-desalination",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Desalination",
+          "url": "https://en.wikipedia.org/wiki/Desalination"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Desalination moves seawater back toward the freshwater end of the scale.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fresh mountain water is a useful low-salinity natural benchmark. Source-side figure: `5e-5 fraction` for Representative freshwater salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fresh mountain water is a useful low-salinity natural benchmark. Source-side figure: `5e-5 fraction` for Representative freshwater salinity.",
+      "facts": {
+        "canonical_name": "Mountain stream freshwater",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative freshwater salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Fresh_water",
+          "source_value_text": "5e-5 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-mountain-stream-salinity",
+      "name": "Mountain stream freshwater",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Fresh_water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fresh-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fresh water",
+          "url": "https://en.wikipedia.org/wiki/Fresh_water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Fresh mountain water is a useful low-salinity natural benchmark.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Large freshwater lakes are low but not zero on the salinity scale. Source-side figure: `1e-4 fraction` for Representative freshwater salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Large freshwater lakes are low but not zero on the salinity scale. Source-side figure: `1e-4 fraction` for Representative freshwater salinity.",
+      "facts": {
+        "canonical_name": "Great Lakes water",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative freshwater salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Lakes",
+          "source_value_text": "1e-4 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-great-lakes-salinity",
+      "name": "Great Lakes water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Great_Lakes",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-great-lakes",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Great Lakes",
+          "url": "https://en.wikipedia.org/wiki/Great_Lakes"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Large freshwater lakes are low but not zero on the salinity scale.",
+      "value": 0.0001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ordinary drinking water contains enough dissolved solids to show up clearly on a log scale. Source-side figure: `5e-4 fraction` for Representative tap-water salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ordinary drinking water contains enough dissolved solids to show up clearly on a log scale. Source-side figure: `5e-4 fraction` for Representative tap-water salinity.",
+      "facts": {
+        "canonical_name": "Tap water",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0005",
+          "source_basis": "Representative tap-water salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Drinking_water",
+          "source_value_text": "5e-4 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-tap-water-salinity",
+      "name": "Tap water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Drinking_water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drinking-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drinking water",
+          "url": "https://en.wikipedia.org/wiki/Drinking_water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Ordinary drinking water contains enough dissolved solids to show up clearly on a log scale.",
+      "value": 0.0005,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A mineralized freshwater aquarium sits above raw tap water but well below brackish water. Source-side figure: `0.001 fraction` for Representative freshwater aquarium salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A mineralized freshwater aquarium sits above raw tap water but well below brackish water. Source-side figure: `0.001 fraction` for Representative freshwater aquarium salinity.",
+      "facts": {
+        "canonical_name": "Freshwater aquarium",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.001",
+          "source_basis": "Representative freshwater aquarium salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Aquarium",
+          "source_value_text": "0.001 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-freshwater-aquarium-salinity",
+      "name": "Freshwater aquarium",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Aquarium",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aquarium",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aquarium",
+          "url": "https://en.wikipedia.org/wiki/Aquarium"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "A mineralized freshwater aquarium sits above raw tap water but well below brackish water.",
+      "value": 0.001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The upper Chesapeake is a classic mildly brackish estuary example. Source-side figure: `0.005 fraction` for Representative upper-estuary salinity in Chesapeake Bay.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The upper Chesapeake is a classic mildly brackish estuary example. Source-side figure: `0.005 fraction` for Representative upper-estuary salinity in Chesapeake Bay.",
+      "facts": {
+        "canonical_name": "Upper Chesapeake Bay",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.005",
+          "source_basis": "Representative upper-estuary salinity in Chesapeake Bay.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Chesapeake_Bay",
+          "source_value_text": "0.005 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-chesapeake-bay-upper-salinity",
+      "name": "Upper Chesapeake Bay",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Chesapeake_Bay",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-chesapeake-bay",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Chesapeake Bay",
+          "url": "https://en.wikipedia.org/wiki/Chesapeake_Bay"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The upper Chesapeake is a classic mildly brackish estuary example.",
+      "value": 0.005,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Baltic is a classic brackish-water example. Source-side figure: `0.007 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Baltic is a classic brackish-water example. Source-side figure: `0.007 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Baltic Sea",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.007",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+          "source_value_text": "0.007 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-baltic-sea-salinity",
+      "name": "Baltic Sea",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Baltic_Sea",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-baltic-sea",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Baltic Sea",
+          "url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The Baltic is a classic brackish-water example.",
+      "value": 0.007,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cold fjord water often stays fresher near river inflows and ice melt. Source-side figure: `0.008 fraction` for Representative fjord salinity fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cold fjord water often stays fresher near river inflows and ice melt. Source-side figure: `0.008 fraction` for Representative fjord salinity fraction.",
+      "facts": {
+        "canonical_name": "Greenland fjord water",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.008",
+          "source_basis": "Representative fjord salinity fraction.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Fjord",
+          "source_value_text": "0.008 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-greenland-fjord-salinity",
+      "name": "Greenland fjord water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Fjord",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fjord",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fjord",
+          "url": "https://en.wikipedia.org/wiki/Fjord"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Cold fjord water often stays fresher near river inflows and ice melt.",
+      "value": 0.008,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Human physiology depends on a salinity surprisingly close to normal saline. Source-side figure: `0.009 fraction` for Representative dissolved-solids scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Human physiology depends on a salinity surprisingly close to normal saline. Source-side figure: `0.009 fraction` for Representative dissolved-solids scale.",
+      "facts": {
+        "canonical_name": "Blood plasma",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.009",
+          "source_basis": "Representative dissolved-solids scale.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Blood_plasma",
+          "source_value_text": "0.009 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-blood-plasma-salinity",
+      "name": "Blood plasma",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Blood_plasma",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-blood-plasma",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Blood plasma",
+          "url": "https://en.wikipedia.org/wiki/Blood_plasma"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Human physiology depends on a salinity surprisingly close to normal saline.",
+      "value": 0.009,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Medical saline is a useful precise physiological benchmark. Source-side figure: `0.9%` for Definition of normal saline. Converted percent to fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Medical saline is a useful precise physiological benchmark. Source-side figure: `0.9%` for Definition of normal saline. Converted percent to fraction.",
+      "facts": {
+        "canonical_name": "Normal saline",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "conversion_note": "Converted percent to fraction.",
+          "method": "derived",
+          "original_value_text": "0.009",
+          "source_basis": "Definition of normal saline.",
+          "source_unit": "percent",
+          "source_url": "https://en.wikipedia.org/wiki/Saline_(medicine)",
+          "source_value_text": "0.9%"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-normal-saline-salinity",
+      "name": "Normal saline",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Saline_(medicine)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-saline-medicine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Saline (medicine)",
+          "url": "https://en.wikipedia.org/wiki/Saline_(medicine)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Medical saline is a useful precise physiological benchmark.",
+      "value": 0.009,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tears are close to isotonic saline. Source-side figure: `0.009 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tears are close to isotonic saline. Source-side figure: `0.009 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Human tears",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.009",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Tears",
+          "source_value_text": "0.009 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-tears-salinity",
+      "name": "Human tears",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tears",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tears",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tears",
+          "url": "https://en.wikipedia.org/wiki/Tears"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Tears are close to isotonic saline.",
+      "value": 0.009,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Urine is another familiar biological salty liquid. Source-side figure: `0.009 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Urine is another familiar biological salty liquid. Source-side figure: `0.009 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Urine",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.009",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Urine",
+          "source_value_text": "0.009 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-urine-salinity",
+      "name": "Urine",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Urine",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-urine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Urine",
+          "url": "https://en.wikipedia.org/wiki/Urine"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Urine is another familiar biological salty liquid.",
+      "value": 0.009,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sweat is slightly saltier than blood plasma. Source-side figure: `0.01 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sweat is slightly saltier than blood plasma. Source-side figure: `0.01 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Human sweat",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.01",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Sweat",
+          "source_value_text": "0.01 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-sweat-salinity",
+      "name": "Human sweat",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sweat",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sweat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sweat",
+          "url": "https://en.wikipedia.org/wiki/Sweat"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Sweat is slightly saltier than blood plasma.",
+      "value": 0.01,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Estuaries span the middle of the freshwater-to-seawater transition. Source-side figure: `0.015 fraction` for Representative brackish salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Estuaries span the middle of the freshwater-to-seawater transition. Source-side figure: `0.015 fraction` for Representative brackish salinity.",
+      "facts": {
+        "canonical_name": "Brackish estuary",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.015",
+          "source_basis": "Representative brackish salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Brackish_water",
+          "source_value_text": "0.015 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-brackish-estuary-salinity",
+      "name": "Brackish estuary",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brackish_water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brackish-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brackish water",
+          "url": "https://en.wikipedia.org/wiki/Brackish_water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Estuaries span the middle of the freshwater-to-seawater transition.",
+      "value": 0.015,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An estuary like Chesapeake Bay sits between freshwater and the ocean in salinity. Source-side figure: `0.015 fraction` for Representative estuarine salinity fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An estuary like Chesapeake Bay sits between freshwater and the ocean in salinity. Source-side figure: `0.015 fraction` for Representative estuarine salinity fraction.",
+      "facts": {
+        "canonical_name": "Chesapeake Bay estuary",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.015",
+          "source_basis": "Representative estuarine salinity fraction.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Chesapeake_Bay",
+          "source_value_text": "0.015 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-chesapeake-bay-salinity",
+      "name": "Chesapeake Bay estuary",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Chesapeake_Bay",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-chesapeake-bay",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Chesapeake Bay",
+          "url": "https://en.wikipedia.org/wiki/Chesapeake_Bay"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "An estuary like Chesapeake Bay sits between freshwater and the ocean in salinity.",
+      "value": 0.015,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Black Sea is less saline than the open ocean. Source-side figure: `0.018 fraction` for Representative salinity fraction for the Black Sea.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Black Sea is less saline than the open ocean. Source-side figure: `0.018 fraction` for Representative salinity fraction for the Black Sea.",
+      "facts": {
+        "canonical_name": "Black Sea",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.018",
+          "source_basis": "Representative salinity fraction for the Black Sea.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Black_Sea",
+          "source_value_text": "0.018 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-black-sea-salinity",
+      "name": "Black Sea",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Black_Sea",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-black-sea",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Black Sea",
+          "url": "https://en.wikipedia.org/wiki/Black_Sea"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The Black Sea is less saline than the open ocean.",
+      "value": 0.018,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Average seawater is the canonical ocean-salinity benchmark. Source-side figure: `3.5%` for Average ocean salinity. Converted percent to fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Average seawater is the canonical ocean-salinity benchmark. Source-side figure: `3.5%` for Average ocean salinity. Converted percent to fraction.",
+      "facts": {
+        "canonical_name": "Seawater",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "conversion_note": "Converted percent to fraction.",
+          "method": "derived",
+          "original_value_text": "0.035",
+          "source_basis": "Average ocean salinity.",
+          "source_unit": "percent",
+          "source_url": "https://en.wikipedia.org/wiki/Seawater",
+          "source_value_text": "3.5%"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-seawater-salinity",
+      "name": "Seawater",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Seawater",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-seawater",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Seawater",
+          "url": "https://en.wikipedia.org/wiki/Seawater"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Average seawater is the canonical ocean-salinity benchmark.",
+      "value": 0.035,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Mediterranean is slightly saltier than average open ocean water. Source-side figure: `0.038 fraction` for Representative salinity fraction for the Mediterranean Sea.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Mediterranean is slightly saltier than average open ocean water. Source-side figure: `0.038 fraction` for Representative salinity fraction for the Mediterranean Sea.",
+      "facts": {
+        "canonical_name": "Mediterranean Sea",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.038",
+          "source_basis": "Representative salinity fraction for the Mediterranean Sea.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+          "source_value_text": "0.038 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-mediterranean-sea-salinity",
+      "name": "Mediterranean Sea",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mediterranean-sea",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mediterranean Sea",
+          "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The Mediterranean is slightly saltier than average open ocean water.",
+      "value": 0.038,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Red Sea is a warm, salt-rich basin. Source-side figure: `0.040 fraction` for Representative salinity fraction for the Red Sea.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Red Sea is a warm, salt-rich basin. Source-side figure: `0.040 fraction` for Representative salinity fraction for the Red Sea.",
+      "facts": {
+        "canonical_name": "Red Sea",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.04",
+          "source_basis": "Representative salinity fraction for the Red Sea.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Red_Sea",
+          "source_value_text": "0.040 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-red-sea-salinity",
+      "name": "Red Sea",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Red_Sea",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-red-sea",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Red Sea",
+          "url": "https://en.wikipedia.org/wiki/Red_Sea"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The Red Sea is a warm, salt-rich basin.",
+      "value": 0.04,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Food brines sit well above seawater. Source-side figure: `0.05 fraction` for Representative pickle-brine salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Food brines sit well above seawater. Source-side figure: `0.05 fraction` for Representative pickle-brine salinity.",
+      "facts": {
+        "canonical_name": "Pickle brine",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.05",
+          "source_basis": "Representative pickle-brine salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Brine",
+          "source_value_text": "0.05 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-pickle-brine-salinity",
+      "name": "Pickle brine",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brine",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brine",
+          "url": "https://en.wikipedia.org/wiki/Brine"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Food brines sit well above seawater.",
+      "value": 0.05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Lake Urmia was once dramatically saline, far beyond ordinary seawater. Source-side figure: `0.12 fraction` for Representative salinity fraction for Lake Urmia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Lake Urmia was once dramatically saline, far beyond ordinary seawater. Source-side figure: `0.12 fraction` for Representative salinity fraction for Lake Urmia.",
+      "facts": {
+        "canonical_name": "Lake Urmia",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.12",
+          "source_basis": "Representative salinity fraction for Lake Urmia.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Urmia",
+          "source_value_text": "0.12 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-lake-urmia-salinity",
+      "name": "Lake Urmia",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lake_Urmia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lake-urmia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lake Urmia",
+          "url": "https://en.wikipedia.org/wiki/Lake_Urmia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Lake Urmia was once dramatically saline, far beyond ordinary seawater.",
+      "value": 0.12,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Great Salt Lake is much saltier than the open ocean. Source-side figure: `0.14 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Great Salt Lake is much saltier than the open ocean. Source-side figure: `0.14 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Great Salt Lake",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.14",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Salt_Lake",
+          "source_value_text": "0.14 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-great-salt-lake-salinity",
+      "name": "Great Salt Lake",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Great_Salt_Lake",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-great-salt-lake",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Great Salt Lake",
+          "url": "https://en.wikipedia.org/wiki/Great_Salt_Lake"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The Great Salt Lake is much saltier than the open ocean.",
+      "value": 0.14,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Soy sauce is an everyday hypersaline liquid. Source-side figure: `0.14 fraction` for Representative soy-sauce salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Soy sauce is an everyday hypersaline liquid. Source-side figure: `0.14 fraction` for Representative soy-sauce salinity.",
+      "facts": {
+        "canonical_name": "Soy sauce",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.14",
+          "source_basis": "Representative soy-sauce salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Soy_sauce",
+          "source_value_text": "0.14 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-soy-sauce-salinity",
+      "name": "Soy sauce",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Soy_sauce",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-soy-sauce",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Soy sauce",
+          "url": "https://en.wikipedia.org/wiki/Soy_sauce"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Soy sauce is an everyday hypersaline liquid.",
+      "value": 0.14,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Natural brine pools sit high on the salinity scale. Source-side figure: `0.2 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Natural brine pools sit high on the salinity scale. Source-side figure: `0.2 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Brine pool",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.2",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Brine_pool",
+          "source_value_text": "0.2 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-brine-pool-salinity",
+      "name": "Brine pool",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brine_pool",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brine-pool",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brine pool",
+          "url": "https://en.wikipedia.org/wiki/Brine_pool"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Natural brine pools sit high on the salinity scale.",
+      "value": 0.2,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Evaporation ponds become hypersaline as water is concentrated by the sun. Source-side figure: `0.25 fraction` for Representative evaporation-pond salinity fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Evaporation ponds become hypersaline as water is concentrated by the sun. Source-side figure: `0.25 fraction` for Representative evaporation-pond salinity fraction.",
+      "facts": {
+        "canonical_name": "Salt evaporation pond",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.25",
+          "source_basis": "Representative evaporation-pond salinity fraction.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Salt_evaporation_pond",
+          "source_value_text": "0.25 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-salt-evaporation-pond-salinity",
+      "name": "Salt evaporation pond",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Salt_evaporation_pond",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-salt-evaporation-pond",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Salt evaporation pond",
+          "url": "https://en.wikipedia.org/wiki/Salt_evaporation_pond"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Evaporation ponds become hypersaline as water is concentrated by the sun.",
+      "value": 0.25,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Saturated brine gives a clean upper everyday reference. Source-side figure: `0.26 fraction` for Representative saturated brine salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Saturated brine gives a clean upper everyday reference. Source-side figure: `0.26 fraction` for Representative saturated brine salinity.",
+      "facts": {
+        "canonical_name": "Saturated salt brine",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.26",
+          "source_basis": "Representative saturated brine salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Brine",
+          "source_value_text": "0.26 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-saturated-brine-salinity",
+      "name": "Saturated salt brine",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brine",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brine",
+          "url": "https://en.wikipedia.org/wiki/Brine"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Saturated brine gives a clean upper everyday reference.",
+      "value": 0.26,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A brine pool can be so dense with salt that it creates a distinct underwater layer. Source-side figure: `0.30 fraction` for Representative hypersaline brine-pool salinity fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A brine pool can be so dense with salt that it creates a distinct underwater layer. Source-side figure: `0.30 fraction` for Representative hypersaline brine-pool salinity fraction.",
+      "facts": {
+        "canonical_name": "Hypersaline brine pool",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.3",
+          "source_basis": "Representative hypersaline brine-pool salinity fraction.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Brine_pool",
+          "source_value_text": "0.30 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-hypersaline-brine-pool-salinity",
+      "name": "Hypersaline brine pool",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brine_pool",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brine-pool",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brine pool",
+          "url": "https://en.wikipedia.org/wiki/Brine_pool"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "A brine pool can be so dense with salt that it creates a distinct underwater layer.",
+      "value": 0.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Dead Sea is one of the most famous hypersaline natural waters. Source-side figure: `0.34 fraction` for Representative salinity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Dead Sea is one of the most famous hypersaline natural waters. Source-side figure: `0.34 fraction` for Representative salinity.",
+      "facts": {
+        "canonical_name": "Dead Sea",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.34",
+          "source_basis": "Representative salinity.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Dead_Sea",
+          "source_value_text": "0.34 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-dead-sea-salinity",
+      "name": "Dead Sea",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Dead_Sea",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dead-sea",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dead Sea",
+          "url": "https://en.wikipedia.org/wiki/Dead_Sea"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "The Dead Sea is one of the most famous hypersaline natural waters.",
+      "value": 0.34,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Lake Assal is one of the saltiest bodies of water on Earth. Source-side figure: `0.34 fraction` for Representative salinity fraction for Lake Assal.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Lake Assal is one of the saltiest bodies of water on Earth. Source-side figure: `0.34 fraction` for Representative salinity fraction for Lake Assal.",
+      "facts": {
+        "canonical_name": "Lake Assal",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.34",
+          "source_basis": "Representative salinity fraction for Lake Assal.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Assal",
+          "source_value_text": "0.34 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-lake-assal-salinity",
+      "name": "Lake Assal",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lake_Assal",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lake-assal",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lake Assal",
+          "url": "https://en.wikipedia.org/wiki/Lake_Assal"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Lake Assal is one of the saltiest bodies of water on Earth.",
+      "value": 0.34,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Brine pushed near saturation climbs above ordinary seawater by an order of magnitude. Source-side figure: `0.35 fraction` for Representative highly evaporated brine salinity fraction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Brine pushed near saturation climbs above ordinary seawater by an order of magnitude. Source-side figure: `0.35 fraction` for Representative highly evaporated brine salinity fraction.",
+      "facts": {
+        "canonical_name": "Highly evaporated brine",
+        "ingest_source": "dataset/raw/curated/salinity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.35",
+          "source_basis": "Representative highly evaporated brine salinity fraction.",
+          "source_unit": "fraction",
+          "source_url": "https://en.wikipedia.org/wiki/Brine",
+          "source_value_text": "0.35 fraction"
+        }
+      },
+      "hook": null,
+      "id": "obs:salinity:entity-evaporated-brine-salinity",
+      "name": "Highly evaporated brine",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brine",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brine",
+          "url": "https://en.wikipedia.org/wiki/Brine"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-salinity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/salinity.json",
+          "url": "repo://dataset/raw/curated/salinity.json"
+        }
+      ],
+      "summary_short": "Brine pushed near saturation climbs above ordinary seawater by an order of magnitude.",
+      "value": 0.35,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Salinity",
+      "url": "https://en.wikipedia.org/wiki/Salinity"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Mass fraction of dissolved salts.",
+      "name": "mass fraction",
+      "symbol": "fraction"
+    },
+    {
+      "conversion_factor": 100.0,
+      "description": "Familiar percent salinity.",
+      "name": "percent salt by mass",
+      "symbol": "%"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Oceanography-style salinity unit.",
+      "name": "parts per thousand",
+      "symbol": "ppt"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Useful for freshwater trace salinity.",
+      "name": "parts per million",
+      "symbol": "ppm"
+    }
+  ]
+}

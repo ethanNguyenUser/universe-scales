@@ -1,0 +1,1442 @@
+dimension: probability
+base_unit: probability
+dimension_description: Probability measures how likely a specifically defined event is, from certainty down to essentially impossible random guesses. This is a natural logarithmic scale for rare events like jackpot wins, perfect brackets, and cryptographic hits. The event definition matters more here than almost anywhere else, so the labels are intentionally explicit.
+related_resources:
+- name: Probability
+  url: https://en.wikipedia.org/wiki/Probability
+show_limitations: true
+units:
+- name: probability
+  symbol: p
+  conversion_factor: 1.0
+  description: Probability as a fraction from 0 to 1.
+- name: percent
+  symbol: '%'
+  conversion_factor: 100.0
+  description: Percent is the most familiar display form for probability.
+- name: parts per million
+  symbol: ppm
+  conversion_factor: 1000000.0
+  description: PPM is useful for low-probability risks.
+- name: parts per billion
+  symbol: ppb
+  conversion_factor: 1000000000.0
+  description: PPB is useful for extremely small probabilities.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: society
+frontend_group_label: Society, Economy & Abstract Quantities
+frontend_order: 400
+items:
+- id: obs:probability:scenario-probability-winning-the-powerball-jackpot
+  name: Winning the Powerball jackpot
+  value: 3.4222978130237033e-09
+  description: 'US jackpot odds are deep into the one-in-hundreds-of-millions range. Source-side figure: `1 in 292,201,338` for All five white balls and the Powerball must match.'
+  description_format: markdown
+  summary_short: US jackpot odds are deep into the one-in-hundreds-of-millions range.
+  description_medium: 'US jackpot odds are deep into the one-in-hundreds-of-millions range. Source-side figure: `1 in 292,201,338` for All five white balls and the Powerball must match.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Winning the Powerball jackpot
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '3.4222978130237033e-09'
+      source_basis: All five white balls and the Powerball must match.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Powerball
+      source_value_text: 1 in 292,201,338
+  source: https://en.wikipedia.org/wiki/Powerball
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-powerball
+    url: https://en.wikipedia.org/wiki/Powerball
+    title: Powerball
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-a-random-mutation-hitting-one-specific-dna-base-in-one-generation
+  name: A random mutation hitting one specific DNA base in one generation
+  value: 1.0e-08
+  description: 'Mutation rates provide a biologically grounded tiny probability. Source-side figure: `1e-8 probability` for Per-base mutation probabilities are often on the order of 10^-8.'
+  description_format: markdown
+  summary_short: Mutation rates provide a biologically grounded tiny probability.
+  description_medium: 'Mutation rates provide a biologically grounded tiny probability. Source-side figure: `1e-8 probability` for Per-base mutation probabilities are often on the order of 10^-8.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A random mutation hitting one specific DNA base in one generation
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-08
+      source_basis: Per-base mutation probabilities are often on the order of 10^-8.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Mutation_rate
+      source_value_text: 1e-8
+  source: https://en.wikipedia.org/wiki/Mutation_rate
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mutation-rate
+    url: https://en.wikipedia.org/wiki/Mutation_rate
+    title: Mutation rate
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    context: per base per generation
+- id: obs:probability:scenario-probability-fatal-shark-attack-in-one-year
+  name: Fatal shark attack in one year
+  value: 5.0e-08
+  description: 'Shark attacks are vivid but statistically tiny risks. Source-side figure: `5e-8 probability` for Worldwide fatal shark attacks are extremely rare relative to population.'
+  description_format: markdown
+  summary_short: Shark attacks are vivid but statistically tiny risks.
+  description_medium: 'Shark attacks are vivid but statistically tiny risks. Source-side figure: `5e-8 probability` for Worldwide fatal shark attacks are extremely rare relative to population.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fatal shark attack in one year
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-08
+      source_basis: Worldwide fatal shark attacks are extremely rare relative to population.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Shark_attack
+      source_value_text: 5e-8
+  source: https://en.wikipedia.org/wiki/Shark_attack
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-shark-attack
+    url: https://en.wikipedia.org/wiki/Shark_attack
+    title: Shark attack
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-winning-a-6-49-lottery-jackpot
+  name: Winning a 6/49 lottery jackpot
+  value: 7.151123842018516e-08
+  description: 'National-lottery odds are a useful one-in-tens-of-millions anchor. Source-side figure: `1 in 13,983,816` for Choose 6 numbers correctly from 49 without order.'
+  description_format: markdown
+  summary_short: National-lottery odds are a useful one-in-tens-of-millions anchor.
+  description_medium: 'National-lottery odds are a useful one-in-tens-of-millions anchor. Source-side figure: `1 in 13,983,816` for Choose 6 numbers correctly from 49 without order.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Winning a 6/49 lottery jackpot
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = 1 / C(49,6)
+      method: derived
+      original_value_text: '7.151123842018516e-08'
+      source_basis: Choose 6 numbers correctly from 49 without order.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Lottery_mathematics
+      source_value_text: 1 in 13,983,816
+  source: https://en.wikipedia.org/wiki/Lottery_mathematics
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lottery-mathematics
+    url: https://en.wikipedia.org/wiki/Lottery_mathematics
+    title: Lottery mathematics
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-dying-in-a-commercial-airline-crash-on-one-flight
+  name: Dying in a commercial airline crash on one flight
+  value: 1.0e-07
+  description: 'Modern commercial aviation lives deep in the low-probability tail. Source-side figure: `1e-7 probability` for Commercial air travel fatality risk per flight is extremely low.'
+  description_format: markdown
+  summary_short: Modern commercial aviation lives deep in the low-probability tail.
+  description_medium: 'Modern commercial aviation lives deep in the low-probability tail. Source-side figure: `1e-7 probability` for Commercial air travel fatality risk per flight is extremely low.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dying in a commercial airline crash on one flight
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-07
+      source_basis: Commercial air travel fatality risk per flight is extremely low.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Aviation_safety
+      source_value_text: 1e-7
+  source: https://en.wikipedia.org/wiki/Aviation_safety
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aviation-safety
+    url: https://en.wikipedia.org/wiki/Aviation_safety
+    title: Aviation safety
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    context: single commercial flight
+- id: obs:probability:scenario-probability-being-struck-by-lightning-in-one-year-in-the-us
+  name: Being struck by lightning in one year in the US
+  value: 1.2e-06
+  description: 'Lightning is the canonical natural-hazard long-tail event. Source-side figure: `1.2e-6 probability` for US annual strike odds are on the order of one in a million.'
+  description_format: markdown
+  summary_short: Lightning is the canonical natural-hazard long-tail event.
+  description_medium: 'Lightning is the canonical natural-hazard long-tail event. Source-side figure: `1.2e-6 probability` for US annual strike odds are on the order of one in a million.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Being struck by lightning in one year in the US
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '1.2e-06'
+      source_basis: US annual strike odds are on the order of one in a million.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Lightning_strike
+      source_value_text: '1.2e-6'
+  source: https://en.wikipedia.org/wiki/Lightning_strike
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lightning-strike
+    url: https://en.wikipedia.org/wiki/Lightning_strike
+    title: Lightning strike
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-royal-flush-in-five-card-poker
+  name: Royal flush in five-card poker
+  value: 1.53908e-06
+  description: 'A royal flush is the classic ultra-rare card event. Source-side figure: `1.54e-6 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: A royal flush is the classic ultra-rare card event.
+  description_medium: 'A royal flush is the classic ultra-rare card event. Source-side figure: `1.54e-6 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Royal flush in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '1.53908e-06'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '1.54e-6'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-four-of-a-kind-in-five-card-poker
+  name: Four of a kind in five-card poker
+  value: 0.000240096
+  description: 'Four of a kind already lives deep in the long tail. Source-side figure: `0.000240 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: Four of a kind already lives deep in the long tail.
+  description_medium: 'Four of a kind already lives deep in the long tail. Source-side figure: `0.000240 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Four of a kind in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.000240096'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '0.000240'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-leap-day-birthday
+  name: Leap-day birthday
+  value: 0.0006844626967830253
+  description: 'Being born on February 29 is a convenient real-world rare probability. Source-side figure: `1/1461` for One leap day occurs in a 1461-day Gregorian cycle.'
+  description_format: markdown
+  summary_short: Being born on February 29 is a convenient real-world rare probability.
+  description_medium: 'Being born on February 29 is a convenient real-world rare probability. Source-side figure: `1/1461` for One leap day occurs in a 1461-day Gregorian cycle.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Leap-day birthday
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = 1/1461 for a uniform day-of-cycle toy model
+      method: derived
+      original_value_text: '0.0006844626967830253'
+      source_basis: One leap day occurs in a 1461-day Gregorian cycle.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Leap_year
+      source_value_text: 1/1461
+  source: https://en.wikipedia.org/wiki/Leap_year
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-leap-year
+    url: https://en.wikipedia.org/wiki/Leap_year
+    title: Leap year
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-full-house-in-five-card-poker
+  name: Full house in five-card poker
+  value: 0.00144058
+  description: 'A full house is rarer than a flush in five-card poker. Source-side figure: `0.00144 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: A full house is rarer than a flush in five-card poker.
+  description_medium: 'A full house is rarer than a flush in five-card poker. Source-side figure: `0.00144 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Full house in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.00144058'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '0.00144'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-flush-in-five-card-poker
+  name: Flush in five-card poker
+  value: 0.0019654
+  description: 'A flush is rare enough to feel special in normal play. Source-side figure: `0.00197 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: A flush is rare enough to feel special in normal play.
+  description_medium: 'A flush is rare enough to feel special in normal play. Source-side figure: `0.00197 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Flush in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.0019654'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '0.00197'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-straight-in-five-card-poker
+  name: Straight in five-card poker
+  value: 0.00392465
+  description: 'A straight sits in the sub-percent part of the poker scale. Source-side figure: `0.00392 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: A straight sits in the sub-percent part of the poker scale.
+  description_medium: 'A straight sits in the sub-percent part of the poker scale. Source-side figure: `0.00392 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Straight in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.00392465'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '0.00392'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-specific-card-from-a-shuffled-deck
+  name: Specific card from a shuffled deck
+  value: 0.019230769230769232
+  description: 'The chance of drawing one particular card from a standard deck. Source-side figure: `1/52` for One chosen card among 52 equally likely draws.'
+  description_format: markdown
+  summary_short: The chance of drawing one particular card from a standard deck.
+  description_medium: 'The chance of drawing one particular card from a standard deck. Source-side figure: `1/52` for One chosen card among 52 equally likely draws.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Specific card from a shuffled deck
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.019230769230769232'
+      source_basis: One chosen card among 52 equally likely draws.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Playing_card
+      source_value_text: 1/52
+  source: https://en.wikipedia.org/wiki/Playing_card
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-playing-card
+    url: https://en.wikipedia.org/wiki/Playing_card
+    title: Playing card
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-snake-eyes-with-two-dice
+  name: Snake eyes with two dice
+  value: 0.027777777777777776
+  description: 'Two fair dice both landing on one is already fairly rare. Source-side figure: `1/36` for Both dice must independently show one.'
+  description_format: markdown
+  summary_short: Two fair dice both landing on one is already fairly rare.
+  description_medium: 'Two fair dice both landing on one is already fairly rare. Source-side figure: `1/36` for Both dice must independently show one.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Snake eyes with two dice
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = (1/6)^2
+      method: derived
+      original_value_text: '0.027777777777777776'
+      source_basis: Both dice must independently show one.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Dice
+      source_value_text: 1/36
+  source: https://en.wikipedia.org/wiki/Dice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dice
+    url: https://en.wikipedia.org/wiki/Dice
+    title: Dice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-two-pair-in-five-card-poker
+  name: Two pair in five-card poker
+  value: 0.047539
+  description: 'Two pair is much rarer than a single pair. Source-side figure: `0.047539 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: Two pair is much rarer than a single pair.
+  description_medium: 'Two pair is much rarer than a single pair. Source-side figure: `0.047539 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Two pair in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.047539'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '0.047539'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-blackjack-natural
+  name: Blackjack natural
+  value: 0.0482655
+  description: 'A natural blackjack is a familiar few-percent event. Source-side figure: `0.0483 probability` for A natural is an ace plus a ten-value card in the first two cards.'
+  description_format: markdown
+  summary_short: A natural blackjack is a familiar few-percent event.
+  description_medium: 'A natural blackjack is a familiar few-percent event. Source-side figure: `0.0483 probability` for A natural is an ace plus a ten-value card in the first two cards.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blackjack natural
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: Exact two-card blackjack probability
+      method: derived
+      original_value_text: '0.0482655'
+      source_basis: A natural is an ace plus a ten-value card in the first two cards.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Blackjack
+      source_value_text: '0.0483'
+  source: https://en.wikipedia.org/wiki/Blackjack
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blackjack
+    url: https://en.wikipedia.org/wiki/Blackjack
+    title: Blackjack
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-any-ace-from-a-deck
+  name: Any ace from a deck
+  value: 0.07692307692307693
+  description: 'Aces are uncommon but not especially rare in a single draw. Source-side figure: `4/52` for A standard deck contains four aces.'
+  description_format: markdown
+  summary_short: Aces are uncommon but not especially rare in a single draw.
+  description_medium: 'Aces are uncommon but not especially rare in a single draw. Source-side figure: `4/52` for A standard deck contains four aces.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Any ace from a deck
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = 4/52
+      method: derived
+      original_value_text: '0.07692307692307693'
+      source_basis: A standard deck contains four aces.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Playing_card
+      source_value_text: 4/52
+  source: https://en.wikipedia.org/wiki/Playing_card
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-playing-card
+    url: https://en.wikipedia.org/wiki/Playing_card
+    title: Playing card
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-blue-eyes-worldwide
+  name: Blue eyes worldwide
+  value: 0.08
+  description: 'A globally uncommon but everyday trait. Source-side figure: `0.08 probability` for Blue eyes are a minority eye-color phenotype globally.'
+  description_format: markdown
+  summary_short: A globally uncommon but everyday trait.
+  description_medium: 'A globally uncommon but everyday trait. Source-side figure: `0.08 probability` for Blue eyes are a minority eye-color phenotype globally.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blue eyes worldwide
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.08'
+      source_basis: Blue eyes are a minority eye-color phenotype globally.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Eye_color
+      source_value_text: '0.08'
+  source: https://en.wikipedia.org/wiki/Eye_color
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-eye-color
+    url: https://en.wikipedia.org/wiki/Eye_color
+    title: Eye color
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-left-handedness
+  name: Left-handedness
+  value: 0.1
+  description: 'Left-handedness is common enough to notice but uncommon enough to be distinctive. Source-side figure: `0.10 probability` for About one in ten people is left-handed.'
+  description_format: markdown
+  summary_short: Left-handedness is common enough to notice but uncommon enough to be distinctive.
+  description_medium: 'Left-handedness is common enough to notice but uncommon enough to be distinctive. Source-side figure: `0.10 probability` for About one in ten people is left-handed.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Left-handedness
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: About one in ten people is left-handed.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Handedness
+      source_value_text: '0.10'
+  source: https://en.wikipedia.org/wiki/Handedness
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-handedness
+    url: https://en.wikipedia.org/wiki/Handedness
+    title: Handedness
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-passing-a-weakly-selective-interview-loop
+  name: Passing a weakly selective interview loop
+  value: 0.1
+  description: 'Interview odds are an intuitive everyday low-probability event. Source-side figure: `10%` for Hiring pipelines often eliminate most applicants before the final offer.'
+  description_format: markdown
+  summary_short: Interview odds are an intuitive everyday low-probability event.
+  description_medium: 'Interview odds are an intuitive everyday low-probability event. Source-side figure: `10%` for Hiring pipelines often eliminate most applicants before the final offer.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Passing a weakly selective interview loop
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: Hiring pipelines often eliminate most applicants before the final offer.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Job_interview
+      source_value_text: 10%
+  source: https://en.wikipedia.org/wiki/Job_interview
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-job-interview
+    url: https://en.wikipedia.org/wiki/Job_interview
+    title: Job interview
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    context: representative selective employer
+- id: obs:probability:scenario-probability-rolling-a-six-on-a-fair-die
+  name: Rolling a six on a fair die
+  value: 0.16666666666666666
+  description: 'The classic single-die one-in-six event. Source-side figure: `1/6` for One chosen face on a fair six-sided die.'
+  description_format: markdown
+  summary_short: The classic single-die one-in-six event.
+  description_medium: 'The classic single-die one-in-six event. Source-side figure: `1/6` for One chosen face on a fair six-sided die.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rolling a six on a fair die
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.16666666666666666'
+      source_basis: One chosen face on a fair six-sided die.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Dice
+      source_value_text: 1/6
+  source: https://en.wikipedia.org/wiki/Dice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dice
+    url: https://en.wikipedia.org/wiki/Dice
+    title: Dice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-exactly-five-heads-in-ten-flips
+  name: Exactly five heads in ten flips
+  value: 0.24609375
+  description: 'Ten flips peak around the balanced five-head case. Source-side figure: `252/1024` for Binomial probability for n=10 and k=5.'
+  description_format: markdown
+  summary_short: Ten flips peak around the balanced five-head case.
+  description_medium: 'Ten flips peak around the balanced five-head case. Source-side figure: `252/1024` for Binomial probability for n=10 and k=5.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Exactly five heads in ten flips
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = C(10,5)/2^10
+      method: derived
+      original_value_text: '0.24609375'
+      source_basis: Binomial probability for n=10 and k=5.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Binomial_distribution
+      source_value_text: 252/1024
+  source: https://en.wikipedia.org/wiki/Binomial_distribution
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-binomial-distribution
+    url: https://en.wikipedia.org/wiki/Binomial_distribution
+    title: Binomial distribution
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-two-heads-in-two-fair-flips
+  name: Two heads in two fair flips
+  value: 0.25
+  description: 'The chance of two heads in a row. Source-side figure: `1/4` for Both independent flips must be heads.'
+  description_format: markdown
+  summary_short: The chance of two heads in a row.
+  description_medium: 'The chance of two heads in a row. Source-side figure: `1/4` for Both independent flips must be heads.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Two heads in two fair flips
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = (1/2)^2
+      method: derived
+      original_value_text: '0.25'
+      source_basis: Both independent flips must be heads.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Coin_flipping
+      source_value_text: 1/4
+  source: https://en.wikipedia.org/wiki/Coin_flipping
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-coin-flipping
+    url: https://en.wikipedia.org/wiki/Coin_flipping
+    title: Coin flipping
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-rain-tomorrow-in-a-typical-moderate-forecast
+  name: Rain tomorrow in a typical moderate forecast
+  value: 0.3
+  description: 'A familiar real-world forecast probability. Source-side figure: `30%` for Weather forecasts often quote rain probabilities around this range.'
+  description_format: markdown
+  summary_short: A familiar real-world forecast probability.
+  description_medium: 'A familiar real-world forecast probability. Source-side figure: `30%` for Weather forecasts often quote rain probabilities around this range.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rain tomorrow in a typical moderate forecast
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.3'
+      source_basis: Weather forecasts often quote rain probabilities around this range.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Probability_of_precipitation
+      source_value_text: 30%
+  source: https://en.wikipedia.org/wiki/Probability_of_precipitation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-probability-of-precipitation
+    url: https://en.wikipedia.org/wiki/Probability_of_precipitation
+    title: Probability of precipitation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    context: representative forecast
+- id: obs:probability:scenario-probability-type-o-positive-blood-worldwide
+  name: Type O-positive blood worldwide
+  value: 0.38
+  description: 'Blood types give a nice everyday distributional probability example. Source-side figure: `0.38 probability` for O-positive is the most common human blood type in many datasets.'
+  description_format: markdown
+  summary_short: Blood types give a nice everyday distributional probability example.
+  description_medium: 'Blood types give a nice everyday distributional probability example. Source-side figure: `0.38 probability` for O-positive is the most common human blood type in many datasets.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Type O-positive blood worldwide
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.38'
+      source_basis: O-positive is the most common human blood type in many datasets.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Blood_type_distribution_by_country
+      source_value_text: '0.38'
+  source: https://en.wikipedia.org/wiki/Blood_type_distribution_by_country
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-type-distribution-by-country
+    url: https://en.wikipedia.org/wiki/Blood_type_distribution_by_country
+    title: Blood type distribution by country
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-one-pair-in-five-card-poker
+  name: One pair in five-card poker
+  value: 0.422569
+  description: 'One pair is the most common named poker hand class. Source-side figure: `0.422569 probability` for Exact five-card hand enumeration.'
+  description_format: markdown
+  summary_short: One pair is the most common named poker hand class.
+  description_medium: 'One pair is the most common named poker hand class. Source-side figure: `0.422569 probability` for Exact five-card hand enumeration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One pair in five-card poker
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.422569'
+      source_basis: Exact five-card hand enumeration.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Poker_probability
+      source_value_text: '0.422569'
+  source: https://en.wikipedia.org/wiki/Poker_probability
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poker-probability
+    url: https://en.wikipedia.org/wiki/Poker_probability
+    title: Poker probability
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-fair-coin-heads
+  name: Fair coin heads
+  value: 0.5
+  description: 'The chance a fair coin lands heads. Source-side figure: `1/2` for A fair coin has two equally likely faces.'
+  description_format: markdown
+  summary_short: The chance a fair coin lands heads.
+  description_medium: 'The chance a fair coin lands heads. Source-side figure: `1/2` for A fair coin has two equally likely faces.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fair coin heads
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: A fair coin has two equally likely faces.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Coin_flipping
+      source_value_text: 1/2
+  source: https://en.wikipedia.org/wiki/Coin_flipping
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-coin-flipping
+    url: https://en.wikipedia.org/wiki/Coin_flipping
+    title: Coin flipping
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-rolling-an-even-number-on-a-die
+  name: Rolling an even number on a die
+  value: 0.5
+  description: 'A fair die gives even and odd with equal probability. Source-side figure: `3/6` for Three of the six faces are even.'
+  description_format: markdown
+  summary_short: A fair die gives even and odd with equal probability.
+  description_medium: 'A fair die gives even and odd with equal probability. Source-side figure: `3/6` for Three of the six faces are even.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rolling an even number on a die
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = 3/6
+      method: derived
+      original_value_text: '0.5'
+      source_basis: Three of the six faces are even.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Dice
+      source_value_text: 3/6
+  source: https://en.wikipedia.org/wiki/Dice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dice
+    url: https://en.wikipedia.org/wiki/Dice
+    title: Dice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-birthday-match-in-a-room-of-23-people
+  name: Birthday match in a room of 23 people
+  value: 0.507297
+  description: 'The birthday paradox crosses the 50 percent line at only 23 people. Source-side figure: `0.507 probability` for The complement of all birthdays being distinct among 23 people.'
+  description_format: markdown
+  summary_short: The birthday paradox crosses the 50 percent line at only 23 people.
+  description_medium: 'The birthday paradox crosses the 50 percent line at only 23 people. Source-side figure: `0.507 probability` for The complement of all birthdays being distinct among 23 people.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Birthday match in a room of 23 people
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: derived
+      original_value_text: '0.507297'
+      source_basis: The complement of all birthdays being distinct among 23 people.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Birthday_problem
+      source_value_text: '0.507'
+  source: https://en.wikipedia.org/wiki/Birthday_problem
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-birthday-problem
+    url: https://en.wikipedia.org/wiki/Birthday_problem
+    title: Birthday problem
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:probability:scenario-probability-male-birth
+  name: Male birth
+  value: 0.512
+  description: 'The human birth sex ratio is close to but not exactly one half. Source-side figure: `0.512 probability` for Human sex ratio at birth is slightly male-biased.'
+  description_format: markdown
+  summary_short: The human birth sex ratio is close to but not exactly one half.
+  description_medium: 'The human birth sex ratio is close to but not exactly one half. Source-side figure: `0.512 probability` for Human sex ratio at birth is slightly male-biased.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Male birth
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      method: direct
+      original_value_text: '0.512'
+      source_basis: Human sex ratio at birth is slightly male-biased.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Human_sex_ratio
+      source_value_text: '0.512'
+  source: https://en.wikipedia.org/wiki/Human_sex_ratio
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-sex-ratio
+    url: https://en.wikipedia.org/wiki/Human_sex_ratio
+    title: Human sex ratio
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:probability:scenario-probability-at-least-one-head-in-two-fair-flips
+  name: At least one head in two fair flips
+  value: 0.75
+  description: 'Two fair flips already make heads more likely than not. Source-side figure: `3/4` for Only the double-tail outcome fails.'
+  description_format: markdown
+  summary_short: Two fair flips already make heads more likely than not.
+  description_medium: 'Two fair flips already make heads more likely than not. Source-side figure: `3/4` for Only the double-tail outcome fails.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: At least one head in two fair flips
+    ingest_source: dataset/raw/curated/probability.json
+    source_trace:
+      derivation_note: p = 1 - (1/2)^2
+      method: derived
+      original_value_text: '0.75'
+      source_basis: Only the double-tail outcome fails.
+      source_unit: probability
+      source_url: https://en.wikipedia.org/wiki/Coin_flipping
+      source_value_text: 3/4
+  source: https://en.wikipedia.org/wiki/Coin_flipping
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-coin-flipping
+    url: https://en.wikipedia.org/wiki/Coin_flipping
+    title: Coin flipping
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-probability-json
+    url: repo://dataset/raw/curated/probability.json
+    title: dataset/raw/curated/probability.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

@@ -346,6 +346,29 @@ class UniversalScales {
         this.formatter.processMathematicalLabels(axis);
     }
 
+    getScaleMode() {
+        return this.dimensionData?.scale_mode === 'linear' ? 'linear' : 'log';
+    }
+
+    isLinearScale() {
+        return this.getScaleMode() === 'linear';
+    }
+
+    isDomainZoomed(currentDomain, originalDomain) {
+        if (!currentDomain || !originalDomain) return false;
+        const delta = Math.max(
+            Math.abs(currentDomain[0] - originalDomain[0]),
+            Math.abs(currentDomain[1] - originalDomain[1])
+        );
+        const scale = Math.max(
+            Math.abs(originalDomain[0]),
+            Math.abs(originalDomain[1]),
+            Math.abs(originalDomain[1] - originalDomain[0]),
+            1
+        );
+        return (delta / scale) > CONFIG.ZOOM_DETECTION_THRESHOLD;
+    }
+
     initMusic() {
         // Load saved music state from localStorage
         // Default to true (music on) if no saved state exists
@@ -1075,10 +1098,7 @@ class UniversalScales {
     resizePlot() {
         // Preserve current zoom state before resizing
         const currentDomain = this.xScale.domain();
-        const wasZoomed = this.originalXDomain && (
-            Math.abs(currentDomain[0] - this.originalXDomain[0]) / this.originalXDomain[0] > CONFIG.ZOOM_DETECTION_THRESHOLD ||
-            Math.abs(currentDomain[1] - this.originalXDomain[1]) / this.originalXDomain[1] > CONFIG.ZOOM_DETECTION_THRESHOLD
-        );
+        const wasZoomed = this.originalXDomain && this.isDomainZoomed(currentDomain, this.originalXDomain);
 
         this.plot.updateDimensions();
 
@@ -1713,77 +1733,92 @@ class UniversalScales {
         const transform = event.transform;
 
         // Apply transform to xScale domain only (horizontal zoom/pan)
-        // For log scales, we need to work in log space
         if (this.originalXDomain && this.actualItemExtent) {
             const [originalMin, originalMax] = this.originalXDomain;
             const [actualMin, actualMax] = this.actualItemExtent;
+            const isLinear = this.isLinearScale();
 
-            // Convert to log space for calculations
-            const logOriginalMin = Math.log10(originalMin);
-            const logOriginalMax = Math.log10(originalMax);
-            const logOriginalRange = logOriginalMax - logOriginalMin;
-
-            const logActualMin = Math.log10(actualMin);
-            const logActualMax = Math.log10(actualMax);
-
-            // For log scales: transform.x represents pixel translation
-            // We need to convert this to a log-space translation
-            // The current visible range in log space determines the translation
-            const currentVisibleLogRange = logOriginalRange / transform.k;
-
-            // Calculate pan offset: transform.x is pixels, convert to log units
-            // Negative because dragging right should move the view left (show higher values)
-            const logPan = -(transform.x / this.width) * currentVisibleLogRange;
-
-            // Calculate new log domain based on original domain
-            let newLogMin = logOriginalMin + logPan;
-            let newLogMax = newLogMin + currentVisibleLogRange;
+            let domainMin;
+            let domainMax;
             let constrained = false;
-
             const shouldConstrain = !this.isResettingView;
+            let originalRange;
+            let visibleRange;
+            let panOffset;
 
-            // Constrain to actual item extent (can't zoom out beyond items) unless we're resetting
-            if (shouldConstrain) {
-                const logItemRange = logActualMax - logActualMin;
+            if (isLinear) {
+                originalRange = originalMax - originalMin;
+                visibleRange = originalRange / transform.k;
+                panOffset = -(transform.x / this.width) * visibleRange;
 
-                if (currentVisibleLogRange > logItemRange) {
-                    // Zoomed out to max - show full item range
-                    newLogMin = logActualMin;
-                    newLogMax = logActualMax;
-                    constrained = true;
-                } else if (newLogMin < logActualMin) {
-                    // Clamp left side: keep window width, align to min
-                    newLogMin = logActualMin;
-                    newLogMax = newLogMin + currentVisibleLogRange;
-                    constrained = true;
-                } else if (newLogMax > logActualMax) {
-                    // Clamp right side: keep window width, align to max
-                    newLogMax = logActualMax;
-                    newLogMin = newLogMax - currentVisibleLogRange;
-                    constrained = true;
+                domainMin = originalMin + panOffset;
+                domainMax = domainMin + visibleRange;
+
+                if (shouldConstrain) {
+                    const actualRange = actualMax - actualMin;
+                    if (visibleRange > actualRange) {
+                        domainMin = actualMin;
+                        domainMax = actualMax;
+                        constrained = true;
+                    } else if (domainMin < actualMin) {
+                        domainMin = actualMin;
+                        domainMax = domainMin + visibleRange;
+                        constrained = true;
+                    } else if (domainMax > actualMax) {
+                        domainMax = actualMax;
+                        domainMin = domainMax - visibleRange;
+                        constrained = true;
+                    }
                 }
+            } else {
+                const logOriginalMin = Math.log10(originalMin);
+                const logOriginalMax = Math.log10(originalMax);
+                originalRange = logOriginalMax - logOriginalMin;
+
+                const logActualMin = Math.log10(actualMin);
+                const logActualMax = Math.log10(actualMax);
+
+                visibleRange = originalRange / transform.k;
+                panOffset = -(transform.x / this.width) * visibleRange;
+
+                let newLogMin = logOriginalMin + panOffset;
+                let newLogMax = newLogMin + visibleRange;
+
+                if (shouldConstrain) {
+                    const logItemRange = logActualMax - logActualMin;
+
+                    if (visibleRange > logItemRange) {
+                        newLogMin = logActualMin;
+                        newLogMax = logActualMax;
+                        constrained = true;
+                    } else if (newLogMin < logActualMin) {
+                        newLogMin = logActualMin;
+                        newLogMax = newLogMin + visibleRange;
+                        constrained = true;
+                    } else if (newLogMax > logActualMax) {
+                        newLogMax = logActualMax;
+                        newLogMin = newLogMax - visibleRange;
+                        constrained = true;
+                    }
+                }
+
+                domainMin = Math.pow(10, newLogMin);
+                domainMax = Math.pow(10, newLogMax);
             }
 
-            // Convert back to linear space
-            const newMin = Math.pow(10, newLogMin);
-            const newMax = Math.pow(10, newLogMax);
-
             // Update xScale domain
-            this.xScale.domain([newMin, newMax]);
+            this.xScale.domain([domainMin, domainMax]);
 
             // If we constrained the domain, we need to decide whether to update the transform
             // Only update the transform when zoomed out (to prevent "stored" zoom)
             // When zoomed in at boundaries, don't update transform to allow further panning
             if (constrained) {
-                const constrainedLogRange = newLogMax - newLogMin;
-                const isZoomedOut = currentVisibleLogRange >= (logActualMax - logActualMin);
-
-                // Always update transform to match constrained domain
-                // This ensures the transform and domain stay in sync
-                const constrainedK = logOriginalRange / constrainedLogRange;
-                const constrainedLogPan = newLogMin - logOriginalMin;
-                // Use constrainedLogRange to match the constrained domain
-                const constrainedX = -(constrainedLogPan / constrainedLogRange) * this.width;
+                const constrainedRange = isLinear ? (domainMax - domainMin) : (Math.log10(domainMax) - Math.log10(domainMin));
+                const constrainedDomainMin = isLinear ? domainMin : Math.log10(domainMin);
+                const originalDomainMin = isLinear ? originalMin : Math.log10(originalMin);
+                const constrainedK = originalRange / constrainedRange;
+                const constrainedPan = constrainedDomainMin - originalDomainMin;
+                const constrainedX = -(constrainedPan / constrainedRange) * this.width;
 
                 const constrainedTransform = d3.zoomIdentity
                     .translate(constrainedX, 0)
@@ -1817,22 +1852,27 @@ class UniversalScales {
         const [originalMin, originalMax] = this.originalXDomain;
         const [currentMin, currentMax] = domain;
 
-        // Convert to log space
-        const logOriginalMin = Math.log10(originalMin);
-        const logOriginalMax = Math.log10(originalMax);
-        const logOriginalRange = logOriginalMax - logOriginalMin;
+        let originalRange;
+        let currentRange;
+        let pan;
 
-        const logCurrentMin = Math.log10(currentMin);
-        const logCurrentMax = Math.log10(currentMax);
-        const logCurrentRange = logCurrentMax - logCurrentMin;
+        if (this.isLinearScale()) {
+            originalRange = originalMax - originalMin;
+            currentRange = currentMax - currentMin;
+            pan = currentMin - originalMin;
+        } else {
+            const logOriginalMin = Math.log10(originalMin);
+            const logOriginalMax = Math.log10(originalMax);
+            originalRange = logOriginalMax - logOriginalMin;
 
-        // Calculate scale: how much we've zoomed
-        const k = logOriginalRange / logCurrentRange;
+            const logCurrentMin = Math.log10(currentMin);
+            const logCurrentMax = Math.log10(currentMax);
+            currentRange = logCurrentMax - logCurrentMin;
+            pan = logCurrentMin - logOriginalMin;
+        }
 
-        // Calculate translation: how much we've panned
-        // transform.x represents pixel offset, convert from log space
-        const logPan = logCurrentMin - logOriginalMin;
-        const x = -(logPan / logCurrentRange) * this.width;
+        const k = originalRange / currentRange;
+        const x = -(pan / currentRange) * this.width;
 
         return d3.zoomIdentity.translate(x, 0).scale(k);
     }

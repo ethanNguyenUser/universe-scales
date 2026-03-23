@@ -2,20 +2,20 @@
   "base_unit": "joules",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 36,
-    "candidate_shortfall_to_preferred_target": 14,
-    "empty_bin_count": 11,
+    "candidate_count": 44,
+    "candidate_shortfall_to_preferred_target": 6,
+    "empty_bin_count": 10,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 36,
-    "selected_primary_count": 13,
-    "selected_secondary_count": 23,
+    "selected_count": 44,
+    "selected_primary_count": 14,
+    "selected_secondary_count": 30,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 36
+      "secondary_reference": 44
     },
-    "target_selected_count": 36
+    "target_selected_count": 44
   },
   "description_format": "markdown",
   "dimension": "energy",
@@ -639,6 +639,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "A centerfire rifle cartridge delivers a few kilojoules of muzzle energy, packed into a tiny metal case and released in milliseconds. That is why the projectile\u2019s mass can stay small while the impact remains serious. Ballistics tables usually quote this number alongside muzzle velocity because the pair explains much of the projectile\u2019s behavior. The value is typical for a full-power rifle round.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A centerfire rifle cartridge delivers a few kilojoules of muzzle energy, packed into a tiny metal case and released in milliseconds. That is why the projectile\u2019s mass can stay small while the impact remains serious. Ballistics tables usually quote this number alongside muzzle velocity because the pair explains much of the projectile\u2019s behavior. The value is typical for a full-power rifle round.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Rifle Cartridge",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e3",
+          "source_url": "https://en.wikipedia.org/wiki/Muzzle_energy"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-rifle-cartridge",
+      "name": "Rifle Cartridge",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Muzzle_energy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-muzzle-energy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Muzzle energy",
+          "url": "https://en.wikipedia.org/wiki/Muzzle_energy"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "A centerfire rifle cartridge delivers a few kilojoules of muzzle energy, packed into a tiny metal case and released in milliseconds.",
+      "value": 3000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "A cubic meter of air heated by 10 degrees Celsius at constant pressure stores roughly this many joules more internal energy. Heating, ventilation, and air conditioning design lives on numbers like this. In winter it is what furnaces must deliver repeatedly as rooms exchange air. The figure ties thermodynamics to comfort in buildings.",
       "description_format": "markdown",
       "description_long": null,
@@ -684,6 +735,57 @@
       ],
       "summary_short": "A cubic meter of air heated by 10 degrees Celsius at constant pressure stores roughly this many joules more internal energy.",
       "value": 7000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A fresh AA alkaline battery stores only a few watt-hours, yet that is enough to run clocks and remote controls for months because the loads are tiny. Thinking in joules makes the scale less mysterious: it is closer to lifting luggage than to powering a car. Chemistry and cutoff voltage decide how much of it is really usable. The value here is a typical nominal capacity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A fresh AA alkaline battery stores only a few watt-hours, yet that is enough to run clocks and remote controls for months because the loads are tiny. Thinking in joules makes the scale less mysterious: it is closer to lifting luggage than to powering a car. Chemistry and cutoff voltage decide how much of it is really usable. The value here is a typical nominal capacity.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "AA Battery",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.5e4",
+          "source_url": "https://en.wikipedia.org/wiki/AA_battery"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-aa-battery",
+      "name": "AA Battery",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/AA_battery",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aa-battery",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "AA battery",
+          "url": "https://en.wikipedia.org/wiki/AA_battery"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "A fresh AA alkaline battery stores only a few watt-hours, yet that is enough to run clocks and remote controls for months because the loads are tiny.",
+      "value": 15000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -786,6 +888,57 @@
       ],
       "summary_short": "A smartphone battery around 12 watt hours stores this many joules when new.",
       "value": 43000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Heating a mug of water for tea takes tens of kilojoules, which is why kettles drawing a kilowatt or more can finish in a minute or two. Most of the energy budget goes directly into the water because the system is small and losses are limited. Kitchen routines are full of numbers like this even when nobody says them out loud. The value is for roughly 250 milliliters heated from room temperature to near boiling.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Heating a mug of water for tea takes tens of kilojoules, which is why kettles drawing a kilowatt or more can finish in a minute or two. Most of the energy budget goes directly into the water because the system is small and losses are limited. Kitchen routines are full of numbers like this even when nobody says them out loud. The value is for roughly 250 milliliters heated from room temperature to near boiling.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Boil a Mug of Water",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e4",
+          "source_url": "https://en.wikipedia.org/wiki/Heat_capacity"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-boil-a-mug-of-water",
+      "name": "Boil a Mug of Water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "Heating a mug of water for tea takes tens of kilojoules, which is why kettles drawing a kilowatt or more can finish in a minute or two.",
+      "value": 80000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1353,6 +1506,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "One liter of gasoline contains tens of megajoules of chemical energy, which is why liquid fuels remain attractive wherever range and refill speed matter. Internal combustion engines turn only part of that into motion, throwing much of the rest away as heat. The number helps compare a fuel tank with batteries or daily household electricity use. It is the lower-heating-value scale for ordinary pump gasoline.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One liter of gasoline contains tens of megajoules of chemical energy, which is why liquid fuels remain attractive wherever range and refill speed matter. Internal combustion engines turn only part of that into motion, throwing much of the rest away as heat. The number helps compare a fuel tank with batteries or daily household electricity use. It is the lower-heating-value scale for ordinary pump gasoline.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Gasoline (1 liter)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.4e7",
+          "source_url": "https://en.wikipedia.org/wiki/Gasoline"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-gasoline-1-liter",
+      "name": "Gasoline (1 liter)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Gasoline",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gasoline",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gasoline",
+          "url": "https://en.wikipedia.org/wiki/Gasoline"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "One liter of gasoline contains tens of megajoules of chemical energy, which is why liquid fuels remain attractive wherever range and refill speed matter.",
+      "value": 34000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "A household in an industrialized country may consume this energy per day in electricity and heating combined. The value swings with climate, insulation, and habits like laundry temperature. It translates to about a kilowatt average power per home, a community sized load in aggregate. Efficiency upgrades aim to shave this baseline without loss of comfort.",
       "description_format": "markdown",
       "description_long": null,
@@ -1608,6 +1812,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Over a full lifetime, a human body metabolizes on the order of tens of billions of joules from food. Spread over decades it does not feel extreme, but accumulated total energy is substantial enough to compare with industrial machines. Most of it leaves again as heat while a small fraction becomes external work. The value assumes a long life near two thousand dietary kilocalories per day.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Over a full lifetime, a human body metabolizes on the order of tens of billions of joules from food. Spread over decades it does not feel extreme, but accumulated total energy is substantial enough to compare with industrial machines. Most of it leaves again as heat while a small fraction becomes external work. The value assumes a long life near two thousand dietary kilocalories per day.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Human Lifetime Food",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5e10",
+          "source_url": "https://en.wikipedia.org/wiki/Food_energy"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-human-lifetime-food",
+      "name": "Human Lifetime Food",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Food_energy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-food-energy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Food energy",
+          "url": "https://en.wikipedia.org/wiki/Food_energy"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "Over a full lifetime, a human body metabolizes on the order of tens of billions of joules from food.",
+      "value": 25000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "One kiloton of TNT equivalent corresponds to this energy, a historical yardstick for nuclear test reporting. The conversion is linear from the 1 kilogram reference. Actual device yields can partition energy into blast, heat, and radiation differently. The number offers scale against civil engineering and seismic monitoring.",
       "description_format": "markdown",
       "description_long": null,
@@ -1653,6 +1908,159 @@
       ],
       "summary_short": "One kiloton of TNT equivalent corresponds to this energy, a historical yardstick for nuclear test reporting.",
       "value": 4200000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Hiroshima bomb released energy equivalent to only a few kilotons of TNT, yet concentrated in place and time it reshaped a city. Nuclear history is full of this contrast between moderate total energy and overwhelming destructive power density. The value is the conventional yield estimate for Little Boy. It sits cleanly between industrial blasts and the largest thermonuclear tests.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Hiroshima bomb released energy equivalent to only a few kilotons of TNT, yet concentrated in place and time it reshaped a city. Nuclear history is full of this contrast between moderate total energy and overwhelming destructive power density. The value is the conventional yield estimate for Little Boy. It sits cleanly between industrial blasts and the largest thermonuclear tests.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Hiroshima Bomb",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "6.3e13",
+          "source_url": "https://en.wikipedia.org/wiki/Little_Boy"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-hiroshima-bomb",
+      "name": "Hiroshima Bomb",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Little_Boy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-little-boy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Little Boy",
+          "url": "https://en.wikipedia.org/wiki/Little_Boy"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "The Hiroshima bomb released energy equivalent to only a few kilotons of TNT, yet concentrated in place and time it reshaped a city.",
+      "value": 63000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tsar Bomba remains the most energetic nuclear device ever detonated, with a yield tens of millions of tons of TNT equivalent. Fireball size, blast wave, and prompt radiation all flowed from that immense energy release. It is one of the clearest markers between human engineering and geophysical-scale events. The value is the widely cited test yield.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tsar Bomba remains the most energetic nuclear device ever detonated, with a yield tens of millions of tons of TNT equivalent. Fireball size, blast wave, and prompt radiation all flowed from that immense energy release. It is one of the clearest markers between human engineering and geophysical-scale events. The value is the widely cited test yield.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Tsar Bomba",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.1e17",
+          "source_url": "https://en.wikipedia.org/wiki/Tsar_Bomba"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-tsar-bomba",
+      "name": "Tsar Bomba",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tsar_Bomba",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tsar-bomba",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tsar Bomba",
+          "url": "https://en.wikipedia.org/wiki/Tsar_Bomba"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "Tsar Bomba remains the most energetic nuclear device ever detonated, with a yield tens of millions of tons of TNT equivalent.",
+      "value": 2.1e+17,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Chicxulub impact released energy on a scale that dwarfs all human explosives and altered Earth\u2019s biosphere. Much of the devastation came not from the asteroid\u2019s mass alone but from how rapidly its kinetic energy coupled into rock, air, and ocean. This is the sort of number that turns a geological event into a planetary one. The value is a representative estimate for the dinosaur-killing impact.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Chicxulub impact released energy on a scale that dwarfs all human explosives and altered Earth\u2019s biosphere. Much of the devastation came not from the asteroid\u2019s mass alone but from how rapidly its kinetic energy coupled into rock, air, and ocean. This is the sort of number that turns a geological event into a planetary one. The value is a representative estimate for the dinosaur-killing impact.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Chicxulub Impact",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4e23",
+          "source_url": "https://en.wikipedia.org/wiki/Chicxulub_crater"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-chicxulub-impact",
+      "name": "Chicxulub Impact",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Chicxulub_crater",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-chicxulub-crater",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Chicxulub crater",
+          "url": "https://en.wikipedia.org/wiki/Chicxulub_crater"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "The Chicxulub impact released energy on a scale that dwarfs all human explosives and altered Earth\u2019s biosphere.",
+      "value": 4e+23,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1865,6 +2273,7 @@
   "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
+  "scale_mode": "log",
   "selection_bin_count": 24,
   "show_limitations": true,
   "units": [

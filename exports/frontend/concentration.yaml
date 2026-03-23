@@ -1,0 +1,1982 @@
+dimension: concentration
+base_unit: moles_per_cubic_meter
+dimension_description: This phase-one concentration scale uses molar concentration, stored canonically in moles per cubic meter. It connects trace atmospheric or biochemical concentrations with laboratory solutions and nearly pure substances. Concentration is highly definition-sensitive, so each item states what is dissolved or counted.
+related_resources:
+- name: Amount concentration
+  url: https://en.wikipedia.org/wiki/Amount_concentration
+- name: Molar concentration
+  url: https://en.wikipedia.org/wiki/Molar_concentration
+show_limitations: true
+units:
+- name: moles per cubic meter
+  symbol: mol/m^3
+  conversion_factor: 1.0
+  description: Moles per cubic meter are the canonical storage unit for this concentration scale.
+- name: moles per liter
+  symbol: M
+  conversion_factor: 0.001
+  description: Molarity is the most common laboratory concentration unit.
+- name: millimolar
+  symbol: mM
+  conversion_factor: 1.0
+  description: Millimolar concentrations are common in biochemistry.
+- name: micromolar
+  symbol: uM
+  conversion_factor: 1000.0
+  description: Micromolar concentrations are common for signaling molecules and assays.
+- name: nanomolar
+  symbol: nM
+  conversion_factor: 1000000.0
+  description: Nanomolar concentrations are common for trace compounds.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: materials
+frontend_group_label: Materials & Matter
+frontend_order: 280
+items:
+- id: obs:concentration:entity-neutral-water-protons
+  name: Neutral water proton concentration
+  value: 0.0001
+  description: 'Pure water at pH 7 has a hydrogen-ion concentration of 10^-7 mol/L. Source-side figure: `pH 7` for Hydrogen-ion concentration implied by pH 7. Converted mol/L to mol/m^3.'
+  description_format: markdown
+  summary_short: Pure water at pH 7 has a hydrogen-ion concentration of 10^-7 mol/L.
+  description_medium: 'Pure water at pH 7 has a hydrogen-ion concentration of 10^-7 mol/L. Source-side figure: `pH 7` for Hydrogen-ion concentration implied by pH 7. Converted mol/L to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Neutral water proton concentration
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted mol/L to mol/m^3.
+      derivation_note: '[H+] = 10^-pH mol/L'
+      method: derived
+      original_value_text: '0.0001'
+      source_basis: Hydrogen-ion concentration implied by pH 7.
+      source_unit: pH
+      source_url: https://en.wikipedia.org/wiki/PH
+      source_value_text: pH 7
+  source: https://en.wikipedia.org/wiki/PH
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ph
+    url: https://en.wikipedia.org/wiki/PH
+    title: PH
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-rainwater-protons
+  name: Rainwater proton concentration
+  value: 0.0025118864315095825
+  description: 'Natural rainwater is mildly acidic, with proton concentration above neutral water. Source-side figure: `pH 5.6` for Hydrogen-ion concentration implied by typical rainwater pH. Converted mol/L to mol/m^3.'
+  description_format: markdown
+  summary_short: Natural rainwater is mildly acidic, with proton concentration above neutral water.
+  description_medium: 'Natural rainwater is mildly acidic, with proton concentration above neutral water. Source-side figure: `pH 5.6` for Hydrogen-ion concentration implied by typical rainwater pH. Converted mol/L to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rainwater proton concentration
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted mol/L to mol/m^3.
+      derivation_note: '[H+] = 10^-pH mol/L'
+      method: derived
+      original_value_text: '0.0025118864315095825'
+      source_basis: Hydrogen-ion concentration implied by typical rainwater pH.
+      source_unit: pH
+      source_url: https://en.wikipedia.org/wiki/Rain
+      source_value_text: pH 5.6
+  source: https://en.wikipedia.org/wiki/Rain
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rain
+    url: https://en.wikipedia.org/wiki/Rain
+    title: Rain
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-atmospheric-co2-concentration
+  name: Atmospheric carbon dioxide
+  value: 0.017
+  description: 'At current atmospheric levels, CO2 near sea level is only hundredths of a mole per cubic meter. Source-side figure: `420 ppm at 1 atm` for Representative atmospheric CO2 mole fraction at standard conditions. Converted 420 ppm at roughly ideal-gas standard conditions to mol/m^3.'
+  description_format: markdown
+  summary_short: At current atmospheric levels, CO2 near sea level is only hundredths of a mole per cubic meter.
+  description_medium: 'At current atmospheric levels, CO2 near sea level is only hundredths of a mole per cubic meter. Source-side figure: `420 ppm at 1 atm` for Representative atmospheric CO2 mole fraction at standard conditions. Converted 420 ppm at roughly ideal-gas standard conditions to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atmospheric carbon dioxide
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted 420 ppm at roughly ideal-gas standard conditions to mol/m^3.
+      method: derived
+      original_value_text: '0.017'
+      source_basis: Representative atmospheric CO2 mole fraction at standard conditions.
+      source_unit: ppm
+      source_url: https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere
+      source_value_text: 420 ppm at 1 atm
+  source: https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-carbon-dioxide-in-earth-27s-atmosphere
+    url: https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere
+    title: Carbon dioxide in Earth's atmosphere
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-acidic-water-protons
+  name: Acidic water proton concentration
+  value: 0.1
+  description: 'At pH 4, the hydrogen-ion concentration is a thousand times higher than at neutral pH. Source-side figure: `pH 4` for Hydrogen-ion concentration implied by pH 4. Converted mol/L to mol/m^3.'
+  description_format: markdown
+  summary_short: At pH 4, the hydrogen-ion concentration is a thousand times higher than at neutral pH.
+  description_medium: 'At pH 4, the hydrogen-ion concentration is a thousand times higher than at neutral pH. Source-side figure: `pH 4` for Hydrogen-ion concentration implied by pH 4. Converted mol/L to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Acidic water proton concentration
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted mol/L to mol/m^3.
+      derivation_note: '[H+] = 10^-pH mol/L'
+      method: derived
+      original_value_text: '0.1'
+      source_basis: Hydrogen-ion concentration implied by pH 4.
+      source_unit: pH
+      source_url: https://en.wikipedia.org/wiki/PH
+      source_value_text: pH 4
+  source: https://en.wikipedia.org/wiki/PH
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ph
+    url: https://en.wikipedia.org/wiki/PH
+    title: PH
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-dissolved-oxygen-freshwater
+  name: Dissolved oxygen in freshwater
+  value: 0.25
+  description: 'Oxygen dissolved in cool freshwater is only a fraction of a mole per cubic meter. Source-side figure: `8 mg/L` for Representative dissolved oxygen concentration. Converted milligrams per liter of O2 to mol/m^3.'
+  description_format: markdown
+  summary_short: Oxygen dissolved in cool freshwater is only a fraction of a mole per cubic meter.
+  description_medium: 'Oxygen dissolved in cool freshwater is only a fraction of a mole per cubic meter. Source-side figure: `8 mg/L` for Representative dissolved oxygen concentration. Converted milligrams per liter of O2 to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dissolved oxygen in freshwater
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted milligrams per liter of O2 to mol/m^3.
+      method: derived
+      original_value_text: '0.25'
+      source_basis: Representative dissolved oxygen concentration.
+      source_unit: mg/L
+      source_url: https://en.wikipedia.org/wiki/Oxygen_saturation_(medicine)
+      source_value_text: 8 mg/L
+  source: https://en.wikipedia.org/wiki/Oxygen_saturation_(medicine)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oxygen-saturation-medicine
+    url: https://en.wikipedia.org/wiki/Oxygen_saturation_(medicine)
+    title: Oxygen saturation (medicine)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-atmospheric-argon-concentration
+  name: Atmospheric argon
+  value: 0.38
+  description: 'Argon is only a trace gas, but it still has a measurable molar concentration in air. Source-side figure: `0.93% Ar` for Converted atmospheric argon fraction to mol/m^3 at 1 atm and room temperature. Converted percent concentration to mol/m^3.'
+  description_format: markdown
+  summary_short: Argon is only a trace gas, but it still has a measurable molar concentration in air.
+  description_medium: 'Argon is only a trace gas, but it still has a measurable molar concentration in air. Source-side figure: `0.93% Ar` for Converted atmospheric argon fraction to mol/m^3 at 1 atm and room temperature. Converted percent concentration to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atmospheric argon
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted percent concentration to mol/m^3.
+      method: derived
+      original_value_text: '0.38'
+      source_basis: Converted atmospheric argon fraction to mol/m^3 at 1 atm and room temperature.
+      source_unit: percent
+      source_url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+      source_value_text: 0.93% Ar
+  source: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atmosphere-of-earth
+    url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+    title: Atmosphere of Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-lactate-concentration
+  name: Blood lactate
+  value: 1.0
+  description: 'Resting blood lactate sits near the one-millimolar scale. Source-side figure: `1 mM` for Representative resting blood lactate concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Resting blood lactate sits near the one-millimolar scale.
+  description_medium: 'Resting blood lactate sits near the one-millimolar scale. Source-side figure: `1 mM` for Representative resting blood lactate concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood lactate
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '1.0'
+      source_basis: Representative resting blood lactate concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Lactic_acidosis
+      source_value_text: 1 mM
+  source: https://en.wikipedia.org/wiki/Lactic_acidosis
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lactic-acidosis
+    url: https://en.wikipedia.org/wiki/Lactic_acidosis
+    title: Lactic acidosis
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-calcium-concentration
+  name: Blood calcium ions
+  value: 1.2
+  description: 'Ionized calcium in blood plasma is a little above one millimolar. Source-side figure: `1.2 mM` for Representative blood ionized-calcium concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Ionized calcium in blood plasma is a little above one millimolar.
+  description_medium: 'Ionized calcium in blood plasma is a little above one millimolar. Source-side figure: `1.2 mM` for Representative blood ionized-calcium concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood calcium ions
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '1.2'
+      source_basis: Representative blood ionized-calcium concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Blood_calcium_level
+      source_value_text: 1.2 mM
+  source: https://en.wikipedia.org/wiki/Blood_calcium_level
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-calcium-level
+    url: https://en.wikipedia.org/wiki/Blood_calcium_level
+    title: Blood calcium level
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-potassium-concentration
+  name: Blood potassium
+  value: 4.1
+  description: 'Blood potassium is tightly regulated in a narrow millimolar band. Source-side figure: `4.1 mM` for Representative blood potassium concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Blood potassium is tightly regulated in a narrow millimolar band.
+  description_medium: 'Blood potassium is tightly regulated in a narrow millimolar band. Source-side figure: `4.1 mM` for Representative blood potassium concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood potassium
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '4.1'
+      source_basis: Representative blood potassium concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Blood
+      source_value_text: 4.1 mM
+  source: https://en.wikipedia.org/wiki/Blood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood
+    url: https://en.wikipedia.org/wiki/Blood
+    title: Blood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-glucose-concentration
+  name: Blood glucose
+  value: 5.0
+  description: 'A typical fasting blood glucose concentration is around five millimolar. Source-side figure: `5 mM` for Representative fasting blood glucose. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: A typical fasting blood glucose concentration is around five millimolar.
+  description_medium: 'A typical fasting blood glucose concentration is around five millimolar. Source-side figure: `5 mM` for Representative fasting blood glucose. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood glucose
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '5.0'
+      source_basis: Representative fasting blood glucose.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Blood_sugar_level
+      source_value_text: 5 mM
+  source: https://en.wikipedia.org/wiki/Blood_sugar_level
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-sugar-level
+    url: https://en.wikipedia.org/wiki/Blood_sugar_level
+    title: Blood sugar level
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-urea-concentration
+  name: Blood urea
+  value: 5.0
+  description: 'Blood urea is another familiar small-molecule concentration in the millimolar range. Source-side figure: `5 mM` for Representative blood urea concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Blood urea is another familiar small-molecule concentration in the millimolar range.
+  description_medium: 'Blood urea is another familiar small-molecule concentration in the millimolar range. Source-side figure: `5 mM` for Representative blood urea concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood urea
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '5.0'
+      source_basis: Representative blood urea concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Blood_urea_nitrogen
+      source_value_text: 5 mM
+  source: https://en.wikipedia.org/wiki/Blood_urea_nitrogen
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-urea-nitrogen
+    url: https://en.wikipedia.org/wiki/Blood_urea_nitrogen
+    title: Blood urea nitrogen
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-intracellular-atp-concentration
+  name: Intracellular ATP
+  value: 5.0
+  description: 'Cells maintain ATP in the low-millimolar range despite rapid turnover. Source-side figure: `5 mM` for Representative intracellular ATP concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Cells maintain ATP in the low-millimolar range despite rapid turnover.
+  description_medium: 'Cells maintain ATP in the low-millimolar range despite rapid turnover. Source-side figure: `5 mM` for Representative intracellular ATP concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Intracellular ATP
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '5.0'
+      source_basis: Representative intracellular ATP concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Adenosine_triphosphate
+      source_value_text: 5 mM
+  source: https://en.wikipedia.org/wiki/Adenosine_triphosphate
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-adenosine-triphosphate
+    url: https://en.wikipedia.org/wiki/Adenosine_triphosphate
+    title: Adenosine triphosphate
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-blood-glucose
+  name: Blood glucose
+  value: 5.5
+  description: 'Blood glucose lives in the low-millimolar range. Here the quantity refers to `molar concentration`. Source-side figure: `5.5 mol/m^3` for Representative fasting blood glucose around 5.5 mM.'
+  description_format: markdown
+  summary_short: Blood glucose lives in the low-millimolar range.
+  description_medium: 'Blood glucose lives in the low-millimolar range. Here the quantity refers to `molar concentration`. Source-side figure: `5.5 mol/m^3` for Representative fasting blood glucose around 5.5 mM.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood glucose
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: mM to mol/m^3
+      method: derived
+      original_value_text: '5.5'
+      source_basis: Representative fasting blood glucose around 5.5 mM.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Blood_glucose
+      source_value_text: '5.5'
+  source: https://en.wikipedia.org/wiki/Blood_glucose
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-glucose
+    url: https://en.wikipedia.org/wiki/Blood_glucose
+    title: Blood glucose
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-atmospheric-oxygen-concentration
+  name: Atmospheric oxygen
+  value: 8.6
+  description: 'Oxygen makes up about a fifth of Earth''s atmosphere, which becomes a molar concentration at room conditions. Source-side figure: `20.95% O2` for Converted atmospheric oxygen fraction to mol/m^3 at 1 atm and room temperature. Converted percent concentration to mol/m^3.'
+  description_format: markdown
+  summary_short: Oxygen makes up about a fifth of Earth's atmosphere, which becomes a molar concentration at room conditions.
+  description_medium: 'Oxygen makes up about a fifth of Earth''s atmosphere, which becomes a molar concentration at room conditions. Source-side figure: `20.95% O2` for Converted atmospheric oxygen fraction to mol/m^3 at 1 atm and room temperature. Converted percent concentration to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atmospheric oxygen
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted percent concentration to mol/m^3.
+      method: derived
+      original_value_text: '8.6'
+      source_basis: Converted atmospheric oxygen fraction to mol/m^3 at 1 atm and room temperature.
+      source_unit: percent
+      source_url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+      source_value_text: 20.95% O2
+  source: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atmosphere-of-earth
+    url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+    title: Atmosphere of Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-bicarbonate-concentration
+  name: Blood bicarbonate
+  value: 24.0
+  description: 'Bicarbonate is one of the main buffers in human blood. Source-side figure: `24 mM` for Representative blood bicarbonate concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Bicarbonate is one of the main buffers in human blood.
+  description_medium: 'Bicarbonate is one of the main buffers in human blood. Source-side figure: `24 mM` for Representative blood bicarbonate concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood bicarbonate
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '24.0'
+      source_basis: Representative blood bicarbonate concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Blood_gas
+      source_value_text: 24 mM
+  source: https://en.wikipedia.org/wiki/Blood_gas
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-gas
+    url: https://en.wikipedia.org/wiki/Blood_gas
+    title: Blood gas
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-seawater-sulfate-concentration
+  name: Seawater sulfate ions
+  value: 28.0
+  description: 'Sulfate is one of the major ions in seawater. Source-side figure: `28 mM` for Representative seawater sulfate concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Sulfate is one of the major ions in seawater.
+  description_medium: 'Sulfate is one of the major ions in seawater. Source-side figure: `28 mM` for Representative seawater sulfate concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Seawater sulfate ions
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '28.0'
+      source_basis: Representative seawater sulfate concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Sulfate
+      source_value_text: 28 mM
+  source: https://en.wikipedia.org/wiki/Sulfate
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sulfate
+    url: https://en.wikipedia.org/wiki/Sulfate
+    title: Sulfate
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-atmospheric-nitrogen-concentration
+  name: Atmospheric nitrogen
+  value: 32.0
+  description: 'Nitrogen dominates the atmosphere, giving a large molar concentration at sea level. Source-side figure: `78.08% N2` for Converted atmospheric nitrogen fraction to mol/m^3 at 1 atm and room temperature. Converted percent concentration to mol/m^3.'
+  description_format: markdown
+  summary_short: Nitrogen dominates the atmosphere, giving a large molar concentration at sea level.
+  description_medium: 'Nitrogen dominates the atmosphere, giving a large molar concentration at sea level. Source-side figure: `78.08% N2` for Converted atmospheric nitrogen fraction to mol/m^3 at 1 atm and room temperature. Converted percent concentration to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atmospheric nitrogen
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted percent concentration to mol/m^3.
+      method: derived
+      original_value_text: '32.0'
+      source_basis: Converted atmospheric nitrogen fraction to mol/m^3 at 1 atm and room temperature.
+      source_unit: percent
+      source_url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+      source_value_text: 78.08% N2
+  source: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-atmosphere-of-earth
+    url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+    title: Atmosphere of Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-lemon-juice
+  name: Lemon juice
+  value: 50.0
+  description: 'Lemon juice is a familiar weak-acid concentration benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `50 mol/m^3` for Representative citric-acid concentration in lemon juice.'
+  description_format: markdown
+  summary_short: Lemon juice is a familiar weak-acid concentration benchmark.
+  description_medium: 'Lemon juice is a familiar weak-acid concentration benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `50 mol/m^3` for Representative citric-acid concentration in lemon juice.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lemon juice
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      method: direct
+      original_value_text: '50.0'
+      source_basis: Representative citric-acid concentration in lemon juice.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Lemon_juice
+      source_value_text: '50'
+  source: https://en.wikipedia.org/wiki/Lemon_juice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lemon-juice
+    url: https://en.wikipedia.org/wiki/Lemon_juice
+    title: Lemon juice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:scenario-concentration-gastric-acid
+  name: Gastric acid
+  value: 100.0
+  description: 'Stomach acid lives at a much stronger acid concentration than blood. Here the quantity refers to `hydrogen ion concentration`. Source-side figure: `100 mol/m^3` for Representative hydrogen ion concentration for gastric acid.'
+  description_format: markdown
+  summary_short: Stomach acid lives at a much stronger acid concentration than blood.
+  description_medium: 'Stomach acid lives at a much stronger acid concentration than blood. Here the quantity refers to `hydrogen ion concentration`. Source-side figure: `100 mol/m^3` for Representative hydrogen ion concentration for gastric acid.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Gastric acid
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: pH-based molar concentration estimate
+      method: derived
+      original_value_text: '100.0'
+      source_basis: Representative hydrogen ion concentration for gastric acid.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Gastric_acid
+      source_value_text: '100'
+  source: https://en.wikipedia.org/wiki/Gastric_acid
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gastric-acid
+    url: https://en.wikipedia.org/wiki/Gastric_acid
+    title: Gastric acid
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: hydrogen ion concentration
+- id: obs:concentration:entity-blood-chloride-concentration
+  name: Blood chloride
+  value: 103.0
+  description: 'Blood chloride sits around the hundred-millimolar level. Source-side figure: `103 mM` for Representative blood chloride concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Blood chloride sits around the hundred-millimolar level.
+  description_medium: 'Blood chloride sits around the hundred-millimolar level. Source-side figure: `103 mM` for Representative blood chloride concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood chloride
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '103.0'
+      source_basis: Representative blood chloride concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Chloride
+      source_value_text: 103 mM
+  source: https://en.wikipedia.org/wiki/Chloride
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chloride
+    url: https://en.wikipedia.org/wiki/Chloride
+    title: Chloride
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-blood-sodium-concentration
+  name: Blood sodium
+  value: 140.0
+  description: 'Blood sodium concentration is a classic physiology benchmark. Source-side figure: `140 mM` for Representative blood sodium concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Blood sodium concentration is a classic physiology benchmark.
+  description_medium: 'Blood sodium concentration is a classic physiology benchmark. Source-side figure: `140 mM` for Representative blood sodium concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood sodium
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '140.0'
+      source_basis: Representative blood sodium concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Hyponatremia
+      source_value_text: 140 mM
+  source: https://en.wikipedia.org/wiki/Hyponatremia
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hyponatremia
+    url: https://en.wikipedia.org/wiki/Hyponatremia
+    title: Hyponatremia
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-blood-sodium
+  name: Blood sodium
+  value: 140.0
+  description: 'Blood sodium provides a familiar human-physiology concentration. Here the quantity refers to `molar concentration`. Source-side figure: `140 mol/m^3` for Representative plasma sodium concentration around 140 mM.'
+  description_format: markdown
+  summary_short: Blood sodium provides a familiar human-physiology concentration.
+  description_medium: 'Blood sodium provides a familiar human-physiology concentration. Here the quantity refers to `molar concentration`. Source-side figure: `140 mol/m^3` for Representative plasma sodium concentration around 140 mM.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blood sodium
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: mM to mol/m^3
+      method: derived
+      original_value_text: '140.0'
+      source_basis: Representative plasma sodium concentration around 140 mM.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Sodium_in_biology
+      source_value_text: '140'
+  source: https://en.wikipedia.org/wiki/Sodium_in_biology
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sodium-in-biology
+    url: https://en.wikipedia.org/wiki/Sodium_in_biology
+    title: Sodium in biology
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-milk-lactose-concentration
+  name: Milk lactose
+  value: 150.0
+  description: 'Milk contains a substantial lactose concentration that shapes its sweetness. Source-side figure: `150 mM` for Representative lactose concentration in milk. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Milk contains a substantial lactose concentration that shapes its sweetness.
+  description_medium: 'Milk contains a substantial lactose concentration that shapes its sweetness. Source-side figure: `150 mM` for Representative lactose concentration in milk. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Milk lactose
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '150.0'
+      source_basis: Representative lactose concentration in milk.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Milk
+      source_value_text: 150 mM
+  source: https://en.wikipedia.org/wiki/Milk
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milk
+    url: https://en.wikipedia.org/wiki/Milk
+    title: Milk
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-normal-saline-nacl
+  name: Saline sodium chloride
+  value: 154.0
+  description: 'Normal saline contains 154 millimoles of sodium chloride per liter. Source-side figure: `154 mM` for Reported concentration of NaCl in normal saline. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Normal saline contains 154 millimoles of sodium chloride per liter.
+  description_medium: 'Normal saline contains 154 millimoles of sodium chloride per liter. Source-side figure: `154 mM` for Reported concentration of NaCl in normal saline. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Saline sodium chloride
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '154.0'
+      source_basis: Reported concentration of NaCl in normal saline.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Saline_(medicine)
+      source_value_text: 154 mM
+  source: https://en.wikipedia.org/wiki/Saline_(medicine)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-saline-medicine
+    url: https://en.wikipedia.org/wiki/Saline_(medicine)
+    title: Saline (medicine)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-saline-solution
+  name: Saline solution
+  value: 154.0
+  description: 'Normal saline is a standard medical concentration reference. Here the quantity refers to `molar concentration`. Source-side figure: `154 mol/m^3` for 0.154 mol/L saline converted to mol/m^3.'
+  description_format: markdown
+  summary_short: Normal saline is a standard medical concentration reference.
+  description_medium: 'Normal saline is a standard medical concentration reference. Here the quantity refers to `molar concentration`. Source-side figure: `154 mol/m^3` for 0.154 mol/L saline converted to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Saline solution
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: 0.154 mol/L to mol/m^3
+      method: derived
+      original_value_text: '154.0'
+      source_basis: 0.154 mol/L saline converted to mol/m^3.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Saline
+      source_value_text: '154'
+  source: https://en.wikipedia.org/wiki/Saline
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-saline
+    url: https://en.wikipedia.org/wiki/Saline
+    title: Saline
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-urine-urea-concentration
+  name: Urine urea
+  value: 250.0
+  description: 'Urea is highly concentrated in urine compared with blood plasma. Source-side figure: `250 mM` for Representative urine urea concentration. Converted millimolar to mol/m^3.'
+  description_format: markdown
+  summary_short: Urea is highly concentrated in urine compared with blood plasma.
+  description_medium: 'Urea is highly concentrated in urine compared with blood plasma. Source-side figure: `250 mM` for Representative urine urea concentration. Converted millimolar to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Urine urea
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted millimolar to mol/m^3.
+      method: derived
+      original_value_text: '250.0'
+      source_basis: Representative urine urea concentration.
+      source_unit: mM
+      source_url: https://en.wikipedia.org/wiki/Urine
+      source_value_text: 250 mM
+  source: https://en.wikipedia.org/wiki/Urine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-urine
+    url: https://en.wikipedia.org/wiki/Urine
+    title: Urine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-household-bleach
+  name: Household bleach
+  value: 500.0
+  description: 'Bleach is a useful everyday oxidizer benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `500 mol/m^3` for Representative sodium hypochlorite concentration in household bleach.'
+  description_format: markdown
+  summary_short: Bleach is a useful everyday oxidizer benchmark.
+  description_medium: 'Bleach is a useful everyday oxidizer benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `500 mol/m^3` for Representative sodium hypochlorite concentration in household bleach.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Household bleach
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      method: direct
+      original_value_text: '500.0'
+      source_basis: Representative sodium hypochlorite concentration in household bleach.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Bleach
+      source_value_text: '500'
+  source: https://en.wikipedia.org/wiki/Bleach
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bleach
+    url: https://en.wikipedia.org/wiki/Bleach
+    title: Bleach
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-seawater-salt-concentration
+  name: Seawater sodium chloride equivalent
+  value: 600.0
+  description: 'Seawater salinity corresponds to a salt concentration on the order of hundreds of moles per cubic meter. Source-side figure: `about 0.6 M equivalent` for Representative seawater salt-equivalent concentration. Converted representative molarity to mol/m^3.'
+  description_format: markdown
+  summary_short: Seawater salinity corresponds to a salt concentration on the order of hundreds of moles per cubic meter.
+  description_medium: 'Seawater salinity corresponds to a salt concentration on the order of hundreds of moles per cubic meter. Source-side figure: `about 0.6 M equivalent` for Representative seawater salt-equivalent concentration. Converted representative molarity to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Seawater sodium chloride equivalent
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted representative molarity to mol/m^3.
+      method: derived
+      original_value_text: '600.0'
+      source_basis: Representative seawater salt-equivalent concentration.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Salinity
+      source_value_text: about 0.6 M equivalent
+  source: https://en.wikipedia.org/wiki/Salinity
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-salinity
+    url: https://en.wikipedia.org/wiki/Salinity
+    title: Salinity
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-seawater-nacl
+  name: Seawater sodium chloride
+  value: 600.0
+  description: 'Ocean salinity is a useful mid-range electrolyte benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `600 mol/m^3` for Representative seawater NaCl-equivalent concentration.'
+  description_format: markdown
+  summary_short: Ocean salinity is a useful mid-range electrolyte benchmark.
+  description_medium: 'Ocean salinity is a useful mid-range electrolyte benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `600 mol/m^3` for Representative seawater NaCl-equivalent concentration.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Seawater sodium chloride
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      method: direct
+      original_value_text: '600.0'
+      source_basis: Representative seawater NaCl-equivalent concentration.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Seawater
+      source_value_text: '600'
+  source: https://en.wikipedia.org/wiki/Seawater
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-seawater
+    url: https://en.wikipedia.org/wiki/Seawater
+    title: Seawater
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-bleach-hypochlorite-concentration
+  name: Household bleach sodium hypochlorite
+  value: 800.0
+  description: 'Common bleach is a strong but not concentrated-lab-scale solution. Source-side figure: `0.8 M` for Representative bleach concentration. Converted molarity to mol/m^3.'
+  description_format: markdown
+  summary_short: Common bleach is a strong but not concentrated-lab-scale solution.
+  description_medium: 'Common bleach is a strong but not concentrated-lab-scale solution. Source-side figure: `0.8 M` for Representative bleach concentration. Converted molarity to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Household bleach sodium hypochlorite
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted molarity to mol/m^3.
+      method: derived
+      original_value_text: '800.0'
+      source_basis: Representative bleach concentration.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Bleach
+      source_value_text: 0.8 M
+  source: https://en.wikipedia.org/wiki/Bleach
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bleach
+    url: https://en.wikipedia.org/wiki/Bleach
+    title: Bleach
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-vinegar-acetic-acid
+  name: Vinegar acetic acid
+  value: 800.0
+  description: 'Household vinegar offers a strong everyday acid-concentration example. Here the quantity refers to `molar concentration`. Source-side figure: `800 mol/m^3` for Representative 5 percent acetic acid solution.'
+  description_format: markdown
+  summary_short: Household vinegar offers a strong everyday acid-concentration example.
+  description_medium: 'Household vinegar offers a strong everyday acid-concentration example. Here the quantity refers to `molar concentration`. Source-side figure: `800 mol/m^3` for Representative 5 percent acetic acid solution.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Vinegar acetic acid
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: molarity estimate from 5% vinegar
+      method: derived
+      original_value_text: '800.0'
+      source_basis: Representative 5 percent acetic acid solution.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Vinegar
+      source_value_text: '800'
+  source: https://en.wikipedia.org/wiki/Vinegar
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vinegar
+    url: https://en.wikipedia.org/wiki/Vinegar
+    title: Vinegar
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-vinegar-acetic-acid-concentration
+  name: Table vinegar acetic acid
+  value: 870.0
+  description: 'Household vinegar is a sub-molar acetic-acid solution. Source-side figure: `5% acetic acid` for Representative household vinegar concentration. Approximated household vinegar as about 0.87 mol/L acetic acid and converted to mol/m^3.'
+  description_format: markdown
+  summary_short: Household vinegar is a sub-molar acetic-acid solution.
+  description_medium: 'Household vinegar is a sub-molar acetic-acid solution. Source-side figure: `5% acetic acid` for Representative household vinegar concentration. Approximated household vinegar as about 0.87 mol/L acetic acid and converted to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Table vinegar acetic acid
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Approximated household vinegar as about 0.87 mol/L acetic acid and converted to mol/m^3.
+      method: derived
+      original_value_text: '870.0'
+      source_basis: Representative household vinegar concentration.
+      source_unit: w/v approx
+      source_url: https://en.wikipedia.org/wiki/Vinegar
+      source_value_text: 5% acetic acid
+  source: https://en.wikipedia.org/wiki/Vinegar
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vinegar
+    url: https://en.wikipedia.org/wiki/Vinegar
+    title: Vinegar
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-hydrogen-peroxide-solution
+  name: Hydrogen peroxide solution
+  value: 880.0
+  description: 'A 3 percent hydrogen peroxide solution is another useful household chemistry benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `880 mol/m^3` for Representative 3 percent hydrogen peroxide solution converted to molarity.'
+  description_format: markdown
+  summary_short: A 3 percent hydrogen peroxide solution is another useful household chemistry benchmark.
+  description_medium: 'A 3 percent hydrogen peroxide solution is another useful household chemistry benchmark. Here the quantity refers to `molar concentration`. Source-side figure: `880 mol/m^3` for Representative 3 percent hydrogen peroxide solution converted to molarity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hydrogen peroxide solution
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: w/w concentration to mol/m^3
+      method: derived
+      original_value_text: '880.0'
+      source_basis: Representative 3 percent hydrogen peroxide solution converted to molarity.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Hydrogen_peroxide
+      source_value_text: '880'
+  source: https://en.wikipedia.org/wiki/Hydrogen_peroxide
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydrogen-peroxide
+    url: https://en.wikipedia.org/wiki/Hydrogen_peroxide
+    title: Hydrogen peroxide
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-household-ammonia-concentration
+  name: Household ammonia
+  value: 4700.0
+  description: 'Household ammonia is several molar. Source-side figure: `4.7 M` for Representative ammonia concentration in household ammonium hydroxide solution. Converted mol/L to mol/m^3.'
+  description_format: markdown
+  summary_short: Household ammonia is several molar.
+  description_medium: 'Household ammonia is several molar. Source-side figure: `4.7 M` for Representative ammonia concentration in household ammonium hydroxide solution. Converted mol/L to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Household ammonia
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted mol/L to mol/m^3.
+      method: derived
+      original_value_text: '4700.0'
+      source_basis: Representative ammonia concentration in household ammonium hydroxide solution.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Ammonia_solution
+      source_value_text: 4.7 M
+  source: https://en.wikipedia.org/wiki/Ammonia_solution
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ammonia-solution
+    url: https://en.wikipedia.org/wiki/Ammonia_solution
+    title: Ammonia solution
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-saturated-brine
+  name: Saturated brine
+  value: 6000.0
+  description: 'Saturated salt brine sits much higher than seawater. Here the quantity refers to `molar concentration`. Source-side figure: `6000 mol/m^3` for Representative sodium chloride concentration in saturated brine.'
+  description_format: markdown
+  summary_short: Saturated salt brine sits much higher than seawater.
+  description_medium: 'Saturated salt brine sits much higher than seawater. Here the quantity refers to `molar concentration`. Source-side figure: `6000 mol/m^3` for Representative sodium chloride concentration in saturated brine.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Saturated brine
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      method: direct
+      original_value_text: '6000.0'
+      source_basis: Representative sodium chloride concentration in saturated brine.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Brine
+      source_value_text: '6000'
+  source: https://en.wikipedia.org/wiki/Brine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brine
+    url: https://en.wikipedia.org/wiki/Brine
+    title: Brine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: molar concentration
+- id: obs:concentration:entity-saturated-brine-nacl
+  name: Saturated brine sodium chloride
+  value: 6200.0
+  description: 'Near-saturated brine reaches several moles per liter of sodium chloride. Source-side figure: `6.2 M` for Representative saturated sodium chloride brine concentration. Converted molarity to mol/m^3.'
+  description_format: markdown
+  summary_short: Near-saturated brine reaches several moles per liter of sodium chloride.
+  description_medium: 'Near-saturated brine reaches several moles per liter of sodium chloride. Source-side figure: `6.2 M` for Representative saturated sodium chloride brine concentration. Converted molarity to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Saturated brine sodium chloride
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted molarity to mol/m^3.
+      method: derived
+      original_value_text: '6200.0'
+      source_basis: Representative saturated sodium chloride brine concentration.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Brine
+      source_value_text: 6.2 M
+  source: https://en.wikipedia.org/wiki/Brine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brine
+    url: https://en.wikipedia.org/wiki/Brine
+    title: Brine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-pure-acetone-concentration
+  name: Pure acetone molecules
+  value: 13498.62258953168
+  description: 'Pure acetone contains over ten thousand moles of molecules per cubic meter. Source-side figure: `pure liquid` for Molecular concentration in pure liquid acetone.'
+  description_format: markdown
+  summary_short: Pure acetone contains over ten thousand moles of molecules per cubic meter.
+  description_medium: 'Pure acetone contains over ten thousand moles of molecules per cubic meter. Source-side figure: `pure liquid` for Molecular concentration in pure liquid acetone.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pure acetone molecules
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: c = density / molar mass
+      method: derived
+      original_value_text: '13498.62258953168'
+      source_basis: Molecular concentration in pure liquid acetone.
+      source_unit: liquid
+      source_url: https://en.wikipedia.org/wiki/Acetone
+      source_value_text: pure liquid
+  source: https://en.wikipedia.org/wiki/Acetone
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-acetone
+    url: https://en.wikipedia.org/wiki/Acetone
+    title: Acetone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-concentrated-sulfuric-acid
+  name: Concentrated sulfuric acid
+  value: 18000.0
+  description: 'Concentrated sulfuric acid is tens of moles per liter. Source-side figure: `18 M` for Representative concentrated sulfuric acid molarity. Converted molarity to mol/m^3.'
+  description_format: markdown
+  summary_short: Concentrated sulfuric acid is tens of moles per liter.
+  description_medium: 'Concentrated sulfuric acid is tens of moles per liter. Source-side figure: `18 M` for Representative concentrated sulfuric acid molarity. Converted molarity to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concentrated sulfuric acid
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted molarity to mol/m^3.
+      method: derived
+      original_value_text: '18000.0'
+      source_basis: Representative concentrated sulfuric acid molarity.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Sulfuric_acid
+      source_value_text: 18 M
+  source: https://en.wikipedia.org/wiki/Sulfuric_acid
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sulfuric-acid
+    url: https://en.wikipedia.org/wiki/Sulfuric_acid
+    title: Sulfuric acid
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-concentrated-sulfuric-acid-concentration
+  name: Concentrated sulfuric acid
+  value: 18000.0
+  description: 'Concentrated sulfuric acid reaches the high tens of thousands of moles of molecules per cubic meter. Source-side figure: `18 M` for Representative concentration of concentrated sulfuric acid. Converted mol/L to mol/m^3.'
+  description_format: markdown
+  summary_short: Concentrated sulfuric acid reaches the high tens of thousands of moles of molecules per cubic meter.
+  description_medium: 'Concentrated sulfuric acid reaches the high tens of thousands of moles of molecules per cubic meter. Source-side figure: `18 M` for Representative concentration of concentrated sulfuric acid. Converted mol/L to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concentrated sulfuric acid
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted mol/L to mol/m^3.
+      method: derived
+      original_value_text: '18000.0'
+      source_basis: Representative concentration of concentrated sulfuric acid.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Sulfuric_acid
+      source_value_text: 18 M
+  source: https://en.wikipedia.org/wiki/Sulfuric_acid
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sulfuric-acid
+    url: https://en.wikipedia.org/wiki/Sulfuric_acid
+    title: Sulfuric acid
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-liquid-water-molarity
+  name: Pure liquid water molecules
+  value: 55500.0
+  description: 'Pure liquid water corresponds to about 55.5 moles of H2O per liter. Source-side figure: `55.5 M` for Molar concentration of liquid water. Converted molarity to mol/m^3.'
+  description_format: markdown
+  summary_short: Pure liquid water corresponds to about 55.5 moles of H2O per liter.
+  description_medium: 'Pure liquid water corresponds to about 55.5 moles of H2O per liter. Source-side figure: `55.5 M` for Molar concentration of liquid water. Converted molarity to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pure liquid water molecules
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted molarity to mol/m^3.
+      method: derived
+      original_value_text: '55500.0'
+      source_basis: Molar concentration of liquid water.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Water
+      source_value_text: 55.5 M
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:entity-pure-water-molecule-concentration
+  name: Pure water molecules
+  value: 55500.0
+  description: 'Liquid water itself is a dense fluid of about 55.5 molar. Source-side figure: `55.5 M` for Molecular concentration of liquid water. Converted mol/L to mol/m^3.'
+  description_format: markdown
+  summary_short: Liquid water itself is a dense fluid of about 55.5 molar.
+  description_medium: 'Liquid water itself is a dense fluid of about 55.5 molar. Source-side figure: `55.5 M` for Molecular concentration of liquid water. Converted mol/L to mol/m^3.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pure water molecules
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      conversion_note: Converted mol/L to mol/m^3.
+      method: derived
+      original_value_text: '55500.0'
+      source_basis: Molecular concentration of liquid water.
+      source_unit: M
+      source_url: https://en.wikipedia.org/wiki/Water
+      source_value_text: 55.5 M
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:concentration:scenario-concentration-pure-water
+  name: Pure water
+  value: 55500.0
+  description: 'Liquid water itself is a dense molecular benchmark on the concentration axis. Here the quantity refers to `molecular number concentration`. Source-side figure: `55500 mol/m^3` for Approximate molar concentration of pure water.'
+  description_format: markdown
+  summary_short: Liquid water itself is a dense molecular benchmark on the concentration axis.
+  description_medium: 'Liquid water itself is a dense molecular benchmark on the concentration axis. Here the quantity refers to `molecular number concentration`. Source-side figure: `55500 mol/m^3` for Approximate molar concentration of pure water.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pure water
+    ingest_source: dataset/raw/curated/concentration.json
+    source_trace:
+      derivation_note: 55.5 mol/L to mol/m^3
+      method: derived
+      original_value_text: '55500.0'
+      source_basis: Approximate molar concentration of pure water.
+      source_unit: mol/m^3
+      source_url: https://en.wikipedia.org/wiki/Water
+      source_value_text: '55500'
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-concentration-json
+    url: repo://dataset/raw/curated/concentration.json
+    title: dataset/raw/curated/concentration.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: molecular number concentration

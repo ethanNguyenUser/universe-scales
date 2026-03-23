@@ -33,6 +33,7 @@ preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
+scale_mode: log
 frontend_group: motion
 frontend_group_label: Motion & Mechanics
 frontend_order: 50
@@ -61,6 +62,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-intermolecular-force
     url: https://en.wikipedia.org/wiki/Intermolecular_force
     title: Intermolecular force
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-kinesin-motor
+  name: Kinesin Motor
+  value: 6.0e-12
+  description: Single kinesin motor proteins haul cargo through cells with forces of only a few piconewtons. That sounds negligible, but at molecular scales it is enough to step processively along a microtubule and move vesicles through crowded cytoplasm. Biophysicists measure these loads with optical traps. The value is the stall-force scale for one motor.
+  description_format: markdown
+  summary_short: Single kinesin motor proteins haul cargo through cells with forces of only a few piconewtons.
+  description_medium: Single kinesin motor proteins haul cargo through cells with forces of only a few piconewtons. That sounds negligible, but at molecular scales it is enough to step processively along a microtubule and move vesicles through crowded cytoplasm. Biophysicists measure these loads with optical traps. The value is the stall-force scale for one motor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Kinesin Motor
+    source_trace:
+      method: derived
+      original_value_text: 6e-12
+      source_url: https://en.wikipedia.org/wiki/Kinesin
+  source: https://en.wikipedia.org/wiki/Kinesin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-kinesin
+    url: https://en.wikipedia.org/wiki/Kinesin
+    title: Kinesin
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -247,6 +290,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:force:scenario-force-apple-weight
+  name: Apple Weight
+  value: 1.0
+  description: The weight of a medium apple on Earth is about one newton, which is why one kilogram weighs close to ten newtons in rough mental arithmetic. This is a handy anchor between tiny lab forces and the loads you feel in your hand. Classroom force sensors often start with objects like this. The number assumes ordinary Earth gravity.
+  description_format: markdown
+  summary_short: The weight of a medium apple on Earth is about one newton, which is why one kilogram weighs close to ten newtons in rough mental arithmetic.
+  description_medium: The weight of a medium apple on Earth is about one newton, which is why one kilogram weighs close to ten newtons in rough mental arithmetic. This is a handy anchor between tiny lab forces and the loads you feel in your hand. Classroom force sensors often start with objects like this. The number assumes ordinary Earth gravity.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Apple Weight
+    source_trace:
+      method: derived
+      original_value_text: '1'
+      source_url: https://en.wikipedia.org/wiki/Newton_(unit)
+  source: https://en.wikipedia.org/wiki/Newton_(unit)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-newton-unit
+    url: https://en.wikipedia.org/wiki/Newton_(unit)
+    title: Newton (unit)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:force:scenario-force-cyclist-aerodynamic-drag
   name: Cyclist Aerodynamic Drag
   value: 30.0
@@ -373,6 +458,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:force:scenario-force-house-cat-jump-push-off
+  name: House Cat Jump Push-Off
+  value: 150.0
+  description: A house cat pushing off into a jump can drive well over its body weight into the floor for a brief instant. Fast muscle fibers and tendon recoil package that force into a surprisingly compact animal. High-speed force plates reveal it as a short pulse rather than a steady push. The number is a representative peak for a healthy adult cat.
+  description_format: markdown
+  summary_short: A house cat pushing off into a jump can drive well over its body weight into the floor for a brief instant.
+  description_medium: A house cat pushing off into a jump can drive well over its body weight into the floor for a brief instant. Fast muscle fibers and tendon recoil package that force into a surprisingly compact animal. High-speed force plates reveal it as a short pulse rather than a steady push. The number is a representative peak for a healthy adult cat.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: House Cat Jump Push-Off
+    source_trace:
+      method: derived
+      original_value_text: '150'
+      source_url: https://en.wikipedia.org/wiki/Cat_righting_reflex
+  source: https://en.wikipedia.org/wiki/Cat_righting_reflex
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cat-righting-reflex
+    url: https://en.wikipedia.org/wiki/Cat_righting_reflex
+    title: Cat righting reflex
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:force:scenario-force-bow-draw
   name: Bow Draw
   value: 300.0
@@ -397,6 +524,90 @@ items:
   - id: src:https-en-wikipedia-org-wiki-bow-archery
     url: https://en.wikipedia.org/wiki/Bow_(archery)
     title: Bow (archery)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-human-grip-strength
+  name: Human Grip Strength
+  value: 300.0
+  description: A strong adult grip can squeeze with a few hundred newtons measured on a hand dynamometer. That is enough to crush fragile packaging and explains why climbing and tool work benefit so much from forearm strength. The exact figure varies with age, sex, and training. The value is a representative peak for a healthy adult.
+  description_format: markdown
+  summary_short: A strong adult grip can squeeze with a few hundred newtons measured on a hand dynamometer.
+  description_medium: A strong adult grip can squeeze with a few hundred newtons measured on a hand dynamometer. That is enough to crush fragile packaging and explains why climbing and tool work benefit so much from forearm strength. The exact figure varies with age, sex, and training. The value is a representative peak for a healthy adult.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Human Grip Strength
+    source_trace:
+      method: derived
+      original_value_text: '300'
+      source_url: https://en.wikipedia.org/wiki/Grip_strength
+  source: https://en.wikipedia.org/wiki/Grip_strength
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-grip-strength
+    url: https://en.wikipedia.org/wiki/Grip_strength
+    title: Grip strength
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-push-up-support-per-arm
+  name: Push-Up Support (per arm)
+  value: 350.0
+  description: During a push-up, each arm briefly supports a few hundred newtons as the body rises and falls. Trainers care about this because shoulder and wrist joints must route the same load repeatedly without irritation. The number is lower than full body weight because the feet still carry part of the system. This value is for one arm near the bottom of a standard push-up.
+  description_format: markdown
+  summary_short: During a push-up, each arm briefly supports a few hundred newtons as the body rises and falls.
+  description_medium: During a push-up, each arm briefly supports a few hundred newtons as the body rises and falls. Trainers care about this because shoulder and wrist joints must route the same load repeatedly without irritation. The number is lower than full body weight because the feet still carry part of the system. This value is for one arm near the bottom of a standard push-up.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Push-Up Support (per arm)
+    source_trace:
+      method: derived
+      original_value_text: '350'
+      source_url: https://en.wikipedia.org/wiki/Push-up
+  source: https://en.wikipedia.org/wiki/Push-up
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-push-up
+    url: https://en.wikipedia.org/wiki/Push-up
+    title: Push-up
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -541,6 +752,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:force:scenario-force-human-punch
+  name: Human Punch
+  value: 2500.0
+  description: A hard human punch delivers force in the low-kilonewton range over a very short contact time. Technique, glove padding, and the compliance of the target all change the peak a lot, which is why lab measurements vary. Even so, the number belongs well above ordinary grip and push forces. The value is a representative straight-punch impact scale.
+  description_format: markdown
+  summary_short: A hard human punch delivers force in the low-kilonewton range over a very short contact time.
+  description_medium: A hard human punch delivers force in the low-kilonewton range over a very short contact time. Technique, glove padding, and the compliance of the target all change the peak a lot, which is why lab measurements vary. Even so, the number belongs well above ordinary grip and push forces. The value is a representative straight-punch impact scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Human Punch
+    source_trace:
+      method: derived
+      original_value_text: '2500'
+      source_url: https://en.wikipedia.org/wiki/Punch_(combat)
+  source: https://en.wikipedia.org/wiki/Punch_(combat)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-punch-combat
+    url: https://en.wikipedia.org/wiki/Punch_(combat)
+    title: Punch (combat)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:force:scenario-force-car-brake
   name: Car Brake
   value: 3000.0
@@ -625,6 +878,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:force:scenario-force-sledgehammer-blow
+  name: Sledgehammer Blow
+  value: 5000.0
+  description: A swung sledgehammer can deliver impact forces of several kilonewtons when it meets a rigid target. The handle flex, the steel head, and the target all share the deceleration. Demolition feels dramatic because the force is concentrated into a short stopping time. The value is a plausible peak on a solid strike.
+  description_format: markdown
+  summary_short: A swung sledgehammer can deliver impact forces of several kilonewtons when it meets a rigid target.
+  description_medium: A swung sledgehammer can deliver impact forces of several kilonewtons when it meets a rigid target. The handle flex, the steel head, and the target all share the deceleration. Demolition feels dramatic because the force is concentrated into a short stopping time. The value is a plausible peak on a solid strike.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Sledgehammer Blow
+    source_trace:
+      method: derived
+      original_value_text: '5000'
+      source_url: https://en.wikipedia.org/wiki/Sledgehammer
+  source: https://en.wikipedia.org/wiki/Sledgehammer
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sledgehammer
+    url: https://en.wikipedia.org/wiki/Sledgehammer
+    title: Sledgehammer
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:force:scenario-force-car-engine
   name: Car Engine
   value: 10000.0
@@ -667,6 +962,174 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:force:scenario-force-horse-kick
+  name: Horse Kick
+  value: 10000.0
+  description: Horse kicks can exceed ten kilonewtons, enough to break bone or dent metal panels. The hind legs are effectively spring-loaded levers powered by large muscle groups. Veterinarians and handlers take this seriously because the pulse arrives faster than most people can react. The value is a representative force scale for a direct kick.
+  description_format: markdown
+  summary_short: Horse kicks can exceed ten kilonewtons, enough to break bone or dent metal panels.
+  description_medium: Horse kicks can exceed ten kilonewtons, enough to break bone or dent metal panels. The hind legs are effectively spring-loaded levers powered by large muscle groups. Veterinarians and handlers take this seriously because the pulse arrives faster than most people can react. The value is a representative force scale for a direct kick.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Horse Kick
+    source_trace:
+      method: derived
+      original_value_text: '10000'
+      source_url: https://en.wikipedia.org/wiki/Horse
+  source: https://en.wikipedia.org/wiki/Horse
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-horse
+    url: https://en.wikipedia.org/wiki/Horse
+    title: Horse
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-african-elephant-weight
+  name: African Elephant Weight
+  value: 50000.0
+  description: An adult African elephant on Earth weighs tens of thousands of newtons, enough that ground pressure and foot design matter for every step. Despite the huge total force, broad padded feet spread it out and keep the animal from sinking into ordinary soil. This is a useful biological midpoint between human-scale loads and whales or heavy machinery. The value is for a large adult.
+  description_format: markdown
+  summary_short: An adult African elephant on Earth weighs tens of thousands of newtons, enough that ground pressure and foot design matter for every step.
+  description_medium: An adult African elephant on Earth weighs tens of thousands of newtons, enough that ground pressure and foot design matter for every step. Despite the huge total force, broad padded feet spread it out and keep the animal from sinking into ordinary soil. This is a useful biological midpoint between human-scale loads and whales or heavy machinery. The value is for a large adult.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: African Elephant Weight
+    source_trace:
+      method: derived
+      original_value_text: '50000'
+      source_url: https://en.wikipedia.org/wiki/African_bush_elephant
+  source: https://en.wikipedia.org/wiki/African_bush_elephant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-african-bush-elephant
+    url: https://en.wikipedia.org/wiki/African_bush_elephant
+    title: African bush elephant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-ge90-jet-engine
+  name: GE90 Jet Engine
+  value: 510000.0
+  description: A GE90 turbofan on a large Boeing 777 can produce thrust on the order of half a meganewton at takeoff power. That is why a twin-engine airliner can accelerate a massive aircraft down the runway and still retain engine-out margins. Fans, compressors, and turbines all exist to turn fuel flow into this axial force. The value is a round-number thrust rating for one engine.
+  description_format: markdown
+  summary_short: A GE90 turbofan on a large Boeing 777 can produce thrust on the order of half a meganewton at takeoff power.
+  description_medium: A GE90 turbofan on a large Boeing 777 can produce thrust on the order of half a meganewton at takeoff power. That is why a twin-engine airliner can accelerate a massive aircraft down the runway and still retain engine-out margins. Fans, compressors, and turbines all exist to turn fuel flow into this axial force. The value is a round-number thrust rating for one engine.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: GE90 Jet Engine
+    source_trace:
+      method: derived
+      original_value_text: '510000'
+      source_url: https://en.wikipedia.org/wiki/General_Electric_GE90
+  source: https://en.wikipedia.org/wiki/General_Electric_GE90
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-general-electric-ge90
+    url: https://en.wikipedia.org/wiki/General_Electric_GE90
+    title: General Electric GE90
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-merlin-1d-engine
+  name: Merlin 1D Engine
+  value: 845000.0
+  description: One Merlin 1D engine on a Falcon 9 produces hundreds of kilonewtons of thrust at sea level. Nine of them together give the first stage enough upward force to clear the pad with a loaded rocket. The number is for a single engine, which makes it easier to compare with aircraft engines and smaller launchers. It is a published sea-level thrust scale.
+  description_format: markdown
+  summary_short: One Merlin 1D engine on a Falcon 9 produces hundreds of kilonewtons of thrust at sea level.
+  description_medium: One Merlin 1D engine on a Falcon 9 produces hundreds of kilonewtons of thrust at sea level. Nine of them together give the first stage enough upward force to clear the pad with a loaded rocket. The number is for a single engine, which makes it easier to compare with aircraft engines and smaller launchers. It is a published sea-level thrust scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Merlin 1D Engine
+    source_trace:
+      method: derived
+      original_value_text: '845000'
+      source_url: https://en.wikipedia.org/wiki/Merlin_(rocket_engine_family)
+  source: https://en.wikipedia.org/wiki/Merlin_(rocket_engine_family)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-merlin-rocket-engine-family
+    url: https://en.wikipedia.org/wiki/Merlin_(rocket_engine_family)
+    title: Merlin (rocket engine family)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:force:scenario-force-hydraulic-press
   name: Hydraulic Press
   value: 1000000.0
@@ -691,6 +1154,132 @@ items:
   - id: src:https-en-wikipedia-org-wiki-hydraulic-press
     url: https://en.wikipedia.org/wiki/Hydraulic_press
     title: Hydraulic press
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-blue-whale-weight
+  name: Blue Whale Weight
+  value: 1500000.0
+  description: The static weight of a blue whale corresponds to well over a million newtons under Earth gravity. Water supports most of that load, which is why stranded whales suffer dangerous crushing under their own mass. This force scale helps show how biological structures rely on buoyancy. The number is for a large adult blue whale.
+  description_format: markdown
+  summary_short: The static weight of a blue whale corresponds to well over a million newtons under Earth gravity.
+  description_medium: The static weight of a blue whale corresponds to well over a million newtons under Earth gravity. Water supports most of that load, which is why stranded whales suffer dangerous crushing under their own mass. This force scale helps show how biological structures rely on buoyancy. The number is for a large adult blue whale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Blue Whale Weight
+    source_trace:
+      method: derived
+      original_value_text: '1500000'
+      source_url: https://en.wikipedia.org/wiki/Blue_whale
+  source: https://en.wikipedia.org/wiki/Blue_whale
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blue-whale
+    url: https://en.wikipedia.org/wiki/Blue_whale
+    title: Blue whale
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-boeing-747-weight
+  name: Boeing 747 Weight
+  value: 3500000.0
+  description: The weight of a fully loaded Boeing 747 on the runway reaches several meganewtons. Wings remove most of that load only after takeoff speed builds, which is why landing gear and pavement design are both serious engineering problems. It is a clean large-machine benchmark distinct from engine thrust. The value is a representative takeoff-weight force under Earth gravity.
+  description_format: markdown
+  summary_short: The weight of a fully loaded Boeing 747 on the runway reaches several meganewtons.
+  description_medium: The weight of a fully loaded Boeing 747 on the runway reaches several meganewtons. Wings remove most of that load only after takeoff speed builds, which is why landing gear and pavement design are both serious engineering problems. It is a clean large-machine benchmark distinct from engine thrust. The value is a representative takeoff-weight force under Earth gravity.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Boeing 747 Weight
+    source_trace:
+      method: derived
+      original_value_text: '3500000'
+      source_url: https://en.wikipedia.org/wiki/Boeing_747
+  source: https://en.wikipedia.org/wiki/Boeing_747
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-boeing-747
+    url: https://en.wikipedia.org/wiki/Boeing_747
+    title: Boeing 747
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-falcon-9-liftoff
+  name: Falcon 9 Liftoff
+  value: 7600000.0
+  description: A full Falcon 9 first stage at liftoff produces several meganewtons of thrust, comfortably above its weight. Guidance and throttle schedules then steer how that force turns into acceleration over the climb. Reusability only works because the engines can be throttled and restarted within this range. The value is the approximate total sea-level thrust of the nine-engine booster.
+  description_format: markdown
+  summary_short: A full Falcon 9 first stage at liftoff produces several meganewtons of thrust, comfortably above its weight.
+  description_medium: A full Falcon 9 first stage at liftoff produces several meganewtons of thrust, comfortably above its weight. Guidance and throttle schedules then steer how that force turns into acceleration over the climb. Reusability only works because the engines can be throttled and restarted within this range. The value is the approximate total sea-level thrust of the nine-engine booster.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Falcon 9 Liftoff
+    source_trace:
+      method: derived
+      original_value_text: '7600000'
+      source_url: https://en.wikipedia.org/wiki/Falcon_9
+  source: https://en.wikipedia.org/wiki/Falcon_9
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-falcon-9
+    url: https://en.wikipedia.org/wiki/Falcon_9
+    title: Falcon 9
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -775,6 +1364,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-rocket-engine
     url: https://en.wikipedia.org/wiki/Rocket_engine
     title: Rocket engine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-force-yaml
+    url: repo://dataset/raw/legacy_yaml/force.yaml
+    title: dataset/raw/legacy_yaml/force.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/force.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:force:scenario-force-saturn-v-first-stage
+  name: Saturn V First Stage
+  value: 35000000.0
+  description: Saturn V remains one of the great force benchmarks of human engineering, with first-stage thrust in the tens of meganewtons. That force had to act through plumbing, turbomachinery, and structure while the rocket vibrated and shed mass. It is the kind of number that makes launch pads feel like industrial volcanoes. The value is the published first-stage thrust scale.
+  description_format: markdown
+  summary_short: Saturn V remains one of the great force benchmarks of human engineering, with first-stage thrust in the tens of meganewtons.
+  description_medium: Saturn V remains one of the great force benchmarks of human engineering, with first-stage thrust in the tens of meganewtons. That force had to act through plumbing, turbomachinery, and structure while the rocket vibrated and shed mass. It is the kind of number that makes launch pads feel like industrial volcanoes. The value is the published first-stage thrust scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/force.yaml
+    legacy_item_name: Saturn V First Stage
+    source_trace:
+      method: derived
+      original_value_text: '35000000'
+      source_url: https://en.wikipedia.org/wiki/Saturn_V
+  source: https://en.wikipedia.org/wiki/Saturn_V
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-saturn-v
+    url: https://en.wikipedia.org/wiki/Saturn_V
+    title: Saturn V
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

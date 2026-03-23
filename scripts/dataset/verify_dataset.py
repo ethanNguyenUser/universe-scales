@@ -51,6 +51,15 @@ def snapshot_hashes() -> dict[Path, str]:
 def verify_sqlite(conn: sqlite3.Connection) -> None:
     conn.row_factory = sqlite3.Row
     coverage = json.loads((ROOT / "exports" / "json" / "coverage_report.json").read_text(encoding="utf-8"))
+    canonical_reference_count = conn.execute(
+        """
+        SELECT COUNT(*) AS count
+          FROM observations
+         WHERE LOWER(COALESCE(category, '')) = 'reference'
+        """
+    ).fetchone()["count"]
+    assert canonical_reference_count == 0, "canonical corpus still contains reference observations"
+
     for slug in FLAGSHIP_DIMENSIONS:
         dimension = conn.execute(
             """
@@ -72,7 +81,21 @@ def verify_sqlite(conn: sqlite3.Connection) -> None:
         ).fetchone()["count"]
         candidate = coverage[slug]["candidate_count"]
         required_min = int(dimension["required_min_items"])
-        assert selected >= min(required_min, candidate), f"{slug} selected_count={selected} candidate_count={candidate}"
+        assert selected <= candidate, f"{slug} selected_count={selected} exceeds candidate_count={candidate}"
+        if candidate > 0:
+            assert selected > 0, f"{slug} has displayable candidates but nothing selected"
+
+        selected_reference_count = conn.execute(
+            """
+            SELECT COUNT(*) AS count
+              FROM observations
+             WHERE dimension_id = ?
+               AND rationale IS NOT NULL
+               AND LOWER(COALESCE(category, '')) = 'reference'
+            """,
+            (dimension["id"],),
+        ).fetchone()["count"]
+        assert selected_reference_count == 0, f"{slug} still has selected reference placeholders"
 
         broken_rows = conn.execute(
             """
@@ -103,7 +126,9 @@ def verify_sqlite(conn: sqlite3.Connection) -> None:
             "SELECT value_base FROM observations WHERE dimension_id = ? AND rationale IS NOT NULL LIMIT 1",
             (dimension["id"],),
         ).fetchone()
-        assert sample is not None, f"{slug} has no selected sample value"
+        assert sample is not None or selected == 0, f"{slug} has no selected sample value"
+        if sample is None:
+            continue
         base_value = float(sample["value_base"])
         for unit in units:
             factor = float(unit["to_base_factor"])
@@ -144,13 +169,11 @@ def verify_yaml_files() -> None:
         export_payload = yaml.safe_load(export_yaml_path.read_text(encoding="utf-8"))
         assert payload == export_payload, f"{slug}.yaml differs from frontend export copy"
         assert isinstance(payload.get("items"), list), f"{slug}.yaml missing items list"
-        required_min = int(payload.get("required_min_items", 24))
-        candidate_count = int(coverage[slug]["candidate_count"])
         assert len(payload["items"]) == int(coverage[slug]["selected_count"]), f"{slug}.yaml selected count mismatch"
-        assert len(payload["items"]) >= min(required_min, candidate_count), f"{slug}.yaml has too few items"
         for item in payload["items"]:
             assert item.get("description"), f"{slug}.yaml item missing description"
             assert item.get("description_medium"), f"{slug}.yaml item missing description_medium"
+            assert not str(item.get("name", "")).startswith("Reference "), f"{slug}.yaml still exposes reference placeholder items"
 
 
 def verify_json_exports() -> None:

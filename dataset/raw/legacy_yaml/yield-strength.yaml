@@ -86,6 +86,81 @@ items:
   name: Black Hole Horizon
   source: https://en.wikipedia.org/wiki/Black_hole
   value: 1e30
+- description: >-
+    Water ice can support only a few megapascals before it begins to flow or fracture permanently under load, which is why glaciers creep on long timescales and skate blades bite into a thin stressed surface. Temperature matters enormously here; colder ice is stronger. The value is for polycrystalline ice near common terrestrial conditions rather than the deep interiors of icy moons.
+  name: Ice
+  source: https://en.wikipedia.org/wiki/Ice
+  value: 5e6
+- description: >-
+    Common polyethylene yields at only a few tens of megapascals, which is why it makes flexible bottles and films instead of structural beams. Molecular weight, branching, and crystallinity all shift the exact threshold. Designers exploit the easy yielding to absorb impacts without brittle fracture. The value is representative for high-density polyethylene.
+  name: Polyethylene
+  source: https://en.wikipedia.org/wiki/Polyethylene
+  value: 2e7
+- description: >-
+    Fired clay bricks tolerate high compression but very little ductile deformation; treating their compressive strength as a yield proxy places them around this stress scale. Masonry works because loads are kept mostly compressive and well distributed. Mortar joints and flaws dominate real walls more than the brick material alone. The value is a representative engineering-grade brick scale.
+  name: Brick
+  source: https://en.wikipedia.org/wiki/Brick
+  value: 1.5e7
+- description: >-
+    Lead yields at very low stress for a metal, which is why it deforms so readily under pressure and has long been useful in seals and radiation shielding where shape conformity matters. The softness comes from metallic bonding in a crystal that slips easily. Room-temperature creep is already relevant. The value is a common handbook number for pure lead.
+  name: Lead
+  source: https://en.wikipedia.org/wiki/Lead
+  value: 1.8e7
+- description: >-
+    ABS plastic sits in the middle ground between tough engineering polymers and disposable consumer plastics. It can take a fair amount of stress before it yields permanently, which is why it appears in housings, toys, and protective shells. Print orientation changes the number for 3D-printed parts, but molded material is more consistent. The value here is for bulk ABS at room temperature.
+  name: ABS Plastic
+  source: https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene
+  value: 4e7
+- description: >-
+    PLA is relatively stiff for a commodity plastic and yields at a somewhat higher stress than ABS in many room-temperature tests. That is part of why desktop 3D prints in PLA can feel crisp and rigid even when they remain somewhat brittle. Heat softens it quickly, however. The value is a representative yield stress for solid PLA.
+  name: PLA Plastic
+  source: https://en.wikipedia.org/wiki/Polylactic_acid
+  value: 6e7
+- description: >-
+    Bamboo carries impressive stress along the grain because its fibers are aligned for structural efficiency. Nature effectively built a lightweight composite column long before humans named the concept. Moisture, node spacing, and species change the exact figure. The value is for mature structural bamboo loaded along the fibers.
+  name: Bamboo
+  source: https://en.wikipedia.org/wiki/Bamboo
+  value: 8e7
+- description: >-
+    Cast iron is strong in compression but comparatively unforgiving in tension, with little plastic range before fracture. Even so, engineering tables often place its yield-like limit in the low hundreds of megapascals for rough comparison. Historic bridges and machine frames relied on its stiffness and castability. The value here is a representative gray-iron scale.
+  name: Cast Iron
+  source: https://en.wikipedia.org/wiki/Cast_iron
+  value: 1.3e8
+- description: >-
+    Magnesium alloys are lighter than aluminum and can still reach respectable yield stresses for automotive and aerospace weight savings. Corrosion and flammability concerns mean design margins stay conservative. Their appeal is specific strength rather than absolute strength. The value is for a common structural magnesium alloy.
+  name: Magnesium Alloy
+  source: https://en.wikipedia.org/wiki/Magnesium_alloy
+  value: 1.6e8
+- description: >-
+    Brass yields around a couple hundred megapascals depending on composition and temper, making it easy to machine and form into valves, fittings, and musical hardware. The same workability that manufacturers love also explains why brass is not used where high-strength steels dominate. Alloying with zinc tunes the tradeoff. The number is a representative cartridge-brass scale.
+  name: Brass
+  source: https://en.wikipedia.org/wiki/Brass
+  value: 2e8
+- description: >-
+    Austenitic stainless steels like 304 trade very high yield for corrosion resistance and ductility, landing near this range in the annealed condition. Cold work can push them much higher. Kitchens, chemical plants, and architecture all live in this regime. The value here is a common room-temperature figure for 304 stainless.
+  name: Stainless Steel (304)
+  source: https://en.wikipedia.org/wiki/SAE_304_stainless_steel
+  value: 2.15e8
+- description: >-
+    High-performance nickel superalloys such as Inconel 718 keep their strength at temperatures where ordinary steels soften badly. That is why turbine disks, rocket hardware, and hot-section fasteners lean on them. The metallurgy is more complicated than the round number suggests, but the design consequence is simple: they yield late. The value is a representative room-temperature yield strength.
+  name: Inconel 718
+  source: https://en.wikipedia.org/wiki/Inconel
+  value: 1e9
+- description: >-
+    Spider dragline silk is one of nature’s most impressive fibers, combining high strength with extensibility in a protein-based material. Its yield-like onset depends on humidity and exact species, but it clearly belongs in the advanced-materials range rather than the textile one. Researchers chase synthetic analogues for the same reason. The value is a representative tensile yield scale.
+  name: Spider Silk
+  source: https://en.wikipedia.org/wiki/Spider_silk
+  value: 1.1e9
+- description: >-
+    Ultra-high-molecular-weight polyethylene fibers sold as Dyneema or Spectra achieve multi-gigapascal strength by aligning long polymer chains. On a stress scale they compete with metals while remaining light enough to float. Ballistic protection and high-performance ropes make direct use of this. The value represents a high-grade fiber rather than the bulk plastic.
+  name: Dyneema Fiber
+  source: https://en.wikipedia.org/wiki/Ultra-high-molecular-weight_polyethylene
+  value: 3e9
+- description: >-
+    Silicon carbide is a very hard ceramic that can sustain enormous compressive stress with little permanent deformation before fracture. In engineering practice that puts its effective yield-like limit in the gigapascal range. The same bonding that gives it abrasive hardness also makes it useful in armor and high-temperature applications. The value is a representative compressive strength scale.
+  name: Silicon Carbide
+  source: https://en.wikipedia.org/wiki/Silicon_carbide
+  value: 3e9
 units:
 - conversion_factor: 1
   description: Pascals measure stress as force per unit area and serve as the base unit for yield strength. Reporting in pascals keeps comparisons across metals, polymers, and tissues consistent. Engineers usually think in megapascals for convenience. All item values are stored in pascals before conversion.

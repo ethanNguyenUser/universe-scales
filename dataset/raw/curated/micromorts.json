@@ -1,0 +1,353 @@
+[
+  {
+    "canonical_name": "One micromort",
+    "category": "reference",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Micromort",
+    "subject_key": "scenario:micromorts:one-micromort",
+    "subject_type": "scenario",
+    "summary": "The unit anchor itself.",
+    "value_base": 1.0,
+    "value_type": "measured",
+    "source_value_text": "1",
+    "source_unit": "uMort",
+    "source_basis": "Definition: a one-in-a-million death risk."
+  },
+  {
+    "canonical_name": "Commercial airline trip across the US",
+    "category": "travel",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Aviation_safety",
+    "subject_key": "scenario:micromorts:commercial-airline-trip-across-the-us",
+    "subject_type": "scenario",
+    "summary": "Modern air travel sits below the one-micromort line for a trip.",
+    "value_base": 0.1,
+    "value_type": "derived",
+    "source_value_text": "0.1 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Representative commercial-flight fatality risk per trip is far below one micromort.",
+    "qualifiers": {
+      "assumption": "single trip"
+    }
+  },
+  {
+    "canonical_name": "100 miles by car",
+    "category": "travel",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Micromort",
+    "subject_key": "scenario:micromorts:100-miles-by-car",
+    "subject_type": "scenario",
+    "summary": "Car travel gives a useful everyday-risk benchmark.",
+    "value_base": 1.0,
+    "value_type": "derived",
+    "source_value_text": "1 uMort",
+    "source_unit": "uMort",
+    "source_basis": "A commonly cited rough rule of thumb is about one micromort per 100 or 230 miles depending on country and era.",
+    "qualifiers": {
+      "assumption": "order-of-magnitude travel estimate"
+    }
+  },
+  {
+    "canonical_name": "Long car commute",
+    "category": "travel",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Traffic_collision",
+    "subject_key": "scenario:micromorts:long-car-commute",
+    "subject_type": "scenario",
+    "summary": "Commuting accumulates risk slowly but non-negligibly.",
+    "value_base": 0.3,
+    "value_type": "derived",
+    "source_value_text": "0.3 uMort",
+    "source_unit": "uMort",
+    "source_basis": "A single long commute is a fraction of a car-travel micromort benchmark.",
+    "qualifiers": {
+      "assumption": "one commute"
+    }
+  },
+  {
+    "canonical_name": "Bicycle commute",
+    "category": "travel",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Bicycle_safety",
+    "subject_key": "scenario:micromorts:bicycle-commute",
+    "subject_type": "scenario",
+    "summary": "Cycling lives in the sub-to-low-micromort band for a typical ride.",
+    "value_base": 0.5,
+    "value_type": "derived",
+    "source_value_text": "0.5 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Cycling is usually riskier than flying but lower than motorcycling.",
+    "qualifiers": {
+      "assumption": "one commute"
+    }
+  },
+  {
+    "canonical_name": "Motorcycle commute",
+    "category": "travel",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Motorcycle_safety",
+    "subject_key": "scenario:micromorts:motorcycle-commute",
+    "subject_type": "scenario",
+    "summary": "Motorcycles jump several micromorts per trip.",
+    "value_base": 5.0,
+    "value_type": "derived",
+    "source_value_text": "5 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Motorcycling carries materially higher fatality risk than car travel.",
+    "qualifiers": {
+      "assumption": "one commute"
+    }
+  },
+  {
+    "canonical_name": "Scuba dive",
+    "category": "sports",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Scuba_diving_safety",
+    "subject_key": "scenario:micromorts:scuba-dive",
+    "subject_type": "scenario",
+    "summary": "Scuba is a classic moderate-risk leisure benchmark.",
+    "value_base": 5.0,
+    "value_type": "derived",
+    "source_value_text": "5 uMort",
+    "source_unit": "uMort",
+    "source_basis": "A representative recreational-dive fatality risk.",
+    "qualifiers": {
+      "assumption": "one dive"
+    }
+  },
+  {
+    "canonical_name": "Skydiving jump",
+    "category": "sports",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Skydiving",
+    "subject_key": "scenario:micromorts:skydiving-jump",
+    "subject_type": "scenario",
+    "summary": "Parachuting is a memorable midscale risk example.",
+    "value_base": 8.0,
+    "value_type": "derived",
+    "source_value_text": "8 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Skydiving is often quoted around several micromorts per jump.",
+    "qualifiers": {
+      "assumption": "one jump"
+    }
+  },
+  {
+    "canonical_name": "General anesthesia for elective surgery",
+    "category": "health",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/General_anaesthesia",
+    "subject_key": "scenario:micromorts:general-anesthesia-for-elective-surgery",
+    "subject_type": "scenario",
+    "summary": "Anesthesia is a well-known medical low-double-digit micromort event.",
+    "value_base": 10.0,
+    "value_type": "derived",
+    "source_value_text": "10 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Modern anesthesia risk is low but not zero.",
+    "qualifiers": {
+      "assumption": "healthy elective patient"
+    }
+  },
+  {
+    "canonical_name": "Giving birth in a high-income country",
+    "category": "health",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Maternal_mortality",
+    "subject_key": "scenario:micromorts:giving-birth-in-a-high-income-country",
+    "subject_type": "scenario",
+    "summary": "Childbirth is one of the clearest high-stakes everyday medical risks.",
+    "value_base": 170.0,
+    "value_type": "derived",
+    "source_value_text": "170 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Maternal mortality per birth in rich countries is low in percent terms but large in micromorts.",
+    "qualifiers": {
+      "assumption": "per birth"
+    }
+  },
+  {
+    "canonical_name": "One-in-100,000 risk",
+    "category": "reference",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Micromort",
+    "subject_key": "scenario:micromorts:one-in-100-000-risk",
+    "subject_type": "scenario",
+    "summary": "A small but nontrivial risk is already a double-digit micromort event.",
+    "value_base": 10.0,
+    "value_type": "derived",
+    "source_value_text": "1/100,000",
+    "source_unit": "uMort",
+    "source_basis": "Reference conversion from probability to micromorts.",
+    "derivation_note": "1e-5 x 1e6"
+  },
+  {
+    "canonical_name": "One-in-10,000 risk",
+    "category": "reference",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Micromort",
+    "subject_key": "scenario:micromorts:one-in-10-000-risk",
+    "subject_type": "scenario",
+    "summary": "Ten-thousandth-level risks matter in safety analysis.",
+    "value_base": 100.0,
+    "value_type": "derived",
+    "source_value_text": "1/10,000",
+    "source_unit": "uMort",
+    "source_basis": "Reference conversion from probability to micromorts.",
+    "derivation_note": "1e-4 x 1e6"
+  },
+  {
+    "canonical_name": "One-in-1,000 risk",
+    "category": "reference",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Micromort",
+    "subject_key": "scenario:micromorts:one-in-1-000-risk",
+    "subject_type": "scenario",
+    "summary": "A one-in-a-thousand risk is serious by everyday standards.",
+    "value_base": 1000.0,
+    "value_type": "derived",
+    "source_value_text": "1/1,000",
+    "source_unit": "uMort",
+    "source_basis": "Reference conversion from probability to micromorts.",
+    "derivation_note": "1e-3 x 1e6"
+  },
+  {
+    "canonical_name": "BASE jump",
+    "category": "sports",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/BASE_jumping",
+    "subject_key": "scenario:micromorts:base-jump",
+    "subject_type": "scenario",
+    "summary": "An extreme-sport high-risk anchor.",
+    "value_base": 430.0,
+    "value_type": "derived",
+    "source_value_text": "430 uMort",
+    "source_unit": "uMort",
+    "source_basis": "BASE jumping is often cited as dramatically riskier than ordinary skydiving.",
+    "qualifiers": {
+      "assumption": "one jump"
+    }
+  },
+  {
+    "canonical_name": "Everest summit attempt from base camp",
+    "category": "sports",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Mount_Everest",
+    "subject_key": "scenario:micromorts:everest-summit-attempt-from-base-camp",
+    "subject_type": "scenario",
+    "summary": "High-altitude mountaineering belongs in the enormous-risk tail.",
+    "value_base": 37000.0,
+    "value_type": "derived",
+    "source_value_text": "37,000 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Summit attempts have historically carried percent-level fatality risk.",
+    "qualifiers": {
+      "assumption": "one summit attempt"
+    }
+  },
+  {
+    "canonical_name": "A major surgery",
+    "category": "health",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Surgery",
+    "subject_key": "scenario:micromorts:a-major-surgery",
+    "subject_type": "scenario",
+    "summary": "Surgery is a standard hundreds-scale medical risk benchmark.",
+    "value_base": 500.0,
+    "value_type": "derived",
+    "source_value_text": "500 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Major surgery often carries a mortality risk of hundreds of micromorts.",
+    "qualifiers": {
+      "assumption": "single major procedure"
+    }
+  },
+  {
+    "canonical_name": "One pack of cigarettes",
+    "category": "health",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Tobacco_smoking",
+    "subject_key": "scenario:micromorts:one-pack-of-cigarettes",
+    "subject_type": "scenario",
+    "summary": "Tiny repeated risks accumulate substantially over time.",
+    "value_base": 0.5,
+    "value_type": "derived",
+    "source_value_text": "0.5 uMort equivalent",
+    "source_unit": "uMort",
+    "source_basis": "Mortality risk from smoking is sometimes translated into very small per-pack increments.",
+    "qualifiers": {
+      "assumption": "order-of-magnitude risk translation"
+    }
+  },
+  {
+    "canonical_name": "Running a marathon",
+    "category": "sports",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Marathon",
+    "subject_key": "scenario:micromorts:running-a-marathon",
+    "subject_type": "scenario",
+    "summary": "Endurance sports can be surprisingly low risk despite their intensity.",
+    "value_base": 7.0,
+    "value_type": "derived",
+    "source_value_text": "7 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Marathon mortality is low but measurable.",
+    "qualifiers": {
+      "assumption": "per event"
+    }
+  },
+  {
+    "canonical_name": "Scenic helicopter ride",
+    "category": "travel",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Helicopter",
+    "subject_key": "scenario:micromorts:scenic-helicopter-ride",
+    "subject_type": "scenario",
+    "summary": "Aviation risk depends strongly on the flight type.",
+    "value_base": 9.0,
+    "value_type": "derived",
+    "source_value_text": "9 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Small-aircraft and helicopter operations are riskier than large commercial jets.",
+    "qualifiers": {
+      "assumption": "per flight"
+    }
+  },
+  {
+    "canonical_name": "Deep cave dive",
+    "category": "sports",
+    "dimension": "micromorts",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Cave_diving",
+    "subject_key": "scenario:micromorts:deep-cave-dive",
+    "subject_type": "scenario",
+    "summary": "Specialized technical diving belongs well above ordinary scuba.",
+    "value_base": 100.0,
+    "value_type": "derived",
+    "source_value_text": "100 uMort",
+    "source_unit": "uMort",
+    "source_basis": "Extreme environments raise already nontrivial diving risk sharply.",
+    "qualifiers": {
+      "assumption": "per dive"
+    }
+  }
+]

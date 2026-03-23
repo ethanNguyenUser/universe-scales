@@ -1,0 +1,1816 @@
+dimension: scoville
+base_unit: scoville_heat_units
+dimension_description: Scoville heat units are a familiar rough scale for pungency from capsaicinoids. They are not a fundamental physical unit, but they are pedagogically useful for comparing mild peppers, hot sauces, pepper sprays, and nearly pure capsaicin. Reported values often come as ranges, so the entries here use representative central values.
+related_resources:
+- name: Scoville scale
+  url: https://en.wikipedia.org/wiki/Scoville_scale
+- name: Capsaicin
+  url: https://en.wikipedia.org/wiki/Capsaicin
+show_limitations: true
+units:
+- name: Scoville heat units
+  symbol: SHU
+  conversion_factor: 1.0
+  description: Scoville heat units are the canonical storage unit for this pungency scale.
+- name: thousand Scoville heat units
+  symbol: kSHU
+  conversion_factor: 0.001
+  description: Thousands of SHU are useful for common peppers and sauces.
+- name: million Scoville heat units
+  symbol: MSHU
+  conversion_factor: 1.0e-06
+  description: Millions of SHU are useful for extreme peppers and pepper sprays.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: senses
+frontend_group_label: Senses & Perception
+frontend_order: 490
+items:
+- id: obs:scoville:entity-bell-pepper-scoville
+  name: Sweet bell pepper
+  value: 1.0
+  description: 'Sweet peppers are effectively the zero point of everyday spicy food. Source-side figure: `0 to 100 SHU` for Representative upper-end Scoville value for bell pepper.'
+  description_format: markdown
+  summary_short: Sweet peppers are effectively the zero point of everyday spicy food.
+  description_medium: 'Sweet peppers are effectively the zero point of everyday spicy food. Source-side figure: `0 to 100 SHU` for Representative upper-end Scoville value for bell pepper.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sweet bell pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Representative upper-end Scoville value for bell pepper.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Bell_pepper
+      source_value_text: 0 to 100 SHU
+  source: https://en.wikipedia.org/wiki/Bell_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bell-pepper
+    url: https://en.wikipedia.org/wiki/Bell_pepper
+    title: Bell pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-pimento-scoville
+  name: Pimento pepper
+  value: 100.0
+  description: 'A very mild pepper in the low hundreds of SHU. Source-side figure: `100 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A very mild pepper in the low hundreds of SHU.
+  description_medium: 'A very mild pepper in the low hundreds of SHU. Source-side figure: `100 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pimento pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '100.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Pimiento
+      source_value_text: 100 SHU
+  source: https://en.wikipedia.org/wiki/Pimiento
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pimiento
+    url: https://en.wikipedia.org/wiki/Pimiento
+    title: Pimiento
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-banana-pepper-scoville
+  name: Banana pepper
+  value: 500.0
+  description: 'Banana peppers sit in the mild range. Source-side figure: `500 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Banana peppers sit in the mild range.
+  description_medium: 'Banana peppers sit in the mild range. Source-side figure: `500 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Banana pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '500.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Banana_pepper
+      source_value_text: 500 SHU
+  source: https://en.wikipedia.org/wiki/Banana_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-banana-pepper
+    url: https://en.wikipedia.org/wiki/Banana_pepper
+    title: Banana pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-anaheim-pepper-scoville
+  name: Anaheim pepper
+  value: 1000.0
+  description: 'A mild chili slightly hotter than a sweet pepper. Source-side figure: `1000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A mild chili slightly hotter than a sweet pepper.
+  description_medium: 'A mild chili slightly hotter than a sweet pepper. Source-side figure: `1000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Anaheim pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Anaheim_pepper
+      source_value_text: 1000 SHU
+  source: https://en.wikipedia.org/wiki/Anaheim_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-anaheim-pepper
+    url: https://en.wikipedia.org/wiki/Anaheim_pepper
+    title: Anaheim pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-new-mexico-chile-scoville
+  name: New Mexico chile
+  value: 1250.0
+  description: 'New Mexico chiles are usually mild enough to sit near the low end of the scale. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `1,000-1,500 SHU` for Representative Scoville range midpoint for New Mexico chile.'
+  description_format: markdown
+  summary_short: New Mexico chiles are usually mild enough to sit near the low end of the scale.
+  description_medium: 'New Mexico chiles are usually mild enough to sit near the low end of the scale. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `1,000-1,500 SHU` for Representative Scoville range midpoint for New Mexico chile.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: New Mexico chile
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1250.0'
+      source_basis: Representative Scoville range midpoint for New Mexico chile.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/New_Mexico_chile
+      source_value_text: 1,000-1,500 SHU
+  source: https://en.wikipedia.org/wiki/New_Mexico_chile
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-new-mexico-chile
+    url: https://en.wikipedia.org/wiki/New_Mexico_chile
+    title: New Mexico chile
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-ancho-pepper-scoville
+  name: Ancho pepper
+  value: 1500.0
+  description: 'Ancho chiles are dried poblano peppers with a mild heat level. Assumes `range midpoint`. Source-side figure: `1,000-2,000 SHU` for Representative Scoville range midpoint for ancho chili.'
+  description_format: markdown
+  summary_short: Ancho chiles are dried poblano peppers with a mild heat level.
+  description_medium: 'Ancho chiles are dried poblano peppers with a mild heat level. Assumes `range midpoint`. Source-side figure: `1,000-2,000 SHU` for Representative Scoville range midpoint for ancho chili.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ancho pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1500.0'
+      source_basis: Representative Scoville range midpoint for ancho chili.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Ancho_chili_pepper
+      source_value_text: 1,000-2,000 SHU
+  source: https://en.wikipedia.org/wiki/Ancho_chili_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ancho-chili-pepper
+    url: https://en.wikipedia.org/wiki/Ancho_chili_pepper
+    title: Ancho chili pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-harissa-scoville
+  name: Harissa
+  value: 1500.0
+  description: 'Harissa is a North African chili paste that usually lands in the mild-to-moderate range. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 1,500 SHU` for Representative Scoville value for harissa.'
+  description_format: markdown
+  summary_short: Harissa is a North African chili paste that usually lands in the mild-to-moderate range.
+  description_medium: 'Harissa is a North African chili paste that usually lands in the mild-to-moderate range. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 1,500 SHU` for Representative Scoville value for harissa.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Harissa
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1500.0'
+      source_basis: Representative Scoville value for harissa.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Harissa
+      source_value_text: about 1,500 SHU
+  source: https://en.wikipedia.org/wiki/Harissa
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-harissa
+    url: https://en.wikipedia.org/wiki/Harissa
+    title: Harissa
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: representative value
+    measurement: sauce heat
+- id: obs:scoville:entity-poblano-scoville
+  name: Poblano pepper
+  value: 1500.0
+  description: 'Poblanos are often only mildly pungent. Source-side figure: `1500 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Poblanos are often only mildly pungent.
+  description_medium: 'Poblanos are often only mildly pungent. Source-side figure: `1500 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Poblano pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1500.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Poblano
+      source_value_text: 1500 SHU
+  source: https://en.wikipedia.org/wiki/Poblano
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-poblano
+    url: https://en.wikipedia.org/wiki/Poblano
+    title: Poblano
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-pasilla-pepper-scoville
+  name: Pasilla pepper
+  value: 1750.0
+  description: 'Pasilla chiles sit in the mild end of the dried-pepper spectrum. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `1,000-2,500 SHU` for Representative Scoville range midpoint for pasilla chili.'
+  description_format: markdown
+  summary_short: Pasilla chiles sit in the mild end of the dried-pepper spectrum.
+  description_medium: 'Pasilla chiles sit in the mild end of the dried-pepper spectrum. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `1,000-2,500 SHU` for Representative Scoville range midpoint for pasilla chili.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pasilla pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1750.0'
+      source_basis: Representative Scoville range midpoint for pasilla chili.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Pasilla
+      source_value_text: 1,000-2,500 SHU
+  source: https://en.wikipedia.org/wiki/Pasilla
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pasilla
+    url: https://en.wikipedia.org/wiki/Pasilla
+    title: Pasilla
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-sambal-oelek-scoville
+  name: Sambal oelek
+  value: 2000.0
+  description: 'Sambal oelek is a chili paste that can vary, but is generally much milder than superhots. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 2,000 SHU` for Representative Scoville value for sambal oelek.'
+  description_format: markdown
+  summary_short: Sambal oelek is a chili paste that can vary, but is generally much milder than superhots.
+  description_medium: 'Sambal oelek is a chili paste that can vary, but is generally much milder than superhots. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 2,000 SHU` for Representative Scoville value for sambal oelek.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sambal oelek
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '2000.0'
+      source_basis: Representative Scoville value for sambal oelek.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Sambal
+      source_value_text: about 2,000 SHU
+  source: https://en.wikipedia.org/wiki/Sambal
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sambal
+    url: https://en.wikipedia.org/wiki/Sambal
+    title: Sambal
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: representative value
+    measurement: sauce heat
+- id: obs:scoville:entity-sriracha-scoville
+  name: Sriracha sauce
+  value: 2200.0
+  description: 'A popular hot sauce that still sits well below truly hot chiles. Source-side figure: `2200 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A popular hot sauce that still sits well below truly hot chiles.
+  description_medium: 'A popular hot sauce that still sits well below truly hot chiles. Source-side figure: `2200 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sriracha sauce
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '2200.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Sriracha_sauce
+      source_value_text: 2200 SHU
+  source: https://en.wikipedia.org/wiki/Sriracha_sauce
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sriracha-sauce
+    url: https://en.wikipedia.org/wiki/Sriracha_sauce
+    title: Sriracha sauce
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-cascabel-pepper-scoville
+  name: Cascabel pepper
+  value: 2250.0
+  description: 'Cascabel chiles bring a round, nutty heat that stays relatively gentle. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `1,500-3,000 SHU` for Representative Scoville range midpoint for cascabel chili.'
+  description_format: markdown
+  summary_short: Cascabel chiles bring a round, nutty heat that stays relatively gentle.
+  description_medium: 'Cascabel chiles bring a round, nutty heat that stays relatively gentle. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `1,500-3,000 SHU` for Representative Scoville range midpoint for cascabel chili.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cascabel pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '2250.0'
+      source_basis: Representative Scoville range midpoint for cascabel chili.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Cascabel_chili
+      source_value_text: 1,500-3,000 SHU
+  source: https://en.wikipedia.org/wiki/Cascabel_chili
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cascabel-chili
+    url: https://en.wikipedia.org/wiki/Cascabel_chili
+    title: Cascabel chili
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-guajillo-pepper-scoville
+  name: Guajillo pepper
+  value: 3750.0
+  description: 'Guajillo chiles are a common mild-to-moderate dried pepper in Mexican cooking. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `2,500-5,000 SHU` for Representative Scoville range midpoint for guajillo chili.'
+  description_format: markdown
+  summary_short: Guajillo chiles are a common mild-to-moderate dried pepper in Mexican cooking.
+  description_medium: 'Guajillo chiles are a common mild-to-moderate dried pepper in Mexican cooking. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `2,500-5,000 SHU` for Representative Scoville range midpoint for guajillo chili.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Guajillo pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '3750.0'
+      source_basis: Representative Scoville range midpoint for guajillo chili.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Guajillo_chili
+      source_value_text: 2,500-5,000 SHU
+  source: https://en.wikipedia.org/wiki/Guajillo_chili
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-guajillo-chili
+    url: https://en.wikipedia.org/wiki/Guajillo_chili
+    title: Guajillo chili
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-jalapeno-scoville
+  name: Jalapeno pepper
+  value: 5000.0
+  description: 'A jalapeno is a canonical entry-level hot pepper. Source-side figure: `5000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A jalapeno is a canonical entry-level hot pepper.
+  description_medium: 'A jalapeno is a canonical entry-level hot pepper. Source-side figure: `5000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Jalapeno pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '5000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Jalape%C3%B1o
+      source_value_text: 5000 SHU
+  source: https://en.wikipedia.org/wiki/Jalape%C3%B1o
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jalape-c3-b1o
+    url: https://en.wikipedia.org/wiki/Jalape%C3%B1o
+    title: Jalapeño
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-piri-piri-sauce-scoville
+  name: Piri piri sauce
+  value: 5000.0
+  description: 'Piri piri sauces vary, but they are usually hotter than standard chili sauces. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 5,000 SHU` for Representative Scoville value for piri piri sauce.'
+  description_format: markdown
+  summary_short: Piri piri sauces vary, but they are usually hotter than standard chili sauces.
+  description_medium: 'Piri piri sauces vary, but they are usually hotter than standard chili sauces. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 5,000 SHU` for Representative Scoville value for piri piri sauce.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Piri piri sauce
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '5000.0'
+      source_basis: Representative Scoville value for piri piri sauce.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Piri_piri
+      source_value_text: about 5,000 SHU
+  source: https://en.wikipedia.org/wiki/Piri_piri
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-piri-piri
+    url: https://en.wikipedia.org/wiki/Piri_piri
+    title: Piri piri
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: representative value
+    measurement: sauce heat
+- id: obs:scoville:entity-tabasco-sauce-scoville
+  name: Tabasco sauce
+  value: 5000.0
+  description: 'Classic Tabasco sauce lives in the same broad heat region as jalapenos. Source-side figure: `5000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Classic Tabasco sauce lives in the same broad heat region as jalapenos.
+  description_medium: 'Classic Tabasco sauce lives in the same broad heat region as jalapenos. Source-side figure: `5000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tabasco sauce
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '5000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Tabasco_sauce
+      source_value_text: 5000 SHU
+  source: https://en.wikipedia.org/wiki/Tabasco_sauce
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tabasco-sauce
+    url: https://en.wikipedia.org/wiki/Tabasco_sauce
+    title: Tabasco sauce
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-chipotle-scoville
+  name: Chipotle pepper
+  value: 8000.0
+  description: 'Chipotle peppers are smoked ripe jalapenos and land in the low-thousands range. Source-side figure: `8000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Chipotle peppers are smoked ripe jalapenos and land in the low-thousands range.
+  description_medium: 'Chipotle peppers are smoked ripe jalapenos and land in the low-thousands range. Source-side figure: `8000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chipotle pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '8000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Chipotle
+      source_value_text: 8000 SHU
+  source: https://en.wikipedia.org/wiki/Chipotle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chipotle
+    url: https://en.wikipedia.org/wiki/Chipotle
+    title: Chipotle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-fresno-pepper-scoville
+  name: Fresno pepper
+  value: 10000.0
+  description: 'A medium-hot chili that bridges jalapenos and serranos. Source-side figure: `10000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A medium-hot chili that bridges jalapenos and serranos.
+  description_medium: 'A medium-hot chili that bridges jalapenos and serranos. Source-side figure: `10000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fresno pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '10000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Fresno_chili
+      source_value_text: 10000 SHU
+  source: https://en.wikipedia.org/wiki/Fresno_chili
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-fresno-chili
+    url: https://en.wikipedia.org/wiki/Fresno_chili
+    title: Fresno chili
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-peri-peri-sauce-scoville
+  name: Peri-peri sauce
+  value: 10000.0
+  description: 'Peri-peri sauces range widely, but a moderate bottle sits well above ordinary condiments. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 10,000 SHU` for Representative Scoville value for peri-peri sauce.'
+  description_format: markdown
+  summary_short: Peri-peri sauces range widely, but a moderate bottle sits well above ordinary condiments.
+  description_medium: 'Peri-peri sauces range widely, but a moderate bottle sits well above ordinary condiments. Here the quantity refers to `sauce heat`. Assumes `representative value`. Source-side figure: `about 10,000 SHU` for Representative Scoville value for peri-peri sauce.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Peri-peri sauce
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '10000.0'
+      source_basis: Representative Scoville value for peri-peri sauce.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Peri-peri
+      source_value_text: about 10,000 SHU
+  source: https://en.wikipedia.org/wiki/Peri-peri
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-peri-peri
+    url: https://en.wikipedia.org/wiki/Peri-peri
+    title: Peri-peri
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: representative value
+    measurement: sauce heat
+- id: obs:scoville:entity-serrano-scoville
+  name: Serrano pepper
+  value: 20000.0
+  description: 'Serranos are noticeably hotter than jalapenos. Source-side figure: `20000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Serranos are noticeably hotter than jalapenos.
+  description_medium: 'Serranos are noticeably hotter than jalapenos. Source-side figure: `20000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Serrano pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '20000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Serrano_pepper
+      source_value_text: 20000 SHU
+  source: https://en.wikipedia.org/wiki/Serrano_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-serrano-pepper
+    url: https://en.wikipedia.org/wiki/Serrano_pepper
+    title: Serrano pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-chile-de-arbol-scoville
+  name: Chile de árbol
+  value: 22500.0
+  description: 'Chile de árbol is a sharper dried chile with heat above the mild cooking peppers. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `15,000-30,000 SHU` for Representative Scoville range midpoint for chile de árbol.'
+  description_format: markdown
+  summary_short: Chile de árbol is a sharper dried chile with heat above the mild cooking peppers.
+  description_medium: 'Chile de árbol is a sharper dried chile with heat above the mild cooking peppers. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `15,000-30,000 SHU` for Representative Scoville range midpoint for chile de árbol.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chile de árbol
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '22500.0'
+      source_basis: Representative Scoville range midpoint for chile de árbol.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Chile_de_%C3%A1rbol
+      source_value_text: 15,000-30,000 SHU
+  source: https://en.wikipedia.org/wiki/Chile_de_%C3%A1rbol
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chile-de-c3-a1rbol
+    url: https://en.wikipedia.org/wiki/Chile_de_%C3%A1rbol
+    title: Chile de árbol
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-aji-amarillo-scoville
+  name: Aji amarillo
+  value: 40000.0
+  description: 'Aji amarillo is a bright Peruvian pepper with moderate heat. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `30,000-50,000 SHU` for Representative Scoville range midpoint for aji amarillo.'
+  description_format: markdown
+  summary_short: Aji amarillo is a bright Peruvian pepper with moderate heat.
+  description_medium: 'Aji amarillo is a bright Peruvian pepper with moderate heat. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `30,000-50,000 SHU` for Representative Scoville range midpoint for aji amarillo.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aji amarillo
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '40000.0'
+      source_basis: Representative Scoville range midpoint for aji amarillo.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Aji_amarillo
+      source_value_text: 30,000-50,000 SHU
+  source: https://en.wikipedia.org/wiki/Aji_amarillo
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aji-amarillo
+    url: https://en.wikipedia.org/wiki/Aji_amarillo
+    title: Aji amarillo
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-cayenne-scoville
+  name: Cayenne pepper
+  value: 50000.0
+  description: 'Cayenne peppers sit around the tens-of-thousands SHU range. Source-side figure: `50000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Cayenne peppers sit around the tens-of-thousands SHU range.
+  description_medium: 'Cayenne peppers sit around the tens-of-thousands SHU range. Source-side figure: `50000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cayenne pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '50000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Cayenne_pepper
+      source_value_text: 50000 SHU
+  source: https://en.wikipedia.org/wiki/Cayenne_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cayenne-pepper
+    url: https://en.wikipedia.org/wiki/Cayenne_pepper
+    title: Cayenne pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-thai-chili-scoville
+  name: Thai chili
+  value: 75000.0
+  description: 'Thai chiles are small but much hotter than the mild cooking peppers. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `50,000-100,000 SHU` for Representative Scoville range midpoint for Thai chili.'
+  description_format: markdown
+  summary_short: Thai chiles are small but much hotter than the mild cooking peppers.
+  description_medium: 'Thai chiles are small but much hotter than the mild cooking peppers. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `50,000-100,000 SHU` for Representative Scoville range midpoint for Thai chili.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Thai chili
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '75000.0'
+      source_basis: Representative Scoville range midpoint for Thai chili.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Thai_chili
+      source_value_text: 50,000-100,000 SHU
+  source: https://en.wikipedia.org/wiki/Thai_chili
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-thai-chili
+    url: https://en.wikipedia.org/wiki/Thai_chili
+    title: Thai chili
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-birds-eye-chili-scoville
+  name: Thai bird chili
+  value: 100000.0
+  description: 'Bird chiles move into the six-figure SHU regime. Source-side figure: `100000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Bird chiles move into the six-figure SHU regime.
+  description_medium: 'Bird chiles move into the six-figure SHU regime. Source-side figure: `100000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Thai bird chili
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '100000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Bird%27s_eye_chili
+      source_value_text: 100000 SHU
+  source: https://en.wikipedia.org/wiki/Bird%27s_eye_chili
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bird-27s-eye-chili
+    url: https://en.wikipedia.org/wiki/Bird%27s_eye_chili
+    title: Bird's eye chili
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-fatalii-pepper-scoville
+  name: Fatalii pepper
+  value: 225000.0
+  description: 'Fatalii peppers are a notably hot yellow chili with a citrusy profile. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `125,000-325,000 SHU` for Representative Scoville range midpoint for fatalii pepper.'
+  description_format: markdown
+  summary_short: Fatalii peppers are a notably hot yellow chili with a citrusy profile.
+  description_medium: 'Fatalii peppers are a notably hot yellow chili with a citrusy profile. Here the quantity refers to `heat level`. Assumes `range midpoint`. Source-side figure: `125,000-325,000 SHU` for Representative Scoville range midpoint for fatalii pepper.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fatalii pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '225000.0'
+      source_basis: Representative Scoville range midpoint for fatalii pepper.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Fatalii
+      source_value_text: 125,000-325,000 SHU
+  source: https://en.wikipedia.org/wiki/Fatalii
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-fatalii
+    url: https://en.wikipedia.org/wiki/Fatalii
+    title: Fatalii
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: range midpoint
+    measurement: heat level
+- id: obs:scoville:entity-habanero-scoville
+  name: Habanero pepper
+  value: 250000.0
+  description: 'Habaneros are a classic quarter-million-SHU benchmark pepper. Source-side figure: `250000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Habaneros are a classic quarter-million-SHU benchmark pepper.
+  description_medium: 'Habaneros are a classic quarter-million-SHU benchmark pepper. Source-side figure: `250000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Habanero pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '250000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Habanero
+      source_value_text: 250000 SHU
+  source: https://en.wikipedia.org/wiki/Habanero
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-habanero
+    url: https://en.wikipedia.org/wiki/Habanero
+    title: Habanero
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-scotch-bonnet-scoville
+  name: Scotch bonnet
+  value: 300000.0
+  description: 'Scotch bonnets occupy a similar heat band to habaneros. Source-side figure: `300000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: Scotch bonnets occupy a similar heat band to habaneros.
+  description_medium: 'Scotch bonnets occupy a similar heat band to habaneros. Source-side figure: `300000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Scotch bonnet
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '300000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Scotch_bonnet
+      source_value_text: 300000 SHU
+  source: https://en.wikipedia.org/wiki/Scotch_bonnet
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-scotch-bonnet
+    url: https://en.wikipedia.org/wiki/Scotch_bonnet
+    title: Scotch bonnet
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-red-savina-scoville
+  name: Red Savina habanero
+  value: 500000.0
+  description: 'An older extreme-hot cultivar from the pre-superhot era. Source-side figure: `500000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: An older extreme-hot cultivar from the pre-superhot era.
+  description_medium: 'An older extreme-hot cultivar from the pre-superhot era. Source-side figure: `500000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Red Savina habanero
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '500000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Habanero
+      source_value_text: 500000 SHU
+  source: https://en.wikipedia.org/wiki/Habanero
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-habanero
+    url: https://en.wikipedia.org/wiki/Habanero
+    title: Habanero
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-ghost-pepper-scoville
+  name: Ghost pepper
+  value: 1000000.0
+  description: 'The ghost pepper crossed the million-SHU threshold that once seemed extreme. Source-side figure: `1000000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: The ghost pepper crossed the million-SHU threshold that once seemed extreme.
+  description_medium: 'The ghost pepper crossed the million-SHU threshold that once seemed extreme. Source-side figure: `1000000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ghost pepper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1000000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Ghost_pepper
+      source_value_text: 1000000 SHU
+  source: https://en.wikipedia.org/wiki/Ghost_pepper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ghost-pepper
+    url: https://en.wikipedia.org/wiki/Ghost_pepper
+    title: Ghost pepper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-trinidad-moruga-scorpion-scoville-2
+  name: Trinidad Moruga Scorpion average
+  value: 1463700.0
+  description: 'The Trinidad Moruga Scorpion sits among the hottest widely known peppers. Here the quantity refers to `heat level`. Source-side figure: `1,463,700 SHU` for Published average Scoville value for Trinidad Moruga Scorpion.'
+  description_format: markdown
+  summary_short: The Trinidad Moruga Scorpion sits among the hottest widely known peppers.
+  description_medium: 'The Trinidad Moruga Scorpion sits among the hottest widely known peppers. Here the quantity refers to `heat level`. Source-side figure: `1,463,700 SHU` for Published average Scoville value for Trinidad Moruga Scorpion.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Trinidad Moruga Scorpion average
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1463700.0'
+      source_basis: Published average Scoville value for Trinidad Moruga Scorpion.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Trinidad_Moruga_Scorpion
+      source_value_text: 1,463,700 SHU
+  source: https://en.wikipedia.org/wiki/Trinidad_Moruga_Scorpion
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-trinidad-moruga-scorpion
+    url: https://en.wikipedia.org/wiki/Trinidad_Moruga_Scorpion
+    title: Trinidad Moruga Scorpion
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: heat level
+- id: obs:scoville:entity-trinidad-moruga-scorpion-scoville
+  name: Trinidad Moruga Scorpion
+  value: 1500000.0
+  description: 'A superhot pepper well above one million SHU. Source-side figure: `1500000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A superhot pepper well above one million SHU.
+  description_medium: 'A superhot pepper well above one million SHU. Source-side figure: `1500000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Trinidad Moruga Scorpion
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1500000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Trinidad_Moruga_scorpion
+      source_value_text: 1500000 SHU
+  source: https://en.wikipedia.org/wiki/Trinidad_Moruga_scorpion
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-trinidad-moruga-scorpion-2
+    url: https://en.wikipedia.org/wiki/Trinidad_Moruga_scorpion
+    title: Trinidad Moruga scorpion
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-carolina-reaper-scoville
+  name: Carolina Reaper
+  value: 1640000.0
+  description: 'A benchmark superhot cultivar from the modern pepper-breeding era. Source-side figure: `1640000 SHU` for Representative Scoville value.'
+  description_format: markdown
+  summary_short: A benchmark superhot cultivar from the modern pepper-breeding era.
+  description_medium: 'A benchmark superhot cultivar from the modern pepper-breeding era. Source-side figure: `1640000 SHU` for Representative Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Carolina Reaper
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1640000.0'
+      source_basis: Representative Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Carolina_Reaper
+      source_value_text: 1640000 SHU
+  source: https://en.wikipedia.org/wiki/Carolina_Reaper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-carolina-reaper
+    url: https://en.wikipedia.org/wiki/Carolina_Reaper
+    title: Carolina Reaper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-seven-pot-douglah-scoville
+  name: Seven Pot Douglah
+  value: 1800000.0
+  description: 'Seven Pot Douglah is one of the hotter Caribbean superhots. Here the quantity refers to `heat level`. Source-side figure: `1,800,000 SHU` for Representative Scoville value for Seven Pot Douglah.'
+  description_format: markdown
+  summary_short: Seven Pot Douglah is one of the hotter Caribbean superhots.
+  description_medium: 'Seven Pot Douglah is one of the hotter Caribbean superhots. Here the quantity refers to `heat level`. Source-side figure: `1,800,000 SHU` for Representative Scoville value for Seven Pot Douglah.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Seven Pot Douglah
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '1800000.0'
+      source_basis: Representative Scoville value for Seven Pot Douglah.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/7_Pot_Douglah
+      source_value_text: 1,800,000 SHU
+  source: https://en.wikipedia.org/wiki/7_Pot_Douglah
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-7-pot-douglah
+    url: https://en.wikipedia.org/wiki/7_Pot_Douglah
+    title: 7 Pot Douglah
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: heat level
+- id: obs:scoville:entity-pepper-spray-scoville
+  name: Pepper spray
+  value: 2000000.0
+  description: 'Pepper spray formulations are often measured in the low millions of SHU. Source-side figure: `2000000 SHU` for Representative pepper-spray pungency.'
+  description_format: markdown
+  summary_short: Pepper spray formulations are often measured in the low millions of SHU.
+  description_medium: 'Pepper spray formulations are often measured in the low millions of SHU. Source-side figure: `2000000 SHU` for Representative pepper-spray pungency.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pepper spray
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '2000000.0'
+      source_basis: Representative pepper-spray pungency.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Pepper_spray
+      source_value_text: 2000000 SHU
+  source: https://en.wikipedia.org/wiki/Pepper_spray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pepper-spray
+    url: https://en.wikipedia.org/wiki/Pepper_spray
+    title: Pepper spray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-dragons-breath-scoville
+  name: Dragon's Breath pepper claim
+  value: 2400000.0
+  description: 'An example of the multi-million-SHU superhot breeding frontier. Source-side figure: `2400000 SHU` for Representative reported Scoville value.'
+  description_format: markdown
+  summary_short: An example of the multi-million-SHU superhot breeding frontier.
+  description_medium: 'An example of the multi-million-SHU superhot breeding frontier. Source-side figure: `2400000 SHU` for Representative reported Scoville value.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dragon's Breath pepper claim
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '2400000.0'
+      source_basis: Representative reported Scoville value.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Dragon%27s_Breath_(chili_pepper)
+      source_value_text: 2400000 SHU
+  source: https://en.wikipedia.org/wiki/Dragon%27s_Breath_(chili_pepper)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dragon-27s-breath-chili-pepper
+    url: https://en.wikipedia.org/wiki/Dragon%27s_Breath_(chili_pepper)
+    title: Dragon's Breath (chili pepper)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-pepper-x-scoville
+  name: Pepper X
+  value: 2693000.0
+  description: 'Pepper X currently sits near the top of the known pepper heat range. Here the quantity refers to `heat level`. Source-side figure: `2,693,000 SHU` for Published average Scoville value for Pepper X.'
+  description_format: markdown
+  summary_short: Pepper X currently sits near the top of the known pepper heat range.
+  description_medium: 'Pepper X currently sits near the top of the known pepper heat range. Here the quantity refers to `heat level`. Source-side figure: `2,693,000 SHU` for Published average Scoville value for Pepper X.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pepper X
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '2693000.0'
+      source_basis: Published average Scoville value for Pepper X.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Pepper_X
+      source_value_text: 2,693,000 SHU
+  source: https://en.wikipedia.org/wiki/Pepper_X
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pepper-x
+    url: https://en.wikipedia.org/wiki/Pepper_X
+    title: Pepper X
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: heat level
+- id: obs:scoville:entity-police-oc-spray-scoville
+  name: Police-grade OC spray
+  value: 5000000.0
+  description: 'Some stronger oleoresin capsicum sprays push into several million SHU. Source-side figure: `5000000 SHU` for Representative high-strength OC spray.'
+  description_format: markdown
+  summary_short: Some stronger oleoresin capsicum sprays push into several million SHU.
+  description_medium: 'Some stronger oleoresin capsicum sprays push into several million SHU. Source-side figure: `5000000 SHU` for Representative high-strength OC spray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Police-grade OC spray
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '5000000.0'
+      source_basis: Representative high-strength OC spray.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Pepper_spray
+      source_value_text: 5000000 SHU
+  source: https://en.wikipedia.org/wiki/Pepper_spray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pepper-spray
+    url: https://en.wikipedia.org/wiki/Pepper_spray
+    title: Pepper spray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:scoville:entity-pure-capsaicin-scoville
+  name: Pure capsaicin
+  value: 16000000.0
+  description: 'Pure capsaicin defines the practical top end of the Scoville scale. Source-side figure: `16000000 SHU` for Reported Scoville value for pure capsaicin.'
+  description_format: markdown
+  summary_short: Pure capsaicin defines the practical top end of the Scoville scale.
+  description_medium: 'Pure capsaicin defines the practical top end of the Scoville scale. Source-side figure: `16000000 SHU` for Reported Scoville value for pure capsaicin.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pure capsaicin
+    ingest_source: dataset/raw/curated/scoville.json
+    source_trace:
+      method: direct
+      original_value_text: '16000000.0'
+      source_basis: Reported Scoville value for pure capsaicin.
+      source_unit: SHU
+      source_url: https://en.wikipedia.org/wiki/Capsaicin
+      source_value_text: 16000000 SHU
+  source: https://en.wikipedia.org/wiki/Capsaicin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-capsaicin
+    url: https://en.wikipedia.org/wiki/Capsaicin
+    title: Capsaicin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-scoville-json
+    url: repo://dataset/raw/curated/scoville.json
+    title: dataset/raw/curated/scoville.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}

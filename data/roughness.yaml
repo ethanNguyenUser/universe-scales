@@ -1,0 +1,1440 @@
+dimension: roughness
+base_unit: meters
+dimension_description: This roughness scale treats surface roughness as a characteristic amplitude, usually comparable to an Ra-style average roughness. It connects optical polishing, semiconductor surfaces, paper, skin, machined parts, and construction materials. Surface texture is method-dependent, so the labels and notes matter here more than for simpler geometric scales.
+related_resources:
+- name: Surface roughness
+  url: https://en.wikipedia.org/wiki/Surface_roughness
+show_limitations: true
+units:
+- name: meters
+  symbol: m
+  conversion_factor: 1.0
+  description: Meters are the canonical storage unit for surface roughness amplitude.
+- name: nanometers
+  symbol: nm
+  conversion_factor: 1000000000.0
+  description: Useful for optics and semiconductors.
+- name: micrometers
+  symbol: um
+  conversion_factor: 1000000.0
+  description: Useful for machining and paper.
+- name: millimeters
+  symbol: mm
+  conversion_factor: 1000.0
+  description: Useful for concrete and coarse materials.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: senses
+frontend_group_label: Senses & Perception
+frontend_order: 530
+items:
+- id: obs:roughness:entity-optical-flat-roughness
+  name: Optical flat
+  value: 1.0e-10
+  description: 'Precision optical flats approach the angstrom-to-subnanometer roughness regime. Source-side figure: `1e-10 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Precision optical flats approach the angstrom-to-subnanometer roughness regime.
+  description_medium: 'Precision optical flats approach the angstrom-to-subnanometer roughness regime. Source-side figure: `1e-10 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Optical flat
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-10
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Optical_flat
+      source_value_text: 1e-10 m
+  source: https://en.wikipedia.org/wiki/Optical_flat
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-optical-flat
+    url: https://en.wikipedia.org/wiki/Optical_flat
+    title: Optical flat
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-silicon-wafer
+  name: Silicon wafer
+  value: 5.0e-10
+  description: 'A polished silicon wafer is nearly atomically flat by macroscopic standards. Here the quantity refers to `surface roughness`. Source-side figure: `5e-10 m` for Representative RMS roughness for polished semiconductor wafers.'
+  description_format: markdown
+  summary_short: A polished silicon wafer is nearly atomically flat by macroscopic standards.
+  description_medium: 'A polished silicon wafer is nearly atomically flat by macroscopic standards. Here the quantity refers to `surface roughness`. Source-side figure: `5e-10 m` for Representative RMS roughness for polished semiconductor wafers.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silicon wafer
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-10
+      source_basis: Representative RMS roughness for polished semiconductor wafers.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Silicon
+      source_value_text: 5e-10
+  source: https://en.wikipedia.org/wiki/Silicon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-silicon
+    url: https://en.wikipedia.org/wiki/Silicon
+    title: Silicon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-silicon-wafer-roughness
+  name: Polished silicon wafer
+  value: 1.0e-09
+  description: 'Semiconductor wafers are astonishingly smooth. Source-side figure: `1e-9 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Semiconductor wafers are astonishingly smooth.
+  description_medium: 'Semiconductor wafers are astonishingly smooth. Source-side figure: `1e-9 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Polished silicon wafer
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-09
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Wafer_(electronics)
+      source_value_text: 1e-9 m
+  source: https://en.wikipedia.org/wiki/Wafer_(electronics)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wafer-electronics
+    url: https://en.wikipedia.org/wiki/Wafer_(electronics)
+    title: Wafer (electronics)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-mirror-polish-roughness
+  name: Mirror polish
+  value: 2.0e-09
+  description: 'A mirror-polished metal surface is still rough on nanometer scales. Source-side figure: `2e-9 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: A mirror-polished metal surface is still rough on nanometer scales.
+  description_medium: 'A mirror-polished metal surface is still rough on nanometer scales. Source-side figure: `2e-9 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Mirror polish
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 2e-09
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Polishing
+      source_value_text: 2e-9 m
+  source: https://en.wikipedia.org/wiki/Polishing
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-polishing
+    url: https://en.wikipedia.org/wiki/Polishing
+    title: Polishing
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-optical-mirror
+  name: Optical mirror
+  value: 5.0e-09
+  description: 'Optical mirrors sit in the nanometer roughness regime. Here the quantity refers to `surface roughness`. Source-side figure: `5e-09 m` for Representative optical mirror surface roughness.'
+  description_format: markdown
+  summary_short: Optical mirrors sit in the nanometer roughness regime.
+  description_medium: 'Optical mirrors sit in the nanometer roughness regime. Here the quantity refers to `surface roughness`. Source-side figure: `5e-09 m` for Representative optical mirror surface roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Optical mirror
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-09
+      source_basis: Representative optical mirror surface roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Mirror
+      source_value_text: 5e-09
+  source: https://en.wikipedia.org/wiki/Mirror
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mirror
+    url: https://en.wikipedia.org/wiki/Mirror
+    title: Mirror
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-cd-surface-roughness
+  name: Compact disc surface
+  value: 1.0e-08
+  description: 'Optical media are smoother than most everyday materials. Source-side figure: `1e-8 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Optical media are smoother than most everyday materials.
+  description_medium: 'Optical media are smoother than most everyday materials. Source-side figure: `1e-8 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Compact disc surface
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-08
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Compact_disc
+      source_value_text: 1e-8 m
+  source: https://en.wikipedia.org/wiki/Compact_disc
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-compact-disc
+    url: https://en.wikipedia.org/wiki/Compact_disc
+    title: Compact disc
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-polished-glass
+  name: Polished glass
+  value: 1.0e-08
+  description: 'Polished glass remains very smooth, but not atomic-flat. Here the quantity refers to `surface roughness`. Source-side figure: `1e-08 m` for Representative polished-glass roughness.'
+  description_format: markdown
+  summary_short: Polished glass remains very smooth, but not atomic-flat.
+  description_medium: 'Polished glass remains very smooth, but not atomic-flat. Here the quantity refers to `surface roughness`. Source-side figure: `1e-08 m` for Representative polished-glass roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Polished glass
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-08
+      source_basis: Representative polished-glass roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Glass
+      source_value_text: 1e-08
+  source: https://en.wikipedia.org/wiki/Glass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-glass
+    url: https://en.wikipedia.org/wiki/Glass
+    title: Glass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-smartphone-glass-roughness
+  name: Smartphone glass
+  value: 5.0e-08
+  description: 'Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges. Source-side figure: `5e-8 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges.
+  description_medium: 'Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges. Source-side figure: `5e-8 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Smartphone glass
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-08
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Glass
+      source_value_text: 5e-8 m
+  source: https://en.wikipedia.org/wiki/Glass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-glass
+    url: https://en.wikipedia.org/wiki/Glass
+    title: Glass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-machined-metal-roughness
+  name: Machined metal finish
+  value: 1.0e-06
+  description: 'Typical machined parts land in the micron roughness regime. Source-side figure: `1e-6 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Typical machined parts land in the micron roughness regime.
+  description_medium: 'Typical machined parts land in the micron roughness regime. Source-side figure: `1e-6 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Machined metal finish
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-06
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Machining
+      source_value_text: 1e-6 m
+  source: https://en.wikipedia.org/wiki/Machining
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-machining
+    url: https://en.wikipedia.org/wiki/Machining
+    title: Machining
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-ground-steel
+  name: Ground steel
+  value: 1.0e-06
+  description: 'Ground steel is a classic micrometer-scale surface finish. Here the quantity refers to `surface roughness`. Source-side figure: `1e-06 m` for Representative machined steel roughness.'
+  description_format: markdown
+  summary_short: Ground steel is a classic micrometer-scale surface finish.
+  description_medium: 'Ground steel is a classic micrometer-scale surface finish. Here the quantity refers to `surface roughness`. Source-side figure: `1e-06 m` for Representative machined steel roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ground steel
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-06
+      source_basis: Representative machined steel roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Steel
+      source_value_text: 1e-06
+  source: https://en.wikipedia.org/wiki/Steel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-steel
+    url: https://en.wikipedia.org/wiki/Steel
+    title: Steel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:scenario-roughness-machined-aluminum
+  name: Machined aluminum
+  value: 1.6e-06
+  description: 'Machined aluminum is a standard engineering finish. Here the quantity refers to `surface roughness`. Source-side figure: `1.6e-06 m` for Representative machined aluminum roughness.'
+  description_format: markdown
+  summary_short: Machined aluminum is a standard engineering finish.
+  description_medium: 'Machined aluminum is a standard engineering finish. Here the quantity refers to `surface roughness`. Source-side figure: `1.6e-06 m` for Representative machined aluminum roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Machined aluminum
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '1.6e-06'
+      source_basis: Representative machined aluminum roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Aluminium
+      source_value_text: '1.6e-06'
+  source: https://en.wikipedia.org/wiki/Aluminium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aluminium
+    url: https://en.wikipedia.org/wiki/Aluminium
+    title: Aluminium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-frosted-glass-roughness
+  name: Frosted glass
+  value: 2.0e-06
+  description: 'Frosted surfaces are deliberately roughened to diffuse light. Source-side figure: `2e-6 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Frosted surfaces are deliberately roughened to diffuse light.
+  description_medium: 'Frosted surfaces are deliberately roughened to diffuse light. Source-side figure: `2e-6 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Frosted glass
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 2e-06
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Frosted_glass
+      source_value_text: 2e-6 m
+  source: https://en.wikipedia.org/wiki/Frosted_glass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-frosted-glass
+    url: https://en.wikipedia.org/wiki/Frosted_glass
+    title: Frosted glass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-paper
+  name: Paper
+  value: 5.0e-06
+  description: 'Paper is rough enough to feel, yet much smoother than sandpaper. Here the quantity refers to `surface roughness`. Source-side figure: `5e-06 m` for Representative paper-surface roughness.'
+  description_format: markdown
+  summary_short: Paper is rough enough to feel, yet much smoother than sandpaper.
+  description_medium: 'Paper is rough enough to feel, yet much smoother than sandpaper. Here the quantity refers to `surface roughness`. Source-side figure: `5e-06 m` for Representative paper-surface roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Paper
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-06
+      source_basis: Representative paper-surface roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Paper
+      source_value_text: 5e-06
+  source: https://en.wikipedia.org/wiki/Paper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper
+    url: https://en.wikipedia.org/wiki/Paper
+    title: Paper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-printer-paper-roughness
+  name: Printer paper
+  value: 1.0e-05
+  description: 'Paper texture is obvious at the tens-of-microns scale. Source-side figure: `1e-5 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Paper texture is obvious at the tens-of-microns scale.
+  description_medium: 'Paper texture is obvious at the tens-of-microns scale. Source-side figure: `1e-5 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Printer paper
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-05
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Paper
+      source_value_text: 1e-5 m
+  source: https://en.wikipedia.org/wiki/Paper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper
+    url: https://en.wikipedia.org/wiki/Paper
+    title: Paper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-fine-sandpaper-roughness
+  name: Fine sandpaper
+  value: 2.0e-05
+  description: 'Fine abrasives are still much rougher than precision surfaces. Source-side figure: `2e-5 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Fine abrasives are still much rougher than precision surfaces.
+  description_medium: 'Fine abrasives are still much rougher than precision surfaces. Source-side figure: `2e-5 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fine sandpaper
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 2e-05
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Sandpaper
+      source_value_text: 2e-5 m
+  source: https://en.wikipedia.org/wiki/Sandpaper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sandpaper
+    url: https://en.wikipedia.org/wiki/Sandpaper
+    title: Sandpaper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-skin-roughness
+  name: Human skin
+  value: 2.0e-05
+  description: 'Skin texture spans tens of micrometers or more. Source-side figure: `2e-5 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Skin texture spans tens of micrometers or more.
+  description_medium: 'Skin texture spans tens of micrometers or more. Source-side figure: `2e-5 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human skin
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 2e-05
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Skin
+      source_value_text: 2e-5 m
+  source: https://en.wikipedia.org/wiki/Skin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-skin
+    url: https://en.wikipedia.org/wiki/Skin
+    title: Skin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-drywall-roughness
+  name: Unpainted drywall
+  value: 5.0e-05
+  description: 'Interior walls still have visible texture in oblique light. Source-side figure: `5e-5 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Interior walls still have visible texture in oblique light.
+  description_medium: 'Interior walls still have visible texture in oblique light. Source-side figure: `5e-5 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Unpainted drywall
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-05
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Drywall
+      source_value_text: 5e-5 m
+  source: https://en.wikipedia.org/wiki/Drywall
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-drywall
+    url: https://en.wikipedia.org/wiki/Drywall
+    title: Drywall
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-planed-wood-roughness
+  name: Planed wood
+  value: 5.0e-05
+  description: 'Finished wood is smooth to the hand but not microscopically smooth. Source-side figure: `5e-5 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Finished wood is smooth to the hand but not microscopically smooth.
+  description_medium: 'Finished wood is smooth to the hand but not microscopically smooth. Source-side figure: `5e-5 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planed wood
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-05
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Wood
+      source_value_text: 5e-5 m
+  source: https://en.wikipedia.org/wiki/Wood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wood
+    url: https://en.wikipedia.org/wiki/Wood
+    title: Wood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-human-skin
+  name: Human skin
+  value: 5.0e-05
+  description: 'Skin is a biologically textured surface with visible roughness at the tens-of-microns scale. Here the quantity refers to `surface roughness`. Source-side figure: `5e-05 m` for Representative skin-surface roughness.'
+  description_format: markdown
+  summary_short: Skin is a biologically textured surface with visible roughness at the tens-of-microns scale.
+  description_medium: 'Skin is a biologically textured surface with visible roughness at the tens-of-microns scale. Here the quantity refers to `surface roughness`. Source-side figure: `5e-05 m` for Representative skin-surface roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human skin
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-05
+      source_basis: Representative skin-surface roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Human_skin
+      source_value_text: 5e-05
+  source: https://en.wikipedia.org/wiki/Human_skin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-skin
+    url: https://en.wikipedia.org/wiki/Human_skin
+    title: Human skin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-felt-roughness
+  name: Felt fabric
+  value: 0.0001
+  description: 'A fabric-texture benchmark. Source-side figure: `1e-4 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: A fabric-texture benchmark.
+  description_medium: 'A fabric-texture benchmark. Source-side figure: `1e-4 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Felt fabric
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0001'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Felt
+      source_value_text: 1e-4 m
+  source: https://en.wikipedia.org/wiki/Felt
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-felt
+    url: https://en.wikipedia.org/wiki/Felt
+    title: Felt
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-orange-peel-roughness
+  name: Orange peel texture
+  value: 0.0001
+  description: 'A familiar food texture benchmark. Source-side figure: `1e-4 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: A familiar food texture benchmark.
+  description_medium: 'A familiar food texture benchmark. Source-side figure: `1e-4 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Orange peel texture
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0001'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Orange_(fruit)
+      source_value_text: 1e-4 m
+  source: https://en.wikipedia.org/wiki/Orange_(fruit)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-orange-fruit
+    url: https://en.wikipedia.org/wiki/Orange_(fruit)
+    title: Orange (fruit)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-3d-printed-plastic
+  name: 3D-printed plastic
+  value: 0.0001
+  description: 'Layer lines in 3D printing often leave a roughness around the hundred-micron scale. Here the quantity refers to `surface roughness`. Source-side figure: `0.0001 m` for Representative fused-filament 3D-print surface roughness.'
+  description_format: markdown
+  summary_short: Layer lines in 3D printing often leave a roughness around the hundred-micron scale.
+  description_medium: 'Layer lines in 3D printing often leave a roughness around the hundred-micron scale. Here the quantity refers to `surface roughness`. Source-side figure: `0.0001 m` for Representative fused-filament 3D-print surface roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 3D-printed plastic
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0001'
+      source_basis: Representative fused-filament 3D-print surface roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/3D_printing
+      source_value_text: '0.0001'
+  source: https://en.wikipedia.org/wiki/3D_printing
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-3d-printing
+    url: https://en.wikipedia.org/wiki/3D_printing
+    title: 3D printing
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:scenario-roughness-sanded-wood
+  name: Sanded wood
+  value: 0.0001
+  description: 'Sanded wood is rough enough to be clearly tactile. Here the quantity refers to `surface roughness`. Source-side figure: `0.0001 m` for Representative sanded wood roughness.'
+  description_format: markdown
+  summary_short: Sanded wood is rough enough to be clearly tactile.
+  description_medium: 'Sanded wood is rough enough to be clearly tactile. Here the quantity refers to `surface roughness`. Source-side figure: `0.0001 m` for Representative sanded wood roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sanded wood
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0001'
+      source_basis: Representative sanded wood roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Wood
+      source_value_text: '0.0001'
+  source: https://en.wikipedia.org/wiki/Wood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wood
+    url: https://en.wikipedia.org/wiki/Wood
+    title: Wood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-cast-iron-pan-roughness
+  name: Cast iron skillet surface
+  value: 0.0002
+  description: 'Even seasoned cookware is much rougher than polished glass. Source-side figure: `2e-4 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Even seasoned cookware is much rougher than polished glass.
+  description_medium: 'Even seasoned cookware is much rougher than polished glass. Source-side figure: `2e-4 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cast iron skillet surface
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0002'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Cast-iron_cookware
+      source_value_text: 2e-4 m
+  source: https://en.wikipedia.org/wiki/Cast-iron_cookware
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cast-iron-cookware
+    url: https://en.wikipedia.org/wiki/Cast-iron_cookware
+    title: Cast-iron cookware
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-pumice-roughness
+  name: Pumice stone
+  value: 0.0005
+  description: 'Pumice is coarse enough to feel strongly abrasive. Source-side figure: `5e-4 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Pumice is coarse enough to feel strongly abrasive.
+  description_medium: 'Pumice is coarse enough to feel strongly abrasive. Source-side figure: `5e-4 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pumice stone
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0005'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Pumice
+      source_value_text: 5e-4 m
+  source: https://en.wikipedia.org/wiki/Pumice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pumice
+    url: https://en.wikipedia.org/wiki/Pumice
+    title: Pumice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-concrete-roughness
+  name: Concrete sidewalk
+  value: 0.001
+  description: 'Concrete has clearly perceptible millimeter-scale texture. Source-side figure: `1e-3 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Concrete has clearly perceptible millimeter-scale texture.
+  description_medium: 'Concrete has clearly perceptible millimeter-scale texture. Source-side figure: `1e-3 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concrete sidewalk
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.001'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Concrete
+      source_value_text: 1e-3 m
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-road-asphalt
+  name: Road asphalt
+  value: 0.001
+  description: 'Road asphalt is a coarse macroscopic surface. Here the quantity refers to `surface roughness`. Source-side figure: `0.001 m` for Representative asphalt macrotexture roughness.'
+  description_format: markdown
+  summary_short: Road asphalt is a coarse macroscopic surface.
+  description_medium: 'Road asphalt is a coarse macroscopic surface. Here the quantity refers to `surface roughness`. Source-side figure: `0.001 m` for Representative asphalt macrotexture roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Road asphalt
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.001'
+      source_basis: Representative asphalt macrotexture roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Asphalt_concrete
+      source_value_text: '0.001'
+  source: https://en.wikipedia.org/wiki/Asphalt_concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-asphalt-concrete
+    url: https://en.wikipedia.org/wiki/Asphalt_concrete
+    title: Asphalt concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness
+- id: obs:roughness:entity-tree-bark-roughness
+  name: Tree bark
+  value: 0.002
+  description: 'Bark surface texture is coarse on the millimeter scale. Source-side figure: `2e-3 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Bark surface texture is coarse on the millimeter scale.
+  description_medium: 'Bark surface texture is coarse on the millimeter scale. Source-side figure: `2e-3 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tree bark
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.002'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Bark_(botany)
+      source_value_text: 2e-3 m
+  source: https://en.wikipedia.org/wiki/Bark_(botany)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bark-botany
+    url: https://en.wikipedia.org/wiki/Bark_(botany)
+    title: Bark (botany)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-asphalt-roughness
+  name: Asphalt road
+  value: 0.005
+  description: 'Road surfaces are rough on the millimeter scale. Source-side figure: `5e-3 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Road surfaces are rough on the millimeter scale.
+  description_medium: 'Road surfaces are rough on the millimeter scale. Source-side figure: `5e-3 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Asphalt road
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.005'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Asphalt_concrete
+      source_value_text: 5e-3 m
+  source: https://en.wikipedia.org/wiki/Asphalt_concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-asphalt-concrete
+    url: https://en.wikipedia.org/wiki/Asphalt_concrete
+    title: Asphalt concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:entity-gravel-roughness
+  name: Gravel surface
+  value: 0.01
+  description: 'Loose gravel reaches centimeter-scale roughness. Source-side figure: `1e-2 m` for Representative roughness.'
+  description_format: markdown
+  summary_short: Loose gravel reaches centimeter-scale roughness.
+  description_medium: 'Loose gravel reaches centimeter-scale roughness. Source-side figure: `1e-2 m` for Representative roughness.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Gravel surface
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.01'
+      source_basis: Representative roughness.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Gravel
+      source_value_text: 1e-2 m
+  source: https://en.wikipedia.org/wiki/Gravel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gravel
+    url: https://en.wikipedia.org/wiki/Gravel
+    title: Gravel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:roughness:scenario-roughness-cobblestone
+  name: Cobblestone
+  value: 0.01
+  description: 'Cobblestones are highly rough by everyday-surface standards. Here the quantity refers to `surface roughness`. Source-side figure: `0.01 m` for Representative cobblestone surface amplitude.'
+  description_format: markdown
+  summary_short: Cobblestones are highly rough by everyday-surface standards.
+  description_medium: 'Cobblestones are highly rough by everyday-surface standards. Here the quantity refers to `surface roughness`. Source-side figure: `0.01 m` for Representative cobblestone surface amplitude.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cobblestone
+    ingest_source: dataset/raw/curated/roughness.json
+    source_trace:
+      method: direct
+      original_value_text: '0.01'
+      source_basis: Representative cobblestone surface amplitude.
+      source_unit: m
+      source_url: https://en.wikipedia.org/wiki/Cobblestone
+      source_value_text: '0.01'
+  source: https://en.wikipedia.org/wiki/Cobblestone
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cobblestone
+    url: https://en.wikipedia.org/wiki/Cobblestone
+    title: Cobblestone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-roughness-json
+    url: repo://dataset/raw/curated/roughness.json
+    title: dataset/raw/curated/roughness.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface roughness

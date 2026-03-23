@@ -1,0 +1,1297 @@
+{
+  "base_unit": "qaly",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 22,
+    "candidate_shortfall_to_preferred_target": 28,
+    "empty_bin_count": 9,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 22,
+    "selected_primary_count": 15,
+    "selected_secondary_count": 7,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 22
+    },
+    "target_selected_count": 22
+  },
+  "description_format": "markdown",
+  "dimension": "qalys",
+  "dimension_description": "Quality-adjusted life years compress length of life and quality of life into one metric. This is a powerful but highly model-dependent quantity, so each item should state whether it is a stock of healthy time, a gain from an intervention, or a loss from disability. It is useful here because it gives a common pedagogical axis for many health choices.",
+  "frontend_group": "health",
+  "frontend_group_label": "Health & Biology",
+  "frontend_order": 480,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One day of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `1 day` for A healthy time interval converts directly into QALYs.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One day of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `1 day` for A healthy time interval converts directly into QALYs.",
+      "facts": {
+        "canonical_name": "One day of perfect health",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = healthy_days / 365",
+          "method": "derived",
+          "original_value_text": "0.0027397260273972603",
+          "source_basis": "A healthy time interval converts directly into QALYs.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 day"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-day-of-perfect-health",
+      "name": "One day of perfect health",
+      "qualifiers": {
+        "assumption": "perfect health"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One day of perfect health is a clean QALY anchor.",
+      "value": 0.0027397260273972603,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Short illnesses have surprisingly visible QALY weights when aggregated. Source-side figure: `7 days x 0.5 quality recovered` for Recovering a half-quality week saves about 0.0096 QALY.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Short illnesses have surprisingly visible QALY weights when aggregated. Source-side figure: `7 days x 0.5 quality recovered` for Recovering a half-quality week saves about 0.0096 QALY.",
+      "facts": {
+        "canonical_name": "Avoiding one week of influenza",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "7 x 0.5 / 365",
+          "method": "derived",
+          "original_value_text": "0.0096",
+          "source_basis": "Recovering a half-quality week saves about 0.0096 QALY.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Influenza",
+          "source_value_text": "7 days x 0.5 quality recovered"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-avoiding-one-week-of-influenza",
+      "name": "Avoiding one week of influenza",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Influenza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-influenza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Influenza",
+          "url": "https://en.wikipedia.org/wiki/Influenza"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "Short illnesses have surprisingly visible QALY weights when aggregated.",
+      "value": 0.0096,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One week of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `7 days` for A healthy time interval converts directly into QALYs.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One week of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `7 days` for A healthy time interval converts directly into QALYs.",
+      "facts": {
+        "canonical_name": "One week of perfect health",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = healthy_days / 365",
+          "method": "derived",
+          "original_value_text": "0.019178082191780823",
+          "source_basis": "A healthy time interval converts directly into QALYs.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "7 days"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-week-of-perfect-health",
+      "name": "One week of perfect health",
+      "qualifiers": {
+        "assumption": "perfect health"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One week of perfect health is a clean QALY anchor.",
+      "value": 0.019178082191780823,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Pain relief adds up quickly on the QALY scale. Source-side figure: `30 days x 0.5 quality recovered` for One painful month avoided is around four hundredths of a QALY.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Pain relief adds up quickly on the QALY scale. Source-side figure: `30 days x 0.5 quality recovered` for One painful month avoided is around four hundredths of a QALY.",
+      "facts": {
+        "canonical_name": "Avoiding one month of severe back pain",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "30 x 0.5 / 365",
+          "method": "derived",
+          "original_value_text": "0.041",
+          "source_basis": "One painful month avoided is around four hundredths of a QALY.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Back_pain",
+          "source_value_text": "30 days x 0.5 quality recovered"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-avoiding-one-month-of-severe-back-pain",
+      "name": "Avoiding one month of severe back pain",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Back_pain",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-back-pain",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Back pain",
+          "url": "https://en.wikipedia.org/wiki/Back_pain"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "Pain relief adds up quickly on the QALY scale.",
+      "value": 0.041,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One month of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `30 days` for A healthy time interval converts directly into QALYs.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One month of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `30 days` for A healthy time interval converts directly into QALYs.",
+      "facts": {
+        "canonical_name": "One month of perfect health",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = healthy_days / 365",
+          "method": "derived",
+          "original_value_text": "0.0821917808219178",
+          "source_basis": "A healthy time interval converts directly into QALYs.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "30 days"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-month-of-perfect-health",
+      "name": "One month of perfect health",
+      "qualifiers": {
+        "assumption": "perfect health"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One month of perfect health is a clean QALY anchor.",
+      "value": 0.0821917808219178,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A standard cost-effectiveness benchmark intervention. Source-side figure: `0.10 QALY` for Vision-restoring surgery often yields tenths of a QALY over the first year.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A standard cost-effectiveness benchmark intervention. Source-side figure: `0.10 QALY` for Vision-restoring surgery often yields tenths of a QALY over the first year.",
+      "facts": {
+        "canonical_name": "Successful cataract surgery first-year gain",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.1",
+          "source_basis": "Vision-restoring surgery often yields tenths of a QALY over the first year.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Cataract_surgery",
+          "source_value_text": "0.10 QALY"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-successful-cataract-surgery-first-year-gain",
+      "name": "Successful cataract surgery first-year gain",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cataract_surgery",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cataract-surgery",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cataract surgery",
+          "url": "https://en.wikipedia.org/wiki/Cataract_surgery"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "A standard cost-effectiveness benchmark intervention.",
+      "value": 0.1,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year of severe cancer treatment places a common health state on the QALY scale. Assumes `utility weight 0.3`. Source-side figure: `1 year x 0.3` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year of severe cancer treatment places a common health state on the QALY scale. Assumes `utility weight 0.3`. Source-side figure: `1 year x 0.3` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year of severe cancer treatment",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.3",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.3"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-of-severe-cancer-treatment",
+      "name": "One year of severe cancer treatment",
+      "qualifiers": {
+        "assumption": "utility weight 0.3"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year of severe cancer treatment places a common health state on the QALY scale.",
+      "value": 0.3,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year with severe disability places a common health state on the QALY scale. Assumes `utility weight 0.4`. Source-side figure: `1 year x 0.4` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year with severe disability places a common health state on the QALY scale. Assumes `utility weight 0.4`. Source-side figure: `1 year x 0.4` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year with severe disability",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.4",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.4"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-with-severe-disability",
+      "name": "One year with severe disability",
+      "qualifiers": {
+        "assumption": "utility weight 0.4"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year with severe disability places a common health state on the QALY scale.",
+      "value": 0.4,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year with paraplegia places a common health state on the QALY scale. Assumes `utility weight 0.5`. Source-side figure: `1 year x 0.5` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year with paraplegia places a common health state on the QALY scale. Assumes `utility weight 0.5`. Source-side figure: `1 year x 0.5` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year with paraplegia",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.5",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.5"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-with-paraplegia",
+      "name": "One year with paraplegia",
+      "qualifiers": {
+        "assumption": "utility weight 0.5"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year with paraplegia places a common health state on the QALY scale.",
+      "value": 0.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year on hemodialysis places a common health state on the QALY scale. Assumes `utility weight 0.56`. Source-side figure: `1 year x 0.56` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year on hemodialysis places a common health state on the QALY scale. Assumes `utility weight 0.56`. Source-side figure: `1 year x 0.56` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year on hemodialysis",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.56",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.56"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-on-hemodialysis",
+      "name": "One year on hemodialysis",
+      "qualifiers": {
+        "assumption": "utility weight 0.56"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year on hemodialysis places a common health state on the QALY scale.",
+      "value": 0.56,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year with moderate depression places a common health state on the QALY scale. Assumes `utility weight 0.6`. Source-side figure: `1 year x 0.6` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year with moderate depression places a common health state on the QALY scale. Assumes `utility weight 0.6`. Source-side figure: `1 year x 0.6` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year with moderate depression",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.6",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.6"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-with-moderate-depression",
+      "name": "One year with moderate depression",
+      "qualifiers": {
+        "assumption": "utility weight 0.6"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year with moderate depression places a common health state on the QALY scale.",
+      "value": 0.6,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year with blindness places a common health state on the QALY scale. Assumes `utility weight 0.7`. Source-side figure: `1 year x 0.7` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year with blindness places a common health state on the QALY scale. Assumes `utility weight 0.7`. Source-side figure: `1 year x 0.7` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year with blindness",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.7",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.7"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-with-blindness",
+      "name": "One year with blindness",
+      "qualifiers": {
+        "assumption": "utility weight 0.7"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year with blindness places a common health state on the QALY scale.",
+      "value": 0.7,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year with mild chronic pain places a common health state on the QALY scale. Assumes `utility weight 0.8`. Source-side figure: `1 year x 0.8` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year with mild chronic pain places a common health state on the QALY scale. Assumes `utility weight 0.8`. Source-side figure: `1 year x 0.8` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year with mild chronic pain",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.8",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.8"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-with-mild-chronic-pain",
+      "name": "One year with mild chronic pain",
+      "qualifiers": {
+        "assumption": "utility weight 0.8"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year with mild chronic pain places a common health state on the QALY scale.",
+      "value": 0.8,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year at 90 percent quality places a common health state on the QALY scale. Assumes `utility weight 0.9`. Source-side figure: `1 year x 0.9` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year at 90 percent quality places a common health state on the QALY scale. Assumes `utility weight 0.9`. Source-side figure: `1 year x 0.9` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year at 90 percent quality",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.9",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.9"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-at-90-percent-quality",
+      "name": "One year at 90 percent quality",
+      "qualifiers": {
+        "assumption": "utility weight 0.9"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year at 90 percent quality places a common health state on the QALY scale.",
+      "value": 0.9,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year at 95 percent quality places a common health state on the QALY scale. Assumes `utility weight 0.95`. Source-side figure: `1 year x 0.95` for A one-year health state weighted by a representative utility factor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year at 95 percent quality places a common health state on the QALY scale. Assumes `utility weight 0.95`. Source-side figure: `1 year x 0.95` for A one-year health state weighted by a representative utility factor.",
+      "facts": {
+        "canonical_name": "One year at 95 percent quality",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = years x utility_weight",
+          "method": "derived",
+          "original_value_text": "0.95",
+          "source_basis": "A one-year health state weighted by a representative utility factor.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year x 0.95"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-at-95-percent-quality",
+      "name": "One year at 95 percent quality",
+      "qualifiers": {
+        "assumption": "utility weight 0.95"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year at 95 percent quality places a common health state on the QALY scale.",
+      "value": 0.95,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A large but intuitively grounded intervention gain. Source-side figure: `1 QALY` for Hip replacement can restore about one healthy-year equivalent over several years.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A large but intuitively grounded intervention gain. Source-side figure: `1 QALY` for Hip replacement can restore about one healthy-year equivalent over several years.",
+      "facts": {
+        "canonical_name": "Hip replacement five-year gain",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.0",
+          "source_basis": "Hip replacement can restore about one healthy-year equivalent over several years.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Hip_replacement",
+          "source_value_text": "1 QALY"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-hip-replacement-five-year-gain",
+      "name": "Hip replacement five-year gain",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hip_replacement",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hip-replacement",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hip replacement",
+          "url": "https://en.wikipedia.org/wiki/Hip_replacement"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "A large but intuitively grounded intervention gain.",
+      "value": 1.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "One year of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `1 year` for A healthy time interval converts directly into QALYs.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "One year of perfect health is a clean QALY anchor. Assumes `perfect health`. Source-side figure: `1 year` for A healthy time interval converts directly into QALYs.",
+      "facts": {
+        "canonical_name": "One year of perfect health",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = healthy_days / 365",
+          "method": "derived",
+          "original_value_text": "1.0",
+          "source_basis": "A healthy time interval converts directly into QALYs.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "1 year"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-one-year-of-perfect-health",
+      "name": "One year of perfect health",
+      "qualifiers": {
+        "assumption": "perfect health"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "One year of perfect health is a clean QALY anchor.",
+      "value": 1.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Prevention can beat many acute medical treatments in total QALYs saved. Source-side figure: `2 QALY` for Smoking cessation can preserve multiple future healthy years.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Prevention can beat many acute medical treatments in total QALYs saved. Source-side figure: `2 QALY` for Smoking cessation can preserve multiple future healthy years.",
+      "facts": {
+        "canonical_name": "Smoking cessation lifetime gain",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.0",
+          "source_basis": "Smoking cessation can preserve multiple future healthy years.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Smoking_cessation",
+          "source_value_text": "2 QALY"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-smoking-cessation-lifetime-gain",
+      "name": "Smoking cessation lifetime gain",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Smoking_cessation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-smoking-cessation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Smoking cessation",
+          "url": "https://en.wikipedia.org/wiki/Smoking_cessation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "Prevention can beat many acute medical treatments in total QALYs saved.",
+      "value": 2.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Transplant medicine often creates very large QALY gains. Source-side figure: `2.5 QALY` for Moving from dialysis to transplant can yield multi-QALY benefit.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Transplant medicine often creates very large QALY gains. Source-side figure: `2.5 QALY` for Moving from dialysis to transplant can yield multi-QALY benefit.",
+      "facts": {
+        "canonical_name": "Kidney transplant five-year gain",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.5",
+          "source_basis": "Moving from dialysis to transplant can yield multi-QALY benefit.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Kidney_transplantation",
+          "source_value_text": "2.5 QALY"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-kidney-transplant-five-year-gain",
+      "name": "Kidney transplant five-year gain",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Kidney_transplantation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-kidney-transplantation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Kidney transplantation",
+          "url": "https://en.wikipedia.org/wiki/Kidney_transplantation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "Transplant medicine often creates very large QALY gains.",
+      "value": 2.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Multi-year life extensions belong naturally on the QALY axis. Source-side figure: `5 years` for A fully healthy five-year interval.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Multi-year life extensions belong naturally on the QALY axis. Source-side figure: `5 years` for A fully healthy five-year interval.",
+      "facts": {
+        "canonical_name": "Five years of perfect health",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = 5 x 1",
+          "method": "derived",
+          "original_value_text": "5.0",
+          "source_basis": "A fully healthy five-year interval.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "5 years"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-five-years-of-perfect-health",
+      "name": "Five years of perfect health",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "Multi-year life extensions belong naturally on the QALY axis.",
+      "value": 5.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Chronic disease control can generate very large cumulative gains. Source-side figure: `6 QALY` for Effective long-term HIV therapy can preserve many quality-adjusted years.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Chronic disease control can generate very large cumulative gains. Source-side figure: `6 QALY` for Effective long-term HIV therapy can preserve many quality-adjusted years.",
+      "facts": {
+        "canonical_name": "Antiretroviral therapy over a decade",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6.0",
+          "source_basis": "Effective long-term HIV therapy can preserve many quality-adjusted years.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Antiretroviral_therapy",
+          "source_value_text": "6 QALY"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-antiretroviral-therapy-over-a-decade",
+      "name": "Antiretroviral therapy over a decade",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Antiretroviral_therapy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-antiretroviral-therapy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Antiretroviral therapy",
+          "url": "https://en.wikipedia.org/wiki/Antiretroviral_therapy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "Chronic disease control can generate very large cumulative gains.",
+      "value": 6.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A decade of healthy life is a large but still human-scale QALY amount. Source-side figure: `10 years` for A fully healthy decade.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A decade of healthy life is a large but still human-scale QALY amount. Source-side figure: `10 years` for A fully healthy decade.",
+      "facts": {
+        "canonical_name": "Ten years of perfect health",
+        "ingest_source": "dataset/raw/curated/qalys.json",
+        "source_trace": {
+          "derivation_note": "QALY = 10 x 1",
+          "method": "derived",
+          "original_value_text": "10.0",
+          "source_basis": "A fully healthy decade.",
+          "source_unit": "QALY",
+          "source_url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+          "source_value_text": "10 years"
+        }
+      },
+      "hook": null,
+      "id": "obs:qalys:scenario-qalys-ten-years-of-perfect-health",
+      "name": "Ten years of perfect health",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quality-adjusted-life-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quality-adjusted life year",
+          "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-qalys-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/qalys.json",
+          "url": "repo://dataset/raw/curated/qalys.json"
+        }
+      ],
+      "summary_short": "A decade of healthy life is a large but still human-scale QALY amount.",
+      "value": 10.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Quality-adjusted life year",
+      "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Quality-adjusted life years are the canonical storage unit for this health-economics scale.",
+      "name": "quality-adjusted life years",
+      "symbol": "QALY"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "MilliQALYs are useful for small health-state changes.",
+      "name": "milliqalys",
+      "symbol": "mQALY"
+    },
+    {
+      "conversion_factor": 365.25,
+      "description": "Quality-adjusted days are intuitive for short gains or losses.",
+      "name": "quality-adjusted days",
+      "symbol": "QAD"
+    },
+    {
+      "conversion_factor": 8766.0,
+      "description": "Quality-adjusted hours are useful for very small effects.",
+      "name": "quality-adjusted hours",
+      "symbol": "QAH"
+    }
+  ]
+}

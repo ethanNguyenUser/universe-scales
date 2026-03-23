@@ -1,0 +1,1096 @@
+dimension: precision
+base_unit: relative_uncertainty
+dimension_description: This scale stores precision as relative uncertainty or fractional error. Smaller values mean higher precision, so it is inverted compared with everyday language like “more precise.” That inversion is worth it because relative uncertainty is much more coherent and log-friendly than a vague notion of accuracy.
+related_resources:
+- name: Measurement uncertainty
+  url: https://en.wikipedia.org/wiki/Measurement_uncertainty
+show_limitations: true
+units:
+- name: relative uncertainty
+  symbol: fraction
+  conversion_factor: 1.0
+  description: Fractional uncertainty is the canonical storage unit for precision.
+- name: percent
+  symbol: '%'
+  conversion_factor: 100.0
+  description: Relative uncertainty shown as a percent.
+- name: parts per million
+  symbol: ppm
+  conversion_factor: 1000000.0
+  description: PPM is useful for clocks and electronics.
+- name: parts per billion
+  symbol: ppb
+  conversion_factor: 1000000000.0
+  description: PPB is useful for very high precision.
+- name: parts per trillion
+  symbol: ppt
+  conversion_factor: 1000000000000.0
+  description: PPT is useful for the most precise metrology references.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: society
+frontend_group_label: Society, Economy & Abstract Quantities
+frontend_order: 410
+items:
+- id: obs:precision:scenario-precision-ligo-strain-sensitivity
+  name: LIGO strain sensitivity
+  value: 1.0e-21
+  description: 'Gravitational-wave detectors are a spectacular far-tail precision anchor. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-21 fractional uncertainty` for LIGO detects relative spacetime strains around one part in 10^21.'
+  description_format: markdown
+  summary_short: Gravitational-wave detectors are a spectacular far-tail precision anchor.
+  description_medium: 'Gravitational-wave detectors are a spectacular far-tail precision anchor. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-21 fractional uncertainty` for LIGO detects relative spacetime strains around one part in 10^21.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: LIGO strain sensitivity
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-21
+      source_basis: LIGO detects relative spacetime strains around one part in 10^21.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/LIGO
+      source_value_text: 1e-21
+  source: https://en.wikipedia.org/wiki/LIGO
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ligo
+    url: https://en.wikipedia.org/wiki/LIGO
+    title: LIGO
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-cesium-fountain-clock
+  name: Cesium fountain clock
+  value: 1.0e-15
+  description: 'Modern clock metrology pushes into the quadrillionth level. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-15 fractional uncertainty` for Primary time standards are often quoted around 10^-15 or better.'
+  description_format: markdown
+  summary_short: Modern clock metrology pushes into the quadrillionth level.
+  description_medium: 'Modern clock metrology pushes into the quadrillionth level. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-15 fractional uncertainty` for Primary time standards are often quoted around 10^-15 or better.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cesium fountain clock
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-15
+      source_basis: Primary time standards are often quoted around 10^-15 or better.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Cesium_standard
+      source_value_text: 1e-15
+  source: https://en.wikipedia.org/wiki/Cesium_standard
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cesium-standard
+    url: https://en.wikipedia.org/wiki/Cesium_standard
+    title: Cesium standard
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-gps-satellite-clock
+  name: GPS satellite clock
+  value: 1.0e-14
+  description: 'Navigation timing is far more precise than most people realize. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-14 fractional uncertainty` for Spaceborne atomic clocks operate in the 10^-14 regime or better.'
+  description_format: markdown
+  summary_short: Navigation timing is far more precise than most people realize.
+  description_medium: 'Navigation timing is far more precise than most people realize. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-14 fractional uncertainty` for Spaceborne atomic clocks operate in the 10^-14 regime or better.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: GPS satellite clock
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-14
+      source_basis: Spaceborne atomic clocks operate in the 10^-14 regime or better.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/GPS_signals
+      source_value_text: 1e-14
+  source: https://en.wikipedia.org/wiki/GPS_signals
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gps-signals
+    url: https://en.wikipedia.org/wiki/GPS_signals
+    title: GPS signals
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-rubidium-frequency-standard
+  name: Rubidium frequency standard
+  value: 1.0e-11
+  description: 'Atomic frequency standards quickly jump many orders of magnitude past everyday clocks. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-11 fractional uncertainty` for Rubidium standards provide long-term frequency stability around this scale.'
+  description_format: markdown
+  summary_short: Atomic frequency standards quickly jump many orders of magnitude past everyday clocks.
+  description_medium: 'Atomic frequency standards quickly jump many orders of magnitude past everyday clocks. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1e-11 fractional uncertainty` for Rubidium standards provide long-term frequency stability around this scale.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubidium frequency standard
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-11
+      source_basis: Rubidium standards provide long-term frequency stability around this scale.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Rubidium_standard
+      source_value_text: 1e-11
+  source: https://en.wikipedia.org/wiki/Rubidium_standard
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rubidium-standard
+    url: https://en.wikipedia.org/wiki/Rubidium_standard
+    title: Rubidium standard
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-parts-per-billion-laboratory-chemical-assay
+  name: Parts-per-billion laboratory chemical assay
+  value: 1.0e-09
+  description: 'Analytical chemistry often works in the ppb regime. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1 ppb` for Parts-per-billion is a standard analytical chemistry benchmark.'
+  description_format: markdown
+  summary_short: Analytical chemistry often works in the ppb regime.
+  description_medium: 'Analytical chemistry often works in the ppb regime. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1 ppb` for Parts-per-billion is a standard analytical chemistry benchmark.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Parts-per-billion laboratory chemical assay
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-09
+      source_basis: Parts-per-billion is a standard analytical chemistry benchmark.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Parts-per_notation
+      source_value_text: 1 ppb
+  source: https://en.wikipedia.org/wiki/Parts-per_notation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-parts-per-notation
+    url: https://en.wikipedia.org/wiki/Parts-per_notation
+    title: Parts-per notation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-semiconductor-overlay-accuracy
+  name: Semiconductor overlay accuracy
+  value: 1.0e-07
+  description: 'Chip fabrication lives deep in the precision tail. Source-side figure: `1 nm on 10 mm` for A nanometer across a centimeter-scale wafer map is 10^-7 relative uncertainty.'
+  description_format: markdown
+  summary_short: Chip fabrication lives deep in the precision tail.
+  description_medium: 'Chip fabrication lives deep in the precision tail. Source-side figure: `1 nm on 10 mm` for A nanometer across a centimeter-scale wafer map is 10^-7 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Semiconductor overlay accuracy
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 1e-9 / 1e-2
+      method: derived
+      original_value_text: 1e-07
+      source_basis: A nanometer across a centimeter-scale wafer map is 10^-7 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Photolithography
+      source_value_text: 1 nm on 10 mm
+  source: https://en.wikipedia.org/wiki/Photolithography
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-photolithography
+    url: https://en.wikipedia.org/wiki/Photolithography
+    title: Photolithography
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-survey-grade-gnss-baseline
+  name: Survey-grade GNSS baseline
+  value: 1.0e-07
+  description: 'Geodesy pushes positioning into the sub-ppm range. Source-side figure: `1 cm on 100 km` for Centimeter geodesy over 100 km is 10^-7 relative uncertainty.'
+  description_format: markdown
+  summary_short: Geodesy pushes positioning into the sub-ppm range.
+  description_medium: 'Geodesy pushes positioning into the sub-ppm range. Source-side figure: `1 cm on 100 km` for Centimeter geodesy over 100 km is 10^-7 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Survey-grade GNSS baseline
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 0.01 / 100000
+      method: derived
+      original_value_text: 1e-07
+      source_basis: Centimeter geodesy over 100 km is 10^-7 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Real-time_kinematic_positioning
+      source_value_text: 1 cm on 100 km
+  source: https://en.wikipedia.org/wiki/Real-time_kinematic_positioning
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-real-time-kinematic-positioning
+    url: https://en.wikipedia.org/wiki/Real-time_kinematic_positioning
+    title: Real-time kinematic positioning
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-micrometer-screw-gauge-on-a-10-mm-shaft
+  name: Micrometer screw gauge on a 10 mm shaft
+  value: 1.0e-05
+  description: 'Dimensional metrology gets surprisingly sharp with simple tools. Source-side figure: `0.1 um on 10 mm` for Sub-micrometer resolution over a centimeter gives 10^-5 relative uncertainty.'
+  description_format: markdown
+  summary_short: Dimensional metrology gets surprisingly sharp with simple tools.
+  description_medium: 'Dimensional metrology gets surprisingly sharp with simple tools. Source-side figure: `0.1 um on 10 mm` for Sub-micrometer resolution over a centimeter gives 10^-5 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Micrometer screw gauge on a 10 mm shaft
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 1e-7 / 1e-2
+      method: derived
+      original_value_text: 1e-05
+      source_basis: Sub-micrometer resolution over a centimeter gives 10^-5 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Micrometer_(device)
+      source_value_text: 0.1 um on 10 mm
+  source: https://en.wikipedia.org/wiki/Micrometer_(device)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-micrometer-device
+    url: https://en.wikipedia.org/wiki/Micrometer_(device)
+    title: Micrometer (device)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-surveyor-total-station-distance-measurement
+  name: Surveyor total-station distance measurement
+  value: 1.0e-05
+  description: 'Surveying is a good bridge between everyday and metrology precision. Source-side figure: `1 mm on 100 m` for A millimeter over 100 meters is one part in 100,000.'
+  description_format: markdown
+  summary_short: Surveying is a good bridge between everyday and metrology precision.
+  description_medium: 'Surveying is a good bridge between everyday and metrology precision. Source-side figure: `1 mm on 100 m` for A millimeter over 100 meters is one part in 100,000.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Surveyor total-station distance measurement
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 0.001 / 100
+      method: derived
+      original_value_text: 1e-05
+      source_basis: A millimeter over 100 meters is one part in 100,000.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Total_station
+      source_value_text: 1 mm on 100 m
+  source: https://en.wikipedia.org/wiki/Total_station
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-total-station
+    url: https://en.wikipedia.org/wiki/Total_station
+    title: Total station
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-quartz-wristwatch-monthly-rate
+  name: Quartz wristwatch monthly rate
+  value: 2.0e-05
+  description: 'Quartz timekeeping lives in the tens-of-parts-per-million band. Source-side figure: `1 minute per month` for About 60 seconds drift over ~2.6 million seconds is around 2e-5.'
+  description_format: markdown
+  summary_short: Quartz timekeeping lives in the tens-of-parts-per-million band.
+  description_medium: 'Quartz timekeeping lives in the tens-of-parts-per-million band. Source-side figure: `1 minute per month` for About 60 seconds drift over ~2.6 million seconds is around 2e-5.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Quartz wristwatch monthly rate
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 60 / (30 x 24 x 3600)
+      method: derived
+      original_value_text: 2e-05
+      source_basis: About 60 seconds drift over ~2.6 million seconds is around 2e-5.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Quartz_clock
+      source_value_text: 1 minute per month
+  source: https://en.wikipedia.org/wiki/Quartz_clock
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-quartz-clock
+    url: https://en.wikipedia.org/wiki/Quartz_clock
+    title: Quartz clock
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-civilian-gps-on-a-100-km-trip
+  name: Civilian GPS on a 100 km trip
+  value: 5.0e-05
+  description: 'Satellite navigation can be coarse locally but impressive over long baselines. Source-side figure: `5 m on 100 km` for A few meters over a 100 km route is roughly 5e-5 relative uncertainty.'
+  description_format: markdown
+  summary_short: Satellite navigation can be coarse locally but impressive over long baselines.
+  description_medium: 'Satellite navigation can be coarse locally but impressive over long baselines. Source-side figure: `5 m on 100 km` for A few meters over a 100 km route is roughly 5e-5 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Civilian GPS on a 100 km trip
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 5 / 100000
+      method: derived
+      original_value_text: 5e-05
+      source_basis: A few meters over a 100 km route is roughly 5e-5 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Global_Positioning_System
+      source_value_text: 5 m on 100 km
+  source: https://en.wikipedia.org/wiki/Global_Positioning_System
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-global-positioning-system
+    url: https://en.wikipedia.org/wiki/Global_Positioning_System
+    title: Global Positioning System
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-machine-shop-milled-part
+  name: Machine-shop milled part
+  value: 0.0001
+  description: 'Routine machining moves into the hundred-ppm regime. Source-side figure: `10 um on 100 mm` for Ten micrometers on a 100 mm part is 10^-4 relative uncertainty.'
+  description_format: markdown
+  summary_short: Routine machining moves into the hundred-ppm regime.
+  description_medium: 'Routine machining moves into the hundred-ppm regime. Source-side figure: `10 um on 100 mm` for Ten micrometers on a 100 mm part is 10^-4 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Machine-shop milled part
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 10e-6 / 0.1
+      method: derived
+      original_value_text: '0.0001'
+      source_basis: Ten micrometers on a 100 mm part is 10^-4 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Machining
+      source_value_text: 10 um on 100 mm
+  source: https://en.wikipedia.org/wiki/Machining
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-machining
+    url: https://en.wikipedia.org/wiki/Machining
+    title: Machining
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-tape-measure-on-a-2-m-board
+  name: Tape measure on a 2 m board
+  value: 0.0005
+  description: 'Hand tools can already beat the 10^-3 regime comfortably. Source-side figure: `1 mm on 2 m` for A millimeter on two meters is five parts in ten thousand.'
+  description_format: markdown
+  summary_short: Hand tools can already beat the 10^-3 regime comfortably.
+  description_medium: 'Hand tools can already beat the 10^-3 regime comfortably. Source-side figure: `1 mm on 2 m` for A millimeter on two meters is five parts in ten thousand.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tape measure on a 2 m board
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 0.001 / 2
+      method: derived
+      original_value_text: '0.0005'
+      source_basis: A millimeter on two meters is five parts in ten thousand.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Tape_measure
+      source_value_text: 1 mm on 2 m
+  source: https://en.wikipedia.org/wiki/Tape_measure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tape-measure
+    url: https://en.wikipedia.org/wiki/Tape_measure
+    title: Tape measure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-stopwatch-timing-a-100-m-sprint
+  name: Stopwatch timing a 100 m sprint
+  value: 0.001
+  description: 'Sports timing gives a nice intuitive millesimal-scale example. Source-side figure: `0.01 s on 10 s` for Hundredth-second timing on a 10 second event is 10^-3 relative uncertainty.'
+  description_format: markdown
+  summary_short: Sports timing gives a nice intuitive millesimal-scale example.
+  description_medium: 'Sports timing gives a nice intuitive millesimal-scale example. Source-side figure: `0.01 s on 10 s` for Hundredth-second timing on a 10 second event is 10^-3 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Stopwatch timing a 100 m sprint
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 0.01 / 10
+      method: derived
+      original_value_text: '0.001'
+      source_basis: Hundredth-second timing on a 10 second event is 10^-3 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Stopwatch
+      source_value_text: 0.01 s on 10 s
+  source: https://en.wikipedia.org/wiki/Stopwatch
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-stopwatch
+    url: https://en.wikipedia.org/wiki/Stopwatch
+    title: Stopwatch
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-digital-bathroom-scale-on-a-70-kg-person
+  name: Digital bathroom scale on a 70 kg person
+  value: 0.0014
+  description: 'Digital scales make sub-percent precision routine at home. Source-side figure: `0.1 kg on 70 kg` for A 0.1 kg resolution on a 70 kg measurement gives 1.4e-3 relative uncertainty.'
+  description_format: markdown
+  summary_short: Digital scales make sub-percent precision routine at home.
+  description_medium: 'Digital scales make sub-percent precision routine at home. Source-side figure: `0.1 kg on 70 kg` for A 0.1 kg resolution on a 70 kg measurement gives 1.4e-3 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Digital bathroom scale on a 70 kg person
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 0.1 / 70
+      method: derived
+      original_value_text: '0.0014'
+      source_basis: A 0.1 kg resolution on a 70 kg measurement gives 1.4e-3 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Weighing_scale
+      source_value_text: 0.1 kg on 70 kg
+  source: https://en.wikipedia.org/wiki/Weighing_scale
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-weighing-scale
+    url: https://en.wikipedia.org/wiki/Weighing_scale
+    title: Weighing scale
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-digital-multimeter-on-a-5-v-usb-rail
+  name: Digital multimeter on a 5 V USB rail
+  value: 0.002
+  description: 'Basic electronics measurement quickly reaches the 10^-3 regime. Source-side figure: `0.01 V on 5 V` for Centivolt resolution on a 5 V signal is about two parts per thousand.'
+  description_format: markdown
+  summary_short: Basic electronics measurement quickly reaches the 10^-3 regime.
+  description_medium: 'Basic electronics measurement quickly reaches the 10^-3 regime. Source-side figure: `0.01 V on 5 V` for Centivolt resolution on a 5 V signal is about two parts per thousand.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Digital multimeter on a 5 V USB rail
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 0.01 / 5
+      method: derived
+      original_value_text: '0.002'
+      source_basis: Centivolt resolution on a 5 V signal is about two parts per thousand.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Multimeter
+      source_value_text: 0.01 V on 5 V
+  source: https://en.wikipedia.org/wiki/Multimeter
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-multimeter
+    url: https://en.wikipedia.org/wiki/Multimeter
+    title: Multimeter
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-kitchen-scale-measuring-500-g-of-flour
+  name: Kitchen scale measuring 500 g of flour
+  value: 0.002
+  description: 'Recipe-scale precision is a good everyday millesimal benchmark. Source-side figure: `1 g on 500 g` for A 1 g step on a 500 g quantity gives 2e-3 relative uncertainty.'
+  description_format: markdown
+  summary_short: Recipe-scale precision is a good everyday millesimal benchmark.
+  description_medium: 'Recipe-scale precision is a good everyday millesimal benchmark. Source-side figure: `1 g on 500 g` for A 1 g step on a 500 g quantity gives 2e-3 relative uncertainty.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Kitchen scale measuring 500 g of flour
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      derivation_note: 1 / 500
+      method: derived
+      original_value_text: '0.002'
+      source_basis: A 1 g step on a 500 g quantity gives 2e-3 relative uncertainty.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Weighing_scale
+      source_value_text: 1 g on 500 g
+  source: https://en.wikipedia.org/wiki/Weighing_scale
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-weighing-scale
+    url: https://en.wikipedia.org/wiki/Weighing_scale
+    title: Weighing scale
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:precision:scenario-precision-analog-bathroom-scale
+  name: Analog bathroom scale
+  value: 0.01
+  description: 'A mechanical scale is noticeably coarse but still useful. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1%` for About 1 kg uncertainty on a 100 kg full-scale reading is around one percent.'
+  description_format: markdown
+  summary_short: A mechanical scale is noticeably coarse but still useful.
+  description_medium: 'A mechanical scale is noticeably coarse but still useful. Here the quantity refers to `fractional uncertainty`. Source-side figure: `1%` for About 1 kg uncertainty on a 100 kg full-scale reading is around one percent.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Analog bathroom scale
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: '0.01'
+      source_basis: About 1 kg uncertainty on a 100 kg full-scale reading is around one percent.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Weighing_scale
+      source_value_text: 1%
+  source: https://en.wikipedia.org/wiki/Weighing_scale
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-weighing-scale
+    url: https://en.wikipedia.org/wiki/Weighing_scale
+    title: Weighing scale
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-car-speedometer-at-highway-speed
+  name: Car speedometer at highway speed
+  value: 0.02
+  description: 'Driving instrumentation is useful but relatively coarse. Here the quantity refers to `fractional uncertainty`. Source-side figure: `2%` for Vehicle speed readings are not high-precision instruments.'
+  description_format: markdown
+  summary_short: Driving instrumentation is useful but relatively coarse.
+  description_medium: 'Driving instrumentation is useful but relatively coarse. Here the quantity refers to `fractional uncertainty`. Source-side figure: `2%` for Vehicle speed readings are not high-precision instruments.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Car speedometer at highway speed
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: '0.02'
+      source_basis: Vehicle speed readings are not high-precision instruments.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Speedometer
+      source_value_text: 2%
+  source: https://en.wikipedia.org/wiki/Speedometer
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-speedometer
+    url: https://en.wikipedia.org/wiki/Speedometer
+    title: Speedometer
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-consumer-blood-pressure-cuff
+  name: Consumer blood pressure cuff
+  value: 0.02
+  description: 'Home medical devices live in the percent-level precision band. Here the quantity refers to `fractional uncertainty`. Source-side figure: `2%` for A couple of mmHg on a ~120 mmHg reading is a few percent.'
+  description_format: markdown
+  summary_short: Home medical devices live in the percent-level precision band.
+  description_medium: 'Home medical devices live in the percent-level precision band. Here the quantity refers to `fractional uncertainty`. Source-side figure: `2%` for A couple of mmHg on a ~120 mmHg reading is a few percent.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Consumer blood pressure cuff
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: '0.02'
+      source_basis: A couple of mmHg on a ~120 mmHg reading is a few percent.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Sphygmomanometer
+      source_value_text: 2%
+  source: https://en.wikipedia.org/wiki/Sphygmomanometer
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sphygmomanometer
+    url: https://en.wikipedia.org/wiki/Sphygmomanometer
+    title: Sphygmomanometer
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-weather-forecast-daily-high-temperature
+  name: Weather forecast daily high temperature
+  value: 0.03
+  description: 'Daily weather forecasts are good but far from metrology-grade. Here the quantity refers to `fractional uncertainty`. Source-side figure: `3%` for A few degrees on a few-hundred-kelvin baseline is a few percent.'
+  description_format: markdown
+  summary_short: Daily weather forecasts are good but far from metrology-grade.
+  description_medium: 'Daily weather forecasts are good but far from metrology-grade. Here the quantity refers to `fractional uncertainty`. Source-side figure: `3%` for A few degrees on a few-hundred-kelvin baseline is a few percent.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Weather forecast daily high temperature
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: '0.03'
+      source_basis: A few degrees on a few-hundred-kelvin baseline is a few percent.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Weather_forecasting
+      source_value_text: 3%
+  source: https://en.wikipedia.org/wiki/Weather_forecasting
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-weather-forecasting
+    url: https://en.wikipedia.org/wiki/Weather_forecasting
+    title: Weather forecasting
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-eyeballing-the-width-of-a-room
+  name: Eyeballing the width of a room
+  value: 0.1
+  description: 'Room-size judgments are a natural everyday precision example. Here the quantity refers to `fractional uncertainty`. Source-side figure: `10%` for Unaided room-scale distance estimates are often off by around a tenth.'
+  description_format: markdown
+  summary_short: Room-size judgments are a natural everyday precision example.
+  description_medium: 'Room-size judgments are a natural everyday precision example. Here the quantity refers to `fractional uncertainty`. Source-side figure: `10%` for Unaided room-scale distance estimates are often off by around a tenth.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Eyeballing the width of a room
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: Unaided room-scale distance estimates are often off by around a tenth.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Estimation
+      source_value_text: 10%
+  source: https://en.wikipedia.org/wiki/Estimation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-estimation
+    url: https://en.wikipedia.org/wiki/Estimation
+    title: Estimation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty
+- id: obs:precision:scenario-precision-eyeballing-a-crowd-size
+  name: Eyeballing a crowd size
+  value: 0.2
+  description: 'Human estimation gets noisy quickly without counting aids. Here the quantity refers to `fractional uncertainty`. Source-side figure: `20%` for Unaided crowd estimates are often only accurate to tens of percent.'
+  description_format: markdown
+  summary_short: Human estimation gets noisy quickly without counting aids.
+  description_medium: 'Human estimation gets noisy quickly without counting aids. Here the quantity refers to `fractional uncertainty`. Source-side figure: `20%` for Unaided crowd estimates are often only accurate to tens of percent.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Eyeballing a crowd size
+    ingest_source: dataset/raw/curated/precision.json
+    source_trace:
+      method: direct
+      original_value_text: '0.2'
+      source_basis: Unaided crowd estimates are often only accurate to tens of percent.
+      source_unit: fractional uncertainty
+      source_url: https://en.wikipedia.org/wiki/Estimation
+      source_value_text: 20%
+  source: https://en.wikipedia.org/wiki/Estimation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-estimation
+    url: https://en.wikipedia.org/wiki/Estimation
+    title: Estimation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-precision-json
+    url: repo://dataset/raw/curated/precision.json
+    title: dataset/raw/curated/precision.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fractional uncertainty

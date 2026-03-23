@@ -1,0 +1,1890 @@
+{
+  "base_unit": "pascals",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 33,
+    "candidate_shortfall_to_preferred_target": 17,
+    "empty_bin_count": 6,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 33,
+    "selected_primary_count": 18,
+    "selected_secondary_count": 15,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 33
+    },
+    "target_selected_count": 33
+  },
+  "description_format": "markdown",
+  "dimension": "hardness",
+  "dimension_description": "Hardness here is treated pragmatically as indentation hardness expressed in pascals where possible. This is not a perfect universal property because Mohs, Vickers, Brinell, and other hardness scales emphasize different tests. Still, a pressure-like canonical scale makes the ordering of soft metals, glass, carbides, and diamond easier to compare logarithmically.",
+  "frontend_group": "materials",
+  "frontend_group_label": "Materials & Matter",
+  "frontend_order": 330,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Lead is a very soft metal and a useful low-hardness anchor. Here the quantity refers to `hardness`. Source-side figure: `3e+06 Pa` for Representative indentation hardness of lead.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Lead is a very soft metal and a useful low-hardness anchor. Here the quantity refers to `hardness`. Source-side figure: `3e+06 Pa` for Representative indentation hardness of lead.",
+      "facts": {
+        "canonical_name": "Lead",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3000000.0",
+          "source_basis": "Representative indentation hardness of lead.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Lead",
+          "source_value_text": "3e+06"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-lead",
+      "name": "Lead",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lead",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lead",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lead",
+          "url": "https://en.wikipedia.org/wiki/Lead"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Lead is a very soft metal and a useful low-hardness anchor.",
+      "value": 3000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Very soft elastomers live in the megapascals range. Source-side figure: `5 MPa` for Representative indentation hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Very soft elastomers live in the megapascals range. Source-side figure: `5 MPa` for Representative indentation hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Soft rubber",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "5000000.0",
+          "source_basis": "Representative indentation hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Rubber",
+          "source_value_text": "5 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-soft-rubber-hardness",
+      "name": "Soft rubber",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Rubber",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rubber",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rubber",
+          "url": "https://en.wikipedia.org/wiki/Rubber"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Very soft elastomers live in the megapascals range.",
+      "value": 5000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ice is harder than many people expect but still soft compared with structural materials. Source-side figure: `20 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ice is harder than many people expect but still soft compared with structural materials. Source-side figure: `20 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Ice",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "20000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Ice",
+          "source_value_text": "20 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-ice-hardness",
+      "name": "Ice",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ice",
+          "url": "https://en.wikipedia.org/wiki/Ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Ice is harder than many people expect but still soft compared with structural materials.",
+      "value": 20000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fingernail hardness is a familiar body-scale material reference. Source-side figure: `25 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fingernail hardness is a familiar body-scale material reference. Source-side figure: `25 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Fingernail",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "25000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
+          "source_value_text": "25 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-fingernail-hardness",
+      "name": "Fingernail",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nail-anatomy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nail (anatomy)",
+          "url": "https://en.wikipedia.org/wiki/Nail_(anatomy)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Fingernail hardness is a familiar body-scale material reference.",
+      "value": 25000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Wood is harder than soft polymers but far below metals. Source-side figure: `30 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Wood is harder than soft polymers but far below metals. Source-side figure: `30 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Wood",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "30000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Wood",
+          "source_value_text": "30 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-wood-hardness",
+      "name": "Wood",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wood",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wood",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wood",
+          "url": "https://en.wikipedia.org/wiki/Wood"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Wood is harder than soft polymers but far below metals.",
+      "value": 30000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Lead is a canonical very soft metal. Source-side figure: `50 MPa` for Representative indentation hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Lead is a canonical very soft metal. Source-side figure: `50 MPa` for Representative indentation hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Lead",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "50000000.0",
+          "source_basis": "Representative indentation hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Lead",
+          "source_value_text": "50 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-lead-hardness",
+      "name": "Lead",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lead",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lead",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lead",
+          "url": "https://en.wikipedia.org/wiki/Lead"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Lead is a canonical very soft metal.",
+      "value": 50000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Concrete is hard but brittle, and sits in a different regime than metals. Here the quantity refers to `hardness`. Source-side figure: `1e+08 Pa` for Representative compressive or indentation hardness of concrete.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Concrete is hard but brittle, and sits in a different regime than metals. Here the quantity refers to `hardness`. Source-side figure: `1e+08 Pa` for Representative compressive or indentation hardness of concrete.",
+      "facts": {
+        "canonical_name": "Concrete",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000000.0",
+          "source_basis": "Representative compressive or indentation hardness of concrete.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Concrete",
+          "source_value_text": "1e+08"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-concrete",
+      "name": "Concrete",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Concrete",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-concrete",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Concrete",
+          "url": "https://en.wikipedia.org/wiki/Concrete"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Concrete is hard but brittle, and sits in a different regime than metals.",
+      "value": 100000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A fingernail is a practical soft-material benchmark. Here the quantity refers to `hardness`. Source-side figure: `1e+08 Pa` for Representative hardness of human fingernail material.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A fingernail is a practical soft-material benchmark. Here the quantity refers to `hardness`. Source-side figure: `1e+08 Pa` for Representative hardness of human fingernail material.",
+      "facts": {
+        "canonical_name": "Fingernail",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000000.0",
+          "source_basis": "Representative hardness of human fingernail material.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
+          "source_value_text": "1e+08"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-fingernail",
+      "name": "Fingernail",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nail-anatomy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nail (anatomy)",
+          "url": "https://en.wikipedia.org/wiki/Nail_(anatomy)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "A fingernail is a practical soft-material benchmark.",
+      "value": 100000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Hard plastics still sit far below metals and glass. Source-side figure: `200 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Hard plastics still sit far below metals and glass. Source-side figure: `200 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Acrylic plastic",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "200000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Poly(methyl_methacrylate)",
+          "source_value_text": "200 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-acrylic-hardness",
+      "name": "Acrylic plastic",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Poly(methyl_methacrylate)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-poly-methyl-methacrylate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Poly(methyl methacrylate)",
+          "url": "https://en.wikipedia.org/wiki/Poly(methyl_methacrylate)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Hard plastics still sit far below metals and glass.",
+      "value": 200000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Pure gold is softer than many people imagine. Source-side figure: `250 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Pure gold is softer than many people imagine. Source-side figure: `250 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Gold",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "250000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Gold",
+          "source_value_text": "250 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-gold-hardness",
+      "name": "Gold",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Gold",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gold",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gold",
+          "url": "https://en.wikipedia.org/wiki/Gold"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Pure gold is softer than many people imagine.",
+      "value": 250000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Copper is a good soft-metal benchmark. Source-side figure: `350 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Copper is a good soft-metal benchmark. Source-side figure: `350 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Copper",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "350000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Copper",
+          "source_value_text": "350 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-copper-hardness",
+      "name": "Copper",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Copper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-copper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Copper",
+          "url": "https://en.wikipedia.org/wiki/Copper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Copper is a good soft-metal benchmark.",
+      "value": 350000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Copper is a soft engineering metal but much harder than skin or nails. Here the quantity refers to `hardness`. Source-side figure: `3.5e+08 Pa` for Representative hardness of copper.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Copper is a soft engineering metal but much harder than skin or nails. Here the quantity refers to `hardness`. Source-side figure: `3.5e+08 Pa` for Representative hardness of copper.",
+      "facts": {
+        "canonical_name": "Copper",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "350000000.0",
+          "source_basis": "Representative hardness of copper.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Copper",
+          "source_value_text": "3.5e+08"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-copper",
+      "name": "Copper",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Copper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-copper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Copper",
+          "url": "https://en.wikipedia.org/wiki/Copper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Copper is a soft engineering metal but much harder than skin or nails.",
+      "value": 350000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Concrete is relatively hard in indentation terms but brittle. Source-side figure: `500 MPa` for Representative hardness. Converted MPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Concrete is relatively hard in indentation terms but brittle. Source-side figure: `500 MPa` for Representative hardness. Converted MPa to Pa.",
+      "facts": {
+        "canonical_name": "Concrete",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted MPa to Pa.",
+          "method": "derived",
+          "original_value_text": "500000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "MPa",
+          "source_url": "https://en.wikipedia.org/wiki/Concrete",
+          "source_value_text": "500 MPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-concrete-hardness",
+      "name": "Concrete",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Concrete",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-concrete",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Concrete",
+          "url": "https://en.wikipedia.org/wiki/Concrete"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Concrete is relatively hard in indentation terms but brittle.",
+      "value": 500000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Brass provides a common medium-hardness metal example. Here the quantity refers to `hardness`. Source-side figure: `5e+08 Pa` for Representative hardness of brass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Brass provides a common medium-hardness metal example. Here the quantity refers to `hardness`. Source-side figure: `5e+08 Pa` for Representative hardness of brass.",
+      "facts": {
+        "canonical_name": "Brass",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "500000000.0",
+          "source_basis": "Representative hardness of brass.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Brass",
+          "source_value_text": "5e+08"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-brass",
+      "name": "Brass",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Brass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brass",
+          "url": "https://en.wikipedia.org/wiki/Brass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Brass provides a common medium-hardness metal example.",
+      "value": 500000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Aluminum reaches the gigapascal scale in hardness. Source-side figure: `1 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Aluminum reaches the gigapascal scale in hardness. Source-side figure: `1 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Aluminum",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "1000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Aluminium",
+          "source_value_text": "1 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-aluminum-hardness",
+      "name": "Aluminum",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Aluminium",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aluminium",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aluminium",
+          "url": "https://en.wikipedia.org/wiki/Aluminium"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Aluminum reaches the gigapascal scale in hardness.",
+      "value": 1000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Brass is harder than aluminum but still well below hardened steels. Source-side figure: `1.5 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Brass is harder than aluminum but still well below hardened steels. Source-side figure: `1.5 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Brass",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "1500000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Brass",
+          "source_value_text": "1.5 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-brass-hardness",
+      "name": "Brass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brass",
+          "url": "https://en.wikipedia.org/wiki/Brass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Brass is harder than aluminum but still well below hardened steels.",
+      "value": 1500000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mild steel is a common structural hardness benchmark. Source-side figure: `1.5e+09 Pa` for Representative hardness of mild steel.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mild steel is a common structural hardness benchmark. Source-side figure: `1.5e+09 Pa` for Representative hardness of mild steel.",
+      "facts": {
+        "canonical_name": "Mild steel",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1500000000.0",
+          "source_basis": "Representative hardness of mild steel.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Steel",
+          "source_value_text": "1.5e+09"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-mild-steel",
+      "name": "Mild steel",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Steel",
+          "url": "https://en.wikipedia.org/wiki/Steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Mild steel is a common structural hardness benchmark.",
+      "value": 1500000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mild steel gives a familiar engineering hardness reference. Source-side figure: `2 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mild steel gives a familiar engineering hardness reference. Source-side figure: `2 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Mild steel",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "2000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Steel",
+          "source_value_text": "2 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-mild-steel-hardness",
+      "name": "Mild steel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Steel",
+          "url": "https://en.wikipedia.org/wiki/Steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Mild steel gives a familiar engineering hardness reference.",
+      "value": 2000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Stainless steels often sit a bit above mild steel in hardness. Source-side figure: `2.5 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Stainless steels often sit a bit above mild steel in hardness. Source-side figure: `2.5 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Stainless steel",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "2500000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Stainless_steel",
+          "source_value_text": "2.5 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-stainless-steel-hardness",
+      "name": "Stainless steel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Stainless_steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-stainless-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Stainless steel",
+          "url": "https://en.wikipedia.org/wiki/Stainless_steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Stainless steels often sit a bit above mild steel in hardness.",
+      "value": 2500000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cast iron pushes above mild steel on the hardness scale. Source-side figure: `3 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cast iron pushes above mild steel on the hardness scale. Source-side figure: `3 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Cast iron",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "3000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Cast_iron",
+          "source_value_text": "3 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-cast-iron-hardness",
+      "name": "Cast iron",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cast_iron",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cast-iron",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cast iron",
+          "url": "https://en.wikipedia.org/wiki/Cast_iron"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Cast iron pushes above mild steel on the hardness scale.",
+      "value": 3000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Glass is much harder than soft metals but still brittle. Here the quantity refers to `hardness`. Source-side figure: `5e+09 Pa` for Representative hardness of common glass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Glass is much harder than soft metals but still brittle. Here the quantity refers to `hardness`. Source-side figure: `5e+09 Pa` for Representative hardness of common glass.",
+      "facts": {
+        "canonical_name": "Glass",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5000000000.0",
+          "source_basis": "Representative hardness of common glass.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Glass",
+          "source_value_text": "5e+09"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-glass",
+      "name": "Glass",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Glass",
+          "url": "https://en.wikipedia.org/wiki/Glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Glass is much harder than soft metals but still brittle.",
+      "value": 5000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Glass is surprisingly hard relative to many metals. Source-side figure: `5.5 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Glass is surprisingly hard relative to many metals. Source-side figure: `5.5 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Window glass",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "5500000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Glass",
+          "source_value_text": "5.5 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-glass-hardness",
+      "name": "Window glass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Glass",
+          "url": "https://en.wikipedia.org/wiki/Glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Glass is surprisingly hard relative to many metals.",
+      "value": 5500000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Quartz is a standard mineral hardness anchor. Source-side figure: `7e+09 Pa` for Representative hardness of quartz.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Quartz is a standard mineral hardness anchor. Source-side figure: `7e+09 Pa` for Representative hardness of quartz.",
+      "facts": {
+        "canonical_name": "Quartz",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7000000000.0",
+          "source_basis": "Representative hardness of quartz.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Quartz",
+          "source_value_text": "7e+09"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-quartz",
+      "name": "Quartz",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quartz",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quartz",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quartz",
+          "url": "https://en.wikipedia.org/wiki/Quartz"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Quartz is a standard mineral hardness anchor.",
+      "value": 7000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Quartz is a classic mineral-hardness reference. Source-side figure: `11 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Quartz is a classic mineral-hardness reference. Source-side figure: `11 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Quartz",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "11000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Quartz",
+          "source_value_text": "11 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-quartz-hardness",
+      "name": "Quartz",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Quartz",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quartz",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quartz",
+          "url": "https://en.wikipedia.org/wiki/Quartz"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Quartz is a classic mineral-hardness reference.",
+      "value": 11000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Silicon gives a semiconductor-material hardness benchmark. Source-side figure: `12 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Silicon gives a semiconductor-material hardness benchmark. Source-side figure: `12 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Silicon",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "12000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Silicon",
+          "source_value_text": "12 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-silicon-hardness",
+      "name": "Silicon",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Silicon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-silicon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Silicon",
+          "url": "https://en.wikipedia.org/wiki/Silicon"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Silicon gives a semiconductor-material hardness benchmark.",
+      "value": 12000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Advanced ceramics land deep in the hard-material regime. Source-side figure: `12 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Advanced ceramics land deep in the hard-material regime. Source-side figure: `12 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Ceramic knife zirconia",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "12000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Zirconium_dioxide",
+          "source_value_text": "12 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-zirconia-hardness",
+      "name": "Ceramic knife zirconia",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Zirconium_dioxide",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-zirconium-dioxide",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Zirconium dioxide",
+          "url": "https://en.wikipedia.org/wiki/Zirconium_dioxide"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Advanced ceramics land deep in the hard-material regime.",
+      "value": 12000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Carbides sit in the very-hard-tool-material regime. Source-side figure: `17 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Carbides sit in the very-hard-tool-material regime. Source-side figure: `17 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Tungsten carbide",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "17000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Tungsten_carbide",
+          "source_value_text": "17 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-tungsten-carbide-hardness",
+      "name": "Tungsten carbide",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tungsten_carbide",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tungsten-carbide",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tungsten carbide",
+          "url": "https://en.wikipedia.org/wiki/Tungsten_carbide"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Carbides sit in the very-hard-tool-material regime.",
+      "value": 17000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sapphire is one of the standard ultra-hard transparent materials. Source-side figure: `20 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sapphire is one of the standard ultra-hard transparent materials. Source-side figure: `20 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Sapphire",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "20000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Sapphire",
+          "source_value_text": "20 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-sapphire-hardness",
+      "name": "Sapphire",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sapphire",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sapphire",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sapphire",
+          "url": "https://en.wikipedia.org/wiki/Sapphire"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Sapphire is one of the standard ultra-hard transparent materials.",
+      "value": 20000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sapphire pushes into very hard crystalline material territory. Here the quantity refers to `hardness`. Source-side figure: `2e+10 Pa` for Representative hardness of sapphire.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sapphire pushes into very hard crystalline material territory. Here the quantity refers to `hardness`. Source-side figure: `2e+10 Pa` for Representative hardness of sapphire.",
+      "facts": {
+        "canonical_name": "Sapphire",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "20000000000.0",
+          "source_basis": "Representative hardness of sapphire.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Sapphire",
+          "source_value_text": "2e+10"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-sapphire",
+      "name": "Sapphire",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sapphire",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sapphire",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sapphire",
+          "url": "https://en.wikipedia.org/wiki/Sapphire"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Sapphire pushes into very hard crystalline material territory.",
+      "value": 20000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tungsten carbide is a classic high-hardness engineering material. Here the quantity refers to `hardness`. Source-side figure: `2.4e+10 Pa` for Representative hardness of tungsten carbide.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tungsten carbide is a classic high-hardness engineering material. Here the quantity refers to `hardness`. Source-side figure: `2.4e+10 Pa` for Representative hardness of tungsten carbide.",
+      "facts": {
+        "canonical_name": "Tungsten carbide",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "24000000000.0",
+          "source_basis": "Representative hardness of tungsten carbide.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Tungsten_carbide",
+          "source_value_text": "2.4e+10"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-tungsten-carbide",
+      "name": "Tungsten carbide",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Tungsten_carbide",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tungsten-carbide",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tungsten carbide",
+          "url": "https://en.wikipedia.org/wiki/Tungsten_carbide"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Tungsten carbide is a classic high-hardness engineering material.",
+      "value": 24000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cubic boron nitride is among the hardest synthetic materials. Source-side figure: `48 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cubic boron nitride is among the hardest synthetic materials. Source-side figure: `48 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Cubic boron nitride",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "48000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Cubic_boron_nitride",
+          "source_value_text": "48 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-cbn-hardness",
+      "name": "Cubic boron nitride",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cubic_boron_nitride",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cubic-boron-nitride",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cubic boron nitride",
+          "url": "https://en.wikipedia.org/wiki/Cubic_boron_nitride"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Cubic boron nitride is among the hardest synthetic materials.",
+      "value": 48000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Diamond remains the iconic hardness benchmark. Source-side figure: `80 GPa` for Representative hardness. Converted GPa to Pa.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Diamond remains the iconic hardness benchmark. Source-side figure: `80 GPa` for Representative hardness. Converted GPa to Pa.",
+      "facts": {
+        "canonical_name": "Diamond",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "conversion_note": "Converted GPa to Pa.",
+          "method": "derived",
+          "original_value_text": "80000000000.0",
+          "source_basis": "Representative hardness.",
+          "source_unit": "GPa",
+          "source_url": "https://en.wikipedia.org/wiki/Diamond",
+          "source_value_text": "80 GPa"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:entity-diamond-hardness",
+      "name": "Diamond",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Diamond",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-diamond",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Diamond",
+          "url": "https://en.wikipedia.org/wiki/Diamond"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Diamond remains the iconic hardness benchmark.",
+      "value": 80000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Diamond is the canonical extreme-hardness benchmark. Here the quantity refers to `hardness`. Source-side figure: `1e+11 Pa` for Representative hardness of diamond.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Diamond is the canonical extreme-hardness benchmark. Here the quantity refers to `hardness`. Source-side figure: `1e+11 Pa` for Representative hardness of diamond.",
+      "facts": {
+        "canonical_name": "Diamond",
+        "ingest_source": "dataset/raw/curated/hardness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000000000.0",
+          "source_basis": "Representative hardness of diamond.",
+          "source_unit": "Pa",
+          "source_url": "https://en.wikipedia.org/wiki/Diamond",
+          "source_value_text": "1e+11"
+        }
+      },
+      "hook": null,
+      "id": "obs:hardness:scenario-hardness-diamond",
+      "name": "Diamond",
+      "qualifiers": {
+        "measurement": "hardness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Diamond",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-diamond",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Diamond",
+          "url": "https://en.wikipedia.org/wiki/Diamond"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-hardness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/hardness.json",
+          "url": "repo://dataset/raw/curated/hardness.json"
+        }
+      ],
+      "summary_short": "Diamond is the canonical extreme-hardness benchmark.",
+      "value": 100000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Hardness",
+      "url": "https://en.wikipedia.org/wiki/Hardness"
+    },
+    {
+      "name": "Vickers hardness test",
+      "url": "https://en.wikipedia.org/wiki/Vickers_hardness_test"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Pascals as an approximate indentation-hardness scale.",
+      "name": "pascals",
+      "symbol": "Pa"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Useful for softer materials.",
+      "name": "megapascals",
+      "symbol": "MPa"
+    },
+    {
+      "conversion_factor": 1e-09,
+      "description": "Useful for hard materials and ceramics.",
+      "name": "gigapascals",
+      "symbol": "GPa"
+    }
+  ]
+}

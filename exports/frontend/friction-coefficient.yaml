@@ -1,0 +1,1968 @@
+dimension: friction-coefficient
+base_unit: coefficient
+dimension_description: The coefficient of friction is dimensionless, but it still forms a useful comparative scale across lubricated bearings, skis on snow, tires on asphalt, and gecko-inspired adhesion. The meaning depends on the material pair and on whether the value is static, kinetic, or rolling, so the item labels keep that context visible.
+related_resources:
+- name: Friction
+  url: https://en.wikipedia.org/wiki/Friction
+show_limitations: true
+units:
+- name: coefficient
+  symbol: mu
+  conversion_factor: 1.0
+  description: Dimensionless coefficient of friction.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: senses
+frontend_group_label: Senses & Perception
+frontend_order: 540
+items:
+- id: obs:friction-coefficient:entity-ball-bearing-friction
+  name: Rolling ball bearing
+  value: 0.001
+  description: 'Rolling elements can have extraordinarily low effective friction coefficients. Source-side figure: `0.001 mu` for Representative rolling-friction coefficient.'
+  description_format: markdown
+  summary_short: Rolling elements can have extraordinarily low effective friction coefficients.
+  description_medium: 'Rolling elements can have extraordinarily low effective friction coefficients. Source-side figure: `0.001 mu` for Representative rolling-friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rolling ball bearing
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.001'
+      source_basis: Representative rolling-friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Rolling_resistance
+      source_value_text: '0.001'
+  source: https://en.wikipedia.org/wiki/Rolling_resistance
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rolling-resistance
+    url: https://en.wikipedia.org/wiki/Rolling_resistance
+    title: Rolling resistance
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-steel-on-ice
+  name: Steel on ice
+  value: 0.02
+  description: 'Steel on ice is a very low-friction benchmark. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.02 mu` for Representative kinetic friction coefficient for steel on ice.'
+  description_format: markdown
+  summary_short: Steel on ice is a very low-friction benchmark.
+  description_medium: 'Steel on ice is a very low-friction benchmark. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.02 mu` for Representative kinetic friction coefficient for steel on ice.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel on ice
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.02'
+      source_basis: Representative kinetic friction coefficient for steel on ice.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Friction
+      source_value_text: '0.02'
+  source: https://en.wikipedia.org/wiki/Friction
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-friction
+    url: https://en.wikipedia.org/wiki/Friction
+    title: Friction
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-ice-on-ice-friction
+  name: Ice on ice
+  value: 0.03
+  description: 'Ice is notoriously slippery. Source-side figure: `0.03 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Ice is notoriously slippery.
+  description_medium: 'Ice is notoriously slippery. Source-side figure: `0.03 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ice on ice
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.03'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Friction
+      source_value_text: '0.03'
+  source: https://en.wikipedia.org/wiki/Friction
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-friction
+    url: https://en.wikipedia.org/wiki/Friction
+    title: Friction
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-steel-on-ice-friction
+  name: Steel on ice
+  value: 0.03
+  description: 'Metal on ice remains very low-friction. Source-side figure: `0.03 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Metal on ice remains very low-friction.
+  description_medium: 'Metal on ice remains very low-friction. Source-side figure: `0.03 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel on ice
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.03'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Friction
+      source_value_text: '0.03'
+  source: https://en.wikipedia.org/wiki/Friction
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-friction
+    url: https://en.wikipedia.org/wiki/Friction
+    title: Friction
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-ptfe-on-ptfe-friction
+  name: PTFE on PTFE
+  value: 0.04
+  description: 'Teflon is the classic low-friction everyday material. Source-side figure: `0.04 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Teflon is the classic low-friction everyday material.
+  description_medium: 'Teflon is the classic low-friction everyday material. Source-side figure: `0.04 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: PTFE on PTFE
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.04'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+      source_value_text: '0.04'
+  source: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-polytetrafluoroethylene
+    url: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+    title: Polytetrafluoroethylene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-ptfe-on-steel-friction
+  name: PTFE on steel
+  value: 0.04
+  description: 'A standard low-friction engineering pair. Source-side figure: `0.04 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A standard low-friction engineering pair.
+  description_medium: 'A standard low-friction engineering pair. Source-side figure: `0.04 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: PTFE on steel
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.04'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+      source_value_text: '0.04'
+  source: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-polytetrafluoroethylene
+    url: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+    title: Polytetrafluoroethylene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-snowboard-on-snow-friction
+  name: Waxed snowboard on snow
+  value: 0.04
+  description: 'A winter-sports low-friction benchmark. Source-side figure: `0.04 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A winter-sports low-friction benchmark.
+  description_medium: 'A winter-sports low-friction benchmark. Source-side figure: `0.04 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Waxed snowboard on snow
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.04'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Snowboard
+      source_value_text: '0.04'
+  source: https://en.wikipedia.org/wiki/Snowboard
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-snowboard
+    url: https://en.wikipedia.org/wiki/Snowboard
+    title: Snowboard
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-teflon-on-teflon
+  name: Teflon on Teflon
+  value: 0.04
+  description: 'PTFE sliding on PTFE is a classic low-friction reference. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.04 mu` for Representative friction coefficient for PTFE on PTFE.'
+  description_format: markdown
+  summary_short: PTFE sliding on PTFE is a classic low-friction reference.
+  description_medium: 'PTFE sliding on PTFE is a classic low-friction reference. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.04 mu` for Representative friction coefficient for PTFE on PTFE.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Teflon on Teflon
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.04'
+      source_basis: Representative friction coefficient for PTFE on PTFE.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+      source_value_text: '0.04'
+  source: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-polytetrafluoroethylene
+    url: https://en.wikipedia.org/wiki/Polytetrafluoroethylene
+    title: Polytetrafluoroethylene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-lubricated-steel-friction
+  name: Lubricated steel on steel
+  value: 0.05
+  description: 'Lubrication dramatically reduces friction for metal contacts. Source-side figure: `0.05 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Lubrication dramatically reduces friction for metal contacts.
+  description_medium: 'Lubrication dramatically reduces friction for metal contacts. Source-side figure: `0.05 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lubricated steel on steel
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.05'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Lubricant
+      source_value_text: '0.05'
+  source: https://en.wikipedia.org/wiki/Lubricant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lubricant
+    url: https://en.wikipedia.org/wiki/Lubricant
+    title: Lubricant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-ski-on-snow-friction
+  name: Ski on snow
+  value: 0.05
+  description: 'Waxed skis are a classic low-friction sports interface. Source-side figure: `0.05 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Waxed skis are a classic low-friction sports interface.
+  description_medium: 'Waxed skis are a classic low-friction sports interface. Source-side figure: `0.05 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ski on snow
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.05'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Ski
+      source_value_text: '0.05'
+  source: https://en.wikipedia.org/wiki/Ski
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ski
+    url: https://en.wikipedia.org/wiki/Ski
+    title: Ski
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-ski-on-snow
+  name: Ski on snow
+  value: 0.05
+  description: 'Skiing uses a small friction coefficient to glide efficiently. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.05 mu` for Representative ski-on-snow kinetic friction coefficient.'
+  description_format: markdown
+  summary_short: Skiing uses a small friction coefficient to glide efficiently.
+  description_medium: 'Skiing uses a small friction coefficient to glide efficiently. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.05 mu` for Representative ski-on-snow kinetic friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ski on snow
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.05'
+      source_basis: Representative ski-on-snow kinetic friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Ski
+      source_value_text: '0.05'
+  source: https://en.wikipedia.org/wiki/Ski
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ski
+    url: https://en.wikipedia.org/wiki/Ski
+    title: Ski
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:scenario-friction-coefficient-lubricated-bearings
+  name: Lubricated steel bearings
+  value: 0.08
+  description: 'Lubricated bearings are designed to stay near the low end of friction. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.08 mu` for Representative lubricated steel bearing friction coefficient.'
+  description_format: markdown
+  summary_short: Lubricated bearings are designed to stay near the low end of friction.
+  description_medium: 'Lubricated bearings are designed to stay near the low end of friction. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.08 mu` for Representative lubricated steel bearing friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lubricated steel bearings
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.08'
+      source_basis: Representative lubricated steel bearing friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Bearing_(mechanical)
+      source_value_text: '0.08'
+  source: https://en.wikipedia.org/wiki/Bearing_(mechanical)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bearing-mechanical
+    url: https://en.wikipedia.org/wiki/Bearing_(mechanical)
+    title: Bearing (mechanical)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-graphite-friction
+  name: Graphite on graphite
+  value: 0.1
+  description: 'Layered materials can have low friction because planes shear easily. Source-side figure: `0.1 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Layered materials can have low friction because planes shear easily.
+  description_medium: 'Layered materials can have low friction because planes shear easily. Source-side figure: `0.1 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Graphite on graphite
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Graphite
+      source_value_text: '0.1'
+  source: https://en.wikipedia.org/wiki/Graphite
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-graphite
+    url: https://en.wikipedia.org/wiki/Graphite
+    title: Graphite
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-rubber-on-ice
+  name: Rubber on ice
+  value: 0.1
+  description: 'Rubber on ice is a classic cautionary low-friction case. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.1 mu` for Representative rubber-on-ice friction coefficient.'
+  description_format: markdown
+  summary_short: Rubber on ice is a classic cautionary low-friction case.
+  description_medium: 'Rubber on ice is a classic cautionary low-friction case. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.1 mu` for Representative rubber-on-ice friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber on ice
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: Representative rubber-on-ice friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Ice
+      source_value_text: '0.1'
+  source: https://en.wikipedia.org/wiki/Ice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ice
+    url: https://en.wikipedia.org/wiki/Ice
+    title: Ice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-rubber-on-ice-friction
+  name: Rubber on ice
+  value: 0.15
+  description: 'Even rubber loses grip on ice. Source-side figure: `0.15 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Even rubber loses grip on ice.
+  description_medium: 'Even rubber loses grip on ice. Source-side figure: `0.15 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber on ice
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.15'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Friction
+      source_value_text: '0.15'
+  source: https://en.wikipedia.org/wiki/Friction
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-friction
+    url: https://en.wikipedia.org/wiki/Friction
+    title: Friction
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-wet-shoe-floor-friction
+  name: Wet shoe on polished floor
+  value: 0.2
+  description: 'A slip hazard benchmark. Source-side figure: `0.2 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A slip hazard benchmark.
+  description_medium: 'A slip hazard benchmark. Source-side figure: `0.2 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wet shoe on polished floor
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.2'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Friction
+      source_value_text: '0.2'
+  source: https://en.wikipedia.org/wiki/Friction
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-friction
+    url: https://en.wikipedia.org/wiki/Friction
+    title: Friction
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-nylon-on-steel-friction
+  name: Nylon on steel
+  value: 0.25
+  description: 'A moderate polymer-on-metal benchmark. Source-side figure: `0.25 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A moderate polymer-on-metal benchmark.
+  description_medium: 'A moderate polymer-on-metal benchmark. Source-side figure: `0.25 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Nylon on steel
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.25'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Nylon
+      source_value_text: '0.25'
+  source: https://en.wikipedia.org/wiki/Nylon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-nylon
+    url: https://en.wikipedia.org/wiki/Nylon
+    title: Nylon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-plastic-on-desk-friction
+  name: Plastic slider on desk
+  value: 0.3
+  description: 'A simple everyday desktop-friction example. Source-side figure: `0.3 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A simple everyday desktop-friction example.
+  description_medium: 'A simple everyday desktop-friction example. Source-side figure: `0.3 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Plastic slider on desk
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.3'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Plastic
+      source_value_text: '0.3'
+  source: https://en.wikipedia.org/wiki/Plastic
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-plastic
+    url: https://en.wikipedia.org/wiki/Plastic
+    title: Plastic
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-brake-pad-friction
+  name: Brake pad on rotor
+  value: 0.4
+  description: 'Automotive braking depends on deliberate moderate-to-high friction. Source-side figure: `0.4 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Automotive braking depends on deliberate moderate-to-high friction.
+  description_medium: 'Automotive braking depends on deliberate moderate-to-high friction. Source-side figure: `0.4 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Brake pad on rotor
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.4'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Brake_pad
+      source_value_text: '0.4'
+  source: https://en.wikipedia.org/wiki/Brake_pad
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brake-pad
+    url: https://en.wikipedia.org/wiki/Brake_pad
+    title: Brake pad
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-leather-on-wood-friction
+  name: Leather on wood
+  value: 0.4
+  description: 'A common everyday contact pair. Source-side figure: `0.4 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A common everyday contact pair.
+  description_medium: 'A common everyday contact pair. Source-side figure: `0.4 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Leather on wood
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.4'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Leather
+      source_value_text: '0.4'
+  source: https://en.wikipedia.org/wiki/Leather
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-leather
+    url: https://en.wikipedia.org/wiki/Leather
+    title: Leather
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-wood-on-wood-friction
+  name: Wood on wood
+  value: 0.4
+  description: 'A familiar moderate-friction material pair. Source-side figure: `0.4 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A familiar moderate-friction material pair.
+  description_medium: 'A familiar moderate-friction material pair. Source-side figure: `0.4 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wood on wood
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.4'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Wood
+      source_value_text: '0.4'
+  source: https://en.wikipedia.org/wiki/Wood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wood
+    url: https://en.wikipedia.org/wiki/Wood
+    title: Wood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-wood-on-wood
+  name: Wood on wood
+  value: 0.4
+  description: 'Dry wood on wood sits in a middle friction regime. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.4 mu` for Representative dry wood-on-wood friction coefficient.'
+  description_format: markdown
+  summary_short: Dry wood on wood sits in a middle friction regime.
+  description_medium: 'Dry wood on wood sits in a middle friction regime. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.4 mu` for Representative dry wood-on-wood friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wood on wood
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.4'
+      source_basis: Representative dry wood-on-wood friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Wood
+      source_value_text: '0.4'
+  source: https://en.wikipedia.org/wiki/Wood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wood
+    url: https://en.wikipedia.org/wiki/Wood
+    title: Wood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-brass-on-steel-friction
+  name: Brass on steel
+  value: 0.5
+  description: 'A common engineering dry-contact benchmark. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A common engineering dry-contact benchmark.
+  description_medium: 'A common engineering dry-contact benchmark. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Brass on steel
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Brass
+      source_value_text: '0.5'
+  source: https://en.wikipedia.org/wiki/Brass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-brass
+    url: https://en.wikipedia.org/wiki/Brass
+    title: Brass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-ceramic-on-ceramic-friction
+  name: Ceramic on ceramic
+  value: 0.5
+  description: 'A moderate-to-high dry-friction ceramic interface. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A moderate-to-high dry-friction ceramic interface.
+  description_medium: 'A moderate-to-high dry-friction ceramic interface. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ceramic on ceramic
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Ceramic
+      source_value_text: '0.5'
+  source: https://en.wikipedia.org/wiki/Ceramic
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ceramic
+    url: https://en.wikipedia.org/wiki/Ceramic
+    title: Ceramic
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-paper-on-paper-friction
+  name: Paper on paper
+  value: 0.5
+  description: 'Even light everyday materials can have substantial friction. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Even light everyday materials can have substantial friction.
+  description_medium: 'Even light everyday materials can have substantial friction. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Paper on paper
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Paper
+      source_value_text: '0.5'
+  source: https://en.wikipedia.org/wiki/Paper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper
+    url: https://en.wikipedia.org/wiki/Paper
+    title: Paper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-tire-on-wet-asphalt-friction
+  name: Tire on wet asphalt
+  value: 0.5
+  description: 'Wet roads roughly halve available tire grip relative to dry pavement. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Wet roads roughly halve available tire grip relative to dry pavement.
+  description_medium: 'Wet roads roughly halve available tire grip relative to dry pavement. Source-side figure: `0.5 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tire on wet asphalt
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Road_surface
+      source_value_text: '0.5'
+  source: https://en.wikipedia.org/wiki/Road_surface
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-road-surface
+    url: https://en.wikipedia.org/wiki/Road_surface
+    title: Road surface
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-chalk-on-blackboard
+  name: Chalk on blackboard
+  value: 0.5
+  description: 'Chalk on a board gives a familiar classroom friction example. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.5 mu` for Representative chalk-on-slate or chalk-on-blackboard friction coefficient.'
+  description_format: markdown
+  summary_short: Chalk on a board gives a familiar classroom friction example.
+  description_medium: 'Chalk on a board gives a familiar classroom friction example. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.5 mu` for Representative chalk-on-slate or chalk-on-blackboard friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chalk on blackboard
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: Representative chalk-on-slate or chalk-on-blackboard friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Chalk
+      source_value_text: '0.5'
+  source: https://en.wikipedia.org/wiki/Chalk
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chalk
+    url: https://en.wikipedia.org/wiki/Chalk
+    title: Chalk
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-bare-foot-tile-friction
+  name: Bare foot on tile
+  value: 0.6
+  description: 'A familiar human-scale traction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A familiar human-scale traction benchmark.
+  description_medium: 'A familiar human-scale traction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bare foot on tile
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Tile
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Tile
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tile
+    url: https://en.wikipedia.org/wiki/Tile
+    title: Tile
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-dry-shoe-floor-friction
+  name: Dry shoe on polished floor
+  value: 0.6
+  description: 'Normal walking traction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Normal walking traction benchmark.
+  description_medium: 'Normal walking traction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dry shoe on polished floor
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Friction
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Friction
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-friction
+    url: https://en.wikipedia.org/wiki/Friction
+    title: Friction
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-rubber-on-wet-concrete-friction
+  name: Rubber on wet concrete
+  value: 0.6
+  description: 'A wet-ground traction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A wet-ground traction benchmark.
+  description_medium: 'A wet-ground traction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber on wet concrete
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Concrete
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-skin-on-glass-friction
+  name: Human skin on glass
+  value: 0.6
+  description: 'A familiar tactile-friction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A familiar tactile-friction benchmark.
+  description_medium: 'A familiar tactile-friction benchmark. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human skin on glass
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Skin
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Skin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-skin
+    url: https://en.wikipedia.org/wiki/Skin
+    title: Skin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-steel-on-steel-dry-friction
+  name: Steel on steel dry
+  value: 0.6
+  description: 'Dry steel-on-steel friction is much higher than lubricated contact. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Dry steel-on-steel friction is much higher than lubricated contact.
+  description_medium: 'Dry steel-on-steel friction is much higher than lubricated contact. Source-side figure: `0.6 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel on steel dry
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Steel
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Steel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-steel
+    url: https://en.wikipedia.org/wiki/Steel
+    title: Steel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-shoe-on-floor
+  name: Shoe on floor
+  value: 0.6
+  description: 'Shoes on floors are a common everyday friction case. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.6 mu` for Representative shoe-sole friction coefficient on a floor surface.'
+  description_format: markdown
+  summary_short: Shoes on floors are a common everyday friction case.
+  description_medium: 'Shoes on floors are a common everyday friction case. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.6 mu` for Representative shoe-sole friction coefficient on a floor surface.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Shoe on floor
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Representative shoe-sole friction coefficient on a floor surface.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Shoe
+      source_value_text: '0.6'
+  source: https://en.wikipedia.org/wiki/Shoe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-shoe
+    url: https://en.wikipedia.org/wiki/Shoe
+    title: Shoe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-rubber-on-steel-friction
+  name: Rubber on steel
+  value: 0.7
+  description: 'A useful generic elastomer-on-metal benchmark. Source-side figure: `0.7 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A useful generic elastomer-on-metal benchmark.
+  description_medium: 'A useful generic elastomer-on-metal benchmark. Source-side figure: `0.7 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber on steel
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.7'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Rubber
+      source_value_text: '0.7'
+  source: https://en.wikipedia.org/wiki/Rubber
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rubber
+    url: https://en.wikipedia.org/wiki/Rubber
+    title: Rubber
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-sandpaper-on-wood
+  name: Sandpaper on wood
+  value: 0.7
+  description: 'Sandpaper on wood pushes friction higher into the rough-contact regime. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.7 mu` for Representative sandpaper-on-wood friction coefficient.'
+  description_format: markdown
+  summary_short: Sandpaper on wood pushes friction higher into the rough-contact regime.
+  description_medium: 'Sandpaper on wood pushes friction higher into the rough-contact regime. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.7 mu` for Representative sandpaper-on-wood friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sandpaper on wood
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.7'
+      source_basis: Representative sandpaper-on-wood friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Sandpaper
+      source_value_text: '0.7'
+  source: https://en.wikipedia.org/wiki/Sandpaper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sandpaper
+    url: https://en.wikipedia.org/wiki/Sandpaper
+    title: Sandpaper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-glass-on-glass-friction
+  name: Glass on glass
+  value: 0.9
+  description: 'Smooth solids can still have high dry friction. Source-side figure: `0.9 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Smooth solids can still have high dry friction.
+  description_medium: 'Smooth solids can still have high dry friction. Source-side figure: `0.9 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Glass on glass
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.9'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Glass
+      source_value_text: '0.9'
+  source: https://en.wikipedia.org/wiki/Glass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-glass
+    url: https://en.wikipedia.org/wiki/Glass
+    title: Glass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-tire-on-dry-asphalt-friction
+  name: Tire on dry asphalt
+  value: 0.9
+  description: 'A dry-road traction benchmark. Source-side figure: `0.9 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: A dry-road traction benchmark.
+  description_medium: 'A dry-road traction benchmark. Source-side figure: `0.9 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tire on dry asphalt
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.9'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Asphalt_concrete
+      source_value_text: '0.9'
+  source: https://en.wikipedia.org/wiki/Asphalt_concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-asphalt-concrete
+    url: https://en.wikipedia.org/wiki/Asphalt_concrete
+    title: Asphalt concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-tire-on-asphalt
+  name: Tire on asphalt
+  value: 0.9
+  description: 'Car tires on dry asphalt are near the practical upper end for everyday surfaces. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.9 mu` for Representative tire-road friction coefficient.'
+  description_format: markdown
+  summary_short: Car tires on dry asphalt are near the practical upper end for everyday surfaces.
+  description_medium: 'Car tires on dry asphalt are near the practical upper end for everyday surfaces. Here the quantity refers to `coefficient of friction`. Source-side figure: `0.9 mu` for Representative tire-road friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tire on asphalt
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '0.9'
+      source_basis: Representative tire-road friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Tire
+      source_value_text: '0.9'
+  source: https://en.wikipedia.org/wiki/Tire
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tire
+    url: https://en.wikipedia.org/wiki/Tire
+    title: Tire
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-rubber-on-dry-concrete-friction
+  name: Rubber on dry concrete
+  value: 1.0
+  description: 'Dry concrete gives strong tire and shoe traction. Source-side figure: `1.0 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Dry concrete gives strong tire and shoe traction.
+  description_medium: 'Dry concrete gives strong tire and shoe traction. Source-side figure: `1.0 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber on dry concrete
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Concrete
+      source_value_text: '1.0'
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:scenario-friction-coefficient-tire-on-dry-concrete
+  name: Tire on dry concrete
+  value: 1.0
+  description: 'Dry tire on concrete is a useful near-unity friction benchmark. Here the quantity refers to `coefficient of friction`. Source-side figure: `1 mu` for Representative tire-on-concrete friction coefficient.'
+  description_format: markdown
+  summary_short: Dry tire on concrete is a useful near-unity friction benchmark.
+  description_medium: 'Dry tire on concrete is a useful near-unity friction benchmark. Here the quantity refers to `coefficient of friction`. Source-side figure: `1 mu` for Representative tire-on-concrete friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tire on dry concrete
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Representative tire-on-concrete friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Concrete
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coefficient of friction
+- id: obs:friction-coefficient:entity-climbing-shoe-rock-friction
+  name: Climbing shoe on rock
+  value: 1.2
+  description: 'Rubber compounds can exceed one in high-grip use. Source-side figure: `1.2 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Rubber compounds can exceed one in high-grip use.
+  description_medium: 'Rubber compounds can exceed one in high-grip use. Source-side figure: `1.2 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Climbing shoe on rock
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '1.2'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Climbing_shoe
+      source_value_text: '1.2'
+  source: https://en.wikipedia.org/wiki/Climbing_shoe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-climbing-shoe
+    url: https://en.wikipedia.org/wiki/Climbing_shoe
+    title: Climbing shoe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-sticky-rubber-track-friction
+  name: Sticky rubber on dry track
+  value: 1.4
+  description: 'Soft racing compounds can exceed unity. Source-side figure: `1.4 mu` for Representative friction coefficient.'
+  description_format: markdown
+  summary_short: Soft racing compounds can exceed unity.
+  description_medium: 'Soft racing compounds can exceed unity. Source-side figure: `1.4 mu` for Representative friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sticky rubber on dry track
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '1.4'
+      source_basis: Representative friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Tire
+      source_value_text: '1.4'
+  source: https://en.wikipedia.org/wiki/Tire
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tire
+    url: https://en.wikipedia.org/wiki/Tire
+    title: Tire
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:friction-coefficient:entity-gecko-foot-friction
+  name: Gecko foot adhesion
+  value: 1.5
+  description: 'Biological adhesion can produce very high effective friction. Source-side figure: `1.5 mu` for Representative effective friction coefficient.'
+  description_format: markdown
+  summary_short: Biological adhesion can produce very high effective friction.
+  description_medium: 'Biological adhesion can produce very high effective friction. Source-side figure: `1.5 mu` for Representative effective friction coefficient.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Gecko foot adhesion
+    ingest_source: dataset/raw/curated/friction-coefficient.json
+    source_trace:
+      method: direct
+      original_value_text: '1.5'
+      source_basis: Representative effective friction coefficient.
+      source_unit: mu
+      source_url: https://en.wikipedia.org/wiki/Gecko
+      source_value_text: '1.5'
+  source: https://en.wikipedia.org/wiki/Gecko
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gecko
+    url: https://en.wikipedia.org/wiki/Gecko
+    title: Gecko
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-friction-coefficient-json
+    url: repo://dataset/raw/curated/friction-coefficient.json
+    title: dataset/raw/curated/friction-coefficient.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}

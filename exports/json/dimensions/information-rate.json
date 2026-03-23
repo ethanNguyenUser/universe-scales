@@ -2,15 +2,15 @@
   "base_unit": "bits_per_second",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 61,
+    "candidate_count": 56,
     "candidate_shortfall_to_preferred_target": 0,
-    "empty_bin_count": 6,
+    "empty_bin_count": 2,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
     "selected_count": 50,
-    "selected_primary_count": 18,
-    "selected_secondary_count": 32,
+    "selected_primary_count": 22,
+    "selected_secondary_count": 28,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
       "secondary_reference": 50
@@ -27,277 +27,41 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A single bit transmitted over the course of an entire year. Derived using `bit rate = 1 bit / 1 Julian year`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per Julian year` for Reference scenario using one bit spread over one year. Converted Julian years to seconds.",
+      "description": "The coarse/acquisition GPS navigation message runs at 50 bits per second. Here the quantity refers to `navigation message bit rate`. Source-side figure: `50 bit/s` for Reported GPS C/A navigation data rate.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A single bit transmitted over the course of an entire year. Derived using `bit rate = 1 bit / 1 Julian year`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per Julian year` for Reference scenario using one bit spread over one year. Converted Julian years to seconds.",
+      "description_medium": "The coarse/acquisition GPS navigation message runs at 50 bits per second. Here the quantity refers to `navigation message bit rate`. Source-side figure: `50 bit/s` for Reported GPS C/A navigation data rate.",
       "facts": {
-        "canonical_name": "One bit per year",
-        "ingest_source": "dataset/raw/curated/information-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted Julian years to seconds.",
-          "derivation_note": "bit rate = 1 bit / 1 Julian year",
-          "method": "derived",
-          "original_value_text": "3.168808781402895e-08",
-          "source_basis": "Reference scenario using one bit spread over one year.",
-          "source_unit": "bit/year",
-          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
-          "source_value_text": "1 bit per Julian year"
-        }
-      },
-      "hook": null,
-      "id": "obs:information-rate:scenario-information-rate-one-bit-per-year",
-      "name": "One bit per year",
-      "qualifiers": {
-        "derivation": "bit rate = 1 bit / 1 Julian year",
-        "measurement": "transfer rate"
-      },
-      "source": "https://en.wikipedia.org/wiki/Bit_rate",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Bit rate",
-          "url": "https://en.wikipedia.org/wiki/Bit_rate"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-information-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/information-rate.json",
-          "url": "repo://dataset/raw/curated/information-rate.json"
-        }
-      ],
-      "summary_short": "A single bit transmitted over the course of an entire year.",
-      "value": 3.168808781402895e-08,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A single bit transmitted over one day. Derived using `bit rate = 1 bit / 1 day`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per day` for Reference scenario using one bit spread over one day. Converted days to seconds.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A single bit transmitted over one day. Derived using `bit rate = 1 bit / 1 day`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per day` for Reference scenario using one bit spread over one day. Converted days to seconds.",
-      "facts": {
-        "canonical_name": "One bit per day",
-        "ingest_source": "dataset/raw/curated/information-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted days to seconds.",
-          "derivation_note": "bit rate = 1 bit / 1 day",
-          "method": "derived",
-          "original_value_text": "1.1574074074074073e-05",
-          "source_basis": "Reference scenario using one bit spread over one day.",
-          "source_unit": "bit/day",
-          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
-          "source_value_text": "1 bit per day"
-        }
-      },
-      "hook": null,
-      "id": "obs:information-rate:scenario-information-rate-one-bit-per-day",
-      "name": "One bit per day",
-      "qualifiers": {
-        "derivation": "bit rate = 1 bit / 1 day",
-        "measurement": "transfer rate"
-      },
-      "source": "https://en.wikipedia.org/wiki/Bit_rate",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Bit rate",
-          "url": "https://en.wikipedia.org/wiki/Bit_rate"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-information-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/information-rate.json",
-          "url": "repo://dataset/raw/curated/information-rate.json"
-        }
-      ],
-      "summary_short": "A single bit transmitted over one day.",
-      "value": 1.1574074074074073e-05,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A single bit transmitted over one hour. Derived using `bit rate = 1 bit / 1 hour`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per hour` for Reference scenario using one bit spread over one hour. Converted hours to seconds.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A single bit transmitted over one hour. Derived using `bit rate = 1 bit / 1 hour`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per hour` for Reference scenario using one bit spread over one hour. Converted hours to seconds.",
-      "facts": {
-        "canonical_name": "One bit per hour",
-        "ingest_source": "dataset/raw/curated/information-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted hours to seconds.",
-          "derivation_note": "bit rate = 1 bit / 1 hour",
-          "method": "derived",
-          "original_value_text": "0.0002777777777777778",
-          "source_basis": "Reference scenario using one bit spread over one hour.",
-          "source_unit": "bit/hour",
-          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
-          "source_value_text": "1 bit per hour"
-        }
-      },
-      "hook": null,
-      "id": "obs:information-rate:scenario-information-rate-one-bit-per-hour",
-      "name": "One bit per hour",
-      "qualifiers": {
-        "derivation": "bit rate = 1 bit / 1 hour",
-        "measurement": "transfer rate"
-      },
-      "source": "https://en.wikipedia.org/wiki/Bit_rate",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Bit rate",
-          "url": "https://en.wikipedia.org/wiki/Bit_rate"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-information-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/information-rate.json",
-          "url": "repo://dataset/raw/curated/information-rate.json"
-        }
-      ],
-      "summary_short": "A single bit transmitted over one hour.",
-      "value": 0.0002777777777777778,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A single bit transmitted over one minute. Derived using `bit rate = 1 bit / 1 minute`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per minute` for Reference scenario using one bit spread over one minute. Converted minutes to seconds.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A single bit transmitted over one minute. Derived using `bit rate = 1 bit / 1 minute`. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit per minute` for Reference scenario using one bit spread over one minute. Converted minutes to seconds.",
-      "facts": {
-        "canonical_name": "One bit per minute",
-        "ingest_source": "dataset/raw/curated/information-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted minutes to seconds.",
-          "derivation_note": "bit rate = 1 bit / 1 minute",
-          "method": "derived",
-          "original_value_text": "0.016666666666666666",
-          "source_basis": "Reference scenario using one bit spread over one minute.",
-          "source_unit": "bit/min",
-          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
-          "source_value_text": "1 bit per minute"
-        }
-      },
-      "hook": null,
-      "id": "obs:information-rate:scenario-information-rate-one-bit-per-minute",
-      "name": "One bit per minute",
-      "qualifiers": {
-        "derivation": "bit rate = 1 bit / 1 minute",
-        "measurement": "transfer rate"
-      },
-      "source": "https://en.wikipedia.org/wiki/Bit_rate",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Bit rate",
-          "url": "https://en.wikipedia.org/wiki/Bit_rate"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-information-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/information-rate.json",
-          "url": "repo://dataset/raw/curated/information-rate.json"
-        }
-      ],
-      "summary_short": "A single bit transmitted over one minute.",
-      "value": 0.016666666666666666,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "The literal baseline of one bit every second. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit/s` for Reference bit-rate baseline.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The literal baseline of one bit every second. Here the quantity refers to `transfer rate`. Source-side figure: `1 bit/s` for Reference bit-rate baseline.",
-      "facts": {
-        "canonical_name": "One bit per second",
+        "canonical_name": "GPS C/A navigation message",
         "ingest_source": "dataset/raw/curated/information-rate.json",
         "source_trace": {
           "method": "direct",
-          "original_value_text": "1.0",
-          "source_basis": "Reference bit-rate baseline.",
+          "original_value_text": "50.0",
+          "source_basis": "Reported GPS C/A navigation data rate.",
           "source_unit": "bit/s",
-          "source_url": "https://en.wikipedia.org/wiki/Bit_rate",
-          "source_value_text": "1 bit/s"
+          "source_url": "https://en.wikipedia.org/wiki/GPS_signals",
+          "source_value_text": "50 bit/s"
         }
       },
       "hook": null,
-      "id": "obs:information-rate:scenario-information-rate-one-bit-per-second",
-      "name": "One bit per second",
+      "id": "obs:information-rate:entity-gps-ca-navigation-message",
+      "name": "GPS C/A navigation message",
       "qualifiers": {
-        "measurement": "transfer rate"
+        "measurement": "navigation message bit rate"
       },
-      "source": "https://en.wikipedia.org/wiki/Bit_rate",
+      "source": "https://en.wikipedia.org/wiki/GPS_signals",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-bit-rate",
+          "id": "src:https-en-wikipedia-org-wiki-gps-signals",
           "license_text": "CC BY-SA 4.0",
           "note": null,
           "publisher": "Wikipedia",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Bit rate",
-          "url": "https://en.wikipedia.org/wiki/Bit_rate"
+          "title": "GPS signals",
+          "url": "https://en.wikipedia.org/wiki/GPS_signals"
         },
         {
           "id": "src:repo-dataset-raw-curated-information-rate-json",
@@ -311,8 +75,8 @@
           "url": "repo://dataset/raw/curated/information-rate.json"
         }
       ],
-      "summary_short": "The literal baseline of one bit every second.",
-      "value": 1.0,
+      "summary_short": "The coarse/acquisition GPS navigation message runs at 50 bits per second.",
+      "value": 50.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -1288,6 +1052,63 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "A DVD-Video stream peaks at 9.8 Mbit/s. Here the quantity refers to `maximum combined video and audio bit rate`. Source-side figure: `9.8 Mbit/s` for Reported maximum DVD-Video bitrate. Converted megabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A DVD-Video stream peaks at 9.8 Mbit/s. Here the quantity refers to `maximum combined video and audio bit rate`. Source-side figure: `9.8 Mbit/s` for Reported maximum DVD-Video bitrate. Converted megabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "DVD-Video stream",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted megabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "9800000.0",
+          "source_basis": "Reported maximum DVD-Video bitrate.",
+          "source_unit": "Mbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/DVD-Video",
+          "source_value_text": "9.8 Mbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-dvd-video-stream",
+      "name": "DVD-Video stream",
+      "qualifiers": {
+        "measurement": "maximum combined video and audio bit rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/DVD-Video",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dvd-video",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DVD-Video",
+          "url": "https://en.wikipedia.org/wiki/DVD-Video"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "A DVD-Video stream peaks at 9.8 Mbit/s.",
+      "value": 9800000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "The original mainstream Wi-Fi generation 802.11b reached 11 Mbit/s. Here the quantity refers to `maximum physical layer bit rate`. Source-side figure: `11 Mbit/s` for Reported 802.11b physical layer rate. Converted megabits per second to bits per second.",
       "description_format": "markdown",
       "description_long": null,
@@ -1630,42 +1451,42 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "2.5GBASE-T carries 2.5 Gbit/s over twisted-pair cabling. Here the quantity refers to `line rate`. Source-side figure: `2.5 Gbit/s` for Reported 2.5GBASE-T line rate. Converted gigabits per second to bits per second.",
+      "description": "First-generation Serial ATA links signaled at 1.5 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `1.5 Gbit/s` for Reported SATA I signaling rate. Converted gigabits per second to bits per second.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "2.5GBASE-T carries 2.5 Gbit/s over twisted-pair cabling. Here the quantity refers to `line rate`. Source-side figure: `2.5 Gbit/s` for Reported 2.5GBASE-T line rate. Converted gigabits per second to bits per second.",
+      "description_medium": "First-generation Serial ATA links signaled at 1.5 Gbit/s. Here the quantity refers to `signaling rate`. Source-side figure: `1.5 Gbit/s` for Reported SATA I signaling rate. Converted gigabits per second to bits per second.",
       "facts": {
-        "canonical_name": "2.5 Gigabit Ethernet",
+        "canonical_name": "SATA I",
         "ingest_source": "dataset/raw/curated/information-rate.json",
         "source_trace": {
           "conversion_note": "Converted gigabits per second to bits per second.",
           "method": "converted",
-          "original_value_text": "2500000000.0",
-          "source_basis": "Reported 2.5GBASE-T line rate.",
+          "original_value_text": "1500000000.0",
+          "source_basis": "Reported SATA I signaling rate.",
           "source_unit": "Gbit/s",
-          "source_url": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
-          "source_value_text": "2.5 Gbit/s"
+          "source_url": "https://en.wikipedia.org/wiki/Serial_ATA",
+          "source_value_text": "1.5 Gbit/s"
         }
       },
       "hook": null,
-      "id": "obs:information-rate:entity-2-5-gigabit-ethernet",
-      "name": "2.5 Gigabit Ethernet",
+      "id": "obs:information-rate:entity-sata-i",
+      "name": "SATA I",
       "qualifiers": {
-        "measurement": "line rate"
+        "measurement": "signaling rate"
       },
-      "source": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
+      "source": "https://en.wikipedia.org/wiki/Serial_ATA",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-2-5gbase-t-and-5gbase-t",
+          "id": "src:https-en-wikipedia-org-wiki-serial-ata",
           "license_text": "CC BY-SA 4.0",
           "note": null,
           "publisher": "Wikipedia",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "2.5GBASE-T and 5GBASE-T",
-          "url": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T"
+          "title": "Serial ATA",
+          "url": "https://en.wikipedia.org/wiki/Serial_ATA"
         },
         {
           "id": "src:repo-dataset-raw-curated-information-rate-json",
@@ -1679,8 +1500,8 @@
           "url": "repo://dataset/raw/curated/information-rate.json"
         }
       ],
-      "summary_short": "2.5GBASE-T carries 2.5 Gbit/s over twisted-pair cabling.",
-      "value": 2500000000.0,
+      "summary_short": "First-generation Serial ATA links signaled at 1.5 Gbit/s.",
+      "value": 1500000000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -1795,6 +1616,63 @@
       ],
       "summary_short": "The first HDMI specification carried up to 4.95 Gbit/s.",
       "value": 4950000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "5GBASE-T carries 5 Gbit/s over twisted-pair cabling. Here the quantity refers to `line rate`. Source-side figure: `5 Gbit/s` for Reported 5GBASE-T line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "5GBASE-T carries 5 Gbit/s over twisted-pair cabling. Here the quantity refers to `line rate`. Source-side figure: `5 Gbit/s` for Reported 5GBASE-T line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "5 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "5000000000.0",
+          "source_basis": "Reported 5GBASE-T line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
+          "source_value_text": "5 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-5-gigabit-ethernet",
+      "name": "5 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-2-5gbase-t-and-5gbase-t",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "2.5GBASE-T and 5GBASE-T",
+          "url": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "5GBASE-T carries 5 Gbit/s over twisted-pair cabling.",
+      "value": 5000000000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -1966,6 +1844,63 @@
       ],
       "summary_short": "Wi-Fi 5 under 802.11ac reaches a theoretical 6.93 Gbit/s.",
       "value": 6930000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "10 Gigabit Ethernet carries 10 billion bits each second. Here the quantity refers to `line rate`. Source-side figure: `10 Gbit/s` for Reported 10 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "10 Gigabit Ethernet carries 10 billion bits each second. Here the quantity refers to `line rate`. Source-side figure: `10 Gbit/s` for Reported 10 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "10 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "10000000000.0",
+          "source_basis": "Reported 10 Gigabit Ethernet line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/10_Gigabit_Ethernet",
+          "source_value_text": "10 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-10-gigabit-ethernet",
+      "name": "10 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/10_Gigabit_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-10-gigabit-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "10 Gigabit Ethernet",
+          "url": "https://en.wikipedia.org/wiki/10_Gigabit_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "10 Gigabit Ethernet carries 10 billion bits each second.",
+      "value": 10000000000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -2422,6 +2357,63 @@
       ],
       "summary_short": "DisplayPort 2.1 reaches 80 Gbit/s across four UHBR20 lanes.",
       "value": 80000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "100 Gigabit Ethernet carries 100 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `100 Gbit/s` for Reported 100 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "100 Gigabit Ethernet carries 100 Gbit/s. Here the quantity refers to `line rate`. Source-side figure: `100 Gbit/s` for Reported 100 Gigabit Ethernet line rate. Converted gigabits per second to bits per second.",
+      "facts": {
+        "canonical_name": "100 Gigabit Ethernet",
+        "ingest_source": "dataset/raw/curated/information-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted gigabits per second to bits per second.",
+          "method": "converted",
+          "original_value_text": "100000000000.0",
+          "source_basis": "Reported 100 Gigabit Ethernet line rate.",
+          "source_unit": "Gbit/s",
+          "source_url": "https://en.wikipedia.org/wiki/100_Gigabit_Ethernet",
+          "source_value_text": "100 Gbit/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:information-rate:entity-100-gigabit-ethernet",
+      "name": "100 Gigabit Ethernet",
+      "qualifiers": {
+        "measurement": "line rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/100_Gigabit_Ethernet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-100-gigabit-ethernet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "100 Gigabit Ethernet",
+          "url": "https://en.wikipedia.org/wiki/100_Gigabit_Ethernet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-information-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/information-rate.json",
+          "url": "repo://dataset/raw/curated/information-rate.json"
+        }
+      ],
+      "summary_short": "100 Gigabit Ethernet carries 100 Gbit/s.",
+      "value": 100000000000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -2905,6 +2897,7 @@
     }
   ],
   "required_min_items": 24,
+  "scale_mode": "log",
   "selection_bin_count": 24,
   "show_limitations": true,
   "units": [

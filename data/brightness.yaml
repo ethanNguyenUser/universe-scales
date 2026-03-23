@@ -86,6 +86,34 @@ items:
   name: Paper by Window
   source: https://en.wikipedia.org/wiki/Reading
   value: 200
+- name: Starlit Sky
+  value: 0.001
+  source: https://en.wikipedia.org/wiki/Starlight
+  description: A sky lit mainly by stars is dim but not absolutely black, sitting between moonless darkness and moonlit landscapes. This is a useful benchmark for true dark adaptation. Human night vision was built for scenes like this.
+- name: E-Reader Screen
+  value: 80.0
+  source: https://en.wikipedia.org/wiki/Electronic_paper
+  description: An e-reader usually operates around a few dozen candela per square meter in comfortable indoor settings. That is much dimmer than an outdoor phone but excellent for long reading sessions. Reflective displays live on this calmer brightness scale.
+- name: HDR Television Highlight
+  value: 1000.0
+  source: https://en.wikipedia.org/wiki/High-dynamic-range_television
+  description: High-dynamic-range televisions often target highlights around one thousand nits to make specular reflections and sunlight effects feel more real. This is far brighter than old SDR mastering. Display technology has pushed household brightness noticeably upward.
+- name: Direct Sunlit Cloud
+  value: 20000.0
+  source: https://en.wikipedia.org/wiki/Cloud
+  description: A bright white cloud in direct sunlight can have a luminance far above ordinary surfaces even though it feels soft to look at from a distance. This is why cloud scenes easily clip cameras. Diffuse does not mean dim.
+- name: Lava Surface
+  value: 2000.0
+  source: https://en.wikipedia.org/wiki/Lava
+  description: Glowing lava is bright enough to illuminate nearby rock at night while still being many orders below welding arcs or the Sun. This is thermal emission at a scale humans can safely observe from a distance. It is a vivid natural bridge between firelight and stellar surfaces.
+- name: Tungsten Filament
+  value: 10000000.0
+  source: https://en.wikipedia.org/wiki/Incandescent_light_bulb
+  description: The filament inside an incandescent bulb is tiny but extremely bright, with a luminance far above the diffuse room light it creates. This contrast explains why bare bulbs glare so strongly. Hot emitters can be visually intense even when total power is modest.
+- name: Lightning Channel
+  value: 1000000000.0
+  source: https://en.wikipedia.org/wiki/Lightning
+  description: A lightning channel is dazzling partly because a narrow plasma column reaches enormous luminance for a brief instant. The event is short, but the brightness is unmistakable. Nature occasionally produces light sources that rival engineered extremes.
 units:
 - conversion_factor: 1
   description: Candela per square meter is the SI unit of luminance, linking photometric intensity to emitting area. It matches how displays and light boxes are specified. Using this base unit keeps comparisons between screens, walls, and skies consistent. All item values are recorded in this unit before conversion.

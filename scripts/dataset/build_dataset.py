@@ -151,6 +151,10 @@ def format_source_value(source_value_text: Any, source_unit: Any) -> str:
     return value_text
 
 
+def is_reference_category(category: Any) -> bool:
+    return str(category or "").strip().lower() == "reference"
+
+
 class DatasetBuilder:
     def __init__(self) -> None:
         self.raw_catalog = load_raw_catalog()
@@ -216,6 +220,7 @@ class DatasetBuilder:
                 stable_flag INTEGER NOT NULL,
                 description TEXT,
                 description_format TEXT NOT NULL DEFAULT 'markdown',
+                scale_mode TEXT NOT NULL DEFAULT 'log',
                 frontend_group TEXT,
                 frontend_group_label TEXT,
                 frontend_order INTEGER NOT NULL DEFAULT 1000,
@@ -354,6 +359,11 @@ class DatasetBuilder:
         profile = self.dimension_profile(slug)
         return str(profile.get("name") or fallback)
 
+    def dimension_scale_mode(self, slug: str) -> str:
+        profile = self.dimension_profile(slug)
+        mode = str(profile.get("scale_mode", "log")).strip().lower()
+        return mode if mode in {"log", "linear"} else "log"
+
     def merge_units(self, slug: str, units: list[dict[str, Any]]) -> list[dict[str, Any]]:
         merged: list[dict[str, Any]] = []
         seen_names: set[str] = set()
@@ -381,6 +391,7 @@ class DatasetBuilder:
     ) -> str:
         dimension_id = f"dim:{slug}"
         description_format = str(profile.get("description_format", "markdown"))
+        scale_mode = self.dimension_scale_mode(slug)
         frontend_group = profile.get("frontend_group")
         frontend_group_label = profile.get("frontend_group_label")
         frontend_order = int(profile.get("frontend_order", 1000))
@@ -388,10 +399,10 @@ class DatasetBuilder:
             """
             INSERT OR REPLACE INTO dimensions (
                 id, slug, name, base_unit, quantity_kind, stable_flag, description,
-                description_format, frontend_group, frontend_group_label, frontend_order,
+                description_format, scale_mode, frontend_group, frontend_group_label, frontend_order,
                 required_min_items, preferred_target_items, preferred_max_items, selection_bin_count
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 dimension_id,
@@ -402,6 +413,7 @@ class DatasetBuilder:
                 1 if stable_flag else 0,
                 description,
                 description_format,
+                scale_mode,
                 frontend_group,
                 frontend_group_label,
                 frontend_order,
@@ -433,6 +445,7 @@ class DatasetBuilder:
         export_payload = deepcopy(export_meta)
         export_payload.update(preferences)
         export_payload["description_format"] = description_format
+        export_payload["scale_mode"] = scale_mode
         export_payload["frontend_group"] = frontend_group
         export_payload["frontend_group_label"] = frontend_group_label
         export_payload["frontend_order"] = frontend_order
@@ -443,6 +456,7 @@ class DatasetBuilder:
             "name": name,
             "base_unit": base_unit,
             "description_format": description_format,
+            "scale_mode": scale_mode,
             "frontend_group": frontend_group,
             "frontend_group_label": frontend_group_label,
             "frontend_order": frontend_order,
@@ -621,6 +635,8 @@ class DatasetBuilder:
 
     def import_curated_observations(self) -> None:
         for payload in self.raw_catalog.curated_observations:
+            if is_reference_category(payload.get("category")):
+                continue
             dimension_slug = str(payload["dimension"])
             dimension_id = self.dimension_lookup[dimension_slug]["id"]
             summary = str(payload["summary"])
@@ -715,6 +731,15 @@ class DatasetBuilder:
         if url in self.sources_by_url:
             return self.sources_by_url[url]
         source_id = f"src:{slugify(url)}"
+        candidate_id = source_id
+        suffix = 2
+        while True:
+            existing = self.db.execute("SELECT url FROM sources WHERE id = ?", (candidate_id,)).fetchone()
+            if existing is None or existing[0] == url:
+                source_id = candidate_id
+                break
+            candidate_id = f"{source_id}-{suffix}"
+            suffix += 1
         self.db.execute(
             """
             INSERT INTO sources (id, source_type, title, url, publisher, license_text, accessed_at, source_class)
@@ -1070,8 +1095,6 @@ class DatasetBuilder:
             return "biology"
         if any(token in lowered for token in ("year", "day", "week", "hour", "movie", "work")):
             return "human-scale"
-        if dimension_slug in {"length", "duration"}:
-            return "reference"
         return "everyday"
 
     def fetch_observations_for_dimension(self, slug: str) -> list[sqlite3.Row]:
@@ -1121,20 +1144,29 @@ class DatasetBuilder:
         preferred_max = preferences["preferred_max_items"]
         return min(eligible_count, preferred_target, preferred_max)
 
+    def is_display_candidate(self, row: sqlite3.Row) -> bool:
+        return bool(row["display_eligible"]) and float(row["value_base"]) > 0 and not is_reference_category(row["category"])
+
     def compute_flagship_selection(self) -> None:
         for slug in sorted(self.dimension_lookup):
             dimension = self.dimension_lookup.get(slug)
             if not dimension:
                 continue
             rows = self.fetch_observations_for_dimension(slug)
-            eligible_rows = [row for row in rows if row["display_eligible"] and row["value_base"] > 0]
+            eligible_rows = [row for row in rows if self.is_display_candidate(row)]
             if not eligible_rows:
                 continue
 
             bin_count = int(dimension["selection_bin_count"])
-            min_order = math.floor(min(math.log10(row["value_base"]) for row in eligible_rows))
-            max_order = math.ceil(max(math.log10(row["value_base"]) for row in eligible_rows))
-            span = max(max_order - min_order, 1)
+            scale_mode = str(dimension.get("scale_mode") or "log")
+            if scale_mode == "linear":
+                min_order = min(float(row["value_base"]) for row in eligible_rows)
+                max_order = max(float(row["value_base"]) for row in eligible_rows)
+                span = max(max_order - min_order, 1e-12)
+            else:
+                min_order = math.floor(min(math.log10(row["value_base"]) for row in eligible_rows))
+                max_order = math.ceil(max(math.log10(row["value_base"]) for row in eligible_rows))
+                span = max(max_order - min_order, 1)
             width = span / float(bin_count)
 
             for bin_index in range(bin_count):
@@ -1152,7 +1184,7 @@ class DatasetBuilder:
 
             grouped: dict[int, list[sqlite3.Row]] = defaultdict(list)
             for row in eligible_rows:
-                order = math.log10(row["value_base"])
+                order = float(row["value_base"]) if scale_mode == "linear" else math.log10(row["value_base"])
                 index = int((order - min_order) / width) if width else 0
                 index = max(0, min(bin_count - 1, index))
                 grouped[index].append(row)
@@ -1425,6 +1457,7 @@ class DatasetBuilder:
                 d.quantity_kind,
                 d.description,
                 d.description_format,
+                d.scale_mode,
                 d.frontend_group,
                 d.frontend_group_label,
                 d.frontend_order,
@@ -1433,7 +1466,7 @@ class DatasetBuilder:
                 d.preferred_max_items,
                 d.selection_bin_count,
                 COUNT(o.id) AS observation_count,
-                SUM(CASE WHEN o.display_eligible = 1 THEN 1 ELSE 0 END) AS candidate_count,
+                SUM(CASE WHEN o.display_eligible = 1 AND (o.category IS NULL OR LOWER(o.category) != 'reference') THEN 1 ELSE 0 END) AS candidate_count,
                 SUM(CASE WHEN o.rationale IS NOT NULL THEN 1 ELSE 0 END) AS selected_count
               FROM dimensions d
               LEFT JOIN observations o ON o.dimension_id = d.id
@@ -1459,6 +1492,7 @@ class DatasetBuilder:
                     "quantity_kind": row["quantity_kind"] if row else None,
                     "description": row["description"] if row else None,
                     "description_format": row["description_format"] if row else "markdown",
+                    "scale_mode": row["scale_mode"] if row else str(profile.get("scale_mode", "log")),
                     "observation_count": int(row["observation_count"] or 0) if row else 0,
                     "candidate_count": int(row["candidate_count"] or 0) if row else 0,
                     "selected_count": int(row["selected_count"] or 0) if row else 0,
@@ -1485,6 +1519,7 @@ class DatasetBuilder:
                     "quantity_kind": row["quantity_kind"],
                     "description": row["description"],
                     "description_format": row["description_format"],
+                    "scale_mode": row["scale_mode"],
                     "observation_count": int(row["observation_count"] or 0),
                     "candidate_count": int(row["candidate_count"] or 0),
                     "selected_count": int(row["selected_count"] or 0),
@@ -1506,6 +1541,7 @@ class DatasetBuilder:
                 d.slug AS dimension_slug,
                 d.base_unit,
                 d.quantity_kind,
+                d.scale_mode,
                 sub.canonical_name,
                 sub.wikidata_qid,
                 oc.content_origin,
@@ -1580,6 +1616,7 @@ class DatasetBuilder:
                 d.name AS dimension_name,
                 d.base_unit,
                 d.quantity_kind,
+                d.scale_mode,
                 d.description_format,
                 d.required_min_items,
                 d.preferred_target_items,
@@ -1624,6 +1661,7 @@ class DatasetBuilder:
                             "name": row["dimension_name"],
                             "base_unit": row["base_unit"],
                             "quantity_kind": row["quantity_kind"],
+                            "scale_mode": row["scale_mode"],
                             "description_format": row["description_format"],
                             "required_min_items": row["required_min_items"],
                             "preferred_target_items": row["preferred_target_items"],
@@ -1727,11 +1765,15 @@ class DatasetBuilder:
             SELECT COUNT(*) AS count
               FROM observations o
               JOIN dimensions d ON d.id = o.dimension_id
-             WHERE d.slug = ? AND o.rationale IS NOT NULL
+             WHERE d.slug = ? AND o.rationale IS NOT NULL AND (o.category IS NULL OR LOWER(o.category) != 'reference')
             """,
             (slug,),
         ).fetchone()["count"]
-        filter_sql = "o.rationale IS NOT NULL" if selected_count else "o.display_eligible = 1"
+        filter_sql = (
+            "o.rationale IS NOT NULL AND (o.category IS NULL OR LOWER(o.category) != 'reference')"
+            if selected_count
+            else "o.display_eligible = 1 AND (o.category IS NULL OR LOWER(o.category) != 'reference')"
+        )
         rows = self.db.execute(
             f"""
             SELECT

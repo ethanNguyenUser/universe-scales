@@ -1,0 +1,2040 @@
+{
+  "base_unit": "amperes",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 35,
+    "candidate_shortfall_to_preferred_target": 15,
+    "empty_bin_count": 10,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 35,
+    "selected_primary_count": 14,
+    "selected_secondary_count": 21,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "official_dataset": 1,
+      "secondary_reference": 34
+    },
+    "target_selected_count": 35
+  },
+  "description_format": "markdown",
+  "dimension": "current",
+  "dimension_description": "Electric current measures how quickly charge moves through a circuit or plasma. Some entries here are direct device ratings, while others are derived from one charge carrier crossing in a stated time or from power and voltage using I = P / V. This lets the scale connect single-ion channels, USB power delivery, household wiring, industrial systems, and lightning.",
+  "frontend_group": "fields",
+  "frontend_group_label": "Fields, Waves & Radiation",
+  "frontend_order": 300,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tiny leakage currents in good capacitors can be in the picoampere range. Assumes `order-of-magnitude representative value`. Source-side figure: `1 pA` for Representative capacitor leakage current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tiny leakage currents in good capacitors can be in the picoampere range. Assumes `order-of-magnitude representative value`. Source-side figure: `1 pA` for Representative capacitor leakage current.",
+      "facts": {
+        "canonical_name": "Leakage current of a good capacitor",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-12",
+          "source_basis": "Representative capacitor leakage current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Leakage_(electronics)",
+          "source_value_text": "1 pA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:scenario-current-capacitor-leakage",
+      "name": "Leakage current of a good capacitor",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "leakage current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Leakage_(electronics)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-leakage-electronics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Leakage (electronics)",
+          "url": "https://en.wikipedia.org/wiki/Leakage_(electronics)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Tiny leakage currents in good capacitors can be in the picoampere range.",
+      "value": 1e-12,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single biological ion channel often carries only a few picoamperes. Here the quantity refers to `channel current`. Source-side figure: `5 pA` for Representative patch-clamp current for a single ion channel.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single biological ion channel often carries only a few picoamperes. Here the quantity refers to `channel current`. Source-side figure: `5 pA` for Representative patch-clamp current for a single ion channel.",
+      "facts": {
+        "canonical_name": "Single ion-channel current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-12",
+          "source_basis": "Representative patch-clamp current for a single ion channel.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Patch_clamp",
+          "source_value_text": "5 pA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-single-ion-channel-current",
+      "name": "Single ion-channel current",
+      "qualifiers": {
+        "measurement": "channel current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Patch_clamp",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-patch-clamp",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Patch clamp",
+          "url": "https://en.wikipedia.org/wiki/Patch_clamp"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A single biological ion channel often carries only a few picoamperes.",
+      "value": 5e-12,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Photodiode dark current often sits in the nanoampere range. Assumes `representative device`. Source-side figure: `1 nA` for Representative silicon photodiode dark current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Photodiode dark current often sits in the nanoampere range. Assumes `representative device`. Source-side figure: `1 nA` for Representative silicon photodiode dark current.",
+      "facts": {
+        "canonical_name": "Dark current of a photodiode",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-09",
+          "source_basis": "Representative silicon photodiode dark current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Photodiode",
+          "source_value_text": "1 nA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-photodiode-dark-current",
+      "name": "Dark current of a photodiode",
+      "qualifiers": {
+        "assumption": "representative device",
+        "measurement": "dark current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Photodiode",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-photodiode",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Photodiode",
+          "url": "https://en.wikipedia.org/wiki/Photodiode"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Photodiode dark current often sits in the nanoampere range.",
+      "value": 1e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Some precision op-amp inputs draw only tens of nanoamperes or less. Here the quantity refers to `input bias current`. Source-side figure: `10 nA` for Representative op-amp input bias current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Some precision op-amp inputs draw only tens of nanoamperes or less. Here the quantity refers to `input bias current`. Source-side figure: `10 nA` for Representative op-amp input bias current.",
+      "facts": {
+        "canonical_name": "Bias current of an op-amp input",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-08",
+          "source_basis": "Representative op-amp input bias current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Input_bias_current",
+          "source_value_text": "10 nA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-op-amp-bias-current",
+      "name": "Bias current of an op-amp input",
+      "qualifiers": {
+        "measurement": "input bias current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Input_bias_current",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-input-bias-current",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Input bias current",
+          "url": "https://en.wikipedia.org/wiki/Input_bias_current"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Some precision op-amp inputs draw only tens of nanoamperes or less.",
+      "value": 1e-08,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A sleeping microcontroller can draw only microamps. Here the quantity refers to `idle current`. Assumes `order-of-magnitude representative value`. Source-side figure: `1 uA` for Representative deep-sleep current for a low-power microcontroller.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A sleeping microcontroller can draw only microamps. Here the quantity refers to `idle current`. Assumes `order-of-magnitude representative value`. Source-side figure: `1 uA` for Representative deep-sleep current for a low-power microcontroller.",
+      "facts": {
+        "canonical_name": "Microcontroller sleep current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-06",
+          "source_basis": "Representative deep-sleep current for a low-power microcontroller.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Microcontroller",
+          "source_value_text": "1 uA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-microcontroller-sleep-current",
+      "name": "Microcontroller sleep current",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "idle current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Microcontroller",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-microcontroller",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Microcontroller",
+          "url": "https://en.wikipedia.org/wiki/Microcontroller"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A sleeping microcontroller can draw only microamps.",
+      "value": 1e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A quartz wristwatch can run on just a few microamperes. Here the quantity refers to `operating current`. Source-side figure: `2 uA` for Representative quartz-watch operating current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A quartz wristwatch can run on just a few microamperes. Here the quantity refers to `operating current`. Source-side figure: `2 uA` for Representative quartz-watch operating current.",
+      "facts": {
+        "canonical_name": "Quartz wristwatch current draw",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-06",
+          "source_basis": "Representative quartz-watch operating current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Quartz_clock",
+          "source_value_text": "2 uA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-quartz-watch-current",
+      "name": "Quartz wristwatch current draw",
+      "qualifiers": {
+        "measurement": "operating current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Quartz_clock",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quartz-clock",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quartz clock",
+          "url": "https://en.wikipedia.org/wiki/Quartz_clock"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A quartz wristwatch can run on just a few microamperes.",
+      "value": 2e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A standard panel LED often runs at about twenty milliamperes. Here the quantity refers to `operating current`. Source-side figure: `20 mA` for Representative LED indicator operating current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A standard panel LED often runs at about twenty milliamperes. Here the quantity refers to `operating current`. Source-side figure: `20 mA` for Representative LED indicator operating current.",
+      "facts": {
+        "canonical_name": "LED indicator current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.02",
+          "source_basis": "Representative LED indicator operating current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+          "source_value_text": "20 mA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-led-indicator-current",
+      "name": "LED indicator current",
+      "qualifiers": {
+        "measurement": "operating current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-light-emitting-diode",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Light-emitting diode",
+          "url": "https://en.wikipedia.org/wiki/Light-emitting_diode"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A standard panel LED often runs at about twenty milliamperes.",
+      "value": 0.02,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Classic USB 2.0 ports were designed around a half-ampere current limit. Source-side figure: `0.5 A` for USB 2.0 standard high-power current limit.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Classic USB 2.0 ports were designed around a half-ampere current limit. Source-side figure: `0.5 A` for USB 2.0 standard high-power current limit.",
+      "facts": {
+        "canonical_name": "USB 2.0 port current limit",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.5",
+          "source_basis": "USB 2.0 standard high-power current limit.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/USB_hardware",
+          "source_value_text": "0.5 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-usb-2-port-current",
+      "name": "USB 2.0 port current limit",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/USB_hardware",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-hardware",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB hardware",
+          "url": "https://en.wikipedia.org/wiki/USB_hardware"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Classic USB 2.0 ports were designed around a half-ampere current limit.",
+      "value": 0.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A common wall charger for a phone draws a couple of amps on the low-voltage side. Here the quantity refers to `charging current`. Source-side figure: `2 A` for Representative phone-charger output current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A common wall charger for a phone draws a couple of amps on the low-voltage side. Here the quantity refers to `charging current`. Source-side figure: `2 A` for Representative phone-charger output current.",
+      "facts": {
+        "canonical_name": "Smartphone wall charger current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.0",
+          "source_basis": "Representative phone-charger output current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Smartphone_charger",
+          "source_value_text": "2 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-smartphone-wall-charger-current",
+      "name": "Smartphone wall charger current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Smartphone_charger",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-smartphone-charger",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Smartphone charger",
+          "url": "https://en.wikipedia.org/wiki/Smartphone_charger"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A common wall charger for a phone draws a couple of amps on the low-voltage side.",
+      "value": 2.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fast phone charging commonly uses a few amperes of current. Here the quantity refers to `charging current`. Source-side figure: `2.5 A` for Representative smartphone fast-charging current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fast phone charging commonly uses a few amperes of current. Here the quantity refers to `charging current`. Source-side figure: `2.5 A` for Representative smartphone fast-charging current.",
+      "facts": {
+        "canonical_name": "Smartphone fast-charging current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.5",
+          "source_basis": "Representative smartphone fast-charging current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/USB_hardware",
+          "source_value_text": "2.5 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-smartphone-fast-charge-current",
+      "name": "Smartphone fast-charging current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB_hardware",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-hardware",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB hardware",
+          "url": "https://en.wikipedia.org/wiki/USB_hardware"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Fast phone charging commonly uses a few amperes of current.",
+      "value": 2.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB-C can deliver a few amps at the default charging level. Here the quantity refers to `charging current`. Source-side figure: `3 A` for Representative USB-C default current capability.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB-C can deliver a few amps at the default charging level. Here the quantity refers to `charging current`. Source-side figure: `3 A` for Representative USB-C default current capability.",
+      "facts": {
+        "canonical_name": "USB-C default charging current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3.0",
+          "source_basis": "Representative USB-C default current capability.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/USB-C",
+          "source_value_text": "3 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-usb-c-default-current",
+      "name": "USB-C default charging current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB-C",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-c",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB-C",
+          "url": "https://en.wikipedia.org/wiki/USB-C"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "USB-C can deliver a few amps at the default charging level.",
+      "value": 3.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Laptop power bricks often provide a few amps at their output voltage. Here the quantity refers to `adapter output current`. Source-side figure: `3.25 A` for Representative laptop adapter output current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Laptop power bricks often provide a few amps at their output voltage. Here the quantity refers to `adapter output current`. Source-side figure: `3.25 A` for Representative laptop adapter output current.",
+      "facts": {
+        "canonical_name": "Laptop AC adapter current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3.25",
+          "source_basis": "Representative laptop adapter output current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)",
+          "source_value_text": "3.25 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-laptop-ac-adapter-current",
+      "name": "Laptop AC adapter current",
+      "qualifiers": {
+        "measurement": "adapter output current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-power-supply-unit-computer",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Power supply unit (computer)",
+          "url": "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Laptop power bricks often provide a few amps at their output voltage.",
+      "value": 3.25,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "USB-C power delivery commonly reaches five amperes at the cable limit. Source-side figure: `5 A` for USB-C PD cable current limit.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "USB-C power delivery commonly reaches five amperes at the cable limit. Source-side figure: `5 A` for USB-C PD cable current limit.",
+      "facts": {
+        "canonical_name": "Laptop USB-C charging current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5.0",
+          "source_basis": "USB-C PD cable current limit.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/USB_hardware",
+          "source_value_text": "5 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-laptop-usbc-charge-current",
+      "name": "Laptop USB-C charging current",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/USB_hardware",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-hardware",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB hardware",
+          "url": "https://en.wikipedia.org/wiki/USB_hardware"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "USB-C power delivery commonly reaches five amperes at the cable limit.",
+      "value": 5.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High-power USB Power Delivery cables can carry five amps. Here the quantity refers to `charging current`. Source-side figure: `5 A` for Representative USB Power Delivery current limit.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High-power USB Power Delivery cables can carry five amps. Here the quantity refers to `charging current`. Source-side figure: `5 A` for Representative USB Power Delivery current limit.",
+      "facts": {
+        "canonical_name": "USB Power Delivery 5 amp current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5.0",
+          "source_basis": "Representative USB Power Delivery current limit.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/USB#USB_Power_Delivery",
+          "source_value_text": "5 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-usb-pd-5a-current",
+      "name": "USB Power Delivery 5 amp current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/USB#USB_Power_Delivery",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-usb-usb-power-delivery",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "USB",
+          "url": "https://en.wikipedia.org/wiki/USB#USB_Power_Delivery"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "High-power USB Power Delivery cables can carry five amps.",
+      "value": 5.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A household vacuum cleaner typically draws several amps from the wall. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `8 A` for Representative vacuum cleaner mains current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A household vacuum cleaner typically draws several amps from the wall. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `8 A` for Representative vacuum cleaner mains current.",
+      "facts": {
+        "canonical_name": "Vacuum cleaner current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "8.0",
+          "source_basis": "Representative vacuum cleaner mains current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Vacuum_cleaner",
+          "source_value_text": "8 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-vacuum-cleaner-current",
+      "name": "Vacuum cleaner current",
+      "qualifiers": {
+        "assumption": "typical household appliance",
+        "measurement": "mains current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Vacuum_cleaner",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-vacuum-cleaner",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Vacuum cleaner",
+          "url": "https://en.wikipedia.org/wiki/Vacuum_cleaner"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A household vacuum cleaner typically draws several amps from the wall.",
+      "value": 8.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A countertop toaster on 120 V mains draws on the order of eight to nine amperes. Here the quantity refers to `operating current`. Assumes `1000 watt toaster on 120 V`. Source-side figure: `1000 W at 120 V` for Derived from representative toaster power and line voltage.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A countertop toaster on 120 V mains draws on the order of eight to nine amperes. Here the quantity refers to `operating current`. Assumes `1000 watt toaster on 120 V`. Source-side figure: `1000 W at 120 V` for Derived from representative toaster power and line voltage.",
+      "facts": {
+        "canonical_name": "Household toaster current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "derivation_note": "I = P / V",
+          "method": "derived",
+          "original_value_text": "8.333333333333334",
+          "source_basis": "Derived from representative toaster power and line voltage.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Toaster",
+          "source_value_text": "1000 W at 120 V"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-toaster-current",
+      "name": "Household toaster current",
+      "qualifiers": {
+        "assumption": "1000 watt toaster on 120 V",
+        "measurement": "operating current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Toaster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-toaster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Toaster",
+          "url": "https://en.wikipedia.org/wiki/Toaster"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A countertop toaster on 120 V mains draws on the order of eight to nine amperes.",
+      "value": 8.333333333333334,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A hair dryer is one of the larger everyday loads on a home outlet. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `10 A` for Representative hair dryer mains current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A hair dryer is one of the larger everyday loads on a home outlet. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `10 A` for Representative hair dryer mains current.",
+      "facts": {
+        "canonical_name": "Hair dryer current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10.0",
+          "source_basis": "Representative hair dryer mains current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Hair_dryer",
+          "source_value_text": "10 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-hair-dryer-current",
+      "name": "Hair dryer current",
+      "qualifiers": {
+        "assumption": "typical household appliance",
+        "measurement": "mains current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hair_dryer",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hair-dryer",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hair dryer",
+          "url": "https://en.wikipedia.org/wiki/Hair_dryer"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A hair dryer is one of the larger everyday loads on a home outlet.",
+      "value": 10.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A microwave oven can pull around a dozen amps from a domestic circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12 A` for Representative microwave oven mains current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A microwave oven can pull around a dozen amps from a domestic circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12 A` for Representative microwave oven mains current.",
+      "facts": {
+        "canonical_name": "Microwave oven current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "12.0",
+          "source_basis": "Representative microwave oven mains current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Microwave_oven",
+          "source_value_text": "12 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-microwave-oven-current",
+      "name": "Microwave oven current",
+      "qualifiers": {
+        "assumption": "typical household appliance",
+        "measurement": "mains current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Microwave_oven",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-microwave-oven",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Microwave oven",
+          "url": "https://en.wikipedia.org/wiki/Microwave_oven"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A microwave oven can pull around a dozen amps from a domestic circuit.",
+      "value": 12.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An electric kettle on US mains is close to the 15 A branch-circuit range. Here the quantity refers to `operating current`. Assumes `1500 watt kettle on 120 V`. Source-side figure: `1500 W at 120 V` for Derived from representative kettle power and line voltage.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An electric kettle on US mains is close to the 15 A branch-circuit range. Here the quantity refers to `operating current`. Assumes `1500 watt kettle on 120 V`. Source-side figure: `1500 W at 120 V` for Derived from representative kettle power and line voltage.",
+      "facts": {
+        "canonical_name": "Electric kettle current on 120 V mains",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "derivation_note": "I = P / V",
+          "method": "derived",
+          "original_value_text": "12.5",
+          "source_basis": "Derived from representative kettle power and line voltage.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Electric_kettle",
+          "source_value_text": "1500 W at 120 V"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-kettle-current",
+      "name": "Electric kettle current on 120 V mains",
+      "qualifiers": {
+        "assumption": "1500 watt kettle on 120 V",
+        "measurement": "operating current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Electric_kettle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-electric-kettle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Electric kettle",
+          "url": "https://en.wikipedia.org/wiki/Electric_kettle"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "An electric kettle on US mains is close to the 15 A branch-circuit range.",
+      "value": 12.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Portable electric heaters sit near the upper edge of a household circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12.5 A` for Representative space-heater mains current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Portable electric heaters sit near the upper edge of a household circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12.5 A` for Representative space-heater mains current.",
+      "facts": {
+        "canonical_name": "Space heater current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "12.5",
+          "source_basis": "Representative space-heater mains current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Space_heater",
+          "source_value_text": "12.5 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-space-heater-current",
+      "name": "Space heater current",
+      "qualifiers": {
+        "assumption": "typical household appliance",
+        "measurement": "mains current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Space_heater",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-space-heater",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Space heater",
+          "url": "https://en.wikipedia.org/wiki/Space_heater"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Portable electric heaters sit near the upper edge of a household circuit.",
+      "value": 12.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A common North American branch circuit is rated for fifteen amperes. Source-side figure: `15 A` for Common residential branch-circuit breaker rating.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A common North American branch circuit is rated for fifteen amperes. Source-side figure: `15 A` for Common residential branch-circuit breaker rating.",
+      "facts": {
+        "canonical_name": "15-amp household breaker rating",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "15.0",
+          "source_basis": "Common residential branch-circuit breaker rating.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Circuit_breaker",
+          "source_value_text": "15 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-household-breaker-15a",
+      "name": "15-amp household breaker rating",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Circuit_breaker",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-circuit-breaker",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Circuit breaker",
+          "url": "https://en.wikipedia.org/wiki/Circuit_breaker"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A common North American branch circuit is rated for fifteen amperes.",
+      "value": 15.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Heavier household circuits are often rated at twenty amperes. Source-side figure: `20 A` for Common residential branch-circuit breaker rating.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Heavier household circuits are often rated at twenty amperes. Source-side figure: `20 A` for Common residential branch-circuit breaker rating.",
+      "facts": {
+        "canonical_name": "20-amp household breaker rating",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "20.0",
+          "source_basis": "Common residential branch-circuit breaker rating.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Circuit_breaker",
+          "source_value_text": "20 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-household-breaker-20a",
+      "name": "20-amp household breaker rating",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Circuit_breaker",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-circuit-breaker",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Circuit breaker",
+          "url": "https://en.wikipedia.org/wiki/Circuit_breaker"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Heavier household circuits are often rated at twenty amperes.",
+      "value": 20.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A level-2 electric-vehicle charger can deliver tens of amps. Here the quantity refers to `charging current`. Source-side figure: `32 A` for Representative level-2 EV charging current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A level-2 electric-vehicle charger can deliver tens of amps. Here the quantity refers to `charging current`. Source-side figure: `32 A` for Representative level-2 EV charging current.",
+      "facts": {
+        "canonical_name": "Electric vehicle level-2 charging current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "32.0",
+          "source_basis": "Representative level-2 EV charging current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Charging_station",
+          "source_value_text": "32 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-electric-vehicle-level2-current",
+      "name": "Electric vehicle level-2 charging current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Charging_station",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-charging-station",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Charging station",
+          "url": "https://en.wikipedia.org/wiki/Charging_station"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A level-2 electric-vehicle charger can deliver tens of amps.",
+      "value": 32.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A hobby welding machine often runs at a few hundred amperes or less. Here the quantity refers to `welding current`. Source-side figure: `120 A` for Representative MIG welding current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A hobby welding machine often runs at a few hundred amperes or less. Here the quantity refers to `welding current`. Source-side figure: `120 A` for Representative MIG welding current.",
+      "facts": {
+        "canonical_name": "MIG welding current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "120.0",
+          "source_basis": "Representative MIG welding current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Arc_welding",
+          "source_value_text": "120 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-mig-welder-current",
+      "name": "MIG welding current",
+      "qualifiers": {
+        "measurement": "welding current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Arc_welding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-arc-welding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Arc welding",
+          "url": "https://en.wikipedia.org/wiki/Arc_welding"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A hobby welding machine often runs at a few hundred amperes or less.",
+      "value": 120.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Starting a car engine can pull a few hundred amperes from the battery. Here the quantity refers to `starting current`. Source-side figure: `300 A` for Representative starter-motor current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Starting a car engine can pull a few hundred amperes from the battery. Here the quantity refers to `starting current`. Source-side figure: `300 A` for Representative starter-motor current.",
+      "facts": {
+        "canonical_name": "Car starter motor current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "300.0",
+          "source_basis": "Representative starter-motor current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Starter_(engine)",
+          "source_value_text": "300 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-car-starter-current",
+      "name": "Car starter motor current",
+      "qualifiers": {
+        "measurement": "starting current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Starter_(engine)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-starter-engine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Starter (engine)",
+          "url": "https://en.wikipedia.org/wiki/Starter_(engine)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Starting a car engine can pull a few hundred amperes from the battery.",
+      "value": 300.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fast DC chargers can push hundreds of amps into a battery pack. Here the quantity refers to `charging current`. Source-side figure: `300 A` for Representative DC fast-charging current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fast DC chargers can push hundreds of amps into a battery pack. Here the quantity refers to `charging current`. Source-side figure: `300 A` for Representative DC fast-charging current.",
+      "facts": {
+        "canonical_name": "DC fast charger current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "300.0",
+          "source_basis": "Representative DC fast-charging current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Charging_station",
+          "source_value_text": "300 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-dc-fast-charger-current",
+      "name": "DC fast charger current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Charging_station",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-charging-station",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Charging station",
+          "url": "https://en.wikipedia.org/wiki/Charging_station"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Fast DC chargers can push hundreds of amps into a battery pack.",
+      "value": 300.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High-power EV fast charging can operate around five hundred amperes. Here the quantity refers to `charging current`. Source-side figure: `500 A` for Representative high-power EV charging current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High-power EV fast charging can operate around five hundred amperes. Here the quantity refers to `charging current`. Source-side figure: `500 A` for Representative high-power EV charging current.",
+      "facts": {
+        "canonical_name": "DC fast-charge EV cable current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "500.0",
+          "source_basis": "Representative high-power EV charging current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Charging_station",
+          "source_value_text": "500 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-ev-fast-charge-current",
+      "name": "DC fast-charge EV cable current",
+      "qualifiers": {
+        "measurement": "charging current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Charging_station",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-charging-station",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Charging station",
+          "url": "https://en.wikipedia.org/wiki/Charging_station"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "High-power EV fast charging can operate around five hundred amperes.",
+      "value": 500.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Electric rail systems commonly handle kiloampere-scale traction currents. Source-side figure: `1000 A` for Representative urban-rail traction current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Electric rail systems commonly handle kiloampere-scale traction currents. Source-side figure: `1000 A` for Representative urban-rail traction current.",
+      "facts": {
+        "canonical_name": "Urban rail traction current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000.0",
+          "source_basis": "Representative urban-rail traction current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Third_rail",
+          "source_value_text": "1000 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-urban-rail-current",
+      "name": "Urban rail traction current",
+      "qualifiers": {
+        "measurement": "traction current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Third_rail",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-third-rail",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Third rail",
+          "url": "https://en.wikipedia.org/wiki/Third_rail"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Electric rail systems commonly handle kiloampere-scale traction currents.",
+      "value": 1000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "CERN's LHC dipole magnets run at nearly twelve kiloamperes. Source-side figure: `11850 A` for CERN reports the LHC dipole current is about 11,850 A.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "CERN's LHC dipole magnets run at nearly twelve kiloamperes. Source-side figure: `11850 A` for CERN reports the LHC dipole current is about 11,850 A.",
+      "facts": {
+        "canonical_name": "LHC main dipole circuit current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "11850.0",
+          "source_basis": "CERN reports the LHC dipole current is about 11,850 A.",
+          "source_unit": "A",
+          "source_url": "https://home.cern/science/engineering/pulling-together-superconducting-electromagnets",
+          "source_value_text": "11850 A"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-lhc-dipole-current",
+      "name": "LHC main dipole circuit current",
+      "qualifiers": {},
+      "source": "https://home.cern/science/engineering/pulling-together-superconducting-electromagnets",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-home-cern-science-engineering-pulling-together-superconducting-electromagnets",
+          "license_text": null,
+          "note": null,
+          "publisher": "home.cern",
+          "role": "external_source",
+          "source_class": "official_dataset",
+          "source_type": "web_page",
+          "title": "pulling-together-superconducting-electromagnets",
+          "url": "https://home.cern/science/engineering/pulling-together-superconducting-electromagnets"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "CERN's LHC dipole magnets run at nearly twelve kiloamperes.",
+      "value": 11850.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A lightning return stroke commonly reaches tens of kiloamperes. Here the quantity refers to `peak current`. Source-side figure: `30 kA` for Representative lightning peak current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A lightning return stroke commonly reaches tens of kiloamperes. Here the quantity refers to `peak current`. Source-side figure: `30 kA` for Representative lightning peak current.",
+      "facts": {
+        "canonical_name": "Peak lightning current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "30000.0",
+          "source_basis": "Representative lightning peak current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Lightning",
+          "source_value_text": "30 kA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-lightning-current",
+      "name": "Peak lightning current",
+      "qualifiers": {
+        "measurement": "peak current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lightning",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lightning",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lightning",
+          "url": "https://en.wikipedia.org/wiki/Lightning"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "A lightning return stroke commonly reaches tens of kiloamperes.",
+      "value": 30000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The return stroke of lightning is one of nature's largest currents. Here the quantity refers to `peak discharge current`. Assumes `order-of-magnitude representative value`. Source-side figure: `30 kA` for Representative cloud-to-ground lightning current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The return stroke of lightning is one of nature's largest currents. Here the quantity refers to `peak discharge current`. Assumes `order-of-magnitude representative value`. Source-side figure: `30 kA` for Representative cloud-to-ground lightning current.",
+      "facts": {
+        "canonical_name": "Lightning return-stroke current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "30000.0",
+          "source_basis": "Representative cloud-to-ground lightning current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Lightning",
+          "source_value_text": "30 kA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-lightning-return-stroke-current",
+      "name": "Lightning return-stroke current",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "peak discharge current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lightning",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lightning",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lightning",
+          "url": "https://en.wikipedia.org/wiki/Lightning"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "The return stroke of lightning is one of nature's largest currents.",
+      "value": 30000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Industrial arc furnaces use enormous currents to sustain the arc. Here the quantity refers to `arc current`. Assumes `representative industrial value`. Source-side figure: `100 kA` for Representative electric arc furnace operating current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Industrial arc furnaces use enormous currents to sustain the arc. Here the quantity refers to `arc current`. Assumes `representative industrial value`. Source-side figure: `100 kA` for Representative electric arc furnace operating current.",
+      "facts": {
+        "canonical_name": "Electric arc furnace current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000.0",
+          "source_basis": "Representative electric arc furnace operating current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Electric_arc_furnace",
+          "source_value_text": "100 kA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-electric-arc-furnace-current",
+      "name": "Electric arc furnace current",
+      "qualifiers": {
+        "assumption": "representative industrial value",
+        "measurement": "arc current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Electric_arc_furnace",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-electric-arc-furnace",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Electric arc furnace",
+          "url": "https://en.wikipedia.org/wiki/Electric_arc_furnace"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Industrial arc furnaces use enormous currents to sustain the arc.",
+      "value": 100000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Industrial aluminum smelting cells operate at hundreds of kiloamperes. Here the quantity refers to `cell current`. Source-side figure: `300 kA` for Representative Hall-Heroult cell current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Industrial aluminum smelting cells operate at hundreds of kiloamperes. Here the quantity refers to `cell current`. Source-side figure: `300 kA` for Representative Hall-Heroult cell current.",
+      "facts": {
+        "canonical_name": "Hall-Heroult aluminum cell current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "300000.0",
+          "source_basis": "Representative Hall-Heroult cell current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process",
+          "source_value_text": "300 kA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-aluminum-smelter-current",
+      "name": "Hall-Heroult aluminum cell current",
+      "qualifiers": {
+        "measurement": "cell current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hall-e2-80-93h-c3-a9roult-process",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hall\u2013H\u00e9roult process",
+          "url": "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Industrial aluminum smelting cells operate at hundreds of kiloamperes.",
+      "value": 300000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Experimental railguns can use megaampere-scale current pulses. Here the quantity refers to `pulse current`. Source-side figure: `1 MA` for Representative railgun pulse current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Experimental railguns can use megaampere-scale current pulses. Here the quantity refers to `pulse current`. Source-side figure: `1 MA` for Representative railgun pulse current.",
+      "facts": {
+        "canonical_name": "Railgun pulse current",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000000.0",
+          "source_basis": "Representative railgun pulse current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Railgun",
+          "source_value_text": "1 MA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-railgun-current",
+      "name": "Railgun pulse current",
+      "qualifiers": {
+        "measurement": "pulse current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Railgun",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-railgun",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Railgun",
+          "url": "https://en.wikipedia.org/wiki/Railgun"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "Experimental railguns can use megaampere-scale current pulses.",
+      "value": 1000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge. Here the quantity refers to `pulse current`. Source-side figure: `20 MA` for Representative Z Machine discharge current.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge. Here the quantity refers to `pulse current`. Source-side figure: `20 MA` for Representative Z Machine discharge current.",
+      "facts": {
+        "canonical_name": "Z-pinch current in Sandia Z Machine",
+        "ingest_source": "dataset/raw/curated/current.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "20000000.0",
+          "source_basis": "Representative Z Machine discharge current.",
+          "source_unit": "A",
+          "source_url": "https://en.wikipedia.org/wiki/Z_Pulsed_Power_Facility",
+          "source_value_text": "20 MA"
+        }
+      },
+      "hook": null,
+      "id": "obs:current:entity-z-machine-current",
+      "name": "Z-pinch current in Sandia Z Machine",
+      "qualifiers": {
+        "measurement": "pulse current"
+      },
+      "source": "https://en.wikipedia.org/wiki/Z_Pulsed_Power_Facility",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-z-pulsed-power-facility",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Z Pulsed Power Facility",
+          "url": "https://en.wikipedia.org/wiki/Z_Pulsed_Power_Facility"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-current-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/current.json",
+          "url": "repo://dataset/raw/curated/current.json"
+        }
+      ],
+      "summary_short": "The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge.",
+      "value": 20000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Electric current",
+      "url": "https://en.wikipedia.org/wiki/Electric_current"
+    },
+    {
+      "name": "Ampere",
+      "url": "https://en.wikipedia.org/wiki/Ampere"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Amperes are the canonical storage unit for electric current.",
+      "name": "amperes",
+      "symbol": "A"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Microamperes are useful for sensors, watches, and leakage currents.",
+      "name": "microamperes",
+      "symbol": "uA"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Milliamperes are useful for LEDs, small electronics, and chargers.",
+      "name": "milliamperes",
+      "symbol": "mA"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Kiloamperes are useful for lightning, welding, and rail systems.",
+      "name": "kiloamperes",
+      "symbol": "kA"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Megaamperes are useful for pulsed-power and fusion-scale currents.",
+      "name": "megaamperes",
+      "symbol": "MA"
+    }
+  ]
+}

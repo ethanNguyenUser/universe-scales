@@ -1,0 +1,857 @@
+dimension: absorbed-dose
+base_unit: gray
+dimension_description: Absorbed dose measures how much ionizing-radiation energy is deposited per kilogram. It spans dental X-rays, CT scans, cancer therapy, acute radiation syndrome, and industrial sterilization. Body part, fractionation, and exposure type matter enough here that the qualifiers should stay visible.
+related_resources:
+- name: Absorbed dose
+  url: https://en.wikipedia.org/wiki/Absorbed_dose
+show_limitations: true
+units:
+- name: gray
+  symbol: Gy
+  conversion_factor: 1.0
+  description: Gray are the canonical storage unit for absorbed dose.
+- name: milligray
+  symbol: mGy
+  conversion_factor: 1000.0
+  description: Milligray are common for medical imaging.
+- name: microgray
+  symbol: uGy
+  conversion_factor: 1000000.0
+  description: Microgray are useful for very small exposures.
+- name: centigray
+  symbol: cGy
+  conversion_factor: 100.0
+  description: Centigray are often used in radiotherapy.
+- name: rad
+  symbol: rad
+  conversion_factor: 100.0
+  description: The older rad unit remains common in some contexts.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: health
+frontend_group_label: Health & Biology
+frontend_order: 590
+items:
+- id: obs:absorbed-dose:scenario-absorbed-dose-airport-backscatter-scan
+  name: Airport backscatter scan
+  value: 1.0e-07
+  description: 'Security imaging sits at the extreme low end of absorbed dose. Source-side figure: `0.1 uGy` for Backscatter-style scans are in the sub-microgray range.'
+  description_format: markdown
+  summary_short: Security imaging sits at the extreme low end of absorbed dose.
+  description_medium: 'Security imaging sits at the extreme low end of absorbed dose. Source-side figure: `0.1 uGy` for Backscatter-style scans are in the sub-microgray range.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Airport backscatter scan
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 0.1e-6 Gy
+      method: derived
+      original_value_text: 1e-07
+      source_basis: Backscatter-style scans are in the sub-microgray range.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Backscatter_X-ray
+      source_value_text: 0.1 uGy
+  source: https://en.wikipedia.org/wiki/Backscatter_X-ray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-backscatter-x-ray
+    url: https://en.wikipedia.org/wiki/Backscatter_X-ray
+    title: Backscatter X-ray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-dental-x-ray
+  name: Dental X-ray
+  value: 5.0e-06
+  description: 'One of the smallest routine medical absorbed-dose examples. Source-side figure: `5 uGy` for Typical absorbed dose to the mouth is a few microgray.'
+  description_format: markdown
+  summary_short: One of the smallest routine medical absorbed-dose examples.
+  description_medium: 'One of the smallest routine medical absorbed-dose examples. Source-side figure: `5 uGy` for Typical absorbed dose to the mouth is a few microgray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dental X-ray
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 5e-6 Gy
+      method: derived
+      original_value_text: 5e-06
+      source_basis: Typical absorbed dose to the mouth is a few microgray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Dental_radiography
+      source_value_text: 5 uGy
+  source: https://en.wikipedia.org/wiki/Dental_radiography
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dental-radiography
+    url: https://en.wikipedia.org/wiki/Dental_radiography
+    title: Dental radiography
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-chest-x-ray
+  name: Chest X-ray
+  value: 0.0001
+  description: 'A plain radiograph is still far below CT or therapy. Source-side figure: `0.1 mGy` for A chest radiograph is on the order of a tenth of a milligray.'
+  description_format: markdown
+  summary_short: A plain radiograph is still far below CT or therapy.
+  description_medium: 'A plain radiograph is still far below CT or therapy. Source-side figure: `0.1 mGy` for A chest radiograph is on the order of a tenth of a milligray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chest X-ray
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 0.1e-3 Gy
+      method: derived
+      original_value_text: '0.0001'
+      source_basis: A chest radiograph is on the order of a tenth of a milligray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Chest_radiograph
+      source_value_text: 0.1 mGy
+  source: https://en.wikipedia.org/wiki/Chest_radiograph
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chest-radiograph
+    url: https://en.wikipedia.org/wiki/Chest_radiograph
+    title: Chest radiograph
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-mammogram
+  name: Mammogram
+  value: 0.0004
+  description: 'A small but nontrivial screening dose. Source-side figure: `0.4 mGy` for Typical mammography dose is a few tenths of a milligray.'
+  description_format: markdown
+  summary_short: A small but nontrivial screening dose.
+  description_medium: 'A small but nontrivial screening dose. Source-side figure: `0.4 mGy` for Typical mammography dose is a few tenths of a milligray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Mammogram
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 0.4e-3 Gy
+      method: derived
+      original_value_text: '0.0004'
+      source_basis: Typical mammography dose is a few tenths of a milligray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Mammography
+      source_value_text: 0.4 mGy
+  source: https://en.wikipedia.org/wiki/Mammography
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mammography
+    url: https://en.wikipedia.org/wiki/Mammography
+    title: Mammography
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-head-ct-scan
+  name: Head CT scan
+  value: 0.002
+  description: 'CT quickly moves beyond ordinary X-rays. Source-side figure: `2 mGy` for A head CT is often a few milligray.'
+  description_format: markdown
+  summary_short: CT quickly moves beyond ordinary X-rays.
+  description_medium: 'CT quickly moves beyond ordinary X-rays. Source-side figure: `2 mGy` for A head CT is often a few milligray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Head CT scan
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 2e-3 Gy
+      method: derived
+      original_value_text: '0.002'
+      source_basis: A head CT is often a few milligray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Computed_tomography
+      source_value_text: 2 mGy
+  source: https://en.wikipedia.org/wiki/Computed_tomography
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-computed-tomography
+    url: https://en.wikipedia.org/wiki/Computed_tomography
+    title: Computed tomography
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-natural-background-in-one-year
+  name: Natural background in one year
+  value: 0.003
+  description: 'Background radiation makes a useful low-dose yearly anchor. Source-side figure: `3 mGy` for A rough absorbed-dose analogue for annual natural background exposure.'
+  description_format: markdown
+  summary_short: Background radiation makes a useful low-dose yearly anchor.
+  description_medium: 'Background radiation makes a useful low-dose yearly anchor. Source-side figure: `3 mGy` for A rough absorbed-dose analogue for annual natural background exposure.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Natural background in one year
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 3e-3 Gy
+      method: derived
+      original_value_text: '0.003'
+      source_basis: A rough absorbed-dose analogue for annual natural background exposure.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Background_radiation
+      source_value_text: 3 mGy
+  source: https://en.wikipedia.org/wiki/Background_radiation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-background-radiation
+    url: https://en.wikipedia.org/wiki/Background_radiation
+    title: Background radiation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-abdominal-ct-scan
+  name: Abdominal CT scan
+  value: 0.01
+  description: 'A stronger CT study enters the centigray neighborhood. Source-side figure: `10 mGy` for Abdominal CT often reaches around ten milligray.'
+  description_format: markdown
+  summary_short: A stronger CT study enters the centigray neighborhood.
+  description_medium: 'A stronger CT study enters the centigray neighborhood. Source-side figure: `10 mGy` for Abdominal CT often reaches around ten milligray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Abdominal CT scan
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 10e-3 Gy
+      method: derived
+      original_value_text: '0.01'
+      source_basis: Abdominal CT often reaches around ten milligray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Computed_tomography
+      source_value_text: 10 mGy
+  source: https://en.wikipedia.org/wiki/Computed_tomography
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-computed-tomography
+    url: https://en.wikipedia.org/wiki/Computed_tomography
+    title: Computed tomography
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-long-fluoroscopy-guided-procedure
+  name: Long fluoroscopy-guided procedure
+  value: 0.05
+  description: 'Procedural medicine can accumulate noticeable dose. Source-side figure: `50 mGy` for Interventional imaging can deliver tens of milligray.'
+  description_format: markdown
+  summary_short: Procedural medicine can accumulate noticeable dose.
+  description_medium: 'Procedural medicine can accumulate noticeable dose. Source-side figure: `50 mGy` for Interventional imaging can deliver tens of milligray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Long fluoroscopy-guided procedure
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 50e-3 Gy
+      method: derived
+      original_value_text: '0.05'
+      source_basis: Interventional imaging can deliver tens of milligray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Fluoroscopy
+      source_value_text: 50 mGy
+  source: https://en.wikipedia.org/wiki/Fluoroscopy
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-fluoroscopy
+    url: https://en.wikipedia.org/wiki/Fluoroscopy
+    title: Fluoroscopy
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-chernobyl-cleanup-worker-exposure
+  name: Chernobyl cleanup worker exposure
+  value: 0.1
+  description: 'Historical accident exposures anchor the intermediate range. Source-side figure: `0.1 Gy` for Representative worker exposures were often tenths of a gray or less.'
+  description_format: markdown
+  summary_short: Historical accident exposures anchor the intermediate range.
+  description_medium: 'Historical accident exposures anchor the intermediate range. Source-side figure: `0.1 Gy` for Representative worker exposures were often tenths of a gray or less.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chernobyl cleanup worker exposure
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: Representative worker exposures were often tenths of a gray or less.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Chernobyl_disaster
+      source_value_text: 0.1 Gy
+  source: https://en.wikipedia.org/wiki/Chernobyl_disaster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chernobyl-disaster
+    url: https://en.wikipedia.org/wiki/Chernobyl_disaster
+    title: Chernobyl disaster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-food-irradiation-low-end
+  name: Food irradiation low end
+  value: 0.1
+  description: 'Industrial irradiation overlaps with medical intermediate doses. Source-side figure: `0.1 Gy` for Low-end food irradiation doses begin around tenths of a gray.'
+  description_format: markdown
+  summary_short: Industrial irradiation overlaps with medical intermediate doses.
+  description_medium: 'Industrial irradiation overlaps with medical intermediate doses. Source-side figure: `0.1 Gy` for Low-end food irradiation doses begin around tenths of a gray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Food irradiation low end
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '0.1'
+      source_basis: Low-end food irradiation doses begin around tenths of a gray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Food_irradiation
+      source_value_text: 0.1 Gy
+  source: https://en.wikipedia.org/wiki/Food_irradiation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-food-irradiation
+    url: https://en.wikipedia.org/wiki/Food_irradiation
+    title: Food irradiation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-acute-radiation-syndrome-threshold
+  name: Acute radiation syndrome threshold
+  value: 1.0
+  description: 'The one-gray scale matters clinically. Source-side figure: `1 Gy` for Whole-body doses around one gray can cause acute symptoms.'
+  description_format: markdown
+  summary_short: The one-gray scale matters clinically.
+  description_medium: 'The one-gray scale matters clinically. Source-side figure: `1 Gy` for Whole-body doses around one gray can cause acute symptoms.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Acute radiation syndrome threshold
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Whole-body doses around one gray can cause acute symptoms.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Acute_radiation_syndrome
+      source_value_text: 1 Gy
+  source: https://en.wikipedia.org/wiki/Acute_radiation_syndrome
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-acute-radiation-syndrome
+    url: https://en.wikipedia.org/wiki/Acute_radiation_syndrome
+    title: Acute radiation syndrome
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-radiotherapy-fraction
+  name: Radiotherapy fraction
+  value: 2.0
+  description: 'Radiotherapy deliberately lives in the gray range. Source-side figure: `2 Gy` for A common fractionated cancer treatment dose is about two gray.'
+  description_format: markdown
+  summary_short: Radiotherapy deliberately lives in the gray range.
+  description_medium: 'Radiotherapy deliberately lives in the gray range. Source-side figure: `2 Gy` for A common fractionated cancer treatment dose is about two gray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Radiotherapy fraction
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '2.0'
+      source_basis: A common fractionated cancer treatment dose is about two gray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Radiation_therapy
+      source_value_text: 2 Gy
+  source: https://en.wikipedia.org/wiki/Radiation_therapy
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-radiation-therapy
+    url: https://en.wikipedia.org/wiki/Radiation_therapy
+    title: Radiation therapy
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-whole-body-ld50-without-treatment
+  name: Whole-body LD50 without treatment
+  value: 4.0
+  description: 'A few gray is life-threatening at whole-body scale. Source-side figure: `4 Gy` for A classic lethal-dose benchmark without major medical support.'
+  description_format: markdown
+  summary_short: A few gray is life-threatening at whole-body scale.
+  description_medium: 'A few gray is life-threatening at whole-body scale. Source-side figure: `4 Gy` for A classic lethal-dose benchmark without major medical support.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Whole-body LD50 without treatment
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '4.0'
+      source_basis: A classic lethal-dose benchmark without major medical support.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Radiation_poisoning
+      source_value_text: 4 Gy
+  source: https://en.wikipedia.org/wiki/Radiation_poisoning
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-radiation-poisoning
+    url: https://en.wikipedia.org/wiki/Radiation_poisoning
+    title: Radiation poisoning
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-skin-erythema-threshold
+  name: Skin erythema threshold
+  value: 6.0
+  description: 'Localized tissue damage appears in the multi-gray regime. Source-side figure: `6 Gy` for Skin injury becomes likely around a few gray.'
+  description_format: markdown
+  summary_short: Localized tissue damage appears in the multi-gray regime.
+  description_medium: 'Localized tissue damage appears in the multi-gray regime. Source-side figure: `6 Gy` for Skin injury becomes likely around a few gray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Skin erythema threshold
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '6.0'
+      source_basis: Skin injury becomes likely around a few gray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Radiation_burn
+      source_value_text: 6 Gy
+  source: https://en.wikipedia.org/wiki/Radiation_burn
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-radiation-burn
+    url: https://en.wikipedia.org/wiki/Radiation_burn
+    title: Radiation burn
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-severe-acute-whole-body-accident-dose
+  name: Severe acute whole-body accident dose
+  value: 10.0
+  description: 'Catastrophic acute exposure. Source-side figure: `10 Gy` for Very large accidental exposures can reach around ten gray.'
+  description_format: markdown
+  summary_short: Catastrophic acute exposure.
+  description_medium: 'Catastrophic acute exposure. Source-side figure: `10 Gy` for Very large accidental exposures can reach around ten gray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Severe acute whole-body accident dose
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '10.0'
+      source_basis: Very large accidental exposures can reach around ten gray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Radiation_poisoning
+      source_value_text: 10 Gy
+  source: https://en.wikipedia.org/wiki/Radiation_poisoning
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-radiation-poisoning
+    url: https://en.wikipedia.org/wiki/Radiation_poisoning
+    title: Radiation poisoning
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-chernobyl-firefighter-extreme-dose
+  name: Chernobyl firefighter extreme dose
+  value: 16.0
+  description: 'Extreme accident cases show how quickly the scale becomes unsurvivable. Source-side figure: `16 Gy` for Some firefighters received extremely large doses during the disaster response.'
+  description_format: markdown
+  summary_short: Extreme accident cases show how quickly the scale becomes unsurvivable.
+  description_medium: 'Extreme accident cases show how quickly the scale becomes unsurvivable. Source-side figure: `16 Gy` for Some firefighters received extremely large doses during the disaster response.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chernobyl firefighter extreme dose
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '16.0'
+      source_basis: Some firefighters received extremely large doses during the disaster response.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Deaths_due_to_the_Chernobyl_disaster
+      source_value_text: 16 Gy
+  source: https://en.wikipedia.org/wiki/Deaths_due_to_the_Chernobyl_disaster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-deaths-due-to-the-chernobyl-disaster
+    url: https://en.wikipedia.org/wiki/Deaths_due_to_the_Chernobyl_disaster
+    title: Deaths due to the Chernobyl disaster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-sterile-insect-technique-dose
+  name: Sterile insect technique dose
+  value: 100.0
+  description: 'Biotechnology can use doses utterly unlike diagnostic medicine. Source-side figure: `100 Gy` for Sterilizing insects often uses doses in the hundred-gray range.'
+  description_format: markdown
+  summary_short: Biotechnology can use doses utterly unlike diagnostic medicine.
+  description_medium: 'Biotechnology can use doses utterly unlike diagnostic medicine. Source-side figure: `100 Gy` for Sterilizing insects often uses doses in the hundred-gray range.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sterile insect technique dose
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      method: direct
+      original_value_text: '100.0'
+      source_basis: Sterilizing insects often uses doses in the hundred-gray range.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Sterile_insect_technique
+      source_value_text: 100 Gy
+  source: https://en.wikipedia.org/wiki/Sterile_insect_technique
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sterile-insect-technique
+    url: https://en.wikipedia.org/wiki/Sterile_insect_technique
+    title: Sterile insect technique
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:absorbed-dose:scenario-absorbed-dose-food-irradiation-sterilization
+  name: Food irradiation sterilization
+  value: 10000.0
+  description: 'Industrial sterilization lives orders of magnitude above medicine. Source-side figure: `10 kGy` for High-end sterilization can reach tens of kilogray.'
+  description_format: markdown
+  summary_short: Industrial sterilization lives orders of magnitude above medicine.
+  description_medium: 'Industrial sterilization lives orders of magnitude above medicine. Source-side figure: `10 kGy` for High-end sterilization can reach tens of kilogray.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Food irradiation sterilization
+    ingest_source: dataset/raw/curated/absorbed-dose.json
+    source_trace:
+      derivation_note: 10 x 10^3 Gy
+      method: derived
+      original_value_text: '10000.0'
+      source_basis: High-end sterilization can reach tens of kilogray.
+      source_unit: Gy
+      source_url: https://en.wikipedia.org/wiki/Food_irradiation
+      source_value_text: 10 kGy
+  source: https://en.wikipedia.org/wiki/Food_irradiation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-food-irradiation
+    url: https://en.wikipedia.org/wiki/Food_irradiation
+    title: Food irradiation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-absorbed-dose-json
+    url: repo://dataset/raw/curated/absorbed-dose.json
+    title: dataset/raw/curated/absorbed-dose.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

@@ -25,6 +25,7 @@ preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
+scale_mode: log
 frontend_group: fields
 frontend_group_label: Fields, Waves & Radiation
 frontend_order: 150
@@ -95,6 +96,90 @@ items:
   - id: src:https-en-wikipedia-org-wiki-night
     url: https://en.wikipedia.org/wiki/Night
     title: Night
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-starlit-sky
+  name: Starlit Sky
+  value: 0.001
+  description: Under a clear dark sky with no Moon, the brightest parts of the Milky Way lift the apparent sky glow above the deepest rural darkness by about an order of magnitude. Astrophotographers chase places with so little artificial light that this faint band becomes obvious to the eye. The number is still far below comfortable reading conditions. It represents a rich starlit sky rather than true empty darkness.
+  description_format: markdown
+  summary_short: Under a clear dark sky with no Moon, the brightest parts of the Milky Way lift the apparent sky glow above the deepest rural darkness by about an order of magnitude.
+  description_medium: Under a clear dark sky with no Moon, the brightest parts of the Milky Way lift the apparent sky glow above the deepest rural darkness by about an order of magnitude. Astrophotographers chase places with so little artificial light that this faint band becomes obvious to the eye. The number is still far below comfortable reading conditions. It represents a rich starlit sky rather than true empty darkness.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Starlit Sky
+    source_trace:
+      method: derived
+      original_value_text: '0.001'
+      source_url: https://en.wikipedia.org/wiki/Milky_Way
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milky-way
+    url: https://en.wikipedia.org/wiki/Milky_Way
+    title: Milky Way
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-aurora-borealis
+  name: Aurora Borealis
+  value: 0.05
+  description: Strong auroral curtains can make the sky visibly luminous in green and red even while the ground remains mostly dark. The display feels bright because your eyes are adapted to night, not because the absolute luminance rivals daylight. Cameras with long exposures exaggerate the effect. The value is a plausible surface-brightness scale for a vivid aurora.
+  description_format: markdown
+  summary_short: Strong auroral curtains can make the sky visibly luminous in green and red even while the ground remains mostly dark.
+  description_medium: Strong auroral curtains can make the sky visibly luminous in green and red even while the ground remains mostly dark. The display feels bright because your eyes are adapted to night, not because the absolute luminance rivals daylight. Cameras with long exposures exaggerate the effect. The value is a plausible surface-brightness scale for a vivid aurora.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Aurora Borealis
+    source_trace:
+      method: derived
+      original_value_text: '0.05'
+      source_url: https://en.wikipedia.org/wiki/Aurora
+  source: https://en.wikipedia.org/wiki/Aurora
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aurora
+    url: https://en.wikipedia.org/wiki/Aurora
+    title: Aurora
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -239,6 +324,90 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:brightness:scenario-brightness-emergency-exit-sign
+  name: Emergency Exit Sign
+  value: 10.0
+  description: An illuminated emergency exit sign is intentionally bright enough to stand out in a dark hallway without dazzling nearby occupants. Safety designers choose this middle ground so the sign remains legible during power transitions and smoke. The value fits the glowing face rather than the ambient room. It is a common commercial-building scale.
+  description_format: markdown
+  summary_short: An illuminated emergency exit sign is intentionally bright enough to stand out in a dark hallway without dazzling nearby occupants.
+  description_medium: An illuminated emergency exit sign is intentionally bright enough to stand out in a dark hallway without dazzling nearby occupants. Safety designers choose this middle ground so the sign remains legible during power transitions and smoke. The value fits the glowing face rather than the ambient room. It is a common commercial-building scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Emergency Exit Sign
+    source_trace:
+      method: derived
+      original_value_text: '10'
+      source_url: https://en.wikipedia.org/wiki/Exit_sign
+  source: https://en.wikipedia.org/wiki/Exit_sign
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-exit-sign
+    url: https://en.wikipedia.org/wiki/Exit_sign
+    title: Exit sign
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-e-ink-reader
+  name: E-Ink Reader
+  value: 30.0
+  description: Electronic paper displays are meant to mimic comfortable reflected reading surfaces rather than glowing screens, so their luminance stays modest. That is why they feel gentle indoors and remain usable for long stretches. They depend on ambient light rather than brute-force emission. The number is for a front-lit e-reader in a dim room.
+  description_format: markdown
+  summary_short: Electronic paper displays are meant to mimic comfortable reflected reading surfaces rather than glowing screens, so their luminance stays modest.
+  description_medium: Electronic paper displays are meant to mimic comfortable reflected reading surfaces rather than glowing screens, so their luminance stays modest. That is why they feel gentle indoors and remain usable for long stretches. They depend on ambient light rather than brute-force emission. The number is for a front-lit e-reader in a dim room.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: E-Ink Reader
+    source_trace:
+      method: derived
+      original_value_text: '30'
+      source_url: https://en.wikipedia.org/wiki/Electronic_paper
+  source: https://en.wikipedia.org/wiki/Electronic_paper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-electronic-paper
+    url: https://en.wikipedia.org/wiki/Electronic_paper
+    title: Electronic paper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:brightness:scenario-brightness-movie-screen
   name: Movie Screen
   value: 50.0
@@ -365,6 +534,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:brightness:scenario-brightness-laptop-screen
+  name: Laptop Screen
+  value: 250.0
+  description: A laptop display used at a desk commonly runs near a few hundred nits, enough for readability indoors without excessive eye fatigue. Manufacturers publish peak values, but most people settle lower during normal office use. This luminance range became a de facto baseline for portable computing. The value is a representative comfortable working setting.
+  description_format: markdown
+  summary_short: A laptop display used at a desk commonly runs near a few hundred nits, enough for readability indoors without excessive eye fatigue.
+  description_medium: A laptop display used at a desk commonly runs near a few hundred nits, enough for readability indoors without excessive eye fatigue. Manufacturers publish peak values, but most people settle lower during normal office use. This luminance range became a de facto baseline for portable computing. The value is a representative comfortable working setting.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Laptop Screen
+    source_trace:
+      method: derived
+      original_value_text: '250'
+      source_url: https://en.wikipedia.org/wiki/Liquid-crystal_display
+  source: https://en.wikipedia.org/wiki/Liquid-crystal_display
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-liquid-crystal-display
+    url: https://en.wikipedia.org/wiki/Liquid-crystal_display
+    title: Liquid-crystal display
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:brightness:scenario-brightness-led-screen
   name: LED Screen
   value: 300.0
@@ -431,6 +642,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-office
     url: https://en.wikipedia.org/wiki/Office
     title: Office
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-neon-sign
+  name: Neon Sign
+  value: 800.0
+  description: Neon signs and similar gas-discharge tubes produce a saturated glow that looks vivid at night while remaining much dimmer than daylight sources. Their visual punch comes from color contrast and dark surroundings as much as from raw luminance. Urban streetscapes use this effect heavily in entertainment districts. The value is a representative bright-sign scale.
+  description_format: markdown
+  summary_short: Neon signs and similar gas-discharge tubes produce a saturated glow that looks vivid at night while remaining much dimmer than daylight sources.
+  description_medium: Neon signs and similar gas-discharge tubes produce a saturated glow that looks vivid at night while remaining much dimmer than daylight sources. Their visual punch comes from color contrast and dark surroundings as much as from raw luminance. Urban streetscapes use this effect heavily in entertainment districts. The value is a representative bright-sign scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Neon Sign
+    source_trace:
+      method: derived
+      original_value_text: '800'
+      source_url: https://en.wikipedia.org/wiki/Neon_sign
+  source: https://en.wikipedia.org/wiki/Neon_sign
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-neon-sign
+    url: https://en.wikipedia.org/wiki/Neon_sign
+    title: Neon sign
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -557,6 +810,216 @@ items:
   - id: src:https-en-wikipedia-org-wiki-display-brightness
     url: https://en.wikipedia.org/wiki/Display_brightness
     title: Display brightness
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-hdr-television-highlight
+  name: HDR Television Highlight
+  value: 1500.0
+  description: Modern HDR televisions can reach well above a thousand nits in small highlights so explosions, sunlight glints, and specular reflections feel more lifelike. The whole screen usually cannot sustain this level because heat and power constraints intervene. Still, it marks a step change from older displays. The value is a common premium-TV highlight target.
+  description_format: markdown
+  summary_short: Modern HDR televisions can reach well above a thousand nits in small highlights so explosions, sunlight glints, and specular reflections feel more lifelike.
+  description_medium: Modern HDR televisions can reach well above a thousand nits in small highlights so explosions, sunlight glints, and specular reflections feel more lifelike. The whole screen usually cannot sustain this level because heat and power constraints intervene. Still, it marks a step change from older displays. The value is a common premium-TV highlight target.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: HDR Television Highlight
+    source_trace:
+      method: derived
+      original_value_text: '1500'
+      source_url: https://en.wikipedia.org/wiki/High-dynamic-range_television
+  source: https://en.wikipedia.org/wiki/High-dynamic-range_television
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-high-dynamic-range-television
+    url: https://en.wikipedia.org/wiki/High-dynamic-range_television
+    title: High-dynamic-range television
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-white-paper-in-sun
+  name: White Paper in Sun
+  value: 5000.0
+  description: White paper in direct sunshine can look surprisingly bright because a matte surface reflects a substantial part of the huge outdoor illuminance. That is why reading outdoors often requires shade even though paper itself emits no light. Printers, photographers, and display engineers use such comparisons all the time. The value is for clean white paper under strong sun.
+  description_format: markdown
+  summary_short: White paper in direct sunshine can look surprisingly bright because a matte surface reflects a substantial part of the huge outdoor illuminance.
+  description_medium: White paper in direct sunshine can look surprisingly bright because a matte surface reflects a substantial part of the huge outdoor illuminance. That is why reading outdoors often requires shade even though paper itself emits no light. Printers, photographers, and display engineers use such comparisons all the time. The value is for clean white paper under strong sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: White Paper in Sun
+    source_trace:
+      method: derived
+      original_value_text: '5000'
+      source_url: https://en.wikipedia.org/wiki/Luminance
+  source: https://en.wikipedia.org/wiki/Luminance
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-luminance
+    url: https://en.wikipedia.org/wiki/Luminance
+    title: Luminance
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-traffic-signal-lens
+  name: Traffic Signal Lens
+  value: 6000.0
+  description: LED traffic signals are designed so the glowing lens remains easy to recognize in full daylight, fog, and peripheral vision. The relevant quantity for the eye is not just total lumens but the luminance of the emitting face. City intersections therefore live noticeably above ordinary indoor display levels. The value is a representative sun-readable signal-face scale.
+  description_format: markdown
+  summary_short: LED traffic signals are designed so the glowing lens remains easy to recognize in full daylight, fog, and peripheral vision.
+  description_medium: LED traffic signals are designed so the glowing lens remains easy to recognize in full daylight, fog, and peripheral vision. The relevant quantity for the eye is not just total lumens but the luminance of the emitting face. City intersections therefore live noticeably above ordinary indoor display levels. The value is a representative sun-readable signal-face scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Traffic Signal Lens
+    source_trace:
+      method: derived
+      original_value_text: '6000'
+      source_url: https://en.wikipedia.org/wiki/Traffic_light
+  source: https://en.wikipedia.org/wiki/Traffic_light
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-traffic-light
+    url: https://en.wikipedia.org/wiki/Traffic_light
+    title: Traffic light
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-blue-sky-zenith
+  name: Blue Sky Zenith
+  value: 7000.0
+  description: The clear blue sky near the zenith is itself a bright luminous surface created by sunlight scattered through the atmosphere. Looking up on a dry day shows how much visual information the eye can tolerate without perceiving the sky as a light source in the same way as the Sun. Polarization studies and skylight models both lean on this scale. The number is a representative midday value.
+  description_format: markdown
+  summary_short: The clear blue sky near the zenith is itself a bright luminous surface created by sunlight scattered through the atmosphere.
+  description_medium: The clear blue sky near the zenith is itself a bright luminous surface created by sunlight scattered through the atmosphere. Looking up on a dry day shows how much visual information the eye can tolerate without perceiving the sky as a light source in the same way as the Sun. Polarization studies and skylight models both lean on this scale. The number is a representative midday value.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Blue Sky Zenith
+    source_trace:
+      method: derived
+      original_value_text: '7000'
+      source_url: https://en.wikipedia.org/wiki/Sky
+  source: https://en.wikipedia.org/wiki/Sky
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sky
+    url: https://en.wikipedia.org/wiki/Sky
+    title: Sky
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-runway-signal-lens
+  name: Runway Signal Lens
+  value: 20000.0
+  description: The lens of a bright runway light or signal head can reach very high luminance so that it remains conspicuous against daylight backgrounds. Airfields and roads rely on that intensity margin for safety when weather, glare, and distance all fight visibility. What matters to a pilot is not only total luminous flux but the concentrated emitting surface. The value is a practical signal-light scale.
+  description_format: markdown
+  summary_short: The lens of a bright runway light or signal head can reach very high luminance so that it remains conspicuous against daylight backgrounds.
+  description_medium: The lens of a bright runway light or signal head can reach very high luminance so that it remains conspicuous against daylight backgrounds. Airfields and roads rely on that intensity margin for safety when weather, glare, and distance all fight visibility. What matters to a pilot is not only total luminous flux but the concentrated emitting surface. The value is a practical signal-light scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Runway Signal Lens
+    source_trace:
+      method: derived
+      original_value_text: '20000'
+      source_url: https://en.wikipedia.org/wiki/Approach_lighting_system
+  source: https://en.wikipedia.org/wiki/Approach_lighting_system
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-approach-lighting-system
+    url: https://en.wikipedia.org/wiki/Approach_lighting_system
+    title: Approach lighting system
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -725,6 +1188,132 @@ items:
   - id: src:https-en-wikipedia-org-wiki-arc-welding
     url: https://en.wikipedia.org/wiki/Arc_welding
     title: Arc welding
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-theater-spotlight
+  name: Theater Spotlight
+  value: 2000000.0
+  description: Theater spotlights appear dazzling because a lot of luminous power is concentrated into a small aperture and narrow beam. Stage designers exploit that high luminance to isolate performers even in large dark auditoria. Much of the experience of 'being in the spotlight' comes from this contrast. The number is a source-surface scale for a bright stage instrument.
+  description_format: markdown
+  summary_short: Theater spotlights appear dazzling because a lot of luminous power is concentrated into a small aperture and narrow beam.
+  description_medium: Theater spotlights appear dazzling because a lot of luminous power is concentrated into a small aperture and narrow beam. Stage designers exploit that high luminance to isolate performers even in large dark auditoria. Much of the experience of 'being in the spotlight' comes from this contrast. The number is a source-surface scale for a bright stage instrument.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Theater Spotlight
+    source_trace:
+      method: derived
+      original_value_text: 2e6
+      source_url: https://en.wikipedia.org/wiki/Stage_lighting_instrument
+  source: https://en.wikipedia.org/wiki/Stage_lighting_instrument
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-stage-lighting-instrument
+    url: https://en.wikipedia.org/wiki/Stage_lighting_instrument
+    title: Stage lighting instrument
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-magnesium-flare
+  name: Magnesium Flare
+  value: 50000000.0
+  description: Magnesium burns with a brilliant white light that photographers once used for flash illumination before electronic strobes took over. The luminous surface is extremely intense even for a very small mass of metal. Eye protection matters because the output includes strong ultraviolet as well. The value is a representative burning-flare luminance scale.
+  description_format: markdown
+  summary_short: Magnesium burns with a brilliant white light that photographers once used for flash illumination before electronic strobes took over.
+  description_medium: Magnesium burns with a brilliant white light that photographers once used for flash illumination before electronic strobes took over. The luminous surface is extremely intense even for a very small mass of metal. Eye protection matters because the output includes strong ultraviolet as well. The value is a representative burning-flare luminance scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Magnesium Flare
+    source_trace:
+      method: derived
+      original_value_text: 5e7
+      source_url: https://en.wikipedia.org/wiki/Flash_powder
+  source: https://en.wikipedia.org/wiki/Flash_powder
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-flash-powder
+    url: https://en.wikipedia.org/wiki/Flash_powder
+    title: Flash powder
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-lightning-channel
+  name: Lightning Channel
+  value: 100000000.0
+  description: A lightning channel is a transient plasma column whose apparent luminance can rival or exceed the brightest man-made light sources. The pulse is brief, but the eye still experiences it as a violent flash because the number is so high. Cameras saturate easily on nearby strikes for exactly this reason. The value is an order-of-magnitude luminance scale for a bright return stroke.
+  description_format: markdown
+  summary_short: A lightning channel is a transient plasma column whose apparent luminance can rival or exceed the brightest man-made light sources.
+  description_medium: A lightning channel is a transient plasma column whose apparent luminance can rival or exceed the brightest man-made light sources. The pulse is brief, but the eye still experiences it as a violent flash because the number is so high. Cameras saturate easily on nearby strikes for exactly this reason. The value is an order-of-magnitude luminance scale for a bright return stroke.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Lightning Channel
+    source_trace:
+      method: derived
+      original_value_text: 1e8
+      source_url: https://en.wikipedia.org/wiki/Lightning
+  source: https://en.wikipedia.org/wiki/Lightning
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lightning
+    url: https://en.wikipedia.org/wiki/Lightning
+    title: Lightning
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

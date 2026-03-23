@@ -37,6 +37,7 @@ preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
+scale_mode: log
 frontend_group: materials
 frontend_group_label: Materials & Matter
 frontend_order: 110
@@ -125,6 +126,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:pressure:scenario-pressure-human-exhale
+  name: Human Exhale
+  value: 500.0
+  description: A gentle human exhale produces only a few hundred pascals above ambient pressure, yet that is enough to move a column of air through the airway and across a flute or whistle. Respiratory therapists think in these small pressure differences when checking lung function. The number is for a calm, sustained breath rather than a forceful cough.
+  description_format: markdown
+  summary_short: A gentle human exhale produces only a few hundred pascals above ambient pressure, yet that is enough to move a column of air through the airway and across a flute or whistle.
+  description_medium: A gentle human exhale produces only a few hundred pascals above ambient pressure, yet that is enough to move a column of air through the airway and across a flute or whistle. Respiratory therapists think in these small pressure differences when checking lung function. The number is for a calm, sustained breath rather than a forceful cough.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Human Exhale
+    source_trace:
+      method: derived
+      original_value_text: '500'
+      source_url: https://en.wikipedia.org/wiki/Respiratory_system
+  source: https://en.wikipedia.org/wiki/Respiratory_system
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-respiratory-system
+    url: https://en.wikipedia.org/wiki/Respiratory_system
+    title: Respiratory system
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:pressure:scenario-pressure-mars-surface
   name: Mars Surface
   value: 600.0
@@ -149,6 +192,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-atmosphere-of-mars
     url: https://en.wikipedia.org/wiki/Atmosphere_of_Mars
     title: Atmosphere of Mars
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-vacuum-cleaner-suction
+  name: Vacuum Cleaner Suction
+  value: 15000.0
+  description: A household vacuum cleaner creates suction by lowering pressure below room air at the nozzle. The resulting pressure difference over a modest area is what actually lifts dust and grit. Motor noise tends to obscure how small the pressure number really is compared with industrial systems. The value is a representative static suction.
+  description_format: markdown
+  summary_short: A household vacuum cleaner creates suction by lowering pressure below room air at the nozzle.
+  description_medium: A household vacuum cleaner creates suction by lowering pressure below room air at the nozzle. The resulting pressure difference over a modest area is what actually lifts dust and grit. Motor noise tends to obscure how small the pressure number really is compared with industrial systems. The value is a representative static suction.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Vacuum Cleaner Suction
+    source_trace:
+      method: derived
+      original_value_text: '15000'
+      source_url: https://en.wikipedia.org/wiki/Vacuum_cleaner
+  source: https://en.wikipedia.org/wiki/Vacuum_cleaner
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vacuum-cleaner
+    url: https://en.wikipedia.org/wiki/Vacuum_cleaner
+    title: Vacuum cleaner
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -233,6 +318,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-swimming-pool
     url: https://en.wikipedia.org/wiki/Swimming_pool
     title: Swimming pool
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-mount-everest-summit-air
+  name: Mount Everest Summit Air
+  value: 33000.0
+  description: At the summit of Mount Everest the atmosphere pushes at only about a third of sea-level pressure. That thin air is why climbers need acclimatization and often supplemental oxygen. Water boils at a lower temperature there as well, changing cooking and physiology together. The number is a representative summit pressure.
+  description_format: markdown
+  summary_short: At the summit of Mount Everest the atmosphere pushes at only about a third of sea-level pressure.
+  description_medium: At the summit of Mount Everest the atmosphere pushes at only about a third of sea-level pressure. That thin air is why climbers need acclimatization and often supplemental oxygen. Water boils at a lower temperature there as well, changing cooking and physiology together. The number is a representative summit pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Mount Everest Summit Air
+    source_trace:
+      method: derived
+      original_value_text: 3.3e4
+      source_url: https://en.wikipedia.org/wiki/Mount_Everest
+  source: https://en.wikipedia.org/wiki/Mount_Everest
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mount-everest
+    url: https://en.wikipedia.org/wiki/Mount_Everest
+    title: Mount Everest
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -377,6 +504,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:pressure:scenario-pressure-autoclave-sterilizer
+  name: Autoclave Sterilizer
+  value: 200000.0
+  description: Sterilizing autoclaves run above atmospheric pressure so water can stay liquid at temperatures high enough to kill hardy microbes and spores. Laboratories and hospitals rely on this extra pressure every day, even though the absolute number is modest by engineering standards. The value is a standard operating overpressure for steam sterilization.
+  description_format: markdown
+  summary_short: Sterilizing autoclaves run above atmospheric pressure so water can stay liquid at temperatures high enough to kill hardy microbes and spores.
+  description_medium: Sterilizing autoclaves run above atmospheric pressure so water can stay liquid at temperatures high enough to kill hardy microbes and spores. Laboratories and hospitals rely on this extra pressure every day, even though the absolute number is modest by engineering standards. The value is a standard operating overpressure for steam sterilization.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Autoclave Sterilizer
+    source_trace:
+      method: derived
+      original_value_text: 2e5
+      source_url: https://en.wikipedia.org/wiki/Autoclave
+  source: https://en.wikipedia.org/wiki/Autoclave
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-autoclave
+    url: https://en.wikipedia.org/wiki/Autoclave
+    title: Autoclave
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:pressure:scenario-pressure-soda-can-sealed
   name: Soda Can (sealed)
   value: 200000.0
@@ -503,6 +672,174 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:pressure:scenario-pressure-aerosol-can
+  name: Aerosol Can
+  value: 400000.0
+  description: Aerosol cans store propellant at several bars so the spray stays strong until the container is nearly empty. Warming the can raises internal pressure, which is why safety labels warn against heat and fire. The number is typical for room-temperature consumer spray cans. It is an overpressure relative to ambient conditions.
+  description_format: markdown
+  summary_short: Aerosol cans store propellant at several bars so the spray stays strong until the container is nearly empty.
+  description_medium: Aerosol cans store propellant at several bars so the spray stays strong until the container is nearly empty. Warming the can raises internal pressure, which is why safety labels warn against heat and fire. The number is typical for room-temperature consumer spray cans. It is an overpressure relative to ambient conditions.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Aerosol Can
+    source_trace:
+      method: derived
+      original_value_text: 4e5
+      source_url: https://en.wikipedia.org/wiki/Aerosol_spray
+  source: https://en.wikipedia.org/wiki/Aerosol_spray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aerosol-spray
+    url: https://en.wikipedia.org/wiki/Aerosol_spray
+    title: Aerosol spray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-bicycle-tire
+  name: Bicycle Tire
+  value: 600000.0
+  description: Road bicycles run far above car-tire pressure because their contact patches are small and rolling resistance matters. Riders trade comfort against pinch-flat resistance and speed by adjusting within this range. A floor pump gauge makes the number feel ordinary even though it is several atmospheres. The value is for a narrow road tire.
+  description_format: markdown
+  summary_short: Road bicycles run far above car-tire pressure because their contact patches are small and rolling resistance matters.
+  description_medium: Road bicycles run far above car-tire pressure because their contact patches are small and rolling resistance matters. Riders trade comfort against pinch-flat resistance and speed by adjusting within this range. A floor pump gauge makes the number feel ordinary even though it is several atmospheres. The value is for a narrow road tire.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Bicycle Tire
+    source_trace:
+      method: derived
+      original_value_text: 6e5
+      source_url: https://en.wikipedia.org/wiki/Bicycle_tire
+  source: https://en.wikipedia.org/wiki/Bicycle_tire
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bicycle-tire
+    url: https://en.wikipedia.org/wiki/Bicycle_tire
+    title: Bicycle tire
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-champagne-bottle
+  name: Champagne Bottle
+  value: 600000.0
+  description: Champagne and other sparkling wines keep dissolved carbon dioxide under several bars of pressure inside the bottle. That is why corks eject so energetically when restraint is removed. Temperature matters strongly because dissolved gas and headspace both respond to warming. The number is a common room-temperature bottle pressure.
+  description_format: markdown
+  summary_short: Champagne and other sparkling wines keep dissolved carbon dioxide under several bars of pressure inside the bottle.
+  description_medium: Champagne and other sparkling wines keep dissolved carbon dioxide under several bars of pressure inside the bottle. That is why corks eject so energetically when restraint is removed. Temperature matters strongly because dissolved gas and headspace both respond to warming. The number is a common room-temperature bottle pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Champagne Bottle
+    source_trace:
+      method: derived
+      original_value_text: 6e5
+      source_url: https://en.wikipedia.org/wiki/Champagne
+  source: https://en.wikipedia.org/wiki/Champagne
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-champagne
+    url: https://en.wikipedia.org/wiki/Champagne
+    title: Champagne
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-espresso-machine
+  name: Espresso Machine
+  value: 900000.0
+  description: Espresso machines use about nine bars of pressure to force hot water through compacted coffee grounds. That pressure is high enough to extract oils and emulsify crema in seconds rather than minutes. Home machines advertise it prominently because the number is part of the drink’s identity. The value is the classic brewing pressure target.
+  description_format: markdown
+  summary_short: Espresso machines use about nine bars of pressure to force hot water through compacted coffee grounds.
+  description_medium: Espresso machines use about nine bars of pressure to force hot water through compacted coffee grounds. That pressure is high enough to extract oils and emulsify crema in seconds rather than minutes. Home machines advertise it prominently because the number is part of the drink’s identity. The value is the classic brewing pressure target.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Espresso Machine
+    source_trace:
+      method: derived
+      original_value_text: 9e5
+      source_url: https://en.wikipedia.org/wiki/Espresso
+  source: https://en.wikipedia.org/wiki/Espresso
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-espresso
+    url: https://en.wikipedia.org/wiki/Espresso
+    title: Espresso
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:pressure:scenario-pressure-ocean-depth-100m
   name: Ocean Depth (100m)
   value: 1000000.0
@@ -527,6 +864,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-ocean
     url: https://en.wikipedia.org/wiki/Ocean
     title: Ocean
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-car-engine-cylinder
+  name: Car Engine Cylinder
+  value: 4000000.0
+  description: Inside an engine cylinder during compression and combustion, gas pressure rises by orders of magnitude above the atmosphere around the vehicle. Pistons, rings, and head gaskets are all built around surviving this repeated load. The value here is a representative peak cylinder pressure for a gasoline engine rather than a diesel.
+  description_format: markdown
+  summary_short: Inside an engine cylinder during compression and combustion, gas pressure rises by orders of magnitude above the atmosphere around the vehicle.
+  description_medium: Inside an engine cylinder during compression and combustion, gas pressure rises by orders of magnitude above the atmosphere around the vehicle. Pistons, rings, and head gaskets are all built around surviving this repeated load. The value here is a representative peak cylinder pressure for a gasoline engine rather than a diesel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Car Engine Cylinder
+    source_trace:
+      method: derived
+      original_value_text: 4e6
+      source_url: https://en.wikipedia.org/wiki/Internal_combustion_engine
+  source: https://en.wikipedia.org/wiki/Internal_combustion_engine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-internal-combustion-engine
+    url: https://en.wikipedia.org/wiki/Internal_combustion_engine
+    title: Internal combustion engine
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -587,6 +966,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:pressure:scenario-pressure-deep-ocean-1000-m
+  name: Deep Ocean (1000 m)
+  value: 10000000.0
+  description: At one kilometer below the ocean surface, hydrostatic pressure reaches about ten megapascals. That is a hundred times sea-level atmospheric pressure pressing on every viewport, seal, and instrument housing. Deep-ocean vehicles live or die by whether they keep this number outside. The value is a round figure for 1000 meters depth.
+  description_format: markdown
+  summary_short: At one kilometer below the ocean surface, hydrostatic pressure reaches about ten megapascals.
+  description_medium: At one kilometer below the ocean surface, hydrostatic pressure reaches about ten megapascals. That is a hundred times sea-level atmospheric pressure pressing on every viewport, seal, and instrument housing. Deep-ocean vehicles live or die by whether they keep this number outside. The value is a round figure for 1000 meters depth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Deep Ocean (1000 m)
+    source_trace:
+      method: derived
+      original_value_text: 1e7
+      source_url: https://en.wikipedia.org/wiki/Deep_sea
+  source: https://en.wikipedia.org/wiki/Deep_sea
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-deep-sea
+    url: https://en.wikipedia.org/wiki/Deep_sea
+    title: Deep sea
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:pressure:scenario-pressure-hydraulic-system
   name: Hydraulic System
   value: 20000000.0
@@ -629,6 +1050,132 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:pressure:scenario-pressure-scuba-tank
+  name: Scuba Tank
+  value: 20000000.0
+  description: A scuba tank stores breathing gas at pressures high enough that a modest steel or aluminum cylinder can hold hours of underwater air. Regulators exist to step this down safely in stages. Divers think of the tank as ordinary gear, but the pressure inside belongs solidly in industrial territory. The value is a common fill pressure.
+  description_format: markdown
+  summary_short: A scuba tank stores breathing gas at pressures high enough that a modest steel or aluminum cylinder can hold hours of underwater air.
+  description_medium: A scuba tank stores breathing gas at pressures high enough that a modest steel or aluminum cylinder can hold hours of underwater air. Regulators exist to step this down safely in stages. Divers think of the tank as ordinary gear, but the pressure inside belongs solidly in industrial territory. The value is a common fill pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Scuba Tank
+    source_trace:
+      method: derived
+      original_value_text: 2e7
+      source_url: https://en.wikipedia.org/wiki/Diving_cylinder
+  source: https://en.wikipedia.org/wiki/Diving_cylinder
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-diving-cylinder
+    url: https://en.wikipedia.org/wiki/Diving_cylinder
+    title: Diving cylinder
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-deep-ocean-4000-m
+  name: Deep Ocean (4000 m)
+  value: 40000000.0
+  description: Four kilometers down in the ocean, hydrostatic pressure reaches tens of megapascals and turns every seal, viewport, and cable into a deep-sea engineering problem. That is why remotely operated vehicles and abyssal landers look so overbuilt. Marine biology at this depth is inseparable from pressure adaptation. The value is a round-number benchmark for abyssal water.
+  description_format: markdown
+  summary_short: Four kilometers down in the ocean, hydrostatic pressure reaches tens of megapascals and turns every seal, viewport, and cable into a deep-sea engineering problem.
+  description_medium: Four kilometers down in the ocean, hydrostatic pressure reaches tens of megapascals and turns every seal, viewport, and cable into a deep-sea engineering problem. That is why remotely operated vehicles and abyssal landers look so overbuilt. Marine biology at this depth is inseparable from pressure adaptation. The value is a round-number benchmark for abyssal water.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Deep Ocean (4000 m)
+    source_trace:
+      method: derived
+      original_value_text: 4e7
+      source_url: https://en.wikipedia.org/wiki/Abyssal_zone
+  source: https://en.wikipedia.org/wiki/Abyssal_zone
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-abyssal-zone
+    url: https://en.wikipedia.org/wiki/Abyssal_zone
+    title: Abyssal zone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-hydrogen-fuel-tank
+  name: Hydrogen Fuel Tank
+  value: 70000000.0
+  description: Hydrogen fuel-cell vehicles store hydrogen at around seven hundred bar, high enough that the tank becomes a sophisticated pressure vessel rather than a simple container. Composite wrapping and careful valve design make the system practical. The number shows how advanced transport already lives in the same pressure regime as industrial gas work. It is a standard automotive storage pressure.
+  description_format: markdown
+  summary_short: Hydrogen fuel-cell vehicles store hydrogen at around seven hundred bar, high enough that the tank becomes a sophisticated pressure vessel rather than a simple container.
+  description_medium: Hydrogen fuel-cell vehicles store hydrogen at around seven hundred bar, high enough that the tank becomes a sophisticated pressure vessel rather than a simple container. Composite wrapping and careful valve design make the system practical. The number shows how advanced transport already lives in the same pressure regime as industrial gas work. It is a standard automotive storage pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Hydrogen Fuel Tank
+    source_trace:
+      method: derived
+      original_value_text: 7e7
+      source_url: https://en.wikipedia.org/wiki/Hydrogen_tank
+  source: https://en.wikipedia.org/wiki/Hydrogen_tank
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydrogen-tank
+    url: https://en.wikipedia.org/wiki/Hydrogen_tank
+    title: Hydrogen tank
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:pressure:scenario-pressure-mariana-trench
   name: Mariana Trench
   value: 110000000.0
@@ -653,6 +1200,90 @@ items:
   - id: src:https-en-wikipedia-org-wiki-mariana-trench
     url: https://en.wikipedia.org/wiki/Mariana_Trench
     title: Mariana Trench
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-diesel-fuel-injection
+  name: Diesel Fuel Injection
+  value: 200000000.0
+  description: Modern diesel injection systems atomize fuel by driving it through tiny nozzles at enormous pressure. That helps engines burn more cleanly and precisely, but it also makes leaks medically dangerous because fuel can penetrate skin. The number shows how far everyday automotive hardware reaches into high-pressure engineering. This value is a modern common-rail scale.
+  description_format: markdown
+  summary_short: Modern diesel injection systems atomize fuel by driving it through tiny nozzles at enormous pressure.
+  description_medium: Modern diesel injection systems atomize fuel by driving it through tiny nozzles at enormous pressure. That helps engines burn more cleanly and precisely, but it also makes leaks medically dangerous because fuel can penetrate skin. The number shows how far everyday automotive hardware reaches into high-pressure engineering. This value is a modern common-rail scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Diesel Fuel Injection
+    source_trace:
+      method: derived
+      original_value_text: 2e8
+      source_url: https://en.wikipedia.org/wiki/Common_rail
+  source: https://en.wikipedia.org/wiki/Common_rail
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-common-rail
+    url: https://en.wikipedia.org/wiki/Common_rail
+    title: Common rail
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-pressure-yaml
+    url: repo://dataset/raw/legacy_yaml/pressure.yaml
+    title: dataset/raw/legacy_yaml/pressure.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/pressure.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:pressure:scenario-pressure-water-jet-cutter
+  name: Water Jet Cutter
+  value: 400000000.0
+  description: Water-jet cutters slice stone and metal by focusing water at hundreds of megapascals through a jewel orifice. The jet’s power comes less from heat than from the extreme local pressure and speed. Workshops treat the system with the same respect as explosive tooling. The value is a representative cutting-head pressure.
+  description_format: markdown
+  summary_short: Water-jet cutters slice stone and metal by focusing water at hundreds of megapascals through a jewel orifice.
+  description_medium: Water-jet cutters slice stone and metal by focusing water at hundreds of megapascals through a jewel orifice. The jet’s power comes less from heat than from the extreme local pressure and speed. Workshops treat the system with the same respect as explosive tooling. The value is a representative cutting-head pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/pressure.yaml
+    legacy_item_name: Water Jet Cutter
+    source_trace:
+      method: derived
+      original_value_text: 4e8
+      source_url: https://en.wikipedia.org/wiki/Water_jet_cutter
+  source: https://en.wikipedia.org/wiki/Water_jet_cutter
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water-jet-cutter
+    url: https://en.wikipedia.org/wiki/Water_jet_cutter
+    title: Water jet cutter
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

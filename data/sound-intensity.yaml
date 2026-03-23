@@ -1,0 +1,1536 @@
+dimension: sound-intensity
+base_unit: watts_per_square_meter
+dimension_description: Sound intensity measures acoustic power flow per unit area. This version is linear in watts per square meter, even when the source is commonly expressed in decibels. That makes it easier to put whispers, traffic, jet engines, and shock waves on one logarithmic axis.
+related_resources:
+- name: Sound intensity
+  url: https://en.wikipedia.org/wiki/Sound_intensity
+- name: Sound intensity level
+  url: https://en.wikipedia.org/wiki/Sound_intensity#Sound_intensity_level
+show_limitations: true
+units:
+- name: watts per square meter
+  symbol: W/m^2
+  conversion_factor: 1.0
+  description: Watts per square meter are the canonical storage unit for sound intensity.
+- name: microwatts per square meter
+  symbol: uW/m^2
+  conversion_factor: 1000000.0
+  description: Microwatts per square meter are useful for quiet everyday sound levels.
+- name: milliwatts per square meter
+  symbol: mW/m^2
+  conversion_factor: 1000.0
+  description: Milliwatts per square meter are useful for loud urban or industrial sound.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: fields
+frontend_group_label: Fields, Waves & Radiation
+frontend_order: 320
+items:
+- id: obs:sound-intensity:entity-anechoic-chamber-intensity
+  name: Anechoic chamber
+  value: 1.2589254117941673e-13
+  description: 'A world-class anechoic chamber can fall below the nominal threshold of hearing. Source-side figure: `-9 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: A world-class anechoic chamber can fall below the nominal threshold of hearing.
+  description_medium: 'A world-class anechoic chamber can fall below the nominal threshold of hearing. Source-side figure: `-9 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Anechoic chamber
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '1.2589254117941673e-13'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Anechoic_chamber
+      source_value_text: -9 dB
+  source: https://en.wikipedia.org/wiki/Anechoic_chamber
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-anechoic-chamber
+    url: https://en.wikipedia.org/wiki/Anechoic_chamber
+    title: Anechoic chamber
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-threshold-of-hearing
+  name: Threshold of hearing
+  value: 1.0e-12
+  description: 'The conventional zero-decibel reference intensity in air. Source-side figure: `0 dB` for Standard acoustic reference intensity. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: The conventional zero-decibel reference intensity in air.
+  description_medium: 'The conventional zero-decibel reference intensity in air. Source-side figure: `0 dB` for Standard acoustic reference intensity. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Threshold of hearing
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-12
+      source_basis: Standard acoustic reference intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Threshold_of_hearing
+      source_value_text: 0 dB
+  source: https://en.wikipedia.org/wiki/Threshold_of_hearing
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-threshold-of-hearing
+    url: https://en.wikipedia.org/wiki/Threshold_of_hearing
+    title: Threshold of hearing
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-rustling-leaves-intensity
+  name: Rustling leaves
+  value: 1.0e-11
+  description: 'A very quiet natural sound, around 10 dB. Source-side figure: `10 dB` for Representative quiet natural sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A very quiet natural sound, around 10 dB.
+  description_medium: 'A very quiet natural sound, around 10 dB. Source-side figure: `10 dB` for Representative quiet natural sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rustling leaves
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-11
+      source_basis: Representative quiet natural sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Noise_health_effects
+      source_value_text: 10 dB
+  source: https://en.wikipedia.org/wiki/Noise_health_effects
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-noise-health-effects
+    url: https://en.wikipedia.org/wiki/Noise_health_effects
+    title: Noise health effects
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-quiet-rural-night
+  name: Quiet rural night
+  value: 1.0e-11
+  description: 'A quiet rural night sits just above the acoustic floor of human hearing. Source-side figure: `10 dB` for Converted 10 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A quiet rural night sits just above the acoustic floor of human hearing.
+  description_medium: 'A quiet rural night sits just above the acoustic floor of human hearing. Source-side figure: `10 dB` for Converted 10 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Quiet rural night
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-11
+      source_basis: Converted 10 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Sound_pressure
+      source_value_text: 10 dB
+  source: https://en.wikipedia.org/wiki/Sound_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sound-pressure
+    url: https://en.wikipedia.org/wiki/Sound_pressure
+    title: Sound pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-whisper-intensity
+  name: Whisper
+  value: 1.0e-10
+  description: 'A whisper is often placed near 20 dB. Source-side figure: `20 dB` for Representative whisper sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A whisper is often placed near 20 dB.
+  description_medium: 'A whisper is often placed near 20 dB. Source-side figure: `20 dB` for Representative whisper sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Whisper
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-10
+      source_basis: Representative whisper sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Whisper
+      source_value_text: 20 dB
+  source: https://en.wikipedia.org/wiki/Whisper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-whisper
+    url: https://en.wikipedia.org/wiki/Whisper
+    title: Whisper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-quiet-bedroom-intensity
+  name: Quiet bedroom
+  value: 1.0e-09
+  description: 'A quiet room is often around 30 dB. Source-side figure: `30 dB` for Representative quiet-room sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A quiet room is often around 30 dB.
+  description_medium: 'A quiet room is often around 30 dB. Source-side figure: `30 dB` for Representative quiet-room sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Quiet bedroom
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-09
+      source_basis: Representative quiet-room sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Noise_health_effects
+      source_value_text: 30 dB
+  source: https://en.wikipedia.org/wiki/Noise_health_effects
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-noise-health-effects
+    url: https://en.wikipedia.org/wiki/Noise_health_effects
+    title: Noise health effects
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-quiet-office
+  name: Quiet office
+  value: 1.0e-09
+  description: 'A quiet office is audible but still far from intrusive. Source-side figure: `30 dB` for Converted 30 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A quiet office is audible but still far from intrusive.
+  description_medium: 'A quiet office is audible but still far from intrusive. Source-side figure: `30 dB` for Converted 30 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Quiet office
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-09
+      source_basis: Converted 30 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Sound_pressure
+      source_value_text: 30 dB
+  source: https://en.wikipedia.org/wiki/Sound_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sound-pressure
+    url: https://en.wikipedia.org/wiki/Sound_pressure
+    title: Sound pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-library-sound-intensity
+  name: Library
+  value: 1.0e-08
+  description: 'A library or quiet office is often around 40 dB. Source-side figure: `40 dB` for Representative library sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A library or quiet office is often around 40 dB.
+  description_medium: 'A library or quiet office is often around 40 dB. Source-side figure: `40 dB` for Representative library sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Library
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-08
+      source_basis: Representative library sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Library
+      source_value_text: 40 dB
+  source: https://en.wikipedia.org/wiki/Library
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-library
+    url: https://en.wikipedia.org/wiki/Library
+    title: Library
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-refrigerator-hum
+  name: Refrigerator hum
+  value: 1.0e-08
+  description: 'A refrigerator humming in the background is a familiar mid-quiet sound. Source-side figure: `40 dB` for Converted 40 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A refrigerator humming in the background is a familiar mid-quiet sound.
+  description_medium: 'A refrigerator humming in the background is a familiar mid-quiet sound. Source-side figure: `40 dB` for Converted 40 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Refrigerator hum
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-08
+      source_basis: Converted 40 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Sound_pressure
+      source_value_text: 40 dB
+  source: https://en.wikipedia.org/wiki/Sound_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sound-pressure
+    url: https://en.wikipedia.org/wiki/Sound_pressure
+    title: Sound pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-refrigerator-hum-intensity
+  name: Refrigerator hum
+  value: 3.162277660168379e-08
+  description: 'A nearby refrigerator hum lives around the mid-forties of decibels. Source-side figure: `45 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: A nearby refrigerator hum lives around the mid-forties of decibels.
+  description_medium: 'A nearby refrigerator hum lives around the mid-forties of decibels. Source-side figure: `45 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Refrigerator hum
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '3.162277660168379e-08'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Refrigerator
+      source_value_text: 45 dB
+  source: https://en.wikipedia.org/wiki/Refrigerator
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-refrigerator
+    url: https://en.wikipedia.org/wiki/Refrigerator
+    title: Refrigerator
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-rainfall-sound-intensity
+  name: Rainfall
+  value: 1.0e-07
+  description: 'Steady rainfall is often placed near 50 dB. Source-side figure: `50 dB` for Representative rainfall sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: Steady rainfall is often placed near 50 dB.
+  description_medium: 'Steady rainfall is often placed near 50 dB. Source-side figure: `50 dB` for Representative rainfall sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rainfall
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-07
+      source_basis: Representative rainfall sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Rain
+      source_value_text: 50 dB
+  source: https://en.wikipedia.org/wiki/Rain
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rain
+    url: https://en.wikipedia.org/wiki/Rain
+    title: Rain
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-conversation-sound-intensity
+  name: Conversation
+  value: 1.0e-06
+  description: 'Normal conversation is often cited as about 60 dB. Source-side figure: `60 dB` for Representative conversation sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: Normal conversation is often cited as about 60 dB.
+  description_medium: 'Normal conversation is often cited as about 60 dB. Source-side figure: `60 dB` for Representative conversation sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Conversation
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: 1e-06
+      source_basis: Representative conversation sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Speech
+      source_value_text: 60 dB
+  source: https://en.wikipedia.org/wiki/Speech
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-speech
+    url: https://en.wikipedia.org/wiki/Speech
+    title: Speech
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-busy-restaurant
+  name: Busy restaurant
+  value: 3.1622776601683796e-06
+  description: 'A busy restaurant sits well above conversation but below hazardous levels. Source-side figure: `65 dB` for Converted 65 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A busy restaurant sits well above conversation but below hazardous levels.
+  description_medium: 'A busy restaurant sits well above conversation but below hazardous levels. Source-side figure: `65 dB` for Converted 65 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Busy restaurant
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '3.1622776601683796e-06'
+      source_basis: Converted 65 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Sound_pressure_level
+      source_value_text: 65 dB
+  source: https://en.wikipedia.org/wiki/Sound_pressure_level
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sound-pressure-level
+    url: https://en.wikipedia.org/wiki/Sound_pressure_level
+    title: Sound pressure level
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-vacuum-cleaner-intensity
+  name: Vacuum cleaner
+  value: 9.999999999999999e-06
+  description: 'A vacuum cleaner is a good seventy-decibel household benchmark. Source-side figure: `70 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: A vacuum cleaner is a good seventy-decibel household benchmark.
+  description_medium: 'A vacuum cleaner is a good seventy-decibel household benchmark. Source-side figure: `70 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Vacuum cleaner
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '9.999999999999999e-06'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Vacuum_cleaner
+      source_value_text: 70 dB
+  source: https://en.wikipedia.org/wiki/Vacuum_cleaner
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vacuum-cleaner
+    url: https://en.wikipedia.org/wiki/Vacuum_cleaner
+    title: Vacuum cleaner
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-city-traffic
+  name: City traffic
+  value: 9.999999999999999e-06
+  description: 'Traffic noise is a common urban background level. Source-side figure: `70 dB` for Converted 70 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: Traffic noise is a common urban background level.
+  description_medium: 'Traffic noise is a common urban background level. Source-side figure: `70 dB` for Converted 70 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: City traffic
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '9.999999999999999e-06'
+      source_basis: Converted 70 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Sound_pressure_level
+      source_value_text: 70 dB
+  source: https://en.wikipedia.org/wiki/Sound_pressure_level
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sound-pressure-level
+    url: https://en.wikipedia.org/wiki/Sound_pressure_level
+    title: Sound pressure level
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-busy-street-intensity
+  name: Busy street
+  value: 0.0001
+  description: 'Urban traffic is often around 80 dB. Source-side figure: `80 dB` for Representative traffic noise level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: Urban traffic is often around 80 dB.
+  description_medium: 'Urban traffic is often around 80 dB. Source-side figure: `80 dB` for Representative traffic noise level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Busy street
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.0001'
+      source_basis: Representative traffic noise level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Traffic_noise
+      source_value_text: 80 dB
+  source: https://en.wikipedia.org/wiki/Traffic_noise
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-traffic-noise
+    url: https://en.wikipedia.org/wiki/Traffic_noise
+    title: Traffic noise
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-hearing-damage-guideline-intensity
+  name: Hearing damage guideline
+  value: 0.00031622776601683794
+  description: 'Occupational hearing-damage guidance often becomes serious around eighty-five decibels. Source-side figure: `85 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: Occupational hearing-damage guidance often becomes serious around eighty-five decibels.
+  description_medium: 'Occupational hearing-damage guidance often becomes serious around eighty-five decibels. Source-side figure: `85 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hearing damage guideline
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.00031622776601683794'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Noise-induced_hearing_loss
+      source_value_text: 85 dB
+  source: https://en.wikipedia.org/wiki/Noise-induced_hearing_loss
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-noise-induced-hearing-loss
+    url: https://en.wikipedia.org/wiki/Noise-induced_hearing_loss
+    title: Noise-induced hearing loss
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-subway-platform-intensity
+  name: Subway platform
+  value: 0.001
+  description: 'A subway platform or lawn mower is around 90 dB. Source-side figure: `90 dB` for Representative subway-platform sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A subway platform or lawn mower is around 90 dB.
+  description_medium: 'A subway platform or lawn mower is around 90 dB. Source-side figure: `90 dB` for Representative subway-platform sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Subway platform
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.001'
+      source_basis: Representative subway-platform sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Noise_health_effects
+      source_value_text: 90 dB
+  source: https://en.wikipedia.org/wiki/Noise_health_effects
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-noise-health-effects
+    url: https://en.wikipedia.org/wiki/Noise_health_effects
+    title: Noise health effects
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-lawn-mower
+  name: Power lawn mower
+  value: 0.001
+  description: 'A lawn mower is loud enough to warrant hearing protection for long exposure. Source-side figure: `90 dB` for Converted 90 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A lawn mower is loud enough to warrant hearing protection for long exposure.
+  description_medium: 'A lawn mower is loud enough to warrant hearing protection for long exposure. Source-side figure: `90 dB` for Converted 90 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Power lawn mower
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.001'
+      source_basis: Converted 90 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Lawn_mower
+      source_value_text: 90 dB
+  source: https://en.wikipedia.org/wiki/Lawn_mower
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lawn-mower
+    url: https://en.wikipedia.org/wiki/Lawn_mower
+    title: Lawn mower
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-motorcycle-sound-intensity
+  name: Motorcycle at close range
+  value: 0.01
+  description: 'A loud motorcycle or power tool is around 100 dB. Source-side figure: `100 dB` for Representative loud vehicle sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A loud motorcycle or power tool is around 100 dB.
+  description_medium: 'A loud motorcycle or power tool is around 100 dB. Source-side figure: `100 dB` for Representative loud vehicle sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Motorcycle at close range
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.01'
+      source_basis: Representative loud vehicle sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Motorcycle
+      source_value_text: 100 dB
+  source: https://en.wikipedia.org/wiki/Motorcycle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-motorcycle
+    url: https://en.wikipedia.org/wiki/Motorcycle
+    title: Motorcycle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-chainsaw
+  name: Chainsaw
+  value: 0.01
+  description: 'A chainsaw is a high-intensity mechanical sound source. Source-side figure: `100 dB` for Converted 100 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A chainsaw is a high-intensity mechanical sound source.
+  description_medium: 'A chainsaw is a high-intensity mechanical sound source. Source-side figure: `100 dB` for Converted 100 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Chainsaw
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.01'
+      source_basis: Converted 100 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Chainsaw
+      source_value_text: 100 dB
+  source: https://en.wikipedia.org/wiki/Chainsaw
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-chainsaw
+    url: https://en.wikipedia.org/wiki/Chainsaw
+    title: Chainsaw
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-concert-speaker
+  name: Concert speaker
+  value: 0.09999999999999999
+  description: 'A concert speaker stack can sit near the threshold where sustained exposure becomes risky. Source-side figure: `110 dB` for Converted 110 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A concert speaker stack can sit near the threshold where sustained exposure becomes risky.
+  description_medium: 'A concert speaker stack can sit near the threshold where sustained exposure becomes risky. Source-side figure: `110 dB` for Converted 110 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concert speaker
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.09999999999999999'
+      source_basis: Converted 110 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Live_sound_reinforcement
+      source_value_text: 110 dB
+  source: https://en.wikipedia.org/wiki/Live_sound_reinforcement
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-live-sound-reinforcement
+    url: https://en.wikipedia.org/wiki/Live_sound_reinforcement
+    title: Live sound reinforcement
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-rock-concert-intensity
+  name: Rock concert
+  value: 0.1
+  description: 'Rock concerts often sit around 110 dB. Source-side figure: `110 dB` for Representative concert sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: Rock concerts often sit around 110 dB.
+  description_medium: 'Rock concerts often sit around 110 dB. Source-side figure: `110 dB` for Representative concert sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rock concert
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '0.1'
+      source_basis: Representative concert sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Rock_concert
+      source_value_text: 110 dB
+  source: https://en.wikipedia.org/wiki/Rock_concert
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rock-concert
+    url: https://en.wikipedia.org/wiki/Rock_concert
+    title: Rock concert
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-threshold-of-discomfort
+  name: Threshold of discomfort
+  value: 1.0
+  description: 'Around 120 dB, sound becomes intensely uncomfortable. Source-side figure: `120 dB` for Representative threshold of discomfort. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: Around 120 dB, sound becomes intensely uncomfortable.
+  description_medium: 'Around 120 dB, sound becomes intensely uncomfortable. Source-side figure: `120 dB` for Representative threshold of discomfort. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Threshold of discomfort
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '1.0'
+      source_basis: Representative threshold of discomfort.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Sound_pressure
+      source_value_text: 120 dB
+  source: https://en.wikipedia.org/wiki/Sound_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sound-pressure
+    url: https://en.wikipedia.org/wiki/Sound_pressure
+    title: Sound pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-thunderclap
+  name: Thunderclap
+  value: 1.0
+  description: 'A close thunderclap is one of the loud natural sounds most people encounter. Source-side figure: `120 dB` for Converted 120 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A close thunderclap is one of the loud natural sounds most people encounter.
+  description_medium: 'A close thunderclap is one of the loud natural sounds most people encounter. Source-side figure: `120 dB` for Converted 120 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Thunderclap
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '1.0'
+      source_basis: Converted 120 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Thunder
+      source_value_text: 120 dB
+  source: https://en.wikipedia.org/wiki/Thunder
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-thunder
+    url: https://en.wikipedia.org/wiki/Thunder
+    title: Thunder
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-air-raid-siren-intensity
+  name: Air-raid siren nearby
+  value: 10.0
+  description: 'An air-raid siren or equivalent nearby source can reach around 130 dB. Source-side figure: `130 dB` for Representative siren sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: An air-raid siren or equivalent nearby source can reach around 130 dB.
+  description_medium: 'An air-raid siren or equivalent nearby source can reach around 130 dB. Source-side figure: `130 dB` for Representative siren sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Air-raid siren nearby
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '10.0'
+      source_basis: Representative siren sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Civil_defense_siren
+      source_value_text: 130 dB
+  source: https://en.wikipedia.org/wiki/Civil_defense_siren
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-civil-defense-siren
+    url: https://en.wikipedia.org/wiki/Civil_defense_siren
+    title: Civil defense siren
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:scenario-sound-intensity-jet-takeoff-nearby
+  name: Jet takeoff nearby
+  value: 10.0
+  description: 'A jet taking off near the runway is painfully loud without protection. Source-side figure: `130 dB` for Converted 130 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_format: markdown
+  summary_short: A jet taking off near the runway is painfully loud without protection.
+  description_medium: 'A jet taking off near the runway is painfully loud without protection. Source-side figure: `130 dB` for Converted 130 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 × 10^(L/10).'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Jet takeoff nearby
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using I = I0 × 10^(L/10).
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '10.0'
+      source_basis: Converted 130 dB SPL to linear intensity.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Jet_aircraft
+      source_value_text: 130 dB
+  source: https://en.wikipedia.org/wiki/Jet_aircraft
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jet-aircraft
+    url: https://en.wikipedia.org/wiki/Jet_aircraft
+    title: Jet aircraft
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-jet-takeoff-intensity
+  name: Jet takeoff at 100 m
+  value: 100.0
+  description: 'A jet at close takeoff distance is a classic one-hundred-forty-decibel example. Source-side figure: `140 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: A jet at close takeoff distance is a classic one-hundred-forty-decibel example.
+  description_medium: 'A jet at close takeoff distance is a classic one-hundred-forty-decibel example. Source-side figure: `140 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Jet takeoff at 100 m
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '100.0'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Jet_aircraft
+      source_value_text: 140 dB
+  source: https://en.wikipedia.org/wiki/Jet_aircraft
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jet-aircraft
+    url: https://en.wikipedia.org/wiki/Jet_aircraft
+    title: Jet aircraft
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-threshold-of-pain-sound
+  name: Threshold of pain
+  value: 100.0
+  description: 'The often-cited threshold of pain is around 140 dB. Source-side figure: `140 dB` for Representative threshold of pain for sound. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: The often-cited threshold of pain is around 140 dB.
+  description_medium: 'The often-cited threshold of pain is around 140 dB. Source-side figure: `140 dB` for Representative threshold of pain for sound. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Threshold of pain
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '100.0'
+      source_basis: Representative threshold of pain for sound.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Threshold_of_pain
+      source_value_text: 140 dB
+  source: https://en.wikipedia.org/wiki/Threshold_of_pain
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-threshold-of-pain
+    url: https://en.wikipedia.org/wiki/Threshold_of_pain
+    title: Threshold of pain
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-gunshot-intensity
+  name: Gunshot nearby
+  value: 1000.0
+  description: 'A gunshot produces a very intense acoustic pulse. Source-side figure: `150 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: A gunshot produces a very intense acoustic pulse.
+  description_medium: 'A gunshot produces a very intense acoustic pulse. Source-side figure: `150 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Gunshot nearby
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '1000.0'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Gunshot
+      source_value_text: 150 dB
+  source: https://en.wikipedia.org/wiki/Gunshot
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gunshot
+    url: https://en.wikipedia.org/wiki/Gunshot
+    title: Gunshot
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-jet-engine-intensity
+  name: Jet engine nearby
+  value: 1000.0
+  description: 'A jet engine at very close range can exceed 150 dB. Source-side figure: `150 dB` for Representative close-range jet-engine sound level. Converted decibels to linear intensity.'
+  description_format: markdown
+  summary_short: A jet engine at very close range can exceed 150 dB.
+  description_medium: 'A jet engine at very close range can exceed 150 dB. Source-side figure: `150 dB` for Representative close-range jet-engine sound level. Converted decibels to linear intensity.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Jet engine nearby
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '1000.0'
+      source_basis: Representative close-range jet-engine sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Jet_engine
+      source_value_text: 150 dB
+  source: https://en.wikipedia.org/wiki/Jet_engine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jet-engine
+    url: https://en.wikipedia.org/wiki/Jet_engine
+    title: Jet engine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:sound-intensity:entity-rocket-launch-pad-intensity
+  name: Rocket launch pad
+  value: 1000000.0
+  description: 'At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance. Source-side figure: `180 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_format: markdown
+  summary_short: At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance.
+  description_medium: 'At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance. Source-side figure: `180 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rocket launch pad
+    ingest_source: dataset/raw/curated/sound-intensity.json
+    source_trace:
+      conversion_note: Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.
+      derivation_note: I = I0 * 10^(L/10)
+      method: derived
+      original_value_text: '1000000.0'
+      source_basis: Representative sound level.
+      source_unit: dB
+      source_url: https://en.wikipedia.org/wiki/Rocket_launch
+      source_value_text: 180 dB
+  source: https://en.wikipedia.org/wiki/Rocket_launch
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rocket-launch
+    url: https://en.wikipedia.org/wiki/Rocket_launch
+    title: Rocket launch
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-sound-intensity-json
+    url: repo://dataset/raw/curated/sound-intensity.json
+    title: dataset/raw/curated/sound-intensity.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}

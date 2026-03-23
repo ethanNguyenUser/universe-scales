@@ -41,6 +41,7 @@ preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
+scale_mode: log
 frontend_group: motion
 frontend_group_label: Motion & Mechanics
 frontend_order: 80
@@ -195,6 +196,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-snail
     url: https://en.wikipedia.org/wiki/Snail
     title: Snail
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-human-crawl
+  name: Human Crawl
+  value: 0.2
+  description: An infant crawling across the floor moves at only a few tenths of a meter per second. At that pace a room still feels large, and adults can easily match the motion with a walking pace slowed to a shuffle. Developmental studies use such speeds to separate balance from strength. The value is a representative steady crawl rather than a short lunge.
+  description_format: markdown
+  summary_short: An infant crawling across the floor moves at only a few tenths of a meter per second.
+  description_medium: An infant crawling across the floor moves at only a few tenths of a meter per second. At that pace a room still feels large, and adults can easily match the motion with a walking pace slowed to a shuffle. Developmental studies use such speeds to separate balance from strength. The value is a representative steady crawl rather than a short lunge.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Human Crawl
+    source_trace:
+      method: derived
+      original_value_text: '0.2'
+      source_url: https://en.wikipedia.org/wiki/Crawling
+  source: https://en.wikipedia.org/wiki/Crawling
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-crawling
+    url: https://en.wikipedia.org/wiki/Crawling
+    title: Crawling
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -423,6 +466,132 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:speed:scenario-speed-honeybee-flight
+  name: Honeybee Flight
+  value: 7.0
+  description: Honeybees cruise through gardens at several meters per second while adjusting rapidly as they approach flowers or the hive. Their airspeed is high enough to cover large foraging territories but low enough to permit precise landings. Wind can easily dominate the path you see from the ground. The value is a representative forward flight speed.
+  description_format: markdown
+  summary_short: Honeybees cruise through gardens at several meters per second while adjusting rapidly as they approach flowers or the hive.
+  description_medium: Honeybees cruise through gardens at several meters per second while adjusting rapidly as they approach flowers or the hive. Their airspeed is high enough to cover large foraging territories but low enough to permit precise landings. Wind can easily dominate the path you see from the ground. The value is a representative forward flight speed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Honeybee Flight
+    source_trace:
+      method: derived
+      original_value_text: '7'
+      source_url: https://en.wikipedia.org/wiki/Honey_bee
+  source: https://en.wikipedia.org/wiki/Honey_bee
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-honey-bee
+    url: https://en.wikipedia.org/wiki/Honey_bee
+    title: Honey bee
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-raindrop-terminal-velocity
+  name: Raindrop Terminal Velocity
+  value: 9.0
+  description: Raindrops do not keep accelerating forever because drag rises until it balances their weight. For a medium drop a terminal velocity near this value is typical in still air. That is why rain stings less than gravel even after falling from clouds kilometers up. The number represents a common drop a few millimeters across.
+  description_format: markdown
+  summary_short: Raindrops do not keep accelerating forever because drag rises until it balances their weight.
+  description_medium: Raindrops do not keep accelerating forever because drag rises until it balances their weight. For a medium drop a terminal velocity near this value is typical in still air. That is why rain stings less than gravel even after falling from clouds kilometers up. The number represents a common drop a few millimeters across.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Raindrop Terminal Velocity
+    source_trace:
+      method: derived
+      original_value_text: '9'
+      source_url: https://en.wikipedia.org/wiki/Terminal_velocity
+  source: https://en.wikipedia.org/wiki/Terminal_velocity
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-terminal-velocity
+    url: https://en.wikipedia.org/wiki/Terminal_velocity
+    title: Terminal velocity
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-olympic-sprinter-peak
+  name: Olympic Sprinter Peak
+  value: 12.4
+  description: Elite sprinters briefly exceed twelve meters per second during the middle of a 100 meter race. That peak lasts only a second or two before fatigue and posture changes begin to shave it back down. Biomechanics labs use high speed cameras to resolve the stride pattern at this pace. The number is near the top speed reached by world class men.
+  description_format: markdown
+  summary_short: Elite sprinters briefly exceed twelve meters per second during the middle of a 100 meter race.
+  description_medium: Elite sprinters briefly exceed twelve meters per second during the middle of a 100 meter race. That peak lasts only a second or two before fatigue and posture changes begin to shave it back down. Biomechanics labs use high speed cameras to resolve the stride pattern at this pace. The number is near the top speed reached by world class men.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Olympic Sprinter Peak
+    source_trace:
+      method: derived
+      original_value_text: '12.4'
+      source_url: https://en.wikipedia.org/wiki/Sprinting
+  source: https://en.wikipedia.org/wiki/Sprinting
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sprinting
+    url: https://en.wikipedia.org/wiki/Sprinting
+    title: Sprinting
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:speed:scenario-speed-car-city
   name: Car (City)
   value: 13.9
@@ -447,6 +616,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-automobile
     url: https://en.wikipedia.org/wiki/Automobile
     title: Automobile
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-racehorse-gallop
+  name: Racehorse Gallop
+  value: 17.0
+  description: Racehorses in full gallop cover ground at around this speed over short stretches. Their gait cycles trade contact time for long airborne phases that feel surprisingly smooth to watch. Track conditions, breed, and distance all shift the exact number. The value reflects a thoroughbred at racing pace rather than a relaxed canter.
+  description_format: markdown
+  summary_short: Racehorses in full gallop cover ground at around this speed over short stretches.
+  description_medium: Racehorses in full gallop cover ground at around this speed over short stretches. Their gait cycles trade contact time for long airborne phases that feel surprisingly smooth to watch. Track conditions, breed, and distance all shift the exact number. The value reflects a thoroughbred at racing pace rather than a relaxed canter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Racehorse Gallop
+    source_trace:
+      method: derived
+      original_value_text: '17'
+      source_url: https://en.wikipedia.org/wiki/Horse_gait
+  source: https://en.wikipedia.org/wiki/Horse_gait
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-horse-gait
+    url: https://en.wikipedia.org/wiki/Horse_gait
+    title: Horse gait
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -591,6 +802,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:speed:scenario-speed-tennis-serve
+  name: Tennis Serve
+  value: 67.0
+  description: A professional tennis serve leaves the racket at tens of meters per second, fast enough that returners have only fractions of a second to react. Spin and air drag then bend and slow the ball on the way to the box. Radar guns on courts report this initial speed because it is the dramatic part spectators notice. The figure here is a strong first serve rather than the all-time record.
+  description_format: markdown
+  summary_short: A professional tennis serve leaves the racket at tens of meters per second, fast enough that returners have only fractions of a second to react.
+  description_medium: A professional tennis serve leaves the racket at tens of meters per second, fast enough that returners have only fractions of a second to react. Spin and air drag then bend and slow the ball on the way to the box. Radar guns on courts report this initial speed because it is the dramatic part spectators notice. The figure here is a strong first serve rather than the all-time record.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Tennis Serve
+    source_trace:
+      method: derived
+      original_value_text: '67'
+      source_url: https://en.wikipedia.org/wiki/Tennis_serve
+  source: https://en.wikipedia.org/wiki/Tennis_serve
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tennis-serve
+    url: https://en.wikipedia.org/wiki/Tennis_serve
+    title: Tennis serve
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:speed:scenario-speed-high-speed-train
   name: High-Speed Train
   value: 83.3
@@ -657,6 +910,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-peregrine-falcon
     url: https://en.wikipedia.org/wiki/Peregrine_falcon
     title: Peregrine falcon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-formula-1-car
+  name: Formula 1 Car
+  value: 95.0
+  description: Formula 1 cars on long straights approach one hundred meters per second, a speed that makes braking zones and tire loads central to the whole sport. The lap average is much lower because corners dominate time. Aerodynamic drag rises so quickly here that adding small speed increments demands large power increases. The value is a representative peak on a modern circuit.
+  description_format: markdown
+  summary_short: Formula 1 cars on long straights approach one hundred meters per second, a speed that makes braking zones and tire loads central to the whole sport.
+  description_medium: Formula 1 cars on long straights approach one hundred meters per second, a speed that makes braking zones and tire loads central to the whole sport. The lap average is much lower because corners dominate time. Aerodynamic drag rises so quickly here that adding small speed increments demands large power increases. The value is a representative peak on a modern circuit.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Formula 1 Car
+    source_trace:
+      method: derived
+      original_value_text: '95'
+      source_url: https://en.wikipedia.org/wiki/Formula_One_car
+  source: https://en.wikipedia.org/wiki/Formula_One_car
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-formula-one-car
+    url: https://en.wikipedia.org/wiki/Formula_One_car
+    title: Formula One car
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -801,6 +1096,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:speed:scenario-speed-rifle-bullet
+  name: Rifle Bullet
+  value: 830.0
+  description: A typical 7.62 millimeter rifle bullet leaves the barrel at several hundred meters per second. That speed is why even small masses carry large kinetic energy and why ballistic trajectories flatten over ordinary line-of-sight distances. Spin stabilizes the flight but does not change the basic speed scale. The value is a common muzzle velocity for a full-power rifle round.
+  description_format: markdown
+  summary_short: A typical 7.62 millimeter rifle bullet leaves the barrel at several hundred meters per second.
+  description_medium: A typical 7.62 millimeter rifle bullet leaves the barrel at several hundred meters per second. That speed is why even small masses carry large kinetic energy and why ballistic trajectories flatten over ordinary line-of-sight distances. Spin stabilizes the flight but does not change the basic speed scale. The value is a common muzzle velocity for a full-power rifle round.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Rifle Bullet
+    source_trace:
+      method: derived
+      original_value_text: '830'
+      source_url: https://en.wikipedia.org/wiki/Muzzle_velocity
+  source: https://en.wikipedia.org/wiki/Muzzle_velocity
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-muzzle-velocity
+    url: https://en.wikipedia.org/wiki/Muzzle_velocity
+    title: Muzzle velocity
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:speed:scenario-speed-sr-71-blackbird
   name: SR-71 Blackbird
   value: 980.0
@@ -825,6 +1162,48 @@ items:
   - id: src:https-en-wikipedia-org-wiki-lockheed-sr-71-blackbird
     url: https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird
     title: Lockheed SR-71 Blackbird
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-geostationary-satellite
+  name: Geostationary Satellite
+  value: 3070.0
+  description: Satellites in geostationary orbit move much more slowly than low Earth orbit craft because they circle far farther from Earth’s center. Even so, they still cover thousands of meters every second while hanging over the same longitude. Communications engineers treat this motion as hidden because the orbital period exactly matches a day. The value is the orbital speed at geostationary altitude.
+  description_format: markdown
+  summary_short: Satellites in geostationary orbit move much more slowly than low Earth orbit craft because they circle far farther from Earth’s center.
+  description_medium: Satellites in geostationary orbit move much more slowly than low Earth orbit craft because they circle far farther from Earth’s center. Even so, they still cover thousands of meters every second while hanging over the same longitude. Communications engineers treat this motion as hidden because the orbital period exactly matches a day. The value is the orbital speed at geostationary altitude.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Geostationary Satellite
+    source_trace:
+      method: derived
+      original_value_text: '3070'
+      source_url: https://en.wikipedia.org/wiki/Geostationary_orbit
+  source: https://en.wikipedia.org/wiki/Geostationary_orbit
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-geostationary-orbit
+    url: https://en.wikipedia.org/wiki/Geostationary_orbit
+    title: Geostationary orbit
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -927,6 +1306,48 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:speed:scenario-speed-mercury-orbit
+  name: Mercury Orbit
+  value: 47900.0
+  description: Mercury whips around the Sun faster than any other planet in the Solar System. Its tight orbit means relativistic corrections are measurable there, which is why Mercury helped confirm general relativity. Temperatures and solar flux at that speed are brutal for spacecraft. The number is the mean orbital speed.
+  description_format: markdown
+  summary_short: Mercury whips around the Sun faster than any other planet in the Solar System.
+  description_medium: Mercury whips around the Sun faster than any other planet in the Solar System. Its tight orbit means relativistic corrections are measurable there, which is why Mercury helped confirm general relativity. Temperatures and solar flux at that speed are brutal for spacecraft. The number is the mean orbital speed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Mercury Orbit
+    source_trace:
+      method: derived
+      original_value_text: '47900'
+      source_url: https://en.wikipedia.org/wiki/Mercury_(planet)
+  source: https://en.wikipedia.org/wiki/Mercury_(planet)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mercury-planet
+    url: https://en.wikipedia.org/wiki/Mercury_(planet)
+    title: Mercury (planet)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:speed:scenario-speed-helios-2-spacecraft
   name: Helios 2 Spacecraft
   value: 70000.0
@@ -951,6 +1372,90 @@ items:
   - id: src:https-en-wikipedia-org-wiki-helios-spacecraft
     url: https://en.wikipedia.org/wiki/Helios_(spacecraft)
     title: Helios (spacecraft)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-parker-solar-probe
+  name: Parker Solar Probe
+  value: 192000.0
+  description: Parker Solar Probe reaches almost two hundred kilometers per second at closest approach to the Sun, making it the fastest human-made object so far. Gravity rather than engines supplies most of that speed. Thermal shields and mission timing both depend on this number because conditions change violently near perihelion. The value is a published record-class perihelion speed.
+  description_format: markdown
+  summary_short: Parker Solar Probe reaches almost two hundred kilometers per second at closest approach to the Sun, making it the fastest human-made object so far.
+  description_medium: Parker Solar Probe reaches almost two hundred kilometers per second at closest approach to the Sun, making it the fastest human-made object so far. Gravity rather than engines supplies most of that speed. Thermal shields and mission timing both depend on this number because conditions change violently near perihelion. The value is a published record-class perihelion speed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Parker Solar Probe
+    source_trace:
+      method: derived
+      original_value_text: '192000'
+      source_url: https://en.wikipedia.org/wiki/Parker_Solar_Probe
+  source: https://en.wikipedia.org/wiki/Parker_Solar_Probe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-parker-solar-probe
+    url: https://en.wikipedia.org/wiki/Parker_Solar_Probe
+    title: Parker Solar Probe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-speed-yaml
+    url: repo://dataset/raw/legacy_yaml/speed.yaml
+    title: dataset/raw/legacy_yaml/speed.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/speed.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:speed:scenario-speed-sun-around-milky-way
+  name: Sun Around Milky Way
+  value: 220000.0
+  description: The Sun and nearby stars orbit the Milky Way at hundreds of kilometers per second. We do not feel this motion locally because everything around us shares nearly the same galactic flow. On a galactic map, though, it means the Solar System circles the center only once every couple hundred million years. The value is a representative local circular speed in the Milky Way.
+  description_format: markdown
+  summary_short: The Sun and nearby stars orbit the Milky Way at hundreds of kilometers per second.
+  description_medium: The Sun and nearby stars orbit the Milky Way at hundreds of kilometers per second. We do not feel this motion locally because everything around us shares nearly the same galactic flow. On a galactic map, though, it means the Solar System circles the center only once every couple hundred million years. The value is a representative local circular speed in the Milky Way.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/speed.yaml
+    legacy_item_name: Sun Around Milky Way
+    source_trace:
+      method: derived
+      original_value_text: '220000'
+      source_url: https://en.wikipedia.org/wiki/Milky_Way
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milky-way
+    url: https://en.wikipedia.org/wiki/Milky_Way
+    title: Milky Way
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

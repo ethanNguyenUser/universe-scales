@@ -82,6 +82,66 @@ items:
   name: Door Handle Pull
   source: https://en.wikipedia.org/wiki/Door_handle
   value: 40
+- description: Single kinesin motor proteins haul cargo through cells with forces of only a few piconewtons. That sounds negligible, but at molecular scales it is enough to step processively along a microtubule and move vesicles through crowded cytoplasm. Biophysicists measure these loads with optical traps. The value is the stall-force scale for one motor.
+  name: Kinesin Motor
+  source: https://en.wikipedia.org/wiki/Kinesin
+  value: 6e-12
+- description: The weight of a medium apple on Earth is about one newton, which is why one kilogram weighs close to ten newtons in rough mental arithmetic. This is a handy anchor between tiny lab forces and the loads you feel in your hand. Classroom force sensors often start with objects like this. The number assumes ordinary Earth gravity.
+  name: Apple Weight
+  source: https://en.wikipedia.org/wiki/Newton_(unit)
+  value: 1
+- description: A strong adult grip can squeeze with a few hundred newtons measured on a hand dynamometer. That is enough to crush fragile packaging and explains why climbing and tool work benefit so much from forearm strength. The exact figure varies with age, sex, and training. The value is a representative peak for a healthy adult.
+  name: Human Grip Strength
+  source: https://en.wikipedia.org/wiki/Grip_strength
+  value: 300
+- description: During a push-up, each arm briefly supports a few hundred newtons as the body rises and falls. Trainers care about this because shoulder and wrist joints must route the same load repeatedly without irritation. The number is lower than full body weight because the feet still carry part of the system. This value is for one arm near the bottom of a standard push-up.
+  name: Push-Up Support (per arm)
+  source: https://en.wikipedia.org/wiki/Push-up
+  value: 350
+- description: A house cat pushing off into a jump can drive well over its body weight into the floor for a brief instant. Fast muscle fibers and tendon recoil package that force into a surprisingly compact animal. High-speed force plates reveal it as a short pulse rather than a steady push. The number is a representative peak for a healthy adult cat.
+  name: House Cat Jump Push-Off
+  source: https://en.wikipedia.org/wiki/Cat_righting_reflex
+  value: 150
+- description: A swung sledgehammer can deliver impact forces of several kilonewtons when it meets a rigid target. The handle flex, the steel head, and the target all share the deceleration. Demolition feels dramatic because the force is concentrated into a short stopping time. The value is a plausible peak on a solid strike.
+  name: Sledgehammer Blow
+  source: https://en.wikipedia.org/wiki/Sledgehammer
+  value: 5000
+- description: Horse kicks can exceed ten kilonewtons, enough to break bone or dent metal panels. The hind legs are effectively spring-loaded levers powered by large muscle groups. Veterinarians and handlers take this seriously because the pulse arrives faster than most people can react. The value is a representative force scale for a direct kick.
+  name: Horse Kick
+  source: https://en.wikipedia.org/wiki/Horse
+  value: 10000
+- description: The static weight of a blue whale corresponds to well over a million newtons under Earth gravity. Water supports most of that load, which is why stranded whales suffer dangerous crushing under their own mass. This force scale helps show how biological structures rely on buoyancy. The number is for a large adult blue whale.
+  name: Blue Whale Weight
+  source: https://en.wikipedia.org/wiki/Blue_whale
+  value: 1500000
+- description: A GE90 turbofan on a large Boeing 777 can produce thrust on the order of half a meganewton at takeoff power. That is why a twin-engine airliner can accelerate a massive aircraft down the runway and still retain engine-out margins. Fans, compressors, and turbines all exist to turn fuel flow into this axial force. The value is a round-number thrust rating for one engine.
+  name: GE90 Jet Engine
+  source: https://en.wikipedia.org/wiki/General_Electric_GE90
+  value: 510000
+- description: One Merlin 1D engine on a Falcon 9 produces hundreds of kilonewtons of thrust at sea level. Nine of them together give the first stage enough upward force to clear the pad with a loaded rocket. The number is for a single engine, which makes it easier to compare with aircraft engines and smaller launchers. It is a published sea-level thrust scale.
+  name: Merlin 1D Engine
+  source: https://en.wikipedia.org/wiki/Merlin_(rocket_engine_family)
+  value: 845000
+- description: A full Falcon 9 first stage at liftoff produces several meganewtons of thrust, comfortably above its weight. Guidance and throttle schedules then steer how that force turns into acceleration over the climb. Reusability only works because the engines can be throttled and restarted within this range. The value is the approximate total sea-level thrust of the nine-engine booster.
+  name: Falcon 9 Liftoff
+  source: https://en.wikipedia.org/wiki/Falcon_9
+  value: 7600000
+- description: Saturn V remains one of the great force benchmarks of human engineering, with first-stage thrust in the tens of meganewtons. That force had to act through plumbing, turbomachinery, and structure while the rocket vibrated and shed mass. It is the kind of number that makes launch pads feel like industrial volcanoes. The value is the published first-stage thrust scale.
+  name: Saturn V First Stage
+  source: https://en.wikipedia.org/wiki/Saturn_V
+  value: 35000000
+- description: A hard human punch delivers force in the low-kilonewton range over a very short contact time. Technique, glove padding, and the compliance of the target all change the peak a lot, which is why lab measurements vary. Even so, the number belongs well above ordinary grip and push forces. The value is a representative straight-punch impact scale.
+  name: Human Punch
+  source: https://en.wikipedia.org/wiki/Punch_(combat)
+  value: 2500
+- description: An adult African elephant on Earth weighs tens of thousands of newtons, enough that ground pressure and foot design matter for every step. Despite the huge total force, broad padded feet spread it out and keep the animal from sinking into ordinary soil. This is a useful biological midpoint between human-scale loads and whales or heavy machinery. The value is for a large adult.
+  name: African Elephant Weight
+  source: https://en.wikipedia.org/wiki/African_bush_elephant
+  value: 50000
+- description: The weight of a fully loaded Boeing 747 on the runway reaches several meganewtons. Wings remove most of that load only after takeoff speed builds, which is why landing gear and pavement design are both serious engineering problems. It is a clean large-machine benchmark distinct from engine thrust. The value is a representative takeoff-weight force under Earth gravity.
+  name: Boeing 747 Weight
+  source: https://en.wikipedia.org/wiki/Boeing_747
+  value: 3500000
 units:
 - conversion_factor: 1
   description: The newton is the SI unit of force defined as the push that accelerates one kilogram by one meter per second squared. It ties dynamics directly to mass and motion. Using newtons keeps mechanical, fluid, and electromagnetic forces on a single scale. All item values are recorded in newtons before conversion.

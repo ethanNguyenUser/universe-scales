@@ -45,6 +45,7 @@ preferred_target_items: 50
 preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
+scale_mode: log
 frontend_group: geometry
 frontend_group_label: Geometry & Scale
 frontend_order: 60
@@ -74,6 +75,51 @@ items:
   - id: src:https-en-wikipedia-org-wiki-proton
     url: https://en.wikipedia.org/wiki/Proton
     title: Proton
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
+- id: obs:area:entity-hydrogen-atom
+  name: Hydrogen atom cross-section
+  value: 8.8e-21
+  description: Characteristic geometric cross-section implied by the Bohr radius. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_format: markdown
+  summary_short: Characteristic geometric cross-section implied by the Bohr radius.
+  description_medium: Characteristic geometric cross-section implied by the Bohr radius. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hydrogen atom cross-section
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: pi*r^2
+      method: derived
+      original_value_text: '8.8e-21'
+      source_url: https://en.wikipedia.org/wiki/Hydrogen_atom
+  source: https://en.wikipedia.org/wiki/Hydrogen_atom
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydrogen-atom
+    url: https://en.wikipedia.org/wiki/Hydrogen_atom
+    title: Hydrogen atom
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -184,6 +230,51 @@ items:
   qualifiers:
     derivation: pi*r^2
     measurement: cross-sectional area
+- id: obs:area:entity-sars-cov-2
+  name: SARS-CoV-2 virion cross-section
+  value: 7.9e-15
+  description: Approximate cross-sectional area of a spherical coronavirus particle. Derived using `pi*r^2`.
+  description_format: markdown
+  summary_short: Approximate cross-sectional area of a spherical coronavirus particle.
+  description_medium: Approximate cross-sectional area of a spherical coronavirus particle. Derived using `pi*r^2`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SARS-CoV-2 virion cross-section
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: pi*r^2
+      method: derived
+      original_value_text: '7.9e-15'
+      source_url: https://en.wikipedia.org/wiki/SARS-CoV-2
+  source: https://en.wikipedia.org/wiki/SARS-CoV-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sars-cov-2
+    url: https://en.wikipedia.org/wiki/SARS-CoV-2
+    title: SARS-CoV-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
 - id: obs:area:entity-influenza-virus
   name: Influenza virion surface area
   value: 4.5e-14
@@ -272,6 +363,51 @@ items:
   value_type: measured
   qualifiers:
     measurement: surface area
+- id: obs:area:scenario-grain-of-salt-cross-section
+  name: Grain of salt cross-section
+  value: 7.9e-09
+  description: Cross-sectional area of a representative coarse salt grain treated as a sphere. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_format: markdown
+  summary_short: Cross-sectional area of a representative coarse salt grain treated as a sphere.
+  description_medium: Cross-sectional area of a representative coarse salt grain treated as a sphere. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Grain of salt cross-section
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: pi*r^2
+      method: derived
+      original_value_text: '7.9e-09'
+      source_url: https://en.wikipedia.org/wiki/Salt
+  source: https://en.wikipedia.org/wiki/Salt
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-salt
+    url: https://en.wikipedia.org/wiki/Salt
+    title: Salt
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: pi*r^2
+    measurement: cross-sectional area
 - id: obs:area:scenario-grain-of-sand-surface
   name: Grain of sand surface area
   value: 3.0e-06
@@ -427,6 +563,92 @@ items:
   - id: src:https-en-wikipedia-org-wiki-smartphone
     url: https://en.wikipedia.org/wiki/Smartphone
     title: Smartphone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: display area
+- id: obs:area:scenario-a5-paper
+  name: A5 sheet area
+  value: 0.0155
+  description: Area of one A5 sheet of paper. Here the quantity refers to `sheet area`.
+  description_format: markdown
+  summary_short: Area of one A5 sheet of paper.
+  description_medium: Area of one A5 sheet of paper. Here the quantity refers to `sheet area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A5 sheet area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0155'
+      source_url: https://en.wikipedia.org/wiki/Paper_size
+  source: https://en.wikipedia.org/wiki/Paper_size
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper-size
+    url: https://en.wikipedia.org/wiki/Paper_size
+    title: Paper size
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: sheet area
+- id: obs:area:scenario-laptop-screen
+  name: Laptop screen area
+  value: 0.025
+  description: Representative active display area of a modern laptop.
+  description_format: markdown
+  summary_short: Representative active display area of a modern laptop.
+  description_medium: Representative active display area of a modern laptop.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Laptop screen area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: derived
+      original_value_text: '0.025'
+      source_url: https://en.wikipedia.org/wiki/Laptop
+  source: https://en.wikipedia.org/wiki/Laptop
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-laptop
+    url: https://en.wikipedia.org/wiki/Laptop
+    title: Laptop
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -618,6 +840,49 @@ items:
   value_type: measured
   qualifiers:
     measurement: court area
+- id: obs:area:scenario-basketball-court
+  name: Basketball court
+  value: 420.0
+  description: Representative area of a basketball court. Here the quantity refers to `court area`.
+  description_format: markdown
+  summary_short: Representative area of a basketball court.
+  description_medium: Representative area of a basketball court. Here the quantity refers to `court area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Basketball court
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '420.0'
+      source_url: https://en.wikipedia.org/wiki/Basketball_court
+  source: https://en.wikipedia.org/wiki/Basketball_court
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-basketball-court
+    url: https://en.wikipedia.org/wiki/Basketball_court
+    title: Basketball court
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: court area
 - id: obs:area:scenario-football-field
   name: American football field
   value: 5351.0
@@ -661,6 +926,92 @@ items:
   value_type: measured
   qualifiers:
     measurement: field area including end zones
+- id: obs:area:scenario-soccer-pitch
+  name: Soccer pitch
+  value: 7140.0
+  description: Representative area of a soccer pitch. Here the quantity refers to `pitch area`.
+  description_format: markdown
+  summary_short: Representative area of a soccer pitch.
+  description_medium: Representative area of a soccer pitch. Here the quantity refers to `pitch area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Soccer pitch
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '7140.0'
+      source_url: https://en.wikipedia.org/wiki/Football_pitch
+  source: https://en.wikipedia.org/wiki/Football_pitch
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-football-pitch
+    url: https://en.wikipedia.org/wiki/Football_pitch
+    title: Football pitch
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: pitch area
+- id: obs:area:entity-central-park
+  name: Central Park
+  value: 3410000.0
+  description: Land area of Central Park in New York City. Here the quantity refers to `land area`.
+  description_format: markdown
+  summary_short: Land area of Central Park in New York City.
+  description_medium: Land area of Central Park in New York City. Here the quantity refers to `land area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Central Park
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '3410000.0'
+      source_url: https://en.wikipedia.org/wiki/Central_Park
+  source: https://en.wikipedia.org/wiki/Central_Park
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-central-park
+    url: https://en.wikipedia.org/wiki/Central_Park
+    title: Central Park
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
 - id: obs:area:entity-manhattan
   name: Manhattan
   value: 59100000.0
@@ -704,6 +1055,49 @@ items:
   value_type: measured
   qualifiers:
     measurement: land area
+- id: obs:area:entity-paris
+  name: Paris
+  value: 105400000.0
+  description: Land area of the city of Paris. Here the quantity refers to `commune land area`.
+  description_format: markdown
+  summary_short: Land area of the city of Paris.
+  description_medium: Land area of the city of Paris. Here the quantity refers to `commune land area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Paris
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '105400000.0'
+      source_url: https://en.wikipedia.org/wiki/Paris
+  source: https://en.wikipedia.org/wiki/Paris
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paris
+    url: https://en.wikipedia.org/wiki/Paris
+    title: Paris
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: commune land area
 - id: obs:area:entity-lake-tahoe
   name: Lake Tahoe surface
   value: 496000000.0
@@ -747,6 +1141,49 @@ items:
   value_type: measured
   qualifiers:
     measurement: surface area
+- id: obs:area:entity-new-york-city
+  name: New York City
+  value: 784000000.0
+  description: Land area of New York City. Here the quantity refers to `land area`.
+  description_format: markdown
+  summary_short: Land area of New York City.
+  description_medium: Land area of New York City. Here the quantity refers to `land area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: New York City
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '784000000.0'
+      source_url: https://en.wikipedia.org/wiki/New_York_City
+  source: https://en.wikipedia.org/wiki/New_York_City
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-new-york-city
+    url: https://en.wikipedia.org/wiki/New_York_City
+    title: New York City
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
 - id: obs:area:entity-rhode-island
   name: Rhode Island
   value: 4000000000.0
@@ -833,6 +1270,92 @@ items:
   value_type: measured
   qualifiers:
     measurement: surface area
+- id: obs:area:entity-texas
+  name: Texas
+  value: 696200000000.0
+  description: Land area of Texas. Here the quantity refers to `land area`.
+  description_format: markdown
+  summary_short: Land area of Texas.
+  description_medium: Land area of Texas. Here the quantity refers to `land area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Texas
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '696200000000.0'
+      source_url: https://en.wikipedia.org/wiki/Texas
+  source: https://en.wikipedia.org/wiki/Texas
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-texas
+    url: https://en.wikipedia.org/wiki/Texas
+    title: Texas
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
+- id: obs:area:entity-greenland
+  name: Greenland
+  value: 2166000000000.0
+  description: Land area of Greenland. Here the quantity refers to `land area`.
+  description_format: markdown
+  summary_short: Land area of Greenland.
+  description_medium: Land area of Greenland. Here the quantity refers to `land area`.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Greenland
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      method: direct
+      original_value_text: '2166000000000.0'
+      source_url: https://en.wikipedia.org/wiki/Greenland
+  source: https://en.wikipedia.org/wiki/Greenland
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-greenland
+    url: https://en.wikipedia.org/wiki/Greenland
+    title: Greenland
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: land area
 - id: obs:area:entity-australia
   name: Australia
   value: 7690000000000.0

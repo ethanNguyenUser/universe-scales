@@ -2,20 +2,20 @@
   "base_unit": "square_meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 28,
-    "candidate_shortfall_to_preferred_target": 22,
-    "empty_bin_count": 8,
+    "candidate_count": 40,
+    "candidate_shortfall_to_preferred_target": 10,
+    "empty_bin_count": 7,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 28,
-    "selected_primary_count": 16,
-    "selected_secondary_count": 12,
+    "selected_count": 40,
+    "selected_primary_count": 17,
+    "selected_secondary_count": 23,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 28
+      "secondary_reference": 40
     },
-    "target_selected_count": 28
+    "target_selected_count": 40
   },
   "description_format": "markdown",
   "dimension": "area",
@@ -76,6 +76,61 @@
       ],
       "summary_short": "Characteristic geometric cross-section implied by the proton charge radius.",
       "value": 2.2e-30,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Characteristic geometric cross-section implied by the Bohr radius. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Characteristic geometric cross-section implied by the Bohr radius. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.",
+      "facts": {
+        "canonical_name": "Hydrogen atom cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "8.8e-21",
+          "source_url": "https://en.wikipedia.org/wiki/Hydrogen_atom"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-hydrogen-atom",
+      "name": "Hydrogen atom cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hydrogen_atom",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hydrogen-atom",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hydrogen atom",
+          "url": "https://en.wikipedia.org/wiki/Hydrogen_atom"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic geometric cross-section implied by the Bohr radius.",
+      "value": 8.8e-21,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -192,6 +247,61 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Approximate cross-sectional area of a spherical coronavirus particle. Derived using `pi*r^2`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate cross-sectional area of a spherical coronavirus particle. Derived using `pi*r^2`.",
+      "facts": {
+        "canonical_name": "SARS-CoV-2 virion cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "7.9e-15",
+          "source_url": "https://en.wikipedia.org/wiki/SARS-CoV-2"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-sars-cov-2",
+      "name": "SARS-CoV-2 virion cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/SARS-CoV-2",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sars-cov-2",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "SARS-CoV-2",
+          "url": "https://en.wikipedia.org/wiki/SARS-CoV-2"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Approximate cross-sectional area of a spherical coronavirus particle.",
+      "value": 7.9e-15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Approximate surface area of a spherical influenza virion. Derived using `4*pi*r^2`.",
       "description_format": "markdown",
       "description_long": null,
@@ -295,6 +405,61 @@
       "summary_short": "Characteristic membrane surface area of a red blood cell.",
       "value": 1.4e-10,
       "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cross-sectional area of a representative coarse salt grain treated as a sphere. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cross-sectional area of a representative coarse salt grain treated as a sphere. Derived using `pi*r^2`. Here the quantity refers to `cross-sectional area`.",
+      "facts": {
+        "canonical_name": "Grain of salt cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "7.9e-09",
+          "source_url": "https://en.wikipedia.org/wiki/Salt"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-grain-of-salt-cross-section",
+      "name": "Grain of salt cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Salt",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-salt",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Salt",
+          "url": "https://en.wikipedia.org/wiki/Salt"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Cross-sectional area of a representative coarse salt grain treated as a sphere.",
+      "value": 7.9e-09,
+      "value_type": "derived",
       "wikidata_qid": null
     },
     {
@@ -514,6 +679,112 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Area of one A5 sheet of paper. Here the quantity refers to `sheet area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Area of one A5 sheet of paper. Here the quantity refers to `sheet area`.",
+      "facts": {
+        "canonical_name": "A5 sheet area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0155",
+          "source_url": "https://en.wikipedia.org/wiki/Paper_size"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-a5-paper",
+      "name": "A5 sheet area",
+      "qualifiers": {
+        "measurement": "sheet area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Paper_size",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paper-size",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paper size",
+          "url": "https://en.wikipedia.org/wiki/Paper_size"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Area of one A5 sheet of paper.",
+      "value": 0.0155,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative active display area of a modern laptop.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative active display area of a modern laptop.",
+      "facts": {
+        "canonical_name": "Laptop screen area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.025",
+          "source_url": "https://en.wikipedia.org/wiki/Laptop"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-laptop-screen",
+      "name": "Laptop screen area",
+      "qualifiers": {
+        "measurement": "display area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Laptop",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-laptop",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Laptop",
+          "url": "https://en.wikipedia.org/wiki/Laptop"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative active display area of a modern laptop.",
+      "value": 0.025,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Area of one A4 sheet of paper. Here the quantity refers to `sheet area`.",
       "description_format": "markdown",
       "description_long": null,
@@ -726,6 +997,59 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Representative area of a basketball court. Here the quantity refers to `court area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative area of a basketball court. Here the quantity refers to `court area`.",
+      "facts": {
+        "canonical_name": "Basketball court",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "420.0",
+          "source_url": "https://en.wikipedia.org/wiki/Basketball_court"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-basketball-court",
+      "name": "Basketball court",
+      "qualifiers": {
+        "measurement": "court area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Basketball_court",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-basketball-court",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Basketball court",
+          "url": "https://en.wikipedia.org/wiki/Basketball_court"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative area of a basketball court.",
+      "value": 420.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Total area of a 120 by 53 1/3 yard American football field. Here the quantity refers to `field area including end zones`.",
       "description_format": "markdown",
       "description_long": null,
@@ -773,6 +1097,112 @@
       ],
       "summary_short": "Total area of a 120 by 53 1/3 yard American football field.",
       "value": 5351.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative area of a soccer pitch. Here the quantity refers to `pitch area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative area of a soccer pitch. Here the quantity refers to `pitch area`.",
+      "facts": {
+        "canonical_name": "Soccer pitch",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7140.0",
+          "source_url": "https://en.wikipedia.org/wiki/Football_pitch"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-soccer-pitch",
+      "name": "Soccer pitch",
+      "qualifiers": {
+        "measurement": "pitch area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Football_pitch",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-football-pitch",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Football pitch",
+          "url": "https://en.wikipedia.org/wiki/Football_pitch"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative area of a soccer pitch.",
+      "value": 7140.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Land area of Central Park in New York City. Here the quantity refers to `land area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Land area of Central Park in New York City. Here the quantity refers to `land area`.",
+      "facts": {
+        "canonical_name": "Central Park",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3410000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Central_Park"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-central-park",
+      "name": "Central Park",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Central_Park",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-central-park",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Central Park",
+          "url": "https://en.wikipedia.org/wiki/Central_Park"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Central Park in New York City.",
+      "value": 3410000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -832,6 +1262,59 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Land area of the city of Paris. Here the quantity refers to `commune land area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Land area of the city of Paris. Here the quantity refers to `commune land area`.",
+      "facts": {
+        "canonical_name": "Paris",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "105400000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Paris"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-paris",
+      "name": "Paris",
+      "qualifiers": {
+        "measurement": "commune land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Paris",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paris",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paris",
+          "url": "https://en.wikipedia.org/wiki/Paris"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of the city of Paris.",
+      "value": 105400000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Surface area of Lake Tahoe. Here the quantity refers to `surface area`.",
       "description_format": "markdown",
       "description_long": null,
@@ -879,6 +1362,59 @@
       ],
       "summary_short": "Surface area of Lake Tahoe.",
       "value": 496000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Land area of New York City. Here the quantity refers to `land area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Land area of New York City. Here the quantity refers to `land area`.",
+      "facts": {
+        "canonical_name": "New York City",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "784000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/New_York_City"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-new-york-city",
+      "name": "New York City",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/New_York_City",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-new-york-city",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "New York City",
+          "url": "https://en.wikipedia.org/wiki/New_York_City"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of New York City.",
+      "value": 784000000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -985,6 +1521,112 @@
       ],
       "summary_short": "Surface area of the Caspian Sea.",
       "value": 371000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Land area of Texas. Here the quantity refers to `land area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Land area of Texas. Here the quantity refers to `land area`.",
+      "facts": {
+        "canonical_name": "Texas",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "696200000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Texas"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-texas",
+      "name": "Texas",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Texas",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-texas",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Texas",
+          "url": "https://en.wikipedia.org/wiki/Texas"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Texas.",
+      "value": 696200000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Land area of Greenland. Here the quantity refers to `land area`.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Land area of Greenland. Here the quantity refers to `land area`.",
+      "facts": {
+        "canonical_name": "Greenland",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2166000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Greenland"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-greenland",
+      "name": "Greenland",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Greenland",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-greenland",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Greenland",
+          "url": "https://en.wikipedia.org/wiki/Greenland"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Greenland.",
+      "value": 2166000000000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -1548,6 +2190,7 @@
     }
   ],
   "required_min_items": 24,
+  "scale_mode": "log",
   "selection_bin_count": 24,
   "show_limitations": true,
   "units": [

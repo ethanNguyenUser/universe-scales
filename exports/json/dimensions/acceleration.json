@@ -2,20 +2,20 @@
   "base_unit": "meters_per_second_squared",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 30,
-    "candidate_shortfall_to_preferred_target": 20,
+    "candidate_count": 37,
+    "candidate_shortfall_to_preferred_target": 13,
     "empty_bin_count": 13,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 30,
+    "selected_count": 37,
     "selected_primary_count": 11,
-    "selected_secondary_count": 19,
+    "selected_secondary_count": 26,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 30
+      "secondary_reference": 37
     },
-    "target_selected_count": 30
+    "target_selected_count": 37
   },
   "description_format": "markdown",
   "dimension": "acceleration",
@@ -435,6 +435,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "Saturn's moon **Enceladus** has surface gravity of only about **0.11 m/s^2**, a little over one percent of Earth's. That weak pull is still enough to shape icy terrain and let the moon hold onto a loose regolith, but it also helps its famous water-ice plumes escape hundreds of kilometers into space. For a human visitor, ordinary jumps would become long floating arcs. The number is a representative surface value for this small active moon.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Saturn's moon **Enceladus** has surface gravity of only about **0.11 m/s^2**, a little over one percent of Earth's. That weak pull is still enough to shape icy terrain and let the moon hold onto a loose regolith, but it also helps its famous water-ice plumes escape hundreds of kilometers into space. For a human visitor, ordinary jumps would become long floating arcs. The number is a representative surface value for this small active moon.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Enceladus Surface Gravity",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.113",
+          "source_url": "https://en.wikipedia.org/wiki/Enceladus"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-enceladus-surface-gravity",
+      "name": "Enceladus Surface Gravity",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enceladus",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enceladus",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enceladus",
+          "url": "https://en.wikipedia.org/wiki/Enceladus"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "Saturn's moon **Enceladus** has surface gravity of only about **0.11 m/s^2**, a little over one percent of Earth's.",
+      "value": 0.113,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "On dwarf planet **Ceres** (radius ~473 km), surface gravity is only **0.27 m/s^2** (about 2.7% of Earth's). A person of 100 kg mass would weigh just ~2.7 kg-force on Ceres. This acceleration (sometimes expressed as ~27 cm/s^2 or 27 Gal) is enough to hold a loose surface of dust and ice, but walking would feel like bounding in slow motion. Ceres' low gravity arises from its small mass (\u22489.4x10^20 kg) and size. Spacecraft in close orbit must account for Ceres' weak pull, which is hundreds of times weaker than Earth's gravity but still significant for orbiting probes.",
       "description_format": "markdown",
       "description_long": null,
@@ -480,6 +531,57 @@
       ],
       "summary_short": "On dwarf planet **Ceres** (radius ~473 km), surface gravity is only **0.27 m/s^2** (about 2.7% of Earth's).",
       "value": 0.27,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Jupiter's moon **Europa** pulls downward at roughly **1.3 m/s^2**, close to lunar gravity but slightly lower. That modest acceleration helps shape the cracked ice shell and would make walking there feel springy and slow. It also controls the height of ejecta plumes and the behavior of any future landers. The value quoted is Europa's mean surface gravity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Jupiter's moon **Europa** pulls downward at roughly **1.3 m/s^2**, close to lunar gravity but slightly lower. That modest acceleration helps shape the cracked ice shell and would make walking there feel springy and slow. It also controls the height of ejecta plumes and the behavior of any future landers. The value quoted is Europa's mean surface gravity.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Europa Surface Gravity",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.315",
+          "source_url": "https://en.wikipedia.org/wiki/Europa_(moon)"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-europa-surface-gravity",
+      "name": "Europa Surface Gravity",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Europa_(moon)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-europa-moon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Europa (moon)",
+          "url": "https://en.wikipedia.org/wiki/Europa_(moon)"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "Jupiter's moon **Europa** pulls downward at roughly **1.3 m/s^2**, close to lunar gravity but slightly lower.",
+      "value": 1.315,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -588,6 +690,108 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "An elite sprinter driving out of the blocks can accelerate at around **4 to 5 m/s^2** during the opening steps of a 100 m race. That is enough to noticeably tilt the body forward and keep the athlete in a low, forceful posture before transitioning upright. The value only lasts a second or two because air drag and finite muscle power quickly reduce the rate. It is a representative opening acceleration for world-class sprinting.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An elite sprinter driving out of the blocks can accelerate at around **4 to 5 m/s^2** during the opening steps of a 100 m race. That is enough to noticeably tilt the body forward and keep the athlete in a low, forceful posture before transitioning upright. The value only lasts a second or two because air drag and finite muscle power quickly reduce the rate. It is a representative opening acceleration for world-class sprinting.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Olympic Sprinter from Starting Blocks",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4.5",
+          "source_url": "https://en.wikipedia.org/wiki/Sprinting"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-olympic-sprinter-from-starting-blocks",
+      "name": "Olympic Sprinter from Starting Blocks",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sprinting",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sprinting",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sprinting",
+          "url": "https://en.wikipedia.org/wiki/Sprinting"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "An elite sprinter driving out of the blocks can accelerate at around **4 to 5 m/s^2** during the opening steps of a 100 m race.",
+      "value": 4.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Despite its hellish atmosphere, **Venus** has surface gravity of about **8.87 m/s^2**, surprisingly close to Earth's **9.81 m/s^2**. A person standing on Venus would feel only slightly lighter than on Earth, even though the heat and pressure would dominate every other aspect of the experience. This near-match is why Venus is sometimes called Earth's twin in size, if not in habitability. The number is the planet's mean surface gravity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Despite its hellish atmosphere, **Venus** has surface gravity of about **8.87 m/s^2**, surprisingly close to Earth's **9.81 m/s^2**. A person standing on Venus would feel only slightly lighter than on Earth, even though the heat and pressure would dominate every other aspect of the experience. This near-match is why Venus is sometimes called Earth's twin in size, if not in habitability. The number is the planet's mean surface gravity.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Venus Surface Gravity",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8.87",
+          "source_url": "https://en.wikipedia.org/wiki/Venus"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-venus-surface-gravity",
+      "name": "Venus Surface Gravity",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Venus",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-venus",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Venus",
+          "url": "https://en.wikipedia.org/wiki/Venus"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "Despite its hellish atmosphere, **Venus** has surface gravity of about **8.87 m/s^2**, surprisingly close to Earth's **9.81 m/s^2**.",
+      "value": 8.87,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "**Earth's** standard surface gravity is **9.81 m/s^2** (by definition). This acceleration - often called **1 g** - causes unsupported objects to gain about 9.81 m/s of downward speed every second. It sets the scale for everyday forces: for instance, your weight equals your mass times 9.81 m/s^2. Small variations occur with location: gravity is ~9.78 m/s^2 at the equator and ~9.83 m/s^2 at the poles (due to Earth's rotation and shape). Earth's gravity not only keeps us grounded, but also binds the atmosphere and determines escape velocity (~11.2 km/s). It's the **benchmark** against which stronger or weaker accelerations are often compared.",
       "description_format": "markdown",
       "description_long": null,
@@ -690,6 +894,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "During the final landing burn, a **Falcon 9** booster briefly experiences decelerations on the order of a few g as its engines cancel out a descent that began from space. Guidance software modulates thrust continuously so the rocket arrives at near-zero speed right at touchdown. This is one of the stranger modern acceleration regimes: a skyscraper-sized object balancing itself on fire. The value is a representative magnitude during the terminal landing phase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "During the final landing burn, a **Falcon 9** booster briefly experiences decelerations on the order of a few g as its engines cancel out a descent that began from space. Guidance software modulates thrust continuously so the rocket arrives at near-zero speed right at touchdown. This is one of the stranger modern acceleration regimes: a skyscraper-sized object balancing itself on fire. The value is a representative magnitude during the terminal landing phase.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Falcon 9 Landing Burn Deceleration",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "25",
+          "source_url": "https://en.wikipedia.org/wiki/Falcon_9"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-falcon-9-landing-burn-deceleration",
+      "name": "Falcon 9 Landing Burn Deceleration",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Falcon_9",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-falcon-9",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Falcon 9",
+          "url": "https://en.wikipedia.org/wiki/Falcon_9"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "During the final landing burn, a **Falcon 9** booster briefly experiences decelerations on the order of a few g as its engines cancel out a descent that began from space.",
+      "value": 25.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "The giant planet **Jupiter** has a surface (cloud-top) gravity of about **25.3 m/s^2**, roughly 2.58 g. This means a 100 kg object would feel a weight of ~2.5 tons on Jupiter. Such strong gravity significantly affects spacecraft: a probe entering Jupiter's atmosphere accelerates rapidly and experiences intense deceleration on parachutes. Jupiter's high gravity (despite being a gas giant with no solid surface) comes from its huge mass (~318 Earth masses) concentrated within a radius just 11 times Earth's. It contributes to holding dozens of moons and bending the paths of comets and asteroids that venture near. If you could stand at Jupiter's \"surface,\" you'd find moving extremely difficult under 2.5 g, and your bones and muscles would be heavily strained.",
       "description_format": "markdown",
       "description_long": null,
@@ -786,6 +1041,57 @@
       ],
       "summary_short": "The **Saturn V** Moon rocket, as it burned fuel, reached a peak acceleration of about **4 g** (\u224839 m/s^2) during first-stage ascent.",
       "value": 39.8,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Modern **Formula 1** cars can pull lateral accelerations of several g in fast corners, corresponding to roughly **45 m/s^2**. Drivers train neck and core muscles specifically to withstand this because the load must be sustained lap after lap. Aerodynamic downforce is what makes such extreme cornering possible at all. The number here is a representative high-speed turn rather than the absolute peak in a transient.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Modern **Formula 1** cars can pull lateral accelerations of several g in fast corners, corresponding to roughly **45 m/s^2**. Drivers train neck and core muscles specifically to withstand this because the load must be sustained lap after lap. Aerodynamic downforce is what makes such extreme cornering possible at all. The number here is a representative high-speed turn rather than the absolute peak in a transient.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Formula 1 Cornering",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "45",
+          "source_url": "https://en.wikipedia.org/wiki/Formula_One_car"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-formula-1-cornering",
+      "name": "Formula 1 Cornering",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Formula_One_car",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-formula-one-car",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Formula One car",
+          "url": "https://en.wikipedia.org/wiki/Formula_One_car"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "Modern **Formula 1** cars can pull lateral accelerations of several g in fast corners, corresponding to roughly **45 m/s^2**.",
+      "value": 45.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1200,6 +1506,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "A rifle bullet reaches muzzle speed over only a fraction of a meter inside the barrel, so its average acceleration climbs to hundreds of thousands of meters per second squared. That is why even short barrels can still launch projectiles at extraordinary speed. Internal ballistics spreads the force over milliseconds, but the resulting acceleration is still immense by everyday standards. The number is a representative barrel-average acceleration for a full-power rifle round.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A rifle bullet reaches muzzle speed over only a fraction of a meter inside the barrel, so its average acceleration climbs to hundreds of thousands of meters per second squared. That is why even short barrels can still launch projectiles at extraordinary speed. Internal ballistics spreads the force over milliseconds, but the resulting acceleration is still immense by everyday standards. The number is a representative barrel-average acceleration for a full-power rifle round.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
+        "legacy_item_name": "Rifle Bullet in Barrel",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "300000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Internal_ballistics"
+        }
+      },
+      "hook": null,
+      "id": "obs:acceleration:scenario-acceleration-rifle-bullet-in-barrel",
+      "name": "Rifle Bullet in Barrel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Internal_ballistics",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-internal-ballistics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Internal ballistics",
+          "url": "https://en.wikipedia.org/wiki/Internal_ballistics"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-acceleration-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/acceleration.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/acceleration.yaml"
+        }
+      ],
+      "summary_short": "A rifle bullet reaches muzzle speed over only a fraction of a meter inside the barrel, so its average acceleration climbs to hundreds of thousands of meters per second squared.",
+      "value": 300000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "A typical **white dwarf** star has a surface gravity around **10^6 m/s^2** (about 100,000 g). This is *hundred thousand times* Earth's gravity - an object that weighs 1 kg on Earth would effectively weigh 100,000 kg on a white dwarf. In these stellar remnants (mass ~0.6-1.4 Sun masses compressed into an Earth-sized sphere), gravity is so strong that hydrogen in the atmosphere sinks in seconds, leaving only the heaviest elements at the surface. A person standing on a white dwarf (ignoring the fatal conditions) would be crushed flat instantly as **1e6 m/s^2** pulls them down. White dwarf gravity also significantly redshifts light escaping from the star's surface. This immense acceleration is a frontier for testing physics - for instance, atomic spectra on white dwarfs are measurably shifted by the gravitational field.",
       "description_format": "markdown",
       "description_long": null,
@@ -1559,6 +1916,7 @@
   "preferred_target_items": 50,
   "related_resources": [],
   "required_min_items": 24,
+  "scale_mode": "log",
   "selection_bin_count": 24,
   "show_limitations": true,
   "units": [

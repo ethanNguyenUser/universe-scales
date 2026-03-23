@@ -86,6 +86,62 @@ items:
   name: Paper by Window
   source: https://en.wikipedia.org/wiki/Reading
   value: 200
+- description: Under a clear dark sky with no Moon, the brightest parts of the Milky Way lift the apparent sky glow above the deepest rural darkness by about an order of magnitude. Astrophotographers chase places with so little artificial light that this faint band becomes obvious to the eye. The number is still far below comfortable reading conditions. It represents a rich starlit sky rather than true empty darkness.
+  name: Starlit Sky
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  value: 0.001
+- description: Strong auroral curtains can make the sky visibly luminous in green and red even while the ground remains mostly dark. The display feels bright because your eyes are adapted to night, not because the absolute luminance rivals daylight. Cameras with long exposures exaggerate the effect. The value is a plausible surface-brightness scale for a vivid aurora.
+  name: Aurora Borealis
+  source: https://en.wikipedia.org/wiki/Aurora
+  value: 0.05
+- description: An illuminated emergency exit sign is intentionally bright enough to stand out in a dark hallway without dazzling nearby occupants. Safety designers choose this middle ground so the sign remains legible during power transitions and smoke. The value fits the glowing face rather than the ambient room. It is a common commercial-building scale.
+  name: Emergency Exit Sign
+  source: https://en.wikipedia.org/wiki/Exit_sign
+  value: 10
+- description: Electronic paper displays are meant to mimic comfortable reflected reading surfaces rather than glowing screens, so their luminance stays modest. That is why they feel gentle indoors and remain usable for long stretches. They depend on ambient light rather than brute-force emission. The number is for a front-lit e-reader in a dim room.
+  name: E-Ink Reader
+  source: https://en.wikipedia.org/wiki/Electronic_paper
+  value: 30
+- description: A laptop display used at a desk commonly runs near a few hundred nits, enough for readability indoors without excessive eye fatigue. Manufacturers publish peak values, but most people settle lower during normal office use. This luminance range became a de facto baseline for portable computing. The value is a representative comfortable working setting.
+  name: Laptop Screen
+  source: https://en.wikipedia.org/wiki/Liquid-crystal_display
+  value: 250
+- description: Modern HDR televisions can reach well above a thousand nits in small highlights so explosions, sunlight glints, and specular reflections feel more lifelike. The whole screen usually cannot sustain this level because heat and power constraints intervene. Still, it marks a step change from older displays. The value is a common premium-TV highlight target.
+  name: HDR Television Highlight
+  source: https://en.wikipedia.org/wiki/High-dynamic-range_television
+  value: 1500
+- description: White paper in direct sunshine can look surprisingly bright because a matte surface reflects a substantial part of the huge outdoor illuminance. That is why reading outdoors often requires shade even though paper itself emits no light. Printers, photographers, and display engineers use such comparisons all the time. The value is for clean white paper under strong sun.
+  name: White Paper in Sun
+  source: https://en.wikipedia.org/wiki/Luminance
+  value: 5000
+- description: The clear blue sky near the zenith is itself a bright luminous surface created by sunlight scattered through the atmosphere. Looking up on a dry day shows how much visual information the eye can tolerate without perceiving the sky as a light source in the same way as the Sun. Polarization studies and skylight models both lean on this scale. The number is a representative midday value.
+  name: Blue Sky Zenith
+  source: https://en.wikipedia.org/wiki/Sky
+  value: 7000
+- description: The lens of a bright runway light or signal head can reach very high luminance so that it remains conspicuous against daylight backgrounds. Airfields and roads rely on that intensity margin for safety when weather, glare, and distance all fight visibility. What matters to a pilot is not only total luminous flux but the concentrated emitting surface. The value is a practical signal-light scale.
+  name: Runway Signal Lens
+  source: https://en.wikipedia.org/wiki/Approach_lighting_system
+  value: 20000
+- description: Theater spotlights appear dazzling because a lot of luminous power is concentrated into a small aperture and narrow beam. Stage designers exploit that high luminance to isolate performers even in large dark auditoria. Much of the experience of 'being in the spotlight' comes from this contrast. The number is a source-surface scale for a bright stage instrument.
+  name: Theater Spotlight
+  source: https://en.wikipedia.org/wiki/Stage_lighting_instrument
+  value: 2e6
+- description: Magnesium burns with a brilliant white light that photographers once used for flash illumination before electronic strobes took over. The luminous surface is extremely intense even for a very small mass of metal. Eye protection matters because the output includes strong ultraviolet as well. The value is a representative burning-flare luminance scale.
+  name: Magnesium Flare
+  source: https://en.wikipedia.org/wiki/Flash_powder
+  value: 5e7
+- description: A lightning channel is a transient plasma column whose apparent luminance can rival or exceed the brightest man-made light sources. The pulse is brief, but the eye still experiences it as a violent flash because the number is so high. Cameras saturate easily on nearby strikes for exactly this reason. The value is an order-of-magnitude luminance scale for a bright return stroke.
+  name: Lightning Channel
+  source: https://en.wikipedia.org/wiki/Lightning
+  value: 1e8
+- description: LED traffic signals are designed so the glowing lens remains easy to recognize in full daylight, fog, and peripheral vision. The relevant quantity for the eye is not just total lumens but the luminance of the emitting face. City intersections therefore live noticeably above ordinary indoor display levels. The value is a representative sun-readable signal-face scale.
+  name: Traffic Signal Lens
+  source: https://en.wikipedia.org/wiki/Traffic_light
+  value: 6000
+- description: Neon signs and similar gas-discharge tubes produce a saturated glow that looks vivid at night while remaining much dimmer than daylight sources. Their visual punch comes from color contrast and dark surroundings as much as from raw luminance. Urban streetscapes use this effect heavily in entertainment districts. The value is a representative bright-sign scale.
+  name: Neon Sign
+  source: https://en.wikipedia.org/wiki/Neon_sign
+  value: 800
 units:
 - conversion_factor: 1
   description: Candela per square meter is the SI unit of luminance, linking photometric intensity to emitting area. It matches how displays and light boxes are specified. Using this base unit keeps comparisons between screens, walls, and skies consistent. All item values are recorded in this unit before conversion.

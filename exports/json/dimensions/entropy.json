@@ -1,0 +1,1892 @@
+{
+  "base_unit": "joules_per_kelvin",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 33,
+    "candidate_shortfall_to_preferred_target": 17,
+    "empty_bin_count": 17,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 33,
+    "selected_primary_count": 7,
+    "selected_secondary_count": 26,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 33
+    },
+    "target_selected_count": 33
+  },
+  "description_format": "markdown",
+  "dimension": "entropy",
+  "dimension_description": "This first-pass entropy scale focuses on entropy change, not total entropy and not raw microstate counts. That makes the dimension much more concrete: each item is a process like erasing a bit, melting ice, or vaporizing water. Temperature and process definitions matter a lot here, so qualifiers are especially important.",
+  "frontend_group": "fields",
+  "frontend_group_label": "Fields, Waves & Radiation",
+  "frontend_order": 220,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Landauer's principle gives a minimum entropy export per erased bit at room temperature. Source-side figure: `9.57e-24 J/K` for Representative entropy change for one bit erased near room temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Landauer's principle gives a minimum entropy export per erased bit at room temperature. Source-side figure: `9.57e-24 J/K` for Representative entropy change for one bit erased near room temperature.",
+      "facts": {
+        "canonical_name": "One bit erased",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9.57e-24",
+          "source_basis": "Representative entropy change for one bit erased near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Landauer%27s_principle",
+          "source_value_text": "9.57e-24"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-one-bit-erased-entropy",
+      "name": "One bit erased",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Landauer%27s_principle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-landauer-27s-principle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Landauer's principle",
+          "url": "https://en.wikipedia.org/wiki/Landauer%27s_principle"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Landauer's principle gives a minimum entropy export per erased bit at room temperature.",
+      "value": 9.57e-24,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2. Source-side figure: `k_B ln 2` for Entropy change for one molecule doubling volume.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2. Source-side figure: `k_B ln 2` for Entropy change for one molecule doubling volume.",
+      "facts": {
+        "canonical_name": "One ideal-gas molecule doubling volume",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "Delta S = k_B ln 2",
+          "method": "derived",
+          "original_value_text": "9.57e-24",
+          "source_basis": "Entropy change for one molecule doubling volume.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)",
+          "source_value_text": "k_B ln 2"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-single-molecule-doubling-entropy",
+      "name": "One ideal-gas molecule doubling volume",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-statistical-thermodynamics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy (statistical thermodynamics)",
+          "url": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2.",
+      "value": 9.57e-24,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single protein-folding event involves a tiny but real entropy change. Source-side figure: `1e-21 J/K` for Order-of-magnitude entropy change for one protein folding event.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single protein-folding event involves a tiny but real entropy change. Source-side figure: `1e-21 J/K` for Order-of-magnitude entropy change for one protein folding event.",
+      "facts": {
+        "canonical_name": "Protein folding of one molecule",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-21",
+          "source_basis": "Order-of-magnitude entropy change for one protein folding event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Protein_folding",
+          "source_value_text": "1e-21"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-single-protein-folding-entropy",
+      "name": "Protein folding of one molecule",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Protein_folding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-protein-folding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Protein folding",
+          "url": "https://en.wikipedia.org/wiki/Protein_folding"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A single protein-folding event involves a tiny but real entropy change.",
+      "value": 1e-21,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Freezing reverses the same magnitude of entropy change as melting. Source-side figure: `1.22 J/K` for Entropy change magnitude from latent heat of fusion.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Freezing reverses the same magnitude of entropy change as melting. Source-side figure: `1.22 J/K` for Entropy change magnitude from latent heat of fusion.",
+      "facts": {
+        "canonical_name": "Freeze 1 g of water",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.22",
+          "source_basis": "Entropy change magnitude from latent heat of fusion.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "1.22"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-freeze-1g-water-entropy",
+      "name": "Freeze 1 g of water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Freezing reverses the same magnitude of entropy change as melting.",
+      "value": 1.22,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Melting a gram of ice is a clean everyday entropy-change benchmark. Source-side figure: `1.22 J/K` for Entropy change from latent heat of fusion divided by temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Melting a gram of ice is a clean everyday entropy-change benchmark. Source-side figure: `1.22 J/K` for Entropy change from latent heat of fusion divided by temperature.",
+      "facts": {
+        "canonical_name": "Melt 1 g of ice at 0 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.22",
+          "source_basis": "Entropy change from latent heat of fusion divided by temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "1.22"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-melt-1g-ice-entropy",
+      "name": "Melt 1 g of ice at 0 C",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Melting a gram of ice is a clean everyday entropy-change benchmark.",
+      "value": 1.22,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A metal sample gives a much smaller entropy change than the same mass of water. Assumes `copper near room temperature`. Source-side figure: `1.3 J/K` for Entropy change from copper heat capacity and a 1 C temperature increase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A metal sample gives a much smaller entropy change than the same mass of water. Assumes `copper near room temperature`. Source-side figure: `1.3 J/K` for Entropy change from copper heat capacity and a 1 C temperature increase.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of copper by 1 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "1.3",
+          "source_basis": "Entropy change from copper heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Copper",
+          "source_value_text": "1.3 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-copper-1c",
+      "name": "Warm 1 kg of copper by 1 C",
+      "qualifiers": {
+        "assumption": "copper near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Copper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-copper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Copper",
+          "url": "https://en.wikipedia.org/wiki/Copper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A metal sample gives a much smaller entropy change than the same mass of water.",
+      "value": 1.3,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Iron is another small entropy-change solid benchmark. Assumes `iron near room temperature`. Source-side figure: `1.5 J/K` for Entropy change from iron heat capacity and a 1 C temperature increase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Iron is another small entropy-change solid benchmark. Assumes `iron near room temperature`. Source-side figure: `1.5 J/K` for Entropy change from iron heat capacity and a 1 C temperature increase.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of iron by 1 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "1.5",
+          "source_basis": "Entropy change from iron heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Iron",
+          "source_value_text": "1.5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-iron-1c",
+      "name": "Warm 1 kg of iron by 1 C",
+      "qualifiers": {
+        "assumption": "iron near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Iron",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-iron",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Iron",
+          "url": "https://en.wikipedia.org/wiki/Iron"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Iron is another small entropy-change solid benchmark.",
+      "value": 1.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Air has a much smaller entropy change than water for the same mass and temperature change. Assumes `air near room temperature`. Source-side figure: `3.4 J/K` for Entropy change from air heat capacity and a 1 C temperature increase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Air has a much smaller entropy change than water for the same mass and temperature change. Assumes `air near room temperature`. Source-side figure: `3.4 J/K` for Entropy change from air heat capacity and a 1 C temperature increase.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of air by 1 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "3.4",
+          "source_basis": "Entropy change from air heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "3.4 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-air-1c",
+      "name": "Warm 1 kg of air by 1 C",
+      "qualifiers": {
+        "assumption": "air near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Air has a much smaller entropy change than water for the same mass and temperature change.",
+      "value": 3.4,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Heating air by one degree provides a smaller entropy change than water. Assumes `around room temperature`. Source-side figure: `~3.5 J/K` for Computed from air heat capacity near room temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Heating air by one degree provides a smaller entropy change than water. Assumes `around room temperature`. Source-side figure: `~3.5 J/K` for Computed from air heat capacity near room temperature.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of air by 1 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "m c ln(T2/T1)",
+          "method": "derived",
+          "original_value_text": "3.5",
+          "source_basis": "Computed from air heat capacity near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "~3.5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-of-air-by-1c",
+      "name": "Warm 1 kg of air by 1 C",
+      "qualifiers": {
+        "assumption": "around room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Heating air by one degree provides a smaller entropy change than water.",
+      "value": 3.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "For a mole of ideal gas, doubling volume changes entropy by R ln 2. Source-side figure: `R ln 2` for Entropy change for one mole of ideal gas doubling volume.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "For a mole of ideal gas, doubling volume changes entropy by R ln 2. Source-side figure: `R ln 2` for Entropy change for one mole of ideal gas doubling volume.",
+      "facts": {
+        "canonical_name": "One mole ideal gas doubling volume",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "Delta S = R ln 2",
+          "method": "derived",
+          "original_value_text": "5.76",
+          "source_basis": "Entropy change for one mole of ideal gas doubling volume.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+          "source_value_text": "R ln 2"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-one-mole-ideal-gas-doubling-entropy",
+      "name": "One mole ideal gas doubling volume",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-of-mixing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy of mixing",
+          "url": "https://en.wikipedia.org/wiki/Entropy_of_mixing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "For a mole of ideal gas, doubling volume changes entropy by R ln 2.",
+      "value": 5.76,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Boiling a gram of water changes entropy by several joules per kelvin. Source-side figure: `6.05 J/K` for Entropy change from latent heat of vaporization divided by temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Boiling a gram of water changes entropy by several joules per kelvin. Source-side figure: `6.05 J/K` for Entropy change from latent heat of vaporization divided by temperature.",
+      "facts": {
+        "canonical_name": "Boil 1 g of water at 100 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6.05",
+          "source_basis": "Entropy change from latent heat of vaporization divided by temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "6.05"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-boil-1g-water-entropy",
+      "name": "Boil 1 g of water at 100 C",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Boiling a gram of water changes entropy by several joules per kelvin.",
+      "value": 6.05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Condensing steam reverses the same entropy-change scale as boiling. Source-side figure: `6.05 J/K` for Entropy change magnitude from latent heat of vaporization.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Condensing steam reverses the same entropy-change scale as boiling. Source-side figure: `6.05 J/K` for Entropy change magnitude from latent heat of vaporization.",
+      "facts": {
+        "canonical_name": "Condense 1 g of steam",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6.05",
+          "source_basis": "Entropy change magnitude from latent heat of vaporization.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "6.05"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-condense-1g-steam-entropy",
+      "name": "Condense 1 g of steam",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Condensing steam reverses the same entropy-change scale as boiling.",
+      "value": 6.05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At macroscopic scale, molecular events become everyday thermodynamic quantities. Source-side figure: `10 J/K` for Order-of-magnitude entropy change for a mole of folding events.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At macroscopic scale, molecular events become everyday thermodynamic quantities. Source-side figure: `10 J/K` for Order-of-magnitude entropy change for a mole of folding events.",
+      "facts": {
+        "canonical_name": "Protein folding of one mole of protein",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10.0",
+          "source_basis": "Order-of-magnitude entropy change for a mole of folding events.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Protein_folding",
+          "source_value_text": "10"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-mole-protein-folding-entropy",
+      "name": "Protein folding of one mole of protein",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Protein_folding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-protein-folding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Protein folding",
+          "url": "https://en.wikipedia.org/wiki/Protein_folding"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "At macroscopic scale, molecular events become everyday thermodynamic quantities.",
+      "value": 10.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ideal-gas mixing provides a clean compositional entropy example. Assumes `ideal gas mixture`. Source-side figure: `~11.5 J/K` for Ideal mixing entropy for two equal one-mole components at equal pressure.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ideal-gas mixing provides a clean compositional entropy example. Assumes `ideal gas mixture`. Source-side figure: `~11.5 J/K` for Ideal mixing entropy for two equal one-mole components at equal pressure.",
+      "facts": {
+        "canonical_name": "Mix 1 mol of nitrogen with 1 mol of oxygen",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "-R sum(x ln x)",
+          "method": "derived",
+          "original_value_text": "11.5",
+          "source_basis": "Ideal mixing entropy for two equal one-mole components at equal pressure.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+          "source_value_text": "~11.5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-mix-1mol-nitrogen-with-1mol-oxygen",
+      "name": "Mix 1 mol of nitrogen with 1 mol of oxygen",
+      "qualifiers": {
+        "assumption": "ideal gas mixture"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-of-mixing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy of mixing",
+          "url": "https://en.wikipedia.org/wiki/Entropy_of_mixing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Ideal-gas mixing provides a clean compositional entropy example.",
+      "value": 11.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark. Assumes `binary equal mixture`. Source-side figure: `11.53 J/K` for Entropy of mixing for an equal binary mixture.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark. Assumes `binary equal mixture`. Source-side figure: `11.53 J/K` for Entropy of mixing for an equal binary mixture.",
+      "facts": {
+        "canonical_name": "Mix 1 mole of ideal gases equally",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S_mix = 2 R ln 2",
+          "method": "derived",
+          "original_value_text": "11.53",
+          "source_basis": "Entropy of mixing for an equal binary mixture.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+          "source_value_text": "11.53 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-mix-1-mole-ideal-gases",
+      "name": "Mix 1 mole of ideal gases equally",
+      "qualifiers": {
+        "assumption": "binary equal mixture"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-of-mixing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy of mixing",
+          "url": "https://en.wikipedia.org/wiki/Entropy_of_mixing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark.",
+      "value": 11.53,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Heating a kilogram of water by one degree is an easy everyday entropy benchmark. Assumes `around room temperature`. Source-side figure: `~13.5 J/K` for Computed from water heat capacity near room temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Heating a kilogram of water by one degree is an easy everyday entropy benchmark. Assumes `around room temperature`. Source-side figure: `~13.5 J/K` for Computed from water heat capacity near room temperature.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of water by 1 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "m c ln(T2/T1)",
+          "method": "derived",
+          "original_value_text": "13.5",
+          "source_basis": "Computed from water heat capacity near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "~13.5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-of-water-by-1c",
+      "name": "Warm 1 kg of water by 1 C",
+      "qualifiers": {
+        "assumption": "around room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Heating a kilogram of water by one degree is an easy everyday entropy benchmark.",
+      "value": 13.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Heating a kilogram of water by one degree is a useful everyday entropy reference. Assumes `water near room temperature`. Source-side figure: `13.9 J/K` for Entropy change from heat capacity and a 1 C temperature increase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Heating a kilogram of water by one degree is a useful everyday entropy reference. Assumes `water near room temperature`. Source-side figure: `13.9 J/K` for Entropy change from heat capacity and a 1 C temperature increase.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of water by 1 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "13.9",
+          "source_basis": "Entropy change from heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy",
+          "source_value_text": "13.9 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-water-1c",
+      "name": "Warm 1 kg of water by 1 C",
+      "qualifiers": {
+        "assumption": "water near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy",
+          "url": "https://en.wikipedia.org/wiki/Entropy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Heating a kilogram of water by one degree is a useful everyday entropy reference.",
+      "value": 13.9,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A kilogram of water heated by a kelvin produces a useful entropy benchmark. Source-side figure: `14.3 J/K` for Approximate entropy change of heating 1 kg water by 1 K near room temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A kilogram of water heated by a kelvin produces a useful entropy benchmark. Source-side figure: `14.3 J/K` for Approximate entropy change of heating 1 kg water by 1 K near room temperature.",
+      "facts": {
+        "canonical_name": "Heat 1 kg of water by 1 K",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "14.3",
+          "source_basis": "Approximate entropy change of heating 1 kg water by 1 K near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Heat_capacity",
+          "source_value_text": "14.3"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-heat-1kg-water-by-1k-entropy",
+      "name": "Heat 1 kg of water by 1 K",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A kilogram of water heated by a kelvin produces a useful entropy benchmark.",
+      "value": 14.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cooling a soda can by ten kelvin changes entropy on the order of tens of joules per kelvin. Source-side figure: `16 J/K` for Representative entropy change for cooling a can-sized drink by 10 K.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cooling a soda can by ten kelvin changes entropy on the order of tens of joules per kelvin. Source-side figure: `16 J/K` for Representative entropy change for cooling a can-sized drink by 10 K.",
+      "facts": {
+        "canonical_name": "Cool one can of soda by 10 K",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "16.0",
+          "source_basis": "Representative entropy change for cooling a can-sized drink by 10 K.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "16"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-cool-soda-can-entropy",
+      "name": "Cool one can of soda by 10 K",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Cooling a soda can by ten kelvin changes entropy on the order of tens of joules per kelvin.",
+      "value": 16.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Dissolving salt in water is an everyday entropy-increasing process. Assumes `dilute aqueous solution`. Source-side figure: `~20 J/K` for Representative order-of-magnitude entropy of solution.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Dissolving salt in water is an everyday entropy-increasing process. Assumes `dilute aqueous solution`. Source-side figure: `~20 J/K` for Representative order-of-magnitude entropy of solution.",
+      "facts": {
+        "canonical_name": "Dissolve 1 mol of sodium chloride",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "solution entropy estimate",
+          "method": "derived",
+          "original_value_text": "20",
+          "source_basis": "Representative order-of-magnitude entropy of solution.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+          "source_value_text": "~20 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-dissolve-1mol-of-sodium-chloride",
+      "name": "Dissolve 1 mol of sodium chloride",
+      "qualifiers": {
+        "assumption": "dilute aqueous solution"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sodium-chloride",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sodium chloride",
+          "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Dissolving salt in water is an everyday entropy-increasing process.",
+      "value": 20.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Dissolving salt in water is a strong everyday entropy example. Source-side figure: `~40 J/K` for Order-of-magnitude entropy change for salt dissolution in water.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Dissolving salt in water is a strong everyday entropy example. Source-side figure: `~40 J/K` for Order-of-magnitude entropy change for salt dissolution in water.",
+      "facts": {
+        "canonical_name": "Dissolve 1 mole of sodium chloride in water",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "Representative dissolution entropy change",
+          "method": "derived",
+          "original_value_text": "40",
+          "source_basis": "Order-of-magnitude entropy change for salt dissolution in water.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+          "source_value_text": "~40 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-dissolve-1-mole-sodium-chloride",
+      "name": "Dissolve 1 mole of sodium chloride in water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sodium-chloride",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sodium chloride",
+          "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Dissolving salt in water is a strong everyday entropy example.",
+      "value": 40.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A ten-degree change makes the entropy increase much more visible. Assumes `water near room temperature`. Source-side figure: `136 J/K` for Entropy change from heat capacity and a 10 C temperature increase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A ten-degree change makes the entropy increase much more visible. Assumes `water near room temperature`. Source-side figure: `136 J/K` for Entropy change from heat capacity and a 10 C temperature increase.",
+      "facts": {
+        "canonical_name": "Warm 1 kg of water by 10 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "136",
+          "source_basis": "Entropy change from heat capacity and a 10 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy",
+          "source_value_text": "136 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-1kg-water-10c",
+      "name": "Warm 1 kg of water by 10 C",
+      "qualifiers": {
+        "assumption": "water near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy",
+          "url": "https://en.wikipedia.org/wiki/Entropy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A ten-degree change makes the entropy increase much more visible.",
+      "value": 136.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Freezing water mirrors melting with the same magnitude. Source-side figure: `1.22 kJ/K` for Entropy change magnitude from latent heat of fusion at 0 C.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Freezing water mirrors melting with the same magnitude. Source-side figure: `1.22 kJ/K` for Entropy change magnitude from latent heat of fusion at 0 C.",
+      "facts": {
+        "canonical_name": "Freeze 1 kg of water at 0 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "1220",
+          "source_basis": "Entropy change magnitude from latent heat of fusion at 0 C.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "1.22 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-freeze-1kg-water-0c",
+      "name": "Freeze 1 kg of water at 0 C",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Freezing water mirrors melting with the same magnitude.",
+      "value": 1220.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Melting ice is a classic latent-heat entropy jump. Source-side figure: `1.22 kJ/K` for Entropy change from latent heat of fusion at 0 C.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Melting ice is a classic latent-heat entropy jump. Source-side figure: `1.22 kJ/K` for Entropy change from latent heat of fusion at 0 C.",
+      "facts": {
+        "canonical_name": "Melt 1 kg of ice at 0 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "1220",
+          "source_basis": "Entropy change from latent heat of fusion at 0 C.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "1.22 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-melt-1kg-ice-0c",
+      "name": "Melt 1 kg of ice at 0 C",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Melting ice is a classic latent-heat entropy jump.",
+      "value": 1220.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Melting ice at the phase boundary is a strong, familiar entropy jump. Assumes `at 0 C`. Source-side figure: `~1.22e3 J/K` for Latent heat of fusion divided by the melting temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Melting ice at the phase boundary is a strong, familiar entropy jump. Assumes `at 0 C`. Source-side figure: `~1.22e3 J/K` for Latent heat of fusion divided by the melting temperature.",
+      "facts": {
+        "canonical_name": "Melt 1 kg of ice at 0 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "latent heat / temperature",
+          "method": "derived",
+          "original_value_text": "1220",
+          "source_basis": "Latent heat of fusion divided by the melting temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "~1.22e3 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-melt-1kg-of-ice-at-0c",
+      "name": "Melt 1 kg of ice at 0 C",
+      "qualifiers": {
+        "assumption": "at 0 C"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Melting ice at the phase boundary is a strong, familiar entropy jump.",
+      "value": 1220.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Dry ice sublimation is a large entropy change at a familiar material scale. Source-side figure: `2.94 kJ/K` for Entropy change from latent heat of sublimation near the sublimation point.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Dry ice sublimation is a large entropy change at a familiar material scale. Source-side figure: `2.94 kJ/K` for Entropy change from latent heat of sublimation near the sublimation point.",
+      "facts": {
+        "canonical_name": "Sublime 1 kg of dry ice",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "2940",
+          "source_basis": "Entropy change from latent heat of sublimation near the sublimation point.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Dry_ice",
+          "source_value_text": "2.94 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-sublime-1kg-dry-ice",
+      "name": "Sublime 1 kg of dry ice",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Dry_ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dry-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dry ice",
+          "url": "https://en.wikipedia.org/wiki/Dry_ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Dry ice sublimation is a large entropy change at a familiar material scale.",
+      "value": 2940.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Evaporating a liter of water exports a surprisingly large amount of entropy. Source-side figure: `6e3 J/K` for Approximate entropy change for vaporizing one liter of water.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Evaporating a liter of water exports a surprisingly large amount of entropy. Source-side figure: `6e3 J/K` for Approximate entropy change for vaporizing one liter of water.",
+      "facts": {
+        "canonical_name": "Evaporate 1 L of water",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6000.0",
+          "source_basis": "Approximate entropy change for vaporizing one liter of water.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "6e3"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-evaporate-1l-water-entropy",
+      "name": "Evaporate 1 L of water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Evaporating a liter of water exports a surprisingly large amount of entropy.",
+      "value": 6000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Boiling water exports much more entropy than simple warming. Assumes `at 100 C`. Source-side figure: `~6.05e3 J/K` for Latent heat of vaporization divided by boiling temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Boiling water exports much more entropy than simple warming. Assumes `at 100 C`. Source-side figure: `~6.05e3 J/K` for Latent heat of vaporization divided by boiling temperature.",
+      "facts": {
+        "canonical_name": "Boil 1 kg of water at 100 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "latent heat / temperature",
+          "method": "derived",
+          "original_value_text": "6050",
+          "source_basis": "Latent heat of vaporization divided by boiling temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "~6.05e3 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-boil-1kg-of-water-at-100c",
+      "name": "Boil 1 kg of water at 100 C",
+      "qualifiers": {
+        "assumption": "at 100 C"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Boiling water exports much more entropy than simple warming.",
+      "value": 6050.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Boiling water is a much larger entropy jump than melting ice. Source-side figure: `6.05 kJ/K` for Entropy change from latent heat of vaporization at 100 C.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Boiling water is a much larger entropy jump than melting ice. Source-side figure: `6.05 kJ/K` for Entropy change from latent heat of vaporization at 100 C.",
+      "facts": {
+        "canonical_name": "Boil 1 kg of water at 100 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "6050",
+          "source_basis": "Entropy change from latent heat of vaporization at 100 C.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "6.05 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-boil-1kg-water-100c",
+      "name": "Boil 1 kg of water at 100 C",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Boiling water is a much larger entropy jump than melting ice.",
+      "value": 6050.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Condensing steam reverses the large vaporization entropy jump. Source-side figure: `6.05 kJ/K` for Entropy change magnitude from latent heat of vaporization at 100 C.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Condensing steam reverses the large vaporization entropy jump. Source-side figure: `6.05 kJ/K` for Entropy change magnitude from latent heat of vaporization at 100 C.",
+      "facts": {
+        "canonical_name": "Condense 1 kg of steam at 100 C",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "6050",
+          "source_basis": "Entropy change magnitude from latent heat of vaporization at 100 C.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "6.05 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-condense-1kg-steam-100c",
+      "name": "Condense 1 kg of steam at 100 C",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Condensing steam reverses the large vaporization entropy jump.",
+      "value": 6050.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Human metabolism exports entropy continuously as it dissipates energy at body temperature. Source-side figure: `2.7e4 J/K` for Order-of-magnitude daily metabolic entropy export.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Human metabolism exports entropy continuously as it dissipates energy at body temperature. Source-side figure: `2.7e4 J/K` for Order-of-magnitude daily metabolic entropy export.",
+      "facts": {
+        "canonical_name": "Daily human metabolism",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "27000.0",
+          "source_basis": "Order-of-magnitude daily metabolic entropy export.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Basal_metabolic_rate",
+          "source_value_text": "2.7e4"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-daily-human-metabolism-entropy",
+      "name": "Daily human metabolism",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Basal_metabolic_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-basal-metabolic-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Basal metabolic rate",
+          "url": "https://en.wikipedia.org/wiki/Basal_metabolic_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Human metabolism exports entropy continuously as it dissipates energy at body temperature.",
+      "value": 27000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Combustion on everyday energy scales implies very large entropy exports. Source-side figure: `1.4e5 J/K` for Order-of-magnitude entropy export from burning one liter of gasoline.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Combustion on everyday energy scales implies very large entropy exports. Source-side figure: `1.4e5 J/K` for Order-of-magnitude entropy export from burning one liter of gasoline.",
+      "facts": {
+        "canonical_name": "Burn 1 L of gasoline",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "140000.0",
+          "source_basis": "Order-of-magnitude entropy export from burning one liter of gasoline.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Gasoline",
+          "source_value_text": "1.4e5"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-burn-1l-gasoline-entropy",
+      "name": "Burn 1 L of gasoline",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Gasoline",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gasoline",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gasoline",
+          "url": "https://en.wikipedia.org/wiki/Gasoline"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Combustion on everyday energy scales implies very large entropy exports.",
+      "value": 140000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Phase change at geophysical scales pushes entropy changes into the megajoule-per-kelvin range. Source-side figure: `1e6 J/K` for Order-of-magnitude entropy change for freezing one cubic meter of seawater.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Phase change at geophysical scales pushes entropy changes into the megajoule-per-kelvin range. Source-side figure: `1e6 J/K` for Order-of-magnitude entropy change for freezing one cubic meter of seawater.",
+      "facts": {
+        "canonical_name": "Freeze 1 m^3 of seawater",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000000.0",
+          "source_basis": "Order-of-magnitude entropy change for freezing one cubic meter of seawater.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Sea_ice",
+          "source_value_text": "1e6"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-freeze-1m3-seawater-entropy",
+      "name": "Freeze 1 m^3 of seawater",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sea_ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sea-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sea ice",
+          "url": "https://en.wikipedia.org/wiki/Sea_ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Phase change at geophysical scales pushes entropy changes into the megajoule-per-kelvin range.",
+      "value": 1000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Entropy",
+      "url": "https://en.wikipedia.org/wiki/Entropy"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Joules per kelvin are the canonical storage unit for entropy change.",
+      "name": "joules per kelvin",
+      "symbol": "J/K"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Millijoules per kelvin are useful for small laboratory-scale entropy changes.",
+      "name": "millijoules per kelvin",
+      "symbol": "mJ/K"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Kilojoules per kelvin are useful for large thermal processes.",
+      "name": "kilojoules per kelvin",
+      "symbol": "kJ/K"
+    },
+    {
+      "conversion_factor": 7.242970516e+22,
+      "description": "Boltzmann-constant units are useful for microscopic entropy changes.",
+      "name": "Boltzmann constants",
+      "symbol": "k_B"
+    }
+  ]
+}
