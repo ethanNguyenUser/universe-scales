@@ -30,15 +30,15 @@ description_format: markdown
 scale_mode: log
 frontend_group: materials
 frontend_group_label: Materials & Matter
-frontend_order: 360
+frontend_order: 530
 items:
 - id: obs:specific-heat:entity-lead-specific-heat
   name: Lead
   value: 128.0
-  description: 'Lead is a classic low-specific-heat material. Source-side figure: `128 J/(kg*K)` for Representative specific heat.'
+  description: Lead is a classic low-specific-heat material.
   description_format: markdown
   summary_short: Lead is a classic low-specific-heat material.
-  description_medium: 'Lead is a classic low-specific-heat material. Source-side figure: `128 J/(kg*K)` for Representative specific heat.'
+  description_medium: Lead is a classic low-specific-heat material.
   description_long: null
   hook: null
   caveats: null
@@ -77,59 +77,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-lead
-  name: Lead
-  value: 128.0
-  description: 'Lead has a relatively low specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `128 J/(kg*K)` for Representative specific heat capacity of lead.'
-  description_format: markdown
-  summary_short: Lead has a relatively low specific heat.
-  description_medium: 'Lead has a relatively low specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `128 J/(kg*K)` for Representative specific heat capacity of lead.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Lead
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '128.0'
-      source_basis: Representative specific heat capacity of lead.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Lead
-      source_value_text: '128'
-  source: https://en.wikipedia.org/wiki/Lead
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-lead
-    url: https://en.wikipedia.org/wiki/Lead
-    title: Lead
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-gold-specific-heat
   name: Gold
   value: 129.0
-  description: 'Gold changes temperature quickly because of low specific heat. Source-side figure: `129 J/(kg*K)` for Representative specific heat.'
+  description: Gold changes temperature quickly because of low specific heat.
   description_format: markdown
   summary_short: Gold changes temperature quickly because of low specific heat.
-  description_medium: 'Gold changes temperature quickly because of low specific heat. Source-side figure: `129 J/(kg*K)` for Representative specific heat.'
+  description_medium: Gold changes temperature quickly because of low specific heat.
   description_long: null
   hook: null
   caveats: null
@@ -171,10 +125,10 @@ items:
 - id: obs:specific-heat:entity-mercury-specific-heat
   name: Mercury
   value: 140.0
-  description: 'Mercury is another low-specific-heat liquid metal benchmark. Source-side figure: `140 J/(kg*K)` for Representative specific heat.'
+  description: Mercury is another low-specific-heat liquid metal benchmark.
   description_format: markdown
   summary_short: Mercury is another low-specific-heat liquid metal benchmark.
-  description_medium: 'Mercury is another low-specific-heat liquid metal benchmark. Source-side figure: `140 J/(kg*K)` for Representative specific heat.'
+  description_medium: Mercury is another low-specific-heat liquid metal benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -216,10 +170,10 @@ items:
 - id: obs:specific-heat:entity-silver-specific-heat
   name: Silver
   value: 235.0
-  description: 'Silver is low but not as low as gold or lead. Source-side figure: `235 J/(kg*K)` for Representative specific heat.'
+  description: Silver is low but not as low as gold or lead.
   description_format: markdown
   summary_short: Silver is low but not as low as gold or lead.
-  description_medium: 'Silver is low but not as low as gold or lead. Source-side figure: `235 J/(kg*K)` for Representative specific heat.'
+  description_medium: Silver is low but not as low as gold or lead.
   description_long: null
   hook: null
   caveats: null
@@ -261,10 +215,10 @@ items:
 - id: obs:specific-heat:entity-copper-specific-heat
   name: Copper
   value: 385.0
-  description: 'Copper is a classic metal benchmark. Source-side figure: `385 J/(kg*K)` for Representative specific heat.'
+  description: Copper is a classic metal benchmark.
   description_format: markdown
   summary_short: Copper is a classic metal benchmark.
-  description_medium: 'Copper is a classic metal benchmark. Source-side figure: `385 J/(kg*K)` for Representative specific heat.'
+  description_medium: Copper is a classic metal benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -303,59 +257,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-copper
-  name: Copper
-  value: 385.0
-  description: 'Copper is a standard low-to-mid specific-heat metal. Here the quantity refers to `specific heat capacity`. Source-side figure: `385 J/(kg*K)` for Representative specific heat capacity of copper.'
-  description_format: markdown
-  summary_short: Copper is a standard low-to-mid specific-heat metal.
-  description_medium: 'Copper is a standard low-to-mid specific-heat metal. Here the quantity refers to `specific heat capacity`. Source-side figure: `385 J/(kg*K)` for Representative specific heat capacity of copper.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Copper
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '385.0'
-      source_basis: Representative specific heat capacity of copper.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Copper
-      source_value_text: '385'
-  source: https://en.wikipedia.org/wiki/Copper
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-copper
-    url: https://en.wikipedia.org/wiki/Copper
-    title: Copper
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-iron-specific-heat
   name: Iron
   value: 449.0
-  description: 'Iron is a useful structural-metal benchmark. Source-side figure: `449 J/(kg*K)` for Representative specific heat.'
+  description: Iron is a useful structural-metal benchmark.
   description_format: markdown
   summary_short: Iron is a useful structural-metal benchmark.
-  description_medium: 'Iron is a useful structural-metal benchmark. Source-side figure: `449 J/(kg*K)` for Representative specific heat.'
+  description_medium: Iron is a useful structural-metal benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -394,59 +302,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-iron
-  name: Iron
-  value: 449.0
-  description: 'Iron is a useful engineering-metal reference for specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `449 J/(kg*K)` for Representative specific heat capacity of iron.'
-  description_format: markdown
-  summary_short: Iron is a useful engineering-metal reference for specific heat.
-  description_medium: 'Iron is a useful engineering-metal reference for specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `449 J/(kg*K)` for Representative specific heat capacity of iron.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Iron
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '449.0'
-      source_basis: Representative specific heat capacity of iron.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Iron
-      source_value_text: '449'
-  source: https://en.wikipedia.org/wiki/Iron
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-iron
-    url: https://en.wikipedia.org/wiki/Iron
-    title: Iron
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-steel-specific-heat
   name: Steel
   value: 490.0
-  description: 'Steel sits around half a kilojoule per kilogram kelvin. Source-side figure: `490 J/(kg*K)` for Representative specific heat.'
+  description: Steel sits around half a kilojoule per kilogram kelvin.
   description_format: markdown
   summary_short: Steel sits around half a kilojoule per kilogram kelvin.
-  description_medium: 'Steel sits around half a kilojoule per kilogram kelvin. Source-side figure: `490 J/(kg*K)` for Representative specific heat.'
+  description_medium: Steel sits around half a kilojoule per kilogram kelvin.
   description_long: null
   hook: null
   caveats: null
@@ -488,10 +350,10 @@ items:
 - id: obs:specific-heat:entity-silicon-specific-heat
   name: Silicon
   value: 700.0
-  description: 'Silicon is a handy semiconductor specific-heat benchmark. Source-side figure: `700 J/(kg*K)` for Representative specific heat.'
+  description: Silicon is a handy semiconductor specific-heat benchmark.
   description_format: markdown
   summary_short: Silicon is a handy semiconductor specific-heat benchmark.
-  description_medium: 'Silicon is a handy semiconductor specific-heat benchmark. Source-side figure: `700 J/(kg*K)` for Representative specific heat.'
+  description_medium: Silicon is a handy semiconductor specific-heat benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -533,10 +395,10 @@ items:
 - id: obs:specific-heat:scenario-specific-heat-granite
   name: Granite
   value: 790.0
-  description: 'Granite anchors the rock-and-building-material range. Here the quantity refers to `specific heat capacity`. Source-side figure: `790 J/(kg*K)` for Representative specific heat capacity of granite.'
+  description: Granite anchors the rock-and-building-material range.
   description_format: markdown
   summary_short: Granite anchors the rock-and-building-material range.
-  description_medium: 'Granite anchors the rock-and-building-material range. Here the quantity refers to `specific heat capacity`. Source-side figure: `790 J/(kg*K)` for Representative specific heat capacity of granite.'
+  description_medium: Granite anchors the rock-and-building-material range.
   description_long: null
   hook: null
   caveats: null
@@ -579,10 +441,10 @@ items:
 - id: obs:specific-heat:entity-sand-specific-heat
   name: Sand
   value: 830.0
-  description: 'Dry sand is a good geological benchmark. Source-side figure: `830 J/(kg*K)` for Representative specific heat.'
+  description: Dry sand is a good geological benchmark.
   description_format: markdown
   summary_short: Dry sand is a good geological benchmark.
-  description_medium: 'Dry sand is a good geological benchmark. Source-side figure: `830 J/(kg*K)` for Representative specific heat.'
+  description_medium: Dry sand is a good geological benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -624,10 +486,10 @@ items:
 - id: obs:specific-heat:entity-glass-specific-heat
   name: Glass
   value: 840.0
-  description: 'Glass sits around the same scale as sand and concrete. Source-side figure: `840 J/(kg*K)` for Representative specific heat.'
+  description: Glass sits around the same scale as sand and concrete.
   description_format: markdown
   summary_short: Glass sits around the same scale as sand and concrete.
-  description_medium: 'Glass sits around the same scale as sand and concrete. Source-side figure: `840 J/(kg*K)` for Representative specific heat.'
+  description_medium: Glass sits around the same scale as sand and concrete.
   description_long: null
   hook: null
   caveats: null
@@ -669,10 +531,10 @@ items:
 - id: obs:specific-heat:entity-concrete-specific-heat
   name: Concrete
   value: 880.0
-  description: 'Concrete''s thermal inertia matters in buildings and cities. Source-side figure: `880 J/(kg*K)` for Representative specific heat.'
+  description: Concrete's thermal inertia matters in buildings and cities.
   description_format: markdown
   summary_short: Concrete's thermal inertia matters in buildings and cities.
-  description_medium: 'Concrete''s thermal inertia matters in buildings and cities. Source-side figure: `880 J/(kg*K)` for Representative specific heat.'
+  description_medium: Concrete's thermal inertia matters in buildings and cities.
   description_long: null
   hook: null
   caveats: null
@@ -714,10 +576,10 @@ items:
 - id: obs:specific-heat:entity-aluminum-specific-heat
   name: Aluminum
   value: 897.0
-  description: 'Aluminum combines high conductivity with moderate specific heat. Source-side figure: `897 J/(kg*K)` for Representative specific heat.'
+  description: Aluminum combines high conductivity with moderate specific heat.
   description_format: markdown
   summary_short: Aluminum combines high conductivity with moderate specific heat.
-  description_medium: 'Aluminum combines high conductivity with moderate specific heat. Source-side figure: `897 J/(kg*K)` for Representative specific heat.'
+  description_medium: Aluminum combines high conductivity with moderate specific heat.
   description_long: null
   hook: null
   caveats: null
@@ -759,10 +621,10 @@ items:
 - id: obs:specific-heat:scenario-specific-heat-aluminum
   name: Aluminum
   value: 900.0
-  description: 'Aluminum is a common lightweight engineering metal with a moderate heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `900 J/(kg*K)` for Representative specific heat capacity of aluminum.'
+  description: Aluminum is a common lightweight engineering metal with a moderate heat capacity.
   description_format: markdown
   summary_short: Aluminum is a common lightweight engineering metal with a moderate heat capacity.
-  description_medium: 'Aluminum is a common lightweight engineering metal with a moderate heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `900 J/(kg*K)` for Representative specific heat capacity of aluminum.'
+  description_medium: Aluminum is a common lightweight engineering metal with a moderate heat capacity.
   description_long: null
   hook: null
   caveats: null
@@ -805,10 +667,10 @@ items:
 - id: obs:specific-heat:entity-air-specific-heat
   name: Air
   value: 1005.0
-  description: 'Air is a useful gas-phase benchmark. Source-side figure: `1005 J/(kg*K)` for Representative specific heat.'
+  description: Air is a useful gas-phase benchmark.
   description_format: markdown
   summary_short: Air is a useful gas-phase benchmark.
-  description_medium: 'Air is a useful gas-phase benchmark. Source-side figure: `1005 J/(kg*K)` for Representative specific heat.'
+  description_medium: Air is a useful gas-phase benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -847,59 +709,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-air
-  name: Air
-  value: 1005.0
-  description: 'Air’s specific heat is important for atmospheric and HVAC reasoning. Here the quantity refers to `specific heat capacity`. Source-side figure: `1005 J/(kg*K)` for Representative specific heat capacity of air at constant pressure.'
-  description_format: markdown
-  summary_short: Air’s specific heat is important for atmospheric and HVAC reasoning.
-  description_medium: 'Air’s specific heat is important for atmospheric and HVAC reasoning. Here the quantity refers to `specific heat capacity`. Source-side figure: `1005 J/(kg*K)` for Representative specific heat capacity of air at constant pressure.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Air
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '1005.0'
-      source_basis: Representative specific heat capacity of air at constant pressure.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Air
-      source_value_text: '1005'
-  source: https://en.wikipedia.org/wiki/Air
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-air
-    url: https://en.wikipedia.org/wiki/Air
-    title: Air
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-wood-specific-heat
   name: Wood
   value: 1700.0
-  description: 'Wood holds significantly more heat per kilogram than metals. Source-side figure: `1700 J/(kg*K)` for Representative specific heat.'
+  description: Wood holds significantly more heat per kilogram than metals.
   description_format: markdown
   summary_short: Wood holds significantly more heat per kilogram than metals.
-  description_medium: 'Wood holds significantly more heat per kilogram than metals. Source-side figure: `1700 J/(kg*K)` for Representative specific heat.'
+  description_medium: Wood holds significantly more heat per kilogram than metals.
   description_long: null
   hook: null
   caveats: null
@@ -938,59 +754,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-wood
-  name: Wood
-  value: 1700.0
-  description: 'Wood stores heat better than metals but worse than water. Here the quantity refers to `specific heat capacity`. Source-side figure: `1700 J/(kg*K)` for Representative specific heat capacity of dry wood.'
-  description_format: markdown
-  summary_short: Wood stores heat better than metals but worse than water.
-  description_medium: 'Wood stores heat better than metals but worse than water. Here the quantity refers to `specific heat capacity`. Source-side figure: `1700 J/(kg*K)` for Representative specific heat capacity of dry wood.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Wood
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '1700.0'
-      source_basis: Representative specific heat capacity of dry wood.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Wood
-      source_value_text: '1700'
-  source: https://en.wikipedia.org/wiki/Wood
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-wood
-    url: https://en.wikipedia.org/wiki/Wood
-    title: Wood
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-olive-oil-specific-heat
   name: Olive oil
   value: 1970.0
-  description: 'A specific food-oil benchmark close to other vegetable oils. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.'
+  description: A specific food-oil benchmark close to other vegetable oils.
   description_format: markdown
   summary_short: A specific food-oil benchmark close to other vegetable oils.
-  description_medium: 'A specific food-oil benchmark close to other vegetable oils. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.'
+  description_medium: A specific food-oil benchmark close to other vegetable oils.
   description_long: null
   hook: null
   caveats: null
@@ -1032,10 +802,10 @@ items:
 - id: obs:specific-heat:entity-vegetable-oil-specific-heat
   name: Vegetable oil
   value: 1970.0
-  description: 'Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.'
+  description: Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself.
   description_format: markdown
   summary_short: Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself.
-  description_medium: 'Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.'
+  description_medium: Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself.
   description_long: null
   hook: null
   caveats: null
@@ -1077,10 +847,10 @@ items:
 - id: obs:specific-heat:entity-steam-specific-heat
   name: Steam
   value: 2000.0
-  description: 'Water vapor sits around two kilojoules per kilogram kelvin. Source-side figure: `2000 J/(kg*K)` for Representative specific heat.'
+  description: Water vapor sits around two kilojoules per kilogram kelvin.
   description_format: markdown
   summary_short: Water vapor sits around two kilojoules per kilogram kelvin.
-  description_medium: 'Water vapor sits around two kilojoules per kilogram kelvin. Source-side figure: `2000 J/(kg*K)` for Representative specific heat.'
+  description_medium: Water vapor sits around two kilojoules per kilogram kelvin.
   description_long: null
   hook: null
   caveats: null
@@ -1122,10 +892,10 @@ items:
 - id: obs:specific-heat:entity-ice-specific-heat
   name: Ice
   value: 2090.0
-  description: 'Ice stores much more heat per kilogram than most solids. Source-side figure: `2090 J/(kg*K)` for Representative specific heat.'
+  description: Ice stores much more heat per kilogram than most solids.
   description_format: markdown
   summary_short: Ice stores much more heat per kilogram than most solids.
-  description_medium: 'Ice stores much more heat per kilogram than most solids. Source-side figure: `2090 J/(kg*K)` for Representative specific heat.'
+  description_medium: Ice stores much more heat per kilogram than most solids.
   description_long: null
   hook: null
   caveats: null
@@ -1167,10 +937,10 @@ items:
 - id: obs:specific-heat:entity-snow-specific-heat
   name: Snow
   value: 2100.0
-  description: 'Snow behaves broadly like ice in specific heat. Source-side figure: `2100 J/(kg*K)` for Representative specific heat.'
+  description: Snow behaves broadly like ice in specific heat.
   description_format: markdown
   summary_short: Snow behaves broadly like ice in specific heat.
-  description_medium: 'Snow behaves broadly like ice in specific heat. Source-side figure: `2100 J/(kg*K)` for Representative specific heat.'
+  description_medium: Snow behaves broadly like ice in specific heat.
   description_long: null
   hook: null
   caveats: null
@@ -1212,10 +982,10 @@ items:
 - id: obs:specific-heat:scenario-specific-heat-ice
   name: Ice
   value: 2100.0
-  description: 'Ice provides a phase-linked heat-capacity reference. Here the quantity refers to `specific heat capacity`. Source-side figure: `2100 J/(kg*K)` for Representative specific heat capacity of ice.'
+  description: Ice provides a phase-linked heat-capacity reference.
   description_format: markdown
   summary_short: Ice provides a phase-linked heat-capacity reference.
-  description_medium: 'Ice provides a phase-linked heat-capacity reference. Here the quantity refers to `specific heat capacity`. Source-side figure: `2100 J/(kg*K)` for Representative specific heat capacity of ice.'
+  description_medium: Ice provides a phase-linked heat-capacity reference.
   description_long: null
   hook: null
   caveats: null
@@ -1258,10 +1028,10 @@ items:
 - id: obs:specific-heat:entity-ethanol-specific-heat
   name: Ethanol
   value: 2440.0
-  description: 'Alcohols have relatively high specific heat among common liquids. Source-side figure: `2440 J/(kg*K)` for Representative specific heat.'
+  description: Alcohols have relatively high specific heat among common liquids.
   description_format: markdown
   summary_short: Alcohols have relatively high specific heat among common liquids.
-  description_medium: 'Alcohols have relatively high specific heat among common liquids. Source-side figure: `2440 J/(kg*K)` for Representative specific heat.'
+  description_medium: Alcohols have relatively high specific heat among common liquids.
   description_long: null
   hook: null
   caveats: null
@@ -1300,59 +1070,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-ethanol
-  name: Ethanol
-  value: 2440.0
-  description: 'Ethanol is a familiar liquid with fairly high heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `2440 J/(kg*K)` for Representative specific heat capacity of ethanol.'
-  description_format: markdown
-  summary_short: Ethanol is a familiar liquid with fairly high heat capacity.
-  description_medium: 'Ethanol is a familiar liquid with fairly high heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `2440 J/(kg*K)` for Representative specific heat capacity of ethanol.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Ethanol
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '2440.0'
-      source_basis: Representative specific heat capacity of ethanol.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Ethanol
-      source_value_text: '2440'
-  source: https://en.wikipedia.org/wiki/Ethanol
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-ethanol
-    url: https://en.wikipedia.org/wiki/Ethanol
-    title: Ethanol
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-lithium-specific-heat
   name: Lithium
   value: 3580.0
-  description: 'Lithium is a light metal with unusually high specific heat. Source-side figure: `3580 J/(kg*K)` for Representative specific heat.'
+  description: Lithium is a light metal with unusually high specific heat.
   description_format: markdown
   summary_short: Lithium is a light metal with unusually high specific heat.
-  description_medium: 'Lithium is a light metal with unusually high specific heat. Source-side figure: `3580 J/(kg*K)` for Representative specific heat.'
+  description_medium: Lithium is a light metal with unusually high specific heat.
   description_long: null
   hook: null
   caveats: null
@@ -1394,10 +1118,10 @@ items:
 - id: obs:specific-heat:entity-water-specific-heat
   name: Water
   value: 4184.0
-  description: 'Water''s high specific heat is one of the most important pedagogical benchmarks in physics. Source-side figure: `4184 J/(kg*K)` for Representative specific heat.'
+  description: Water's high specific heat is one of the most important pedagogical benchmarks in physics.
   description_format: markdown
   summary_short: Water's high specific heat is one of the most important pedagogical benchmarks in physics.
-  description_medium: 'Water''s high specific heat is one of the most important pedagogical benchmarks in physics. Source-side figure: `4184 J/(kg*K)` for Representative specific heat.'
+  description_medium: Water's high specific heat is one of the most important pedagogical benchmarks in physics.
   description_long: null
   hook: null
   caveats: null
@@ -1436,59 +1160,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:scenario-specific-heat-water
-  name: Water
-  value: 4184.0
-  description: 'Water is the canonical high specific-heat everyday liquid. Here the quantity refers to `specific heat capacity`. Source-side figure: `4184 J/(kg*K)` for Representative specific heat capacity of liquid water.'
-  description_format: markdown
-  summary_short: Water is the canonical high specific-heat everyday liquid.
-  description_medium: 'Water is the canonical high specific-heat everyday liquid. Here the quantity refers to `specific heat capacity`. Source-side figure: `4184 J/(kg*K)` for Representative specific heat capacity of liquid water.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Water
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '4184.0'
-      source_basis: Representative specific heat capacity of liquid water.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Water
-      source_value_text: '4184'
-  source: https://en.wikipedia.org/wiki/Water
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-water
-    url: https://en.wikipedia.org/wiki/Water
-    title: Water
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: specific heat capacity
 - id: obs:specific-heat:entity-ammonia-specific-heat
   name: Ammonia
   value: 4700.0
-  description: 'Ammonia is a notable high-specific-heat working fluid. Source-side figure: `4700 J/(kg*K)` for Representative specific heat.'
+  description: Ammonia is a notable high-specific-heat working fluid.
   description_format: markdown
   summary_short: Ammonia is a notable high-specific-heat working fluid.
-  description_medium: 'Ammonia is a notable high-specific-heat working fluid. Source-side figure: `4700 J/(kg*K)` for Representative specific heat.'
+  description_medium: Ammonia is a notable high-specific-heat working fluid.
   description_long: null
   hook: null
   caveats: null
@@ -1530,10 +1208,10 @@ items:
 - id: obs:specific-heat:entity-helium-specific-heat
   name: Helium
   value: 5190.0
-  description: 'Helium is a high-specific-heat gas reference. Source-side figure: `5190 J/(kg*K)` for Representative specific heat.'
+  description: Helium is a high-specific-heat gas reference.
   description_format: markdown
   summary_short: Helium is a high-specific-heat gas reference.
-  description_medium: 'Helium is a high-specific-heat gas reference. Source-side figure: `5190 J/(kg*K)` for Representative specific heat.'
+  description_medium: Helium is a high-specific-heat gas reference.
   description_long: null
   hook: null
   caveats: null
@@ -1575,10 +1253,10 @@ items:
 - id: obs:specific-heat:entity-hydrogen-specific-heat
   name: Hydrogen
   value: 14300.0
-  description: 'Hydrogen sits at the extreme high end among common substances. Source-side figure: `14300 J/(kg*K)` for Representative specific heat.'
+  description: Hydrogen sits at the extreme high end among common substances.
   description_format: markdown
   summary_short: Hydrogen sits at the extreme high end among common substances.
-  description_medium: 'Hydrogen sits at the extreme high end among common substances. Source-side figure: `14300 J/(kg*K)` for Representative specific heat.'
+  description_medium: Hydrogen sits at the extreme high end among common substances.
   description_long: null
   hook: null
   caveats: null

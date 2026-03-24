@@ -216,21 +216,6 @@
     }
   },
   {
-    "canonical_name": "Laptop USB-C charging current",
-    "category": "interface",
-    "dimension": "current",
-    "display_eligible": true,
-    "source_url": "https://en.wikipedia.org/wiki/USB_hardware",
-    "subject_key": "entity:laptop-usbc-charge-current",
-    "subject_type": "entity",
-    "summary": "USB-C power delivery commonly reaches five amperes at the cable limit.",
-    "value_base": 5.0,
-    "value_type": "measured",
-    "source_value_text": "5 A",
-    "source_unit": "A",
-    "source_basis": "USB-C PD cable current limit."
-  },
-  {
     "canonical_name": "USB Power Delivery 5 amp current",
     "category": "engineering",
     "dimension": "current",
@@ -538,24 +523,6 @@
     }
   },
   {
-    "canonical_name": "Peak lightning current",
-    "category": "fields",
-    "dimension": "current",
-    "display_eligible": true,
-    "source_url": "https://en.wikipedia.org/wiki/Lightning",
-    "subject_key": "entity:lightning-current",
-    "subject_type": "entity",
-    "summary": "A lightning return stroke commonly reaches tens of kiloamperes.",
-    "value_base": 30000.0,
-    "value_type": "measured",
-    "source_value_text": "30 kA",
-    "source_unit": "A",
-    "source_basis": "Representative lightning peak current.",
-    "qualifiers": {
-      "measurement": "peak current"
-    }
-  },
-  {
     "canonical_name": "Electric arc furnace current",
     "category": "engineering",
     "dimension": "current",
@@ -626,6 +593,136 @@
     "source_basis": "Representative Z Machine discharge current.",
     "qualifiers": {
       "measurement": "pulse current"
+    }
+  },
+  {
+    "canonical_name": "Planck current",
+    "category": "physics",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Planck_units",
+    "subject_key": "entity:planck-current",
+    "subject_type": "entity",
+    "summary": "Planck current is the natural current scale formed from fundamental constants.",
+    "value_base": 3.478872753751307e+25,
+    "value_type": "derived",
+    "source_value_text": "3.478872753751307e25 A",
+    "source_unit": "A",
+    "source_basis": "Derived from c, ħ, G, and ε0 using the Planck-unit current scale.",
+    "derivation_note": "I_P = \\sqrt{4\\pi\\varepsilon_0 c^6 / G}",
+    "qualifiers": {
+      "measurement": "natural current scale"
+    }
+  },
+  {
+    "canonical_name": "Rod photoreceptor dark current",
+    "category": "biology",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Dark_current_(biology)",
+    "subject_key": "entity:rod-photoreceptor-dark-current",
+    "subject_type": "entity",
+    "summary": "Retinal rod cells carry a tiny standing dark current in the absence of light.",
+    "value_base": 2e-12,
+    "value_type": "measured",
+    "source_value_text": "2 pA",
+    "source_unit": "A",
+    "source_basis": "Representative dark current of a rod photoreceptor.",
+    "qualifiers": {
+      "measurement": "cell current"
+    }
+  },
+  {
+    "canonical_name": "Neuron action potential membrane current",
+    "category": "biology",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Action_potential",
+    "subject_key": "entity:neuron-action-potential-current",
+    "subject_type": "entity",
+    "summary": "A firing neuron briefly drives membrane currents far above a single ion channel.",
+    "value_base": 1e-06,
+    "value_type": "measured",
+    "source_value_text": "1 uA",
+    "source_unit": "A",
+    "source_basis": "Representative peak transmembrane current during an action potential.",
+    "qualifiers": {
+      "measurement": "cell current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Cochlear implant electrode current",
+    "category": "health",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Cochlear_implant",
+    "subject_key": "entity:cochlear-implant-current",
+    "subject_type": "entity",
+    "summary": "Cochlear implants stimulate auditory nerves with currents in the hundreds of microamps.",
+    "value_base": 0.0003,
+    "value_type": "measured",
+    "source_value_text": "300 uA",
+    "source_unit": "A",
+    "source_basis": "Representative cochlear implant stimulation current.",
+    "qualifiers": {
+      "measurement": "stimulation current"
+    }
+  },
+  {
+    "canonical_name": "Deep brain stimulator pulse current",
+    "category": "health",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Deep_brain_stimulation",
+    "subject_key": "entity:deep-brain-stimulator-current",
+    "subject_type": "entity",
+    "summary": "Deep brain stimulators run with milliamp-scale pulses rather than household-scale current.",
+    "value_base": 0.003,
+    "value_type": "measured",
+    "source_value_text": "3 mA",
+    "source_unit": "A",
+    "source_basis": "Representative deep-brain stimulation pulse current.",
+    "qualifiers": {
+      "measurement": "stimulation current"
+    }
+  },
+  {
+    "canonical_name": "Pacemaker standby current",
+    "category": "medicine",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker",
+    "subject_key": "entity:pacemaker-standby-current",
+    "subject_type": "entity",
+    "summary": "An implanted pacemaker lives for years because its average current stays down in the tens of microamps.",
+    "value_base": 1e-05,
+    "value_type": "derived",
+    "source_value_text": "10 uA",
+    "source_unit": "A",
+    "source_basis": "Representative average current draw for an implanted pacemaker.",
+    "qualifiers": {
+      "measurement": "device average current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Hearing aid current draw",
+    "category": "medicine",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Hearing_aid",
+    "subject_key": "entity:hearing-aid-current-draw",
+    "subject_type": "entity",
+    "summary": "Tiny battery-powered hearing aids operate in the tens-of-microamps to low-hundreds-of-microamps band.",
+    "value_base": 5e-05,
+    "value_type": "derived",
+    "source_value_text": "50 uA",
+    "source_unit": "A",
+    "source_basis": "Representative hearing-aid operating current.",
+    "qualifiers": {
+      "measurement": "device current",
+      "assumption": "order-of-magnitude representative value"
     }
   }
 ]

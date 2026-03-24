@@ -59,6 +59,19 @@ def verify_sqlite(conn: sqlite3.Connection) -> None:
         """
     ).fetchone()["count"]
     assert canonical_reference_count == 0, "canonical corpus still contains reference observations"
+    duplicate_selected_count = conn.execute(
+        """
+        SELECT COUNT(*) AS count
+          FROM (
+                SELECT dimension_id, LOWER(TRIM(label)) AS norm_label, value_base, COUNT(*) AS c
+                  FROM observations
+                 WHERE rationale IS NOT NULL
+                 GROUP BY dimension_id, LOWER(TRIM(label)), value_base
+                HAVING COUNT(*) > 1
+          )
+        """
+    ).fetchone()["count"]
+    assert duplicate_selected_count == 0, "selected export still contains duplicate label/value observations"
 
     for slug in FLAGSHIP_DIMENSIONS:
         dimension = conn.execute(

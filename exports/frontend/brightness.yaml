@@ -26,9 +26,9 @@ preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 scale_mode: log
-frontend_group: fields
-frontend_group_label: Fields, Waves & Radiation
-frontend_order: 150
+frontend_group: fundamental
+frontend_group_label: Fundamental Scales
+frontend_order: 220
 items:
 - id: obs:brightness:scenario-brightness-deep-space
   name: Deep Space
@@ -1416,20 +1416,20 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:brightness:scenario-brightness-supernova
-  name: Supernova
+- id: obs:brightness:scenario-brightness-core-collapse-supernova
+  name: Core-Collapse Supernova
   value: 1000000000000000.0
-  description: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool. The light curve evolves rapidly so the number applies during peak days only. Spectra are line rich and depart from blackbody assumptions. The figure situates stellar explosions against the Sun on a surface basis.
+  description: A core-collapse supernova photosphere can briefly reach this effective luminance as the ejecta expand and cool. The light curve evolves rapidly so the number applies only near peak brightness. Spectra are line rich and depart from a perfect blackbody, which is why this is a deliberately simplified comparison. The figure situates stellar explosions against the Sun on a surface basis.
   description_format: markdown
-  summary_short: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool.
-  description_medium: Some supernova photospheres briefly reach this effective luminance as their ejecta expand and cool. The light curve evolves rapidly so the number applies during peak days only. Spectra are line rich and depart from blackbody assumptions. The figure situates stellar explosions against the Sun on a surface basis.
+  summary_short: A core-collapse supernova photosphere can briefly reach this effective luminance as the ejecta expand and cool.
+  description_medium: A core-collapse supernova photosphere can briefly reach this effective luminance as the ejecta expand and cool. The light curve evolves rapidly so the number applies only near peak brightness. Spectra are line rich and depart from a perfect blackbody, which is why this is a deliberately simplified comparison. The figure situates stellar explosions against the Sun on a surface basis.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
-    legacy_item_name: Supernova
+    legacy_item_name: Core-Collapse Supernova
     source_trace:
       method: derived
       original_value_text: 1e15
@@ -1458,20 +1458,188 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:brightness:scenario-brightness-gamma-ray-burst
-  name: Gamma Ray Burst
-  value: 1.0e+20
-  description: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
+- id: obs:brightness:scenario-brightness-type-ia-supernova
+  name: Type Ia Supernova
+  value: 3000000000000000.0
+  description: A thermonuclear Type Ia supernova is also extremely bright, but its mechanism is different from core collapse. White dwarf disruption lets it reach a similar surface-brightness regime while producing a cleaner standardizable light curve. This sits above ordinary supernovae but below the rarest superluminous events. The value is a representative peak photosphere scale.
   description_format: markdown
-  summary_short: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient.
-  description_medium: Prompt emission regions in gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
+  summary_short: A thermonuclear Type Ia supernova is also extremely bright, but its mechanism is different from core collapse.
+  description_medium: A thermonuclear Type Ia supernova is also extremely bright, but its mechanism is different from core collapse. White dwarf disruption lets it reach a similar surface-brightness regime while producing a cleaner standardizable light curve. This sits above ordinary supernovae but below the rarest superluminous events. The value is a representative peak photosphere scale.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
     ingest_source: dataset/raw/legacy_yaml/brightness.yaml
-    legacy_item_name: Gamma Ray Burst
+    legacy_item_name: Type Ia Supernova
+    source_trace:
+      method: derived
+      original_value_text: 3e15
+      source_url: https://en.wikipedia.org/wiki/Type_Ia_supernova
+  source: https://en.wikipedia.org/wiki/Type_Ia_supernova
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-type-ia-supernova
+    url: https://en.wikipedia.org/wiki/Type_Ia_supernova
+    title: Type Ia supernova
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-superluminous-supernova
+  name: Superluminous Supernova
+  value: 3.0e+17
+  description: Superluminous supernovae are rare explosions that can outshine ordinary supernovae by orders of magnitude. They are often powered by unusually energetic progenitors or central engines, so this scale bridges the gap between common supernovae and gamma ray bursts. The number is a peak effective luminance, not a literal blackbody surface. It is the sort of event that keeps transient-astronomy surveys busy.
+  description_format: markdown
+  summary_short: Superluminous supernovae are rare explosions that can outshine ordinary supernovae by orders of magnitude.
+  description_medium: Superluminous supernovae are rare explosions that can outshine ordinary supernovae by orders of magnitude. They are often powered by unusually energetic progenitors or central engines, so this scale bridges the gap between common supernovae and gamma ray bursts. The number is a peak effective luminance, not a literal blackbody surface. It is the sort of event that keeps transient-astronomy surveys busy.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Superluminous Supernova
+    source_trace:
+      method: derived
+      original_value_text: 3e17
+      source_url: https://en.wikipedia.org/wiki/Superluminous_supernova
+  source: https://en.wikipedia.org/wiki/Superluminous_supernova
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-superluminous-supernova
+    url: https://en.wikipedia.org/wiki/Superluminous_supernova
+    title: Superluminous supernova
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-magnetar-giant-flare
+  name: Magnetar Giant Flare
+  value: 1.0e+18
+  description: Giant magnetar flares can briefly create an apparently blinding high-energy flash. The geometry is not a simple glowing surface, so the value is best read as an isotropic-equivalent comparison scale. It helps fill the bright gap between supernovae and the most extreme gamma ray bursts. The event is short, violent, and very rare.
+  description_format: markdown
+  summary_short: Giant magnetar flares can briefly create an apparently blinding high-energy flash.
+  description_medium: Giant magnetar flares can briefly create an apparently blinding high-energy flash. The geometry is not a simple glowing surface, so the value is best read as an isotropic-equivalent comparison scale. It helps fill the bright gap between supernovae and the most extreme gamma ray bursts. The event is short, violent, and very rare.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Magnetar Giant Flare
+    source_trace:
+      method: derived
+      original_value_text: 1e18
+      source_url: https://en.wikipedia.org/wiki/Magnetar
+  source: https://en.wikipedia.org/wiki/Magnetar
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-magnetar
+    url: https://en.wikipedia.org/wiki/Magnetar
+    title: Magnetar
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-short-gamma-ray-burst
+  name: Short Gamma-Ray Burst
+  value: 3.0e+19
+  description: Short gamma ray bursts are compact, beamed explosions with extreme apparent surface brightness if treated as isotropic emission. The number here is an illustrative equivalent to show the scale of the prompt flash, not a literal glowing disk. Observers reconstruct it from flux, duration, and distance. It is one step below the brightest long-burst examples in this chart.
+  description_format: markdown
+  summary_short: Short gamma ray bursts are compact, beamed explosions with extreme apparent surface brightness if treated as isotropic emission.
+  description_medium: Short gamma ray bursts are compact, beamed explosions with extreme apparent surface brightness if treated as isotropic emission. The number here is an illustrative equivalent to show the scale of the prompt flash, not a literal glowing disk. Observers reconstruct it from flux, duration, and distance. It is one step below the brightest long-burst examples in this chart.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Short Gamma-Ray Burst
+    source_trace:
+      method: derived
+      original_value_text: 3e19
+      source_url: https://en.wikipedia.org/wiki/Gamma-ray_burst
+  source: https://en.wikipedia.org/wiki/Gamma-ray_burst
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gamma-ray-burst
+    url: https://en.wikipedia.org/wiki/Gamma-ray_burst
+    title: Gamma-ray burst
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-brightness-yaml
+    url: repo://dataset/raw/legacy_yaml/brightness.yaml
+    title: dataset/raw/legacy_yaml/brightness.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/brightness.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:brightness:scenario-brightness-long-gamma-ray-burst-isotropic-equivalent
+  name: Long Gamma-Ray Burst (isotropic equivalent)
+  value: 1.0e+20
+  description: Prompt emission regions in long gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
+  description_format: markdown
+  summary_short: Prompt emission regions in long gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient.
+  description_medium: Prompt emission regions in long gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/brightness.yaml
+    legacy_item_name: Long Gamma-Ray Burst (isotropic equivalent)
     source_trace:
       method: derived
       original_value_text: 1e20

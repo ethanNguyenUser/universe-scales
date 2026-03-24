@@ -28,15 +28,15 @@ description_format: markdown
 scale_mode: log
 frontend_group: motion
 frontend_group_label: Motion & Mechanics
-frontend_order: 200
+frontend_order: 390
 items:
 - id: obs:angular-velocity:entity-pluto-orbit-angular-velocity
   name: Pluto orbit around the Sun
   value: 8.03025440694213e-10
-  description: 'Pluto sweeps around the Sun so slowly that its angular speed is below a nanoradian per second. Source-side figure: `247.94 years per revolution` for Angular speed derived from Pluto orbital period.'
+  description: Pluto sweeps around the Sun so slowly that its angular speed is below a nanoradian per second.
   description_format: markdown
   summary_short: Pluto sweeps around the Sun so slowly that its angular speed is below a nanoradian per second.
-  description_medium: 'Pluto sweeps around the Sun so slowly that its angular speed is below a nanoradian per second. Source-side figure: `247.94 years per revolution` for Angular speed derived from Pluto orbital period.'
+  description_medium: Pluto sweeps around the Sun so slowly that its angular speed is below a nanoradian per second.
   description_long: null
   hook: null
   caveats: null
@@ -79,10 +79,10 @@ items:
 - id: obs:angular-velocity:entity-mars-orbit-angular-velocity
   name: Mars orbit around the Sun
   value: 1.0585759726109988e-07
-  description: 'Mars takes almost two Earth years to complete one orbit. Source-side figure: `686.98 days per revolution` for Derived from Mars'' orbital period. Converted orbital period to radians per second with ω = 2π / T.'
+  description: Mars takes almost two Earth years to complete one orbit.
   description_format: markdown
   summary_short: Mars takes almost two Earth years to complete one orbit.
-  description_medium: 'Mars takes almost two Earth years to complete one orbit. Source-side figure: `686.98 days per revolution` for Derived from Mars'' orbital period. Converted orbital period to radians per second with ω = 2π / T.'
+  description_medium: Mars takes almost two Earth years to complete one orbit.
   description_long: null
   hook: null
   caveats: null
@@ -126,10 +126,10 @@ items:
 - id: obs:angular-velocity:entity-earth-orbit-angular-velocity
   name: Earth orbit around the Sun
   value: 1.99e-07
-  description: 'The Earth sweeps around the Sun very slowly in angular terms. Source-side figure: `1 year per revolution` for Angular speed derived from one orbit per year. Converted one year to seconds before applying 2*pi/T.'
+  description: The Earth sweeps around the Sun very slowly in angular terms.
   description_format: markdown
   summary_short: The Earth sweeps around the Sun very slowly in angular terms.
-  description_medium: 'The Earth sweeps around the Sun very slowly in angular terms. Source-side figure: `1 year per revolution` for Angular speed derived from one orbit per year. Converted one year to seconds before applying 2*pi/T.'
+  description_medium: The Earth sweeps around the Sun very slowly in angular terms.
   description_long: null
   hook: null
   caveats: null
@@ -173,10 +173,10 @@ items:
 - id: obs:angular-velocity:entity-venus-orbit-angular-velocity
   name: Venus orbit around the Sun
   value: 3.2363920127827824e-07
-  description: 'Venus orbits more slowly than Earth because its year is longer. Source-side figure: `224.701 days per revolution` for Derived from Venus'' orbital period. Converted orbital period to radians per second with ω = 2π / T.'
+  description: Venus orbits more slowly than Earth because its year is longer.
   description_format: markdown
   summary_short: Venus orbits more slowly than Earth because its year is longer.
-  description_medium: 'Venus orbits more slowly than Earth because its year is longer. Source-side figure: `224.701 days per revolution` for Derived from Venus'' orbital period. Converted orbital period to radians per second with ω = 2π / T.'
+  description_medium: Venus orbits more slowly than Earth because its year is longer.
   description_long: null
   hook: null
   caveats: null
@@ -220,10 +220,10 @@ items:
 - id: obs:angular-velocity:entity-mercury-orbit-angular-velocity
   name: Mercury orbit around the Sun
   value: 8.266772328741615e-07
-  description: 'Mercury moves fastest around the Sun, so its orbital angular velocity is relatively large. Source-side figure: `87.9691 days per revolution` for Derived from Mercury''s orbital period. Converted orbital period to radians per second with ω = 2π / T.'
+  description: Mercury moves fastest around the Sun, so its orbital angular velocity is relatively large.
   description_format: markdown
   summary_short: Mercury moves fastest around the Sun, so its orbital angular velocity is relatively large.
-  description_medium: 'Mercury moves fastest around the Sun, so its orbital angular velocity is relatively large. Source-side figure: `87.9691 days per revolution` for Derived from Mercury''s orbital period. Converted orbital period to radians per second with ω = 2π / T.'
+  description_medium: Mercury moves fastest around the Sun, so its orbital angular velocity is relatively large.
   description_long: null
   hook: null
   caveats: null
@@ -267,10 +267,10 @@ items:
 - id: obs:angular-velocity:entity-angular-velocity-moon-orbit
   name: Moon orbit
   value: 2.66e-06
-  description: 'The Moon’s orbital motion is much slower than Earth’s spin. Here the quantity refers to `orbital angular velocity`. Source-side figure: `2.66e-06 rad/s` for Derived from the Moon’s orbital period around Earth.'
+  description: The Moon’s orbital motion is much slower than Earth’s spin.
   description_format: markdown
   summary_short: The Moon’s orbital motion is much slower than Earth’s spin.
-  description_medium: 'The Moon’s orbital motion is much slower than Earth’s spin. Here the quantity refers to `orbital angular velocity`. Source-side figure: `2.66e-06 rad/s` for Derived from the Moon’s orbital period around Earth.'
+  description_medium: The Moon’s orbital motion is much slower than Earth’s spin.
   description_long: null
   hook: null
   caveats: null
@@ -314,10 +314,10 @@ items:
 - id: obs:angular-velocity:entity-moon-orbit-angular-velocity
   name: Moon orbit around Earth
   value: 2.66e-06
-  description: 'The Moon orbits Earth with an angular speed of only a few micro-radians per second. Source-side figure: `27.3 days per revolution` for Angular speed derived from lunar orbital period. Converted days to seconds before applying 2*pi/T.'
+  description: The Moon orbits Earth with an angular speed of only a few micro-radians per second.
   description_format: markdown
   summary_short: The Moon orbits Earth with an angular speed of only a few micro-radians per second.
-  description_medium: 'The Moon orbits Earth with an angular speed of only a few micro-radians per second. Source-side figure: `27.3 days per revolution` for Angular speed derived from lunar orbital period. Converted days to seconds before applying 2*pi/T.'
+  description_medium: The Moon orbits Earth with an angular speed of only a few micro-radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -358,60 +358,13 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:angular-velocity:entity-angular-velocity-earth-rotation
-  name: Earth rotation
-  value: 7.2921159e-05
-  description: 'Earth’s spin is a useful planetary angular-velocity anchor. Here the quantity refers to `sidereal spin`. Source-side figure: `7.29212e-05 rad/s` for Derived from Earth’s sidereal day.'
-  description_format: markdown
-  summary_short: Earth’s spin is a useful planetary angular-velocity anchor.
-  description_medium: 'Earth’s spin is a useful planetary angular-velocity anchor. Here the quantity refers to `sidereal spin`. Source-side figure: `7.29212e-05 rad/s` for Derived from Earth’s sidereal day.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Earth rotation
-    ingest_source: dataset/raw/curated/angular-velocity.json
-    source_trace:
-      derivation_note: omega = 2*pi / sidereal_day
-      method: derived
-      original_value_text: '7.2921159e-05'
-      source_basis: Derived from Earth’s sidereal day.
-      source_unit: rad/s
-      source_url: https://en.wikipedia.org/wiki/Earth
-      source_value_text: '7.29212e-05'
-  source: https://en.wikipedia.org/wiki/Earth
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-earth
-    url: https://en.wikipedia.org/wiki/Earth
-    title: Earth
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-angular-velocity-json
-    url: repo://dataset/raw/curated/angular-velocity.json
-    title: dataset/raw/curated/angular-velocity.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: sidereal spin
 - id: obs:angular-velocity:entity-earth-rotation-angular-velocity
   name: Earth rotation
   value: 7.2921159e-05
-  description: 'The Earth completes one sidereal rotation in about 23 hours 56 minutes. Source-side figure: `86164 s per rotation` for Angular speed derived from the Earth rotation period.'
+  description: The Earth completes one sidereal rotation in about 23 hours 56 minutes.
   description_format: markdown
   summary_short: The Earth completes one sidereal rotation in about 23 hours 56 minutes.
-  description_medium: 'The Earth completes one sidereal rotation in about 23 hours 56 minutes. Source-side figure: `86164 s per rotation` for Angular speed derived from the Earth rotation period.'
+  description_medium: The Earth completes one sidereal rotation in about 23 hours 56 minutes.
   description_long: null
   hook: null
   caveats: null
@@ -454,10 +407,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-hour-hand
   name: Hour hand
   value: 0.0001454
-  description: 'The hour hand of a clock turns slowly enough to live in the milliradian-per-second range. Here the quantity refers to `clock hand rotation`. Source-side figure: `0.0001454 rad/s` for Computed from one full rotation per 12 hours.'
+  description: The hour hand of a clock turns slowly enough to live in the milliradian-per-second range.
   description_format: markdown
   summary_short: The hour hand of a clock turns slowly enough to live in the milliradian-per-second range.
-  description_medium: 'The hour hand of a clock turns slowly enough to live in the milliradian-per-second range. Here the quantity refers to `clock hand rotation`. Source-side figure: `0.0001454 rad/s` for Computed from one full rotation per 12 hours.'
+  description_medium: The hour hand of a clock turns slowly enough to live in the milliradian-per-second range.
   description_long: null
   hook: null
   caveats: null
@@ -501,10 +454,10 @@ items:
 - id: obs:angular-velocity:scenario-hour-hand-angular-velocity
   name: Hour hand
   value: 0.000145444104332861
-  description: 'A clock hour hand completes one turn every 12 hours. Source-side figure: `12 h per revolution` for Angular speed of a clock hour hand. Converted hours to seconds before applying 2*pi/T.'
+  description: A clock hour hand completes one turn every 12 hours.
   description_format: markdown
   summary_short: A clock hour hand completes one turn every 12 hours.
-  description_medium: 'A clock hour hand completes one turn every 12 hours. Source-side figure: `12 h per revolution` for Angular speed of a clock hour hand. Converted hours to seconds before applying 2*pi/T.'
+  description_medium: A clock hour hand completes one turn every 12 hours.
   description_long: null
   hook: null
   caveats: null
@@ -548,10 +501,10 @@ items:
 - id: obs:angular-velocity:entity-saturn-rotation-angular-velocity
   name: Saturn rotation
   value: 0.00016378840578024865
-  description: 'Saturn also rotates quickly, giving it a short day. Source-side figure: `10.656 hours per rotation` for Derived from Saturn''s rotation period. Converted rotation period to radians per second with ω = 2π / T.'
+  description: Saturn also rotates quickly, giving it a short day.
   description_format: markdown
   summary_short: Saturn also rotates quickly, giving it a short day.
-  description_medium: 'Saturn also rotates quickly, giving it a short day. Source-side figure: `10.656 hours per rotation` for Derived from Saturn''s rotation period. Converted rotation period to radians per second with ω = 2π / T.'
+  description_medium: Saturn also rotates quickly, giving it a short day.
   description_long: null
   hook: null
   caveats: null
@@ -595,10 +548,10 @@ items:
 - id: obs:angular-velocity:entity-jupiter-rotation-angular-velocity
   name: Jupiter rotation
   value: 0.00017585181380295513
-  description: 'Jupiter is a rapid spinner despite its enormous size. Source-side figure: `9.925 hours per rotation` for Derived from Jupiter''s rotation period. Converted rotation period to radians per second with ω = 2π / T.'
+  description: Jupiter is a rapid spinner despite its enormous size.
   description_format: markdown
   summary_short: Jupiter is a rapid spinner despite its enormous size.
-  description_medium: 'Jupiter is a rapid spinner despite its enormous size. Source-side figure: `9.925 hours per rotation` for Derived from Jupiter''s rotation period. Converted rotation period to radians per second with ω = 2π / T.'
+  description_medium: Jupiter is a rapid spinner despite its enormous size.
   description_long: null
   hook: null
   caveats: null
@@ -642,10 +595,10 @@ items:
 - id: obs:angular-velocity:entity-iss-orbit-angular-velocity
   name: ISS orbit
   value: 0.0011382582078223887
-  description: 'The ISS circles Earth in roughly ninety-two minutes. Source-side figure: `92 min per revolution` for Angular speed derived from ISS orbital period.'
+  description: The ISS circles Earth in roughly ninety-two minutes.
   description_format: markdown
   summary_short: The ISS circles Earth in roughly ninety-two minutes.
-  description_medium: 'The ISS circles Earth in roughly ninety-two minutes. Source-side figure: `92 min per revolution` for Angular speed derived from ISS orbital period.'
+  description_medium: The ISS circles Earth in roughly ninety-two minutes.
   description_long: null
   hook: null
   caveats: null
@@ -688,10 +641,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-minute-hand
   name: Minute hand
   value: 0.001745
-  description: 'The minute hand provides a familiar low angular velocity. Here the quantity refers to `clock hand rotation`. Source-side figure: `0.001745 rad/s` for Computed from one full rotation per hour.'
+  description: The minute hand provides a familiar low angular velocity.
   description_format: markdown
   summary_short: The minute hand provides a familiar low angular velocity.
-  description_medium: 'The minute hand provides a familiar low angular velocity. Here the quantity refers to `clock hand rotation`. Source-side figure: `0.001745 rad/s` for Computed from one full rotation per hour.'
+  description_medium: The minute hand provides a familiar low angular velocity.
   description_long: null
   hook: null
   caveats: null
@@ -735,10 +688,10 @@ items:
 - id: obs:angular-velocity:scenario-minute-hand-angular-velocity
   name: Minute hand
   value: 0.0017453292519943296
-  description: 'A clock minute hand completes one turn per hour. Source-side figure: `1 h per revolution` for Angular speed of a clock minute hand. Converted hours to seconds before applying 2*pi/T.'
+  description: A clock minute hand completes one turn per hour.
   description_format: markdown
   summary_short: A clock minute hand completes one turn per hour.
-  description_medium: 'A clock minute hand completes one turn per hour. Source-side figure: `1 h per revolution` for Angular speed of a clock minute hand. Converted hours to seconds before applying 2*pi/T.'
+  description_medium: A clock minute hand completes one turn per hour.
   description_long: null
   hook: null
   caveats: null
@@ -782,10 +735,10 @@ items:
 - id: obs:angular-velocity:entity-london-eye-angular-velocity
   name: London Eye
   value: 0.003490658503988659
-  description: 'The London Eye turns slowly enough that riders barely notice the rotation. Source-side figure: `30 min per revolution` for Angular speed from a typical London Eye revolution time.'
+  description: The London Eye turns slowly enough that riders barely notice the rotation.
   description_format: markdown
   summary_short: The London Eye turns slowly enough that riders barely notice the rotation.
-  description_medium: 'The London Eye turns slowly enough that riders barely notice the rotation. Source-side figure: `30 min per revolution` for Angular speed from a typical London Eye revolution time.'
+  description_medium: The London Eye turns slowly enough that riders barely notice the rotation.
   description_long: null
   hook: null
   caveats: null
@@ -828,10 +781,10 @@ items:
 - id: obs:angular-velocity:scenario-second-hand-angular-velocity
   name: Second hand
   value: 0.10471975511965977
-  description: 'A clock second hand completes one turn per minute. Source-side figure: `60 s per revolution` for Angular speed of a clock second hand.'
+  description: A clock second hand completes one turn per minute.
   description_format: markdown
   summary_short: A clock second hand completes one turn per minute.
-  description_medium: 'A clock second hand completes one turn per minute. Source-side figure: `60 s per revolution` for Angular speed of a clock second hand.'
+  description_medium: A clock second hand completes one turn per minute.
   description_long: null
   hook: null
   caveats: null
@@ -874,10 +827,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-microwave-turntable
   name: Microwave turntable
   value: 0.6283185307179586
-  description: 'Microwave turntables rotate slowly, just enough to even out heating. Source-side figure: `6 rpm` for Converted 6 rpm to radians per second. Converted rpm to radians per second.'
+  description: Microwave turntables rotate slowly, just enough to even out heating.
   description_format: markdown
   summary_short: Microwave turntables rotate slowly, just enough to even out heating.
-  description_medium: 'Microwave turntables rotate slowly, just enough to even out heating. Source-side figure: `6 rpm` for Converted 6 rpm to radians per second. Converted rpm to radians per second.'
+  description_medium: Microwave turntables rotate slowly, just enough to even out heating.
   description_long: null
   hook: null
   caveats: null
@@ -920,10 +873,10 @@ items:
 - id: obs:angular-velocity:entity-record-player-33rpm
   name: 33 1/3 rpm record
   value: 3.490658503988659
-  description: 'A vinyl record player speed of 33 1/3 rpm. Source-side figure: `33.333 rpm` for Record-player rotation rate. Converted rpm to rad/s.'
+  description: A vinyl record player speed of 33 1/3 rpm.
   description_format: markdown
   summary_short: A vinyl record player speed of 33 1/3 rpm.
-  description_medium: 'A vinyl record player speed of 33 1/3 rpm. Source-side figure: `33.333 rpm` for Record-player rotation rate. Converted rpm to rad/s.'
+  description_medium: A vinyl record player speed of 33 1/3 rpm.
   description_long: null
   hook: null
   caveats: null
@@ -966,10 +919,10 @@ items:
 - id: obs:angular-velocity:entity-vinyl-record-45rpm
   name: 45 rpm vinyl record
   value: 4.71238898038469
-  description: 'A 45 rpm record is a familiar mid-speed spinning disc. Source-side figure: `45 rpm` for Converted 45 rpm to radians per second. Converted rpm to radians per second.'
+  description: A 45 rpm record is a familiar mid-speed spinning disc.
   description_format: markdown
   summary_short: A 45 rpm record is a familiar mid-speed spinning disc.
-  description_medium: 'A 45 rpm record is a familiar mid-speed spinning disc. Source-side figure: `45 rpm` for Converted 45 rpm to radians per second. Converted rpm to radians per second.'
+  description_medium: A 45 rpm record is a familiar mid-speed spinning disc.
   description_long: null
   hook: null
   caveats: null
@@ -1012,10 +965,10 @@ items:
 - id: obs:angular-velocity:entity-shellac-record-78rpm
   name: 78 rpm record
   value: 8.168140899333462
-  description: 'Old shellac records spun faster than 45 rpm singles. Source-side figure: `78 rpm` for Converted 78 rpm to radians per second. Converted rpm to radians per second.'
+  description: Old shellac records spun faster than 45 rpm singles.
   description_format: markdown
   summary_short: Old shellac records spun faster than 45 rpm singles.
-  description_medium: 'Old shellac records spun faster than 45 rpm singles. Source-side figure: `78 rpm` for Converted 78 rpm to radians per second. Converted rpm to radians per second.'
+  description_medium: Old shellac records spun faster than 45 rpm singles.
   description_long: null
   hook: null
   caveats: null
@@ -1058,10 +1011,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-ceiling-fan
   name: Ceiling fan
   value: 10.0
-  description: 'A ceiling fan is a comfortable household reference for a few radians per second. Here the quantity refers to `blade rotation`. Source-side figure: `10 rad/s` for Representative ceiling fan rotational speed.'
+  description: A ceiling fan is a comfortable household reference for a few radians per second.
   description_format: markdown
   summary_short: A ceiling fan is a comfortable household reference for a few radians per second.
-  description_medium: 'A ceiling fan is a comfortable household reference for a few radians per second. Here the quantity refers to `blade rotation`. Source-side figure: `10 rad/s` for Representative ceiling fan rotational speed.'
+  description_medium: A ceiling fan is a comfortable household reference for a few radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1104,10 +1057,10 @@ items:
 - id: obs:angular-velocity:entity-ceiling-fan-angular-velocity
   name: Ceiling fan
   value: 15.7079632679
-  description: 'A household ceiling fan is a nice mid-scale angular-velocity reference. Source-side figure: `150 rpm` for Representative ceiling-fan speed. Converted rpm to rad/s.'
+  description: A household ceiling fan is a nice mid-scale angular-velocity reference.
   description_format: markdown
   summary_short: A household ceiling fan is a nice mid-scale angular-velocity reference.
-  description_medium: 'A household ceiling fan is a nice mid-scale angular-velocity reference. Source-side figure: `150 rpm` for Representative ceiling-fan speed. Converted rpm to rad/s.'
+  description_medium: A household ceiling fan is a nice mid-scale angular-velocity reference.
   description_long: null
   hook: null
   caveats: null
@@ -1150,10 +1103,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-bicycle-wheel-20kmh
   name: Bicycle wheel at 20 km/h
   value: 16.33986928104575
-  description: 'A road-bike wheel at city speed turns at a few tens of radians per second. Source-side figure: `20 km/h` for Angular speed for a 0.34 m radius wheel at 20 km/h.'
+  description: A road-bike wheel at city speed turns at a few tens of radians per second.
   description_format: markdown
   summary_short: A road-bike wheel at city speed turns at a few tens of radians per second.
-  description_medium: 'A road-bike wheel at city speed turns at a few tens of radians per second. Source-side figure: `20 km/h` for Angular speed for a 0.34 m radius wheel at 20 km/h.'
+  description_medium: A road-bike wheel at city speed turns at a few tens of radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1196,10 +1149,10 @@ items:
 - id: obs:angular-velocity:scenario-bicycle-wheel-city-speed
   name: Bicycle wheel at city speed
   value: 18.0
-  description: 'A representative bicycle wheel angular speed while riding through a city. Source-side figure: `about 170 rpm` for Representative bicycle wheel rotation rate. Converted rpm to rad/s.'
+  description: A representative bicycle wheel angular speed while riding through a city.
   description_format: markdown
   summary_short: A representative bicycle wheel angular speed while riding through a city.
-  description_medium: 'A representative bicycle wheel angular speed while riding through a city. Source-side figure: `about 170 rpm` for Representative bicycle wheel rotation rate. Converted rpm to rad/s.'
+  description_medium: A representative bicycle wheel angular speed while riding through a city.
   description_long: null
   hook: null
   caveats: null
@@ -1242,10 +1195,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-bicycle-wheel
   name: Bicycle wheel
   value: 20.0
-  description: 'A spinning bicycle wheel lands in the everyday mechanical range. Here the quantity refers to `wheel spin`. Source-side figure: `20 rad/s` for Representative cadence for moderate cycling speed.'
+  description: A spinning bicycle wheel lands in the everyday mechanical range.
   description_format: markdown
   summary_short: A spinning bicycle wheel lands in the everyday mechanical range.
-  description_medium: 'A spinning bicycle wheel lands in the everyday mechanical range. Here the quantity refers to `wheel spin`. Source-side figure: `20 rad/s` for Representative cadence for moderate cycling speed.'
+  description_medium: A spinning bicycle wheel lands in the everyday mechanical range.
   description_long: null
   hook: null
   caveats: null
@@ -1288,10 +1241,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-car-wheel-60mph
   name: Car wheel at 60 mph
   value: 83.82
-  description: 'A passenger-car wheel at highway speed spins at around eighty radians per second. Source-side figure: `60 mph` for Angular speed for a 0.32 m radius wheel at 60 mph.'
+  description: A passenger-car wheel at highway speed spins at around eighty radians per second.
   description_format: markdown
   summary_short: A passenger-car wheel at highway speed spins at around eighty radians per second.
-  description_medium: 'A passenger-car wheel at highway speed spins at around eighty radians per second. Source-side figure: `60 mph` for Angular speed for a 0.32 m radius wheel at 60 mph.'
+  description_medium: A passenger-car wheel at highway speed spins at around eighty radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1334,10 +1287,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-washing-machine-spin
   name: Washing machine spin
   value: 125.0
-  description: 'A spin cycle is a useful bridge between everyday and industrial rotation. Here the quantity refers to `drum speed`. Source-side figure: `125 rad/s` for Representative spin-cycle speed around 1200 RPM.'
+  description: A spin cycle is a useful bridge between everyday and industrial rotation.
   description_format: markdown
   summary_short: A spin cycle is a useful bridge between everyday and industrial rotation.
-  description_medium: 'A spin cycle is a useful bridge between everyday and industrial rotation. Here the quantity refers to `drum speed`. Source-side figure: `125 rad/s` for Representative spin-cycle speed around 1200 RPM.'
+  description_medium: A spin cycle is a useful bridge between everyday and industrial rotation.
   description_long: null
   hook: null
   caveats: null
@@ -1381,10 +1334,10 @@ items:
 - id: obs:angular-velocity:entity-washing-machine-spin
   name: Washing machine spin cycle
   value: 125.66370614359172
-  description: 'A 1200 rpm spin cycle is already over one hundred radians per second. Source-side figure: `1200 rpm` for Representative washing-machine spin rate. Converted rpm to rad/s.'
+  description: A 1200 rpm spin cycle is already over one hundred radians per second.
   description_format: markdown
   summary_short: A 1200 rpm spin cycle is already over one hundred radians per second.
-  description_medium: 'A 1200 rpm spin cycle is already over one hundred radians per second. Source-side figure: `1200 rpm` for Representative washing-machine spin rate. Converted rpm to rad/s.'
+  description_medium: A 1200 rpm spin cycle is already over one hundred radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1427,10 +1380,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-car-engine
   name: Car engine
   value: 314.0
-  description: 'A car engine at roughly 3000 RPM provides a high but still accessible benchmark. Here the quantity refers to `crankshaft speed`. Source-side figure: `314 rad/s` for Converted from 3000 revolutions per minute.'
+  description: A car engine at roughly 3000 RPM provides a high but still accessible benchmark.
   description_format: markdown
   summary_short: A car engine at roughly 3000 RPM provides a high but still accessible benchmark.
-  description_medium: 'A car engine at roughly 3000 RPM provides a high but still accessible benchmark. Here the quantity refers to `crankshaft speed`. Source-side figure: `314 rad/s` for Converted from 3000 revolutions per minute.'
+  description_medium: A car engine at roughly 3000 RPM provides a high but still accessible benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1474,10 +1427,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-blender-blade
   name: Blender blade
   value: 500.0
-  description: 'A kitchen blender blade spins much faster than household fans. Here the quantity refers to `blade speed`. Source-side figure: `500 rad/s` for Representative blender motor speed.'
+  description: A kitchen blender blade spins much faster than household fans.
   description_format: markdown
   summary_short: A kitchen blender blade spins much faster than household fans.
-  description_medium: 'A kitchen blender blade spins much faster than household fans. Here the quantity refers to `blade speed`. Source-side figure: `500 rad/s` for Representative blender motor speed.'
+  description_medium: A kitchen blender blade spins much faster than household fans.
   description_long: null
   hook: null
   caveats: null
@@ -1520,10 +1473,10 @@ items:
 - id: obs:angular-velocity:entity-hard-drive-5400rpm
   name: Hard drive platter at 5400 rpm
   value: 565.4866776461628
-  description: 'A 5400 rpm hard drive spins far faster than a record player. Source-side figure: `5400 rpm` for Converted 5400 rpm to radians per second. Converted rpm to radians per second.'
+  description: A 5400 rpm hard drive spins far faster than a record player.
   description_format: markdown
   summary_short: A 5400 rpm hard drive spins far faster than a record player.
-  description_medium: 'A 5400 rpm hard drive spins far faster than a record player. Source-side figure: `5400 rpm` for Converted 5400 rpm to radians per second. Converted rpm to radians per second.'
+  description_medium: A 5400 rpm hard drive spins far faster than a record player.
   description_long: null
   hook: null
   caveats: null
@@ -1566,10 +1519,10 @@ items:
 - id: obs:angular-velocity:entity-drone-propeller-angular-velocity
   name: Drone propeller
   value: 628.3185307179587
-  description: 'Small drone propellers can spin at several thousand revolutions per minute. Source-side figure: `6000 rpm` for Converted 6000 rpm to radians per second. Converted rpm to radians per second.'
+  description: Small drone propellers can spin at several thousand revolutions per minute.
   description_format: markdown
   summary_short: Small drone propellers can spin at several thousand revolutions per minute.
-  description_medium: 'Small drone propellers can spin at several thousand revolutions per minute. Source-side figure: `6000 rpm` for Converted 6000 rpm to radians per second. Converted rpm to radians per second.'
+  description_medium: Small drone propellers can spin at several thousand revolutions per minute.
   description_long: null
   hook: null
   caveats: null
@@ -1612,10 +1565,10 @@ items:
 - id: obs:angular-velocity:entity-hard-drive-7200rpm
   name: Hard drive platter at 7200 rpm
   value: 753.9822368615503
-  description: 'A common hard-drive spindle speed converted to radians per second. Source-side figure: `7200 rpm` for Common hard-drive spindle speed. Converted rpm to rad/s.'
+  description: A common hard-drive spindle speed converted to radians per second.
   description_format: markdown
   summary_short: A common hard-drive spindle speed converted to radians per second.
-  description_medium: 'A common hard-drive spindle speed converted to radians per second. Source-side figure: `7200 rpm` for Common hard-drive spindle speed. Converted rpm to rad/s.'
+  description_medium: A common hard-drive spindle speed converted to radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1658,10 +1611,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-hard-drive-spindle
   name: Hard drive spindle
   value: 754.0
-  description: 'A 7200 RPM hard drive lives deep in the hundreds of radians per second range. Here the quantity refers to `spindle speed`. Source-side figure: `754 rad/s` for Converted from 7200 revolutions per minute.'
+  description: A 7200 RPM hard drive lives deep in the hundreds of radians per second range.
   description_format: markdown
   summary_short: A 7200 RPM hard drive lives deep in the hundreds of radians per second range.
-  description_medium: 'A 7200 RPM hard drive lives deep in the hundreds of radians per second range. Here the quantity refers to `spindle speed`. Source-side figure: `754 rad/s` for Converted from 7200 revolutions per minute.'
+  description_medium: A 7200 RPM hard drive lives deep in the hundreds of radians per second range.
   description_long: null
   hook: null
   caveats: null
@@ -1705,10 +1658,10 @@ items:
 - id: obs:angular-velocity:scenario-angular-velocity-pulsar
   name: Pulsar
   value: 1000.0
-  description: 'Fast neutron stars push angular velocity far beyond familiar machinery. Here the quantity refers to `stellar spin`. Source-side figure: `1000 rad/s` for Representative pulsar spin rate from a few hundred milliseconds per rotation.'
+  description: Fast neutron stars push angular velocity far beyond familiar machinery.
   description_format: markdown
   summary_short: Fast neutron stars push angular velocity far beyond familiar machinery.
-  description_medium: 'Fast neutron stars push angular velocity far beyond familiar machinery. Here the quantity refers to `stellar spin`. Source-side figure: `1000 rad/s` for Representative pulsar spin rate from a few hundred milliseconds per rotation.'
+  description_medium: Fast neutron stars push angular velocity far beyond familiar machinery.
   description_long: null
   hook: null
   caveats: null
@@ -1752,10 +1705,10 @@ items:
 - id: obs:angular-velocity:entity-gas-turbine-angular-velocity
   name: Fast gas turbine
   value: 1047.1975511965977
-  description: 'A ten-thousand-rpm gas turbine shaft is typical of fast rotating turbomachinery. Source-side figure: `10000 rpm` for Representative gas-turbine rotational speed. Converted rpm to rad/s.'
+  description: A ten-thousand-rpm gas turbine shaft is typical of fast rotating turbomachinery.
   description_format: markdown
   summary_short: A ten-thousand-rpm gas turbine shaft is typical of fast rotating turbomachinery.
-  description_medium: 'A ten-thousand-rpm gas turbine shaft is typical of fast rotating turbomachinery. Source-side figure: `10000 rpm` for Representative gas-turbine rotational speed. Converted rpm to rad/s.'
+  description_medium: A ten-thousand-rpm gas turbine shaft is typical of fast rotating turbomachinery.
   description_long: null
   hook: null
   caveats: null
@@ -1798,10 +1751,10 @@ items:
 - id: obs:angular-velocity:entity-blender-blade-speed
   name: Blender blade
   value: 2094.3951023931954
-  description: 'A representative blender speed of twenty thousand rpm. Source-side figure: `20000 rpm` for Representative blender rotation rate. Converted rpm to rad/s.'
+  description: A representative blender speed of twenty thousand rpm.
   description_format: markdown
   summary_short: A representative blender speed of twenty thousand rpm.
-  description_medium: 'A representative blender speed of twenty thousand rpm. Source-side figure: `20000 rpm` for Representative blender rotation rate. Converted rpm to rad/s.'
+  description_medium: A representative blender speed of twenty thousand rpm.
   description_long: null
   hook: null
   caveats: null
@@ -1844,10 +1797,10 @@ items:
 - id: obs:angular-velocity:entity-millisecond-pulsar-angular-velocity
   name: Fast millisecond pulsar
   value: 4498.0
-  description: 'A millisecond pulsar spinning at hundreds of hertz has an angular velocity in the thousands of radians per second. Source-side figure: `716 Hz` for Representative fast pulsar spin frequency. Multiplied frequency by 2*pi to convert hertz to radians per second.'
+  description: A millisecond pulsar spinning at hundreds of hertz has an angular velocity in the thousands of radians per second.
   description_format: markdown
   summary_short: A millisecond pulsar spinning at hundreds of hertz has an angular velocity in the thousands of radians per second.
-  description_medium: 'A millisecond pulsar spinning at hundreds of hertz has an angular velocity in the thousands of radians per second. Source-side figure: `716 Hz` for Representative fast pulsar spin frequency. Multiplied frequency by 2*pi to convert hertz to radians per second.'
+  description_medium: A millisecond pulsar spinning at hundreds of hertz has an angular velocity in the thousands of radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1891,10 +1844,10 @@ items:
 - id: obs:angular-velocity:entity-psr-j1748-2446ad-angular-velocity
   name: Fastest known pulsar
   value: 4498.760679940584
-  description: 'The fastest known pulsar spins hundreds of times per second. Source-side figure: `716 Hz` for Angular speed of pulsar PSR J1748-2446ad.'
+  description: The fastest known pulsar spins hundreds of times per second.
   description_format: markdown
   summary_short: The fastest known pulsar spins hundreds of times per second.
-  description_medium: 'The fastest known pulsar spins hundreds of times per second. Source-side figure: `716 Hz` for Angular speed of pulsar PSR J1748-2446ad.'
+  description_medium: The fastest known pulsar spins hundreds of times per second.
   description_long: null
   hook: null
   caveats: null
@@ -1937,10 +1890,10 @@ items:
 - id: obs:angular-velocity:entity-ultracentrifuge-rotor
   name: Ultracentrifuge rotor
   value: 10471.975511965979
-  description: 'A 100,000 rpm ultracentrifuge rotor reaches over ten thousand radians per second. Source-side figure: `100000 rpm` for Representative ultracentrifuge speed. Converted rpm to rad/s.'
+  description: A 100,000 rpm ultracentrifuge rotor reaches over ten thousand radians per second.
   description_format: markdown
   summary_short: A 100,000 rpm ultracentrifuge rotor reaches over ten thousand radians per second.
-  description_medium: 'A 100,000 rpm ultracentrifuge rotor reaches over ten thousand radians per second. Source-side figure: `100000 rpm` for Representative ultracentrifuge speed. Converted rpm to rad/s.'
+  description_medium: A 100,000 rpm ultracentrifuge rotor reaches over ten thousand radians per second.
   description_long: null
   hook: null
   caveats: null
@@ -1983,10 +1936,10 @@ items:
 - id: obs:angular-velocity:entity-dentist-drill-speed
   name: Dentist drill turbine
   value: 41887.90204786391
-  description: 'A very fast dental drill can reach hundreds of thousands of rpm. Source-side figure: `400000 rpm` for Representative dental turbine speed. Converted rpm to rad/s.'
+  description: A very fast dental drill can reach hundreds of thousands of rpm.
   description_format: markdown
   summary_short: A very fast dental drill can reach hundreds of thousands of rpm.
-  description_medium: 'A very fast dental drill can reach hundreds of thousands of rpm. Source-side figure: `400000 rpm` for Representative dental turbine speed. Converted rpm to rad/s.'
+  description_medium: A very fast dental drill can reach hundreds of thousands of rpm.
   description_long: null
   hook: null
   caveats: null

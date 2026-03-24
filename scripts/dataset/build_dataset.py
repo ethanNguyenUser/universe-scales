@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import shutil
 import sqlite3
 import sys
@@ -139,6 +140,16 @@ def first_sentence(text: str) -> str:
     return normalized
 
 
+def clean_trace_text(value: Any) -> Any:
+    if value is None or isinstance(value, bool) or is_number(value):
+        return value
+    text = str(value)
+    text = text.replace("\u0007", r"\approx ")
+    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
 def format_source_value(source_value_text: Any, source_unit: Any) -> str:
     value_text = str(source_value_text or "").strip()
     unit_text = str(source_unit or "").strip()
@@ -149,6 +160,52 @@ def format_source_value(source_value_text: Any, source_unit: Any) -> str:
     if numeric_candidate.isdigit():
         return f"{value_text} {unit_text}"
     return value_text
+
+
+def latexify_inline_math(value: Any) -> str:
+    text = " ".join(str(value or "").split())
+    if not text:
+        return ""
+    text = text.replace("×", r" \times ")
+    text = text.replace("*", r" \times ")
+    text = text.replace("pi", r"\pi")
+    text = text.replace(" uA", r" \,\mu\mathrm{A}")
+    text = text.replace(" uC", r" \,\mu\mathrm{C}")
+    text = text.replace(" uF", r" \,\mu\mathrm{F}")
+    text = text.replace(" uK", r" \,\mu\mathrm{K}")
+    text = text.replace(" pA", r" \,\mathrm{pA}")
+    text = text.replace(" nA", r" \,\mathrm{nA}")
+    text = text.replace(" mA", r" \,\mathrm{mA}")
+    text = text.replace(" kA", r" \,\mathrm{kA}")
+    text = text.replace(" MA", r" \,\mathrm{MA}")
+    text = text.replace(" C", r" \,\mathrm{C}")
+    text = text.replace(" A", r" \,\mathrm{A}")
+    text = text.replace(" V", r" \,\mathrm{V}")
+    text = text.replace(" K", r" \,\mathrm{K}")
+    text = text.replace(" W", r" \,\mathrm{W}")
+    text = text.replace(" F", r" \,\mathrm{F}")
+    text = text.replace(" deg", r"^\circ")
+    return re.sub(r"(?<![A-Za-z])([+-]?\d+(?:\.\d+)?)e([+-]?\d+)", r"\1 \\times 10^{\2}", text)
+
+
+def choose_subject_canonical_name(existing_name: str, candidate_name: str) -> str:
+    existing = (existing_name or "").strip()
+    candidate = (candidate_name or "").strip()
+    if not existing:
+        return candidate
+    if not candidate:
+        return existing
+
+    existing_lower = existing.lower()
+    candidate_lower = candidate.lower()
+
+    if existing_lower == candidate_lower:
+        return existing
+    if candidate_lower in existing_lower:
+        return candidate
+    if existing_lower in candidate_lower:
+        return existing
+    return existing
 
 
 def is_reference_category(category: Any) -> bool:
@@ -178,6 +235,7 @@ class DatasetBuilder:
         self.subjects_by_key: dict[str, dict[str, Any]] = {}
         self.sources_by_url: dict[str, str] = {}
         self.observation_meta: dict[str, dict[str, Any]] = {}
+        self.observation_fingerprints: dict[tuple[str, str, float], str] = {}
         self.coverage_report: dict[str, Any] = {}
 
     def run(self) -> None:
@@ -570,7 +628,7 @@ class DatasetBuilder:
                 legacy=True,
             ),
         )
-        self.insert_observation(
+        observation_id = self.insert_observation(
             observation_id=observation_id,
             subject_id=subject_id,
             dimension_id=dimension_id,
@@ -671,7 +729,7 @@ class DatasetBuilder:
                     raw_payload=payload,
                 ),
             )
-            self.insert_observation(
+            observation_id = self.insert_observation(
                 observation_id=observation_id,
                 subject_id=subject_id,
                 dimension_id=dimension_id,
@@ -772,8 +830,8 @@ class DatasetBuilder:
                 replacement_summary = summary
             if existing["canonical_name"] == current_summary and canonical_name:
                 replacement_summary = summary or replacement_summary
-            if canonical_name and len(canonical_name) > len(existing["canonical_name"]):
-                existing["canonical_name"] = canonical_name
+            if canonical_name:
+                existing["canonical_name"] = choose_subject_canonical_name(existing["canonical_name"], canonical_name)
             self.db.execute(
                 """
                 UPDATE subjects
@@ -845,47 +903,7 @@ class DatasetBuilder:
         qualifiers: dict[str, Any],
         source_trace: dict[str, Any] | None = None,
     ) -> str:
-        text = " ".join((base_text or "").split())
-        if not text:
-            text = ""
-
-        notes: list[str] = []
-        measurement = qualifiers.get("measurement")
-        derivation = qualifiers.get("derivation")
-        assumption = qualifiers.get("assumption")
-
-        if value_type == "derived" and derivation:
-            notes.append(f"Derived using `{derivation}`.")
-        elif derivation:
-            notes.append(f"Computed using `{derivation}`.")
-
-        if measurement and f"`{measurement}`" not in text and f" {measurement}" not in text:
-            notes.append(f"Here the quantity refers to `{measurement}`.")
-
-        if assumption:
-            notes.append(f"Assumes `{assumption}`.")
-
-        if source_trace:
-            source_value_text = source_trace.get("source_value_text")
-            source_unit = source_trace.get("source_unit")
-            source_basis = source_trace.get("source_basis")
-            conversion_note = source_trace.get("conversion_note")
-
-            if source_value_text:
-                value_display = format_source_value(source_value_text, source_unit)
-                if source_basis:
-                    notes.append(f"Source-side figure: `{value_display}` for {source_basis.rstrip('.')}.")
-                else:
-                    notes.append(f"Source-side figure: `{value_display}`.")
-
-            if conversion_note:
-                notes.append(f"{str(conversion_note).rstrip('.')}.")
-
-        if not notes:
-            return text
-        if text and not text.endswith((".", "!", "?")):
-            text = f"{text}."
-        return f"{text} {' '.join(notes)}".strip()
+        return " ".join((base_text or "").split()).strip()
 
     def build_source_trace(
         self,
@@ -917,13 +935,13 @@ class DatasetBuilder:
         trace = {
             "method": method,
             "source_url": source_url,
-            "source_basis": source_basis,
-            "source_value_text": source_value_text,
-            "source_unit": source_unit,
-            "conversion_note": conversion_note,
-            "derivation_note": derivation,
-            "source_locator": source_locator,
-            "original_value_text": original_value_text,
+            "source_basis": clean_trace_text(source_basis),
+            "source_value_text": clean_trace_text(source_value_text),
+            "source_unit": clean_trace_text(source_unit),
+            "conversion_note": clean_trace_text(conversion_note),
+            "derivation_note": clean_trace_text(derivation),
+            "source_locator": clean_trace_text(source_locator),
+            "original_value_text": clean_trace_text(original_value_text),
         }
         return {key: value for key, value in trace.items() if value not in (None, "", [])}
 
@@ -949,7 +967,7 @@ class DatasetBuilder:
         description_medium = str(
             (override or {}).get("description_medium")
             or self.augment_default_description(
-                default_description or summary_short,
+                default_description or default_summary or summary_short,
                 value_type,
                 qualifiers,
                 source_trace=source_trace,
@@ -1003,7 +1021,12 @@ class DatasetBuilder:
         recognizability: float | None = None,
         definition_clarity: float | None = None,
         source_class: str | None = None,
-    ) -> None:
+    ) -> str:
+        fingerprint = (dimension_id, label.strip().lower(), round(float(value_base), 15))
+        existing_observation_id = self.observation_fingerprints.get(fingerprint)
+        if existing_observation_id:
+            return existing_observation_id
+
         self.db.execute(
             """
             INSERT INTO observations (
@@ -1076,6 +1099,8 @@ class DatasetBuilder:
             "recognizability_override": recognizability,
             "source_class_override": source_class,
         }
+        self.observation_fingerprints[fingerprint] = observation_id
+        return observation_id
 
     def link_observation_source(self, observation_id: str, source_id: str, *, role: str, note: str | None) -> None:
         link_id = f"osrc:{observation_id}:{source_id}:{slugify(role)}"
@@ -1802,16 +1827,16 @@ class DatasetBuilder:
             source_url = self.primary_source_url(row["id"])
             qualifiers = self.fetch_qualifiers(row["id"])
             sources = self.fetch_sources(row["id"])
-            description_medium = row["description_medium"] or row["summary_short"] or row["summary"]
+            description_text = row["description_long"] or row["description_medium"] or row["summary_short"] or row["summary"]
             items.append(
                 {
                     "id": row["id"],
                     "name": row["label"],
                     "value": row["value_base"],
-                    "description": description_medium,
+                    "description": description_text,
                     "description_format": row["content_format"] or "markdown",
                     "summary_short": row["summary_short"],
-                    "description_medium": description_medium,
+                    "description_medium": row["description_medium"] or row["summary_short"] or row["summary"],
                     "description_long": row["description_long"],
                     "hook": row["hook"],
                     "caveats": row["caveats"],

@@ -2,35 +2,35 @@
   "base_unit": "coulombs",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 31,
-    "candidate_shortfall_to_preferred_target": 19,
+    "candidate_count": 29,
+    "candidate_shortfall_to_preferred_target": 21,
     "empty_bin_count": 9,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 31,
+    "selected_count": 29,
     "selected_primary_count": 15,
-    "selected_secondary_count": 16,
+    "selected_secondary_count": 14,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 31
+      "secondary_reference": 29
     },
-    "target_selected_count": 31
+    "target_selected_count": 29
   },
   "description_format": "markdown",
   "dimension": "charge",
-  "dimension_description": "Electric charge measures how much net positive or negative charge a system carries. Some entries are direct physical charges like the elementary charge, while others are derived from capacities, battery ratings, or stored-energy assumptions. This dimension is useful for connecting microscopic charges, static electricity, capacitors, storms, and batteries on one logarithmic axis.",
+  "dimension_description": "Electric charge measures how much net positive or negative charge a system carries. This version now leans toward perspective-giving examples like static shocks, lightning, thunderclouds, batteries, and the Faraday constant rather than long ladders of arbitrary capacitors. The goal is to connect microscopic charge, biology, atmospheric electricity, and stored electrical systems on one axis.",
   "frontend_group": "fields",
   "frontend_group_label": "Fields, Waves & Radiation",
-  "frontend_order": 290,
+  "frontend_order": 530,
   "items": [
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The elementary charge is the magnitude of charge carried by a single proton or electron. Here the quantity refers to `fundamental charge magnitude`. Source-side figure: `1.602176634e-19 C` for SI defined constant for the magnitude of the elementary charge.",
+      "description": "The elementary charge is the magnitude of charge carried by a single proton or electron.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The elementary charge is the magnitude of charge carried by a single proton or electron. Here the quantity refers to `fundamental charge magnitude`. Source-side figure: `1.602176634e-19 C` for SI defined constant for the magnitude of the elementary charge.",
+      "description_medium": "The elementary charge is the magnitude of charge carried by a single proton or electron.",
       "facts": {
         "canonical_name": "Elementary charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -84,67 +84,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A proton carries one positive elementary charge. Here the quantity refers to `particle charge`. Source-side figure: `+1 e` for A proton has charge +e.",
+      "description": "An alpha particle carries two positive elementary charges.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A proton carries one positive elementary charge. Here the quantity refers to `particle charge`. Source-side figure: `+1 e` for A proton has charge +e.",
-      "facts": {
-        "canonical_name": "Proton charge",
-        "ingest_source": "dataset/raw/curated/charge.json",
-        "source_trace": {
-          "derivation_note": "Charge magnitude equals one elementary charge.",
-          "method": "derived",
-          "original_value_text": "1.602176634e-19",
-          "source_basis": "A proton has charge +e.",
-          "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Proton",
-          "source_value_text": "+1 e"
-        }
-      },
-      "hook": null,
-      "id": "obs:charge:entity-proton-charge",
-      "name": "Proton charge",
-      "qualifiers": {
-        "measurement": "particle charge"
-      },
-      "source": "https://en.wikipedia.org/wiki/Proton",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-proton",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Proton",
-          "url": "https://en.wikipedia.org/wiki/Proton"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-charge-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/charge.json",
-          "url": "repo://dataset/raw/curated/charge.json"
-        }
-      ],
-      "summary_short": "A proton carries one positive elementary charge.",
-      "value": 1.602176634e-19,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "An alpha particle carries two positive elementary charges. Here the quantity refers to `particle charge`. Source-side figure: `+2 e` for An alpha particle has charge +2e.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "An alpha particle carries two positive elementary charges. Here the quantity refers to `particle charge`. Source-side figure: `+2 e` for An alpha particle has charge +2e.",
+      "description_medium": "An alpha particle carries two positive elementary charges.",
       "facts": {
         "canonical_name": "Alpha particle charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -198,42 +141,42 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A tiny one-picofarad capacitor at one volt stores one picocoulomb of charge. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 pF x 1 V` for Derived from the capacitor relation Q = C V.",
+      "description": "Planck charge is the natural charge scale formed from fundamental constants.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A tiny one-picofarad capacitor at one volt stores one picocoulomb of charge. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 pF x 1 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "Planck charge is the natural charge scale formed from fundamental constants.",
       "facts": {
-        "canonical_name": "Charge on a 1 pF capacitor at 1 V",
+        "canonical_name": "Planck charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
-          "derivation_note": "Q = C x V",
+          "derivation_note": "q_P = \\sqrt{4\\pi\\varepsilon_0\\hbar c}",
           "method": "derived",
-          "original_value_text": "1e-12",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
+          "original_value_text": "1.8755460372050785e-18",
+          "source_basis": "Derived from c, \u0127, G, and \u03b50 using the Planck-unit charge scale.",
           "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "1 pF x 1 V"
+          "source_url": "https://en.wikipedia.org/wiki/Planck_units",
+          "source_value_text": "1.8755460372050785e-18 C"
         }
       },
       "hook": null,
-      "id": "obs:charge:scenario-charge-1pf-capacitor-1v",
-      "name": "Charge on a 1 pF capacitor at 1 V",
+      "id": "obs:charge:entity-planck-charge",
+      "name": "Planck charge",
       "qualifiers": {
-        "measurement": "stored capacitor charge"
+        "measurement": "natural charge scale"
       },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
+      "source": "https://en.wikipedia.org/wiki/Planck_units",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
+          "id": "src:https-en-wikipedia-org-wiki-planck-units",
           "license_text": "CC BY-SA 4.0",
           "note": null,
           "publisher": "Wikipedia",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
+          "title": "Planck units",
+          "url": "https://en.wikipedia.org/wiki/Planck_units"
         },
         {
           "id": "src:repo-dataset-raw-curated-charge-json",
@@ -247,107 +190,50 @@
           "url": "repo://dataset/raw/curated/charge.json"
         }
       ],
-      "summary_short": "A tiny one-picofarad capacitor at one volt stores one picocoulomb of charge.",
-      "value": 1e-12,
+      "summary_short": "Planck charge is the natural charge scale formed from fundamental constants.",
+      "value": 1.8755460372050785e-18,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Even a small 100 pF capacitor at five volts only stores a few hundred picocoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `100 pF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description": "A crackling piece of static-clung laundry carries tens of nanocoulombs to microcoulombs of excess charge.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Even a small 100 pF capacitor at five volts only stores a few hundred picocoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `100 pF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "A crackling piece of static-clung laundry carries tens of nanocoulombs to microcoulombs of excess charge.",
       "facts": {
-        "canonical_name": "Charge on a 100 pF capacitor at 5 V",
+        "canonical_name": "Static cling from synthetic laundry",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
-          "derivation_note": "Q = C x V",
-          "method": "derived",
-          "original_value_text": "5e-10",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
-          "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "100 pF x 5 V"
-        }
-      },
-      "hook": null,
-      "id": "obs:charge:scenario-charge-100pf-capacitor-5v",
-      "name": "Charge on a 100 pF capacitor at 5 V",
-      "qualifiers": {
-        "measurement": "stored capacitor charge"
-      },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-charge-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/charge.json",
-          "url": "repo://dataset/raw/curated/charge.json"
-        }
-      ],
-      "summary_short": "Even a small 100 pF capacitor at five volts only stores a few hundred picocoulombs.",
-      "value": 5e-10,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A modest ten-nanofarad capacitor at five volts stores tens of nanocoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `10 nF x 5 V` for Derived from the capacitor relation Q = C V.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A modest ten-nanofarad capacitor at five volts stores tens of nanocoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `10 nF x 5 V` for Derived from the capacitor relation Q = C V.",
-      "facts": {
-        "canonical_name": "Charge on a 10 nF capacitor at 5 V",
-        "ingest_source": "dataset/raw/curated/charge.json",
-        "source_trace": {
-          "derivation_note": "Q = C x V",
-          "method": "derived",
+          "method": "direct",
           "original_value_text": "5e-08",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
+          "source_basis": "Representative net charge in a static-cling laundry discharge.",
           "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "10 nF x 5 V"
+          "source_url": "https://en.wikipedia.org/wiki/Static_electricity",
+          "source_value_text": "50 nC"
         }
       },
       "hook": null,
-      "id": "obs:charge:scenario-charge-10nf-capacitor-5v",
-      "name": "Charge on a 10 nF capacitor at 5 V",
+      "id": "obs:charge:scenario-static-cling-laundry-charge",
+      "name": "Static cling from synthetic laundry",
       "qualifiers": {
-        "measurement": "stored capacitor charge"
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "net static charge"
       },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
+      "source": "https://en.wikipedia.org/wiki/Static_electricity",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
+          "id": "src:https-en-wikipedia-org-wiki-static-electricity",
           "license_text": "CC BY-SA 4.0",
           "note": null,
           "publisher": "Wikipedia",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
+          "title": "Static electricity",
+          "url": "https://en.wikipedia.org/wiki/Static_electricity"
         },
         {
           "id": "src:repo-dataset-raw-curated-charge-json",
@@ -361,18 +247,18 @@
           "url": "repo://dataset/raw/curated/charge.json"
         }
       ],
-      "summary_short": "A modest ten-nanofarad capacitor at five volts stores tens of nanocoulombs.",
+      "summary_short": "A crackling piece of static-clung laundry carries tens of nanocoulombs to microcoulombs of excess charge.",
       "value": 5e-08,
-      "value_type": "derived",
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A rubbed balloon can easily hold on the order of a hundred nanocoulombs of static charge. Here the quantity refers to `net static charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `100 nC` for Representative static charge scale for a rubbed balloon.",
+      "description": "A rubbed balloon can easily hold on the order of a hundred nanocoulombs of static charge.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A rubbed balloon can easily hold on the order of a hundred nanocoulombs of static charge. Here the quantity refers to `net static charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `100 nC` for Representative static charge scale for a rubbed balloon.",
+      "description_medium": "A rubbed balloon can easily hold on the order of a hundred nanocoulombs of static charge.",
       "facts": {
         "canonical_name": "Static charge on a rubbed balloon",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -426,74 +312,17 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A one microfarad capacitor at one volt stores one microcoulomb of charge. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 uF x 1 V` for Derived from the capacitor relation Q = C V.",
+      "description": "A small static shock from touching a metal doorknob after walking on carpet.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A one microfarad capacitor at one volt stores one microcoulomb of charge. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 uF x 1 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "A small static shock from touching a metal doorknob after walking on carpet.",
       "facts": {
-        "canonical_name": "Charge on a 1 microfarad capacitor at 1 volt",
-        "ingest_source": "dataset/raw/curated/charge.json",
-        "source_trace": {
-          "derivation_note": "Q = C x V",
-          "method": "derived",
-          "original_value_text": "1e-06",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
-          "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "1 uF x 1 V"
-        }
-      },
-      "hook": null,
-      "id": "obs:charge:scenario-charge-1uf-capacitor-1v",
-      "name": "Charge on a 1 microfarad capacitor at 1 volt",
-      "qualifiers": {
-        "measurement": "stored capacitor charge"
-      },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-charge-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/charge.json",
-          "url": "repo://dataset/raw/curated/charge.json"
-        }
-      ],
-      "summary_short": "A one microfarad capacitor at one volt stores one microcoulomb of charge.",
-      "value": 1e-06,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A noticeable static zap from walking on carpet can involve about a microcoulomb of transferred charge. Here the quantity refers to `discharge transferred charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `1 uC` for Representative electrostatic-discharge transferred charge.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A noticeable static zap from walking on carpet can involve about a microcoulomb of transferred charge. Here the quantity refers to `discharge transferred charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `1 uC` for Representative electrostatic-discharge transferred charge.",
-      "facts": {
-        "canonical_name": "Walking-on-carpet electrostatic discharge",
+        "canonical_name": "Doorknob static shock",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "method": "direct",
           "original_value_text": "1e-06",
-          "source_basis": "Representative electrostatic-discharge transferred charge.",
+          "source_basis": "Representative transferred charge in a noticeable static discharge.",
           "source_unit": "C",
           "source_url": "https://en.wikipedia.org/wiki/Electrostatic_discharge",
           "source_value_text": "1 uC"
@@ -501,7 +330,7 @@
       },
       "hook": null,
       "id": "obs:charge:scenario-charge-walking-carpet-esd",
-      "name": "Walking-on-carpet electrostatic discharge",
+      "name": "Doorknob static shock",
       "qualifiers": {
         "assumption": "order-of-magnitude representative value",
         "measurement": "discharge transferred charge"
@@ -532,7 +361,7 @@
           "url": "repo://dataset/raw/curated/charge.json"
         }
       ],
-      "summary_short": "A noticeable static zap from walking on carpet can involve about a microcoulomb of transferred charge.",
+      "summary_short": "A small static shock from touching a metal doorknob after walking on carpet.",
       "value": 1e-06,
       "value_type": "measured",
       "wikidata_qid": null
@@ -540,67 +369,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A one-microfarad capacitor at five volts stores a few microcoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 uF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description": "A classroom Van de Graaff generator can hold around ten microcoulombs on its dome.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A one-microfarad capacitor at five volts stores a few microcoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 uF x 5 V` for Derived from the capacitor relation Q = C V.",
-      "facts": {
-        "canonical_name": "Charge on a 1 uF capacitor at 5 V",
-        "ingest_source": "dataset/raw/curated/charge.json",
-        "source_trace": {
-          "derivation_note": "Q = C x V",
-          "method": "derived",
-          "original_value_text": "5e-06",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
-          "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "1 uF x 5 V"
-        }
-      },
-      "hook": null,
-      "id": "obs:charge:scenario-charge-1uf-capacitor-5v",
-      "name": "Charge on a 1 uF capacitor at 5 V",
-      "qualifiers": {
-        "measurement": "stored capacitor charge"
-      },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-charge-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/charge.json",
-          "url": "repo://dataset/raw/curated/charge.json"
-        }
-      ],
-      "summary_short": "A one-microfarad capacitor at five volts stores a few microcoulombs.",
-      "value": 5e-06,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A classroom Van de Graaff generator can hold around ten microcoulombs on its dome. Here the quantity refers to `stored dome charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `10 uC` for Representative Van de Graaff dome charge.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A classroom Van de Graaff generator can hold around ten microcoulombs on its dome. Here the quantity refers to `stored dome charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `10 uC` for Representative Van de Graaff dome charge.",
+      "description_medium": "A classroom Van de Graaff generator can hold around ten microcoulombs on its dome.",
       "facts": {
         "canonical_name": "Van de Graaff generator dome charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -654,10 +426,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A tabletop Tesla coil terminal can carry only tens of microcoulombs despite its dramatic discharges. Here the quantity refers to `terminal charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `50 uC` for Representative Tesla-coil terminal charge.",
+      "description": "A tabletop Tesla coil terminal can carry only tens of microcoulombs despite its dramatic discharges.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A tabletop Tesla coil terminal can carry only tens of microcoulombs despite its dramatic discharges. Here the quantity refers to `terminal charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `50 uC` for Representative Tesla-coil terminal charge.",
+      "description_medium": "A tabletop Tesla coil terminal can carry only tens of microcoulombs despite its dramatic discharges.",
       "facts": {
         "canonical_name": "Tesla coil terminal charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -711,42 +483,42 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A modest ten microfarad capacitor at five volts stores a few dozen microcoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `10 uF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description": "An electric eel pulse moves a noticeable packet of charge through surrounding water.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A modest ten microfarad capacitor at five volts stores a few dozen microcoulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `10 uF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "An electric eel pulse moves a noticeable packet of charge through surrounding water.",
       "facts": {
-        "canonical_name": "Charge on a 10 microfarad capacitor at 5 volts",
+        "canonical_name": "Electric eel discharge packet charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
-          "derivation_note": "Q = C x V",
           "method": "derived",
-          "original_value_text": "5e-05",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
+          "original_value_text": "0.002",
+          "source_basis": "Order-of-magnitude charge transfer in one strong electric-eel pulse.",
           "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "10 uF x 5 V"
+          "source_url": "https://en.wikipedia.org/wiki/Electric_eel",
+          "source_value_text": "about 2 mC"
         }
       },
       "hook": null,
-      "id": "obs:charge:scenario-charge-10uf-capacitor-5v",
-      "name": "Charge on a 10 microfarad capacitor at 5 volts",
+      "id": "obs:charge:entity-electric-eel-discharge-charge",
+      "name": "Electric eel discharge packet charge",
       "qualifiers": {
-        "measurement": "stored capacitor charge"
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "pulse charge transfer"
       },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
+      "source": "https://en.wikipedia.org/wiki/Electric_eel",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
+          "id": "src:https-en-wikipedia-org-wiki-electric-eel",
           "license_text": "CC BY-SA 4.0",
           "note": null,
           "publisher": "Wikipedia",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
+          "title": "Electric eel",
+          "url": "https://en.wikipedia.org/wiki/Electric_eel"
         },
         {
           "id": "src:repo-dataset-raw-curated-charge-json",
@@ -760,77 +532,20 @@
           "url": "repo://dataset/raw/curated/charge.json"
         }
       ],
-      "summary_short": "A modest ten microfarad capacitor at five volts stores a few dozen microcoulombs.",
-      "value": 5e-05,
+      "summary_short": "An electric eel pulse moves a noticeable packet of charge through surrounding water.",
+      "value": 0.002,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A large electrolytic capacitor at low voltage already gets into millicoulombs of charge. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1000 uF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description": "A photographic flash capacitor can hold a visible burst of charge before discharge.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A large electrolytic capacitor at low voltage already gets into millicoulombs of charge. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1000 uF x 5 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "A photographic flash capacitor can hold a visible burst of charge before discharge.",
       "facts": {
-        "canonical_name": "Charge on a 1000 uF capacitor at 5 V",
-        "ingest_source": "dataset/raw/curated/charge.json",
-        "source_trace": {
-          "derivation_note": "Q = C x V",
-          "method": "derived",
-          "original_value_text": "0.005",
-          "source_basis": "Derived from the capacitor relation Q = C V.",
-          "source_unit": "C",
-          "source_url": "https://en.wikipedia.org/wiki/Capacitor",
-          "source_value_text": "1000 uF x 5 V"
-        }
-      },
-      "hook": null,
-      "id": "obs:charge:scenario-charge-1000uf-capacitor-5v",
-      "name": "Charge on a 1000 uF capacitor at 5 V",
-      "qualifiers": {
-        "measurement": "stored capacitor charge"
-      },
-      "source": "https://en.wikipedia.org/wiki/Capacitor",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-capacitor",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Capacitor",
-          "url": "https://en.wikipedia.org/wiki/Capacitor"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-charge-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/charge.json",
-          "url": "repo://dataset/raw/curated/charge.json"
-        }
-      ],
-      "summary_short": "A large electrolytic capacitor at low voltage already gets into millicoulombs of charge.",
-      "value": 0.005,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A photographic flash capacitor can hold a visible burst of charge before discharge. Here the quantity refers to `stored flash charge`. Source-side figure: `330 uF x 100 V` for Representative flash capacitor charge derived from capacitance and voltage.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A photographic flash capacitor can hold a visible burst of charge before discharge. Here the quantity refers to `stored flash charge`. Source-side figure: `330 uF x 100 V` for Representative flash capacitor charge derived from capacitance and voltage.",
-      "facts": {
-        "canonical_name": "Charge on a camera flash capacitor",
+        "canonical_name": "Camera flash capacitor charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "Q = C x V",
@@ -844,7 +559,7 @@
       },
       "hook": null,
       "id": "obs:charge:entity-camera-flash-capacitor-charge",
-      "name": "Charge on a camera flash capacitor",
+      "name": "Camera flash capacitor charge",
       "qualifiers": {
         "measurement": "stored flash charge"
       },
@@ -882,12 +597,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Defibrillator capacitors store enough charge for a short, high-energy pulse. Here the quantity refers to `stored capacitor charge`. Source-side figure: `200 uF x 2000 V` for Representative capacitor charge for a defibrillator discharge.",
+      "description": "Defibrillator capacitors store enough charge for a short, high-energy pulse.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Defibrillator capacitors store enough charge for a short, high-energy pulse. Here the quantity refers to `stored capacitor charge`. Source-side figure: `200 uF x 2000 V` for Representative capacitor charge for a defibrillator discharge.",
+      "description_medium": "Defibrillator capacitors store enough charge for a short, high-energy pulse.",
       "facts": {
-        "canonical_name": "Charge on a defibrillator capacitor",
+        "canonical_name": "Defibrillator capacitor charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "Q = C x V",
@@ -901,7 +616,7 @@
       },
       "hook": null,
       "id": "obs:charge:entity-defibrillator-capacitor-charge",
-      "name": "Charge on a defibrillator capacitor",
+      "name": "Defibrillator capacitor charge",
       "qualifiers": {
         "measurement": "stored capacitor charge"
       },
@@ -939,12 +654,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A one-farad supercapacitor at 2.7 volts stores a few coulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 F x 2.7 V` for Derived from the capacitor relation Q = C V.",
+      "description": "A one-farad supercapacitor at 2.7 volts stores a few coulombs.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A one-farad supercapacitor at 2.7 volts stores a few coulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `1 F x 2.7 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "A one-farad supercapacitor at 2.7 volts stores a few coulombs.",
       "facts": {
-        "canonical_name": "Charge on a 1 F supercapacitor at 2.7 V",
+        "canonical_name": "Small supercapacitor stored charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "Q = C x V",
@@ -958,7 +673,7 @@
       },
       "hook": null,
       "id": "obs:charge:scenario-charge-1f-supercapacitor-2-7v",
-      "name": "Charge on a 1 F supercapacitor at 2.7 V",
+      "name": "Small supercapacitor stored charge",
       "qualifiers": {
         "measurement": "stored capacitor charge"
       },
@@ -996,10 +711,67 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A lightning stroke can transfer a noticeable fraction of a coulomb to a few coulombs of charge. Here the quantity refers to `charge transfer`. Assumes `order-of-magnitude representative value`. Source-side figure: `about 10 C` for Representative cloud-to-ground lightning charge transfer.",
+      "description": "A single lightning stroke moves only a few coulombs, which is surprisingly little compared with its voltage and power.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A lightning stroke can transfer a noticeable fraction of a coulomb to a few coulombs of charge. Here the quantity refers to `charge transfer`. Assumes `order-of-magnitude representative value`. Source-side figure: `about 10 C` for Representative cloud-to-ground lightning charge transfer.",
+      "description_medium": "A single lightning stroke moves only a few coulombs, which is surprisingly little compared with its voltage and power.",
+      "facts": {
+        "canonical_name": "Lightning bolt charge transfer",
+        "ingest_source": "dataset/raw/curated/charge.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5.0",
+          "source_basis": "Representative charge transfer in one lightning return stroke.",
+          "source_unit": "C",
+          "source_url": "https://en.wikipedia.org/wiki/Lightning",
+          "source_value_text": "about 5 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:charge:scenario-charge-lightning-bolt-charge-transfer",
+      "name": "Lightning bolt charge transfer",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "stroke charge transfer"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lightning",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lightning",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lightning",
+          "url": "https://en.wikipedia.org/wiki/Lightning"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-charge-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/charge.json",
+          "url": "repo://dataset/raw/curated/charge.json"
+        }
+      ],
+      "summary_short": "A single lightning stroke moves only a few coulombs, which is surprisingly little compared with its voltage and power.",
+      "value": 5.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A lightning stroke can transfer a noticeable fraction of a coulomb to a few coulombs of charge.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A lightning stroke can transfer a noticeable fraction of a coulomb to a few coulombs of charge.",
       "facts": {
         "canonical_name": "Cloud-to-ground lightning charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1053,10 +825,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A typical lightning stroke transfers only tens of coulombs even though the currents are enormous. Here the quantity refers to `transferred charge`. Assumes `representative lightning stroke`. Source-side figure: `15 C` for Representative transferred charge for a lightning stroke.",
+      "description": "A typical lightning stroke transfers only tens of coulombs even though the currents are enormous.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A typical lightning stroke transfers only tens of coulombs even though the currents are enormous. Here the quantity refers to `transferred charge`. Assumes `representative lightning stroke`. Source-side figure: `15 C` for Representative transferred charge for a lightning stroke.",
+      "description_medium": "A typical lightning stroke transfers only tens of coulombs even though the currents are enormous.",
       "facts": {
         "canonical_name": "Transferred charge in a lightning stroke",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1110,12 +882,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A ten-farad supercapacitor at 2.7 volts holds a few dozen coulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `10 F x 2.7 V` for Derived from the capacitor relation Q = C V.",
+      "description": "A ten-farad supercapacitor at 2.7 volts holds a few dozen coulombs.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A ten-farad supercapacitor at 2.7 volts holds a few dozen coulombs. Here the quantity refers to `stored capacitor charge`. Source-side figure: `10 F x 2.7 V` for Derived from the capacitor relation Q = C V.",
+      "description_medium": "A ten-farad supercapacitor at 2.7 volts holds a few dozen coulombs.",
       "facts": {
-        "canonical_name": "Charge in a 10 farad supercapacitor at 2.7 volts",
+        "canonical_name": "Large supercapacitor stored charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "Q = C x V",
@@ -1129,7 +901,7 @@
       },
       "hook": null,
       "id": "obs:charge:scenario-charge-10f-supercapacitor-2-7v",
-      "name": "Charge in a 10 farad supercapacitor at 2.7 volts",
+      "name": "Large supercapacitor stored charge",
       "qualifiers": {
         "measurement": "stored capacitor charge"
       },
@@ -1167,10 +939,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A thundercloud charge center can hold tens of coulombs of net charge before discharge. Here the quantity refers to `net cloud charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `30 C` for Representative thundercloud charge-center magnitude.",
+      "description": "A thundercloud charge center can hold tens of coulombs of net charge before discharge.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A thundercloud charge center can hold tens of coulombs of net charge before discharge. Here the quantity refers to `net cloud charge`. Assumes `order-of-magnitude representative value`. Source-side figure: `30 C` for Representative thundercloud charge-center magnitude.",
+      "description_medium": "A thundercloud charge center can hold tens of coulombs of net charge before discharge.",
       "facts": {
         "canonical_name": "Net charge in a thundercloud center",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1224,10 +996,67 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A coin cell only stores a few hundred coulombs over its whole life. Here the quantity refers to `battery capacity`. Source-side figure: `220 mAh` for Derived from a representative coin cell capacity.",
+      "description": "A thundercloud stores a much larger separated charge reservoir than any single lightning stroke releases.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A coin cell only stores a few hundred coulombs over its whole life. Here the quantity refers to `battery capacity`. Source-side figure: `220 mAh` for Derived from a representative coin cell capacity.",
+      "description_medium": "A thundercloud stores a much larger separated charge reservoir than any single lightning stroke releases.",
+      "facts": {
+        "canonical_name": "Storm cloud charge separation",
+        "ingest_source": "dataset/raw/curated/charge.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "100.0",
+          "source_basis": "Representative separated charge scale for an active thundercloud.",
+          "source_unit": "C",
+          "source_url": "https://en.wikipedia.org/wiki/Lightning",
+          "source_value_text": "about 100 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:charge:scenario-charge-storm-cloud-charge-separation",
+      "name": "Storm cloud charge separation",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "net separated atmospheric charge"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lightning",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lightning",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lightning",
+          "url": "https://en.wikipedia.org/wiki/Lightning"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-charge-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/charge.json",
+          "url": "repo://dataset/raw/curated/charge.json"
+        }
+      ],
+      "summary_short": "A thundercloud stores a much larger separated charge reservoir than any single lightning stroke releases.",
+      "value": 100.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A coin cell only stores a few hundred coulombs over its whole life.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A coin cell only stores a few hundred coulombs over its whole life.",
       "facts": {
         "canonical_name": "Coin cell total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1281,10 +1110,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A 2000 mAh AA cell corresponds to about 7200 coulombs of charge moved through a circuit. Here the quantity refers to `nominal charge throughput`. Source-side figure: `2000 mAh` for Derived from a representative 2000 mAh AA battery capacity.",
+      "description": "A 2000 mAh AA cell corresponds to about 7200 coulombs of charge moved through a circuit.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A 2000 mAh AA cell corresponds to about 7200 coulombs of charge moved through a circuit. Here the quantity refers to `nominal charge throughput`. Source-side figure: `2000 mAh` for Derived from a representative 2000 mAh AA battery capacity.",
+      "description_medium": "A 2000 mAh AA cell corresponds to about 7200 coulombs of charge moved through a circuit.",
       "facts": {
         "canonical_name": "AA battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1338,10 +1167,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A small 3 Ah battery pack corresponds to a little over ten thousand coulombs. Here the quantity refers to `nominal charge throughput`. Source-side figure: `3 Ah` for Derived from a representative 3 Ah tool-battery capacity.",
+      "description": "A small 3 Ah battery pack corresponds to a little over ten thousand coulombs.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A small 3 Ah battery pack corresponds to a little over ten thousand coulombs. Here the quantity refers to `nominal charge throughput`. Source-side figure: `3 Ah` for Derived from a representative 3 Ah tool-battery capacity.",
+      "description_medium": "A small 3 Ah battery pack corresponds to a little over ten thousand coulombs.",
       "facts": {
         "canonical_name": "3 Ah power-tool battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1395,12 +1224,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A small drone battery can still move thousands of coulombs through the motor system. Here the quantity refers to `battery capacity`. Source-side figure: `5000 mAh` for Derived from a representative drone battery capacity.",
+      "description": "A small drone battery can still move thousands of coulombs through the motor system.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A small drone battery can still move thousands of coulombs through the motor system. Here the quantity refers to `battery capacity`. Source-side figure: `5000 mAh` for Derived from a representative drone battery capacity.",
+      "description_medium": "A small drone battery can still move thousands of coulombs through the motor system.",
       "facts": {
-        "canonical_name": "Drone battery total charge",
+        "canonical_name": "Drone battery pack total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "mAh x 3.6 = C",
@@ -1414,7 +1243,7 @@
       },
       "hook": null,
       "id": "obs:charge:entity-drone-battery-total-charge",
-      "name": "Drone battery total charge",
+      "name": "Drone battery pack total charge",
       "qualifiers": {
         "measurement": "battery capacity"
       },
@@ -1452,10 +1281,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A 5000 mAh phone battery corresponds to about eighteen thousand coulombs of total charge throughput. Here the quantity refers to `nominal charge throughput`. Assumes `5000 mAh battery`. Source-side figure: `5000 mAh` for Derived from a representative smartphone battery capacity.",
+      "description": "A 5000 mAh phone battery corresponds to about eighteen thousand coulombs of total charge throughput.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A 5000 mAh phone battery corresponds to about eighteen thousand coulombs of total charge throughput. Here the quantity refers to `nominal charge throughput`. Assumes `5000 mAh battery`. Source-side figure: `5000 mAh` for Derived from a representative smartphone battery capacity.",
+      "description_medium": "A 5000 mAh phone battery corresponds to about eighteen thousand coulombs of total charge throughput.",
       "facts": {
         "canonical_name": "Smartphone battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1510,10 +1339,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A laptop battery stores tens of thousands of coulombs of charge. Here the quantity refers to `battery capacity`. Source-side figure: `6000 mAh` for Derived from a representative laptop battery capacity.",
+      "description": "A laptop battery stores tens of thousands of coulombs of charge.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A laptop battery stores tens of thousands of coulombs of charge. Here the quantity refers to `battery capacity`. Source-side figure: `6000 mAh` for Derived from a representative laptop battery capacity.",
+      "description_medium": "A laptop battery stores tens of thousands of coulombs of charge.",
       "facts": {
         "canonical_name": "Laptop battery total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1567,10 +1396,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "An e-bike battery typically stores a larger charge reservoir than a laptop battery. Here the quantity refers to `battery capacity`. Source-side figure: `15000 mAh` for Derived from a representative e-bike battery capacity.",
+      "description": "An e-bike battery typically stores a larger charge reservoir than a laptop battery.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "An e-bike battery typically stores a larger charge reservoir than a laptop battery. Here the quantity refers to `battery capacity`. Source-side figure: `15000 mAh` for Derived from a representative e-bike battery capacity.",
+      "description_medium": "An e-bike battery typically stores a larger charge reservoir than a laptop battery.",
       "facts": {
         "canonical_name": "E-bike battery total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1624,10 +1453,66 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A 60 Ah car battery corresponds to about two hundred thousand coulombs of charge throughput. Here the quantity refers to `nominal charge throughput`. Source-side figure: `60 Ah` for Derived from a representative 60 Ah automotive battery capacity.",
+      "description": "One mole of electrons carries the Faraday constant, a major benchmark in electrochemistry.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A 60 Ah car battery corresponds to about two hundred thousand coulombs of charge throughput. Here the quantity refers to `nominal charge throughput`. Source-side figure: `60 Ah` for Derived from a representative 60 Ah automotive battery capacity.",
+      "description_medium": "One mole of electrons carries the Faraday constant, a major benchmark in electrochemistry.",
+      "facts": {
+        "canonical_name": "One mole of electrons",
+        "ingest_source": "dataset/raw/curated/charge.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "96485.33212",
+          "source_basis": "Faraday constant.",
+          "source_unit": "C",
+          "source_url": "https://en.wikipedia.org/wiki/Faraday_constant",
+          "source_value_text": "96485 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:charge:entity-faraday-constant-charge",
+      "name": "One mole of electrons",
+      "qualifiers": {
+        "measurement": "charge of one mole of elementary charges"
+      },
+      "source": "https://en.wikipedia.org/wiki/Faraday_constant",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-faraday-constant",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Faraday constant",
+          "url": "https://en.wikipedia.org/wiki/Faraday_constant"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-charge-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/charge.json",
+          "url": "repo://dataset/raw/curated/charge.json"
+        }
+      ],
+      "summary_short": "One mole of electrons carries the Faraday constant, a major benchmark in electrochemistry.",
+      "value": 96485.33212,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A 60 Ah car battery corresponds to about two hundred thousand coulombs of charge throughput.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A 60 Ah car battery corresponds to about two hundred thousand coulombs of charge throughput.",
       "facts": {
         "canonical_name": "Car battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1681,12 +1566,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A 75 kWh electric-vehicle pack at about 400 volts corresponds to several hundred thousand coulombs. Here the quantity refers to `equivalent stored charge`. Assumes `75 kWh pack at 400 V`. Source-side figure: `75 kWh at 400 V` for Derived by converting battery energy to an equivalent stored charge at a representative pack voltage.",
+      "description": "An electric car battery moves hundreds of thousands of coulombs when you think of its stored energy as charge at pack voltage.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A 75 kWh electric-vehicle pack at about 400 volts corresponds to several hundred thousand coulombs. Here the quantity refers to `equivalent stored charge`. Assumes `75 kWh pack at 400 V`. Source-side figure: `75 kWh at 400 V` for Derived by converting battery energy to an equivalent stored charge at a representative pack voltage.",
+      "description_medium": "An electric car battery moves hundreds of thousands of coulombs when you think of its stored energy as charge at pack voltage.",
       "facts": {
-        "canonical_name": "Electric vehicle battery equivalent charge",
+        "canonical_name": "Electric vehicle battery pack total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "Q = E / V",
@@ -1699,8 +1584,8 @@
         }
       },
       "hook": null,
-      "id": "obs:charge:entity-ev-battery-equivalent-charge",
-      "name": "Electric vehicle battery equivalent charge",
+      "id": "obs:charge:scenario-charge-electric-vehicle-battery-pack-total-charge",
+      "name": "Electric vehicle battery pack total charge",
       "qualifiers": {
         "assumption": "75 kWh pack at 400 V",
         "measurement": "equivalent stored charge"
@@ -1731,7 +1616,7 @@
           "url": "repo://dataset/raw/curated/charge.json"
         }
       ],
-      "summary_short": "A 75 kWh electric-vehicle pack at about 400 volts corresponds to several hundred thousand coulombs.",
+      "summary_short": "An electric car battery moves hundreds of thousands of coulombs when you think of its stored energy as charge at pack voltage.",
       "value": 675000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -1739,12 +1624,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A grid battery holding one megawatt-hour at a thousand volts corresponds to several megacoulombs of equivalent charge. Here the quantity refers to `equivalent stored charge`. Assumes `1000 volt system voltage`. Source-side figure: `1 MWh at 1000 V` for Derived by converting stored energy to an equivalent charge at a representative system voltage.",
+      "description": "A utility-scale battery container corresponds to millions of coulombs once you translate its stored energy into charge at pack-scale voltage.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A grid battery holding one megawatt-hour at a thousand volts corresponds to several megacoulombs of equivalent charge. Here the quantity refers to `equivalent stored charge`. Assumes `1000 volt system voltage`. Source-side figure: `1 MWh at 1000 V` for Derived by converting stored energy to an equivalent charge at a representative system voltage.",
+      "description_medium": "A utility-scale battery container corresponds to millions of coulombs once you translate its stored energy into charge at pack-scale voltage.",
       "facts": {
-        "canonical_name": "One-megawatt-hour battery at 1000 V equivalent charge",
+        "canonical_name": "Utility-scale battery container total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
         "source_trace": {
           "derivation_note": "Q = E / V",
@@ -1757,8 +1642,8 @@
         }
       },
       "hook": null,
-      "id": "obs:charge:scenario-charge-1mwh-battery-1000v",
-      "name": "One-megawatt-hour battery at 1000 V equivalent charge",
+      "id": "obs:charge:scenario-charge-utility-scale-battery-container-total-charge",
+      "name": "Utility-scale battery container total charge",
       "qualifiers": {
         "assumption": "1000 volt system voltage",
         "measurement": "equivalent stored charge"
@@ -1789,7 +1674,7 @@
           "url": "repo://dataset/raw/curated/charge.json"
         }
       ],
-      "summary_short": "A grid battery holding one megawatt-hour at a thousand volts corresponds to several megacoulombs of equivalent charge.",
+      "summary_short": "A utility-scale battery container corresponds to millions of coulombs once you translate its stored energy into charge at pack-scale voltage.",
       "value": 3600000.0,
       "value_type": "derived",
       "wikidata_qid": null

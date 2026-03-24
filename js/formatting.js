@@ -45,6 +45,25 @@ class NumberFormatter {
                 return d3.format(`.${precision}e`)(value);
         }
     }
+
+    formatLinearNumber(value, precision = 2) {
+        if (value === 0) return '0';
+
+        const absValue = Math.abs(value);
+        let digits = precision;
+        if (absValue < 0.01) {
+            digits = Math.max(4, precision + 2);
+        } else if (absValue < 1) {
+            digits = Math.max(3, precision + 1);
+        } else if (absValue >= 100) {
+            digits = 0;
+        }
+
+        const formatted = d3.format(`,.${digits}f`)(value)
+            .replace(/(\.\d*?[1-9])0+$/, '$1')
+            .replace(/\.0+$/, '');
+        return formatted === '-0' ? '0' : formatted;
+    }
     
     formatMathematicalHTML(sign, mantissa, exponent) {
         // Format as HTML with superscript: 1×10<sup>-22</sup>
@@ -141,4 +160,3 @@ class NumberFormatter {
         });
     }
 }
-

@@ -1,6 +1,6 @@
 dimension: current
 base_unit: amperes
-dimension_description: Electric current measures how quickly charge moves through a circuit or plasma. Some entries here are direct device ratings, while others are derived from one charge carrier crossing in a stated time or from power and voltage using I = P / V. This lets the scale connect single-ion channels, USB power delivery, household wiring, industrial systems, and lightning.
+dimension_description: Electric current measures how quickly charge moves through a circuit, membrane, plasma, or conductor. The examples now deliberately include biology, implants, consumer electronics, household power, heavy industry, and lightning so the scale is easier to orient yourself on. Some values are direct ratings, while others are stated as representative operating currents for a concrete scenario.
 related_resources:
 - name: Electric current
   url: https://en.wikipedia.org/wiki/Electric_current
@@ -34,17 +34,17 @@ preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 scale_mode: log
-frontend_group: fields
-frontend_group_label: Fields, Waves & Radiation
-frontend_order: 300
+frontend_group: fundamental
+frontend_group_label: Fundamental Scales
+frontend_order: 160
 items:
 - id: obs:current:scenario-current-capacitor-leakage
   name: Leakage current of a good capacitor
   value: 1.0e-12
-  description: 'Tiny leakage currents in good capacitors can be in the picoampere range. Assumes `order-of-magnitude representative value`. Source-side figure: `1 pA` for Representative capacitor leakage current.'
+  description: Tiny leakage currents in good capacitors can be in the picoampere range.
   description_format: markdown
   summary_short: Tiny leakage currents in good capacitors can be in the picoampere range.
-  description_medium: 'Tiny leakage currents in good capacitors can be in the picoampere range. Assumes `order-of-magnitude representative value`. Source-side figure: `1 pA` for Representative capacitor leakage current.'
+  description_medium: Tiny leakage currents in good capacitors can be in the picoampere range.
   description_long: null
   hook: null
   caveats: null
@@ -85,13 +85,59 @@ items:
   qualifiers:
     assumption: order-of-magnitude representative value
     measurement: leakage current
+- id: obs:current:entity-rod-photoreceptor-dark-current
+  name: Rod photoreceptor dark current
+  value: 2.0e-12
+  description: Retinal rod cells carry a tiny standing dark current in the absence of light.
+  description_format: markdown
+  summary_short: Retinal rod cells carry a tiny standing dark current in the absence of light.
+  description_medium: Retinal rod cells carry a tiny standing dark current in the absence of light.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rod photoreceptor dark current
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      method: direct
+      original_value_text: 2e-12
+      source_basis: Representative dark current of a rod photoreceptor.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Dark_current_(biology)
+      source_value_text: 2 pA
+  source: https://en.wikipedia.org/wiki/Dark_current_(biology)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dark-current-biology
+    url: https://en.wikipedia.org/wiki/Dark_current_(biology)
+    title: Dark current (biology)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: cell current
 - id: obs:current:entity-single-ion-channel-current
   name: Single ion-channel current
   value: 5.0e-12
-  description: 'A single biological ion channel often carries only a few picoamperes. Here the quantity refers to `channel current`. Source-side figure: `5 pA` for Representative patch-clamp current for a single ion channel.'
+  description: A single biological ion channel often carries only a few picoamperes.
   description_format: markdown
   summary_short: A single biological ion channel often carries only a few picoamperes.
-  description_medium: 'A single biological ion channel often carries only a few picoamperes. Here the quantity refers to `channel current`. Source-side figure: `5 pA` for Representative patch-clamp current for a single ion channel.'
+  description_medium: A single biological ion channel often carries only a few picoamperes.
   description_long: null
   hook: null
   caveats: null
@@ -134,10 +180,10 @@ items:
 - id: obs:current:entity-photodiode-dark-current
   name: Dark current of a photodiode
   value: 1.0e-09
-  description: 'Photodiode dark current often sits in the nanoampere range. Assumes `representative device`. Source-side figure: `1 nA` for Representative silicon photodiode dark current.'
+  description: Photodiode dark current often sits in the nanoampere range.
   description_format: markdown
   summary_short: Photodiode dark current often sits in the nanoampere range.
-  description_medium: 'Photodiode dark current often sits in the nanoampere range. Assumes `representative device`. Source-side figure: `1 nA` for Representative silicon photodiode dark current.'
+  description_medium: Photodiode dark current often sits in the nanoampere range.
   description_long: null
   hook: null
   caveats: null
@@ -181,10 +227,10 @@ items:
 - id: obs:current:entity-op-amp-bias-current
   name: Bias current of an op-amp input
   value: 1.0e-08
-  description: 'Some precision op-amp inputs draw only tens of nanoamperes or less. Here the quantity refers to `input bias current`. Source-side figure: `10 nA` for Representative op-amp input bias current.'
+  description: Some precision op-amp inputs draw only tens of nanoamperes or less.
   description_format: markdown
   summary_short: Some precision op-amp inputs draw only tens of nanoamperes or less.
-  description_medium: 'Some precision op-amp inputs draw only tens of nanoamperes or less. Here the quantity refers to `input bias current`. Source-side figure: `10 nA` for Representative op-amp input bias current.'
+  description_medium: Some precision op-amp inputs draw only tens of nanoamperes or less.
   description_long: null
   hook: null
   caveats: null
@@ -227,10 +273,10 @@ items:
 - id: obs:current:entity-microcontroller-sleep-current
   name: Microcontroller sleep current
   value: 1.0e-06
-  description: 'A sleeping microcontroller can draw only microamps. Here the quantity refers to `idle current`. Assumes `order-of-magnitude representative value`. Source-side figure: `1 uA` for Representative deep-sleep current for a low-power microcontroller.'
+  description: A sleeping microcontroller can draw only microamps.
   description_format: markdown
   summary_short: A sleeping microcontroller can draw only microamps.
-  description_medium: 'A sleeping microcontroller can draw only microamps. Here the quantity refers to `idle current`. Assumes `order-of-magnitude representative value`. Source-side figure: `1 uA` for Representative deep-sleep current for a low-power microcontroller.'
+  description_medium: A sleeping microcontroller can draw only microamps.
   description_long: null
   hook: null
   caveats: null
@@ -271,13 +317,60 @@ items:
   qualifiers:
     assumption: order-of-magnitude representative value
     measurement: idle current
+- id: obs:current:entity-neuron-action-potential-current
+  name: Neuron action potential membrane current
+  value: 1.0e-06
+  description: A firing neuron briefly drives membrane currents far above a single ion channel.
+  description_format: markdown
+  summary_short: A firing neuron briefly drives membrane currents far above a single ion channel.
+  description_medium: A firing neuron briefly drives membrane currents far above a single ion channel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Neuron action potential membrane current
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-06
+      source_basis: Representative peak transmembrane current during an action potential.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Action_potential
+      source_value_text: 1 uA
+  source: https://en.wikipedia.org/wiki/Action_potential
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-action-potential
+    url: https://en.wikipedia.org/wiki/Action_potential
+    title: Action potential
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    assumption: order-of-magnitude representative value
+    measurement: cell current
 - id: obs:current:entity-quartz-watch-current
   name: Quartz wristwatch current draw
   value: 2.0e-06
-  description: 'A quartz wristwatch can run on just a few microamperes. Here the quantity refers to `operating current`. Source-side figure: `2 uA` for Representative quartz-watch operating current.'
+  description: A quartz wristwatch can run on just a few microamperes.
   description_format: markdown
   summary_short: A quartz wristwatch can run on just a few microamperes.
-  description_medium: 'A quartz wristwatch can run on just a few microamperes. Here the quantity refers to `operating current`. Source-side figure: `2 uA` for Representative quartz-watch operating current.'
+  description_medium: A quartz wristwatch can run on just a few microamperes.
   description_long: null
   hook: null
   caveats: null
@@ -317,13 +410,199 @@ items:
   value_type: measured
   qualifiers:
     measurement: operating current
+- id: obs:current:entity-pacemaker-standby-current
+  name: Pacemaker standby current
+  value: 1.0e-05
+  description: An implanted pacemaker lives for years because its average current stays down in the tens of microamps.
+  description_format: markdown
+  summary_short: An implanted pacemaker lives for years because its average current stays down in the tens of microamps.
+  description_medium: An implanted pacemaker lives for years because its average current stays down in the tens of microamps.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pacemaker standby current
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-05
+      source_basis: Representative average current draw for an implanted pacemaker.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker
+      source_value_text: 10 uA
+  source: https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-artificial-cardiac-pacemaker
+    url: https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker
+    title: Artificial cardiac pacemaker
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: order-of-magnitude representative value
+    measurement: device average current
+- id: obs:current:entity-hearing-aid-current-draw
+  name: Hearing aid current draw
+  value: 5.0e-05
+  description: Tiny battery-powered hearing aids operate in the tens-of-microamps to low-hundreds-of-microamps band.
+  description_format: markdown
+  summary_short: Tiny battery-powered hearing aids operate in the tens-of-microamps to low-hundreds-of-microamps band.
+  description_medium: Tiny battery-powered hearing aids operate in the tens-of-microamps to low-hundreds-of-microamps band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hearing aid current draw
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      method: derived
+      original_value_text: 5e-05
+      source_basis: Representative hearing-aid operating current.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Hearing_aid
+      source_value_text: 50 uA
+  source: https://en.wikipedia.org/wiki/Hearing_aid
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hearing-aid
+    url: https://en.wikipedia.org/wiki/Hearing_aid
+    title: Hearing aid
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: order-of-magnitude representative value
+    measurement: device current
+- id: obs:current:entity-cochlear-implant-current
+  name: Cochlear implant electrode current
+  value: 0.0003
+  description: Cochlear implants stimulate auditory nerves with currents in the hundreds of microamps.
+  description_format: markdown
+  summary_short: Cochlear implants stimulate auditory nerves with currents in the hundreds of microamps.
+  description_medium: Cochlear implants stimulate auditory nerves with currents in the hundreds of microamps.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cochlear implant electrode current
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0003'
+      source_basis: Representative cochlear implant stimulation current.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Cochlear_implant
+      source_value_text: 300 uA
+  source: https://en.wikipedia.org/wiki/Cochlear_implant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cochlear-implant
+    url: https://en.wikipedia.org/wiki/Cochlear_implant
+    title: Cochlear implant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: stimulation current
+- id: obs:current:entity-deep-brain-stimulator-current
+  name: Deep brain stimulator pulse current
+  value: 0.003
+  description: Deep brain stimulators run with milliamp-scale pulses rather than household-scale current.
+  description_format: markdown
+  summary_short: Deep brain stimulators run with milliamp-scale pulses rather than household-scale current.
+  description_medium: Deep brain stimulators run with milliamp-scale pulses rather than household-scale current.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Deep brain stimulator pulse current
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      method: direct
+      original_value_text: '0.003'
+      source_basis: Representative deep-brain stimulation pulse current.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Deep_brain_stimulation
+      source_value_text: 3 mA
+  source: https://en.wikipedia.org/wiki/Deep_brain_stimulation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-deep-brain-stimulation
+    url: https://en.wikipedia.org/wiki/Deep_brain_stimulation
+    title: Deep brain stimulation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: stimulation current
 - id: obs:current:entity-led-indicator-current
   name: LED indicator current
   value: 0.02
-  description: 'A standard panel LED often runs at about twenty milliamperes. Here the quantity refers to `operating current`. Source-side figure: `20 mA` for Representative LED indicator operating current.'
+  description: A standard panel LED often runs at about twenty milliamperes.
   description_format: markdown
   summary_short: A standard panel LED often runs at about twenty milliamperes.
-  description_medium: 'A standard panel LED often runs at about twenty milliamperes. Here the quantity refers to `operating current`. Source-side figure: `20 mA` for Representative LED indicator operating current.'
+  description_medium: A standard panel LED often runs at about twenty milliamperes.
   description_long: null
   hook: null
   caveats: null
@@ -366,10 +645,10 @@ items:
 - id: obs:current:entity-usb-2-port-current
   name: USB 2.0 port current limit
   value: 0.5
-  description: 'Classic USB 2.0 ports were designed around a half-ampere current limit. Source-side figure: `0.5 A` for USB 2.0 standard high-power current limit.'
+  description: Classic USB 2.0 ports were designed around a half-ampere current limit.
   description_format: markdown
   summary_short: Classic USB 2.0 ports were designed around a half-ampere current limit.
-  description_medium: 'Classic USB 2.0 ports were designed around a half-ampere current limit. Source-side figure: `0.5 A` for USB 2.0 standard high-power current limit.'
+  description_medium: Classic USB 2.0 ports were designed around a half-ampere current limit.
   description_long: null
   hook: null
   caveats: null
@@ -411,10 +690,10 @@ items:
 - id: obs:current:entity-smartphone-wall-charger-current
   name: Smartphone wall charger current
   value: 2.0
-  description: 'A common wall charger for a phone draws a couple of amps on the low-voltage side. Here the quantity refers to `charging current`. Source-side figure: `2 A` for Representative phone-charger output current.'
+  description: A common wall charger for a phone draws a couple of amps on the low-voltage side.
   description_format: markdown
   summary_short: A common wall charger for a phone draws a couple of amps on the low-voltage side.
-  description_medium: 'A common wall charger for a phone draws a couple of amps on the low-voltage side. Here the quantity refers to `charging current`. Source-side figure: `2 A` for Representative phone-charger output current.'
+  description_medium: A common wall charger for a phone draws a couple of amps on the low-voltage side.
   description_long: null
   hook: null
   caveats: null
@@ -457,10 +736,10 @@ items:
 - id: obs:current:entity-smartphone-fast-charge-current
   name: Smartphone fast-charging current
   value: 2.5
-  description: 'Fast phone charging commonly uses a few amperes of current. Here the quantity refers to `charging current`. Source-side figure: `2.5 A` for Representative smartphone fast-charging current.'
+  description: Fast phone charging commonly uses a few amperes of current.
   description_format: markdown
   summary_short: Fast phone charging commonly uses a few amperes of current.
-  description_medium: 'Fast phone charging commonly uses a few amperes of current. Here the quantity refers to `charging current`. Source-side figure: `2.5 A` for Representative smartphone fast-charging current.'
+  description_medium: Fast phone charging commonly uses a few amperes of current.
   description_long: null
   hook: null
   caveats: null
@@ -503,10 +782,10 @@ items:
 - id: obs:current:entity-usb-c-default-current
   name: USB-C default charging current
   value: 3.0
-  description: 'USB-C can deliver a few amps at the default charging level. Here the quantity refers to `charging current`. Source-side figure: `3 A` for Representative USB-C default current capability.'
+  description: USB-C can deliver a few amps at the default charging level.
   description_format: markdown
   summary_short: USB-C can deliver a few amps at the default charging level.
-  description_medium: 'USB-C can deliver a few amps at the default charging level. Here the quantity refers to `charging current`. Source-side figure: `3 A` for Representative USB-C default current capability.'
+  description_medium: USB-C can deliver a few amps at the default charging level.
   description_long: null
   hook: null
   caveats: null
@@ -549,10 +828,10 @@ items:
 - id: obs:current:entity-laptop-ac-adapter-current
   name: Laptop AC adapter current
   value: 3.25
-  description: 'Laptop power bricks often provide a few amps at their output voltage. Here the quantity refers to `adapter output current`. Source-side figure: `3.25 A` for Representative laptop adapter output current.'
+  description: Laptop power bricks often provide a few amps at their output voltage.
   description_format: markdown
   summary_short: Laptop power bricks often provide a few amps at their output voltage.
-  description_medium: 'Laptop power bricks often provide a few amps at their output voltage. Here the quantity refers to `adapter output current`. Source-side figure: `3.25 A` for Representative laptop adapter output current.'
+  description_medium: Laptop power bricks often provide a few amps at their output voltage.
   description_long: null
   hook: null
   caveats: null
@@ -592,58 +871,13 @@ items:
   value_type: measured
   qualifiers:
     measurement: adapter output current
-- id: obs:current:entity-laptop-usbc-charge-current
-  name: Laptop USB-C charging current
-  value: 5.0
-  description: 'USB-C power delivery commonly reaches five amperes at the cable limit. Source-side figure: `5 A` for USB-C PD cable current limit.'
-  description_format: markdown
-  summary_short: USB-C power delivery commonly reaches five amperes at the cable limit.
-  description_medium: 'USB-C power delivery commonly reaches five amperes at the cable limit. Source-side figure: `5 A` for USB-C PD cable current limit.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Laptop USB-C charging current
-    ingest_source: dataset/raw/curated/current.json
-    source_trace:
-      method: direct
-      original_value_text: '5.0'
-      source_basis: USB-C PD cable current limit.
-      source_unit: A
-      source_url: https://en.wikipedia.org/wiki/USB_hardware
-      source_value_text: 5 A
-  source: https://en.wikipedia.org/wiki/USB_hardware
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-usb-hardware
-    url: https://en.wikipedia.org/wiki/USB_hardware
-    title: USB hardware
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-current-json
-    url: repo://dataset/raw/curated/current.json
-    title: dataset/raw/curated/current.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:current:entity-usb-pd-5a-current
   name: USB Power Delivery 5 amp current
   value: 5.0
-  description: 'High-power USB Power Delivery cables can carry five amps. Here the quantity refers to `charging current`. Source-side figure: `5 A` for Representative USB Power Delivery current limit.'
+  description: High-power USB Power Delivery cables can carry five amps.
   description_format: markdown
   summary_short: High-power USB Power Delivery cables can carry five amps.
-  description_medium: 'High-power USB Power Delivery cables can carry five amps. Here the quantity refers to `charging current`. Source-side figure: `5 A` for Representative USB Power Delivery current limit.'
+  description_medium: High-power USB Power Delivery cables can carry five amps.
   description_long: null
   hook: null
   caveats: null
@@ -686,10 +920,10 @@ items:
 - id: obs:current:entity-vacuum-cleaner-current
   name: Vacuum cleaner current
   value: 8.0
-  description: 'A household vacuum cleaner typically draws several amps from the wall. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `8 A` for Representative vacuum cleaner mains current.'
+  description: A household vacuum cleaner typically draws several amps from the wall.
   description_format: markdown
   summary_short: A household vacuum cleaner typically draws several amps from the wall.
-  description_medium: 'A household vacuum cleaner typically draws several amps from the wall. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `8 A` for Representative vacuum cleaner mains current.'
+  description_medium: A household vacuum cleaner typically draws several amps from the wall.
   description_long: null
   hook: null
   caveats: null
@@ -733,10 +967,10 @@ items:
 - id: obs:current:entity-toaster-current
   name: Household toaster current
   value: 8.333333333333334
-  description: 'A countertop toaster on 120 V mains draws on the order of eight to nine amperes. Here the quantity refers to `operating current`. Assumes `1000 watt toaster on 120 V`. Source-side figure: `1000 W at 120 V` for Derived from representative toaster power and line voltage.'
+  description: A countertop toaster on 120 V mains draws on the order of eight to nine amperes.
   description_format: markdown
   summary_short: A countertop toaster on 120 V mains draws on the order of eight to nine amperes.
-  description_medium: 'A countertop toaster on 120 V mains draws on the order of eight to nine amperes. Here the quantity refers to `operating current`. Assumes `1000 watt toaster on 120 V`. Source-side figure: `1000 W at 120 V` for Derived from representative toaster power and line voltage.'
+  description_medium: A countertop toaster on 120 V mains draws on the order of eight to nine amperes.
   description_long: null
   hook: null
   caveats: null
@@ -781,10 +1015,10 @@ items:
 - id: obs:current:entity-hair-dryer-current
   name: Hair dryer current
   value: 10.0
-  description: 'A hair dryer is one of the larger everyday loads on a home outlet. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `10 A` for Representative hair dryer mains current.'
+  description: A hair dryer is one of the larger everyday loads on a home outlet.
   description_format: markdown
   summary_short: A hair dryer is one of the larger everyday loads on a home outlet.
-  description_medium: 'A hair dryer is one of the larger everyday loads on a home outlet. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `10 A` for Representative hair dryer mains current.'
+  description_medium: A hair dryer is one of the larger everyday loads on a home outlet.
   description_long: null
   hook: null
   caveats: null
@@ -828,10 +1062,10 @@ items:
 - id: obs:current:entity-microwave-oven-current
   name: Microwave oven current
   value: 12.0
-  description: 'A microwave oven can pull around a dozen amps from a domestic circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12 A` for Representative microwave oven mains current.'
+  description: A microwave oven can pull around a dozen amps from a domestic circuit.
   description_format: markdown
   summary_short: A microwave oven can pull around a dozen amps from a domestic circuit.
-  description_medium: 'A microwave oven can pull around a dozen amps from a domestic circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12 A` for Representative microwave oven mains current.'
+  description_medium: A microwave oven can pull around a dozen amps from a domestic circuit.
   description_long: null
   hook: null
   caveats: null
@@ -875,10 +1109,10 @@ items:
 - id: obs:current:entity-kettle-current
   name: Electric kettle current on 120 V mains
   value: 12.5
-  description: 'An electric kettle on US mains is close to the 15 A branch-circuit range. Here the quantity refers to `operating current`. Assumes `1500 watt kettle on 120 V`. Source-side figure: `1500 W at 120 V` for Derived from representative kettle power and line voltage.'
+  description: An electric kettle on US mains is close to the 15 A branch-circuit range.
   description_format: markdown
   summary_short: An electric kettle on US mains is close to the 15 A branch-circuit range.
-  description_medium: 'An electric kettle on US mains is close to the 15 A branch-circuit range. Here the quantity refers to `operating current`. Assumes `1500 watt kettle on 120 V`. Source-side figure: `1500 W at 120 V` for Derived from representative kettle power and line voltage.'
+  description_medium: An electric kettle on US mains is close to the 15 A branch-circuit range.
   description_long: null
   hook: null
   caveats: null
@@ -923,10 +1157,10 @@ items:
 - id: obs:current:entity-space-heater-current
   name: Space heater current
   value: 12.5
-  description: 'Portable electric heaters sit near the upper edge of a household circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12.5 A` for Representative space-heater mains current.'
+  description: Portable electric heaters sit near the upper edge of a household circuit.
   description_format: markdown
   summary_short: Portable electric heaters sit near the upper edge of a household circuit.
-  description_medium: 'Portable electric heaters sit near the upper edge of a household circuit. Here the quantity refers to `mains current`. Assumes `typical household appliance`. Source-side figure: `12.5 A` for Representative space-heater mains current.'
+  description_medium: Portable electric heaters sit near the upper edge of a household circuit.
   description_long: null
   hook: null
   caveats: null
@@ -970,10 +1204,10 @@ items:
 - id: obs:current:entity-household-breaker-15a
   name: 15-amp household breaker rating
   value: 15.0
-  description: 'A common North American branch circuit is rated for fifteen amperes. Source-side figure: `15 A` for Common residential branch-circuit breaker rating.'
+  description: A common North American branch circuit is rated for fifteen amperes.
   description_format: markdown
   summary_short: A common North American branch circuit is rated for fifteen amperes.
-  description_medium: 'A common North American branch circuit is rated for fifteen amperes. Source-side figure: `15 A` for Common residential branch-circuit breaker rating.'
+  description_medium: A common North American branch circuit is rated for fifteen amperes.
   description_long: null
   hook: null
   caveats: null
@@ -1015,10 +1249,10 @@ items:
 - id: obs:current:entity-household-breaker-20a
   name: 20-amp household breaker rating
   value: 20.0
-  description: 'Heavier household circuits are often rated at twenty amperes. Source-side figure: `20 A` for Common residential branch-circuit breaker rating.'
+  description: Heavier household circuits are often rated at twenty amperes.
   description_format: markdown
   summary_short: Heavier household circuits are often rated at twenty amperes.
-  description_medium: 'Heavier household circuits are often rated at twenty amperes. Source-side figure: `20 A` for Common residential branch-circuit breaker rating.'
+  description_medium: Heavier household circuits are often rated at twenty amperes.
   description_long: null
   hook: null
   caveats: null
@@ -1060,10 +1294,10 @@ items:
 - id: obs:current:entity-electric-vehicle-level2-current
   name: Electric vehicle level-2 charging current
   value: 32.0
-  description: 'A level-2 electric-vehicle charger can deliver tens of amps. Here the quantity refers to `charging current`. Source-side figure: `32 A` for Representative level-2 EV charging current.'
+  description: A level-2 electric-vehicle charger can deliver tens of amps.
   description_format: markdown
   summary_short: A level-2 electric-vehicle charger can deliver tens of amps.
-  description_medium: 'A level-2 electric-vehicle charger can deliver tens of amps. Here the quantity refers to `charging current`. Source-side figure: `32 A` for Representative level-2 EV charging current.'
+  description_medium: A level-2 electric-vehicle charger can deliver tens of amps.
   description_long: null
   hook: null
   caveats: null
@@ -1106,10 +1340,10 @@ items:
 - id: obs:current:entity-mig-welder-current
   name: MIG welding current
   value: 120.0
-  description: 'A hobby welding machine often runs at a few hundred amperes or less. Here the quantity refers to `welding current`. Source-side figure: `120 A` for Representative MIG welding current.'
+  description: A hobby welding machine often runs at a few hundred amperes or less.
   description_format: markdown
   summary_short: A hobby welding machine often runs at a few hundred amperes or less.
-  description_medium: 'A hobby welding machine often runs at a few hundred amperes or less. Here the quantity refers to `welding current`. Source-side figure: `120 A` for Representative MIG welding current.'
+  description_medium: A hobby welding machine often runs at a few hundred amperes or less.
   description_long: null
   hook: null
   caveats: null
@@ -1152,10 +1386,10 @@ items:
 - id: obs:current:entity-car-starter-current
   name: Car starter motor current
   value: 300.0
-  description: 'Starting a car engine can pull a few hundred amperes from the battery. Here the quantity refers to `starting current`. Source-side figure: `300 A` for Representative starter-motor current.'
+  description: Starting a car engine can pull a few hundred amperes from the battery.
   description_format: markdown
   summary_short: Starting a car engine can pull a few hundred amperes from the battery.
-  description_medium: 'Starting a car engine can pull a few hundred amperes from the battery. Here the quantity refers to `starting current`. Source-side figure: `300 A` for Representative starter-motor current.'
+  description_medium: Starting a car engine can pull a few hundred amperes from the battery.
   description_long: null
   hook: null
   caveats: null
@@ -1198,10 +1432,10 @@ items:
 - id: obs:current:entity-dc-fast-charger-current
   name: DC fast charger current
   value: 300.0
-  description: 'Fast DC chargers can push hundreds of amps into a battery pack. Here the quantity refers to `charging current`. Source-side figure: `300 A` for Representative DC fast-charging current.'
+  description: Fast DC chargers can push hundreds of amps into a battery pack.
   description_format: markdown
   summary_short: Fast DC chargers can push hundreds of amps into a battery pack.
-  description_medium: 'Fast DC chargers can push hundreds of amps into a battery pack. Here the quantity refers to `charging current`. Source-side figure: `300 A` for Representative DC fast-charging current.'
+  description_medium: Fast DC chargers can push hundreds of amps into a battery pack.
   description_long: null
   hook: null
   caveats: null
@@ -1244,10 +1478,10 @@ items:
 - id: obs:current:entity-ev-fast-charge-current
   name: DC fast-charge EV cable current
   value: 500.0
-  description: 'High-power EV fast charging can operate around five hundred amperes. Here the quantity refers to `charging current`. Source-side figure: `500 A` for Representative high-power EV charging current.'
+  description: High-power EV fast charging can operate around five hundred amperes.
   description_format: markdown
   summary_short: High-power EV fast charging can operate around five hundred amperes.
-  description_medium: 'High-power EV fast charging can operate around five hundred amperes. Here the quantity refers to `charging current`. Source-side figure: `500 A` for Representative high-power EV charging current.'
+  description_medium: High-power EV fast charging can operate around five hundred amperes.
   description_long: null
   hook: null
   caveats: null
@@ -1290,10 +1524,10 @@ items:
 - id: obs:current:entity-urban-rail-current
   name: Urban rail traction current
   value: 1000.0
-  description: 'Electric rail systems commonly handle kiloampere-scale traction currents. Source-side figure: `1000 A` for Representative urban-rail traction current.'
+  description: Electric rail systems commonly handle kiloampere-scale traction currents.
   description_format: markdown
   summary_short: Electric rail systems commonly handle kiloampere-scale traction currents.
-  description_medium: 'Electric rail systems commonly handle kiloampere-scale traction currents. Source-side figure: `1000 A` for Representative urban-rail traction current.'
+  description_medium: Electric rail systems commonly handle kiloampere-scale traction currents.
   description_long: null
   hook: null
   caveats: null
@@ -1336,10 +1570,10 @@ items:
 - id: obs:current:entity-lhc-dipole-current
   name: LHC main dipole circuit current
   value: 11850.0
-  description: 'CERN''s LHC dipole magnets run at nearly twelve kiloamperes. Source-side figure: `11850 A` for CERN reports the LHC dipole current is about 11,850 A.'
+  description: CERN's LHC dipole magnets run at nearly twelve kiloamperes.
   description_format: markdown
   summary_short: CERN's LHC dipole magnets run at nearly twelve kiloamperes.
-  description_medium: 'CERN''s LHC dipole magnets run at nearly twelve kiloamperes. Source-side figure: `11850 A` for CERN reports the LHC dipole current is about 11,850 A.'
+  description_medium: CERN's LHC dipole magnets run at nearly twelve kiloamperes.
   description_long: null
   hook: null
   caveats: null
@@ -1378,59 +1612,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:current:entity-lightning-current
-  name: Peak lightning current
-  value: 30000.0
-  description: 'A lightning return stroke commonly reaches tens of kiloamperes. Here the quantity refers to `peak current`. Source-side figure: `30 kA` for Representative lightning peak current.'
-  description_format: markdown
-  summary_short: A lightning return stroke commonly reaches tens of kiloamperes.
-  description_medium: 'A lightning return stroke commonly reaches tens of kiloamperes. Here the quantity refers to `peak current`. Source-side figure: `30 kA` for Representative lightning peak current.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Peak lightning current
-    ingest_source: dataset/raw/curated/current.json
-    source_trace:
-      method: direct
-      original_value_text: '30000.0'
-      source_basis: Representative lightning peak current.
-      source_unit: A
-      source_url: https://en.wikipedia.org/wiki/Lightning
-      source_value_text: 30 kA
-  source: https://en.wikipedia.org/wiki/Lightning
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-lightning
-    url: https://en.wikipedia.org/wiki/Lightning
-    title: Lightning
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-current-json
-    url: repo://dataset/raw/curated/current.json
-    title: dataset/raw/curated/current.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: peak current
 - id: obs:current:entity-lightning-return-stroke-current
   name: Lightning return-stroke current
   value: 30000.0
-  description: 'The return stroke of lightning is one of nature''s largest currents. Here the quantity refers to `peak discharge current`. Assumes `order-of-magnitude representative value`. Source-side figure: `30 kA` for Representative cloud-to-ground lightning current.'
+  description: The return stroke of lightning is one of nature's largest currents.
   description_format: markdown
   summary_short: The return stroke of lightning is one of nature's largest currents.
-  description_medium: 'The return stroke of lightning is one of nature''s largest currents. Here the quantity refers to `peak discharge current`. Assumes `order-of-magnitude representative value`. Source-side figure: `30 kA` for Representative cloud-to-ground lightning current.'
+  description_medium: The return stroke of lightning is one of nature's largest currents.
   description_long: null
   hook: null
   caveats: null
@@ -1474,10 +1662,10 @@ items:
 - id: obs:current:entity-electric-arc-furnace-current
   name: Electric arc furnace current
   value: 100000.0
-  description: 'Industrial arc furnaces use enormous currents to sustain the arc. Here the quantity refers to `arc current`. Assumes `representative industrial value`. Source-side figure: `100 kA` for Representative electric arc furnace operating current.'
+  description: Industrial arc furnaces use enormous currents to sustain the arc.
   description_format: markdown
   summary_short: Industrial arc furnaces use enormous currents to sustain the arc.
-  description_medium: 'Industrial arc furnaces use enormous currents to sustain the arc. Here the quantity refers to `arc current`. Assumes `representative industrial value`. Source-side figure: `100 kA` for Representative electric arc furnace operating current.'
+  description_medium: Industrial arc furnaces use enormous currents to sustain the arc.
   description_long: null
   hook: null
   caveats: null
@@ -1521,10 +1709,10 @@ items:
 - id: obs:current:entity-aluminum-smelter-current
   name: Hall-Heroult aluminum cell current
   value: 300000.0
-  description: 'Industrial aluminum smelting cells operate at hundreds of kiloamperes. Here the quantity refers to `cell current`. Source-side figure: `300 kA` for Representative Hall-Heroult cell current.'
+  description: Industrial aluminum smelting cells operate at hundreds of kiloamperes.
   description_format: markdown
   summary_short: Industrial aluminum smelting cells operate at hundreds of kiloamperes.
-  description_medium: 'Industrial aluminum smelting cells operate at hundreds of kiloamperes. Here the quantity refers to `cell current`. Source-side figure: `300 kA` for Representative Hall-Heroult cell current.'
+  description_medium: Industrial aluminum smelting cells operate at hundreds of kiloamperes.
   description_long: null
   hook: null
   caveats: null
@@ -1567,10 +1755,10 @@ items:
 - id: obs:current:entity-railgun-current
   name: Railgun pulse current
   value: 1000000.0
-  description: 'Experimental railguns can use megaampere-scale current pulses. Here the quantity refers to `pulse current`. Source-side figure: `1 MA` for Representative railgun pulse current.'
+  description: Experimental railguns can use megaampere-scale current pulses.
   description_format: markdown
   summary_short: Experimental railguns can use megaampere-scale current pulses.
-  description_medium: 'Experimental railguns can use megaampere-scale current pulses. Here the quantity refers to `pulse current`. Source-side figure: `1 MA` for Representative railgun pulse current.'
+  description_medium: Experimental railguns can use megaampere-scale current pulses.
   description_long: null
   hook: null
   caveats: null
@@ -1613,10 +1801,10 @@ items:
 - id: obs:current:entity-z-machine-current
   name: Z-pinch current in Sandia Z Machine
   value: 20000000.0
-  description: 'The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge. Here the quantity refers to `pulse current`. Source-side figure: `20 MA` for Representative Z Machine discharge current.'
+  description: The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge.
   description_format: markdown
   summary_short: The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge.
-  description_medium: 'The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge. Here the quantity refers to `pulse current`. Source-side figure: `20 MA` for Representative Z Machine discharge current.'
+  description_medium: The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge.
   description_long: null
   hook: null
   caveats: null
@@ -1656,3 +1844,50 @@ items:
   value_type: measured
   qualifiers:
     measurement: pulse current
+- id: obs:current:entity-planck-current
+  name: Planck current
+  value: 3.478872753751307e+25
+  description: Planck current is the natural current scale formed from fundamental constants.
+  description_format: markdown
+  summary_short: Planck current is the natural current scale formed from fundamental constants.
+  description_medium: Planck current is the natural current scale formed from fundamental constants.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck current
+    ingest_source: dataset/raw/curated/current.json
+    source_trace:
+      derivation_note: I_P = \sqrt{4\pi\varepsilon_0 c^6 / G}
+      method: derived
+      original_value_text: '3.478872753751307e+25'
+      source_basis: Derived from c, ħ, G, and ε0 using the Planck-unit current scale.
+      source_unit: A
+      source_url: https://en.wikipedia.org/wiki/Planck_units
+      source_value_text: 3.478872753751307e25 A
+  source: https://en.wikipedia.org/wiki/Planck_units
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-planck-units
+    url: https://en.wikipedia.org/wiki/Planck_units
+    title: Planck units
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-current-json
+    url: repo://dataset/raw/curated/current.json
+    title: dataset/raw/curated/current.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: natural current scale

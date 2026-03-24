@@ -784,7 +784,7 @@ class PlotRenderer {
         this.xAxis.call(
             d3.axisBottom(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         // Extend axis domain lines to full container width
         const svgWidth = +this.svg.attr('width') || 0;
@@ -794,20 +794,20 @@ class PlotRenderer {
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxis);
         }
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         this.xAxisTop.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxisTop);
         }
         
@@ -860,26 +860,26 @@ class PlotRenderer {
         this.xAxis.call(
             d3.axisBottom(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         this.xAxis.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxis);
         }
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         this.xAxisTop.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxisTop);
         }
         

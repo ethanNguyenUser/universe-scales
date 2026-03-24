@@ -74,7 +74,7 @@ description_format: markdown
 scale_mode: log
 frontend_group: fundamental
 frontend_group_label: Fundamental Scales
-frontend_order: 20
+frontend_order: 120
 items:
 - id: obs:duration:scenario-duration-planck-time
   name: Planck Time
@@ -142,48 +142,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-resonance-particle-physics
     url: https://en.wikipedia.org/wiki/Resonance_(particle_physics)
     title: Resonance (particle physics)
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
-    url: repo://dataset/raw/legacy_yaml/duration.yaml
-    title: dataset/raw/legacy_yaml/duration.yaml
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: legacy_seed
-    note: dataset/raw/legacy_yaml/duration.yaml
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
-- id: obs:duration:scenario-duration-nuclear-reaction
-  name: Nuclear Reaction
-  value: 1.0e-22
-  description: The characteristic timescale for strong nuclear interactions, specifically when protons and neutrons exchange virtual particles. This duration determines how quickly nuclear forces can bind nucleons together against electromagnetic repulsion. The strong force operates over this incredibly short timescale to maintain nuclear stability in all atoms heavier than hydrogen.
-  description_format: markdown
-  summary_short: The characteristic timescale for strong nuclear interactions, specifically when protons and neutrons exchange virtual particles.
-  description_medium: The characteristic timescale for strong nuclear interactions, specifically when protons and neutrons exchange virtual particles. This duration determines how quickly nuclear forces can bind nucleons together against electromagnetic repulsion. The strong force operates over this incredibly short timescale to maintain nuclear stability in all atoms heavier than hydrogen.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    ingest_source: dataset/raw/legacy_yaml/duration.yaml
-    legacy_item_name: Nuclear Reaction
-    source_trace:
-      method: derived
-      original_value_text: 1e-22
-      source_url: https://en.wikipedia.org/wiki/Nuclear_reaction
-  source: https://en.wikipedia.org/wiki/Nuclear_reaction
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-nuclear-reaction
-    url: https://en.wikipedia.org/wiki/Nuclear_reaction
-    title: Nuclear reaction
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1210,48 +1168,6 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:duration:scenario-duration-human-pregnancy
-  name: Human Pregnancy
-  value: 24000000.0
-  description: The duration of a typical human pregnancy, representing the time required for fetal development from conception to birth. This timing is remarkably consistent across human populations and represents one of the most fundamental biological processes. Pregnancy duration has shaped human social structures and cultural practices.
-  description_format: markdown
-  summary_short: The duration of a typical human pregnancy, representing the time required for fetal development from conception to birth.
-  description_medium: The duration of a typical human pregnancy, representing the time required for fetal development from conception to birth. This timing is remarkably consistent across human populations and represents one of the most fundamental biological processes. Pregnancy duration has shaped human social structures and cultural practices.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    ingest_source: dataset/raw/legacy_yaml/duration.yaml
-    legacy_item_name: Human Pregnancy
-    source_trace:
-      method: derived
-      original_value_text: 2.4e7
-      source_url: https://en.wikipedia.org/wiki/Pregnancy
-  source: https://en.wikipedia.org/wiki/Pregnancy
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-pregnancy
-    url: https://en.wikipedia.org/wiki/Pregnancy
-    title: Pregnancy
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
-    url: repo://dataset/raw/legacy_yaml/duration.yaml
-    title: dataset/raw/legacy_yaml/duration.yaml
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: legacy_seed
-    note: dataset/raw/legacy_yaml/duration.yaml
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:duration:scenario-duration-decade
   name: Decade
   value: 315576000.0
@@ -1297,10 +1213,10 @@ items:
 - id: obs:duration:entity-cat
   name: Cat Lifetime
   value: 470000000.0
-  description: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature. Here the quantity refers to `representative lifespan`.
+  description: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature.
   description_format: markdown
   summary_short: The typical lifespan of a domestic cat, representing the duration of feline companionship.
-  description_medium: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature. Here the quantity refers to `representative lifespan`.
+  description_medium: The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature.
   description_long: null
   hook: null
   caveats: null
@@ -1340,10 +1256,10 @@ items:
 - id: obs:duration:entity-dog
   name: Dog Lifetime
   value: 470000000.0
-  description: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives. Here the quantity refers to `representative lifespan`.
+  description: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives.
   description_format: markdown
   summary_short: The typical lifespan of a domestic dog, representing the duration of canine companionship.
-  description_medium: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives. Here the quantity refers to `representative lifespan`.
+  description_medium: The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives.
   description_long: null
   hook: null
   caveats: null
@@ -1383,10 +1299,10 @@ items:
 - id: obs:duration:entity-human
   name: Human Lifetime
   value: 2500000000.0
-  description: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements. Here the quantity refers to `representative lifespan`.
+  description: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements.
   description_format: markdown
   summary_short: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death.
-  description_medium: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements. Here the quantity refers to `representative lifespan`.
+  description_medium: The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements.
   description_long: null
   hook: null
   caveats: null
@@ -1423,48 +1339,6 @@ items:
   value_type: derived
   qualifiers:
     measurement: representative lifespan
-- id: obs:duration:scenario-duration-tree-lifetime
-  name: Tree Lifetime
-  value: 3150000000.0
-  description: The typical lifespan of a large tree species like oak or pine, representing the duration of forest giants. These long-lived trees can survive for centuries, witnessing multiple human generations and environmental changes. Ancient trees serve as living records of climate history and provide crucial habitat for countless species.
-  description_format: markdown
-  summary_short: The typical lifespan of a large tree species like oak or pine, representing the duration of forest giants.
-  description_medium: The typical lifespan of a large tree species like oak or pine, representing the duration of forest giants. These long-lived trees can survive for centuries, witnessing multiple human generations and environmental changes. Ancient trees serve as living records of climate history and provide crucial habitat for countless species.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    ingest_source: dataset/raw/legacy_yaml/duration.yaml
-    legacy_item_name: Tree Lifetime
-    source_trace:
-      method: derived
-      original_value_text: 3.15e9
-      source_url: https://en.wikipedia.org/wiki/Tree
-  source: https://en.wikipedia.org/wiki/Tree
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-tree
-    url: https://en.wikipedia.org/wiki/Tree
-    title: Tree
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
-    url: repo://dataset/raw/legacy_yaml/duration.yaml
-    title: dataset/raw/legacy_yaml/duration.yaml
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: legacy_seed
-    note: dataset/raw/legacy_yaml/duration.yaml
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:duration:scenario-duration-century
   name: Century
   value: 3155760000.0
@@ -1930,10 +1804,10 @@ items:
 - id: obs:duration:entity-earth
   name: Earth Age
   value: 1.45e+17
-  description: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age. Here the quantity refers to `age since formation`.
+  description: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age.
   description_format: markdown
   summary_short: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation.
-  description_medium: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age. Here the quantity refers to `age since formation`.
+  description_medium: About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age.
   description_long: null
   hook: null
   caveats: null
@@ -1973,10 +1847,10 @@ items:
 - id: obs:duration:entity-sun
   name: Sun Age
   value: 1.45e+17
-  description: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology. Here the quantity refers to `age since formation`.
+  description: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology.
   description_format: markdown
   summary_short: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud.
-  description_medium: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology. Here the quantity refers to `age since formation`.
+  description_medium: About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology.
   description_long: null
   hook: null
   caveats: null
@@ -2016,10 +1890,10 @@ items:
 - id: obs:duration:entity-universe
   name: Universe Age
   value: 4.35e+17
-  description: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time. Here the quantity refers to `age of the observable universe`.
+  description: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time.
   description_format: markdown
   summary_short: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements.
-  description_medium: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time. Here the quantity refers to `age of the observable universe`.
+  description_medium: About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time.
   description_long: null
   hook: null
   caveats: null
@@ -2059,14 +1933,14 @@ items:
 - id: obs:duration:scenario-duration-all-human-hours-ever
   name: All Human Hours Ever
   value: 1.45e+20
-  description: The total person-hours accumulated by all humans who have ever lived, estimated using Fermi-style integration of population over time. For ~300,000 years of Homo sapiens. Hunter-gatherer era (~290k yrs, avg pop ~5M) ≈ 1.45*10¹² person-years; agriculture to 1800 CE (~11.8k yrs, avg pop ~200M) ≈ 2.36*10¹² person-years; 1800-today (~225 yrs, avg pop ~3.5B) ≈ 7.9×10¹¹ person-years. Total ≈ 4.6*10¹² person-years. This represents the cumulative conscious experience of our entire species throughout history.
+  description: The total conscious time spent by every human who has ever lived is large enough to feel geological, yet still tiny beside the biosphere that carried humans the whole time. It is a useful reminder that human history is only one thin slice of the planet's much longer clock.
   description_format: markdown
-  summary_short: The total person-hours accumulated by all humans who have ever lived, estimated using Fermi-style integration of population over time.
-  description_medium: The total person-hours accumulated by all humans who have ever lived, estimated using Fermi-style integration of population over time. For ~300,000 years of Homo sapiens. Hunter-gatherer era (~290k yrs, avg pop ~5M) ≈ 1.45*10¹² person-years; agriculture to 1800 CE (~11.8k yrs, avg pop ~200M) ≈ 2.36*10¹² person-years; 1800-today (~225 yrs, avg pop ~3.5B) ≈ 7.9×10¹¹ person-years. Total ≈ 4.6*10¹² person-years. This represents the cumulative conscious experience of our entire species throughout history.
+  summary_short: The total conscious time spent by every human who has ever lived, estimated with a Fermi-style population integral.
+  description_medium: The total conscious time spent by every human who has ever lived is large enough to feel geological, yet still tiny beside the biosphere that carried humans the whole time. It is a useful reminder that human history is only one thin slice of the planet's much longer clock.
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Human Hours Ever
@@ -2098,30 +1972,198 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:duration:scenario-duration-all-life-hours-ever
-  name: All Life Hours Ever
-  value: 1.08e+47
-  description: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago. Using Fermi-style calculation, 1e30 microbial cells at any given time 3e13 hours of biosphere existence ≈ 3e43 organism-hours. This includes every moment of every organism's existence, from single-celled bacteria to complex multicellular life. Almost all of it is microbes, adding animals, plants, and fungi barely nudges the total.
+- id: obs:duration:scenario-duration-all-mammal-hours-ever
+  name: All Mammal Hours Ever
+  value: 3.0e+24
+  description: Mammals occupy a surprisingly modest slice of deep time compared with insects or microbes, but their total accumulated life still jumps far beyond the human story. This is where a clade-wide total starts to feel ecological rather than historical.
   description_format: markdown
-  summary_short: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago.
-  description_medium: The total life-hours accumulated by all living organisms on Earth throughout the planet's history, estimated from the origin of life 3.5 billion years ago. Using Fermi-style calculation, 1e30 microbial cells at any given time 3e13 hours of biosphere existence ≈ 3e43 organism-hours. This includes every moment of every organism's existence, from single-celled bacteria to complex multicellular life. Almost all of it is microbes, adding animals, plants, and fungi barely nudges the total.
+  summary_short: Mammals occupy a surprisingly modest slice of deep time compared with insects or microbes.
+  description_medium: Mammals occupy a surprisingly modest slice of deep time compared with insects or microbes, but their total accumulated life still jumps far beyond the human story. This is where a clade-wide total starts to feel ecological rather than historical.
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
-    legacy_item_name: All Life Hours Ever
+    legacy_item_name: All Mammal Hours Ever
     source_trace:
       method: derived
-      original_value_text: 1.08e47
-      source_url: https://en.wikipedia.org/wiki/History_of_life
-  source: https://en.wikipedia.org/wiki/History_of_life
+      original_value_text: 3e24
+      source_url: https://en.wikipedia.org/wiki/Mammal
+  source: https://en.wikipedia.org/wiki/Mammal
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-history-of-life
-    url: https://en.wikipedia.org/wiki/History_of_life
-    title: History of life
+  - id: src:https-en-wikipedia-org-wiki-mammal
+    url: https://en.wikipedia.org/wiki/Mammal
+    title: Mammal
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
+    url: repo://dataset/raw/legacy_yaml/duration.yaml
+    title: dataset/raw/legacy_yaml/duration.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/duration.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:duration:scenario-duration-all-vertebrate-hours-ever
+  name: All Vertebrate Hours Ever
+  value: 1.0e+29
+  description: Vertebrates are the animal branch people notice first, but most of their total lifetime is not in the big land animals. Fish and other small, numerous species quietly dominate the count, which is why this total is much larger than intuition suggests.
+  description_format: markdown
+  summary_short: Vertebrates are the animal branch people notice first, but most of their total lifetime is not in the big land animals.
+  description_medium: Vertebrates are the animal branch people notice first, but most of their total lifetime is not in the big land animals. Fish and other small, numerous species quietly dominate the count, which is why this total is much larger than intuition suggests.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/duration.yaml
+    legacy_item_name: All Vertebrate Hours Ever
+    source_trace:
+      method: derived
+      original_value_text: 1e29
+      source_url: https://en.wikipedia.org/wiki/Vertebrate
+  source: https://en.wikipedia.org/wiki/Vertebrate
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vertebrate
+    url: https://en.wikipedia.org/wiki/Vertebrate
+    title: Vertebrate
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
+    url: repo://dataset/raw/legacy_yaml/duration.yaml
+    title: dataset/raw/legacy_yaml/duration.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/duration.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:duration:scenario-duration-all-insect-hours-ever
+  name: All Insect Hours Ever
+  value: 3.0e+33
+  description: Insects are where the tally starts to feel almost absurd. Their bodies are small and their generations are short, so abundance and turnover do most of the work once you start adding up everything that has ever lived.
+  description_format: markdown
+  summary_short: Insects are where the tally starts to feel almost absurd.
+  description_medium: Insects are where the tally starts to feel almost absurd. Their bodies are small and their generations are short, so abundance and turnover do most of the work once you start adding up everything that has ever lived.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/duration.yaml
+    legacy_item_name: All Insect Hours Ever
+    source_trace:
+      method: derived
+      original_value_text: 3e33
+      source_url: https://en.wikipedia.org/wiki/Insect
+  source: https://en.wikipedia.org/wiki/Insect
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-insect
+    url: https://en.wikipedia.org/wiki/Insect
+    title: Insect
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
+    url: repo://dataset/raw/legacy_yaml/duration.yaml
+    title: dataset/raw/legacy_yaml/duration.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/duration.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:duration:scenario-duration-all-plant-hours-ever
+  name: All Plant Hours Ever
+  value: 3.0e+41
+  description: Plants stretch time differently from animals because they are long-lived, widespread, and often present as standing biomass for years at a stretch. Their accumulated hours pile up across seasons, forests, and whole landscapes rather than across brief lifetimes.
+  description_format: markdown
+  summary_short: Plants stretch time differently from animals because they are long-lived, widespread, and often present as standing biomass for years at a stretch.
+  description_medium: Plants stretch time differently from animals because they are long-lived, widespread, and often present as standing biomass for years at a stretch. Their accumulated hours pile up across seasons, forests, and whole landscapes rather than across brief lifetimes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/duration.yaml
+    legacy_item_name: All Plant Hours Ever
+    source_trace:
+      method: derived
+      original_value_text: 3e41
+      source_url: https://en.wikipedia.org/wiki/Plant
+  source: https://en.wikipedia.org/wiki/Plant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-plant
+    url: https://en.wikipedia.org/wiki/Plant
+    title: Plant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-duration-yaml
+    url: repo://dataset/raw/legacy_yaml/duration.yaml
+    title: dataset/raw/legacy_yaml/duration.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/duration.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:duration:scenario-duration-all-microbial-hours-ever
+  name: All Microbial Hours Ever
+  value: 1.0e+46
+  description: Microbes dominate life by both count and turnover, so even tiny lifetimes accumulate into something immense. This is the point where the biosphere stops feeling like a collection of organisms and starts feeling like a planetary process.
+  description_format: markdown
+  summary_short: Microbes dominate life by both count and turnover.
+  description_medium: Microbes dominate life by both count and turnover, so even tiny lifetimes accumulate into something immense. This is the point where the biosphere stops feeling like a collection of organisms and starts feeling like a planetary process.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/duration.yaml
+    legacy_item_name: All Microbial Hours Ever
+    source_trace:
+      method: derived
+      original_value_text: 1e46
+      source_url: https://en.wikipedia.org/wiki/Microorganism
+  source: https://en.wikipedia.org/wiki/Microorganism
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-microorganism
+    url: https://en.wikipedia.org/wiki/Microorganism
+    title: Microorganism
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

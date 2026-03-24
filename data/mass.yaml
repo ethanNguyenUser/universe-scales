@@ -68,15 +68,15 @@ description_format: markdown
 scale_mode: log
 frontend_group: fundamental
 frontend_group_label: Fundamental Scales
-frontend_order: 30
+frontend_order: 140
 items:
 - id: obs:mass:entity-electron
   name: Electron
   value: 9.109e-31
-  description: Rest mass of a single electron. Here the quantity refers to `rest mass`.
+  description: Rest mass of a single electron.
   description_format: markdown
   summary_short: Rest mass of a single electron.
-  description_medium: Rest mass of a single electron. Here the quantity refers to `rest mass`.
+  description_medium: Rest mass of a single electron.
   description_long: null
   hook: null
   caveats: null
@@ -116,10 +116,10 @@ items:
 - id: obs:mass:entity-proton
   name: Proton
   value: 1.673e-27
-  description: Rest mass of a single proton. Here the quantity refers to `rest mass`.
+  description: Rest mass of a single proton.
   description_format: markdown
   summary_short: Rest mass of a single proton.
-  description_medium: Rest mass of a single proton. Here the quantity refers to `rest mass`.
+  description_medium: Rest mass of a single proton.
   description_long: null
   hook: null
   caveats: null
@@ -159,10 +159,10 @@ items:
 - id: obs:mass:entity-water
   name: Water molecule
   value: 2.9915e-26
-  description: Mass of one H2O molecule. Derived using `18 u converted to kilograms`. Here the quantity refers to `single molecule`.
+  description: Mass of one H2O molecule.
   description_format: markdown
   summary_short: Mass of one H2O molecule.
-  description_medium: Mass of one H2O molecule. Derived using `18 u converted to kilograms`. Here the quantity refers to `single molecule`.
+  description_medium: Mass of one H2O molecule.
   description_long: null
   hook: null
   caveats: null
@@ -204,10 +204,10 @@ items:
 - id: obs:mass:entity-ribosome
   name: Ribosome
   value: 4.0e-21
-  description: Characteristic mass of a bacterial ribosome. Here the quantity refers to `representative bacterial ribosome`.
+  description: Characteristic mass of a bacterial ribosome.
   description_format: markdown
   summary_short: Characteristic mass of a bacterial ribosome.
-  description_medium: Characteristic mass of a bacterial ribosome. Here the quantity refers to `representative bacterial ribosome`.
+  description_medium: Characteristic mass of a bacterial ribosome.
   description_long: null
   hook: null
   caveats: null
@@ -247,10 +247,10 @@ items:
 - id: obs:mass:entity-influenza-virus
   name: Influenza virion
   value: 1.0e-18
-  description: Representative mass of a single influenza virus particle. Here the quantity refers to `single virion`.
+  description: Representative mass of a single influenza virus particle.
   description_format: markdown
   summary_short: Representative mass of a single influenza virus particle.
-  description_medium: Representative mass of a single influenza virus particle. Here the quantity refers to `single virion`.
+  description_medium: Representative mass of a single influenza virus particle.
   description_long: null
   hook: null
   caveats: null
@@ -290,10 +290,10 @@ items:
 - id: obs:mass:entity-e-coli
   name: Escherichia coli cell
   value: 1.0e-15
-  description: Approximate wet mass of one E. coli cell. Here the quantity refers to `single cell`.
+  description: Approximate wet mass of one E. coli cell.
   description_format: markdown
   summary_short: Approximate wet mass of one E.
-  description_medium: Approximate wet mass of one E. coli cell. Here the quantity refers to `single cell`.
+  description_medium: Approximate wet mass of one E. coli cell.
   description_long: null
   hook: null
   caveats: null
@@ -334,10 +334,10 @@ items:
 - id: obs:mass:entity-human-ovum
   name: Human ovum
   value: 5.0e-10
-  description: Approximate mass of a single human egg cell. Here the quantity refers to `single cell`.
+  description: Approximate mass of a single human egg cell.
   description_format: markdown
   summary_short: Approximate mass of a single human egg cell.
-  description_medium: Approximate mass of a single human egg cell. Here the quantity refers to `single cell`.
+  description_medium: Approximate mass of a single human egg cell.
   description_long: null
   hook: null
   caveats: null
@@ -374,13 +374,60 @@ items:
   value_type: derived
   qualifiers:
     measurement: single cell
+- id: obs:mass:entity-planck-mass
+  name: Planck mass
+  value: 2.176434342051127e-08
+  description: Planck mass is the natural mass scale built from quantum mechanics and gravity.
+  description_format: markdown
+  summary_short: Planck mass is the natural mass scale built from quantum mechanics and gravity.
+  description_medium: Planck mass is the natural mass scale built from quantum mechanics and gravity.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck mass
+    ingest_source: dataset/raw/curated/mass.json
+    source_trace:
+      derivation_note: m_P = \sqrt{\hbar c / G}
+      method: derived
+      original_value_text: '2.176434342051127e-08'
+      source_basis: Derived from ħ, c, and G using the Planck-unit mass scale.
+      source_unit: kg
+      source_url: https://en.wikipedia.org/wiki/Planck_units
+      source_value_text: 2.176434342051127e-08 kg
+  source: https://en.wikipedia.org/wiki/Planck_units
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-planck-units
+    url: https://en.wikipedia.org/wiki/Planck_units
+    title: Planck units
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-mass-json
+    url: repo://dataset/raw/curated/mass.json
+    title: dataset/raw/curated/mass.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: natural mass scale
 - id: obs:mass:scenario-grain-of-rice
   name: Grain of rice
   value: 2.0e-05
-  description: Representative mass of one dry grain of rice. Here the quantity refers to `single grain`.
+  description: Representative mass of one dry grain of rice.
   description_format: markdown
   summary_short: Representative mass of one dry grain of rice.
-  description_medium: Representative mass of one dry grain of rice. Here the quantity refers to `single grain`.
+  description_medium: Representative mass of one dry grain of rice.
   description_long: null
   hook: null
   caveats: null
@@ -421,10 +468,10 @@ items:
 - id: obs:mass:entity-honey-bee
   name: Honey bee
   value: 0.0001
-  description: Representative mass of an adult worker honey bee. Here the quantity refers to `worker adult`.
+  description: Representative mass of an adult worker honey bee.
   description_format: markdown
   summary_short: Representative mass of an adult worker honey bee.
-  description_medium: Representative mass of an adult worker honey bee. Here the quantity refers to `worker adult`.
+  description_medium: Representative mass of an adult worker honey bee.
   description_long: null
   hook: null
   caveats: null
@@ -464,10 +511,10 @@ items:
 - id: obs:mass:entity-house-mouse
   name: House mouse
   value: 0.02
-  description: Representative body mass of an adult house mouse. Here the quantity refers to `adult body mass`.
+  description: Representative body mass of an adult house mouse.
   description_format: markdown
   summary_short: Representative body mass of an adult house mouse.
-  description_medium: Representative body mass of an adult house mouse. Here the quantity refers to `adult body mass`.
+  description_medium: Representative body mass of an adult house mouse.
   description_long: null
   hook: null
   caveats: null
@@ -507,10 +554,10 @@ items:
 - id: obs:mass:entity-cat
   name: Cat
   value: 4.0
-  description: Representative mass of an adult domestic cat. Here the quantity refers to `adult body mass`.
+  description: Representative mass of an adult domestic cat.
   description_format: markdown
   summary_short: Representative mass of an adult domestic cat.
-  description_medium: Representative mass of an adult domestic cat. Here the quantity refers to `adult body mass`.
+  description_medium: Representative mass of an adult domestic cat.
   description_long: null
   hook: null
   caveats: null
@@ -550,10 +597,10 @@ items:
 - id: obs:mass:entity-human
   name: Human
   value: 70.0
-  description: Representative mass of an adult human. Here the quantity refers to `adult body mass`.
+  description: Representative mass of an adult human.
   description_format: markdown
   summary_short: Representative mass of an adult human.
-  description_medium: Representative mass of an adult human. Here the quantity refers to `adult body mass`.
+  description_medium: Representative mass of an adult human.
   description_long: null
   hook: null
   caveats: null
@@ -593,10 +640,10 @@ items:
 - id: obs:mass:entity-giraffe
   name: Giraffe
   value: 1200.0
-  description: Representative mass of an adult giraffe. Here the quantity refers to `adult body mass`.
+  description: Representative mass of an adult giraffe.
   description_format: markdown
   summary_short: Representative mass of an adult giraffe.
-  description_medium: Representative mass of an adult giraffe. Here the quantity refers to `adult body mass`.
+  description_medium: Representative mass of an adult giraffe.
   description_long: null
   hook: null
   caveats: null
@@ -679,10 +726,10 @@ items:
 - id: obs:mass:entity-blue-whale
   name: Blue whale
   value: 150000.0
-  description: Representative mass of a large adult blue whale. Here the quantity refers to `adult body mass`.
+  description: Representative mass of a large adult blue whale.
   description_format: markdown
   summary_short: Representative mass of a large adult blue whale.
-  description_medium: Representative mass of a large adult blue whale. Here the quantity refers to `adult body mass`.
+  description_medium: Representative mass of a large adult blue whale.
   description_long: null
   hook: null
   caveats: null
@@ -808,10 +855,10 @@ items:
 - id: obs:mass:entity-great-pyramid-of-giza
   name: Great Pyramid of Giza
   value: 5750000000.0
-  description: Approximate mass of the Great Pyramid of Giza. Here the quantity refers to `estimated total stone mass`.
+  description: Approximate mass of the Great Pyramid of Giza.
   description_format: markdown
   summary_short: Approximate mass of the Great Pyramid of Giza.
-  description_medium: Approximate mass of the Great Pyramid of Giza. Here the quantity refers to `estimated total stone mass`.
+  description_medium: Approximate mass of the Great Pyramid of Giza.
   description_long: null
   hook: null
   caveats: null
@@ -851,10 +898,10 @@ items:
 - id: obs:mass:entity-halleys-comet-mass
   name: Halley's Comet
   value: 220000000000000.0
-  description: 'Representative mass estimate for Halley''s Comet. Here the quantity refers to `estimated comet mass`. Source-side figure: `2.2 x 10^14 kg` for Reported approximate mass of Halley''s Comet.'
+  description: Representative mass estimate for Halley's Comet.
   description_format: markdown
   summary_short: Representative mass estimate for Halley's Comet.
-  description_medium: 'Representative mass estimate for Halley''s Comet. Here the quantity refers to `estimated comet mass`. Source-side figure: `2.2 x 10^14 kg` for Reported approximate mass of Halley''s Comet.'
+  description_medium: Representative mass estimate for Halley's Comet.
   description_long: null
   hook: null
   caveats: null
@@ -897,10 +944,10 @@ items:
 - id: obs:mass:entity-lake-superior
   name: Lake Superior
   value: 1.2e+16
-  description: Mass of Lake Superior's water using its volume and freshwater density. Derived using `volume times density`. Here the quantity refers to `water mass`.
+  description: Mass of Lake Superior's water using its volume and freshwater density.
   description_format: markdown
   summary_short: Mass of Lake Superior's water using its volume and freshwater density.
-  description_medium: Mass of Lake Superior's water using its volume and freshwater density. Derived using `volume times density`. Here the quantity refers to `water mass`.
+  description_medium: Mass of Lake Superior's water using its volume and freshwater density.
   description_long: null
   hook: null
   caveats: null
@@ -942,10 +989,10 @@ items:
 - id: obs:mass:entity-ceres
   name: Ceres
   value: 9.38e+20
-  description: Mass of the dwarf planet Ceres. Here the quantity refers to `gravitationally inferred mass`.
+  description: Mass of the dwarf planet Ceres.
   description_format: markdown
   summary_short: Mass of the dwarf planet Ceres.
-  description_medium: Mass of the dwarf planet Ceres. Here the quantity refers to `gravitationally inferred mass`.
+  description_medium: Mass of the dwarf planet Ceres.
   description_long: null
   hook: null
   caveats: null
@@ -985,10 +1032,10 @@ items:
 - id: obs:mass:entity-pluto
   name: Pluto
   value: 1.309e+22
-  description: 'Mass of the dwarf planet Pluto. Here the quantity refers to `dwarf-planet mass`. Source-side figure: `1.309 x 10^22 kg` for Reported Pluto mass.'
+  description: Mass of the dwarf planet Pluto.
   description_format: markdown
   summary_short: Mass of the dwarf planet Pluto.
-  description_medium: 'Mass of the dwarf planet Pluto. Here the quantity refers to `dwarf-planet mass`. Source-side figure: `1.309 x 10^22 kg` for Reported Pluto mass.'
+  description_medium: Mass of the dwarf planet Pluto.
   description_long: null
   hook: null
   caveats: null
@@ -1031,10 +1078,10 @@ items:
 - id: obs:mass:entity-moon
   name: Moon
   value: 7.35e+22
-  description: Mass of Earth's Moon. Here the quantity refers to `gravitationally inferred mass`.
+  description: Mass of Earth's Moon.
   description_format: markdown
   summary_short: Mass of Earth's Moon.
-  description_medium: Mass of Earth's Moon. Here the quantity refers to `gravitationally inferred mass`.
+  description_medium: Mass of Earth's Moon.
   description_long: null
   hook: null
   caveats: null
@@ -1071,59 +1118,13 @@ items:
   value_type: measured
   qualifiers:
     measurement: gravitationally inferred mass
-- id: obs:mass:entity-mercury
-  name: Mercury
-  value: 3.3011e+23
-  description: 'Mass of Mercury. Here the quantity refers to `planetary mass`. Source-side figure: `3.3011 x 10^23 kg` for Reported Mercury mass.'
-  description_format: markdown
-  summary_short: Mass of Mercury.
-  description_medium: 'Mass of Mercury. Here the quantity refers to `planetary mass`. Source-side figure: `3.3011 x 10^23 kg` for Reported Mercury mass.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Mercury
-    ingest_source: dataset/raw/curated/mass.json
-    source_trace:
-      method: direct
-      original_value_text: '3.3011e+23'
-      source_basis: Reported Mercury mass.
-      source_unit: kg
-      source_url: https://en.wikipedia.org/wiki/Mercury_(planet)
-      source_value_text: 3.3011 x 10^23 kg
-  source: https://en.wikipedia.org/wiki/Mercury_(planet)
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-mercury-planet
-    url: https://en.wikipedia.org/wiki/Mercury_(planet)
-    title: Mercury (planet)
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-mass-json
-    url: repo://dataset/raw/curated/mass.json
-    title: dataset/raw/curated/mass.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: planetary mass
 - id: obs:mass:entity-venus
   name: Venus
   value: 4.8675e+24
-  description: 'Mass of Venus. Here the quantity refers to `planetary mass`. Source-side figure: `4.8675 x 10^24 kg` for Reported Venus mass.'
+  description: Mass of Venus.
   description_format: markdown
   summary_short: Mass of Venus.
-  description_medium: 'Mass of Venus. Here the quantity refers to `planetary mass`. Source-side figure: `4.8675 x 10^24 kg` for Reported Venus mass.'
+  description_medium: Mass of Venus.
   description_long: null
   hook: null
   caveats: null
@@ -1166,10 +1167,10 @@ items:
 - id: obs:mass:entity-uranus
   name: Uranus
   value: 8.681e+25
-  description: 'Mass of Uranus. Here the quantity refers to `planetary mass`. Source-side figure: `8.681 x 10^25 kg` for Reported Uranus mass.'
+  description: Mass of Uranus.
   description_format: markdown
   summary_short: Mass of Uranus.
-  description_medium: 'Mass of Uranus. Here the quantity refers to `planetary mass`. Source-side figure: `8.681 x 10^25 kg` for Reported Uranus mass.'
+  description_medium: Mass of Uranus.
   description_long: null
   hook: null
   caveats: null
@@ -1212,10 +1213,10 @@ items:
 - id: obs:mass:entity-neptune
   name: Neptune
   value: 1.024e+26
-  description: 'Mass of Neptune. Here the quantity refers to `planetary mass`. Source-side figure: `1.024 x 10^26 kg` for Reported Neptune mass.'
+  description: Mass of Neptune.
   description_format: markdown
   summary_short: Mass of Neptune.
-  description_medium: 'Mass of Neptune. Here the quantity refers to `planetary mass`. Source-side figure: `1.024 x 10^26 kg` for Reported Neptune mass.'
+  description_medium: Mass of Neptune.
   description_long: null
   hook: null
   caveats: null
@@ -1258,10 +1259,10 @@ items:
 - id: obs:mass:entity-saturn
   name: Saturn
   value: 5.683e+26
-  description: 'Mass of Saturn. Here the quantity refers to `planetary mass`. Source-side figure: `5.683 x 10^26 kg` for Reported Saturn mass.'
+  description: Mass of Saturn.
   description_format: markdown
   summary_short: Mass of Saturn.
-  description_medium: 'Mass of Saturn. Here the quantity refers to `planetary mass`. Source-side figure: `5.683 x 10^26 kg` for Reported Saturn mass.'
+  description_medium: Mass of Saturn.
   description_long: null
   hook: null
   caveats: null
@@ -1304,10 +1305,10 @@ items:
 - id: obs:mass:entity-brown-dwarf-deuterium-limit
   name: Brown dwarf at the deuterium limit
   value: 2.4674e+28
-  description: 'A representative lower-bound brown dwarf mass near the deuterium-burning limit. Derived using `13 jupiter_masses converted to kilograms`. Here the quantity refers to `threshold brown-dwarf mass`. Source-side figure: `13 Jupiter masses` for Brown dwarfs are commonly defined above about 13 Jupiter masses. Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.'
+  description: A representative lower-bound brown dwarf mass near the deuterium-burning limit.
   description_format: markdown
   summary_short: A representative lower-bound brown dwarf mass near the deuterium-burning limit.
-  description_medium: 'A representative lower-bound brown dwarf mass near the deuterium-burning limit. Derived using `13 jupiter_masses converted to kilograms`. Here the quantity refers to `threshold brown-dwarf mass`. Source-side figure: `13 Jupiter masses` for Brown dwarfs are commonly defined above about 13 Jupiter masses. Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.'
+  description_medium: A representative lower-bound brown dwarf mass near the deuterium-burning limit.
   description_long: null
   hook: null
   caveats: null
@@ -1353,10 +1354,10 @@ items:
 - id: obs:mass:entity-trappist-1
   name: TRAPPIST-1
   value: 1.77021e+29
-  description: 'Mass of the ultracool red dwarf star TRAPPIST-1. Here the quantity refers to `stellar mass`. Source-side figure: `0.089 solar masses` for Reported TRAPPIST-1 stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Mass of the ultracool red dwarf star TRAPPIST-1.
   description_format: markdown
   summary_short: Mass of the ultracool red dwarf star TRAPPIST-1.
-  description_medium: 'Mass of the ultracool red dwarf star TRAPPIST-1. Here the quantity refers to `stellar mass`. Source-side figure: `0.089 solar masses` for Reported TRAPPIST-1 stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_medium: Mass of the ultracool red dwarf star TRAPPIST-1.
   description_long: null
   hook: null
   caveats: null
@@ -1400,10 +1401,10 @@ items:
 - id: obs:mass:entity-sun
   name: Sun
   value: 1.989e+30
-  description: Mass of the Sun. Here the quantity refers to `stellar mass`.
+  description: Mass of the Sun.
   description_format: markdown
   summary_short: Mass of the Sun.
-  description_medium: Mass of the Sun. Here the quantity refers to `stellar mass`.
+  description_medium: Mass of the Sun.
   description_long: null
   hook: null
   caveats: null
@@ -1443,10 +1444,10 @@ items:
 - id: obs:mass:entity-sirius-a
   name: Sirius A
   value: 4.103307e+30
-  description: 'Mass of the A-type main-sequence star Sirius A. Here the quantity refers to `stellar mass`. Source-side figure: `2.063 solar masses` for Reported Sirius A stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.
   description_format: markdown
-  summary_short: Mass of the A-type main-sequence star Sirius A.
-  description_medium: 'Mass of the A-type main-sequence star Sirius A. Here the quantity refers to `stellar mass`. Source-side figure: `2.063 solar masses` for Reported Sirius A stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  summary_short: Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.
+  description_medium: Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.
   description_long: null
   hook: null
   caveats: null
@@ -1490,10 +1491,10 @@ items:
 - id: obs:mass:entity-cygnus-x-1
   name: Cygnus X-1 black hole
   value: 2.94372e+31
-  description: 'Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`. Source-side figure: `14.8 solar masses` for NASA states the black hole has about 14.8 times the mass of the Sun. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.
   description_format: markdown
-  summary_short: Estimated mass of the Cygnus X-1 stellar-mass black hole.
-  description_medium: 'Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`. Source-side figure: `14.8 solar masses` for NASA states the black hole has about 14.8 times the mass of the Sun. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  summary_short: Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.
+  description_medium: Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.
   description_long: null
   hook: null
   caveats: null
@@ -1537,10 +1538,10 @@ items:
 - id: obs:mass:entity-betelgeuse
   name: Betelgeuse
   value: 3.28185e+31
-  description: 'Representative mass estimate for the red supergiant Betelgeuse. Here the quantity refers to `stellar mass`. Source-side figure: `16.5 solar masses` for Reported Betelgeuse mass estimate. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.
   description_format: markdown
-  summary_short: Representative mass estimate for the red supergiant Betelgeuse.
-  description_medium: 'Representative mass estimate for the red supergiant Betelgeuse. Here the quantity refers to `stellar mass`. Source-side figure: `16.5 solar masses` for Reported Betelgeuse mass estimate. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  summary_short: Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.
+  description_medium: Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.
   description_long: null
   hook: null
   caveats: null
@@ -1584,10 +1585,10 @@ items:
 - id: obs:mass:entity-r136a1
   name: R136a1
   value: 5.27085e+32
-  description: 'Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`. Source-side figure: `265 solar masses` for ESO describes R136a1 as having a current mass of about 265 Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.
   description_format: markdown
-  summary_short: Current mass of the extreme star R136a1 in the Tarantula Nebula.
-  description_medium: 'Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`. Source-side figure: `265 solar masses` for ESO describes R136a1 as having a current mass of about 265 Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  summary_short: R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.
+  description_medium: R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.
   description_long: null
   hook: null
   caveats: null
@@ -1631,10 +1632,10 @@ items:
 - id: obs:mass:entity-r136-cluster
   name: R136 star cluster
   value: 9.945e+34
-  description: 'Approximate stellar mass of the R136 cluster, using ESO''s note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`. Source-side figure: `50,000 stars` for Derived from ESO''s description that the cluster packs tens of thousands of stars into the region.'
+  description: Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.
   description_format: markdown
   summary_short: Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.
-  description_medium: 'Approximate stellar mass of the R136 cluster, using ESO''s note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`. Source-side figure: `50,000 stars` for Derived from ESO''s description that the cluster packs tens of thousands of stars into the region.'
+  description_medium: Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.
   description_long: null
   hook: null
   caveats: null
@@ -1680,10 +1681,10 @@ items:
 - id: obs:mass:entity-messier-14
   name: Messier 14
   value: 2.9835e+35
-  description: 'Approximate stellar mass implied by NASA''s statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`. Source-side figure: `150,000 stars` for Derived from NASA''s statement that Messier 14 is home to over 150,000 stars.'
+  description: Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.
   description_format: markdown
   summary_short: Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.
-  description_medium: 'Approximate stellar mass implied by NASA''s statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`. Source-side figure: `150,000 stars` for Derived from NASA''s statement that Messier 14 is home to over 150,000 stars.'
+  description_medium: Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.
   description_long: null
   hook: null
   caveats: null
@@ -1729,10 +1730,10 @@ items:
 - id: obs:mass:entity-sagittarius-a-star
   name: Sagittarius A*
   value: 7.956e+36
-  description: 'Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `4 million solar masses` for NASA states Sagittarius A* contains about 4 million solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.
   description_format: markdown
-  summary_short: Mass of the supermassive black hole at the center of the Milky Way.
-  description_medium: 'Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `4 million solar masses` for NASA states Sagittarius A* contains about 4 million solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  summary_short: Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.
+  description_medium: Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.
   description_long: null
   hook: null
   caveats: null
@@ -1776,10 +1777,10 @@ items:
 - id: obs:mass:entity-omega-centauri
   name: Omega Centauri
   value: 9.945e+36
-  description: 'Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`. Source-side figure: `5 million solar masses` for ESO reports a total cluster mass of about five million Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.
   description_format: markdown
-  summary_short: Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way.
-  description_medium: 'Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`. Source-side figure: `5 million solar masses` for ESO reports a total cluster mass of about five million Suns. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  summary_short: Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.
+  description_medium: Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.
   description_long: null
   hook: null
   caveats: null
@@ -1823,10 +1824,10 @@ items:
 - id: obs:mass:entity-m60-ucd1
   name: M60-UCD1
   value: 2.7846e+38
-  description: 'Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA''s count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`. Source-side figure: `140 million stars` for Derived from NASA''s statement that M60-UCD1 contains 140 million stars.'
+  description: M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.
   description_format: markdown
-  summary_short: Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars.
-  description_medium: 'Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA''s count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`. Source-side figure: `140 million stars` for Derived from NASA''s statement that M60-UCD1 contains 140 million stars.'
+  summary_short: M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.
+  description_medium: M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.
   description_long: null
   hook: null
   caveats: null
@@ -1872,10 +1873,10 @@ items:
 - id: obs:mass:entity-ngc-5474
   name: NGC 5474
   value: 9.945e+39
-  description: 'Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA''s description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`. Source-side figure: `5 billion stars` for Derived from NASA''s description that NGC 5474 contains several billion stars.'
+  description: Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.
   description_format: markdown
   summary_short: Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.
-  description_medium: 'Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA''s description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`. Source-side figure: `5 billion stars` for Derived from NASA''s description that NGC 5474 contains several billion stars.'
+  description_medium: Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.
   description_long: null
   hook: null
   caveats: null
@@ -1921,10 +1922,10 @@ items:
 - id: obs:mass:entity-m87-star
   name: M87*
   value: 1.29285e+40
-  description: 'Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `6.5 billion solar masses` for NASA reports that M87* contains 6.5 billion solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description: Mass of the supermassive black hole at the center of Messier 87.
   description_format: markdown
   summary_short: Mass of the supermassive black hole at the center of Messier 87.
-  description_medium: 'Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `6.5 billion solar masses` for NASA reports that M87* contains 6.5 billion solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.'
+  description_medium: Mass of the supermassive black hole at the center of Messier 87.
   description_long: null
   hook: null
   caveats: null
@@ -1968,10 +1969,10 @@ items:
 - id: obs:mass:entity-large-magellanic-cloud
   name: Large Magellanic Cloud
   value: 1.989e+40
-  description: 'Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `10 billion stars at about one solar mass each`. Source-side figure: `10 billion stars` for Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.'
+  description: Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.
   description_format: markdown
   summary_short: Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.
-  description_medium: 'Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `10 billion stars at about one solar mass each`. Source-side figure: `10 billion stars` for Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.'
+  description_medium: Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.
   description_long: null
   hook: null
   caveats: null
@@ -2017,10 +2018,10 @@ items:
 - id: obs:mass:entity-triangulum-galaxy
   name: Triangulum Galaxy
   value: 7.956e+40
-  description: 'Approximate stellar mass of the Triangulum Galaxy using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `40 billion stars at about one solar mass each`. Source-side figure: `40 billion stars` for Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.'
+  description: Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.
   description_format: markdown
   summary_short: Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.
-  description_medium: 'Approximate stellar mass of the Triangulum Galaxy using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `40 billion stars at about one solar mass each`. Source-side figure: `40 billion stars` for Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.'
+  description_medium: Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.
   description_long: null
   hook: null
   caveats: null
@@ -2066,10 +2067,10 @@ items:
 - id: obs:mass:entity-whirlpool-galaxy
   name: Whirlpool Galaxy
   value: 1.989e+41
-  description: 'Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `100 billion stars at about one solar mass each`. Source-side figure: `100 billion stars` for Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.'
+  description: Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.
   description_format: markdown
   summary_short: Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.
-  description_medium: 'Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `100 billion stars at about one solar mass each`. Source-side figure: `100 billion stars` for Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.'
+  description_medium: Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.
   description_long: null
   hook: null
   caveats: null
@@ -2115,10 +2116,10 @@ items:
 - id: obs:mass:entity-m60
   name: M60
   value: 7.956e+41
-  description: 'Approximate stellar mass of the giant elliptical galaxy M60, using NASA''s estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`. Source-side figure: `400 billion stars` for Derived from NASA''s estimate that M60 contains 400 billion stars.'
+  description: Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.
   description_format: markdown
   summary_short: Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.
-  description_medium: 'Approximate stellar mass of the giant elliptical galaxy M60, using NASA''s estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`. Source-side figure: `400 billion stars` for Derived from NASA''s estimate that M60 contains 400 billion stars.'
+  description_medium: Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.
   description_long: null
   hook: null
   caveats: null
@@ -2164,10 +2165,10 @@ items:
 - id: obs:mass:entity-andromeda
   name: Andromeda galaxy
   value: 1.989e+42
-  description: 'Approximate stellar mass implied by NASA''s estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`. Source-side figure: `1 trillion stars` for Derived from NASA''s estimate that Andromeda contains over one trillion stars.'
+  description: Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.
   description_format: markdown
-  summary_short: Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars.
-  description_medium: 'Approximate stellar mass implied by NASA''s estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`. Source-side figure: `1 trillion stars` for Derived from NASA''s estimate that Andromeda contains over one trillion stars.'
+  summary_short: Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.
+  description_medium: Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -2213,10 +2214,10 @@ items:
 - id: obs:mass:entity-milky-way
   name: Milky Way
   value: 2.98e+42
-  description: Representative mass of the Milky Way including dark matter. Here the quantity refers to `total estimated mass`.
+  description: Representative mass of the Milky Way including dark matter.
   description_format: markdown
   summary_short: Representative mass of the Milky Way including dark matter.
-  description_medium: Representative mass of the Milky Way including dark matter. Here the quantity refers to `total estimated mass`.
+  description_medium: Representative mass of the Milky Way including dark matter.
   description_long: null
   hook: null
   caveats: null
@@ -2256,10 +2257,10 @@ items:
 - id: obs:mass:entity-virgo-supercluster
   name: Virgo Supercluster
   value: 2.0e+45
-  description: Order-of-magnitude mass of the Virgo Supercluster. Here the quantity refers to `estimated total mass`.
+  description: Order-of-magnitude mass of the Virgo Supercluster.
   description_format: markdown
   summary_short: Order-of-magnitude mass of the Virgo Supercluster.
-  description_medium: Order-of-magnitude mass of the Virgo Supercluster. Here the quantity refers to `estimated total mass`.
+  description_medium: Order-of-magnitude mass of the Virgo Supercluster.
   description_long: null
   hook: null
   caveats: null
@@ -2299,10 +2300,10 @@ items:
 - id: obs:mass:entity-universe
   name: Observable universe
   value: 1.0e+53
-  description: Order-of-magnitude mass of matter in the observable universe. Here the quantity refers to `observable universe mass estimate`.
+  description: Order-of-magnitude mass of matter in the observable universe.
   description_format: markdown
   summary_short: Order-of-magnitude mass of matter in the observable universe.
-  description_medium: Order-of-magnitude mass of matter in the observable universe. Here the quantity refers to `observable universe mass estimate`.
+  description_medium: Order-of-magnitude mass of matter in the observable universe.
   description_long: null
   hook: null
   caveats: null

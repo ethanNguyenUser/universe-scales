@@ -58,6 +58,10 @@ items:
   name: Lightning Bolt
   source: https://en.wikipedia.org/wiki/Lightning
   value: 1e9
+- description: The Planck energy is the natural energy scale made from quantum mechanics, gravity, and relativity. It marks the point where a particle's rest-energy matches the energy scale at which a quantum theory of gravity would have to live. In everyday terms it is far above accelerator physics but still tiny compared with planetary or stellar energies. This is a derived scale, not a measured one.
+  name: Planck Energy
+  source: https://en.wikipedia.org/wiki/Planck_units
+  value: 1.956081636e9
 - description: The chemical energy equivalent of 1 kilogram of TNT is conventionally set to this number. It is a bookkeeping convenience that lets engineers compare blast sizes and impacts. Real explosives differ in pressure profile and coupling efficiency to targets. The value here is the standard used for hazard and yield reporting.
   name: TNT (1 kg)
   source: https://en.wikipedia.org/wiki/TNT_equivalent
@@ -122,6 +126,10 @@ items:
   name: Lift Bag of Rice
   source: https://en.wikipedia.org/wiki/Work_(physics)
   value: 100
+- description: A short ChatGPT-style response can be approximated as a few tens of joules of served-model energy once accelerator, CPU, memory, and networking overhead are rolled together. The exact number depends on batching, model size, and how much text is generated, so this is an order-of-magnitude intuition item rather than a benchmark. It helps people connect one inference call to everyday physical work. A convenient mental model is $P \times t$ over a small fraction of a second.
+  name: One ChatGPT-Style Response
+  source: https://en.wikipedia.org/wiki/Artificial_intelligence
+  value: 30
 - description: The kinetic energy of a single 95 mile per hour baseball pitch is around this number at the moment it leaves the hand. Catchers wear padding because this energy must be dissipated in milliseconds. Spin and seam orientation change flight, but not the basic energy budget. Fans sense the difference between 80 and 95 in the thud.
   name: Fastball Pitch
   source: https://en.wikipedia.org/wiki/Baseball
@@ -130,6 +138,14 @@ items:
   name: Workday Computing
   source: https://en.wikipedia.org/wiki/Computer_energy_use
   value: 1e6
+- description: A single high-end accelerator running near $700\ \mathrm{W}$ for one hour uses about $700 \times 3600 \approx 2.5\ \mathrm{MJ}$ before cooling overhead. That makes a GPU-hour a useful bridge between desktop computing and industrial loads. The value is a simple power-times-time estimate, not a lab-certified measurement. It is a good intuition anchor for AI serving and training alike.
+  name: One H100 GPU-Hour
+  source: https://en.wikipedia.org/wiki/Hopper_(microarchitecture)
+  value: 2.5e6
+- description: A loaded server rack at a few kilowatts for one hour uses roughly $3\ \mathrm{kW} \times 3600\ \mathrm{s} \approx 11\ \mathrm{MJ}$. This is a decent perspective item for a typical data center rack under active load, excluding cooling plant overhead. The exact draw depends on server mix, utilization, and facility design. It is small next to annual energy totals but large next to household gadgets.
+  name: Data Center Rack-Hour
+  source: https://en.wikipedia.org/wiki/Data_center
+  value: 1e7
 - description: The annual electricity use of a small refrigerator is roughly this many joules in an efficient modern unit. The compressor cycles on to remove heat as it leaks in through insulation. Opening the door adds transient load that you can hear. The number gives a sense for appliance labels in physical terms.
   name: Refrigerator (Annual)
   source: https://en.wikipedia.org/wiki/Refrigerator
@@ -181,6 +197,18 @@ items:
   name: Tsar Bomba
   source: https://en.wikipedia.org/wiki/Tsar_Bomba
   value: 2.1e17
+- description: The annual electricity used by the world's data centers is large enough to matter at grid scale but still tiny compared with global electricity demand. A representative estimate in the few hundred terawatt-hour range is about $10^{18}\ \mathrm{J}$ per year. Cooling, networking, and utilization all move the number around. This item gives a sense for the real footprint behind the digital layer.
+  name: Global Datacenter Electricity (1 year)
+  source: https://en.wikipedia.org/wiki/Data_center
+  value: 1e18
+- description: Humanity's annual electricity consumption is on the order of $10^{20}\ \mathrm{J}$, which is why grid planning lives at the petawatt-hour scale. This is the energy behind lighting, industry, appliances, and computing rather than any one sector alone. The exact value changes by year and source definition, so treat it as a rounded world-scale benchmark. It sits far above local infrastructure and far below solar output.
+  name: World Electricity Use (1 year)
+  source: https://en.wikipedia.org/wiki/World_energy_supply_and_consumption
+  value: 1e20
+- description: The transportation sector as a whole burns a comparable world-scale amount of energy each year, mostly in liquid fuels for road, air, and shipping. A good order-of-magnitude benchmark is around $10^{20}\ \mathrm{J}$ annually, which is why vehicle efficiency and mode choice matter so much. The exact split depends on whether you count only direct fuel or broader system energy. This item gives perspective on how large mobility really is.
+  name: Transportation Energy Use (1 year)
+  source: https://en.wikipedia.org/wiki/Energy_in_transportation
+  value: 1.5e20
 - description: >-
     The Chicxulub impact released energy on a scale that dwarfs all human explosives and altered Earth’s biosphere. Much of the devastation came not from the asteroid’s mass alone but from how rapidly its kinetic energy coupled into rock, air, and ocean. This is the sort of number that turns a geological event into a planetary one. The value is a representative estimate for the dinosaur-killing impact.
   name: Chicxulub Impact
@@ -211,3 +239,19 @@ units:
   description: The electronvolt measures the energy gained by a single electron when it moves through one volt of potential. It is natural for atomic and particle physics where energies arrive as quanta. Large numbers of electronvolts map comfortably to keV, MeV, and GeV in accelerators and detectors. Converting to joules ties the microscopic to macroscopic engines.
   name: electronvolts
   symbol: eV
+- conversion_factor: 1e-9
+  description: A gigajoule is one billion joules, a useful scale for infrastructure, fuel, and large batteries. It lets you compare appliances with transport and small industrial systems without scientific notation. Many annual or fleet-level totals become readable in gigajoules. The factor is exact by definition.
+  name: gigajoules
+  symbol: GJ
+- conversion_factor: 1e-12
+  description: A terajoule is one trillion joules, useful for city-scale energy budgets and medium infrastructure. It helps bridge the gap between household bills and national totals. Researchers often use it when talking about fuel throughput or grid dispatch. The factor is exact by definition.
+  name: terajoules
+  symbol: TJ
+- conversion_factor: 1e-15
+  description: A petajoule is one quadrillion joules and is a common scale for national energy systems. It is large enough to make annual electricity use and transportation demand easy to compare. This unit is handy whenever gigajoules are still too small to be readable. The factor is exact by definition.
+  name: petajoules
+  symbol: PJ
+- conversion_factor: 1e-18
+  description: An exajoule is one quintillion joules, a scale used for global energy demand and climate bookkeeping. World electricity use and transportation totals often live here. It is the most convenient human-scale bridge to planetary accounting. The factor is exact by definition.
+  name: exajoules
+  symbol: EJ

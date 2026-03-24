@@ -2,35 +2,35 @@
   "base_unit": "watts_per_meter_kelvin",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 30,
-    "candidate_shortfall_to_preferred_target": 20,
+    "candidate_count": 22,
+    "candidate_shortfall_to_preferred_target": 28,
     "empty_bin_count": 10,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 30,
+    "selected_count": 22,
     "selected_primary_count": 14,
-    "selected_secondary_count": 16,
+    "selected_secondary_count": 8,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 30
+      "secondary_reference": 22
     },
-    "target_selected_count": 30
+    "target_selected_count": 22
   },
   "description_format": "markdown",
   "dimension": "thermal-conductivity",
   "dimension_description": "Thermal conductivity measures how readily heat flows through a material under a temperature gradient. It helps connect insulators, building materials, fluids, metals, semiconductors, and diamond on one scale. Values depend on temperature, porosity, and orientation, so they should be read as representative rather than universal.",
   "frontend_group": "materials",
   "frontend_group_label": "Materials & Matter",
-  "frontend_order": 350,
+  "frontend_order": 520,
   "items": [
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Vacuum panels approach the low end of practical thermal conductivity. Source-side figure: `0.004 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Vacuum panels approach the low end of practical thermal conductivity.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Vacuum panels approach the low end of practical thermal conductivity. Source-side figure: `0.004 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Vacuum panels approach the low end of practical thermal conductivity.",
       "facts": {
         "canonical_name": "Vacuum insulation panel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -81,10 +81,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aerogel is one of the lowest-conductivity solids people commonly encounter. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Aerogel is one of the lowest-conductivity solids people commonly encounter.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Aerogel is one of the lowest-conductivity solids people commonly encounter. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Aerogel is one of the lowest-conductivity solids people commonly encounter.",
       "facts": {
         "canonical_name": "Silica aerogel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -135,10 +135,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aerogel is a dramatic thermal insulator. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity for silica aerogel.",
+      "description": "Aerogel is a dramatic thermal insulator.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Aerogel is a dramatic thermal insulator. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.013 W/(m*K)` for Representative thermal conductivity for silica aerogel.",
+      "description_medium": "Aerogel is a dramatic thermal insulator.",
       "facts": {
         "canonical_name": "Aerogel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -191,10 +191,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "CO2 conducts heat poorly. Source-side figure: `0.016 W/(m*K)` for Representative thermal conductivity.",
+      "description": "CO2 conducts heat poorly.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "CO2 conducts heat poorly. Source-side figure: `0.016 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "CO2 conducts heat poorly.",
       "facts": {
         "canonical_name": "Carbon dioxide gas",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -245,10 +245,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Air is a useful everyday low-conductivity reference. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Air is a useful everyday low-conductivity reference.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Air is a useful everyday low-conductivity reference. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Air is a useful everyday low-conductivity reference.",
       "facts": {
         "canonical_name": "Air",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -299,66 +299,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Air is a familiar low-conductivity gas. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity of air at room temperature.",
+      "description": "Common insulating foam sits just above air.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Air is a familiar low-conductivity gas. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.024 W/(m*K)` for Representative thermal conductivity of air at room temperature.",
-      "facts": {
-        "canonical_name": "Air",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.024",
-          "source_basis": "Representative thermal conductivity of air at room temperature.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Air",
-          "source_value_text": "0.024"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-air",
-      "name": "Air",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Air",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-air",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Air",
-          "url": "https://en.wikipedia.org/wiki/Air"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Air is a familiar low-conductivity gas.",
-      "value": 0.024,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Common insulating foam sits just above air. Source-side figure: `0.025 W/(m*K)` for Representative thermal conductivity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Common insulating foam sits just above air. Source-side figure: `0.025 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Common insulating foam sits just above air.",
       "facts": {
         "canonical_name": "Polyurethane foam",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -409,10 +353,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A familiar building-insulation benchmark. Source-side figure: `0.033 W/(m*K)` for Representative thermal conductivity.",
+      "description": "A familiar building-insulation benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A familiar building-insulation benchmark. Source-side figure: `0.033 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "A familiar building-insulation benchmark.",
       "facts": {
         "canonical_name": "Expanded polystyrene",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -463,10 +407,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Wood insulates far better than metals. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Wood insulates far better than metals.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Wood insulates far better than metals. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Wood insulates far better than metals.",
       "facts": {
         "canonical_name": "Wood",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -517,66 +461,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Wood is a common everyday insulating solid. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity of dry wood.",
+      "description": "Helium conducts heat unusually well for a gas.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Wood is a common everyday insulating solid. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.12 W/(m*K)` for Representative thermal conductivity of dry wood.",
-      "facts": {
-        "canonical_name": "Wood",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.12",
-          "source_basis": "Representative thermal conductivity of dry wood.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Wood",
-          "source_value_text": "0.12"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-wood",
-      "name": "Wood",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Wood",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-wood",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Wood",
-          "url": "https://en.wikipedia.org/wiki/Wood"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Wood is a common everyday insulating solid.",
-      "value": 0.12,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Helium conducts heat unusually well for a gas. Source-side figure: `0.15 W/(m*K)` for Representative thermal conductivity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Helium conducts heat unusually well for a gas. Source-side figure: `0.15 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Helium conducts heat unusually well for a gas.",
       "facts": {
         "canonical_name": "Helium gas",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -627,10 +515,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Liquid water is much more conductive than air. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Liquid water is much more conductive than air.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Liquid water is much more conductive than air. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Liquid water is much more conductive than air.",
       "facts": {
         "canonical_name": "Water",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -681,66 +569,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Water is a useful thermal benchmark because it moves heat better than air but far worse than metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity of liquid water.",
+      "description": "Brick sits in the mid-range of common building materials.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Water is a useful thermal benchmark because it moves heat better than air but far worse than metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.6 W/(m*K)` for Representative thermal conductivity of liquid water.",
-      "facts": {
-        "canonical_name": "Water",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.6",
-          "source_basis": "Representative thermal conductivity of liquid water.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Water",
-          "source_value_text": "0.6"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-water",
-      "name": "Water",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Water",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-water",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Water",
-          "url": "https://en.wikipedia.org/wiki/Water"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Water is a useful thermal benchmark because it moves heat better than air but far worse than metals.",
-      "value": 0.6,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Brick sits in the mid-range of common building materials. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.72 W/(m*K)` for Representative thermal conductivity of fired brick.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Brick sits in the mid-range of common building materials. Here the quantity refers to `thermal conductivity`. Source-side figure: `0.72 W/(m*K)` for Representative thermal conductivity of fired brick.",
+      "description_medium": "Brick sits in the mid-range of common building materials.",
       "facts": {
         "canonical_name": "Brick",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -793,10 +625,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Window glass sits around one watt per meter kelvin. Source-side figure: `1.0 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Window glass sits around one watt per meter kelvin.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Window glass sits around one watt per meter kelvin. Source-side figure: `1.0 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Window glass sits around one watt per meter kelvin.",
       "facts": {
         "canonical_name": "Glass",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -847,10 +679,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Concrete is much more conductive than insulation but far less than metals. Source-side figure: `1.7 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Concrete is much more conductive than insulation but far less than metals.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Concrete is much more conductive than insulation but far less than metals. Source-side figure: `1.7 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Concrete is much more conductive than insulation but far less than metals.",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -901,10 +733,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Ice conducts heat much better than liquid water. Source-side figure: `2.2 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Ice conducts heat much better than liquid water.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Ice conducts heat much better than liquid water. Source-side figure: `2.2 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Ice conducts heat much better than liquid water.",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -955,10 +787,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A common rock benchmark. Source-side figure: `2.8 W/(m*K)` for Representative thermal conductivity.",
+      "description": "A common rock benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A common rock benchmark. Source-side figure: `2.8 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "A common rock benchmark.",
       "facts": {
         "canonical_name": "Granite",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1009,10 +841,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Stainless steel is much worse than copper at conducting heat. Source-side figure: `16 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Stainless steel is much worse than copper at conducting heat.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Stainless steel is much worse than copper at conducting heat. Source-side figure: `16 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Stainless steel is much worse than copper at conducting heat.",
       "facts": {
         "canonical_name": "Stainless steel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1063,66 +895,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Stainless steel is much more conductive than insulators but far below copper. Here the quantity refers to `thermal conductivity`. Source-side figure: `16 W/(m*K)` for Representative stainless-steel thermal conductivity.",
+      "description": "A typical conductive metal benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Stainless steel is much more conductive than insulators but far below copper. Here the quantity refers to `thermal conductivity`. Source-side figure: `16 W/(m*K)` for Representative stainless-steel thermal conductivity.",
-      "facts": {
-        "canonical_name": "Stainless steel",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "16.0",
-          "source_basis": "Representative stainless-steel thermal conductivity.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Stainless_steel",
-          "source_value_text": "16"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-stainless-steel",
-      "name": "Stainless steel",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Stainless_steel",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-stainless-steel",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Stainless steel",
-          "url": "https://en.wikipedia.org/wiki/Stainless_steel"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Stainless steel is much more conductive than insulators but far below copper.",
-      "value": 16.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A typical conductive metal benchmark. Source-side figure: `80 W/(m*K)` for Representative thermal conductivity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A typical conductive metal benchmark. Source-side figure: `80 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "A typical conductive metal benchmark.",
       "facts": {
         "canonical_name": "Iron",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1173,10 +949,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Silicon is a surprisingly good thermal conductor for a semiconductor. Source-side figure: `149 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Silicon is a surprisingly good thermal conductor for a semiconductor.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Silicon is a surprisingly good thermal conductor for a semiconductor. Source-side figure: `149 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Silicon is a surprisingly good thermal conductor for a semiconductor.",
       "facts": {
         "canonical_name": "Silicon",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1227,10 +1003,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aluminum is a common high-conductivity engineering metal. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity.",
+      "description": "Aluminum is a common high-conductivity engineering metal.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Aluminum is a common high-conductivity engineering metal. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Aluminum is a common high-conductivity engineering metal.",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1281,66 +1057,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aluminum is a common high-conductivity engineering metal. Here the quantity refers to `thermal conductivity`. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity of aluminum.",
+      "description": "Copper is one of the classic high-conductivity reference metals.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Aluminum is a common high-conductivity engineering metal. Here the quantity refers to `thermal conductivity`. Source-side figure: `205 W/(m*K)` for Representative thermal conductivity of aluminum.",
-      "facts": {
-        "canonical_name": "Aluminum",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "205.0",
-          "source_basis": "Representative thermal conductivity of aluminum.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Aluminium",
-          "source_value_text": "205"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-aluminum",
-      "name": "Aluminum",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Aluminium",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-aluminium",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Aluminium",
-          "url": "https://en.wikipedia.org/wiki/Aluminium"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Aluminum is a common high-conductivity engineering metal.",
-      "value": 205.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Copper is one of the classic high-conductivity reference metals. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Copper is one of the classic high-conductivity reference metals. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Copper is one of the classic high-conductivity reference metals.",
       "facts": {
         "canonical_name": "Copper",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1391,66 +1111,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Copper is the classic conductor used in heat-spreading comparisons. Here the quantity refers to `thermal conductivity`. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity of copper.",
+      "description": "Silver slightly exceeds copper as a heat conductor.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Copper is the classic conductor used in heat-spreading comparisons. Here the quantity refers to `thermal conductivity`. Source-side figure: `401 W/(m*K)` for Representative thermal conductivity of copper.",
-      "facts": {
-        "canonical_name": "Copper",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "401.0",
-          "source_basis": "Representative thermal conductivity of copper.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Copper",
-          "source_value_text": "401"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-copper",
-      "name": "Copper",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Copper",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-copper",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Copper",
-          "url": "https://en.wikipedia.org/wiki/Copper"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Copper is the classic conductor used in heat-spreading comparisons.",
-      "value": 401.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Silver slightly exceeds copper as a heat conductor. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Silver slightly exceeds copper as a heat conductor. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Silver slightly exceeds copper as a heat conductor.",
       "facts": {
         "canonical_name": "Silver",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1501,66 +1165,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Silver sits near the top among common pure metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity of silver.",
+      "description": "Diamond is an extreme thermal conductor.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Silver sits near the top among common pure metals. Here the quantity refers to `thermal conductivity`. Source-side figure: `429 W/(m*K)` for Representative thermal conductivity of silver.",
-      "facts": {
-        "canonical_name": "Silver",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "429.0",
-          "source_basis": "Representative thermal conductivity of silver.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Silver",
-          "source_value_text": "429"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-silver",
-      "name": "Silver",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Silver",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-silver",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Silver",
-          "url": "https://en.wikipedia.org/wiki/Silver"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Silver sits near the top among common pure metals.",
-      "value": 429.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Diamond is an extreme thermal conductor. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Diamond is an extreme thermal conductor. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity.",
+      "description_medium": "Diamond is an extreme thermal conductor.",
       "facts": {
         "canonical_name": "Diamond",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1604,62 +1212,6 @@
         }
       ],
       "summary_short": "Diamond is an extreme thermal conductor.",
-      "value": 2200.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Diamond is an extreme heat conductor by solid-state standards. Here the quantity refers to `thermal conductivity`. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity of diamond.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Diamond is an extreme heat conductor by solid-state standards. Here the quantity refers to `thermal conductivity`. Source-side figure: `2200 W/(m*K)` for Representative thermal conductivity of diamond.",
-      "facts": {
-        "canonical_name": "Diamond",
-        "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "2200.0",
-          "source_basis": "Representative thermal conductivity of diamond.",
-          "source_unit": "W/(m*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Diamond",
-          "source_value_text": "2200"
-        }
-      },
-      "hook": null,
-      "id": "obs:thermal-conductivity:scenario-thermal-conductivity-diamond",
-      "name": "Diamond",
-      "qualifiers": {
-        "measurement": "thermal conductivity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Diamond",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-diamond",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Diamond",
-          "url": "https://en.wikipedia.org/wiki/Diamond"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-thermal-conductivity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/thermal-conductivity.json",
-          "url": "repo://dataset/raw/curated/thermal-conductivity.json"
-        }
-      ],
-      "summary_short": "Diamond is an extreme heat conductor by solid-state standards.",
       "value": 2200.0,
       "value_type": "measured",
       "wikidata_qid": null

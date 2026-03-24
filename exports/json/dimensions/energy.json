@@ -2,27 +2,27 @@
   "base_unit": "joules",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 44,
-    "candidate_shortfall_to_preferred_target": 6,
-    "empty_bin_count": 10,
+    "candidate_count": 51,
+    "candidate_shortfall_to_preferred_target": 0,
+    "empty_bin_count": 9,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 44,
-    "selected_primary_count": 14,
-    "selected_secondary_count": 30,
+    "selected_count": 50,
+    "selected_primary_count": 15,
+    "selected_secondary_count": 35,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 44
+      "secondary_reference": 50
     },
-    "target_selected_count": 44
+    "target_selected_count": 50
   },
   "description_format": "markdown",
   "dimension": "energy",
   "dimension_description": "Energy measures the capacity to cause change, whether moving a mass, breaking a bond, or warming a room. In practice it ties together force, distance, and heat with a single bookkeeping number that must be conserved. For any process you care about, from a heartbeat to a supernova, energy is the currency that balances the before and after. Here we compare characteristic amounts for specific objects and conditions so the numbers map to lived experience.",
   "frontend_group": "motion",
   "frontend_group_label": "Motion & Mechanics",
-  "frontend_order": 40,
+  "frontend_order": 310,
   "items": [
     {
       "caveats": null,
@@ -72,57 +72,6 @@
       ],
       "summary_short": "A radio photon at tens of kilohertz carries this much energy per quantum, typical of long-range communication bands.",
       "value": 1e-24,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Hydrolyzing one ATP molecule under cellular conditions frees this energy that can be coupled to mechanical or transport work. The value depends on concentrations of ATP, ADP, and phosphate; the figure here assumes physiological ranges. Muscle myosin and ion pumps spend this budget in discrete steps. Life maintains these gradients to keep the work margin positive.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Hydrolyzing one ATP molecule under cellular conditions frees this energy that can be coupled to mechanical or transport work. The value depends on concentrations of ATP, ADP, and phosphate; the figure here assumes physiological ranges. Muscle myosin and ion pumps spend this budget in discrete steps. Life maintains these gradients to keep the work margin positive.",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
-        "legacy_item_name": "ATP Hydrolysis",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "5e-20",
-          "source_url": "https://en.wikipedia.org/wiki/Adenosine_triphosphate"
-        }
-      },
-      "hook": null,
-      "id": "obs:energy:scenario-energy-atp-hydrolysis",
-      "name": "ATP Hydrolysis",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Adenosine_triphosphate",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-adenosine-triphosphate",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Adenosine triphosphate",
-          "url": "https://en.wikipedia.org/wiki/Adenosine_triphosphate"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/energy.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/energy.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
-        }
-      ],
-      "summary_short": "Hydrolyzing one ATP molecule under cellular conditions frees this energy that can be coupled to mechanical or transport work.",
-      "value": 5e-20,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -480,6 +429,57 @@
       ],
       "summary_short": "The mechanical energy expended by one human heartbeat is on the order of a joule, averaged over an adult at rest.",
       "value": 1.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A short ChatGPT-style response can be approximated as a few tens of joules of served-model energy once accelerator, CPU, memory, and networking overhead are rolled together. The exact number depends on batching, model size, and how much text is generated, so this is an order-of-magnitude intuition item rather than a benchmark. It helps people connect one inference call to everyday physical work. A convenient mental model is $P \\times t$ over a small fraction of a second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A short ChatGPT-style response can be approximated as a few tens of joules of served-model energy once accelerator, CPU, memory, and networking overhead are rolled together. The exact number depends on batching, model size, and how much text is generated, so this is an order-of-magnitude intuition item rather than a benchmark. It helps people connect one inference call to everyday physical work. A convenient mental model is $P \\times t$ over a small fraction of a second.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "One ChatGPT-Style Response",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "30",
+          "source_url": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-one-chatgpt-style-response",
+      "name": "One ChatGPT-Style Response",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-artificial-intelligence",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Artificial intelligence",
+          "url": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "A short ChatGPT-style response can be approximated as a few tens of joules of served-model energy once accelerator, CPU, memory, and networking overhead are rolled together.",
+      "value": 30.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1353,6 +1353,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "A single high-end accelerator running near $700\\ \\mathrm{W}$ for one hour uses about $700 \\times 3600 \\approx 2.5\\ \\mathrm{MJ}$ before cooling overhead. That makes a GPU-hour a useful bridge between desktop computing and industrial loads. The value is a simple power-times-time estimate, not a lab-certified measurement. It is a good intuition anchor for AI serving and training alike.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single high-end accelerator running near $700\\ \\mathrm{W}$ for one hour uses about $700 \\times 3600 \\approx 2.5\\ \\mathrm{MJ}$ before cooling overhead. That makes a GPU-hour a useful bridge between desktop computing and industrial loads. The value is a simple power-times-time estimate, not a lab-certified measurement. It is a good intuition anchor for AI serving and training alike.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "One H100 GPU-Hour",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5e6",
+          "source_url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-one-h100-gpu-hour",
+      "name": "One H100 GPU-Hour",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hopper-microarchitecture",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hopper (microarchitecture)",
+          "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "A single high-end accelerator running near $700\\ \\mathrm{W}$ for one hour uses about $700 \\times 3600 \\approx 2.5\\ \\mathrm{MJ}$ before cooling overhead.",
+      "value": 2500000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "The chemical energy equivalent of 1 kilogram of TNT is conventionally set to this number. It is a bookkeeping convenience that lets engineers compare blast sizes and impacts. Real explosives differ in pressure profile and coupling efficiency to targets. The value here is the standard used for hazard and yield reporting.",
       "description_format": "markdown",
       "description_long": null,
@@ -1449,6 +1500,57 @@
       ],
       "summary_short": "A person\u2019s daily metabolic intake around two thousand food kilocalories corresponds to this many joules available for heat and work.",
       "value": 8400000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A loaded server rack at a few kilowatts for one hour uses roughly $3\\ \\mathrm{kW} \\times 3600\\ \\mathrm{s} \\approx 11\\ \\mathrm{MJ}$. This is a decent perspective item for a typical data center rack under active load, excluding cooling plant overhead. The exact draw depends on server mix, utilization, and facility design. It is small next to annual energy totals but large next to household gadgets.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A loaded server rack at a few kilowatts for one hour uses roughly $3\\ \\mathrm{kW} \\times 3600\\ \\mathrm{s} \\approx 11\\ \\mathrm{MJ}$. This is a decent perspective item for a typical data center rack under active load, excluding cooling plant overhead. The exact draw depends on server mix, utilization, and facility design. It is small next to annual energy totals but large next to household gadgets.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Data Center Rack-Hour",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e7",
+          "source_url": "https://en.wikipedia.org/wiki/Data_center"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-data-center-rack-hour",
+      "name": "Data Center Rack-Hour",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Data_center",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-data-center",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Data center",
+          "url": "https://en.wikipedia.org/wiki/Data_center"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "A loaded server rack at a few kilowatts for one hour uses roughly $3\\ \\mathrm{kW} \\times 3600\\ \\mathrm{s} \\approx 11\\ \\mathrm{MJ}$.",
+      "value": 10000000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1812,6 +1914,57 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "The Planck energy is the natural energy scale made from quantum mechanics, gravity, and relativity. It marks the point where a particle's rest-energy matches the energy scale at which a quantum theory of gravity would have to live. In everyday terms it is far above accelerator physics but still tiny compared with planetary or stellar energies. This is a derived scale, not a measured one.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Planck energy is the natural energy scale made from quantum mechanics, gravity, and relativity. It marks the point where a particle's rest-energy matches the energy scale at which a quantum theory of gravity would have to live. In everyday terms it is far above accelerator physics but still tiny compared with planetary or stellar energies. This is a derived scale, not a measured one.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Planck Energy",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.956081636e9",
+          "source_url": "https://en.wikipedia.org/wiki/Planck_units"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-planck-energy",
+      "name": "Planck Energy",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Planck_units",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-planck-units",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Planck units",
+          "url": "https://en.wikipedia.org/wiki/Planck_units"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "The Planck energy is the natural energy scale made from quantum mechanics, gravity, and relativity.",
+      "value": 1956081636.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "Over a full lifetime, a human body metabolizes on the order of tens of billions of joules from food. Spread over decades it does not feel extreme, but accumulated total energy is substantial enough to compare with industrial machines. Most of it leaves again as heat while a small fraction becomes external work. The value assumes a long life near two thousand dietary kilocalories per day.",
       "description_format": "markdown",
       "description_long": null,
@@ -2010,6 +2163,159 @@
       ],
       "summary_short": "Tsar Bomba remains the most energetic nuclear device ever detonated, with a yield tens of millions of tons of TNT equivalent.",
       "value": 2.1e+17,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The annual electricity used by the world's data centers is large enough to matter at grid scale but still tiny compared with global electricity demand. A representative estimate in the few hundred terawatt-hour range is about $10^{18}\\ \\mathrm{J}$ per year. Cooling, networking, and utilization all move the number around. This item gives a sense for the real footprint behind the digital layer.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The annual electricity used by the world's data centers is large enough to matter at grid scale but still tiny compared with global electricity demand. A representative estimate in the few hundred terawatt-hour range is about $10^{18}\\ \\mathrm{J}$ per year. Cooling, networking, and utilization all move the number around. This item gives a sense for the real footprint behind the digital layer.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Global Datacenter Electricity (1 year)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e18",
+          "source_url": "https://en.wikipedia.org/wiki/Data_center"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-global-datacenter-electricity-1-year",
+      "name": "Global Datacenter Electricity (1 year)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Data_center",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-data-center",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Data center",
+          "url": "https://en.wikipedia.org/wiki/Data_center"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "The annual electricity used by the world's data centers is large enough to matter at grid scale but still tiny compared with global electricity demand.",
+      "value": 1e+18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Humanity's annual electricity consumption is on the order of $10^{20}\\ \\mathrm{J}$, which is why grid planning lives at the petawatt-hour scale. This is the energy behind lighting, industry, appliances, and computing rather than any one sector alone. The exact value changes by year and source definition, so treat it as a rounded world-scale benchmark. It sits far above local infrastructure and far below solar output.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Humanity's annual electricity consumption is on the order of $10^{20}\\ \\mathrm{J}$, which is why grid planning lives at the petawatt-hour scale. This is the energy behind lighting, industry, appliances, and computing rather than any one sector alone. The exact value changes by year and source definition, so treat it as a rounded world-scale benchmark. It sits far above local infrastructure and far below solar output.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "World Electricity Use (1 year)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e20",
+          "source_url": "https://en.wikipedia.org/wiki/World_energy_supply_and_consumption"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-world-electricity-use-1-year",
+      "name": "World Electricity Use (1 year)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/World_energy_supply_and_consumption",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-world-energy-supply-and-consumption",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "World energy supply and consumption",
+          "url": "https://en.wikipedia.org/wiki/World_energy_supply_and_consumption"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "Humanity's annual electricity consumption is on the order of $10^{20}\\ \\mathrm{J}$, which is why grid planning lives at the petawatt-hour scale.",
+      "value": 1e+20,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The transportation sector as a whole burns a comparable world-scale amount of energy each year, mostly in liquid fuels for road, air, and shipping. A good order-of-magnitude benchmark is around $10^{20}\\ \\mathrm{J}$ annually, which is why vehicle efficiency and mode choice matter so much. The exact split depends on whether you count only direct fuel or broader system energy. This item gives perspective on how large mobility really is.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The transportation sector as a whole burns a comparable world-scale amount of energy each year, mostly in liquid fuels for road, air, and shipping. A good order-of-magnitude benchmark is around $10^{20}\\ \\mathrm{J}$ annually, which is why vehicle efficiency and mode choice matter so much. The exact split depends on whether you count only direct fuel or broader system energy. This item gives perspective on how large mobility really is.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
+        "legacy_item_name": "Transportation Energy Use (1 year)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.5e20",
+          "source_url": "https://en.wikipedia.org/wiki/Energy_in_transportation"
+        }
+      },
+      "hook": null,
+      "id": "obs:energy:scenario-energy-transportation-energy-use-1-year",
+      "name": "Transportation Energy Use (1 year)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Energy_in_transportation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-energy-in-transportation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Energy in transportation",
+          "url": "https://en.wikipedia.org/wiki/Energy_in_transportation"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-energy-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/energy.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/energy.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/energy.yaml"
+        }
+      ],
+      "summary_short": "The transportation sector as a whole burns a comparable world-scale amount of energy each year, mostly in liquid fuels for road, air, and shipping.",
+      "value": 1.5e+20,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -2312,6 +2618,30 @@
       "description": "The electronvolt measures the energy gained by a single electron when it moves through one volt of potential. It is natural for atomic and particle physics where energies arrive as quanta. Large numbers of electronvolts map comfortably to keV, MeV, and GeV in accelerators and detectors. Converting to joules ties the microscopic to macroscopic engines.",
       "name": "electronvolts",
       "symbol": "eV"
+    },
+    {
+      "conversion_factor": "1e-9",
+      "description": "A gigajoule is one billion joules, a useful scale for infrastructure, fuel, and large batteries. It lets you compare appliances with transport and small industrial systems without scientific notation. Many annual or fleet-level totals become readable in gigajoules. The factor is exact by definition.",
+      "name": "gigajoules",
+      "symbol": "GJ"
+    },
+    {
+      "conversion_factor": "1e-12",
+      "description": "A terajoule is one trillion joules, useful for city-scale energy budgets and medium infrastructure. It helps bridge the gap between household bills and national totals. Researchers often use it when talking about fuel throughput or grid dispatch. The factor is exact by definition.",
+      "name": "terajoules",
+      "symbol": "TJ"
+    },
+    {
+      "conversion_factor": "1e-15",
+      "description": "A petajoule is one quadrillion joules and is a common scale for national energy systems. It is large enough to make annual electricity use and transportation demand easy to compare. This unit is handy whenever gigajoules are still too small to be readable. The factor is exact by definition.",
+      "name": "petajoules",
+      "symbol": "PJ"
+    },
+    {
+      "conversion_factor": "1e-18",
+      "description": "An exajoule is one quintillion joules, a scale used for global energy demand and climate bookkeeping. World electricity use and transportation totals often live here. It is the most convenient human-scale bridge to planetary accounting. The factor is exact by definition.",
+      "name": "exajoules",
+      "symbol": "EJ"
     },
     {
       "conversion_factor": 0.0002777777777778,

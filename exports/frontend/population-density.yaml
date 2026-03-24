@@ -30,15 +30,15 @@ description_format: markdown
 scale_mode: log
 frontend_group: global
 frontend_group_label: Global & Geography
-frontend_order: 600
+frontend_order: 810
 items:
 - id: obs:population-density:entity-population-density-greenland
   name: Greenland
   value: 0.03
-  description: 'A sparse Arctic territory anchors the extreme low-density end. Source-side figure: `~0.03` for Population divided by total land area.'
+  description: A sparse Arctic territory anchors the extreme low-density end.
   description_format: markdown
   summary_short: A sparse Arctic territory anchors the extreme low-density end.
-  description_medium: 'A sparse Arctic territory anchors the extreme low-density end. Source-side figure: `~0.03` for Population divided by total land area.'
+  description_medium: A sparse Arctic territory anchors the extreme low-density end.
   description_long: null
   hook: null
   caveats: null
@@ -81,10 +81,10 @@ items:
 - id: obs:population-density:entity-population-density-mongolia
   name: Mongolia
   value: 2.0
-  description: 'Mongolia is a classic low-density national example. Source-side figure: `~2` for Population divided by land area.'
+  description: Mongolia is a classic low-density national example.
   description_format: markdown
   summary_short: Mongolia is a classic low-density national example.
-  description_medium: 'Mongolia is a classic low-density national example. Source-side figure: `~2` for Population divided by land area.'
+  description_medium: Mongolia is a classic low-density national example.
   description_long: null
   hook: null
   caveats: null
@@ -127,10 +127,10 @@ items:
 - id: obs:population-density:entity-population-density-mongolia:2
   name: Mongolia
   value: 2.2
-  description: 'Mongolia is one of the sparsest inhabited countries on Earth. Source-side figure: `~2.2` for Population divided by total land area.'
+  description: Mongolia is one of the sparsest inhabited countries on Earth.
   description_format: markdown
   summary_short: Mongolia is one of the sparsest inhabited countries on Earth.
-  description_medium: 'Mongolia is one of the sparsest inhabited countries on Earth. Source-side figure: `~2.2` for Population divided by total land area.'
+  description_medium: Mongolia is one of the sparsest inhabited countries on Earth.
   description_long: null
   hook: null
   caveats: null
@@ -173,10 +173,10 @@ items:
 - id: obs:population-density:entity-population-density-namibia
   name: Namibia
   value: 3.0
-  description: 'Namibia anchors the very sparse end of modern national population density. Source-side figure: `~3.0` for Population divided by land area.'
+  description: Namibia anchors the very sparse end of modern national population density.
   description_format: markdown
   summary_short: Namibia anchors the very sparse end of modern national population density.
-  description_medium: 'Namibia anchors the very sparse end of modern national population density. Source-side figure: `~3.0` for Population divided by land area.'
+  description_medium: Namibia anchors the very sparse end of modern national population density.
   description_long: null
   hook: null
   caveats: null
@@ -219,10 +219,10 @@ items:
 - id: obs:population-density:entity-population-density-namibia:2
   name: Namibia
   value: 3.1
-  description: 'Namibia anchors the very sparse end of national population density. Source-side figure: `~3.1` for Population divided by total land area.'
+  description: Namibia anchors the very sparse end of national population density.
   description_format: markdown
   summary_short: Namibia anchors the very sparse end of national population density.
-  description_medium: 'Namibia anchors the very sparse end of national population density. Source-side figure: `~3.1` for Population divided by total land area.'
+  description_medium: Namibia anchors the very sparse end of national population density.
   description_long: null
   hook: null
   caveats: null
@@ -265,10 +265,10 @@ items:
 - id: obs:population-density:entity-population-density-australia
   name: Australia
   value: 3.5
-  description: 'Australia is sparse despite a very large absolute population. Source-side figure: `~3.5` for Population divided by land area.'
+  description: Australia is sparse despite a very large absolute population.
   description_format: markdown
   summary_short: Australia is sparse despite a very large absolute population.
-  description_medium: 'Australia is sparse despite a very large absolute population. Source-side figure: `~3.5` for Population divided by land area.'
+  description_medium: Australia is sparse despite a very large absolute population.
   description_long: null
   hook: null
   caveats: null
@@ -308,59 +308,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:population-density:entity-population-density-australia:2
-  name: Australia
-  value: 3.5
-  description: 'Australia is a classic low-density continent-country benchmark. Source-side figure: `~3.5` for Population divided by total land area.'
-  description_format: markdown
-  summary_short: Australia is a classic low-density continent-country benchmark.
-  description_medium: 'Australia is a classic low-density continent-country benchmark. Source-side figure: `~3.5` for Population divided by total land area.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Australia
-    ingest_source: dataset/raw/curated/population-density.json
-    source_trace:
-      derivation_note: population / land area
-      method: derived
-      original_value_text: '3.5'
-      source_basis: Population divided by total land area.
-      source_unit: people/km^2
-      source_url: https://en.wikipedia.org/wiki/Australia
-      source_value_text: ~3.5
-  source: https://en.wikipedia.org/wiki/Australia
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-australia
-    url: https://en.wikipedia.org/wiki/Australia
-    title: Australia
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-population-density-json
-    url: repo://dataset/raw/curated/population-density.json
-    title: dataset/raw/curated/population-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:population-density:entity-population-density-iceland
   name: Iceland
   value: 3.8
-  description: 'Iceland is a classic low-density island nation. Source-side figure: `~3.8` for Population divided by land area.'
+  description: Iceland is a classic low-density island nation.
   description_format: markdown
   summary_short: Iceland is a classic low-density island nation.
-  description_medium: 'Iceland is a classic low-density island nation. Source-side figure: `~3.8` for Population divided by land area.'
+  description_medium: Iceland is a classic low-density island nation.
   description_long: null
   hook: null
   caveats: null
@@ -403,10 +357,10 @@ items:
 - id: obs:population-density:entity-population-density-canada
   name: Canada
   value: 4.2
-  description: 'Canada is another low-density large-country anchor. Source-side figure: `~4.2` for Population divided by land area.'
+  description: Canada is another low-density large-country anchor.
   description_format: markdown
   summary_short: Canada is another low-density large-country anchor.
-  description_medium: 'Canada is another low-density large-country anchor. Source-side figure: `~4.2` for Population divided by land area.'
+  description_medium: Canada is another low-density large-country anchor.
   description_long: null
   hook: null
   caveats: null
@@ -449,10 +403,10 @@ items:
 - id: obs:population-density:entity-population-density-russia
   name: Russia
   value: 8.5
-  description: 'Russia sits low on the density scale despite its size and population. Source-side figure: `~8.5` for Population divided by land area.'
+  description: Russia sits low on the density scale despite its size and population.
   description_format: markdown
   summary_short: Russia sits low on the density scale despite its size and population.
-  description_medium: 'Russia sits low on the density scale despite its size and population. Source-side figure: `~8.5` for Population divided by land area.'
+  description_medium: Russia sits low on the density scale despite its size and population.
   description_long: null
   hook: null
   caveats: null
@@ -495,10 +449,10 @@ items:
 - id: obs:population-density:entity-population-density-united-states
   name: United States
   value: 36.0
-  description: 'The United States occupies a mid-low density band for a high-income country. Source-side figure: `~36` for Population divided by land area.'
+  description: The United States occupies a mid-low density band for a high-income country.
   description_format: markdown
   summary_short: The United States occupies a mid-low density band for a high-income country.
-  description_medium: 'The United States occupies a mid-low density band for a high-income country. Source-side figure: `~36` for Population divided by land area.'
+  description_medium: The United States occupies a mid-low density band for a high-income country.
   description_long: null
   hook: null
   caveats: null
@@ -541,10 +495,10 @@ items:
 - id: obs:population-density:entity-population-density-france
   name: France
   value: 119.0
-  description: 'France is a mid-density large European state. Source-side figure: `~119` for Population divided by land area.'
+  description: France is a mid-density large European state.
   description_format: markdown
   summary_short: France is a mid-density large European state.
-  description_medium: 'France is a mid-density large European state. Source-side figure: `~119` for Population divided by land area.'
+  description_medium: France is a mid-density large European state.
   description_long: null
   hook: null
   caveats: null
@@ -584,59 +538,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:population-density:entity-population-density-france:2
-  name: France
-  value: 119.0
-  description: 'France is a mid-density European national benchmark. Source-side figure: `~119` for Population divided by total land area.'
-  description_format: markdown
-  summary_short: France is a mid-density European national benchmark.
-  description_medium: 'France is a mid-density European national benchmark. Source-side figure: `~119` for Population divided by total land area.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: France
-    ingest_source: dataset/raw/curated/population-density.json
-    source_trace:
-      derivation_note: population / land area
-      method: derived
-      original_value_text: '119'
-      source_basis: Population divided by total land area.
-      source_unit: people/km^2
-      source_url: https://en.wikipedia.org/wiki/France
-      source_value_text: ~119
-  source: https://en.wikipedia.org/wiki/France
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-france
-    url: https://en.wikipedia.org/wiki/France
-    title: France
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-population-density-json
-    url: repo://dataset/raw/curated/population-density.json
-    title: dataset/raw/curated/population-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:population-density:entity-population-density-germany:2
   name: Germany
   value: 233.0
-  description: 'Germany sits in the dense-but-not-urban national band. Source-side figure: `~233` for Population divided by total land area.'
+  description: Germany sits in the dense-but-not-urban national band.
   description_format: markdown
   summary_short: Germany sits in the dense-but-not-urban national band.
-  description_medium: 'Germany sits in the dense-but-not-urban national band. Source-side figure: `~233` for Population divided by total land area.'
+  description_medium: Germany sits in the dense-but-not-urban national band.
   description_long: null
   hook: null
   caveats: null
@@ -679,10 +587,10 @@ items:
 - id: obs:population-density:entity-population-density-germany
   name: Germany
   value: 240.0
-  description: 'Germany is densely populated for a large industrial state. Source-side figure: `~240` for Population divided by land area.'
+  description: Germany is densely populated for a large industrial state.
   description_format: markdown
   summary_short: Germany is densely populated for a large industrial state.
-  description_medium: 'Germany is densely populated for a large industrial state. Source-side figure: `~240` for Population divided by land area.'
+  description_medium: Germany is densely populated for a large industrial state.
   description_long: null
   hook: null
   caveats: null
@@ -725,10 +633,10 @@ items:
 - id: obs:population-density:entity-population-density-united-kingdom
   name: United Kingdom
   value: 280.0
-  description: 'The United Kingdom sits in a substantial mid-density band. Source-side figure: `~280` for Population divided by land area.'
+  description: The United Kingdom sits in a substantial mid-density band.
   description_format: markdown
   summary_short: The United Kingdom sits in a substantial mid-density band.
-  description_medium: 'The United Kingdom sits in a substantial mid-density band. Source-side figure: `~280` for Population divided by land area.'
+  description_medium: The United Kingdom sits in a substantial mid-density band.
   description_long: null
   hook: null
   caveats: null
@@ -771,10 +679,10 @@ items:
 - id: obs:population-density:entity-population-density-japan
   name: Japan
   value: 330.0
-  description: 'Japan is densely settled but not in the very top extreme. Source-side figure: `~330` for Population divided by land area.'
+  description: Japan is densely settled but not in the very top extreme.
   description_format: markdown
   summary_short: Japan is densely settled but not in the very top extreme.
-  description_medium: 'Japan is densely settled but not in the very top extreme. Source-side figure: `~330` for Population divided by land area.'
+  description_medium: Japan is densely settled but not in the very top extreme.
   description_long: null
   hook: null
   caveats: null
@@ -817,10 +725,10 @@ items:
 - id: obs:population-density:entity-population-density-belgium
   name: Belgium
   value: 380.0
-  description: 'Belgium is a dense Western European benchmark. Source-side figure: `~380` for Population divided by land area.'
+  description: Belgium is a dense Western European benchmark.
   description_format: markdown
   summary_short: Belgium is a dense Western European benchmark.
-  description_medium: 'Belgium is a dense Western European benchmark. Source-side figure: `~380` for Population divided by land area.'
+  description_medium: Belgium is a dense Western European benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -863,10 +771,10 @@ items:
 - id: obs:population-density:entity-population-density-india
   name: India
   value: 470.0
-  description: 'India gives a large, high-density national anchor. Source-side figure: `~470` for Population divided by land area.'
+  description: India gives a large, high-density national anchor.
   description_format: markdown
   summary_short: India gives a large, high-density national anchor.
-  description_medium: 'India gives a large, high-density national anchor. Source-side figure: `~470` for Population divided by land area.'
+  description_medium: India gives a large, high-density national anchor.
   description_long: null
   hook: null
   caveats: null
@@ -909,10 +817,10 @@ items:
 - id: obs:population-density:entity-population-density-netherlands
   name: Netherlands
   value: 520.0
-  description: 'The Netherlands is a classic dense European country example. Source-side figure: `~520` for Population divided by land area.'
+  description: The Netherlands is a classic dense European country example.
   description_format: markdown
   summary_short: The Netherlands is a classic dense European country example.
-  description_medium: 'The Netherlands is a classic dense European country example. Source-side figure: `~520` for Population divided by land area.'
+  description_medium: The Netherlands is a classic dense European country example.
   description_long: null
   hook: null
   caveats: null
@@ -955,10 +863,10 @@ items:
 - id: obs:population-density:entity-population-density-south-korea
   name: South Korea
   value: 520.0
-  description: 'South Korea is densely settled by national standards. Source-side figure: `~520` for Population divided by land area.'
+  description: South Korea is densely settled by national standards.
   description_format: markdown
   summary_short: South Korea is densely settled by national standards.
-  description_medium: 'South Korea is densely settled by national standards. Source-side figure: `~520` for Population divided by land area.'
+  description_medium: South Korea is densely settled by national standards.
   description_long: null
   hook: null
   caveats: null
@@ -1001,10 +909,10 @@ items:
 - id: obs:population-density:entity-population-density-taiwan
   name: Taiwan
   value: 670.0
-  description: 'Taiwan is a highly populated island density benchmark. Source-side figure: `~670` for Population divided by land area.'
+  description: Taiwan is a highly populated island density benchmark.
   description_format: markdown
   summary_short: Taiwan is a highly populated island density benchmark.
-  description_medium: 'Taiwan is a highly populated island density benchmark. Source-side figure: `~670` for Population divided by land area.'
+  description_medium: Taiwan is a highly populated island density benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1047,10 +955,10 @@ items:
 - id: obs:population-density:entity-population-density-bangladesh
   name: Bangladesh
   value: 1300.0
-  description: 'Bangladesh is one of the most cited national density benchmarks. Source-side figure: `~1,300` for Population divided by land area.'
+  description: Bangladesh is one of the most cited national density benchmarks.
   description_format: markdown
   summary_short: Bangladesh is one of the most cited national density benchmarks.
-  description_medium: 'Bangladesh is one of the most cited national density benchmarks. Source-side figure: `~1,300` for Population divided by land area.'
+  description_medium: Bangladesh is one of the most cited national density benchmarks.
   description_long: null
   hook: null
   caveats: null
@@ -1093,10 +1001,10 @@ items:
 - id: obs:population-density:entity-population-density-vatican-city
   name: Vatican City
   value: 1800.0
-  description: 'Vatican City is a compact city-state density reference. Source-side figure: `~1,800` for Population divided by land area.'
+  description: Vatican City is a compact city-state density reference.
   description_format: markdown
   summary_short: Vatican City is a compact city-state density reference.
-  description_medium: 'Vatican City is a compact city-state density reference. Source-side figure: `~1,800` for Population divided by land area.'
+  description_medium: Vatican City is a compact city-state density reference.
   description_long: null
   hook: null
   caveats: null
@@ -1139,10 +1047,10 @@ items:
 - id: obs:population-density:entity-population-density-hong-kong
   name: Hong Kong
   value: 7000.0
-  description: 'Hong Kong sits in the very high density urban territory range. Source-side figure: `~7,000` for Population divided by land area.'
+  description: Hong Kong sits in the very high density urban territory range.
   description_format: markdown
   summary_short: Hong Kong sits in the very high density urban territory range.
-  description_medium: 'Hong Kong sits in the very high density urban territory range. Source-side figure: `~7,000` for Population divided by land area.'
+  description_medium: Hong Kong sits in the very high density urban territory range.
   description_long: null
   hook: null
   caveats: null
@@ -1185,10 +1093,10 @@ items:
 - id: obs:population-density:entity-population-density-singapore
   name: Singapore
   value: 8000.0
-  description: 'Singapore is a dense city-state benchmark. Source-side figure: `~8,000` for Population divided by land area.'
+  description: Singapore is a dense city-state benchmark.
   description_format: markdown
   summary_short: Singapore is a dense city-state benchmark.
-  description_medium: 'Singapore is a dense city-state benchmark. Source-side figure: `~8,000` for Population divided by land area.'
+  description_medium: Singapore is a dense city-state benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1231,10 +1139,10 @@ items:
 - id: obs:population-density:entity-population-density-singapore:2
   name: Singapore
   value: 8360.0
-  description: 'Singapore compresses a large population into a tiny land area. Source-side figure: `~8,360` for Population divided by total land area.'
+  description: Singapore compresses a large population into a tiny land area.
   description_format: markdown
   summary_short: Singapore compresses a large population into a tiny land area.
-  description_medium: 'Singapore compresses a large population into a tiny land area. Source-side figure: `~8,360` for Population divided by total land area.'
+  description_medium: Singapore compresses a large population into a tiny land area.
   description_long: null
   hook: null
   caveats: null
@@ -1277,10 +1185,10 @@ items:
 - id: obs:population-density:entity-population-density-seoul
   name: Seoul
   value: 16000.0
-  description: 'Seoul gives a very dense megacity benchmark. Source-side figure: `~16,000` for Population divided by land area.'
+  description: Seoul gives a very dense megacity benchmark.
   description_format: markdown
   summary_short: Seoul gives a very dense megacity benchmark.
-  description_medium: 'Seoul gives a very dense megacity benchmark. Source-side figure: `~16,000` for Population divided by land area.'
+  description_medium: Seoul gives a very dense megacity benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1323,10 +1231,10 @@ items:
 - id: obs:population-density:entity-population-density-monaco
   name: Monaco
   value: 19000.0
-  description: 'Monaco is one of the most densely populated sovereign states. Source-side figure: `~19,000` for Population divided by land area.'
+  description: Monaco is one of the most densely populated sovereign states.
   description_format: markdown
   summary_short: Monaco is one of the most densely populated sovereign states.
-  description_medium: 'Monaco is one of the most densely populated sovereign states. Source-side figure: `~19,000` for Population divided by land area.'
+  description_medium: Monaco is one of the most densely populated sovereign states.
   description_long: null
   hook: null
   caveats: null
@@ -1369,10 +1277,10 @@ items:
 - id: obs:population-density:entity-population-density-macau
   name: Macau
   value: 21000.0
-  description: 'Macau pushes the density scale even higher. Source-side figure: `~21,000` for Population divided by land area.'
+  description: Macau pushes the density scale even higher.
   description_format: markdown
   summary_short: Macau pushes the density scale even higher.
-  description_medium: 'Macau pushes the density scale even higher. Source-side figure: `~21,000` for Population divided by land area.'
+  description_medium: Macau pushes the density scale even higher.
   description_long: null
   hook: null
   caveats: null
@@ -1415,10 +1323,10 @@ items:
 - id: obs:population-density:entity-population-density-mumbai
   name: Mumbai
   value: 21000.0
-  description: 'Mumbai is a classic extremely dense city example. Source-side figure: `~21,000` for Population divided by land area.'
+  description: Mumbai is a classic extremely dense city example.
   description_format: markdown
   summary_short: Mumbai is a classic extremely dense city example.
-  description_medium: 'Mumbai is a classic extremely dense city example. Source-side figure: `~21,000` for Population divided by land area.'
+  description_medium: Mumbai is a classic extremely dense city example.
   description_long: null
   hook: null
   caveats: null
@@ -1461,10 +1369,10 @@ items:
 - id: obs:population-density:entity-population-density-paris
   name: Paris
   value: 21000.0
-  description: 'Paris is a high-density city-proper benchmark. Source-side figure: `~21,000` for Population divided by land area.'
+  description: Paris is a high-density city-proper benchmark.
   description_format: markdown
   summary_short: Paris is a high-density city-proper benchmark.
-  description_medium: 'Paris is a high-density city-proper benchmark. Source-side figure: `~21,000` for Population divided by land area.'
+  description_medium: Paris is a high-density city-proper benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1507,10 +1415,10 @@ items:
 - id: obs:population-density:entity-population-density-manila
   name: Manila
   value: 43000.0
-  description: 'Manila is an extremely dense urban benchmark. Source-side figure: `~43,000` for Population divided by land area.'
+  description: Manila is an extremely dense urban benchmark.
   description_format: markdown
   summary_short: Manila is an extremely dense urban benchmark.
-  description_medium: 'Manila is an extremely dense urban benchmark. Source-side figure: `~43,000` for Population divided by land area.'
+  description_medium: Manila is an extremely dense urban benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1553,10 +1461,10 @@ items:
 - id: obs:population-density:entity-population-density-dhaka
   name: Dhaka
   value: 47000.0
-  description: 'Dhaka pushes the population-density scale into extreme urban territory. Source-side figure: `~47,000` for Population divided by land area.'
+  description: Dhaka pushes the population-density scale into extreme urban territory.
   description_format: markdown
   summary_short: Dhaka pushes the population-density scale into extreme urban territory.
-  description_medium: 'Dhaka pushes the population-density scale into extreme urban territory. Source-side figure: `~47,000` for Population divided by land area.'
+  description_medium: Dhaka pushes the population-density scale into extreme urban territory.
   description_long: null
   hook: null
   caveats: null

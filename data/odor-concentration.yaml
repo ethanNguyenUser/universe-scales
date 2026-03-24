@@ -26,15 +26,15 @@ description_format: markdown
 scale_mode: log
 frontend_group: senses
 frontend_group_label: Senses & Perception
-frontend_order: 500
+frontend_order: 720
 items:
-- id: obs:odor-concentration:entity-odor-concentration-geosmin:2
+- id: obs:odor-concentration:entity-odor-concentration-geosmin
   name: Geosmin
   value: 0.001
-  description: 'Geosmin is the classic earthy-smell compound with an extremely low threshold. Source-side figure: `~0.001 ppbv` for Very low olfactory threshold estimate.'
+  description: Geosmin is the classic earthy-smell compound with an extremely low threshold.
   description_format: markdown
   summary_short: Geosmin is the classic earthy-smell compound with an extremely low threshold.
-  description_medium: 'Geosmin is the classic earthy-smell compound with an extremely low threshold. Source-side figure: `~0.001 ppbv` for Very low olfactory threshold estimate.'
+  description_medium: Geosmin is the classic earthy-smell compound with an extremely low threshold.
   description_long: null
   hook: null
   caveats: null
@@ -77,10 +77,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-skatole
   name: Skatole
   value: 0.001
-  description: 'Skatole is one of the strongest-smelling compounds at very low concentrations. Source-side figure: `0.001 ppbv` for Extremely low odor threshold concentration.'
+  description: Skatole is one of the strongest-smelling compounds at very low concentrations.
   description_format: markdown
   summary_short: Skatole is one of the strongest-smelling compounds at very low concentrations.
-  description_medium: 'Skatole is one of the strongest-smelling compounds at very low concentrations. Source-side figure: `0.001 ppbv` for Extremely low odor threshold concentration.'
+  description_medium: Skatole is one of the strongest-smelling compounds at very low concentrations.
   description_long: null
   hook: null
   caveats: null
@@ -120,13 +120,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-2-methylisoborneol:2
+- id: obs:odor-concentration:entity-odor-concentration-2-methylisoborneol
   name: 2-Methylisoborneol
   value: 0.002
-  description: '2-MIB is another ultra-potent earthy odorant used in smell benchmarks. Source-side figure: `~0.002 ppbv` for Low odor threshold odorant.'
+  description: 2-MIB is another ultra-potent earthy odorant used in smell benchmarks.
   description_format: markdown
   summary_short: 2-MIB is another ultra-potent earthy odorant used in smell benchmarks.
-  description_medium: '2-MIB is another ultra-potent earthy odorant used in smell benchmarks. Source-side figure: `~0.002 ppbv` for Low odor threshold odorant.'
+  description_medium: 2-MIB is another ultra-potent earthy odorant used in smell benchmarks.
   description_long: null
   hook: null
   caveats: null
@@ -169,10 +169,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-indole
   name: Indole
   value: 0.01
-  description: 'Indole is strongly associated with animal and floral odor notes. Source-side figure: `0.01 ppbv` for Low odor threshold concentration.'
+  description: Indole is strongly associated with animal and floral odor notes.
   description_format: markdown
   summary_short: Indole is strongly associated with animal and floral odor notes.
-  description_medium: 'Indole is strongly associated with animal and floral odor notes. Source-side figure: `0.01 ppbv` for Low odor threshold concentration.'
+  description_medium: Indole is strongly associated with animal and floral odor notes.
   description_long: null
   hook: null
   caveats: null
@@ -215,10 +215,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-2-acetyl-1-pyrroline
   name: 2-acetyl-1-pyrroline
   value: 0.03
-  description: 'This rice and popcorn aroma is detectable at extremely low levels. Source-side figure: `0.03 ppbv` for Trace aroma threshold for a popcorn-like odorant.'
+  description: This rice and popcorn aroma is detectable at extremely low levels.
   description_format: markdown
   summary_short: This rice and popcorn aroma is detectable at extremely low levels.
-  description_medium: 'This rice and popcorn aroma is detectable at extremely low levels. Source-side figure: `0.03 ppbv` for Trace aroma threshold for a popcorn-like odorant.'
+  description_medium: This rice and popcorn aroma is detectable at extremely low levels.
   description_long: null
   hook: null
   caveats: null
@@ -258,151 +258,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-2-methylisoborneol
-  name: 2-methylisoborneol
-  value: 0.05
-  description: 'This compound is a classic earthy musty odorant. Source-side figure: `0.05 ppbv` for Very low odor threshold concentration.'
-  description_format: markdown
-  summary_short: This compound is a classic earthy musty odorant.
-  description_medium: 'This compound is a classic earthy musty odorant. Source-side figure: `0.05 ppbv` for Very low odor threshold concentration.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: 2-methylisoborneol
-    ingest_source: dataset/raw/curated/odor-concentration.json
-    source_trace:
-      derivation_note: odor threshold estimate
-      method: derived
-      original_value_text: '0.05'
-      source_basis: Very low odor threshold concentration.
-      source_unit: ppbv
-      source_url: https://en.wikipedia.org/wiki/2-Methylisoborneol
-      source_value_text: 0.05 ppbv
-  source: https://en.wikipedia.org/wiki/2-Methylisoborneol
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-2-methylisoborneol
-    url: https://en.wikipedia.org/wiki/2-Methylisoborneol
-    title: 2-Methylisoborneol
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-odor-concentration-json
-    url: repo://dataset/raw/curated/odor-concentration.json
-    title: dataset/raw/curated/odor-concentration.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-geosmin
-  name: Geosmin
-  value: 0.05
-  description: 'Geosmin gives soil and rain a characteristic earthy smell. Source-side figure: `0.05 ppbv` for Very low odor threshold concentration.'
-  description_format: markdown
-  summary_short: Geosmin gives soil and rain a characteristic earthy smell.
-  description_medium: 'Geosmin gives soil and rain a characteristic earthy smell. Source-side figure: `0.05 ppbv` for Very low odor threshold concentration.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Geosmin
-    ingest_source: dataset/raw/curated/odor-concentration.json
-    source_trace:
-      derivation_note: odor threshold estimate
-      method: derived
-      original_value_text: '0.05'
-      source_basis: Very low odor threshold concentration.
-      source_unit: ppbv
-      source_url: https://en.wikipedia.org/wiki/Geosmin
-      source_value_text: 0.05 ppbv
-  source: https://en.wikipedia.org/wiki/Geosmin
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-geosmin
-    url: https://en.wikipedia.org/wiki/Geosmin
-    title: Geosmin
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-odor-concentration-json
-    url: repo://dataset/raw/curated/odor-concentration.json
-    title: dataset/raw/curated/odor-concentration.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-2-acetyl-1-pyrroline:2
-  name: 2-Acetyl-1-pyrroline
-  value: 0.1
-  description: '2-acetyl-1-pyrroline is the aromatic rice smell at vanishingly small levels. Source-side figure: `~0.1 ppbv` for Low-threshold food aroma compound.'
-  description_format: markdown
-  summary_short: 2-acetyl-1-pyrroline is the aromatic rice smell at vanishingly small levels.
-  description_medium: '2-acetyl-1-pyrroline is the aromatic rice smell at vanishingly small levels. Source-side figure: `~0.1 ppbv` for Low-threshold food aroma compound.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: 2-Acetyl-1-pyrroline
-    ingest_source: dataset/raw/curated/odor-concentration.json
-    source_trace:
-      derivation_note: odor threshold estimate
-      method: derived
-      original_value_text: '0.1'
-      source_basis: Low-threshold food aroma compound.
-      source_unit: ppbv
-      source_url: https://en.wikipedia.org/wiki/2-Acetyl-1-pyrroline
-      source_value_text: ~0.1 ppbv
-  source: https://en.wikipedia.org/wiki/2-Acetyl-1-pyrroline
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-2-acetyl-1-pyrroline
-    url: https://en.wikipedia.org/wiki/2-Acetyl-1-pyrroline
-    title: 2-Acetyl-1-pyrroline
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-odor-concentration-json
-    url: repo://dataset/raw/curated/odor-concentration.json
-    title: dataset/raw/curated/odor-concentration.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:odor-concentration:entity-odor-concentration-allyl-methyl-sulfide
   name: Allyl methyl sulfide
   value: 0.1
-  description: 'Garlic breath is a familiar example of trace odor chemistry. Source-side figure: `0.1 ppbv` for Human breath odorant after garlic consumption.'
+  description: Garlic breath is a familiar example of trace odor chemistry.
   description_format: markdown
   summary_short: Garlic breath is a familiar example of trace odor chemistry.
-  description_medium: 'Garlic breath is a familiar example of trace odor chemistry. Source-side figure: `0.1 ppbv` for Human breath odorant after garlic consumption.'
+  description_medium: Garlic breath is a familiar example of trace odor chemistry.
   description_long: null
   hook: null
   caveats: null
@@ -445,10 +307,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-dimethyl-disulfide
   name: Dimethyl disulfide
   value: 0.1
-  description: 'Dimethyl disulfide is a pungent sulfur note at trace levels. Source-side figure: `0.1 ppbv` for Low odor threshold concentration.'
+  description: Dimethyl disulfide is a pungent sulfur note at trace levels.
   description_format: markdown
   summary_short: Dimethyl disulfide is a pungent sulfur note at trace levels.
-  description_medium: 'Dimethyl disulfide is a pungent sulfur note at trace levels. Source-side figure: `0.1 ppbv` for Low odor threshold concentration.'
+  description_medium: Dimethyl disulfide is a pungent sulfur note at trace levels.
   description_long: null
   hook: null
   caveats: null
@@ -491,10 +353,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-dimethyl-sulfide
   name: Dimethyl sulfide
   value: 0.1
-  description: 'Dimethyl sulfide is a strongly perceptible sulfurous odorant. Source-side figure: `~0.1 ppbv` for Very low odor threshold sulfur compound.'
+  description: Dimethyl sulfide is a strongly perceptible sulfurous odorant.
   description_format: markdown
   summary_short: Dimethyl sulfide is a strongly perceptible sulfurous odorant.
-  description_medium: 'Dimethyl sulfide is a strongly perceptible sulfurous odorant. Source-side figure: `~0.1 ppbv` for Very low odor threshold sulfur compound.'
+  description_medium: Dimethyl sulfide is a strongly perceptible sulfurous odorant.
   description_long: null
   hook: null
   caveats: null
@@ -537,10 +399,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-ethanethiol
   name: Ethanethiol
   value: 0.1
-  description: 'Ethanethiol is a classic foul sulfur odorant. Source-side figure: `0.1 ppbv` for Very low odor threshold concentration.'
+  description: Ethanethiol is a classic foul sulfur odorant.
   description_format: markdown
   summary_short: Ethanethiol is a classic foul sulfur odorant.
-  description_medium: 'Ethanethiol is a classic foul sulfur odorant. Source-side figure: `0.1 ppbv` for Very low odor threshold concentration.'
+  description_medium: Ethanethiol is a classic foul sulfur odorant.
   description_long: null
   hook: null
   caveats: null
@@ -583,10 +445,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-p-cresol
   name: p-Cresol
   value: 0.1
-  description: 'p-Cresol is a pungent odorant at very low concentrations. Source-side figure: `0.1 ppbv` for Low odor threshold concentration.'
+  description: p-Cresol is a pungent odorant at very low concentrations.
   description_format: markdown
   summary_short: p-Cresol is a pungent odorant at very low concentrations.
-  description_medium: 'p-Cresol is a pungent odorant at very low concentrations. Source-side figure: `0.1 ppbv` for Low odor threshold concentration.'
+  description_medium: p-Cresol is a pungent odorant at very low concentrations.
   description_long: null
   hook: null
   caveats: null
@@ -629,10 +491,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-methanethiol
   name: Methanethiol
   value: 0.3
-  description: 'Methanethiol is pungent even at tiny concentrations. Source-side figure: `0.3 ppbv` for Very low odor threshold concentration.'
+  description: Methanethiol is pungent even at tiny concentrations.
   description_format: markdown
   summary_short: Methanethiol is pungent even at tiny concentrations.
-  description_medium: 'Methanethiol is pungent even at tiny concentrations. Source-side figure: `0.3 ppbv` for Very low odor threshold concentration.'
+  description_medium: Methanethiol is pungent even at tiny concentrations.
   description_long: null
   hook: null
   caveats: null
@@ -675,10 +537,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-hydrogen-sulfide
   name: Hydrogen sulfide
   value: 0.5
-  description: 'Hydrogen sulfide is the classic rotten-egg smell benchmark. Source-side figure: `0.5 ppbv` for Odor threshold is around the sub-ppm range.'
+  description: Hydrogen sulfide is the classic rotten-egg smell benchmark.
   description_format: markdown
   summary_short: Hydrogen sulfide is the classic rotten-egg smell benchmark.
-  description_medium: 'Hydrogen sulfide is the classic rotten-egg smell benchmark. Source-side figure: `0.5 ppbv` for Odor threshold is around the sub-ppm range.'
+  description_medium: Hydrogen sulfide is the classic rotten-egg smell benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -721,10 +583,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-1-octen-3-ol
   name: 1-octen-3-ol
   value: 1.0
-  description: 'This compound is the classic mushroom odor molecule. Source-side figure: `1 ppbv` for Very low odor threshold concentration.'
+  description: This compound is the classic mushroom odor molecule.
   description_format: markdown
   summary_short: This compound is the classic mushroom odor molecule.
-  description_medium: 'This compound is the classic mushroom odor molecule. Source-side figure: `1 ppbv` for Very low odor threshold concentration.'
+  description_medium: This compound is the classic mushroom odor molecule.
   description_long: null
   hook: null
   caveats: null
@@ -767,10 +629,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-benzaldehyde
   name: Benzaldehyde
   value: 1.0
-  description: 'Benzaldehyde is a recognizable almond-like odorant. Source-side figure: `1 ppbv` for Low-ppm to ppbv odor threshold range.'
+  description: Benzaldehyde is a recognizable almond-like odorant.
   description_format: markdown
   summary_short: Benzaldehyde is a recognizable almond-like odorant.
-  description_medium: 'Benzaldehyde is a recognizable almond-like odorant. Source-side figure: `1 ppbv` for Low-ppm to ppbv odor threshold range.'
+  description_medium: Benzaldehyde is a recognizable almond-like odorant.
   description_long: null
   hook: null
   caveats: null
@@ -813,10 +675,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-isovaleric-acid
   name: Isovaleric acid
   value: 1.0
-  description: 'Isovaleric acid is the sweaty-foot smell benchmark. Source-side figure: `1 ppbv` for Very low odor threshold concentration.'
+  description: Isovaleric acid is the sweaty-foot smell benchmark.
   description_format: markdown
   summary_short: Isovaleric acid is the sweaty-foot smell benchmark.
-  description_medium: 'Isovaleric acid is the sweaty-foot smell benchmark. Source-side figure: `1 ppbv` for Very low odor threshold concentration.'
+  description_medium: Isovaleric acid is the sweaty-foot smell benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -859,10 +721,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-trimethylamine
   name: Trimethylamine
   value: 1.0
-  description: 'Trimethylamine is the familiar fishy odorant of decay. Source-side figure: `1 ppbv` for Very low odor threshold concentration.'
+  description: Trimethylamine is the familiar fishy odorant of decay.
   description_format: markdown
   summary_short: Trimethylamine is the familiar fishy odorant of decay.
-  description_medium: 'Trimethylamine is the familiar fishy odorant of decay. Source-side figure: `1 ppbv` for Very low odor threshold concentration.'
+  description_medium: Trimethylamine is the familiar fishy odorant of decay.
   description_long: null
   hook: null
   caveats: null
@@ -905,10 +767,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-vanillin
   name: Vanillin
   value: 3.0
-  description: 'Vanillin anchors the sweet fragrance end of the trace-odor scale. Source-side figure: `3 ppbv` for Low odor threshold concentration.'
+  description: Vanillin anchors the sweet fragrance end of the trace-odor scale.
   description_format: markdown
   summary_short: Vanillin anchors the sweet fragrance end of the trace-odor scale.
-  description_medium: 'Vanillin anchors the sweet fragrance end of the trace-odor scale. Source-side figure: `3 ppbv` for Low odor threshold concentration.'
+  description_medium: Vanillin anchors the sweet fragrance end of the trace-odor scale.
   description_long: null
   hook: null
   caveats: null
@@ -951,10 +813,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-butyric-acid
   name: Butyric acid
   value: 10.0
-  description: 'Butyric acid is a familiar sour-rancid smell at trace levels. Source-side figure: `10 ppbv` for Odor threshold is in the low ppmv range.'
+  description: Butyric acid is a familiar sour-rancid smell at trace levels.
   description_format: markdown
   summary_short: Butyric acid is a familiar sour-rancid smell at trace levels.
-  description_medium: 'Butyric acid is a familiar sour-rancid smell at trace levels. Source-side figure: `10 ppbv` for Odor threshold is in the low ppmv range.'
+  description_medium: Butyric acid is a familiar sour-rancid smell at trace levels.
   description_long: null
   hook: null
   caveats: null
@@ -997,10 +859,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-eugenol
   name: Eugenol
   value: 10.0
-  description: 'Eugenol is the clove-spice odor reference. Source-side figure: `10 ppbv` for Low odor threshold concentration.'
+  description: Eugenol is the clove-spice odor reference.
   description_format: markdown
   summary_short: Eugenol is the clove-spice odor reference.
-  description_medium: 'Eugenol is the clove-spice odor reference. Source-side figure: `10 ppbv` for Low odor threshold concentration.'
+  description_medium: Eugenol is the clove-spice odor reference.
   description_long: null
   hook: null
   caveats: null
@@ -1043,10 +905,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-linalool
   name: Linalool
   value: 10.0
-  description: 'Linalool gives floral and citrus notes. Source-side figure: `10 ppbv` for Low odor threshold concentration.'
+  description: Linalool gives floral and citrus notes.
   description_format: markdown
   summary_short: Linalool gives floral and citrus notes.
-  description_medium: 'Linalool gives floral and citrus notes. Source-side figure: `10 ppbv` for Low odor threshold concentration.'
+  description_medium: Linalool gives floral and citrus notes.
   description_long: null
   hook: null
   caveats: null
@@ -1089,10 +951,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-menthol
   name: Menthol
   value: 10.0
-  description: 'Menthol gives a cooling mint smell at low trace levels. Source-side figure: `10 ppbv` for Low odor threshold concentration.'
+  description: Menthol gives a cooling mint smell at low trace levels.
   description_format: markdown
   summary_short: Menthol gives a cooling mint smell at low trace levels.
-  description_medium: 'Menthol gives a cooling mint smell at low trace levels. Source-side figure: `10 ppbv` for Low odor threshold concentration.'
+  description_medium: Menthol gives a cooling mint smell at low trace levels.
   description_long: null
   hook: null
   caveats: null
@@ -1132,59 +994,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-menthol:2
-  name: Menthol
-  value: 10.0
-  description: 'Menthol is a cooling mint odor that stays detectable at low levels. Source-side figure: `~10 ppbv` for Low-threshold mint odorant.'
-  description_format: markdown
-  summary_short: Menthol is a cooling mint odor that stays detectable at low levels.
-  description_medium: 'Menthol is a cooling mint odor that stays detectable at low levels. Source-side figure: `~10 ppbv` for Low-threshold mint odorant.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Menthol
-    ingest_source: dataset/raw/curated/odor-concentration.json
-    source_trace:
-      derivation_note: odor threshold estimate
-      method: derived
-      original_value_text: '10'
-      source_basis: Low-threshold mint odorant.
-      source_unit: ppbv
-      source_url: https://en.wikipedia.org/wiki/Menthol
-      source_value_text: ~10 ppbv
-  source: https://en.wikipedia.org/wiki/Menthol
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-menthol
-    url: https://en.wikipedia.org/wiki/Menthol
-    title: Menthol
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-odor-concentration-json
-    url: repo://dataset/raw/curated/odor-concentration.json
-    title: dataset/raw/curated/odor-concentration.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:odor-concentration:entity-odor-concentration-limonene:2
   name: Limonene
   value: 15.0
-  description: 'Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds. Source-side figure: `~15 ppbv` for Common citrus aroma compound.'
+  description: Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds.
   description_format: markdown
   summary_short: Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds.
-  description_medium: 'Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds. Source-side figure: `~15 ppbv` for Common citrus aroma compound.'
+  description_medium: Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds.
   description_long: null
   hook: null
   caveats: null
@@ -1227,10 +1043,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-limonene
   name: Limonene
   value: 20.0
-  description: 'Limonene is a common citrus odorant. Source-side figure: `20 ppbv` for Low odor threshold concentration.'
+  description: Limonene is a common citrus odorant.
   description_format: markdown
   summary_short: Limonene is a common citrus odorant.
-  description_medium: 'Limonene is a common citrus odorant. Source-side figure: `20 ppbv` for Low odor threshold concentration.'
+  description_medium: Limonene is a common citrus odorant.
   description_long: null
   hook: null
   caveats: null
@@ -1273,10 +1089,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-methyl-salicylate
   name: Methyl salicylate
   value: 20.0
-  description: 'Methyl salicylate is the wintergreen smell benchmark. Source-side figure: `20 ppbv` for Low odor threshold concentration.'
+  description: Methyl salicylate is the wintergreen smell benchmark.
   description_format: markdown
   summary_short: Methyl salicylate is the wintergreen smell benchmark.
-  description_medium: 'Methyl salicylate is the wintergreen smell benchmark. Source-side figure: `20 ppbv` for Low odor threshold concentration.'
+  description_medium: Methyl salicylate is the wintergreen smell benchmark.
   description_long: null
   hook: null
   caveats: null
@@ -1319,10 +1135,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-isoamyl-acetate
   name: Isoamyl acetate
   value: 50.0
-  description: 'Fruit-like ester odors sit comfortably in the tens of ppbv to ppm range. Source-side figure: `50 ppbv` for Banana-like odor threshold in the low ppm range.'
+  description: Fruit-like ester odors sit comfortably in the tens of ppbv to ppm range.
   description_format: markdown
   summary_short: Fruit-like ester odors sit comfortably in the tens of ppbv to ppm range.
-  description_medium: 'Fruit-like ester odors sit comfortably in the tens of ppbv to ppm range. Source-side figure: `50 ppbv` for Banana-like odor threshold in the low ppm range.'
+  description_medium: Fruit-like ester odors sit comfortably in the tens of ppbv to ppm range.
   description_long: null
   hook: null
   caveats: null
@@ -1365,10 +1181,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-pyridine
   name: Pyridine
   value: 50.0
-  description: 'Pyridine has a harsh, fishy solvent odor. Source-side figure: `50 ppbv` for Low odor threshold concentration.'
+  description: Pyridine has a harsh, fishy solvent odor.
   description_format: markdown
   summary_short: Pyridine has a harsh, fishy solvent odor.
-  description_medium: 'Pyridine has a harsh, fishy solvent odor. Source-side figure: `50 ppbv` for Low odor threshold concentration.'
+  description_medium: Pyridine has a harsh, fishy solvent odor.
   description_long: null
   hook: null
   caveats: null
@@ -1411,10 +1227,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-acetic-acid
   name: Acetic acid
   value: 1000.0
-  description: 'Acetic acid is the vinegar odor anchor at higher trace concentrations. Source-side figure: `1 ppmv` for Odor threshold around the low ppmv range.'
+  description: Acetic acid is the vinegar odor anchor at higher trace concentrations.
   description_format: markdown
   summary_short: Acetic acid is the vinegar odor anchor at higher trace concentrations.
-  description_medium: 'Acetic acid is the vinegar odor anchor at higher trace concentrations. Source-side figure: `1 ppmv` for Odor threshold around the low ppmv range.'
+  description_medium: Acetic acid is the vinegar odor anchor at higher trace concentrations.
   description_long: null
   hook: null
   caveats: null
@@ -1454,59 +1270,13 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-acetic-acid:2
-  name: Acetic acid
-  value: 1000.0
-  description: 'Acetic acid is the vinegar odor that sits higher on the smell scale. Source-side figure: `~1 ppmv` for Odor threshold around the ppmv range.'
-  description_format: markdown
-  summary_short: Acetic acid is the vinegar odor that sits higher on the smell scale.
-  description_medium: 'Acetic acid is the vinegar odor that sits higher on the smell scale. Source-side figure: `~1 ppmv` for Odor threshold around the ppmv range.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Acetic acid
-    ingest_source: dataset/raw/curated/odor-concentration.json
-    source_trace:
-      derivation_note: odor threshold estimate
-      method: derived
-      original_value_text: '1000'
-      source_basis: Odor threshold around the ppmv range.
-      source_unit: ppbv
-      source_url: https://en.wikipedia.org/wiki/Acetic_acid
-      source_value_text: ~1 ppmv
-  source: https://en.wikipedia.org/wiki/Acetic_acid
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-acetic-acid
-    url: https://en.wikipedia.org/wiki/Acetic_acid
-    title: Acetic acid
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-odor-concentration-json
-    url: repo://dataset/raw/curated/odor-concentration.json
-    title: dataset/raw/curated/odor-concentration.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:odor-concentration:entity-odor-concentration-ethyl-acetate
   name: Ethyl acetate
   value: 1000.0
-  description: 'Ethyl acetate is an everyday solvent smell at modest concentration. Source-side figure: `1 ppmv` for Odor threshold around the low ppmv range.'
+  description: Ethyl acetate is an everyday solvent smell at modest concentration.
   description_format: markdown
   summary_short: Ethyl acetate is an everyday solvent smell at modest concentration.
-  description_medium: 'Ethyl acetate is an everyday solvent smell at modest concentration. Source-side figure: `1 ppmv` for Odor threshold around the low ppmv range.'
+  description_medium: Ethyl acetate is an everyday solvent smell at modest concentration.
   description_long: null
   hook: null
   caveats: null
@@ -1549,10 +1319,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-acetone
   name: Acetone
   value: 2000.0
-  description: 'Acetone is a sharp solvent odor that becomes obvious in the ppm range. Source-side figure: `2 ppmv` for Odor threshold is in the ppmv range.'
+  description: Acetone is a sharp solvent odor that becomes obvious in the ppm range.
   description_format: markdown
   summary_short: Acetone is a sharp solvent odor that becomes obvious in the ppm range.
-  description_medium: 'Acetone is a sharp solvent odor that becomes obvious in the ppm range. Source-side figure: `2 ppmv` for Odor threshold is in the ppmv range.'
+  description_medium: Acetone is a sharp solvent odor that becomes obvious in the ppm range.
   description_long: null
   hook: null
   caveats: null
@@ -1595,10 +1365,10 @@ items:
 - id: obs:odor-concentration:entity-odor-concentration-ammonia
   name: Ammonia
   value: 5000.0
-  description: 'Ammonia is pungent enough to sit on the high side of the smell scale. Source-side figure: `5 ppmv` for Odor threshold is in the low ppmv range.'
+  description: Ammonia is pungent enough to sit on the high side of the smell scale.
   description_format: markdown
   summary_short: Ammonia is pungent enough to sit on the high side of the smell scale.
-  description_medium: 'Ammonia is pungent enough to sit on the high side of the smell scale. Source-side figure: `5 ppmv` for Odor threshold is in the low ppmv range.'
+  description_medium: Ammonia is pungent enough to sit on the high side of the smell scale.
   description_long: null
   hook: null
   caveats: null

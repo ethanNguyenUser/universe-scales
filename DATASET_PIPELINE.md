@@ -1,6 +1,6 @@
 # Canonical Dataset Pipeline
 
-This project now has a canonical data pipeline that builds a normalized SQLite dataset and then derives the JSON and YAML artifacts used by the frontend.
+This project has a canonical data pipeline that builds a normalized SQLite dataset and then derives the JSON and YAML artifacts used by the frontend.
 
 ## Canonical Artifacts
 
@@ -15,11 +15,11 @@ This project now has a canonical data pipeline that builds a normalized SQLite d
 - Frontend YAML export: `exports/frontend/<slug>.yaml`
 - Site copy of frontend YAML: `data/<slug>.yaml`
 
-The `data/*.yaml` files for the flagship dimensions are now generated deployment copies. The dataset side lives under `dataset/` and `exports/`.
+The `data/*.yaml` files are generated deployment copies. The dataset side lives under `dataset/` and `exports/`.
 
 ## Phase-One Dimensions
 
-Phase one focuses on six flagship dimensions:
+Phase one focuses on six flagship physical dimensions:
 
 - `length`
 - `mass`
@@ -63,7 +63,7 @@ The main tables are:
 - `observation_sources`
 - `coverage_bins`
 
-`observation_content` is the new writing-oriented layer. It stores structured text fields separate from the raw measured or derived observation:
+`observation_content` is the writing-oriented layer. It stores structured text fields separate from the raw measured or derived observation:
 
 - `summary_short`
 - `description_medium`
@@ -75,7 +75,7 @@ The main tables are:
 - `content_origin`
 - `content_status`
 
-This is the layer intended to feed future writing agents. The default content format is markdown, and the frontend now renders richer markdown plus math-friendly text.
+This is the layer intended to feed future writing agents. The default content format is markdown, and the frontend renders richer markdown plus math-friendly text.
 
 The `facts_json` payload can also carry `source_trace`, which explains whether a number was:
 
@@ -123,3 +123,4 @@ Query the SQLite artifact directly through the CLI:
 - The canonical model distinguishes `subjects` from `observations`, so one subject can accumulate multiple dimension values.
 - Phase one still admits `measured` and `derived` values only.
 - The writer packet export is intended to support future text-generation workflows without asking an agent to rediscover the facts from scratch.
+- Generated frontend YAML stays compatible with the existing site loader while the canonical data remains in SQLite and JSON exports.

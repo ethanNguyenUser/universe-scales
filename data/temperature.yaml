@@ -40,17 +40,17 @@ preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
 scale_mode: log
-frontend_group: fields
-frontend_group_label: Fields, Waves & Radiation
-frontend_order: 230
+frontend_group: fundamental
+frontend_group_label: Fundamental Scales
+frontend_order: 180
 items:
 - id: obs:temperature:entity-bose-einstein-condensate
   name: Bose-Einstein condensate
   value: 1.0e-10
-  description: 'An ultracold atomic gas in the nanokelvin regime where a Bose-Einstein condensate can form. Here the quantity refers to `ultracold atom temperature`. Source-side figure: `0.1 nK` for Representative condensate temperature scale. Converted nanokelvin to kelvin.'
+  description: A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.
   description_format: markdown
-  summary_short: An ultracold atomic gas in the nanokelvin regime where a Bose-Einstein condensate can form.
-  description_medium: 'An ultracold atomic gas in the nanokelvin regime where a Bose-Einstein condensate can form. Here the quantity refers to `ultracold atom temperature`. Source-side figure: `0.1 nK` for Representative condensate temperature scale. Converted nanokelvin to kelvin.'
+  summary_short: A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.
+  description_medium: A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.
   description_long: null
   hook: null
   caveats: null
@@ -91,13 +91,148 @@ items:
   value_type: measured
   qualifiers:
     measurement: ultracold atom temperature
+- id: obs:temperature:entity-optical-lattice-clock-atoms-temperature
+  name: Optical lattice clock atoms
+  value: 1.0e-07
+  description: Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.
+  description_format: markdown
+  summary_short: Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.
+  description_medium: Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Optical lattice clock atoms
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-07
+      source_basis: Representative atom temperature in an optical lattice clock.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Optical_lattice_clock
+      source_value_text: 100 nK
+  source: https://en.wikipedia.org/wiki/Optical_lattice_clock
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-optical-lattice-clock
+    url: https://en.wikipedia.org/wiki/Optical_lattice_clock
+    title: Optical lattice clock
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:temperature:entity-laser-cooled-atom-cloud-temperature
+  name: Laser-cooled atom cloud
+  value: 1.0e-06
+  description: Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.
+  description_format: markdown
+  summary_short: Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.
+  description_medium: Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Laser-cooled atom cloud
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-06
+      source_basis: Representative temperature of a laser-cooled atomic cloud.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Laser_cooling
+      source_value_text: 1 uK
+  source: https://en.wikipedia.org/wiki/Laser_cooling
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-laser-cooling
+    url: https://en.wikipedia.org/wiki/Laser_cooling
+    title: Laser cooling
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:temperature:entity-adiabatic-demagnetization-stage
+  name: Adiabatic demagnetization stage
+  value: 0.001
+  description: Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.
+  description_format: markdown
+  summary_short: Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.
+  description_medium: Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Adiabatic demagnetization stage
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '0.001'
+      source_basis: Representative temperature reached in adiabatic-demagnetization stages.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Adiabatic_demagnetization
+      source_value_text: 1 mK
+  source: https://en.wikipedia.org/wiki/Adiabatic_demagnetization
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-adiabatic-demagnetization
+    url: https://en.wikipedia.org/wiki/Adiabatic_demagnetization
+    title: Adiabatic demagnetization
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
 - id: obs:temperature:entity-dilution-refrigerator
   name: Dilution refrigerator
   value: 0.005
-  description: 'A representative dilution-refrigerator base temperature used in quantum experiments. Here the quantity refers to `mixing chamber temperature`. Source-side figure: `5 mK` for Representative dilution refrigerator operating temperature. Converted millikelvin to kelvin.'
+  description: A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.
   description_format: markdown
-  summary_short: A representative dilution-refrigerator base temperature used in quantum experiments.
-  description_medium: 'A representative dilution-refrigerator base temperature used in quantum experiments. Here the quantity refers to `mixing chamber temperature`. Source-side figure: `5 mK` for Representative dilution refrigerator operating temperature. Converted millikelvin to kelvin.'
+  summary_short: A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.
+  description_medium: A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.
   description_long: null
   hook: null
   caveats: null
@@ -141,10 +276,10 @@ items:
 - id: obs:temperature:entity-cosmic-neutrino-background
   name: Cosmic neutrino background
   value: 1.95
-  description: 'The effective present-day temperature associated with the cosmic neutrino background. Here the quantity refers to `effective background temperature`. Source-side figure: `1.95 K` for Reported effective neutrino-background temperature.'
+  description: The effective present-day temperature associated with the cosmic neutrino background.
   description_format: markdown
   summary_short: The effective present-day temperature associated with the cosmic neutrino background.
-  description_medium: 'The effective present-day temperature associated with the cosmic neutrino background. Here the quantity refers to `effective background temperature`. Source-side figure: `1.95 K` for Reported effective neutrino-background temperature.'
+  description_medium: The effective present-day temperature associated with the cosmic neutrino background.
   description_long: null
   hook: null
   caveats: null
@@ -184,13 +319,59 @@ items:
   value_type: measured
   qualifiers:
     measurement: effective background temperature
+- id: obs:temperature:entity-liquid-helium
+  name: Liquid helium boiling point
+  value: 4.22
+  description: The normal boiling point of helium, used widely in cryogenic cooling.
+  description_format: markdown
+  summary_short: The normal boiling point of helium, used widely in cryogenic cooling.
+  description_medium: The normal boiling point of helium, used widely in cryogenic cooling.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid helium boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '4.22'
+      source_basis: Reported normal boiling point of helium.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Helium
+      source_value_text: 4.22 K
+  source: https://en.wikipedia.org/wiki/Helium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-helium
+    url: https://en.wikipedia.org/wiki/Helium
+    title: Helium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
 - id: obs:temperature:entity-liquid-hydrogen
   name: Liquid hydrogen boiling point
   value: 20.28
-  description: 'The normal boiling point of hydrogen, important for rocket propellant handling. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `20.28 K` for Reported normal boiling point of hydrogen.'
+  description: The normal boiling point of hydrogen, important for rocket propellant handling.
   description_format: markdown
   summary_short: The normal boiling point of hydrogen, important for rocket propellant handling.
-  description_medium: 'The normal boiling point of hydrogen, important for rocket propellant handling. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `20.28 K` for Reported normal boiling point of hydrogen.'
+  description_medium: The normal boiling point of hydrogen, important for rocket propellant handling.
   description_long: null
   hook: null
   caveats: null
@@ -233,10 +414,10 @@ items:
 - id: obs:temperature:entity-triton-temperature
   name: Triton surface
   value: 38.0
-  description: 'The frigid surface temperature of Neptune''s moon Triton. Source-side figure: `38 K` for Reported representative Triton surface temperature.'
+  description: The frigid surface temperature of Neptune's moon Triton.
   description_format: markdown
   summary_short: The frigid surface temperature of Neptune's moon Triton.
-  description_medium: 'The frigid surface temperature of Neptune''s moon Triton. Source-side figure: `38 K` for Reported representative Triton surface temperature.'
+  description_medium: The frigid surface temperature of Neptune's moon Triton.
   description_long: null
   hook: null
   caveats: null
@@ -279,10 +460,10 @@ items:
 - id: obs:temperature:entity-pluto-temperature
   name: Pluto surface
   value: 44.0
-  description: 'A representative temperature for the surface of Pluto. Here the quantity refers to `surface temperature`. Source-side figure: `44 K` for Reported representative Pluto surface temperature.'
+  description: A representative temperature for the surface of Pluto.
   description_format: markdown
   summary_short: A representative temperature for the surface of Pluto.
-  description_medium: 'A representative temperature for the surface of Pluto. Here the quantity refers to `surface temperature`. Source-side figure: `44 K` for Reported representative Pluto surface temperature.'
+  description_medium: A representative temperature for the surface of Pluto.
   description_long: null
   hook: null
   caveats: null
@@ -325,10 +506,10 @@ items:
 - id: obs:temperature:entity-neptune-cloud-tops
   name: Neptune cloud tops
   value: 55.0
-  description: 'A representative temperature for the cloud tops of Neptune. Here the quantity refers to `cloud-top temperature`. Source-side figure: `55 K` for Reported Neptune cloud-top temperature.'
+  description: A representative temperature for the cloud tops of Neptune.
   description_format: markdown
   summary_short: A representative temperature for the cloud tops of Neptune.
-  description_medium: 'A representative temperature for the cloud tops of Neptune. Here the quantity refers to `cloud-top temperature`. Source-side figure: `55 K` for Reported Neptune cloud-top temperature.'
+  description_medium: A representative temperature for the cloud tops of Neptune.
   description_long: null
   hook: null
   caveats: null
@@ -371,10 +552,10 @@ items:
 - id: obs:temperature:entity-liquid-nitrogen
   name: Liquid nitrogen boiling point
   value: 77.36
-  description: 'The boiling point of liquid nitrogen, common in laboratory cryogenics. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `77.36 K` for Reported boiling point of liquid nitrogen.'
+  description: The boiling point of liquid nitrogen, common in laboratory cryogenics.
   description_format: markdown
   summary_short: The boiling point of liquid nitrogen, common in laboratory cryogenics.
-  description_medium: 'The boiling point of liquid nitrogen, common in laboratory cryogenics. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `77.36 K` for Reported boiling point of liquid nitrogen.'
+  description_medium: The boiling point of liquid nitrogen, common in laboratory cryogenics.
   description_long: null
   hook: null
   caveats: null
@@ -417,10 +598,10 @@ items:
 - id: obs:temperature:entity-liquid-oxygen
   name: Liquid oxygen boiling point
   value: 90.19
-  description: 'The boiling point of oxygen at standard pressure. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `90.19 K` for Reported normal boiling point of oxygen.'
+  description: The boiling point of oxygen at standard pressure.
   description_format: markdown
   summary_short: The boiling point of oxygen at standard pressure.
-  description_medium: 'The boiling point of oxygen at standard pressure. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `90.19 K` for Reported normal boiling point of oxygen.'
+  description_medium: The boiling point of oxygen at standard pressure.
   description_long: null
   hook: null
   caveats: null
@@ -463,10 +644,10 @@ items:
 - id: obs:temperature:entity-titan-temperature
   name: Titan surface
   value: 94.0
-  description: 'The approximate surface temperature of Saturn''s moon Titan. Source-side figure: `94 K` for Reported Titan surface temperature.'
+  description: The approximate surface temperature of Saturn's moon Titan.
   description_format: markdown
   summary_short: The approximate surface temperature of Saturn's moon Titan.
-  description_medium: 'The approximate surface temperature of Saturn''s moon Titan. Source-side figure: `94 K` for Reported Titan surface temperature.'
+  description_medium: The approximate surface temperature of Saturn's moon Titan.
   description_long: null
   hook: null
   caveats: null
@@ -509,10 +690,10 @@ items:
 - id: obs:temperature:entity-liquid-methane
   name: Liquid methane boiling point
   value: 111.66
-  description: 'The boiling point of methane at standard pressure. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `111.66 K` for Reported boiling point of methane.'
+  description: The boiling point of methane at standard pressure.
   description_format: markdown
   summary_short: The boiling point of methane at standard pressure.
-  description_medium: 'The boiling point of methane at standard pressure. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `111.66 K` for Reported boiling point of methane.'
+  description_medium: The boiling point of methane at standard pressure.
   description_long: null
   hook: null
   caveats: null
@@ -552,60 +733,13 @@ items:
   value_type: measured
   qualifiers:
     measurement: boiling point at 1 atmosphere
-- id: obs:temperature:entity-antarctic-cold-record
-  name: Antarctic cold record
-  value: 184.65
-  description: 'The coldest directly measured natural air temperature on Earth. Here the quantity refers to `record low air temperature`. Source-side figure: `-88.5 C` for Reported record low Antarctic air temperature. Converted Celsius to kelvin.'
-  description_format: markdown
-  summary_short: The coldest directly measured natural air temperature on Earth.
-  description_medium: 'The coldest directly measured natural air temperature on Earth. Here the quantity refers to `record low air temperature`. Source-side figure: `-88.5 C` for Reported record low Antarctic air temperature. Converted Celsius to kelvin.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Antarctic cold record
-    ingest_source: dataset/raw/curated/temperature.json
-    source_trace:
-      conversion_note: Converted Celsius to kelvin.
-      method: converted
-      original_value_text: '184.65'
-      source_basis: Reported record low Antarctic air temperature.
-      source_unit: deg C
-      source_url: https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth
-      source_value_text: -88.5 C
-  source: https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-lowest-temperature-recorded-on-earth
-    url: https://en.wikipedia.org/wiki/Lowest_temperature_recorded_on_Earth
-    title: Lowest temperature recorded on Earth
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-temperature-json
-    url: repo://dataset/raw/curated/temperature.json
-    title: dataset/raw/curated/temperature.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: record low air temperature
 - id: obs:temperature:entity-dry-ice
   name: Dry ice sublimation point
   value: 194.65
-  description: 'The sublimation temperature of dry ice at standard pressure. Here the quantity refers to `sublimation temperature at 1 atmosphere`. Source-side figure: `-78.5 C` for Reported dry-ice sublimation temperature. Converted Celsius to kelvin.'
+  description: The sublimation temperature of dry ice at standard pressure.
   description_format: markdown
   summary_short: The sublimation temperature of dry ice at standard pressure.
-  description_medium: 'The sublimation temperature of dry ice at standard pressure. Here the quantity refers to `sublimation temperature at 1 atmosphere`. Source-side figure: `-78.5 C` for Reported dry-ice sublimation temperature. Converted Celsius to kelvin.'
+  description_medium: The sublimation temperature of dry ice at standard pressure.
   description_long: null
   hook: null
   caveats: null
@@ -649,10 +783,10 @@ items:
 - id: obs:temperature:entity-mars-average-temperature
   name: Mars average surface
   value: 210.0
-  description: 'A representative average surface temperature for Mars. Source-side figure: `210 K` for Reported average Martian surface temperature.'
+  description: A representative average surface temperature for Mars.
   description_format: markdown
   summary_short: A representative average surface temperature for Mars.
-  description_medium: 'A representative average surface temperature for Mars. Source-side figure: `210 K` for Reported average Martian surface temperature.'
+  description_medium: A representative average surface temperature for Mars.
   description_long: null
   hook: null
   caveats: null
@@ -695,10 +829,10 @@ items:
 - id: obs:temperature:scenario-temperature-household-freezer
   name: Household freezer
   value: 255.15
-  description: 'A typical household-freezer setting in the United States. Here the quantity refers to `typical operating temperature`. Source-side figure: `-18 C` for Representative household freezer temperature. Converted Celsius to kelvin.'
+  description: A typical household-freezer setting in the United States.
   description_format: markdown
   summary_short: A typical household-freezer setting in the United States.
-  description_medium: 'A typical household-freezer setting in the United States. Here the quantity refers to `typical operating temperature`. Source-side figure: `-18 C` for Representative household freezer temperature. Converted Celsius to kelvin.'
+  description_medium: A typical household-freezer setting in the United States.
   description_long: null
   hook: null
   caveats: null
@@ -742,10 +876,10 @@ items:
 - id: obs:temperature:entity-ice-melting-point
   name: Ice melting point
   value: 273.15
-  description: 'The familiar melting point of ice at standard atmospheric pressure. Here the quantity refers to `melting point at 1 atmosphere`. Source-side figure: `0 C` for Standard melting point of ice. Converted Celsius to kelvin.'
+  description: The familiar melting point of ice at standard atmospheric pressure.
   description_format: markdown
   summary_short: The familiar melting point of ice at standard atmospheric pressure.
-  description_medium: 'The familiar melting point of ice at standard atmospheric pressure. Here the quantity refers to `melting point at 1 atmosphere`. Source-side figure: `0 C` for Standard melting point of ice. Converted Celsius to kelvin.'
+  description_medium: The familiar melting point of ice at standard atmospheric pressure.
   description_long: null
   hook: null
   caveats: null
@@ -789,10 +923,10 @@ items:
 - id: obs:temperature:scenario-temperature-refrigerator-interior
   name: Refrigerator interior
   value: 277.15
-  description: 'A typical refrigerator interior temperature for food safety. Here the quantity refers to `typical operating temperature`. Source-side figure: `4 C` for Representative refrigerator temperature. Converted Celsius to kelvin.'
+  description: A typical refrigerator interior temperature for food safety.
   description_format: markdown
   summary_short: A typical refrigerator interior temperature for food safety.
-  description_medium: 'A typical refrigerator interior temperature for food safety. Here the quantity refers to `typical operating temperature`. Source-side figure: `4 C` for Representative refrigerator temperature. Converted Celsius to kelvin.'
+  description_medium: A typical refrigerator interior temperature for food safety.
   description_long: null
   hook: null
   caveats: null
@@ -836,10 +970,10 @@ items:
 - id: obs:temperature:entity-earth-average-surface-temperature
   name: Earth average surface
   value: 288.0
-  description: 'A representative global average surface temperature for Earth. Source-side figure: `288 K` for Representative Earth average surface temperature.'
+  description: A representative global average surface temperature for Earth.
   description_format: markdown
   summary_short: A representative global average surface temperature for Earth.
-  description_medium: 'A representative global average surface temperature for Earth. Source-side figure: `288 K` for Representative Earth average surface temperature.'
+  description_medium: A representative global average surface temperature for Earth.
   description_long: null
   hook: null
   caveats: null
@@ -882,10 +1016,10 @@ items:
 - id: obs:temperature:scenario-temperature-room-temperature
   name: Room temperature
   value: 293.15
-  description: 'A standard room temperature near twenty degrees Celsius. Here the quantity refers to `typical indoor room temperature`. Source-side figure: `20 C` for Representative room temperature. Converted Celsius to kelvin.'
+  description: A standard room temperature near twenty degrees Celsius.
   description_format: markdown
   summary_short: A standard room temperature near twenty degrees Celsius.
-  description_medium: 'A standard room temperature near twenty degrees Celsius. Here the quantity refers to `typical indoor room temperature`. Source-side figure: `20 C` for Representative room temperature. Converted Celsius to kelvin.'
+  description_medium: A standard room temperature near twenty degrees Celsius.
   description_long: null
   hook: null
   caveats: null
@@ -929,10 +1063,10 @@ items:
 - id: obs:temperature:entity-human-skin-temperature
   name: Human skin
   value: 306.15
-  description: 'A representative human skin temperature, typically cooler than the body''s core. Here the quantity refers to `representative skin temperature`. Source-side figure: `33 C` for Representative human skin temperature. Converted Celsius to kelvin.'
+  description: A representative human skin temperature, typically cooler than the body's core.
   description_format: markdown
   summary_short: A representative human skin temperature, typically cooler than the body's core.
-  description_medium: 'A representative human skin temperature, typically cooler than the body''s core. Here the quantity refers to `representative skin temperature`. Source-side figure: `33 C` for Representative human skin temperature. Converted Celsius to kelvin.'
+  description_medium: A representative human skin temperature, typically cooler than the body's core.
   description_long: null
   hook: null
   caveats: null
@@ -976,10 +1110,10 @@ items:
 - id: obs:temperature:entity-human-body-core-temperature
   name: Human body core
   value: 310.15
-  description: 'A representative healthy human core-body temperature. Here the quantity refers to `core body temperature`. Source-side figure: `37 C` for Representative human core body temperature. Converted Celsius to kelvin.'
+  description: A representative healthy human core-body temperature.
   description_format: markdown
   summary_short: A representative healthy human core-body temperature.
-  description_medium: 'A representative healthy human core-body temperature. Here the quantity refers to `core body temperature`. Source-side figure: `37 C` for Representative human core body temperature. Converted Celsius to kelvin.'
+  description_medium: A representative healthy human core-body temperature.
   description_long: null
   hook: null
   caveats: null
@@ -1023,10 +1157,10 @@ items:
 - id: obs:temperature:scenario-temperature-high-fever
   name: High fever
   value: 313.15
-  description: 'A high but survivable fever temperature for a human body. Source-side figure: `40 C` for Representative high fever temperature. Converted Celsius to kelvin.'
+  description: A high but survivable fever temperature for a human body.
   description_format: markdown
   summary_short: A high but survivable fever temperature for a human body.
-  description_medium: 'A high but survivable fever temperature for a human body. Source-side figure: `40 C` for Representative high fever temperature. Converted Celsius to kelvin.'
+  description_medium: A high but survivable fever temperature for a human body.
   description_long: null
   hook: null
   caveats: null
@@ -1070,10 +1204,10 @@ items:
 - id: obs:temperature:scenario-temperature-hot-coffee
   name: Hot coffee
   value: 333.15
-  description: 'A representative serving temperature for very hot coffee. Source-side figure: `60 C` for Representative hot-coffee serving temperature. Converted Celsius to kelvin.'
+  description: A representative serving temperature for very hot coffee.
   description_format: markdown
   summary_short: A representative serving temperature for very hot coffee.
-  description_medium: 'A representative serving temperature for very hot coffee. Source-side figure: `60 C` for Representative hot-coffee serving temperature. Converted Celsius to kelvin.'
+  description_medium: A representative serving temperature for very hot coffee.
   description_long: null
   hook: null
   caveats: null
@@ -1117,10 +1251,10 @@ items:
 - id: obs:temperature:scenario-temperature-sauna
   name: Sauna
   value: 353.15
-  description: 'A representative sauna temperature in the lower end of a common operating range. Here the quantity refers to `room temperature`. Source-side figure: `80 C` for Representative sauna temperature. Converted Celsius to kelvin.'
+  description: A representative sauna temperature in the lower end of a common operating range.
   description_format: markdown
   summary_short: A representative sauna temperature in the lower end of a common operating range.
-  description_medium: 'A representative sauna temperature in the lower end of a common operating range. Here the quantity refers to `room temperature`. Source-side figure: `80 C` for Representative sauna temperature. Converted Celsius to kelvin.'
+  description_medium: A representative sauna temperature in the lower end of a common operating range.
   description_long: null
   hook: null
   caveats: null
@@ -1164,10 +1298,10 @@ items:
 - id: obs:temperature:entity-water-boiling-point
   name: Water boiling point
   value: 373.15
-  description: 'The boiling point of water at standard atmospheric pressure. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `100 C` for Standard boiling point of water. Converted Celsius to kelvin.'
+  description: The boiling point of water at standard atmospheric pressure.
   description_format: markdown
   summary_short: The boiling point of water at standard atmospheric pressure.
-  description_medium: 'The boiling point of water at standard atmospheric pressure. Here the quantity refers to `boiling point at 1 atmosphere`. Source-side figure: `100 C` for Standard boiling point of water. Converted Celsius to kelvin.'
+  description_medium: The boiling point of water at standard atmospheric pressure.
   description_long: null
   hook: null
   caveats: null
@@ -1211,10 +1345,10 @@ items:
 - id: obs:temperature:scenario-temperature-deep-fryer
   name: Deep fryer oil
   value: 453.15
-  description: 'A representative deep-frying oil temperature. Here the quantity refers to `cooking oil temperature`. Source-side figure: `180 C` for Representative deep-frying temperature. Converted Celsius to kelvin.'
+  description: A representative deep-frying oil temperature.
   description_format: markdown
   summary_short: A representative deep-frying oil temperature.
-  description_medium: 'A representative deep-frying oil temperature. Here the quantity refers to `cooking oil temperature`. Source-side figure: `180 C` for Representative deep-frying temperature. Converted Celsius to kelvin.'
+  description_medium: A representative deep-frying oil temperature.
   description_long: null
   hook: null
   caveats: null
@@ -1258,10 +1392,10 @@ items:
 - id: obs:temperature:scenario-temperature-pizza-oven
   name: Pizza oven
   value: 523.15
-  description: 'A representative hot pizza-oven temperature. Here the quantity refers to `cooking chamber temperature`. Source-side figure: `250 C` for Representative pizza-oven temperature. Converted Celsius to kelvin.'
+  description: A representative hot pizza-oven temperature.
   description_format: markdown
   summary_short: A representative hot pizza-oven temperature.
-  description_medium: 'A representative hot pizza-oven temperature. Here the quantity refers to `cooking chamber temperature`. Source-side figure: `250 C` for Representative pizza-oven temperature. Converted Celsius to kelvin.'
+  description_medium: A representative hot pizza-oven temperature.
   description_long: null
   hook: null
   caveats: null
@@ -1305,10 +1439,10 @@ items:
 - id: obs:temperature:entity-lead-melting-point
   name: Lead melting point
   value: 600.61
-  description: 'The melting point of lead. Source-side figure: `327.46 C` for Reported melting point of lead. Converted Celsius to kelvin.'
+  description: The melting point of lead.
   description_format: markdown
   summary_short: The melting point of lead.
-  description_medium: 'The melting point of lead. Source-side figure: `327.46 C` for Reported melting point of lead. Converted Celsius to kelvin.'
+  description_medium: The melting point of lead.
   description_long: null
   hook: null
   caveats: null
@@ -1352,10 +1486,10 @@ items:
 - id: obs:temperature:entity-venus-surface-temperature
   name: Venus surface
   value: 737.0
-  description: 'The scorching surface temperature of Venus, hot enough to melt lead. Source-side figure: `737 K` for Reported Venus surface temperature.'
+  description: The scorching surface temperature of Venus, hot enough to melt lead.
   description_format: markdown
   summary_short: The scorching surface temperature of Venus, hot enough to melt lead.
-  description_medium: 'The scorching surface temperature of Venus, hot enough to melt lead. Source-side figure: `737 K` for Reported Venus surface temperature.'
+  description_medium: The scorching surface temperature of Venus, hot enough to melt lead.
   description_long: null
   hook: null
   caveats: null
@@ -1398,10 +1532,10 @@ items:
 - id: obs:temperature:entity-aluminum-melting-point
   name: Aluminum melting point
   value: 933.47
-  description: 'The melting point of aluminum. Source-side figure: `660.32 C` for Reported melting point of aluminum. Converted Celsius to kelvin.'
+  description: The melting point of aluminum.
   description_format: markdown
   summary_short: The melting point of aluminum.
-  description_medium: 'The melting point of aluminum. Source-side figure: `660.32 C` for Reported melting point of aluminum. Converted Celsius to kelvin.'
+  description_medium: The melting point of aluminum.
   description_long: null
   hook: null
   caveats: null
@@ -1445,10 +1579,10 @@ items:
 - id: obs:temperature:scenario-temperature-red-hot-steel
   name: Red-hot steel
   value: 1073.15
-  description: 'A representative temperature where steel glows visibly red. Here the quantity refers to `representative glowing steel temperature`. Source-side figure: `800 C` for Representative red-heat temperature. Converted Celsius to kelvin.'
+  description: A representative temperature where steel glows visibly red.
   description_format: markdown
   summary_short: A representative temperature where steel glows visibly red.
-  description_medium: 'A representative temperature where steel glows visibly red. Here the quantity refers to `representative glowing steel temperature`. Source-side figure: `800 C` for Representative red-heat temperature. Converted Celsius to kelvin.'
+  description_medium: A representative temperature where steel glows visibly red.
   description_long: null
   hook: null
   caveats: null
@@ -1492,10 +1626,10 @@ items:
 - id: obs:temperature:entity-basalt-lava-temperature
   name: Basalt lava
   value: 1473.15
-  description: 'A representative eruption temperature for basaltic lava. Source-side figure: `1200 C` for Representative basaltic lava temperature. Converted Celsius to kelvin.'
+  description: A representative eruption temperature for basaltic lava.
   description_format: markdown
   summary_short: A representative eruption temperature for basaltic lava.
-  description_medium: 'A representative eruption temperature for basaltic lava. Source-side figure: `1200 C` for Representative basaltic lava temperature. Converted Celsius to kelvin.'
+  description_medium: A representative eruption temperature for basaltic lava.
   description_long: null
   hook: null
   caveats: null
@@ -1539,10 +1673,10 @@ items:
 - id: obs:temperature:scenario-temperature-candle-flame
   name: Candle flame
   value: 1700.0
-  description: 'A representative temperature inside a candle flame. Here the quantity refers to `flame temperature`. Source-side figure: `1700 K` for Representative candle-flame temperature.'
+  description: A representative temperature inside a candle flame.
   description_format: markdown
   summary_short: A representative temperature inside a candle flame.
-  description_medium: 'A representative temperature inside a candle flame. Here the quantity refers to `flame temperature`. Source-side figure: `1700 K` for Representative candle-flame temperature.'
+  description_medium: A representative temperature inside a candle flame.
   description_long: null
   hook: null
   caveats: null
@@ -1585,10 +1719,10 @@ items:
 - id: obs:temperature:scenario-temperature-gas-stove-flame
   name: Gas stove flame
   value: 1950.0
-  description: 'A representative blue-flame gas-stove temperature. Here the quantity refers to `flame temperature`. Source-side figure: `1950 K` for Representative gas-stove flame temperature.'
+  description: A representative blue-flame gas-stove temperature.
   description_format: markdown
   summary_short: A representative blue-flame gas-stove temperature.
-  description_medium: 'A representative blue-flame gas-stove temperature. Here the quantity refers to `flame temperature`. Source-side figure: `1950 K` for Representative gas-stove flame temperature.'
+  description_medium: A representative blue-flame gas-stove temperature.
   description_long: null
   hook: null
   caveats: null
@@ -1631,10 +1765,10 @@ items:
 - id: obs:temperature:scenario-temperature-blast-furnace
   name: Blast furnace
   value: 2273.15
-  description: 'A representative temperature inside a blast furnace. Here the quantity refers to `furnace temperature`. Source-side figure: `2000 C` for Representative blast-furnace temperature. Converted Celsius to kelvin.'
+  description: A representative temperature inside a blast furnace.
   description_format: markdown
   summary_short: A representative temperature inside a blast furnace.
-  description_medium: 'A representative temperature inside a blast furnace. Here the quantity refers to `furnace temperature`. Source-side figure: `2000 C` for Representative blast-furnace temperature. Converted Celsius to kelvin.'
+  description_medium: A representative temperature inside a blast furnace.
   description_long: null
   hook: null
   caveats: null
@@ -1678,10 +1812,10 @@ items:
 - id: obs:temperature:entity-tungsten-filament
   name: Tungsten filament
   value: 2800.0
-  description: 'The approximate operating temperature of a tungsten filament in an incandescent bulb. Source-side figure: `2800 K` for Representative tungsten-filament operating temperature.'
+  description: The approximate operating temperature of a tungsten filament in an incandescent bulb.
   description_format: markdown
   summary_short: The approximate operating temperature of a tungsten filament in an incandescent bulb.
-  description_medium: 'The approximate operating temperature of a tungsten filament in an incandescent bulb. Source-side figure: `2800 K` for Representative tungsten-filament operating temperature.'
+  description_medium: The approximate operating temperature of a tungsten filament in an incandescent bulb.
   description_long: null
   hook: null
   caveats: null
@@ -1724,10 +1858,10 @@ items:
 - id: obs:temperature:entity-sun-photosphere-temperature
   name: Sun photosphere
   value: 5778.0
-  description: 'The effective temperature of the Sun''s visible surface. Source-side figure: `5778 K` for Reported effective temperature of the solar photosphere.'
+  description: The effective temperature of the Sun's visible surface.
   description_format: markdown
   summary_short: The effective temperature of the Sun's visible surface.
-  description_medium: 'The effective temperature of the Sun''s visible surface. Source-side figure: `5778 K` for Reported effective temperature of the solar photosphere.'
+  description_medium: The effective temperature of the Sun's visible surface.
   description_long: null
   hook: null
   caveats: null
@@ -1767,59 +1901,13 @@ items:
   value_type: measured
   qualifiers:
     measurement: effective temperature
-- id: obs:temperature:scenario-temperature-arc-welder
-  name: Arc welder plasma
-  value: 6500.0
-  description: 'A representative temperature in an electric-arc welding plasma. Here the quantity refers to `arc temperature`. Source-side figure: `6500 K` for Representative arc-welding plasma temperature.'
-  description_format: markdown
-  summary_short: A representative temperature in an electric-arc welding plasma.
-  description_medium: 'A representative temperature in an electric-arc welding plasma. Here the quantity refers to `arc temperature`. Source-side figure: `6500 K` for Representative arc-welding plasma temperature.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Arc welder plasma
-    ingest_source: dataset/raw/curated/temperature.json
-    source_trace:
-      method: direct
-      original_value_text: '6500.0'
-      source_basis: Representative arc-welding plasma temperature.
-      source_unit: K
-      source_url: https://en.wikipedia.org/wiki/Arc_welding
-      source_value_text: 6500 K
-  source: https://en.wikipedia.org/wiki/Arc_welding
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-arc-welding
-    url: https://en.wikipedia.org/wiki/Arc_welding
-    title: Arc welding
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-temperature-json
-    url: repo://dataset/raw/curated/temperature.json
-    title: dataset/raw/curated/temperature.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: arc temperature
 - id: obs:temperature:entity-lightning-channel-temperature
   name: Lightning channel
   value: 30000.0
-  description: 'A representative peak temperature of the lightning channel. Here the quantity refers to `channel temperature`. Source-side figure: `30000 K` for Reported lightning-channel temperature.'
+  description: A representative peak temperature of the lightning channel.
   description_format: markdown
   summary_short: A representative peak temperature of the lightning channel.
-  description_medium: 'A representative peak temperature of the lightning channel. Here the quantity refers to `channel temperature`. Source-side figure: `30000 K` for Reported lightning-channel temperature.'
+  description_medium: A representative peak temperature of the lightning channel.
   description_long: null
   hook: null
   caveats: null
@@ -1862,10 +1950,10 @@ items:
 - id: obs:temperature:entity-o-type-star-surface-temperature
   name: O-type star surface
   value: 40000.0
-  description: 'A representative surface temperature for a very hot O-type star. Source-side figure: `40000 K` for Representative O-type stellar surface temperature.'
+  description: A representative surface temperature for a very hot O-type star.
   description_format: markdown
   summary_short: A representative surface temperature for a very hot O-type star.
-  description_medium: 'A representative surface temperature for a very hot O-type star. Source-side figure: `40000 K` for Representative O-type stellar surface temperature.'
+  description_medium: A representative surface temperature for a very hot O-type star.
   description_long: null
   hook: null
   caveats: null
@@ -1908,10 +1996,10 @@ items:
 - id: obs:temperature:entity-white-dwarf-surface-temperature
   name: White dwarf surface
   value: 100000.0
-  description: 'A representative temperature for a hot white-dwarf surface. Here the quantity refers to `surface temperature`. Source-side figure: `100000 K` for Representative hot white-dwarf surface temperature.'
+  description: A representative temperature for a hot white-dwarf surface.
   description_format: markdown
   summary_short: A representative temperature for a hot white-dwarf surface.
-  description_medium: 'A representative temperature for a hot white-dwarf surface. Here the quantity refers to `surface temperature`. Source-side figure: `100000 K` for Representative hot white-dwarf surface temperature.'
+  description_medium: A representative temperature for a hot white-dwarf surface.
   description_long: null
   hook: null
   caveats: null
@@ -1954,10 +2042,10 @@ items:
 - id: obs:temperature:entity-solar-corona-temperature
   name: Solar corona
   value: 1000000.0
-  description: 'The million-kelvin corona surrounding the Sun. Here the quantity refers to `coronal temperature`. Source-side figure: `1 MK` for Representative solar-corona temperature. Converted megakelvin to kelvin.'
+  description: The million-kelvin corona surrounding the Sun.
   description_format: markdown
   summary_short: The million-kelvin corona surrounding the Sun.
-  description_medium: 'The million-kelvin corona surrounding the Sun. Here the quantity refers to `coronal temperature`. Source-side figure: `1 MK` for Representative solar-corona temperature. Converted megakelvin to kelvin.'
+  description_medium: The million-kelvin corona surrounding the Sun.
   description_long: null
   hook: null
   caveats: null
@@ -2001,10 +2089,10 @@ items:
 - id: obs:temperature:entity-supernova-remnant-temperature
   name: Supernova remnant plasma
   value: 10000000.0
-  description: 'A representative temperature for hot plasma in a supernova remnant. Here the quantity refers to `X-ray emitting plasma temperature`. Source-side figure: `10 MK` for Representative supernova-remnant plasma temperature. Converted megakelvin to kelvin.'
+  description: A representative temperature for hot plasma in a supernova remnant.
   description_format: markdown
   summary_short: A representative temperature for hot plasma in a supernova remnant.
-  description_medium: 'A representative temperature for hot plasma in a supernova remnant. Here the quantity refers to `X-ray emitting plasma temperature`. Source-side figure: `10 MK` for Representative supernova-remnant plasma temperature. Converted megakelvin to kelvin.'
+  description_medium: A representative temperature for hot plasma in a supernova remnant.
   description_long: null
   hook: null
   caveats: null
@@ -2045,107 +2133,13 @@ items:
   value_type: measured
   qualifiers:
     measurement: X-ray emitting plasma temperature
-- id: obs:temperature:entity-sun-core-temperature
-  name: Sun core
-  value: 15700000.0
-  description: 'The temperature deep in the Sun''s fusion-powered core. Here the quantity refers to `core temperature`. Source-side figure: `15.7 MK` for Reported solar core temperature. Converted megakelvin to kelvin.'
-  description_format: markdown
-  summary_short: The temperature deep in the Sun's fusion-powered core.
-  description_medium: 'The temperature deep in the Sun''s fusion-powered core. Here the quantity refers to `core temperature`. Source-side figure: `15.7 MK` for Reported solar core temperature. Converted megakelvin to kelvin.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Sun core
-    ingest_source: dataset/raw/curated/temperature.json
-    source_trace:
-      conversion_note: Converted megakelvin to kelvin.
-      method: converted
-      original_value_text: '15700000.0'
-      source_basis: Reported solar core temperature.
-      source_unit: MK
-      source_url: https://en.wikipedia.org/wiki/Sun
-      source_value_text: 15.7 MK
-  source: https://en.wikipedia.org/wiki/Sun
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-sun
-    url: https://en.wikipedia.org/wiki/Sun
-    title: Sun
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-temperature-json
-    url: repo://dataset/raw/curated/temperature.json
-    title: dataset/raw/curated/temperature.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: core temperature
-- id: obs:temperature:entity-solar-flare-temperature
-  name: Solar flare plasma
-  value: 20000000.0
-  description: 'A representative temperature for the hottest plasma in a solar flare. Here the quantity refers to `flare plasma temperature`. Source-side figure: `20 MK` for Representative solar-flare plasma temperature. Converted megakelvin to kelvin.'
-  description_format: markdown
-  summary_short: A representative temperature for the hottest plasma in a solar flare.
-  description_medium: 'A representative temperature for the hottest plasma in a solar flare. Here the quantity refers to `flare plasma temperature`. Source-side figure: `20 MK` for Representative solar-flare plasma temperature. Converted megakelvin to kelvin.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Solar flare plasma
-    ingest_source: dataset/raw/curated/temperature.json
-    source_trace:
-      conversion_note: Converted megakelvin to kelvin.
-      method: converted
-      original_value_text: '20000000.0'
-      source_basis: Representative solar-flare plasma temperature.
-      source_unit: MK
-      source_url: https://en.wikipedia.org/wiki/Solar_flare
-      source_value_text: 20 MK
-  source: https://en.wikipedia.org/wiki/Solar_flare
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-solar-flare
-    url: https://en.wikipedia.org/wiki/Solar_flare
-    title: Solar flare
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-temperature-json
-    url: repo://dataset/raw/curated/temperature.json
-    title: dataset/raw/curated/temperature.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: flare plasma temperature
 - id: obs:temperature:entity-tokamak-plasma-temperature
   name: Fusion tokamak plasma
   value: 150000000.0
-  description: 'A representative temperature for magnetically confined fusion plasma. Here the quantity refers to `plasma temperature`. Source-side figure: `150 MK` for Representative tokamak plasma temperature. Converted megakelvin to kelvin.'
+  description: A representative temperature for magnetically confined fusion plasma.
   description_format: markdown
   summary_short: A representative temperature for magnetically confined fusion plasma.
-  description_medium: 'A representative temperature for magnetically confined fusion plasma. Here the quantity refers to `plasma temperature`. Source-side figure: `150 MK` for Representative tokamak plasma temperature. Converted megakelvin to kelvin.'
+  description_medium: A representative temperature for magnetically confined fusion plasma.
   description_long: null
   hook: null
   caveats: null
@@ -2189,10 +2183,10 @@ items:
 - id: obs:temperature:entity-big-bang-nucleosynthesis-temperature
   name: Big Bang nucleosynthesis era
   value: 1000000000.0
-  description: 'A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe. Here the quantity refers to `early-universe temperature`. Source-side figure: `1 GK` for Representative temperature during primordial nucleosynthesis. Converted gigakelvin to kelvin.'
+  description: A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.
   description_format: markdown
   summary_short: A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.
-  description_medium: 'A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe. Here the quantity refers to `early-universe temperature`. Source-side figure: `1 GK` for Representative temperature during primordial nucleosynthesis. Converted gigakelvin to kelvin.'
+  description_medium: A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.
   description_long: null
   hook: null
   caveats: null
@@ -2233,60 +2227,13 @@ items:
   value_type: measured
   qualifiers:
     measurement: early-universe temperature
-- id: obs:temperature:entity-core-collapse-supernova-temperature
-  name: Core-collapse supernova
-  value: 10000000000.0
-  description: 'A representative core temperature reached during a core-collapse supernova. Source-side figure: `10 GK` for Representative core-collapse supernova temperature. Converted gigakelvin to kelvin.'
-  description_format: markdown
-  summary_short: A representative core temperature reached during a core-collapse supernova.
-  description_medium: 'A representative core temperature reached during a core-collapse supernova. Source-side figure: `10 GK` for Representative core-collapse supernova temperature. Converted gigakelvin to kelvin.'
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Core-collapse supernova
-    ingest_source: dataset/raw/curated/temperature.json
-    source_trace:
-      conversion_note: Converted gigakelvin to kelvin.
-      method: converted
-      original_value_text: '10000000000.0'
-      source_basis: Representative core-collapse supernova temperature.
-      source_unit: GK
-      source_url: https://en.wikipedia.org/wiki/Core-collapse_supernova
-      source_value_text: 10 GK
-  source: https://en.wikipedia.org/wiki/Core-collapse_supernova
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-core-collapse-supernova
-    url: https://en.wikipedia.org/wiki/Core-collapse_supernova
-    title: Core-collapse supernova
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-temperature-json
-    url: repo://dataset/raw/curated/temperature.json
-    title: dataset/raw/curated/temperature.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: core temperature
 - id: obs:temperature:entity-neutron-star-merger-temperature
   name: Neutron star merger ejecta
   value: 100000000000.0
-  description: 'A representative temperature scale reached in neutron-star merger matter. Here the quantity refers to `merger temperature`. Source-side figure: `100 GK` for Representative neutron-star merger temperature. Converted gigakelvin to kelvin.'
+  description: A representative temperature scale reached in neutron-star merger matter.
   description_format: markdown
   summary_short: A representative temperature scale reached in neutron-star merger matter.
-  description_medium: 'A representative temperature scale reached in neutron-star merger matter. Here the quantity refers to `merger temperature`. Source-side figure: `100 GK` for Representative neutron-star merger temperature. Converted gigakelvin to kelvin.'
+  description_medium: A representative temperature scale reached in neutron-star merger matter.
   description_long: null
   hook: null
   caveats: null
@@ -2330,10 +2277,10 @@ items:
 - id: obs:temperature:entity-lhc-quark-gluon-plasma-temperature
   name: LHC quark-gluon plasma
   value: 5500000000000.0
-  description: 'The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC. Here the quantity refers to `effective collision temperature`. Source-side figure: `5.5 trillion K` for CERN reports quark-gluon plasma temperatures of about 5.5 trillion kelvin.'
+  description: The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.
   description_format: markdown
   summary_short: The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.
-  description_medium: 'The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC. Here the quantity refers to `effective collision temperature`. Source-side figure: `5.5 trillion K` for CERN reports quark-gluon plasma temperatures of about 5.5 trillion kelvin.'
+  description_medium: The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.
   description_long: null
   hook: null
   caveats: null
@@ -2373,3 +2320,50 @@ items:
   value_type: measured
   qualifiers:
     measurement: effective collision temperature
+- id: obs:temperature:entity-planck-temperature
+  name: Planck temperature
+  value: 1.416784e+32
+  description: The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.
+  description_format: markdown
+  summary_short: The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.
+  description_medium: The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck temperature
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: derived
+      original_value_text: '1.416784e+32'
+      source_basis: Planck temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Planck_temperature
+      source_value_text: 1.416784e32 K
+  source: https://en.wikipedia.org/wiki/Planck_temperature
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-planck-temperature
+    url: https://en.wikipedia.org/wiki/Planck_temperature
+    title: Planck temperature
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: included as a fun upper-end theoretical marker
+    measurement: theoretical reference temperature

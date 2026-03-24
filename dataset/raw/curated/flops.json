@@ -342,21 +342,6 @@
     "derivation_note": "PFLOP/s to FLOP/s conversion"
   },
   {
-    "canonical_name": "Summit",
-    "category": "computing",
-    "dimension": "flops",
-    "display_eligible": true,
-    "source_url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
-    "subject_key": "entity:flops:summit-supercomputer",
-    "subject_type": "entity",
-    "summary": "Summit is a major pre-exascale supercomputer reference.",
-    "value_base": 2e+17,
-    "value_type": "measured",
-    "source_value_text": "200 PFLOPS",
-    "source_unit": "FLOP/s",
-    "source_basis": "Published peak performance for Summit."
-  },
-  {
     "canonical_name": "Fugaku",
     "category": "computing",
     "dimension": "flops",
@@ -405,22 +390,6 @@
     "derivation_note": "ZFLOP/s to FLOP/s conversion"
   },
   {
-    "canonical_name": "Cray-1",
-    "category": "computing",
-    "dimension": "flops",
-    "display_eligible": true,
-    "source_url": "https://en.wikipedia.org/wiki/Cray-1",
-    "subject_key": "entity:flops:cray-1",
-    "subject_type": "entity",
-    "summary": "Cray-1 is a classic early vector supercomputer benchmark.",
-    "value_base": 160000000,
-    "value_type": "measured",
-    "source_value_text": "160 MFLOPS",
-    "source_unit": "FLOP/s",
-    "source_basis": "Published peak performance figure for the Cray-1.",
-    "derivation_note": "MFLOP/s to FLOP/s conversion"
-  },
-  {
     "canonical_name": "PlayStation 3 Cell processor",
     "category": "computing",
     "dimension": "flops",
@@ -450,22 +419,6 @@
     "source_value_text": "360 TFLOPS",
     "source_unit": "FLOP/s",
     "source_basis": "Published peak performance figure for Blue Gene/L.",
-    "derivation_note": "TFLOP/s to FLOP/s conversion"
-  },
-  {
-    "canonical_name": "Apple M1 Max",
-    "category": "computing",
-    "dimension": "flops",
-    "display_eligible": true,
-    "source_url": "https://en.wikipedia.org/wiki/Apple_M1",
-    "subject_key": "entity:flops:apple-m1-max",
-    "subject_type": "entity",
-    "summary": "Apple silicon gives a modern laptop-class FLOPS reference.",
-    "value_base": 10400000000000,
-    "value_type": "measured",
-    "source_value_text": "10.4 TFLOPS",
-    "source_unit": "FLOP/s",
-    "source_basis": "Approximate peak GPU-class floating-point throughput for M1 Max.",
     "derivation_note": "TFLOP/s to FLOP/s conversion"
   },
   {
@@ -501,19 +454,69 @@
     "derivation_note": "PFLOP/s to FLOP/s conversion"
   },
   {
-    "canonical_name": "Summit",
+    "canonical_name": "70B-parameter LLM single-token inference",
     "category": "computing",
     "dimension": "flops",
     "display_eligible": true,
-    "source_url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
-    "subject_key": "entity:flops:summit",
+    "source_url": "https://en.wikipedia.org/wiki/Large_language_model",
+    "subject_key": "scenario:70b-llm-single-token-inference-flops",
+    "subject_type": "scenario",
+    "summary": "A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.",
+    "value_base": 140000000000.0,
+    "value_type": "derived",
+    "source_value_text": "70B parameters x about 2 FLOPs/parameter/token",
+    "source_unit": "FLOP",
+    "source_basis": "Order-of-magnitude dense-transformer inference estimate for one generated token.",
+    "derivation_note": "F \\approx 2 N_{\\mathrm{params}}"
+  },
+  {
+    "canonical_name": "70B-parameter LLM 100-token response",
+    "category": "computing",
+    "dimension": "flops",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Large_language_model",
+    "subject_key": "scenario:70b-llm-100-token-response-flops",
+    "subject_type": "scenario",
+    "summary": "A short assistant response from a large dense model already pushes into the tens-of-teraflop range.",
+    "value_base": 14000000000000.0,
+    "value_type": "derived",
+    "source_value_text": "100 tokens x 1.4e11 FLOP/token",
+    "source_unit": "FLOP",
+    "source_basis": "Order-of-magnitude inference cost for a 100-token reply from a 70B-parameter dense model.",
+    "derivation_note": "F \\approx n_{\\mathrm{tokens}} \\times 2 N_{\\mathrm{params}}"
+  },
+  {
+    "canonical_name": "GPT-3 training run estimate",
+    "category": "computing",
+    "dimension": "flops",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/GPT-3",
+    "subject_key": "entity:gpt3-training-flops-estimate",
     "subject_type": "entity",
-    "summary": "Summit bridges the petaflop and exaflop eras.",
-    "value_base": 200000000000000000,
-    "value_type": "measured",
-    "source_value_text": "200 PFLOPS",
+    "summary": "The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.",
+    "value_base": 3.14e+23,
+    "value_type": "derived",
+    "source_value_text": "about 3.14e23 FLOP",
+    "source_unit": "FLOP",
+    "source_basis": "Representative published estimate of GPT-3 training compute.",
+    "qualifiers": {
+      "measurement": "total training compute"
+    }
+  },
+  {
+    "canonical_name": "1024 H100 training cluster throughput",
+    "category": "computing",
+    "dimension": "flops",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Nvidia_Hopper",
+    "subject_key": "scenario:1024-h100-training-cluster-throughput",
+    "subject_type": "scenario",
+    "summary": "A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.",
+    "value_base": 6.144e+16,
+    "value_type": "derived",
+    "source_value_text": "1024 x 60 TFLOP/s",
     "source_unit": "FLOP/s",
-    "source_basis": "Published peak performance class for Summit.",
-    "derivation_note": "PFLOP/s to FLOP/s conversion"
+    "source_basis": "Approximate FP throughput from a 1024-GPU H100-class cluster.",
+    "derivation_note": "F = 1024 \times 60\\,\\mathrm{TFLOP/s}"
   }
 ]

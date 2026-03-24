@@ -19,18 +19,18 @@
   },
   "description_format": "markdown",
   "dimension": "flops",
-  "dimension_description": "This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, and supercomputers. It mixes direct published device specs with reference magnitudes like gigaflops, teraflops, and exaflops. Precision mode matters in real hardware, so the notes are representative rather than exhaustive.",
+  "dimension_description": "This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, AI accelerators, and supercomputers. It now includes AI-flavored reference points such as approximate LLM inference workloads and training-scale estimates alongside direct hardware specs. Precision mode still matters in real hardware, so the notes are representative rather than exhaustive.",
   "frontend_group": "information",
   "frontend_group_label": "Information & Computation",
-  "frontend_order": 470,
+  "frontend_order": 630,
   "items": [
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The CDC 6600 is a classic early supercomputer benchmark. Source-side figure: `3 MFLOPS` for Classic peak performance reference for the CDC 6600.",
+      "description": "The CDC 6600 is a classic early supercomputer benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The CDC 6600 is a classic early supercomputer benchmark. Source-side figure: `3 MFLOPS` for Classic peak performance reference for the CDC 6600.",
+      "description_medium": "The CDC 6600 is a classic early supercomputer benchmark.",
       "facts": {
         "canonical_name": "CDC 6600",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -81,10 +81,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The Cray-1 marked a major jump in vector supercomputing. Source-side figure: `160 MFLOPS` for Widely cited peak performance for the Cray-1.",
+      "description": "The Cray-1 marked a major jump in vector supercomputing.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The Cray-1 marked a major jump in vector supercomputing. Source-side figure: `160 MFLOPS` for Widely cited peak performance for the Cray-1.",
+      "description_medium": "The Cray-1 marked a major jump in vector supercomputing.",
       "facts": {
         "canonical_name": "Cray-1",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -135,65 +135,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Cray-1 is a classic early vector supercomputer benchmark. Source-side figure: `160 MFLOPS` for Published peak performance figure for the Cray-1.",
+      "description": "Deep Blue is a classic historical FLOP benchmark from the pre-GPU era.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Cray-1 is a classic early vector supercomputer benchmark. Source-side figure: `160 MFLOPS` for Published peak performance figure for the Cray-1.",
-      "facts": {
-        "canonical_name": "Cray-1",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "derivation_note": "MFLOP/s to FLOP/s conversion",
-          "method": "derived",
-          "original_value_text": "160000000",
-          "source_basis": "Published peak performance figure for the Cray-1.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/Cray-1",
-          "source_value_text": "160 MFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-cray-1:2",
-      "name": "Cray-1",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Cray-1",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-cray-1",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Cray-1",
-          "url": "https://en.wikipedia.org/wiki/Cray-1"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "Cray-1 is a classic early vector supercomputer benchmark.",
-      "value": 160000000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Deep Blue is a classic historical FLOP benchmark from the pre-GPU era. Source-side figure: `11.38 GFLOP/s` for Deep Blue is often quoted around 11.38 GFLOPS.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Deep Blue is a classic historical FLOP benchmark from the pre-GPU era. Source-side figure: `11.38 GFLOP/s` for Deep Blue is often quoted around 11.38 GFLOPS.",
+      "description_medium": "Deep Blue is a classic historical FLOP benchmark from the pre-GPU era.",
       "facts": {
         "canonical_name": "Deep Blue",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -245,10 +190,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A small single-board computer gives the low end of practical modern FLOP/s. Source-side figure: `15 GFLOP/s` for Representative single-board-computer floating-point throughput.",
+      "description": "A small single-board computer gives the low end of practical modern FLOP/s.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A small single-board computer gives the low end of practical modern FLOP/s. Source-side figure: `15 GFLOP/s` for Representative single-board-computer floating-point throughput.",
+      "description_medium": "A small single-board computer gives the low end of practical modern FLOP/s.",
       "facts": {
         "canonical_name": "A Raspberry Pi 4",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -300,10 +245,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Modern CPU cores move the scale into the hundred-gigaflop band. Assumes `one high-end core`. Source-side figure: `100 GFLOP/s` for A high-end CPU core can reach about a hundred gigaflops peak in vectorized workloads.",
+      "description": "Modern CPU cores move the scale into the hundred-gigaflop band.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Modern CPU cores move the scale into the hundred-gigaflop band. Assumes `one high-end core`. Source-side figure: `100 GFLOP/s` for A high-end CPU core can reach about a hundred gigaflops peak in vectorized workloads.",
+      "description_medium": "Modern CPU cores move the scale into the hundred-gigaflop band.",
       "facts": {
         "canonical_name": "An Intel Core i9 CPU core",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -357,10 +302,65 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The Cell processor gave consumer hardware an early high-FLOPS benchmark. Source-side figure: `204.8 GFLOPS` for Peak theoretical floating-point throughput for the Cell processor.",
+      "description": "A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The Cell processor gave consumer hardware an early high-FLOPS benchmark. Source-side figure: `204.8 GFLOPS` for Peak theoretical floating-point throughput for the Cell processor.",
+      "description_medium": "A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.",
+      "facts": {
+        "canonical_name": "70B-parameter LLM single-token inference",
+        "ingest_source": "dataset/raw/curated/flops.json",
+        "source_trace": {
+          "derivation_note": "F \\approx 2 N_{\\mathrm{params}}",
+          "method": "derived",
+          "original_value_text": "140000000000.0",
+          "source_basis": "Order-of-magnitude dense-transformer inference estimate for one generated token.",
+          "source_unit": "FLOP",
+          "source_url": "https://en.wikipedia.org/wiki/Large_language_model",
+          "source_value_text": "70B parameters x about 2 FLOPs/parameter/token"
+        }
+      },
+      "hook": null,
+      "id": "obs:flops:scenario-70b-llm-single-token-inference-flops",
+      "name": "70B-parameter LLM single-token inference",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Large_language_model",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-large-language-model",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Large language model",
+          "url": "https://en.wikipedia.org/wiki/Large_language_model"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flops-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flops.json",
+          "url": "repo://dataset/raw/curated/flops.json"
+        }
+      ],
+      "summary_short": "A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.",
+      "value": 140000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Cell processor gave consumer hardware an early high-FLOPS benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Cell processor gave consumer hardware an early high-FLOPS benchmark.",
       "facts": {
         "canonical_name": "PlayStation 3 Cell processor",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -412,10 +412,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The PS3 Cell processor is a consumer-hardware floating-point reference. Source-side figure: `230 GFLOPS` for Approximate peak floating-point throughput of the Cell processor.",
+      "description": "The PS3 Cell processor is a consumer-hardware floating-point reference.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The PS3 Cell processor is a consumer-hardware floating-point reference. Source-side figure: `230 GFLOPS` for Approximate peak floating-point throughput of the Cell processor.",
+      "description_medium": "The PS3 Cell processor is a consumer-hardware floating-point reference.",
       "facts": {
         "canonical_name": "PlayStation 3 Cell processor",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -466,10 +466,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Blue Gene/L brought supercomputing into the hundreds of gigaflops. Source-side figure: `570 GFLOPS` for Reported peak performance for Blue Gene/L.",
+      "description": "Blue Gene/L brought supercomputing into the hundreds of gigaflops.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Blue Gene/L brought supercomputing into the hundreds of gigaflops. Source-side figure: `570 GFLOPS` for Reported peak performance for Blue Gene/L.",
+      "description_medium": "Blue Gene/L brought supercomputing into the hundreds of gigaflops.",
       "facts": {
         "canonical_name": "IBM Blue Gene/L",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -520,10 +520,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Integrated laptop and tablet GPUs anchor the low-teraflop range. Source-side figure: `3.6 TFLOP/s` for Mobile integrated GPUs operate in the low-teraflop band.",
+      "description": "Integrated laptop and tablet GPUs anchor the low-teraflop range.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Integrated laptop and tablet GPUs anchor the low-teraflop range. Source-side figure: `3.6 TFLOP/s` for Mobile integrated GPUs operate in the low-teraflop band.",
+      "description_medium": "Integrated laptop and tablet GPUs anchor the low-teraflop range.",
       "facts": {
         "canonical_name": "An Apple M2 GPU",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -575,10 +575,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Consumer gaming hardware sits comfortably in the teraflop range. Source-side figure: `10.3 TFLOP/s` for Console-class GPU peak is around 10.3 TFLOPS.",
+      "description": "Consumer gaming hardware sits comfortably in the teraflop range.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Consumer gaming hardware sits comfortably in the teraflop range. Source-side figure: `10.3 TFLOP/s` for Console-class GPU peak is around 10.3 TFLOPS.",
+      "description_medium": "Consumer gaming hardware sits comfortably in the teraflop range.",
       "facts": {
         "canonical_name": "A PlayStation 5 GPU",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -630,10 +630,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The M1 Max is a strong laptop-class GPU throughput reference. Source-side figure: `10.4 TFLOPS` for Approximate GPU peak throughput for Apple M1 Max.",
+      "description": "The M1 Max is a strong laptop-class GPU throughput reference.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The M1 Max is a strong laptop-class GPU throughput reference. Source-side figure: `10.4 TFLOPS` for Approximate GPU peak throughput for Apple M1 Max.",
+      "description_medium": "The M1 Max is a strong laptop-class GPU throughput reference.",
       "facts": {
         "canonical_name": "Apple M1 Max",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -684,40 +684,40 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Apple silicon gives a modern laptop-class FLOPS reference. Source-side figure: `10.4 TFLOPS` for Approximate peak GPU-class floating-point throughput for M1 Max.",
+      "description": "A short assistant response from a large dense model already pushes into the tens-of-teraflop range.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Apple silicon gives a modern laptop-class FLOPS reference. Source-side figure: `10.4 TFLOPS` for Approximate peak GPU-class floating-point throughput for M1 Max.",
+      "description_medium": "A short assistant response from a large dense model already pushes into the tens-of-teraflop range.",
       "facts": {
-        "canonical_name": "Apple M1 Max",
+        "canonical_name": "70B-parameter LLM 100-token response",
         "ingest_source": "dataset/raw/curated/flops.json",
         "source_trace": {
-          "derivation_note": "TFLOP/s to FLOP/s conversion",
+          "derivation_note": "F \\approx n_{\\mathrm{tokens}} \\times 2 N_{\\mathrm{params}}",
           "method": "derived",
-          "original_value_text": "10400000000000",
-          "source_basis": "Approximate peak GPU-class floating-point throughput for M1 Max.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/Apple_M1",
-          "source_value_text": "10.4 TFLOPS"
+          "original_value_text": "14000000000000.0",
+          "source_basis": "Order-of-magnitude inference cost for a 100-token reply from a 70B-parameter dense model.",
+          "source_unit": "FLOP",
+          "source_url": "https://en.wikipedia.org/wiki/Large_language_model",
+          "source_value_text": "100 tokens x 1.4e11 FLOP/token"
         }
       },
       "hook": null,
-      "id": "obs:flops:entity-flops-apple-m1-max:2",
-      "name": "Apple M1 Max",
+      "id": "obs:flops:scenario-70b-llm-100-token-response-flops",
+      "name": "70B-parameter LLM 100-token response",
       "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Apple_M1",
+      "source": "https://en.wikipedia.org/wiki/Large_language_model",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-apple-m1",
+          "id": "src:https-en-wikipedia-org-wiki-large-language-model",
           "license_text": "CC BY-SA 4.0",
           "note": null,
           "publisher": "Wikipedia",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Apple M1",
-          "url": "https://en.wikipedia.org/wiki/Apple_M1"
+          "title": "Large language model",
+          "url": "https://en.wikipedia.org/wiki/Large_language_model"
         },
         {
           "id": "src:repo-dataset-raw-curated-flops-json",
@@ -731,18 +731,18 @@
           "url": "repo://dataset/raw/curated/flops.json"
         }
       ],
-      "summary_short": "Apple silicon gives a modern laptop-class FLOPS reference.",
-      "value": 10400000000000.0,
-      "value_type": "measured",
+      "summary_short": "A short assistant response from a large dense model already pushes into the tens-of-teraflop range.",
+      "value": 14000000000000.0,
+      "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Datacenter GPUs live in the tens-of-teraflops band. Source-side figure: `19.5 TFLOP/s` for A100 peak FP32 performance is around 19.5 TFLOPS.",
+      "description": "Datacenter GPUs live in the tens-of-teraflops band.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Datacenter GPUs live in the tens-of-teraflops band. Source-side figure: `19.5 TFLOP/s` for A100 peak FP32 performance is around 19.5 TFLOPS.",
+      "description_medium": "Datacenter GPUs live in the tens-of-teraflops band.",
       "facts": {
         "canonical_name": "An NVIDIA A100",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -794,10 +794,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A high-end consumer GPU is a useful tens-of-teraflops anchor. Source-side figure: `35.6 TFLOPS` for Published FP32 peak throughput figure.",
+      "description": "A high-end consumer GPU is a useful tens-of-teraflops anchor.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A high-end consumer GPU is a useful tens-of-teraflops anchor. Source-side figure: `35.6 TFLOPS` for Published FP32 peak throughput figure.",
+      "description_medium": "A high-end consumer GPU is a useful tens-of-teraflops anchor.",
       "facts": {
         "canonical_name": "NVIDIA GeForce RTX 3090",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -849,10 +849,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The RTX 3090 is a consumer GPU with high teraflop throughput. Source-side figure: `35.6 TFLOPS` for Approximate FP32 peak throughput for RTX 3090.",
+      "description": "The RTX 3090 is a consumer GPU with high teraflop throughput.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The RTX 3090 is a consumer GPU with high teraflop throughput. Source-side figure: `35.6 TFLOPS` for Approximate FP32 peak throughput for RTX 3090.",
+      "description_medium": "The RTX 3090 is a consumer GPU with high teraflop throughput.",
       "facts": {
         "canonical_name": "NVIDIA RTX 3090",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -903,10 +903,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Hopper-class accelerators extend the datacenter envelope further. Source-side figure: `60 TFLOP/s` for H100-class GPUs push into higher FP64 throughput.",
+      "description": "Hopper-class accelerators extend the datacenter envelope further.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Hopper-class accelerators extend the datacenter envelope further. Source-side figure: `60 TFLOP/s` for H100-class GPUs push into higher FP64 throughput.",
+      "description_medium": "Hopper-class accelerators extend the datacenter envelope further.",
       "facts": {
         "canonical_name": "An NVIDIA H100",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -958,10 +958,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The RX 7900 XTX is another high-end consumer GPU benchmark. Source-side figure: `61 TFLOPS` for Approximate peak floating-point throughput for RX 7900 XTX.",
+      "description": "The RX 7900 XTX is another high-end consumer GPU benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The RX 7900 XTX is another high-end consumer GPU benchmark. Source-side figure: `61 TFLOPS` for Approximate peak floating-point throughput for RX 7900 XTX.",
+      "description_medium": "The RX 7900 XTX is another high-end consumer GPU benchmark.",
       "facts": {
         "canonical_name": "AMD Radeon RX 7900 XTX",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1012,10 +1012,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "High-end consumer GPUs are an easy teraflop-scale anchor. Source-side figure: `82.6 TFLOP/s` for Top consumer GPUs reach tens of teraflops.",
+      "description": "High-end consumer GPUs are an easy teraflop-scale anchor.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "High-end consumer GPUs are an easy teraflop-scale anchor. Source-side figure: `82.6 TFLOP/s` for Top consumer GPUs reach tens of teraflops.",
+      "description_medium": "High-end consumer GPUs are an easy teraflop-scale anchor.",
       "facts": {
         "canonical_name": "An NVIDIA RTX 4090",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1067,10 +1067,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "MI300X sits in the data-center accelerator band. Source-side figure: `130 TFLOPS` for Approximate accelerator throughput for AMD MI300X.",
+      "description": "MI300X sits in the data-center accelerator band.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "MI300X sits in the data-center accelerator band. Source-side figure: `130 TFLOPS` for Approximate accelerator throughput for AMD MI300X.",
+      "description_medium": "MI300X sits in the data-center accelerator band.",
       "facts": {
         "canonical_name": "AMD MI300X",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1121,10 +1121,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Trainium is a dedicated training accelerator benchmark. Source-side figure: `190 TFLOPS` for Approximate training throughput for AWS Trainium.",
+      "description": "Trainium is a dedicated training accelerator benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Trainium is a dedicated training accelerator benchmark. Source-side figure: `190 TFLOPS` for Approximate training throughput for AWS Trainium.",
+      "description_medium": "Trainium is a dedicated training accelerator benchmark.",
       "facts": {
         "canonical_name": "AWS Trainium",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1175,10 +1175,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "TPU v4 continues the accelerator scaling trend. Source-side figure: `275 TFLOPS` for Approximate per-chip throughput for TPU v4.",
+      "description": "TPU v4 continues the accelerator scaling trend.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "TPU v4 continues the accelerator scaling trend. Source-side figure: `275 TFLOPS` for Approximate per-chip throughput for TPU v4.",
+      "description_medium": "TPU v4 continues the accelerator scaling trend.",
       "facts": {
         "canonical_name": "Google TPU v4",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1229,10 +1229,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Blue Gene/L pushed supercomputing into the hundreds of teraflops. Source-side figure: `360 TFLOPS` for Published peak performance figure for Blue Gene/L.",
+      "description": "Blue Gene/L pushed supercomputing into the hundreds of teraflops.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Blue Gene/L pushed supercomputing into the hundreds of teraflops. Source-side figure: `360 TFLOPS` for Published peak performance figure for Blue Gene/L.",
+      "description_medium": "Blue Gene/L pushed supercomputing into the hundreds of teraflops.",
       "facts": {
         "canonical_name": "IBM Blue Gene/L",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1284,10 +1284,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "TPU v3 is a notable tensor accelerator reference. Source-side figure: `420 TFLOPS` for Approximate peak bfloat16 throughput for TPU v3.",
+      "description": "TPU v3 is a notable tensor accelerator reference.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "TPU v3 is a notable tensor accelerator reference. Source-side figure: `420 TFLOPS` for Approximate peak bfloat16 throughput for TPU v3.",
+      "description_medium": "TPU v3 is a notable tensor accelerator reference.",
       "facts": {
         "canonical_name": "Google TPU v3",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1338,10 +1338,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Tianhe-2 is an important pre-exascale supercomputer benchmark. Source-side figure: `34 PFLOPS` for Published peak performance for Tianhe-2.",
+      "description": "Tianhe-2 is an important pre-exascale supercomputer benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Tianhe-2 is an important pre-exascale supercomputer benchmark. Source-side figure: `34 PFLOPS` for Published peak performance for Tianhe-2.",
+      "description_medium": "Tianhe-2 is an important pre-exascale supercomputer benchmark.",
       "facts": {
         "canonical_name": "Tianhe-2",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1392,10 +1392,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Tianhe-2 is a major pre-exascale benchmark. Source-side figure: `54.9 PFLOPS` for Published Linpack result and approximate peak class.",
+      "description": "Tianhe-2 is a major pre-exascale benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Tianhe-2 is a major pre-exascale benchmark. Source-side figure: `54.9 PFLOPS` for Published Linpack result and approximate peak class.",
+      "description_medium": "Tianhe-2 is a major pre-exascale benchmark.",
       "facts": {
         "canonical_name": "Tianhe-2",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1447,10 +1447,65 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Cerebras WSE-2 is a purpose-built AI chip benchmark. Source-side figure: `100 PFLOPS` for Approximate peak AI throughput for WSE-2.",
+      "description": "A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Cerebras WSE-2 is a purpose-built AI chip benchmark. Source-side figure: `100 PFLOPS` for Approximate peak AI throughput for WSE-2.",
+      "description_medium": "A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.",
+      "facts": {
+        "canonical_name": "1024 H100 training cluster throughput",
+        "ingest_source": "dataset/raw/curated/flops.json",
+        "source_trace": {
+          "derivation_note": "F = 1024 imes 60\\,\\mathrm{TFLOP/s}",
+          "method": "derived",
+          "original_value_text": "6.144e+16",
+          "source_basis": "Approximate FP throughput from a 1024-GPU H100-class cluster.",
+          "source_unit": "FLOP/s",
+          "source_url": "https://en.wikipedia.org/wiki/Nvidia_Hopper",
+          "source_value_text": "1024 x 60 TFLOP/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flops:scenario-1024-h100-training-cluster-throughput",
+      "name": "1024 H100 training cluster throughput",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Nvidia_Hopper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nvidia-hopper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nvidia Hopper",
+          "url": "https://en.wikipedia.org/wiki/Nvidia_Hopper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flops-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flops.json",
+          "url": "repo://dataset/raw/curated/flops.json"
+        }
+      ],
+      "summary_short": "A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.",
+      "value": 6.144e+16,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cerebras WSE-2 is a purpose-built AI chip benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cerebras WSE-2 is a purpose-built AI chip benchmark.",
       "facts": {
         "canonical_name": "Cerebras Wafer Scale Engine 2",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1501,10 +1556,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Another petaflop benchmark, useful for a different design generation. Source-side figure: `200 PFLOP/s` for Summit is commonly quoted around 200 petaflops.",
+      "description": "Another petaflop benchmark, useful for a different design generation.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Another petaflop benchmark, useful for a different design generation. Source-side figure: `200 PFLOP/s` for Summit is commonly quoted around 200 petaflops.",
+      "description_medium": "Another petaflop benchmark, useful for a different design generation.",
       "facts": {
         "canonical_name": "Summit",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1556,119 +1611,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Summit is a major pre-exascale supercomputer reference. Source-side figure: `200 PFLOPS` for Published peak performance for Summit.",
+      "description": "Petaflop supercomputers are an obvious bridge to exascale systems.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Summit is a major pre-exascale supercomputer reference. Source-side figure: `200 PFLOPS` for Published peak performance for Summit.",
-      "facts": {
-        "canonical_name": "Summit",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "2e+17",
-          "source_basis": "Published peak performance for Summit.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
-          "source_value_text": "200 PFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-summit-supercomputer",
-      "name": "Summit",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-summit-supercomputer",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Summit (supercomputer)",
-          "url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "Summit is a major pre-exascale supercomputer reference.",
-      "value": 2e+17,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Summit bridges the petaflop and exaflop eras. Source-side figure: `200 PFLOPS` for Published peak performance class for Summit.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Summit bridges the petaflop and exaflop eras. Source-side figure: `200 PFLOPS` for Published peak performance class for Summit.",
-      "facts": {
-        "canonical_name": "Summit",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "derivation_note": "PFLOP/s to FLOP/s conversion",
-          "method": "derived",
-          "original_value_text": "200000000000000000",
-          "source_basis": "Published peak performance class for Summit.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
-          "source_value_text": "200 PFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-summit:2",
-      "name": "Summit",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-summit-supercomputer",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Summit (supercomputer)",
-          "url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "Summit bridges the petaflop and exaflop eras.",
-      "value": 2e+17,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Petaflop supercomputers are an obvious bridge to exascale systems. Source-side figure: `442 PFLOP/s` for Fugaku has been reported at around 442 petaflops.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Petaflop supercomputers are an obvious bridge to exascale systems. Source-side figure: `442 PFLOP/s` for Fugaku has been reported at around 442 petaflops.",
+      "description_medium": "Petaflop supercomputers are an obvious bridge to exascale systems.",
       "facts": {
         "canonical_name": "Fugaku",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1720,10 +1666,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Frontier is the classic exascale anchor. Source-side figure: `1.206 EFLOP/s` for Frontier crossed the exaflop barrier.",
+      "description": "Frontier is the classic exascale anchor.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Frontier is the classic exascale anchor. Source-side figure: `1.206 EFLOP/s` for Frontier crossed the exaflop barrier.",
+      "description_medium": "Frontier is the classic exascale anchor.",
       "facts": {
         "canonical_name": "Frontier",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1775,10 +1721,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A zettaflop machine is a forward-looking anchor for the upper end. Source-side figure: `1 ZFLOP/s` for A hypothetical but useful upper benchmark for the scale.",
+      "description": "A zettaflop machine is a forward-looking anchor for the upper end.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A zettaflop machine is a forward-looking anchor for the upper end. Source-side figure: `1 ZFLOP/s` for A hypothetical but useful upper benchmark for the scale.",
+      "description_medium": "A zettaflop machine is a forward-looking anchor for the upper end.",
       "facts": {
         "canonical_name": "A future zettaflop-class machine",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1824,6 +1770,62 @@
       ],
       "summary_short": "A zettaflop machine is a forward-looking anchor for the upper end.",
       "value": 1e+21,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.",
+      "facts": {
+        "canonical_name": "GPT-3 training run estimate",
+        "ingest_source": "dataset/raw/curated/flops.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.14e+23",
+          "source_basis": "Representative published estimate of GPT-3 training compute.",
+          "source_unit": "FLOP",
+          "source_url": "https://en.wikipedia.org/wiki/GPT-3",
+          "source_value_text": "about 3.14e23 FLOP"
+        }
+      },
+      "hook": null,
+      "id": "obs:flops:entity-gpt3-training-flops-estimate",
+      "name": "GPT-3 training run estimate",
+      "qualifiers": {
+        "measurement": "total training compute"
+      },
+      "source": "https://en.wikipedia.org/wiki/GPT-3",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gpt-3",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "GPT-3",
+          "url": "https://en.wikipedia.org/wiki/GPT-3"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flops-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flops.json",
+          "url": "repo://dataset/raw/curated/flops.json"
+        }
+      ],
+      "summary_short": "The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.",
+      "value": 3.14e+23,
       "value_type": "derived",
       "wikidata_qid": null
     }

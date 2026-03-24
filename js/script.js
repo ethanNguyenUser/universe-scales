@@ -43,6 +43,12 @@ class UniversalScales {
 
         // DOM elements
         this.dimensionSelect = document.getElementById('dimension-select');
+        this.dimensionBrowserPanel = document.getElementById('dimension-browser-panel');
+        this.dimensionBrowser = document.getElementById('dimension-browser');
+        this.dimensionBrowserToggle = document.getElementById('dimension-browser-toggle');
+        this.dimensionBrowserCurrent = document.getElementById('dimension-browser-current');
+        this.dimensionBrowserSearch = document.getElementById('dimension-browser-search');
+        this.dimensionBrowserEmpty = document.getElementById('dimension-browser-empty');
         this.unitSelect = document.getElementById('unit-select');
         this.notationToggle = document.getElementById('notation-toggle');
         this.darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -67,6 +73,7 @@ class UniversalScales {
 
         // Cache for image existence checks to avoid repeated failed requests
         this.imageExistenceCache = new Map();
+        this.isDimensionBrowserOpen = false;
 
         this.init();
     }
@@ -124,21 +131,25 @@ class UniversalScales {
             this.dimensionCatalog = catalog;
             this.dimensionCatalogBySlug = new Map(catalog.map(entry => [entry.slug, entry]));
             this.populateDimensionSelector(catalog);
+            this.renderDimensionBrowser(catalog);
+            this.updateDimensionToggleLabel();
         } catch (error) {
             console.warn('Falling back to static dimension selector:', error);
         }
     }
 
-    populateDimensionSelector(catalog) {
-        const available = catalog
+    getAvailableDimensionEntries(catalog) {
+        return (catalog || [])
             .filter(entry => entry.available)
             .sort((a, b) => {
-                const groupCompare = (a.frontend_group_label || '').localeCompare(b.frontend_group_label || '');
-                if (groupCompare !== 0) return groupCompare;
                 const orderCompare = (a.frontend_order || 1000) - (b.frontend_order || 1000);
                 if (orderCompare !== 0) return orderCompare;
                 return (a.name || '').localeCompare(b.name || '');
             });
+    }
+
+    populateDimensionSelector(catalog) {
+        const available = this.getAvailableDimensionEntries(catalog);
 
         if (available.length === 0) {
             return;
@@ -167,11 +178,175 @@ class UniversalScales {
         }
     }
 
+    renderDimensionBrowser(catalog) {
+        if (!this.dimensionBrowser) return;
+
+        const available = this.getAvailableDimensionEntries(catalog);
+
+        const groups = new Map();
+        for (const entry of available) {
+            const groupLabel = entry.frontend_group_label || 'Other';
+            if (!groups.has(groupLabel)) {
+                groups.set(groupLabel, []);
+            }
+            groups.get(groupLabel).push(entry);
+        }
+
+        this.dimensionBrowser.innerHTML = '';
+        for (const [groupLabel, entries] of groups.entries()) {
+            const group = document.createElement('section');
+            group.className = 'dimension-browser__group';
+            group.dataset.groupLabel = groupLabel.toLowerCase();
+            group.dataset.itemCount = String(entries.length);
+            if (entries.length <= 3) {
+                group.classList.add('dimension-browser__group--small');
+            } else if (entries.length <= 6) {
+                group.classList.add('dimension-browser__group--medium');
+            } else {
+                group.classList.add('dimension-browser__group--large');
+            }
+
+            const title = document.createElement('h3');
+            title.className = 'dimension-browser__group-title';
+            title.textContent = groupLabel;
+            group.appendChild(title);
+
+            const chips = document.createElement('div');
+            chips.className = 'dimension-browser__chips';
+            for (const entry of entries) {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'dimension-chip';
+                button.dataset.dimension = entry.slug;
+                button.dataset.searchText = `${entry.name} ${groupLabel}`.toLowerCase();
+                button.textContent = entry.name;
+                button.addEventListener('click', async () => {
+                    await this.setDimension(entry.slug);
+                });
+                chips.appendChild(button);
+            }
+
+            group.appendChild(chips);
+            this.dimensionBrowser.appendChild(group);
+        }
+
+        this.updateDimensionBrowserSelection();
+        this.filterDimensionBrowser(this.dimensionBrowserSearch?.value || '');
+    }
+
+    setDimensionBrowserOpen(isOpen) {
+        this.isDimensionBrowserOpen = Boolean(isOpen);
+        if (this.dimensionBrowserPanel) {
+            this.dimensionBrowserPanel.hidden = !this.isDimensionBrowserOpen;
+        }
+        if (this.dimensionBrowserToggle) {
+            this.dimensionBrowserToggle.setAttribute('aria-expanded', this.isDimensionBrowserOpen ? 'true' : 'false');
+            this.dimensionBrowserToggle.classList.toggle('is-open', this.isDimensionBrowserOpen);
+        }
+        if (!this.isDimensionBrowserOpen && this.dimensionBrowserSearch) {
+            this.dimensionBrowserSearch.value = '';
+            this.filterDimensionBrowser('');
+        }
+        if (this.isDimensionBrowserOpen && this.dimensionBrowserSearch) {
+            window.setTimeout(() => this.dimensionBrowserSearch.focus(), 0);
+        }
+    }
+
+    toggleDimensionBrowser(forceState = null) {
+        const nextState = forceState === null ? !this.isDimensionBrowserOpen : Boolean(forceState);
+        this.setDimensionBrowserOpen(nextState);
+    }
+
+    updateDimensionToggleLabel() {
+        if (!this.dimensionBrowserCurrent) return;
+        const currentEntry = this.dimensionCatalogBySlug.get(this.currentDimension);
+        this.dimensionBrowserCurrent.textContent = currentEntry?.name || this.currentDimension;
+    }
+
+    updateDimensionBrowserSelection() {
+        if (!this.dimensionBrowser) return;
+        this.dimensionBrowser.querySelectorAll('.dimension-chip').forEach(button => {
+            button.classList.toggle('is-active', button.dataset.dimension === this.currentDimension);
+        });
+    }
+
+    filterDimensionBrowser(rawQuery) {
+        if (!this.dimensionBrowser) return;
+
+        const query = String(rawQuery || '').trim().toLowerCase();
+        let visibleGroupCount = 0;
+        let visibleChipCount = 0;
+
+        this.dimensionBrowser.querySelectorAll('.dimension-browser__group').forEach(group => {
+            const groupLabel = group.dataset.groupLabel || '';
+            const groupMatches = !query || groupLabel.includes(query);
+            let groupVisibleChipCount = 0;
+
+            group.querySelectorAll('.dimension-chip').forEach(button => {
+                const matches = groupMatches || !query || (button.dataset.searchText || '').includes(query);
+                button.hidden = !matches;
+                if (matches) {
+                    groupVisibleChipCount += 1;
+                    visibleChipCount += 1;
+                }
+            });
+
+            group.hidden = groupVisibleChipCount === 0;
+            if (!group.hidden) {
+                visibleGroupCount += 1;
+            }
+        });
+
+        if (this.dimensionBrowserEmpty) {
+            this.dimensionBrowserEmpty.hidden = visibleChipCount !== 0;
+        }
+
+        this.dimensionBrowser.hidden = visibleGroupCount === 0;
+    }
+
+    async setDimension(slug) {
+        this.currentDimension = slug;
+        if (this.dimensionSelect) {
+            this.dimensionSelect.value = slug;
+        }
+        this.updateDimensionBrowserSelection();
+        this.updateDimensionToggleLabel();
+        this.setDimensionBrowserOpen(false);
+        await this.loadDimension(slug);
+        this.updateURL();
+    }
+
     setupEventListeners() {
         this.dimensionSelect.addEventListener('change', async (e) => {
-            this.currentDimension = e.target.value;
-            await this.loadDimension(this.currentDimension);
-            this.updateURL();
+            await this.setDimension(e.target.value);
+        });
+
+        if (this.dimensionBrowserToggle) {
+            this.dimensionBrowserToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                this.toggleDimensionBrowser();
+            });
+        }
+
+        if (this.dimensionBrowserSearch) {
+            this.dimensionBrowserSearch.addEventListener('input', (event) => {
+                this.filterDimensionBrowser(event.target.value);
+            });
+        }
+
+        document.addEventListener('click', (event) => {
+            if (!this.isDimensionBrowserOpen) return;
+            const clickedInsideBrowser = this.dimensionBrowserPanel?.contains(event.target);
+            const clickedToggle = this.dimensionBrowserToggle?.contains(event.target);
+            if (!clickedInsideBrowser && !clickedToggle) {
+                this.setDimensionBrowserOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && this.isDimensionBrowserOpen) {
+                this.setDimensionBrowserOpen(false);
+            }
         });
 
         this.unitSelect.addEventListener('change', (e) => {
@@ -261,6 +436,17 @@ class UniversalScales {
     }
 
     updateNotationButton() {
+        if (this.usesLinearDisplayValues()) {
+            this.notationToggle.textContent = '123';
+            this.notationToggle.disabled = true;
+            this.notationToggle.classList.add('notation-toggle--disabled');
+            this.notationToggle.title = 'This view uses regular numeric labels.';
+            return;
+        }
+
+        this.notationToggle.disabled = false;
+        this.notationToggle.classList.remove('notation-toggle--disabled');
+        this.notationToggle.title = 'Toggle number notation';
         if (this.notationMode === 'mathematical') {
             // For mathematical notation, use HTML with superscript
             this.notationToggle.innerHTML = '1×10<sup>10</sup>';
@@ -315,6 +501,9 @@ class UniversalScales {
     }
 
     toggleNotation() {
+        if (this.usesLinearDisplayValues()) {
+            return;
+        }
         const modes = ['scientific', 'mathematical', 'human'];
         const currentIndex = modes.indexOf(this.notationMode);
         this.notationMode = modes[(currentIndex + 1) % modes.length];
@@ -331,6 +520,9 @@ class UniversalScales {
     }
 
     formatNumber(value, precision = 0, forTooltip = false) {
+        if (this.isLinearScale()) {
+            return this.formatter.formatLinearNumber(value, Math.max(precision, forTooltip ? 2 : 0));
+        }
         return this.formatter.formatNumber(value, precision, forTooltip);
     }
 
@@ -352,6 +544,20 @@ class UniversalScales {
 
     isLinearScale() {
         return this.getScaleMode() === 'linear';
+    }
+
+    usesLinearDisplayValues() {
+        return this.isLinearScale() || this.isSoundIntensityDecibelUnit();
+    }
+
+    isSoundIntensityDecibelUnit(unit = null) {
+        const resolvedUnit = unit || this.getCurrentUnitDefinition();
+        return this.currentDimension === 'sound-intensity'
+            && resolvedUnit?.special_conversion === 'sound_intensity_db';
+    }
+
+    getCurrentUnitDefinition() {
+        return this.dimensionData?.units?.find(unit => unit.name === this.currentUnit) || null;
     }
 
     isDomainZoomed(currentDomain, originalDomain) {
@@ -511,6 +717,20 @@ class UniversalScales {
             }
             const yamlText = await response.text();
             this.dimensionData = jsyaml.load(yamlText);
+            if (dimension === 'sound-intensity' && Array.isArray(this.dimensionData.units)) {
+                const existingDecibelUnit = this.dimensionData.units.find(unit => unit.name === 'decibels');
+                if (existingDecibelUnit) {
+                    existingDecibelUnit.special_conversion = 'sound_intensity_db';
+                } else {
+                    this.dimensionData.units.push({
+                        name: 'decibels',
+                        symbol: 'dB',
+                        conversion_factor: 1.0,
+                        description: 'Decibel sound level, referenced to $10^{-12}\\,\\mathrm{W/m^2}$. The plot spacing still comes from physical intensity, but the labels are shown in the more familiar loudness scale.',
+                        special_conversion: 'sound_intensity_db'
+                    });
+                }
+            }
 
             // Fully reset zoom state when dimension changes so new plots start zoomed out
             this.originalXDomain = null;
@@ -553,6 +773,9 @@ class UniversalScales {
 
             // Update unit selector
             this.updateUnitSelector();
+            this.updateNotationButton();
+            this.updateDimensionBrowserSelection();
+            this.updateDimensionToggleLabel();
 
             // Update plot
             this.plot.updatePlot();
@@ -610,6 +833,9 @@ class UniversalScales {
             this.currentUnit = this.pendingUnit;
             this.unitSelect.value = this.currentUnit;
             this.pendingUnit = null; // Clear pending unit
+        } else if (this.currentDimension === 'sound-intensity' && visibleUnits.some(({ unit }) => unit.name === 'decibels')) {
+            this.currentUnit = 'decibels';
+            this.unitSelect.value = this.currentUnit;
         } else if (visibleUnits.length > 0) {
             this.currentUnit = visibleUnits[0].unit.name;
             this.unitSelect.value = this.currentUnit;
@@ -648,8 +874,7 @@ class UniversalScales {
     }
 
     showTooltip(event, item, pinned = false) {
-        const unit = this.dimensionData.units.find(u => u.name === this.currentUnit);
-        const convertedValue = this.convertValue(item.value);
+        const unit = this.getCurrentUnitDefinition();
 
         // Determine if this is a touch/mobile device
         const isTouchPrimary = (event && (event.pointerType === 'touch' || event.pointerType === 'pen'))
@@ -672,23 +897,16 @@ class UniversalScales {
         tooltipImage.draggable = false; // Prevent native image dragging
 
         // Format and display the exact value (use forTooltip=true to get HTML superscripts in tooltips)
-        const formattedValue = this.formatNumber(convertedValue, 2, true);
+        const formattedValue = this.formatValueForCurrentUnit(item.value, 2, true);
         const unitSymbol = unit ? unit.symbol : '';
         const tooltipValueElement = this.tooltip.querySelector('.tooltip-value');
-        if (this.notationMode === 'mathematical') {
-            // Use innerHTML for mathematical notation to render superscripts
-            tooltipValueElement.innerHTML = `${formattedValue} ${unitSymbol}`;
-        } else {
-            // Use textContent for other notations
-            tooltipValueElement.textContent = `${formattedValue} ${unitSymbol}`;
-        }
+        tooltipValueElement.innerHTML = this.formatTooltipValueHTML(formattedValue, unitSymbol);
 
         const descriptionElement = this.tooltip.querySelector('.tooltip-description');
-        const descriptionText = (this.tooltipPinned && item.description_long)
-            ? item.description_long
-            : (item.description_medium || item.description || item.summary_short || '');
-        if (descriptionText) {
-            this.setRichText(descriptionElement, descriptionText);
+        const descriptionText = item.description || item.description_long || item.description_medium || item.summary_short || '';
+        const tooltipMarkdown = this.buildTooltipDescriptionMarkdown(item, descriptionText);
+        if (tooltipMarkdown) {
+            this.setRichText(descriptionElement, tooltipMarkdown);
         } else {
             descriptionElement.textContent = '';
         }
@@ -1062,8 +1280,13 @@ class UniversalScales {
     convertValue(value) {
         if (!this.currentUnit) return value;
 
-        const unit = this.dimensionData.units.find(u => u.name === this.currentUnit);
+        const unit = this.getCurrentUnitDefinition();
         if (!unit) return value;
+
+        if (this.isSoundIntensityDecibelUnit(unit)) {
+            if (value <= 0) return Number.NEGATIVE_INFINITY;
+            return 10 * Math.log10(value / 1e-12);
+        }
 
         // For costs, handle currency conversion
         if (this.currentDimension === 'costs' && unit.name !== 'USD') {
@@ -1084,6 +1307,29 @@ class UniversalScales {
         }
 
         return convertedValue;
+    }
+
+    convertValueForPlot(value) {
+        if (this.isSoundIntensityDecibelUnit()) {
+            return value;
+        }
+        return this.convertValue(value);
+    }
+
+    formatValueForCurrentUnit(value, precision = 0, forTooltip = false) {
+        const convertedValue = this.convertValue(value);
+        if (this.isSoundIntensityDecibelUnit()) {
+            return this.formatter.formatLinearNumber(convertedValue, Math.max(precision, forTooltip ? 1 : 0));
+        }
+        return this.formatNumber(convertedValue, precision, forTooltip);
+    }
+
+    formatAxisValue(value, precision = 0) {
+        if (this.isSoundIntensityDecibelUnit()) {
+            const convertedValue = value > 0 ? 10 * Math.log10(value / 1e-12) : Number.NEGATIVE_INFINITY;
+            return this.formatter.formatLinearNumber(convertedValue, precision);
+        }
+        return this.formatNumber(value, precision);
     }
 
     async loadExchangeRates() {
@@ -1206,12 +1452,12 @@ class UniversalScales {
                     };
                     allItems.push({
                         ...mergedItem,
-                        convertedValue: this.convertValue(mergedItem.value)
+                        convertedValue: this.convertValueForPlot(mergedItem.value)
                     });
                 } else {
                     allItems.push({
                         ...item,
-                        convertedValue: this.convertValue(item.value)
+                        convertedValue: this.convertValueForPlot(item.value)
                     });
                 }
             });
@@ -1228,7 +1474,7 @@ class UniversalScales {
                 if (hasValidName && hasValidValue) {
                     allItems.push({
                         ...customItem,
-                        convertedValue: this.convertValue(customItem.value)
+                        convertedValue: this.convertValueForPlot(customItem.value)
                     });
                 }
             }
@@ -1276,21 +1522,340 @@ class UniversalScales {
     setRichText(element, text) {
         if (!element) return;
         element.innerHTML = this.renderMarkdown(text);
-        this.typesetMath(element, text);
+        window.requestAnimationFrame(() => {
+            this.typesetMath(element, text);
+        });
+    }
+
+    buildTooltipDescriptionMarkdown(item, baseText) {
+        const sections = [];
+        if (baseText) {
+            sections.push(this.stripSelfSourceLinks(baseText, item?.source));
+        }
+
+        const trace = item?.facts?.source_trace || null;
+        const calculationBits = [];
+        if (trace?.source_value_text) {
+            calculationBits.push(`Source figure: ${this.formatTraceSourceValue(trace.source_value_text, trace.source_unit)}`);
+        }
+        if (trace?.derivation_note) {
+            calculationBits.push(this.formatTraceDerivation(trace.derivation_note));
+            calculationBits.push(...this.buildDerivedEstimateDetails(item, trace));
+        }
+        if (trace?.conversion_note) {
+            calculationBits.push(this.formatTracePlainText(trace.conversion_note));
+        }
+        if (trace?.source_basis) {
+            calculationBits.push(`Basis: ${this.formatTracePlainText(trace.source_basis)}`);
+        }
+        if (item?.qualifiers?.assumption) {
+            calculationBits.push(`Assumptions: ${this.formatTracePlainText(item.qualifiers.assumption)}`);
+        }
+
+        if (calculationBits.length > 0) {
+            sections.push(`### How It Was Estimated\n${calculationBits.join('\n\n')}`);
+        }
+
+        return sections.join('\n\n').trim();
+    }
+
+    sanitizeTraceText(value) {
+        if (value === null || value === undefined) return '';
+        return String(value)
+            .replace(/\u0007/g, '\\approx ')
+            .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    normalizeUrlForComparison(value) {
+        if (!value) return '';
+        try {
+            const url = new URL(String(value), window.location.href);
+            const pathname = url.pathname.replace(/\/+$/, '');
+            return `${url.origin}${pathname}${url.search}`;
+        } catch (_error) {
+            return String(value).trim().replace(/\/+$/, '');
+        }
+    }
+
+    stripSelfSourceLinks(markdown, sourceUrl) {
+        if (!markdown || !sourceUrl) {
+            return markdown || '';
+        }
+
+        const normalizedSource = this.normalizeUrlForComparison(sourceUrl);
+        return String(markdown).replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, href) => {
+            return this.normalizeUrlForComparison(href) === normalizedSource ? label : match;
+        });
+    }
+
+    escapeHtml(value) {
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    formatUnitSymbolHTML(symbol) {
+        if (!symbol) return '';
+        let html = this.escapeHtml(symbol);
+        html = html.replace(/\^([+-]?\d+)/g, '<sup>$1</sup>');
+        return html;
+    }
+
+    formatTooltipValueHTML(formattedValue, unitSymbol) {
+        const valueHtml = (!this.usesLinearDisplayValues() && this.notationMode === 'mathematical')
+            ? formattedValue
+            : this.escapeHtml(formattedValue);
+        const unitHtml = this.formatUnitSymbolHTML(unitSymbol);
+        return unitHtml ? `${valueHtml} ${unitHtml}` : valueHtml;
+    }
+
+    toSuperscript(value) {
+        const superscripts = {
+            '0': '⁰',
+            '1': '¹',
+            '2': '²',
+            '3': '³',
+            '4': '⁴',
+            '5': '⁵',
+            '6': '⁶',
+            '7': '⁷',
+            '8': '⁸',
+            '9': '⁹',
+            '+': '⁺',
+            '-': '⁻',
+        };
+        return String(value)
+            .split('')
+            .map(char => superscripts[char] || char)
+            .join('');
+    }
+
+    normalizeUnitSignature(text) {
+        return this.sanitizeTraceText(text)
+            .toLowerCase()
+            .replace(/\s+/g, '')
+            .replace(/[(){}\[\],.~≈]/g, '');
+    }
+
+    isNumericLikeSourceValue(text) {
+        const value = this.sanitizeTraceText(text);
+        return /^[<>~≈]?\s*[+-]?(?:\d+(?:,\d{3})*|\d*\.\d+)(?:e[+-]?\d+)?(?:\s*[%°])?$/.test(value);
+    }
+
+    shouldAppendSourceUnit(valueText, unitText) {
+        const value = this.sanitizeTraceText(valueText);
+        const unit = this.sanitizeTraceText(unitText);
+        if (!value || !unit || !this.isNumericLikeSourceValue(value)) {
+            return false;
+        }
+        return !this.normalizeUnitSignature(value).includes(this.normalizeUnitSignature(unit));
+    }
+
+    formatTracePlainText(text) {
+        let value = this.sanitizeTraceText(text);
+        if (!value) return '';
+        value = value.replace(/\\approx\b/g, '≈');
+        value = value.replace(/\\times\b/g, '×');
+        value = value.replace(/\s+[x*]\s+/g, ' × ');
+        value = value.replace(/([A-Za-z]+)\^([+-]?\d+)/g, (_, base, exponent) => `${base}${this.toSuperscript(exponent)}`);
+        value = value.replace(/([+-]?\d+(?:\.\d+)?)e([+-]?\d+)/gi, (_, mantissa, exponent) => {
+            return `${mantissa} × 10${this.toSuperscript(exponent)}`;
+        });
+        return value;
+    }
+
+    looksLikeLatexExpression(text) {
+        const value = this.sanitizeTraceText(text);
+        return /\\[A-Za-z]+|[_^{}]/.test(value);
+    }
+
+    normalizeLatexExpression(text) {
+        let value = this.sanitizeTraceText(text);
+        if (!value) return '';
+        const compact = value.toLowerCase().replace(/\s+/g, '').replace(/\\/g, '');
+        if (compact === 'pi*r^2' || compact === 'pir^2') {
+            return '\\pi r^2';
+        }
+        if (compact === '4*pi*r^2' || compact === '4pir^2') {
+            return '4\\pi r^2';
+        }
+        value = value.replace(/\\u0007/g, '\\approx ');
+        value = value.replace(/\b4\s*\*\s*pi\s*\*\s*r\^2\b/gi, '4 \\pi r^2');
+        value = value.replace(/\b4\s*pi\s*r\^2\b/gi, '4 \\pi r^2');
+        value = value.replace(/\bpi\s*\*\s*r\^2\b/gi, '\\pi r^2');
+        value = value.replace(/\bpi\s*r\^2\b/gi, '\\pi r^2');
+        value = value.replace(/(^|[^\\])pi\b/g, '$1\\pi');
+        value = value.replace(/\s+[x*]\s+/g, ' \\times ');
+        value = value.replace(/([+-]?\d+(?:\.\d+)?)e([+-]?\d+)/gi, '$1 \\\\times 10^{$2}');
+        return value;
+    }
+
+    formatTraceSourceValue(sourceValueText, sourceUnit) {
+        const value = this.sanitizeTraceText(sourceValueText);
+        const unit = this.sanitizeTraceText(sourceUnit);
+        const combined = this.shouldAppendSourceUnit(value, unit) ? `${value} ${unit}` : value;
+        return this.formatTracePlainText(combined);
+    }
+
+    formatTraceDerivation(text) {
+        const compact = this.sanitizeTraceText(text).toLowerCase().replace(/\s+/g, '').replace(/\\/g, '');
+        if (compact === 'pi*r^2' || compact === 'pir^2') {
+            return '$$\\pi r^2$$';
+        }
+        if (compact === '4*pi*r^2' || compact === '4pir^2') {
+            return '$$4\\pi r^2$$';
+        }
+        if (this.looksLikeLatexExpression(text)) {
+            return `$$${this.normalizeLatexExpression(text)}$$`;
+        }
+        return `Formula: ${this.formatTracePlainText(text)}`;
+    }
+
+    buildDerivedEstimateDetails(item, trace) {
+        if (this.currentDimension !== 'area') {
+            return [];
+        }
+
+        const formula = this.sanitizeTraceText(trace?.derivation_note);
+        const area = Number(item?.value);
+        if (!formula || !Number.isFinite(area) || area <= 0) {
+            return [];
+        }
+
+        let radius = null;
+        let prefix = 'Using';
+        const normalized = formula.toLowerCase();
+
+        if (/4\s*(?:\\times\s*)?\\?pi\s*r\^?2|4\s*\*\s*pi\s*\*\s*r\^?2/.test(normalized)) {
+            radius = Math.sqrt(area / (4 * Math.PI));
+            prefix = 'Treating the object as a sphere with';
+        } else if (/(?:^|[^a-z])\\?pi\s*r\^?2|pi\s*\*\s*r\^?2/.test(normalized)) {
+            radius = Math.sqrt(area / Math.PI);
+        }
+
+        if (!radius || !Number.isFinite(radius) || radius <= 0) {
+            return [];
+        }
+
+        return [`${prefix} $r \\approx ${this.formatLengthLatex(radius)}$.`];
+    }
+
+    formatLengthLatex(meters) {
+        const absolute = Math.abs(Number(meters));
+        if (!Number.isFinite(absolute) || absolute === 0) {
+            return '0\\,\\mathrm{m}';
+        }
+
+        const units = [
+            { min: 3.085677581e25, factor: 3.085677581e25, latex: '\\mathrm{Gpc}' },
+            { min: 9.460730472e24, factor: 9.460730472e24, latex: '\\mathrm{Gly}' },
+            { min: 3.085677581e22, factor: 3.085677581e22, latex: '\\mathrm{Mpc}' },
+            { min: 9.460730472e18, factor: 9.460730472e18, latex: '\\mathrm{ly}' },
+            { min: 1e12, factor: 1e12, latex: '\\mathrm{Tm}' },
+            { min: 1e9, factor: 1e9, latex: '\\mathrm{Gm}' },
+            { min: 1e6, factor: 1e6, latex: '\\mathrm{Mm}' },
+            { min: 1e3, factor: 1e3, latex: '\\mathrm{km}' },
+            { min: 1, factor: 1, latex: '\\mathrm{m}' },
+            { min: 1e-2, factor: 1e-2, latex: '\\mathrm{cm}' },
+            { min: 1e-3, factor: 1e-3, latex: '\\mathrm{mm}' },
+            { min: 1e-6, factor: 1e-6, latex: '\\mu\\mathrm{m}' },
+            { min: 1e-9, factor: 1e-9, latex: '\\mathrm{nm}' },
+            { min: 1e-12, factor: 1e-12, latex: '\\mathrm{pm}' },
+            { min: 1e-15, factor: 1e-15, latex: '\\mathrm{fm}' },
+        ];
+
+        for (const unit of units) {
+            if (absolute >= unit.min) {
+                const scaled = meters / unit.factor;
+                if (Math.abs(scaled) >= 1e4) {
+                    continue;
+                }
+                return `${this.formatLatexNumber(scaled)}\\,${unit.latex}`;
+            }
+        }
+
+        return `${this.formatLatexNumberScientific(meters)}\\,\\mathrm{m}`;
+    }
+
+    formatLatexNumber(value) {
+        const absolute = Math.abs(value);
+        let digits = 2;
+        if (absolute >= 100) {
+            digits = 0;
+        } else if (absolute >= 10) {
+            digits = 1;
+        }
+        return Number(value).toFixed(digits).replace(/\.0+$/, '').replace(/(\.\d*?)0+$/, '$1');
+    }
+
+    formatLatexNumberScientific(value) {
+        const exponent = Math.floor(Math.log10(Math.abs(value)));
+        const mantissa = value / (10 ** exponent);
+        return `${this.formatLatexNumber(mantissa)} \\times 10^{${exponent}}`;
+    }
+
+    latexifyInlineMath(text) {
+        if (!text) return '';
+        return String(text)
+            .replace(/×/g, ' \\\\times ')
+            .replace(/\*/g, ' \\\\times ')
+            .replace(/\bpi\b/g, '\\\\pi')
+            .replace(/([+-]?\\d+(?:\\.\\d+)?)e([+-]?\\d+)/gi, '$1 \\\\times 10^{$2}');
     }
 
     containsMath(text) {
         if (!text) return false;
-        return /\$[^$]+\$|\\\(|\\\[/.test(text);
+        return /\$\$[\s\S]+?\$\$|\$[^$\n]+\$|\\\([\s\S]+?\\\)|\\\[[\s\S]+?\\\]/.test(text);
     }
 
-    typesetMath(element, text) {
+    typesetMath(element, text, attempt = 0) {
         if (!this.containsMath(text)) return;
         if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
-            window.MathJax.typesetPromise([element]).catch(() => {
-                // Keep the rendered markdown even if math typesetting fails.
-            });
+            const runTypeset = () => {
+                if (typeof window.MathJax.typesetClear === 'function') {
+                    window.MathJax.typesetClear([element]);
+                }
+                window.MathJax.typesetPromise([element]).catch(() => {
+                    // Keep the rendered markdown even if math typesetting fails.
+                });
+            };
+
+            if (window.MathJax.startup?.promise && typeof window.MathJax.startup.promise.then === 'function') {
+                window.MathJax.startup.promise.then(runTypeset).catch(runTypeset);
+            } else {
+                runTypeset();
+            }
+            return;
         }
+
+        if (attempt < 8) {
+            window.setTimeout(() => this.typesetMath(element, text, attempt + 1), 150);
+        }
+    }
+
+    preserveMathBlocks(text) {
+        const mathBlocks = [];
+        const placeholderText = String(text).replace(
+            /\$\$[\s\S]+?\$\$|\$[^$\n]+\$|\\\([\s\S]+?\\\)|\\\[[\s\S]+?\\\]/g,
+            (match) => {
+                const placeholder = `@@MATH_BLOCK_${mathBlocks.length}@@`;
+                mathBlocks.push(match);
+                return placeholder;
+            }
+        );
+        return { placeholderText, mathBlocks };
+    }
+
+    restoreMathBlocks(text, mathBlocks) {
+        return mathBlocks.reduce(
+            (restored, block, index) => restored.replaceAll(`@@MATH_BLOCK_${index}@@`, block),
+            text
+        );
     }
 
     /**
@@ -1298,19 +1863,20 @@ class UniversalScales {
      */
     renderMarkdown(text) {
         if (!text) return '';
+        const { placeholderText, mathBlocks } = this.preserveMathBlocks(text);
 
         if (window.marked) {
-            const rawHtml = window.marked.parse(text, {
+            const rawHtml = window.marked.parse(placeholderText, {
                 breaks: true,
                 gfm: true
             });
             if (window.DOMPurify) {
-                return window.DOMPurify.sanitize(rawHtml);
+                return this.restoreMathBlocks(window.DOMPurify.sanitize(rawHtml), mathBlocks);
             }
-            return rawHtml;
+            return this.restoreMathBlocks(rawHtml, mathBlocks);
         }
 
-        let html = text
+        let html = placeholderText
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
@@ -1323,7 +1889,7 @@ class UniversalScales {
         html = html.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
         html = html.replace(/\n{2,}/g, '</p><p>');
         html = html.replace(/\n/g, '<br>');
-        return `<p>${html}</p>`;
+        return this.restoreMathBlocks(`<p>${html}</p>`, mathBlocks);
     }
 
     async openImageModal(imagePath, itemName) {

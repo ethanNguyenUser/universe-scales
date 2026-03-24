@@ -2,27 +2,27 @@
   "base_unit": "newtons",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 35,
-    "candidate_shortfall_to_preferred_target": 15,
-    "empty_bin_count": 12,
+    "candidate_count": 39,
+    "candidate_shortfall_to_preferred_target": 11,
+    "empty_bin_count": 8,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 35,
-    "selected_primary_count": 12,
+    "selected_count": 39,
+    "selected_primary_count": 16,
     "selected_secondary_count": 23,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 35
+      "secondary_reference": 39
     },
-    "target_selected_count": 35
+    "target_selected_count": 39
   },
   "description_format": "markdown",
   "dimension": "force",
   "dimension_description": "Force quantifies how strongly an interaction changes motion or shape, linking directly to acceleration by Newton\u2019s second law. In contact problems it is the agency behind pushes, pulls, and pressures; at a distance it expresses gravity and electromagnetism. Engineers budget forces to keep bridges stable and joints safe. Each entry below states the object and condition so the number is actionable, not abstract.",
   "frontend_group": "motion",
   "frontend_group_label": "Motion & Mechanics",
-  "frontend_order": 50,
+  "frontend_order": 320,
   "items": [
     {
       "caveats": null,
@@ -1704,6 +1704,210 @@
       ],
       "summary_short": "Saturn V remains one of the great force benchmarks of human engineering, with first-stage thrust in the tens of meganewtons.",
       "value": 35000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A large aircraft carrier weighs about a billion newtons on Earth. That makes it a better intuition bridge than jumping directly from rockets to tides. Naval engineering, dry docks, and buoyancy calculations all live around this scale. It is a force that is enormous but still tied to a single familiar machine.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A large aircraft carrier weighs about a billion newtons on Earth. That makes it a better intuition bridge than jumping directly from rockets to tides. Naval engineering, dry docks, and buoyancy calculations all live around this scale. It is a force that is enormous but still tied to a single familiar machine.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
+        "legacy_item_name": "Aircraft Carrier Weight",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Aircraft_carrier"
+        }
+      },
+      "hook": null,
+      "id": "obs:force:scenario-force-aircraft-carrier-weight",
+      "name": "Aircraft Carrier Weight",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Aircraft_carrier",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aircraft-carrier",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aircraft carrier",
+          "url": "https://en.wikipedia.org/wiki/Aircraft_carrier"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-force-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/force.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/force.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/force.yaml"
+        }
+      ],
+      "summary_short": "A large aircraft carrier weighs about a billion newtons on Earth.",
+      "value": 1000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Great Pyramid is a good bridge between rockets and geophysical forces because it is an immense but still imaginable object. Converting its mass to weight under Earth gravity gives a force tens of billions of newtons. That is far beyond engines yet nowhere near planetary tides. It helps anchor the middle ground of truly huge forces.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Great Pyramid is a good bridge between rockets and geophysical forces because it is an immense but still imaginable object. Converting its mass to weight under Earth gravity gives a force tens of billions of newtons. That is far beyond engines yet nowhere near planetary tides. It helps anchor the middle ground of truly huge forces.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
+        "legacy_item_name": "Great Pyramid Weight",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "60000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+        }
+      },
+      "hook": null,
+      "id": "obs:force:scenario-force-great-pyramid-weight",
+      "name": "Great Pyramid Weight",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-great-pyramid-of-giza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Great Pyramid of Giza",
+          "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-force-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/force.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/force.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/force.yaml"
+        }
+      ],
+      "summary_short": "The Great Pyramid is a good bridge between rockets and geophysical forces because it is an immense but still imaginable object.",
+      "value": 60000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "If roughly eight billion people all stood on Earth at once, their combined weight would add up to trillions of newtons. This is a useful collective-human benchmark because it turns population into a mechanical force you can compare with mountains, storms, and rockets. The figure assumes an average body mass near 65 kilograms. It is an intentionally perspective-giving estimate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "If roughly eight billion people all stood on Earth at once, their combined weight would add up to trillions of newtons. This is a useful collective-human benchmark because it turns population into a mechanical force you can compare with mountains, storms, and rockets. The figure assumes an average body mass near 65 kilograms. It is an intentionally perspective-giving estimate.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
+        "legacy_item_name": "All Humans Standing on Earth",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5000000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/World_population"
+        }
+      },
+      "hook": null,
+      "id": "obs:force:scenario-force-all-humans-standing-on-earth",
+      "name": "All Humans Standing on Earth",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/World_population",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-world-population",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "World population",
+          "url": "https://en.wikipedia.org/wiki/World_population"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-force-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/force.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/force.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/force.yaml"
+        }
+      ],
+      "summary_short": "If roughly eight billion people all stood on Earth at once, their combined weight would add up to trillions of newtons.",
+      "value": 5000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The weight of a small asteroid under Earth gravity reaches into the quadrillion-newton range. This helps bridge the gap between human engineering and genuinely planetary-scale forces. Even a modest asteroid is mechanically far beyond anything humans can push or lift. The number assumes an object a few hundred meters across with rocky density.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The weight of a small asteroid under Earth gravity reaches into the quadrillion-newton range. This helps bridge the gap between human engineering and genuinely planetary-scale forces. Even a modest asteroid is mechanically far beyond anything humans can push or lift. The number assumes an object a few hundred meters across with rocky density.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
+        "legacy_item_name": "Small Asteroid Weight",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000000000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Asteroid"
+        }
+      },
+      "hook": null,
+      "id": "obs:force:scenario-force-small-asteroid-weight",
+      "name": "Small Asteroid Weight",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Asteroid",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-asteroid",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Asteroid",
+          "url": "https://en.wikipedia.org/wiki/Asteroid"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-force-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/force.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/force.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/force.yaml"
+        }
+      ],
+      "summary_short": "The weight of a small asteroid under Earth gravity reaches into the quadrillion-newton range.",
+      "value": 1000000000000000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },

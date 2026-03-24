@@ -2,35 +2,35 @@
   "base_unit": "joules_per_kilogram_kelvin",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 35,
-    "candidate_shortfall_to_preferred_target": 15,
+    "candidate_count": 28,
+    "candidate_shortfall_to_preferred_target": 22,
     "empty_bin_count": 10,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "required_min_items": 24,
-    "selected_count": 35,
+    "selected_count": 28,
     "selected_primary_count": 14,
-    "selected_secondary_count": 21,
+    "selected_secondary_count": 14,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 35
+      "secondary_reference": 28
     },
-    "target_selected_count": 35
+    "target_selected_count": 28
   },
   "description_format": "markdown",
   "dimension": "specific-heat",
   "dimension_description": "Specific heat capacity measures how much energy a kilogram of material needs to change temperature by one kelvin. This scale is good for intuition about why water moderates climate, why metals heat quickly, and why gases and cryogens behave so differently. Values depend on temperature and phase, so representative conditions matter.",
   "frontend_group": "materials",
   "frontend_group_label": "Materials & Matter",
-  "frontend_order": 360,
+  "frontend_order": 530,
   "items": [
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Lead is a classic low-specific-heat material. Source-side figure: `128 J/(kg*K)` for Representative specific heat.",
+      "description": "Lead is a classic low-specific-heat material.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Lead is a classic low-specific-heat material. Source-side figure: `128 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Lead is a classic low-specific-heat material.",
       "facts": {
         "canonical_name": "Lead",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -81,66 +81,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Lead has a relatively low specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `128 J/(kg*K)` for Representative specific heat capacity of lead.",
+      "description": "Gold changes temperature quickly because of low specific heat.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Lead has a relatively low specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `128 J/(kg*K)` for Representative specific heat capacity of lead.",
-      "facts": {
-        "canonical_name": "Lead",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "128.0",
-          "source_basis": "Representative specific heat capacity of lead.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Lead",
-          "source_value_text": "128"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-lead",
-      "name": "Lead",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Lead",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-lead",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Lead",
-          "url": "https://en.wikipedia.org/wiki/Lead"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Lead has a relatively low specific heat.",
-      "value": 128.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Gold changes temperature quickly because of low specific heat. Source-side figure: `129 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Gold changes temperature quickly because of low specific heat. Source-side figure: `129 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Gold changes temperature quickly because of low specific heat.",
       "facts": {
         "canonical_name": "Gold",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -191,10 +135,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mercury is another low-specific-heat liquid metal benchmark. Source-side figure: `140 J/(kg*K)` for Representative specific heat.",
+      "description": "Mercury is another low-specific-heat liquid metal benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mercury is another low-specific-heat liquid metal benchmark. Source-side figure: `140 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Mercury is another low-specific-heat liquid metal benchmark.",
       "facts": {
         "canonical_name": "Mercury",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -245,10 +189,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Silver is low but not as low as gold or lead. Source-side figure: `235 J/(kg*K)` for Representative specific heat.",
+      "description": "Silver is low but not as low as gold or lead.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Silver is low but not as low as gold or lead. Source-side figure: `235 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Silver is low but not as low as gold or lead.",
       "facts": {
         "canonical_name": "Silver",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -299,10 +243,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Copper is a classic metal benchmark. Source-side figure: `385 J/(kg*K)` for Representative specific heat.",
+      "description": "Copper is a classic metal benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Copper is a classic metal benchmark. Source-side figure: `385 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Copper is a classic metal benchmark.",
       "facts": {
         "canonical_name": "Copper",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -353,66 +297,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Copper is a standard low-to-mid specific-heat metal. Here the quantity refers to `specific heat capacity`. Source-side figure: `385 J/(kg*K)` for Representative specific heat capacity of copper.",
+      "description": "Iron is a useful structural-metal benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Copper is a standard low-to-mid specific-heat metal. Here the quantity refers to `specific heat capacity`. Source-side figure: `385 J/(kg*K)` for Representative specific heat capacity of copper.",
-      "facts": {
-        "canonical_name": "Copper",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "385.0",
-          "source_basis": "Representative specific heat capacity of copper.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Copper",
-          "source_value_text": "385"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-copper",
-      "name": "Copper",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Copper",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-copper",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Copper",
-          "url": "https://en.wikipedia.org/wiki/Copper"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Copper is a standard low-to-mid specific-heat metal.",
-      "value": 385.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Iron is a useful structural-metal benchmark. Source-side figure: `449 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Iron is a useful structural-metal benchmark. Source-side figure: `449 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Iron is a useful structural-metal benchmark.",
       "facts": {
         "canonical_name": "Iron",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -463,66 +351,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Iron is a useful engineering-metal reference for specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `449 J/(kg*K)` for Representative specific heat capacity of iron.",
+      "description": "Steel sits around half a kilojoule per kilogram kelvin.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Iron is a useful engineering-metal reference for specific heat. Here the quantity refers to `specific heat capacity`. Source-side figure: `449 J/(kg*K)` for Representative specific heat capacity of iron.",
-      "facts": {
-        "canonical_name": "Iron",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "449.0",
-          "source_basis": "Representative specific heat capacity of iron.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Iron",
-          "source_value_text": "449"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-iron",
-      "name": "Iron",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Iron",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-iron",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Iron",
-          "url": "https://en.wikipedia.org/wiki/Iron"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Iron is a useful engineering-metal reference for specific heat.",
-      "value": 449.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Steel sits around half a kilojoule per kilogram kelvin. Source-side figure: `490 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Steel sits around half a kilojoule per kilogram kelvin. Source-side figure: `490 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Steel sits around half a kilojoule per kilogram kelvin.",
       "facts": {
         "canonical_name": "Steel",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -573,10 +405,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Silicon is a handy semiconductor specific-heat benchmark. Source-side figure: `700 J/(kg*K)` for Representative specific heat.",
+      "description": "Silicon is a handy semiconductor specific-heat benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Silicon is a handy semiconductor specific-heat benchmark. Source-side figure: `700 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Silicon is a handy semiconductor specific-heat benchmark.",
       "facts": {
         "canonical_name": "Silicon",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -627,10 +459,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Granite anchors the rock-and-building-material range. Here the quantity refers to `specific heat capacity`. Source-side figure: `790 J/(kg*K)` for Representative specific heat capacity of granite.",
+      "description": "Granite anchors the rock-and-building-material range.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Granite anchors the rock-and-building-material range. Here the quantity refers to `specific heat capacity`. Source-side figure: `790 J/(kg*K)` for Representative specific heat capacity of granite.",
+      "description_medium": "Granite anchors the rock-and-building-material range.",
       "facts": {
         "canonical_name": "Granite",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -683,10 +515,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Dry sand is a good geological benchmark. Source-side figure: `830 J/(kg*K)` for Representative specific heat.",
+      "description": "Dry sand is a good geological benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Dry sand is a good geological benchmark. Source-side figure: `830 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Dry sand is a good geological benchmark.",
       "facts": {
         "canonical_name": "Sand",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -737,10 +569,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Glass sits around the same scale as sand and concrete. Source-side figure: `840 J/(kg*K)` for Representative specific heat.",
+      "description": "Glass sits around the same scale as sand and concrete.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Glass sits around the same scale as sand and concrete. Source-side figure: `840 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Glass sits around the same scale as sand and concrete.",
       "facts": {
         "canonical_name": "Glass",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -791,10 +623,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Concrete's thermal inertia matters in buildings and cities. Source-side figure: `880 J/(kg*K)` for Representative specific heat.",
+      "description": "Concrete's thermal inertia matters in buildings and cities.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Concrete's thermal inertia matters in buildings and cities. Source-side figure: `880 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Concrete's thermal inertia matters in buildings and cities.",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -845,10 +677,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aluminum combines high conductivity with moderate specific heat. Source-side figure: `897 J/(kg*K)` for Representative specific heat.",
+      "description": "Aluminum combines high conductivity with moderate specific heat.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Aluminum combines high conductivity with moderate specific heat. Source-side figure: `897 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Aluminum combines high conductivity with moderate specific heat.",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -899,10 +731,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aluminum is a common lightweight engineering metal with a moderate heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `900 J/(kg*K)` for Representative specific heat capacity of aluminum.",
+      "description": "Aluminum is a common lightweight engineering metal with a moderate heat capacity.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Aluminum is a common lightweight engineering metal with a moderate heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `900 J/(kg*K)` for Representative specific heat capacity of aluminum.",
+      "description_medium": "Aluminum is a common lightweight engineering metal with a moderate heat capacity.",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -955,10 +787,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Air is a useful gas-phase benchmark. Source-side figure: `1005 J/(kg*K)` for Representative specific heat.",
+      "description": "Air is a useful gas-phase benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Air is a useful gas-phase benchmark. Source-side figure: `1005 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Air is a useful gas-phase benchmark.",
       "facts": {
         "canonical_name": "Air",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1009,66 +841,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Air\u2019s specific heat is important for atmospheric and HVAC reasoning. Here the quantity refers to `specific heat capacity`. Source-side figure: `1005 J/(kg*K)` for Representative specific heat capacity of air at constant pressure.",
+      "description": "Wood holds significantly more heat per kilogram than metals.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Air\u2019s specific heat is important for atmospheric and HVAC reasoning. Here the quantity refers to `specific heat capacity`. Source-side figure: `1005 J/(kg*K)` for Representative specific heat capacity of air at constant pressure.",
-      "facts": {
-        "canonical_name": "Air",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "1005.0",
-          "source_basis": "Representative specific heat capacity of air at constant pressure.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Air",
-          "source_value_text": "1005"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-air",
-      "name": "Air",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Air",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-air",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Air",
-          "url": "https://en.wikipedia.org/wiki/Air"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Air\u2019s specific heat is important for atmospheric and HVAC reasoning.",
-      "value": 1005.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Wood holds significantly more heat per kilogram than metals. Source-side figure: `1700 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Wood holds significantly more heat per kilogram than metals. Source-side figure: `1700 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Wood holds significantly more heat per kilogram than metals.",
       "facts": {
         "canonical_name": "Wood",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1119,66 +895,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Wood stores heat better than metals but worse than water. Here the quantity refers to `specific heat capacity`. Source-side figure: `1700 J/(kg*K)` for Representative specific heat capacity of dry wood.",
+      "description": "A specific food-oil benchmark close to other vegetable oils.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Wood stores heat better than metals but worse than water. Here the quantity refers to `specific heat capacity`. Source-side figure: `1700 J/(kg*K)` for Representative specific heat capacity of dry wood.",
-      "facts": {
-        "canonical_name": "Wood",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "1700.0",
-          "source_basis": "Representative specific heat capacity of dry wood.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Wood",
-          "source_value_text": "1700"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-wood",
-      "name": "Wood",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Wood",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-wood",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Wood",
-          "url": "https://en.wikipedia.org/wiki/Wood"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Wood stores heat better than metals but worse than water.",
-      "value": 1700.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A specific food-oil benchmark close to other vegetable oils. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A specific food-oil benchmark close to other vegetable oils. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "A specific food-oil benchmark close to other vegetable oils.",
       "facts": {
         "canonical_name": "Olive oil",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1229,10 +949,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.",
+      "description": "Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself. Source-side figure: `1970 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself.",
       "facts": {
         "canonical_name": "Vegetable oil",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1283,10 +1003,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Water vapor sits around two kilojoules per kilogram kelvin. Source-side figure: `2000 J/(kg*K)` for Representative specific heat.",
+      "description": "Water vapor sits around two kilojoules per kilogram kelvin.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Water vapor sits around two kilojoules per kilogram kelvin. Source-side figure: `2000 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Water vapor sits around two kilojoules per kilogram kelvin.",
       "facts": {
         "canonical_name": "Steam",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1337,10 +1057,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Ice stores much more heat per kilogram than most solids. Source-side figure: `2090 J/(kg*K)` for Representative specific heat.",
+      "description": "Ice stores much more heat per kilogram than most solids.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Ice stores much more heat per kilogram than most solids. Source-side figure: `2090 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Ice stores much more heat per kilogram than most solids.",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1391,10 +1111,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Snow behaves broadly like ice in specific heat. Source-side figure: `2100 J/(kg*K)` for Representative specific heat.",
+      "description": "Snow behaves broadly like ice in specific heat.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Snow behaves broadly like ice in specific heat. Source-side figure: `2100 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Snow behaves broadly like ice in specific heat.",
       "facts": {
         "canonical_name": "Snow",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1445,10 +1165,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Ice provides a phase-linked heat-capacity reference. Here the quantity refers to `specific heat capacity`. Source-side figure: `2100 J/(kg*K)` for Representative specific heat capacity of ice.",
+      "description": "Ice provides a phase-linked heat-capacity reference.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Ice provides a phase-linked heat-capacity reference. Here the quantity refers to `specific heat capacity`. Source-side figure: `2100 J/(kg*K)` for Representative specific heat capacity of ice.",
+      "description_medium": "Ice provides a phase-linked heat-capacity reference.",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1501,10 +1221,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Alcohols have relatively high specific heat among common liquids. Source-side figure: `2440 J/(kg*K)` for Representative specific heat.",
+      "description": "Alcohols have relatively high specific heat among common liquids.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Alcohols have relatively high specific heat among common liquids. Source-side figure: `2440 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Alcohols have relatively high specific heat among common liquids.",
       "facts": {
         "canonical_name": "Ethanol",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1555,66 +1275,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Ethanol is a familiar liquid with fairly high heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `2440 J/(kg*K)` for Representative specific heat capacity of ethanol.",
+      "description": "Lithium is a light metal with unusually high specific heat.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Ethanol is a familiar liquid with fairly high heat capacity. Here the quantity refers to `specific heat capacity`. Source-side figure: `2440 J/(kg*K)` for Representative specific heat capacity of ethanol.",
-      "facts": {
-        "canonical_name": "Ethanol",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "2440.0",
-          "source_basis": "Representative specific heat capacity of ethanol.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Ethanol",
-          "source_value_text": "2440"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-ethanol",
-      "name": "Ethanol",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Ethanol",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-ethanol",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Ethanol",
-          "url": "https://en.wikipedia.org/wiki/Ethanol"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Ethanol is a familiar liquid with fairly high heat capacity.",
-      "value": 2440.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Lithium is a light metal with unusually high specific heat. Source-side figure: `3580 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Lithium is a light metal with unusually high specific heat. Source-side figure: `3580 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Lithium is a light metal with unusually high specific heat.",
       "facts": {
         "canonical_name": "Lithium",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1665,10 +1329,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Water's high specific heat is one of the most important pedagogical benchmarks in physics. Source-side figure: `4184 J/(kg*K)` for Representative specific heat.",
+      "description": "Water's high specific heat is one of the most important pedagogical benchmarks in physics.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Water's high specific heat is one of the most important pedagogical benchmarks in physics. Source-side figure: `4184 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Water's high specific heat is one of the most important pedagogical benchmarks in physics.",
       "facts": {
         "canonical_name": "Water",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1719,66 +1383,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Water is the canonical high specific-heat everyday liquid. Here the quantity refers to `specific heat capacity`. Source-side figure: `4184 J/(kg*K)` for Representative specific heat capacity of liquid water.",
+      "description": "Ammonia is a notable high-specific-heat working fluid.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Water is the canonical high specific-heat everyday liquid. Here the quantity refers to `specific heat capacity`. Source-side figure: `4184 J/(kg*K)` for Representative specific heat capacity of liquid water.",
-      "facts": {
-        "canonical_name": "Water",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "4184.0",
-          "source_basis": "Representative specific heat capacity of liquid water.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Water",
-          "source_value_text": "4184"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:scenario-specific-heat-water",
-      "name": "Water",
-      "qualifiers": {
-        "measurement": "specific heat capacity"
-      },
-      "source": "https://en.wikipedia.org/wiki/Water",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-water",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Water",
-          "url": "https://en.wikipedia.org/wiki/Water"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Water is the canonical high specific-heat everyday liquid.",
-      "value": 4184.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Ammonia is a notable high-specific-heat working fluid. Source-side figure: `4700 J/(kg*K)` for Representative specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Ammonia is a notable high-specific-heat working fluid. Source-side figure: `4700 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Ammonia is a notable high-specific-heat working fluid.",
       "facts": {
         "canonical_name": "Ammonia",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1829,10 +1437,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Helium is a high-specific-heat gas reference. Source-side figure: `5190 J/(kg*K)` for Representative specific heat.",
+      "description": "Helium is a high-specific-heat gas reference.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Helium is a high-specific-heat gas reference. Source-side figure: `5190 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Helium is a high-specific-heat gas reference.",
       "facts": {
         "canonical_name": "Helium",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1883,10 +1491,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Hydrogen sits at the extreme high end among common substances. Source-side figure: `14300 J/(kg*K)` for Representative specific heat.",
+      "description": "Hydrogen sits at the extreme high end among common substances.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Hydrogen sits at the extreme high end among common substances. Source-side figure: `14300 J/(kg*K)` for Representative specific heat.",
+      "description_medium": "Hydrogen sits at the extreme high end among common substances.",
       "facts": {
         "canonical_name": "Hydrogen",
         "ingest_source": "dataset/raw/curated/specific-heat.json",

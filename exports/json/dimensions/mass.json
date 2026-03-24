@@ -2,7 +2,7 @@
   "base_unit": "kilograms",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 53,
+    "candidate_count": 54,
     "candidate_shortfall_to_preferred_target": 0,
     "empty_bin_count": 3,
     "preferred_max_items": 80,
@@ -22,15 +22,15 @@
   "dimension_description": "Mass tracks inertia and the amount of matter under a stated definition, from subatomic particles to galaxies. Some entries are direct measurements, while others are derived estimates such as the mass of a lake from its volume and density. Every item names the object and the measurement basis so the scale remains comparable.",
   "frontend_group": "fundamental",
   "frontend_group_label": "Fundamental Scales",
-  "frontend_order": 30,
+  "frontend_order": 140,
   "items": [
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Rest mass of a single electron. Here the quantity refers to `rest mass`.",
+      "description": "Rest mass of a single electron.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Rest mass of a single electron. Here the quantity refers to `rest mass`.",
+      "description_medium": "Rest mass of a single electron.",
       "facts": {
         "canonical_name": "Electron",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -80,10 +80,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Rest mass of a single proton. Here the quantity refers to `rest mass`.",
+      "description": "Rest mass of a single proton.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Rest mass of a single proton. Here the quantity refers to `rest mass`.",
+      "description_medium": "Rest mass of a single proton.",
       "facts": {
         "canonical_name": "Proton",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -133,10 +133,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of one H2O molecule. Derived using `18 u converted to kilograms`. Here the quantity refers to `single molecule`.",
+      "description": "Mass of one H2O molecule.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of one H2O molecule. Derived using `18 u converted to kilograms`. Here the quantity refers to `single molecule`.",
+      "description_medium": "Mass of one H2O molecule.",
       "facts": {
         "canonical_name": "Water molecule",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -188,10 +188,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Characteristic mass of a bacterial ribosome. Here the quantity refers to `representative bacterial ribosome`.",
+      "description": "Characteristic mass of a bacterial ribosome.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Characteristic mass of a bacterial ribosome. Here the quantity refers to `representative bacterial ribosome`.",
+      "description_medium": "Characteristic mass of a bacterial ribosome.",
       "facts": {
         "canonical_name": "Ribosome",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -241,10 +241,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of a single influenza virus particle. Here the quantity refers to `single virion`.",
+      "description": "Representative mass of a single influenza virus particle.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of a single influenza virus particle. Here the quantity refers to `single virion`.",
+      "description_medium": "Representative mass of a single influenza virus particle.",
       "facts": {
         "canonical_name": "Influenza virion",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -294,10 +294,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate wet mass of one E. coli cell. Here the quantity refers to `single cell`.",
+      "description": "Approximate wet mass of one E. coli cell.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate wet mass of one E. coli cell. Here the quantity refers to `single cell`.",
+      "description_medium": "Approximate wet mass of one E. coli cell.",
       "facts": {
         "canonical_name": "Escherichia coli cell",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -348,10 +348,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate mass of a single human egg cell. Here the quantity refers to `single cell`.",
+      "description": "Approximate mass of a single human egg cell.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate mass of a single human egg cell. Here the quantity refers to `single cell`.",
+      "description_medium": "Approximate mass of a single human egg cell.",
       "facts": {
         "canonical_name": "Human ovum",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -401,10 +401,67 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of one dry grain of rice. Here the quantity refers to `single grain`.",
+      "description": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of one dry grain of rice. Here the quantity refers to `single grain`.",
+      "description_medium": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
+      "facts": {
+        "canonical_name": "Planck mass",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "m_P = \\sqrt{\\hbar c / G}",
+          "method": "derived",
+          "original_value_text": "2.176434342051127e-08",
+          "source_basis": "Derived from \u0127, c, and G using the Planck-unit mass scale.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Planck_units",
+          "source_value_text": "2.176434342051127e-08 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-planck-mass",
+      "name": "Planck mass",
+      "qualifiers": {
+        "measurement": "natural mass scale"
+      },
+      "source": "https://en.wikipedia.org/wiki/Planck_units",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-planck-units",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Planck units",
+          "url": "https://en.wikipedia.org/wiki/Planck_units"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
+      "value": 2.176434342051127e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of one dry grain of rice.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of one dry grain of rice.",
       "facts": {
         "canonical_name": "Grain of rice",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -455,10 +512,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of an adult worker honey bee. Here the quantity refers to `worker adult`.",
+      "description": "Representative mass of an adult worker honey bee.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of an adult worker honey bee. Here the quantity refers to `worker adult`.",
+      "description_medium": "Representative mass of an adult worker honey bee.",
       "facts": {
         "canonical_name": "Honey bee",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -508,10 +565,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative body mass of an adult house mouse. Here the quantity refers to `adult body mass`.",
+      "description": "Representative body mass of an adult house mouse.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative body mass of an adult house mouse. Here the quantity refers to `adult body mass`.",
+      "description_medium": "Representative body mass of an adult house mouse.",
       "facts": {
         "canonical_name": "House mouse",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -561,10 +618,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of an adult domestic cat. Here the quantity refers to `adult body mass`.",
+      "description": "Representative mass of an adult domestic cat.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of an adult domestic cat. Here the quantity refers to `adult body mass`.",
+      "description_medium": "Representative mass of an adult domestic cat.",
       "facts": {
         "canonical_name": "Cat",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -614,10 +671,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of an adult human. Here the quantity refers to `adult body mass`.",
+      "description": "Representative mass of an adult human.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of an adult human. Here the quantity refers to `adult body mass`.",
+      "description_medium": "Representative mass of an adult human.",
       "facts": {
         "canonical_name": "Human",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -667,10 +724,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of an adult giraffe. Here the quantity refers to `adult body mass`.",
+      "description": "Representative mass of an adult giraffe.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of an adult giraffe. Here the quantity refers to `adult body mass`.",
+      "description_medium": "Representative mass of an adult giraffe.",
       "facts": {
         "canonical_name": "Giraffe",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -773,10 +830,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of a large adult blue whale. Here the quantity refers to `adult body mass`.",
+      "description": "Representative mass of a large adult blue whale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of a large adult blue whale. Here the quantity refers to `adult body mass`.",
+      "description_medium": "Representative mass of a large adult blue whale.",
       "facts": {
         "canonical_name": "Blue whale",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -932,10 +989,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate mass of the Great Pyramid of Giza. Here the quantity refers to `estimated total stone mass`.",
+      "description": "Approximate mass of the Great Pyramid of Giza.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate mass of the Great Pyramid of Giza. Here the quantity refers to `estimated total stone mass`.",
+      "description_medium": "Approximate mass of the Great Pyramid of Giza.",
       "facts": {
         "canonical_name": "Great Pyramid of Giza",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -985,10 +1042,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass estimate for Halley's Comet. Here the quantity refers to `estimated comet mass`. Source-side figure: `2.2 x 10^14 kg` for Reported approximate mass of Halley's Comet.",
+      "description": "Representative mass estimate for Halley's Comet.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass estimate for Halley's Comet. Here the quantity refers to `estimated comet mass`. Source-side figure: `2.2 x 10^14 kg` for Reported approximate mass of Halley's Comet.",
+      "description_medium": "Representative mass estimate for Halley's Comet.",
       "facts": {
         "canonical_name": "Halley's Comet",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1041,10 +1098,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of Lake Superior's water using its volume and freshwater density. Derived using `volume times density`. Here the quantity refers to `water mass`.",
+      "description": "Mass of Lake Superior's water using its volume and freshwater density.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of Lake Superior's water using its volume and freshwater density. Derived using `volume times density`. Here the quantity refers to `water mass`.",
+      "description_medium": "Mass of Lake Superior's water using its volume and freshwater density.",
       "facts": {
         "canonical_name": "Lake Superior",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1096,10 +1153,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the dwarf planet Ceres. Here the quantity refers to `gravitationally inferred mass`.",
+      "description": "Mass of the dwarf planet Ceres.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the dwarf planet Ceres. Here the quantity refers to `gravitationally inferred mass`.",
+      "description_medium": "Mass of the dwarf planet Ceres.",
       "facts": {
         "canonical_name": "Ceres",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1149,10 +1206,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the dwarf planet Pluto. Here the quantity refers to `dwarf-planet mass`. Source-side figure: `1.309 x 10^22 kg` for Reported Pluto mass.",
+      "description": "Mass of the dwarf planet Pluto.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the dwarf planet Pluto. Here the quantity refers to `dwarf-planet mass`. Source-side figure: `1.309 x 10^22 kg` for Reported Pluto mass.",
+      "description_medium": "Mass of the dwarf planet Pluto.",
       "facts": {
         "canonical_name": "Pluto",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1205,10 +1262,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of Earth's Moon. Here the quantity refers to `gravitationally inferred mass`.",
+      "description": "Mass of Earth's Moon.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of Earth's Moon. Here the quantity refers to `gravitationally inferred mass`.",
+      "description_medium": "Mass of Earth's Moon.",
       "facts": {
         "canonical_name": "Moon",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1258,66 +1315,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of Mercury. Here the quantity refers to `planetary mass`. Source-side figure: `3.3011 x 10^23 kg` for Reported Mercury mass.",
+      "description": "Mass of Venus.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of Mercury. Here the quantity refers to `planetary mass`. Source-side figure: `3.3011 x 10^23 kg` for Reported Mercury mass.",
-      "facts": {
-        "canonical_name": "Mercury",
-        "ingest_source": "dataset/raw/curated/mass.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "3.3011e+23",
-          "source_basis": "Reported Mercury mass.",
-          "source_unit": "kg",
-          "source_url": "https://en.wikipedia.org/wiki/Mercury_(planet)",
-          "source_value_text": "3.3011 x 10^23 kg"
-        }
-      },
-      "hook": null,
-      "id": "obs:mass:entity-mercury",
-      "name": "Mercury",
-      "qualifiers": {
-        "measurement": "planetary mass"
-      },
-      "source": "https://en.wikipedia.org/wiki/Mercury_(planet)",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-mercury-planet",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Mercury (planet)",
-          "url": "https://en.wikipedia.org/wiki/Mercury_(planet)"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-mass-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/mass.json",
-          "url": "repo://dataset/raw/curated/mass.json"
-        }
-      ],
-      "summary_short": "Mass of Mercury.",
-      "value": 3.3011e+23,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Mass of Venus. Here the quantity refers to `planetary mass`. Source-side figure: `4.8675 x 10^24 kg` for Reported Venus mass.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Mass of Venus. Here the quantity refers to `planetary mass`. Source-side figure: `4.8675 x 10^24 kg` for Reported Venus mass.",
+      "description_medium": "Mass of Venus.",
       "facts": {
         "canonical_name": "Venus",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1370,10 +1371,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of Uranus. Here the quantity refers to `planetary mass`. Source-side figure: `8.681 x 10^25 kg` for Reported Uranus mass.",
+      "description": "Mass of Uranus.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of Uranus. Here the quantity refers to `planetary mass`. Source-side figure: `8.681 x 10^25 kg` for Reported Uranus mass.",
+      "description_medium": "Mass of Uranus.",
       "facts": {
         "canonical_name": "Uranus",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1426,10 +1427,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of Neptune. Here the quantity refers to `planetary mass`. Source-side figure: `1.024 x 10^26 kg` for Reported Neptune mass.",
+      "description": "Mass of Neptune.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of Neptune. Here the quantity refers to `planetary mass`. Source-side figure: `1.024 x 10^26 kg` for Reported Neptune mass.",
+      "description_medium": "Mass of Neptune.",
       "facts": {
         "canonical_name": "Neptune",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1482,10 +1483,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of Saturn. Here the quantity refers to `planetary mass`. Source-side figure: `5.683 x 10^26 kg` for Reported Saturn mass.",
+      "description": "Mass of Saturn.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of Saturn. Here the quantity refers to `planetary mass`. Source-side figure: `5.683 x 10^26 kg` for Reported Saturn mass.",
+      "description_medium": "Mass of Saturn.",
       "facts": {
         "canonical_name": "Saturn",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1538,10 +1539,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A representative lower-bound brown dwarf mass near the deuterium-burning limit. Derived using `13 jupiter_masses converted to kilograms`. Here the quantity refers to `threshold brown-dwarf mass`. Source-side figure: `13 Jupiter masses` for Brown dwarfs are commonly defined above about 13 Jupiter masses. Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.",
+      "description": "A representative lower-bound brown dwarf mass near the deuterium-burning limit.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A representative lower-bound brown dwarf mass near the deuterium-burning limit. Derived using `13 jupiter_masses converted to kilograms`. Here the quantity refers to `threshold brown-dwarf mass`. Source-side figure: `13 Jupiter masses` for Brown dwarfs are commonly defined above about 13 Jupiter masses. Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.",
+      "description_medium": "A representative lower-bound brown dwarf mass near the deuterium-burning limit.",
       "facts": {
         "canonical_name": "Brown dwarf at the deuterium limit",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1597,10 +1598,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the ultracool red dwarf star TRAPPIST-1. Here the quantity refers to `stellar mass`. Source-side figure: `0.089 solar masses` for Reported TRAPPIST-1 stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Mass of the ultracool red dwarf star TRAPPIST-1.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the ultracool red dwarf star TRAPPIST-1. Here the quantity refers to `stellar mass`. Source-side figure: `0.089 solar masses` for Reported TRAPPIST-1 stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Mass of the ultracool red dwarf star TRAPPIST-1.",
       "facts": {
         "canonical_name": "TRAPPIST-1",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1654,10 +1655,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the Sun. Here the quantity refers to `stellar mass`.",
+      "description": "Mass of the Sun.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the Sun. Here the quantity refers to `stellar mass`.",
+      "description_medium": "Mass of the Sun.",
       "facts": {
         "canonical_name": "Sun",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1707,10 +1708,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the A-type main-sequence star Sirius A. Here the quantity refers to `stellar mass`. Source-side figure: `2.063 solar masses` for Reported Sirius A stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the A-type main-sequence star Sirius A. Here the quantity refers to `stellar mass`. Source-side figure: `2.063 solar masses` for Reported Sirius A stellar mass. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
       "facts": {
         "canonical_name": "Sirius A",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1756,7 +1757,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Mass of the A-type main-sequence star Sirius A.",
+      "summary_short": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
       "value": 4.103307e+30,
       "value_type": "measured",
       "wikidata_qid": null
@@ -1764,10 +1765,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`. Source-side figure: `14.8 solar masses` for NASA states the black hole has about 14.8 times the mass of the Sun. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Estimated mass of the Cygnus X-1 stellar-mass black hole. Here the quantity refers to `black hole mass`. Source-side figure: `14.8 solar masses` for NASA states the black hole has about 14.8 times the mass of the Sun. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
       "facts": {
         "canonical_name": "Cygnus X-1 black hole",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1813,7 +1814,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Estimated mass of the Cygnus X-1 stellar-mass black hole.",
+      "summary_short": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
       "value": 2.94372e+31,
       "value_type": "measured",
       "wikidata_qid": null
@@ -1821,10 +1822,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass estimate for the red supergiant Betelgeuse. Here the quantity refers to `stellar mass`. Source-side figure: `16.5 solar masses` for Reported Betelgeuse mass estimate. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass estimate for the red supergiant Betelgeuse. Here the quantity refers to `stellar mass`. Source-side figure: `16.5 solar masses` for Reported Betelgeuse mass estimate. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
       "facts": {
         "canonical_name": "Betelgeuse",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1870,7 +1871,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Representative mass estimate for the red supergiant Betelgeuse.",
+      "summary_short": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
       "value": 3.28185e+31,
       "value_type": "measured",
       "wikidata_qid": null
@@ -1878,10 +1879,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`. Source-side figure: `265 solar masses` for ESO describes R136a1 as having a current mass of about 265 Suns. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Current mass of the extreme star R136a1 in the Tarantula Nebula. Here the quantity refers to `current stellar mass`. Source-side figure: `265 solar masses` for ESO describes R136a1 as having a current mass of about 265 Suns. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
       "facts": {
         "canonical_name": "R136a1",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1927,7 +1928,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Current mass of the extreme star R136a1 in the Tarantula Nebula.",
+      "summary_short": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
       "value": 5.27085e+32,
       "value_type": "measured",
       "wikidata_qid": null
@@ -1935,10 +1936,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`. Source-side figure: `50,000 stars` for Derived from ESO's description that the cluster packs tens of thousands of stars into the region.",
+      "description": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `roughly 50,000 stars at about one solar mass each`. Source-side figure: `50,000 stars` for Derived from ESO's description that the cluster packs tens of thousands of stars into the region.",
+      "description_medium": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.",
       "facts": {
         "canonical_name": "R136 star cluster",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1994,10 +1995,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`. Source-side figure: `150,000 stars` for Derived from NASA's statement that Messier 14 is home to over 150,000 stars.",
+      "description": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `150,000 stars at about one solar mass each`. Source-side figure: `150,000 stars` for Derived from NASA's statement that Messier 14 is home to over 150,000 stars.",
+      "description_medium": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.",
       "facts": {
         "canonical_name": "Messier 14",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2053,10 +2054,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `4 million solar masses` for NASA states Sagittarius A* contains about 4 million solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the supermassive black hole at the center of the Milky Way. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `4 million solar masses` for NASA states Sagittarius A* contains about 4 million solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
       "facts": {
         "canonical_name": "Sagittarius A*",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2102,7 +2103,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Mass of the supermassive black hole at the center of the Milky Way.",
+      "summary_short": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
       "value": 7.956e+36,
       "value_type": "measured",
       "wikidata_qid": null
@@ -2110,10 +2111,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`. Source-side figure: `5 million solar masses` for ESO reports a total cluster mass of about five million Suns. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way. Here the quantity refers to `total cluster mass`. Source-side figure: `5 million solar masses` for ESO reports a total cluster mass of about five million Suns. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
       "facts": {
         "canonical_name": "Omega Centauri",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2159,7 +2160,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Total mass estimate for Omega Centauri, the most massive globular cluster in the Milky Way.",
+      "summary_short": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
       "value": 9.945e+36,
       "value_type": "measured",
       "wikidata_qid": null
@@ -2167,10 +2168,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`. Source-side figure: `140 million stars` for Derived from NASA's statement that M60-UCD1 contains 140 million stars.",
+      "description": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `140 million stars at about one solar mass each`. Source-side figure: `140 million stars` for Derived from NASA's statement that M60-UCD1 contains 140 million stars.",
+      "description_medium": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
       "facts": {
         "canonical_name": "M60-UCD1",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2218,7 +2219,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Approximate stellar mass of the ultracompact dwarf galaxy M60-UCD1, using NASA's count of 140 million stars.",
+      "summary_short": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
       "value": 2.7846e+38,
       "value_type": "derived",
       "wikidata_qid": null
@@ -2226,10 +2227,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`. Source-side figure: `5 billion stars` for Derived from NASA's description that NGC 5474 contains several billion stars.",
+      "description": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `about 5 billion stars at about one solar mass each`. Source-side figure: `5 billion stars` for Derived from NASA's description that NGC 5474 contains several billion stars.",
+      "description_medium": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.",
       "facts": {
         "canonical_name": "NGC 5474",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2285,10 +2286,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `6.5 billion solar masses` for NASA reports that M87* contains 6.5 billion solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description": "Mass of the supermassive black hole at the center of Messier 87.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mass of the supermassive black hole at the center of Messier 87. Here the quantity refers to `supermassive black hole mass`. Source-side figure: `6.5 billion solar masses` for NASA reports that M87* contains 6.5 billion solar masses. Converted solar masses to kilograms using the canonical solar-mass constant.",
+      "description_medium": "Mass of the supermassive black hole at the center of Messier 87.",
       "facts": {
         "canonical_name": "M87*",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2342,10 +2343,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `10 billion stars at about one solar mass each`. Source-side figure: `10 billion stars` for Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.",
+      "description": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `10 billion stars at about one solar mass each`. Source-side figure: `10 billion stars` for Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.",
+      "description_medium": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.",
       "facts": {
         "canonical_name": "Large Magellanic Cloud",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2401,10 +2402,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `40 billion stars at about one solar mass each`. Source-side figure: `40 billion stars` for Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.",
+      "description": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `40 billion stars at about one solar mass each`. Source-side figure: `40 billion stars` for Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.",
+      "description_medium": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.",
       "facts": {
         "canonical_name": "Triangulum Galaxy",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2460,10 +2461,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `100 billion stars at about one solar mass each`. Source-side figure: `100 billion stars` for Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.",
+      "description": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `100 billion stars at about one solar mass each`. Source-side figure: `100 billion stars` for Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.",
+      "description_medium": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.",
       "facts": {
         "canonical_name": "Whirlpool Galaxy",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2519,10 +2520,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`. Source-side figure: `400 billion stars` for Derived from NASA's estimate that M60 contains 400 billion stars.",
+      "description": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `400 billion stars at about one solar mass each`. Source-side figure: `400 billion stars` for Derived from NASA's estimate that M60 contains 400 billion stars.",
+      "description_medium": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.",
       "facts": {
         "canonical_name": "M60",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2578,10 +2579,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`. Source-side figure: `1 trillion stars` for Derived from NASA's estimate that Andromeda contains over one trillion stars.",
+      "description": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars. Derived using `star_count * solar_mass`. Here the quantity refers to `stellar mass proxy from star count`. Assumes `1 trillion stars at about one solar mass each`. Source-side figure: `1 trillion stars` for Derived from NASA's estimate that Andromeda contains over one trillion stars.",
+      "description_medium": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
       "facts": {
         "canonical_name": "Andromeda galaxy",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2629,7 +2630,7 @@
           "url": "repo://dataset/raw/curated/mass.json"
         }
       ],
-      "summary_short": "Approximate stellar mass implied by NASA's estimate that the Andromeda galaxy contains over 1 trillion stars.",
+      "summary_short": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
       "value": 1.989e+42,
       "value_type": "derived",
       "wikidata_qid": null
@@ -2637,10 +2638,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative mass of the Milky Way including dark matter. Here the quantity refers to `total estimated mass`.",
+      "description": "Representative mass of the Milky Way including dark matter.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Representative mass of the Milky Way including dark matter. Here the quantity refers to `total estimated mass`.",
+      "description_medium": "Representative mass of the Milky Way including dark matter.",
       "facts": {
         "canonical_name": "Milky Way",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2690,10 +2691,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Order-of-magnitude mass of the Virgo Supercluster. Here the quantity refers to `estimated total mass`.",
+      "description": "Order-of-magnitude mass of the Virgo Supercluster.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Order-of-magnitude mass of the Virgo Supercluster. Here the quantity refers to `estimated total mass`.",
+      "description_medium": "Order-of-magnitude mass of the Virgo Supercluster.",
       "facts": {
         "canonical_name": "Virgo Supercluster",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2743,10 +2744,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Order-of-magnitude mass of matter in the observable universe. Here the quantity refers to `observable universe mass estimate`.",
+      "description": "Order-of-magnitude mass of matter in the observable universe.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Order-of-magnitude mass of matter in the observable universe. Here the quantity refers to `observable universe mass estimate`.",
+      "description_medium": "Order-of-magnitude mass of matter in the observable universe.",
       "facts": {
         "canonical_name": "Observable universe",
         "ingest_source": "dataset/raw/curated/mass.json",

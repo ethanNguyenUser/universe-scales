@@ -167,7 +167,7 @@
   },
   "charge": {
     "base_unit": "coulombs",
-    "dimension_description": "Electric charge measures how much net positive or negative charge a system carries. Some entries are direct physical charges like the elementary charge, while others are derived from capacities, battery ratings, or stored-energy assumptions. This dimension is useful for connecting microscopic charges, static electricity, capacitors, storms, and batteries on one logarithmic axis.",
+    "dimension_description": "Electric charge measures how much net positive or negative charge a system carries. This version now leans toward perspective-giving examples like static shocks, lightning, thunderclouds, batteries, and the Faraday constant rather than long ladders of arbitrary capacitors. The goal is to connect microscopic charge, biology, atmospheric electricity, and stored electrical systems on one axis.",
     "name": "Charge",
     "quantity_kind": "charge",
     "related_resources": [
@@ -193,7 +193,7 @@
   },
   "current": {
     "base_unit": "amperes",
-    "dimension_description": "Electric current measures how quickly charge moves through a circuit or plasma. Some entries here are direct device ratings, while others are derived from one charge carrier crossing in a stated time or from power and voltage using I = P / V. This lets the scale connect single-ion channels, USB power delivery, household wiring, industrial systems, and lightning.",
+    "dimension_description": "Electric current measures how quickly charge moves through a circuit, membrane, plasma, or conductor. The examples now deliberately include biology, implants, consumer electronics, household power, heavy industry, and lightning so the scale is easier to orient yourself on. Some values are direct ratings, while others are stated as representative operating currents for a concrete scenario.",
     "name": "Current",
     "quantity_kind": "current",
     "related_resources": [
@@ -553,8 +553,8 @@
   },
   "sound-intensity": {
     "base_unit": "watts_per_square_meter",
-    "dimension_description": "Sound intensity measures acoustic power flow per unit area. This version is linear in watts per square meter, even when the source is commonly expressed in decibels. That makes it easier to put whispers, traffic, jet engines, and shock waves on one logarithmic axis.",
-    "name": "Sound Intensity",
+    "dimension_description": "This scale stores acoustic intensity in watts per square meter, but by default it can be read in decibels because that is how people usually reason about loudness. Most source-side figures are reported in dB SPL and then converted into physical intensity for canonical storage, so the item names emphasize context such as distance from the source. That keeps whispers, appliances, traffic, thunder, jets, and launch pads on one comparable axis while still allowing direct intensity units when needed.",
+    "name": "Loudness",
     "quantity_kind": "sound_intensity",
     "related_resources": [
       {
@@ -574,12 +574,18 @@
         "symbol": "W/m^2",
         "conversion_factor": 1.0,
         "description": "Watts per square meter are the canonical storage unit for sound intensity."
+      },
+      {
+        "name": "decibels",
+        "symbol": "dB",
+        "conversion_factor": 1.0,
+        "description": "Decibel sound level referenced to the standard threshold of hearing. This is the most intuitive default way to read loudness, even though the canonical stored quantity is physical intensity."
       }
     ]
   },
   "flops": {
     "base_unit": "flops",
-    "dimension_description": "This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, and supercomputers. It mixes direct published device specs with reference magnitudes like gigaflops, teraflops, and exaflops. Precision mode matters in real hardware, so the notes are representative rather than exhaustive.",
+    "dimension_description": "This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, AI accelerators, and supercomputers. It now includes AI-flavored reference points such as approximate LLM inference workloads and training-scale estimates alongside direct hardware specs. Precision mode still matters in real hardware, so the notes are representative rather than exhaustive.",
     "name": "FLOPs",
     "quantity_kind": "flops",
     "related_resources": [
@@ -757,7 +763,7 @@
   },
   "precision": {
     "base_unit": "relative_uncertainty",
-    "dimension_description": "This scale stores precision as relative uncertainty or fractional error. Smaller values mean higher precision, so it is inverted compared with everyday language like \u201cmore precise.\u201d That inversion is worth it because relative uncertainty is much more coherent and log-friendly than a vague notion of accuracy.",
+    "dimension_description": "This scale stores precision as relative uncertainty or fractional error. Smaller values mean higher precision, so it is inverted compared with everyday language like “more precise.” That inversion is worth it because relative uncertainty is much more coherent and log-friendly than a vague notion of accuracy.",
     "name": "Precision & Accuracy",
     "quantity_kind": "precision",
     "related_resources": [
@@ -823,7 +829,7 @@
   },
   "disease-rarity": {
     "base_unit": "prevalence_fraction",
-    "dimension_description": "This scale stores disease rarity as prevalence fraction, so higher values mean more common conditions and lower values mean rarer ones. It is intentionally simple and does not collapse incidence, prevalence, lifetime risk, and carrier frequency into one number unless that qualifier is stated. The frontend can later re-express these as \u201c1 in N\u201d when helpful.",
+    "dimension_description": "This scale stores disease rarity as prevalence fraction, so higher values mean more common conditions and lower values mean rarer ones. It is intentionally simple and does not collapse incidence, prevalence, lifetime risk, and carrier frequency into one number unless that qualifier is stated. The frontend can later re-express these as “1 in N” when helpful.",
     "name": "Disease Rarity",
     "quantity_kind": "disease_rarity",
     "related_resources": [
@@ -889,7 +895,7 @@
   },
   "cell-count": {
     "base_unit": "count",
-    "dimension_description": "This scale counts biological cells, from a single bacterium up to all bacteria on Earth. It is dimensionless mathematically but still extremely informative conceptually. Qualifiers matter because \u201ccell count\u201d can mean one organism, one tissue sample, or a planetary total.",
+    "dimension_description": "This scale counts biological cells, from a single bacterium up to all bacteria on Earth. It is dimensionless mathematically but still extremely informative conceptually. Qualifiers matter because “cell count” can mean one organism, one tissue sample, or a planetary total.",
     "name": "Cell Count",
     "quantity_kind": "cell_count",
     "related_resources": [
@@ -999,7 +1005,7 @@
   },
   "odor-concentration": {
     "base_unit": "parts_per_billion_by_volume",
-    "dimension_description": "This first-pass odor scale is not \u201chow smelly\u201d in the abstract. It is the airborne concentration of a named odorant, usually in parts per billion by volume, which makes the axis more objective and shareable. Perception still depends on chemistry and thresholds, so the named compound is part of the data, not a side note.",
+    "dimension_description": "This first-pass odor scale is not “how smelly” in the abstract. It is the airborne concentration of a named odorant, usually in parts per billion by volume, which makes the axis more objective and shareable. Perception still depends on chemistry and thresholds, so the named compound is part of the data, not a side note.",
     "name": "Odor Concentration",
     "quantity_kind": "odor_concentration",
     "related_resources": [
@@ -1275,7 +1281,7 @@
   },
   "utility": {
     "base_unit": "qaly_equivalent",
-    "dimension_description": "This phase-one utility scale is intentionally a proxy: it stores welfare or utility in quality-adjusted life-year equivalents. That makes the values easier to compare with health and time scales, but it is not a universal theory of value. Use it as a pedagogical scaffold for \u201chow much good or bad is this outcome roughly like,\u201d not as a final moral ranking.",
+    "dimension_description": "This phase-one utility scale is intentionally a proxy: it stores welfare or utility in quality-adjusted life-year equivalents. That makes the values easier to compare with health and time scales, but it is not a universal theory of value. Use it as a pedagogical scaffold for “how much good or bad is this outcome roughly like,” not as a final moral ranking.",
     "name": "Utility",
     "quantity_kind": "utility_proxy",
     "related_resources": [
@@ -1296,6 +1302,50 @@
         "symbol": "QALYe",
         "conversion_factor": 1.0,
         "description": "Phase one stores utility in quality-adjusted life-year equivalents."
+      }
+    ]
+  },
+  "intensity": {
+    "base_unit": "watts_per_square_meter",
+    "dimension_description": "This scale stores physical intensity as power per unit area in watts per square meter. It is meant for radiation, beams, and flux-like limits rather than photometric brightness or sound loudness. That makes it the natural home for solar irradiance, laser focus, collapse-threshold estimates, and the Planck-intensity scale.",
+    "name": "Intensity",
+    "quantity_kind": "irradiance",
+    "related_resources": [
+      {
+        "name": "Irradiance",
+        "url": "https://en.wikipedia.org/wiki/Irradiance"
+      },
+      {
+        "name": "Planck units",
+        "url": "https://en.wikipedia.org/wiki/Planck_units"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "watts per square meter",
+        "symbol": "W/m^2",
+        "conversion_factor": 1.0,
+        "description": "Canonical storage unit for physical intensity or power flux."
+      },
+      {
+        "name": "kilowatts per square meter",
+        "symbol": "kW/m^2",
+        "conversion_factor": 0.001,
+        "description": "Convenient for sunlight and engineering heat-flux scales."
+      },
+      {
+        "name": "megawatts per square meter",
+        "symbol": "MW/m^2",
+        "conversion_factor": 1e-06,
+        "description": "Useful for concentrated heat flux and industrial beams."
+      },
+      {
+        "name": "watts per square centimeter",
+        "symbol": "W/cm^2",
+        "conversion_factor": 0.0001,
+        "description": "Common beam-intensity unit in laser physics."
       }
     ]
   }

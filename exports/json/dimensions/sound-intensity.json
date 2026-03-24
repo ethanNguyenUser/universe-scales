@@ -19,18 +19,18 @@
   },
   "description_format": "markdown",
   "dimension": "sound-intensity",
-  "dimension_description": "Sound intensity measures acoustic power flow per unit area. This version is linear in watts per square meter, even when the source is commonly expressed in decibels. That makes it easier to put whispers, traffic, jet engines, and shock waves on one logarithmic axis.",
+  "dimension_description": "This scale stores acoustic intensity in watts per square meter, but by default it can be read in decibels because that is how people usually reason about loudness. Most source-side figures are reported in dB SPL and then converted into physical intensity for canonical storage, so the item names emphasize context such as distance from the source. That keeps whispers, appliances, traffic, thunder, jets, and launch pads on one comparable axis while still allowing direct intensity units when needed.",
   "frontend_group": "fields",
   "frontend_group_label": "Fields, Waves & Radiation",
-  "frontend_order": 320,
+  "frontend_order": 550,
   "items": [
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A world-class anechoic chamber can fall below the nominal threshold of hearing. Source-side figure: `-9 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "A world-class anechoic chamber can fall below the nominal threshold of hearing.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A world-class anechoic chamber can fall below the nominal threshold of hearing. Source-side figure: `-9 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "A world-class anechoic chamber can fall below the nominal threshold of hearing.",
       "facts": {
         "canonical_name": "Anechoic chamber",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -83,10 +83,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The conventional zero-decibel reference intensity in air. Source-side figure: `0 dB` for Standard acoustic reference intensity. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "The conventional zero-decibel reference intensity in air.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The conventional zero-decibel reference intensity in air. Source-side figure: `0 dB` for Standard acoustic reference intensity. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "The conventional zero-decibel reference intensity in air.",
       "facts": {
         "canonical_name": "Threshold of hearing",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -139,10 +139,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A very quiet natural sound, around 10 dB. Source-side figure: `10 dB` for Representative quiet natural sound level. Converted decibels to linear intensity.",
+      "description": "A very quiet natural sound, around 10 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A very quiet natural sound, around 10 dB. Source-side figure: `10 dB` for Representative quiet natural sound level. Converted decibels to linear intensity.",
+      "description_medium": "A very quiet natural sound, around 10 dB.",
       "facts": {
         "canonical_name": "Rustling leaves",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -195,10 +195,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A quiet rural night sits just above the acoustic floor of human hearing. Source-side figure: `10 dB` for Converted 10 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A quiet rural night sits just above the acoustic floor of human hearing.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A quiet rural night sits just above the acoustic floor of human hearing. Source-side figure: `10 dB` for Converted 10 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A quiet rural night sits just above the acoustic floor of human hearing.",
       "facts": {
         "canonical_name": "Quiet rural night",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -251,10 +251,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A whisper is often placed near 20 dB. Source-side figure: `20 dB` for Representative whisper sound level. Converted decibels to linear intensity.",
+      "description": "A whisper is often placed near 20 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A whisper is often placed near 20 dB. Source-side figure: `20 dB` for Representative whisper sound level. Converted decibels to linear intensity.",
+      "description_medium": "A whisper is often placed near 20 dB.",
       "facts": {
         "canonical_name": "Whisper",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -307,10 +307,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A quiet room is often around 30 dB. Source-side figure: `30 dB` for Representative quiet-room sound level. Converted decibels to linear intensity.",
+      "description": "A quiet room is often around 30 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A quiet room is often around 30 dB. Source-side figure: `30 dB` for Representative quiet-room sound level. Converted decibels to linear intensity.",
+      "description_medium": "A quiet room is often around 30 dB.",
       "facts": {
         "canonical_name": "Quiet bedroom",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -363,12 +363,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A quiet office is audible but still far from intrusive. Source-side figure: `30 dB` for Converted 30 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A quiet office is audible but still far from intrusive.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A quiet office is audible but still far from intrusive. Source-side figure: `30 dB` for Converted 30 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A quiet office is audible but still far from intrusive.",
       "facts": {
-        "canonical_name": "Quiet office",
+        "canonical_name": "Quiet office at desk",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
@@ -383,7 +383,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:scenario-sound-intensity-quiet-office",
-      "name": "Quiet office",
+      "name": "Quiet office at desk",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Sound_pressure",
       "source_count": 2,
@@ -419,10 +419,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A library or quiet office is often around 40 dB. Source-side figure: `40 dB` for Representative library sound level. Converted decibels to linear intensity.",
+      "description": "A library or quiet office is often around 40 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A library or quiet office is often around 40 dB. Source-side figure: `40 dB` for Representative library sound level. Converted decibels to linear intensity.",
+      "description_medium": "A library or quiet office is often around 40 dB.",
       "facts": {
         "canonical_name": "Library",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -475,12 +475,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A refrigerator humming in the background is a familiar mid-quiet sound. Source-side figure: `40 dB` for Converted 40 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A quiet home at night, with only distant appliances and airflow, sits near this loudness.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A refrigerator humming in the background is a familiar mid-quiet sound. Source-side figure: `40 dB` for Converted 40 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A quiet home at night, with only distant appliances and airflow, sits near this loudness.",
       "facts": {
-        "canonical_name": "Refrigerator hum",
+        "canonical_name": "Quiet home at night",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
@@ -494,8 +494,8 @@
         }
       },
       "hook": null,
-      "id": "obs:sound-intensity:scenario-sound-intensity-refrigerator-hum",
-      "name": "Refrigerator hum",
+      "id": "obs:sound-intensity:scenario-sound-intensity-quiet-home-night",
+      "name": "Quiet home at night",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Sound_pressure",
       "source_count": 2,
@@ -523,7 +523,7 @@
           "url": "repo://dataset/raw/curated/sound-intensity.json"
         }
       ],
-      "summary_short": "A refrigerator humming in the background is a familiar mid-quiet sound.",
+      "summary_short": "A quiet home at night, with only distant appliances and airflow, sits near this loudness.",
       "value": 1e-08,
       "value_type": "derived",
       "wikidata_qid": null
@@ -531,12 +531,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A nearby refrigerator hum lives around the mid-forties of decibels. Source-side figure: `45 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "A nearby refrigerator hum lives around the mid-forties of decibels.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A nearby refrigerator hum lives around the mid-forties of decibels. Source-side figure: `45 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "A nearby refrigerator hum lives around the mid-forties of decibels.",
       "facts": {
-        "canonical_name": "Refrigerator hum",
+        "canonical_name": "Refrigerator hum at 1 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
@@ -551,7 +551,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-refrigerator-hum-intensity",
-      "name": "Refrigerator hum",
+      "name": "Refrigerator hum at 1 m",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Refrigerator",
       "source_count": 2,
@@ -587,10 +587,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Steady rainfall is often placed near 50 dB. Source-side figure: `50 dB` for Representative rainfall sound level. Converted decibels to linear intensity.",
+      "description": "Steady rainfall is often placed near 50 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Steady rainfall is often placed near 50 dB. Source-side figure: `50 dB` for Representative rainfall sound level. Converted decibels to linear intensity.",
+      "description_medium": "Steady rainfall is often placed near 50 dB.",
       "facts": {
         "canonical_name": "Rainfall",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -643,10 +643,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Normal conversation is often cited as about 60 dB. Source-side figure: `60 dB` for Representative conversation sound level. Converted decibels to linear intensity.",
+      "description": "Normal conversation is often cited as about 60 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Normal conversation is often cited as about 60 dB. Source-side figure: `60 dB` for Representative conversation sound level. Converted decibels to linear intensity.",
+      "description_medium": "Normal conversation is often cited as about 60 dB.",
       "facts": {
         "canonical_name": "Conversation",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -699,10 +699,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A busy restaurant sits well above conversation but below hazardous levels. Source-side figure: `65 dB` for Converted 65 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A busy restaurant sits well above conversation but below hazardous levels.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A busy restaurant sits well above conversation but below hazardous levels. Source-side figure: `65 dB` for Converted 65 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A busy restaurant sits well above conversation but below hazardous levels.",
       "facts": {
         "canonical_name": "Busy restaurant",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -755,10 +755,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A vacuum cleaner is a good seventy-decibel household benchmark. Source-side figure: `70 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "A vacuum cleaner is a good seventy-decibel household benchmark.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A vacuum cleaner is a good seventy-decibel household benchmark. Source-side figure: `70 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "A vacuum cleaner is a good seventy-decibel household benchmark.",
       "facts": {
         "canonical_name": "Vacuum cleaner",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -811,10 +811,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Traffic noise is a common urban background level. Source-side figure: `70 dB` for Converted 70 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "Traffic noise is a common urban background level.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Traffic noise is a common urban background level. Source-side figure: `70 dB` for Converted 70 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "Traffic noise is a common urban background level.",
       "facts": {
         "canonical_name": "City traffic",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -867,12 +867,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Urban traffic is often around 80 dB. Source-side figure: `80 dB` for Representative traffic noise level. Converted decibels to linear intensity.",
+      "description": "Urban traffic is often around 80 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Urban traffic is often around 80 dB. Source-side figure: `80 dB` for Representative traffic noise level. Converted decibels to linear intensity.",
+      "description_medium": "Urban traffic is often around 80 dB.",
       "facts": {
-        "canonical_name": "Busy street",
+        "canonical_name": "Busy street at sidewalk distance",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -887,7 +887,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-busy-street-intensity",
-      "name": "Busy street",
+      "name": "Busy street at sidewalk distance",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Traffic_noise",
       "source_count": 2,
@@ -923,10 +923,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Occupational hearing-damage guidance often becomes serious around eighty-five decibels. Source-side figure: `85 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "Occupational hearing-damage guidance often becomes serious around eighty-five decibels.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Occupational hearing-damage guidance often becomes serious around eighty-five decibels. Source-side figure: `85 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "Occupational hearing-damage guidance often becomes serious around eighty-five decibels.",
       "facts": {
         "canonical_name": "Hearing damage guideline",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -979,12 +979,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A subway platform or lawn mower is around 90 dB. Source-side figure: `90 dB` for Representative subway-platform sound level. Converted decibels to linear intensity.",
+      "description": "A subway platform or lawn mower is around 90 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A subway platform or lawn mower is around 90 dB. Source-side figure: `90 dB` for Representative subway-platform sound level. Converted decibels to linear intensity.",
+      "description_medium": "A subway platform or lawn mower is around 90 dB.",
       "facts": {
-        "canonical_name": "Subway platform",
+        "canonical_name": "Subway platform at platform edge",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -999,7 +999,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-subway-platform-intensity",
-      "name": "Subway platform",
+      "name": "Subway platform at platform edge",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Noise_health_effects",
       "source_count": 2,
@@ -1035,10 +1035,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A lawn mower is loud enough to warrant hearing protection for long exposure. Source-side figure: `90 dB` for Converted 90 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A lawn mower is loud enough to warrant hearing protection for long exposure.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A lawn mower is loud enough to warrant hearing protection for long exposure. Source-side figure: `90 dB` for Converted 90 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A lawn mower is loud enough to warrant hearing protection for long exposure.",
       "facts": {
         "canonical_name": "Power lawn mower",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1091,12 +1091,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A loud motorcycle or power tool is around 100 dB. Source-side figure: `100 dB` for Representative loud vehicle sound level. Converted decibels to linear intensity.",
+      "description": "A loud motorcycle or power tool is around 100 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A loud motorcycle or power tool is around 100 dB. Source-side figure: `100 dB` for Representative loud vehicle sound level. Converted decibels to linear intensity.",
+      "description_medium": "A loud motorcycle or power tool is around 100 dB.",
       "facts": {
-        "canonical_name": "Motorcycle at close range",
+        "canonical_name": "Motorcycle at 1 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -1111,7 +1111,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-motorcycle-sound-intensity",
-      "name": "Motorcycle at close range",
+      "name": "Motorcycle at 1 m",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Motorcycle",
       "source_count": 2,
@@ -1147,10 +1147,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A chainsaw is a high-intensity mechanical sound source. Source-side figure: `100 dB` for Converted 100 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A chainsaw is a high-intensity mechanical sound source.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A chainsaw is a high-intensity mechanical sound source. Source-side figure: `100 dB` for Converted 100 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A chainsaw is a high-intensity mechanical sound source.",
       "facts": {
         "canonical_name": "Chainsaw",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1203,12 +1203,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A concert speaker stack can sit near the threshold where sustained exposure becomes risky. Source-side figure: `110 dB` for Converted 110 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "Standing on a nightclub dance floor is already in the hearing-protection zone.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A concert speaker stack can sit near the threshold where sustained exposure becomes risky. Source-side figure: `110 dB` for Converted 110 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "Standing on a nightclub dance floor is already in the hearing-protection zone.",
       "facts": {
-        "canonical_name": "Concert speaker",
+        "canonical_name": "Nightclub dance floor",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
@@ -1222,8 +1222,8 @@
         }
       },
       "hook": null,
-      "id": "obs:sound-intensity:scenario-sound-intensity-concert-speaker",
-      "name": "Concert speaker",
+      "id": "obs:sound-intensity:scenario-sound-intensity-nightclub-dance-floor",
+      "name": "Nightclub dance floor",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Live_sound_reinforcement",
       "source_count": 2,
@@ -1251,7 +1251,7 @@
           "url": "repo://dataset/raw/curated/sound-intensity.json"
         }
       ],
-      "summary_short": "A concert speaker stack can sit near the threshold where sustained exposure becomes risky.",
+      "summary_short": "Standing on a nightclub dance floor is already in the hearing-protection zone.",
       "value": 0.09999999999999999,
       "value_type": "derived",
       "wikidata_qid": null
@@ -1259,12 +1259,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Rock concerts often sit around 110 dB. Source-side figure: `110 dB` for Representative concert sound level. Converted decibels to linear intensity.",
+      "description": "Rock concerts often sit around 110 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Rock concerts often sit around 110 dB. Source-side figure: `110 dB` for Representative concert sound level. Converted decibels to linear intensity.",
+      "description_medium": "Rock concerts often sit around 110 dB.",
       "facts": {
-        "canonical_name": "Rock concert",
+        "canonical_name": "Rock concert near speaker stack",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -1279,7 +1279,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-rock-concert-intensity",
-      "name": "Rock concert",
+      "name": "Rock concert near speaker stack",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Rock_concert",
       "source_count": 2,
@@ -1315,10 +1315,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Around 120 dB, sound becomes intensely uncomfortable. Source-side figure: `120 dB` for Representative threshold of discomfort. Converted decibels to linear intensity.",
+      "description": "Around 120 dB, sound becomes intensely uncomfortable.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Around 120 dB, sound becomes intensely uncomfortable. Source-side figure: `120 dB` for Representative threshold of discomfort. Converted decibels to linear intensity.",
+      "description_medium": "Around 120 dB, sound becomes intensely uncomfortable.",
       "facts": {
         "canonical_name": "Threshold of discomfort",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1371,10 +1371,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A close thunderclap is one of the loud natural sounds most people encounter. Source-side figure: `120 dB` for Converted 120 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A close thunderclap is one of the loud natural sounds most people encounter.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A close thunderclap is one of the loud natural sounds most people encounter. Source-side figure: `120 dB` for Converted 120 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A close thunderclap is one of the loud natural sounds most people encounter.",
       "facts": {
         "canonical_name": "Thunderclap",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1427,12 +1427,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "An air-raid siren or equivalent nearby source can reach around 130 dB. Source-side figure: `130 dB` for Representative siren sound level. Converted decibels to linear intensity.",
+      "description": "An air-raid siren or equivalent nearby source can reach around 130 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "An air-raid siren or equivalent nearby source can reach around 130 dB. Source-side figure: `130 dB` for Representative siren sound level. Converted decibels to linear intensity.",
+      "description_medium": "An air-raid siren or equivalent nearby source can reach around 130 dB.",
       "facts": {
-        "canonical_name": "Air-raid siren nearby",
+        "canonical_name": "Emergency siren at curbside",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -1447,7 +1447,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-air-raid-siren-intensity",
-      "name": "Air-raid siren nearby",
+      "name": "Emergency siren at curbside",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Civil_defense_siren",
       "source_count": 2,
@@ -1483,12 +1483,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A jet taking off near the runway is painfully loud without protection. Source-side figure: `130 dB` for Converted 130 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description": "A jet taking off near the runway is painfully loud without protection.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A jet taking off near the runway is painfully loud without protection. Source-side figure: `130 dB` for Converted 130 dB SPL to linear intensity. Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
+      "description_medium": "A jet taking off near the runway is painfully loud without protection.",
       "facts": {
-        "canonical_name": "Jet takeoff nearby",
+        "canonical_name": "Jet takeoff at 100 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity using I = I0 \u00d7 10^(L/10).",
@@ -1503,7 +1503,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:scenario-sound-intensity-jet-takeoff-nearby",
-      "name": "Jet takeoff nearby",
+      "name": "Jet takeoff at 100 m",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Jet_aircraft",
       "source_count": 2,
@@ -1539,68 +1539,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A jet at close takeoff distance is a classic one-hundred-forty-decibel example. Source-side figure: `140 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "The often-cited threshold of pain is around 140 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A jet at close takeoff distance is a classic one-hundred-forty-decibel example. Source-side figure: `140 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "The often-cited threshold of pain is around 140 dB.",
       "facts": {
-        "canonical_name": "Jet takeoff at 100 m",
-        "ingest_source": "dataset/raw/curated/sound-intensity.json",
-        "source_trace": {
-          "conversion_note": "Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
-          "derivation_note": "I = I0 * 10^(L/10)",
-          "method": "derived",
-          "original_value_text": "100.0",
-          "source_basis": "Representative sound level.",
-          "source_unit": "dB",
-          "source_url": "https://en.wikipedia.org/wiki/Jet_aircraft",
-          "source_value_text": "140 dB"
-        }
-      },
-      "hook": null,
-      "id": "obs:sound-intensity:entity-jet-takeoff-intensity",
-      "name": "Jet takeoff at 100 m",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Jet_aircraft",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-jet-aircraft",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Jet aircraft",
-          "url": "https://en.wikipedia.org/wiki/Jet_aircraft"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-sound-intensity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/sound-intensity.json",
-          "url": "repo://dataset/raw/curated/sound-intensity.json"
-        }
-      ],
-      "summary_short": "A jet at close takeoff distance is a classic one-hundred-forty-decibel example.",
-      "value": 100.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "The often-cited threshold of pain is around 140 dB. Source-side figure: `140 dB` for Representative threshold of pain for sound. Converted decibels to linear intensity.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The often-cited threshold of pain is around 140 dB. Source-side figure: `140 dB` for Representative threshold of pain for sound. Converted decibels to linear intensity.",
-      "facts": {
-        "canonical_name": "Threshold of pain",
+        "canonical_name": "Threshold of pain at the ear",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -1615,7 +1559,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-threshold-of-pain-sound",
-      "name": "Threshold of pain",
+      "name": "Threshold of pain at the ear",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Threshold_of_pain",
       "source_count": 2,
@@ -1651,12 +1595,68 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A gunshot produces a very intense acoustic pulse. Source-side figure: `150 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "Standing a few dozen meters from a jet at takeoff is immediately hazardous without protection.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A gunshot produces a very intense acoustic pulse. Source-side figure: `150 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "Standing a few dozen meters from a jet at takeoff is immediately hazardous without protection.",
       "facts": {
-        "canonical_name": "Gunshot nearby",
+        "canonical_name": "Jet takeoff at 30 m",
+        "ingest_source": "dataset/raw/curated/sound-intensity.json",
+        "source_trace": {
+          "conversion_note": "Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+          "derivation_note": "I = I0 * 10^(L/10)",
+          "method": "derived",
+          "original_value_text": "100.0",
+          "source_basis": "Representative sound level at tens of meters from a jet takeoff.",
+          "source_unit": "dB",
+          "source_url": "https://en.wikipedia.org/wiki/Jet_aircraft",
+          "source_value_text": "140 dB"
+        }
+      },
+      "hook": null,
+      "id": "obs:sound-intensity:scenario-sound-intensity-jet-takeoff-30m",
+      "name": "Jet takeoff at 30 m",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Jet_aircraft",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-jet-aircraft",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Jet aircraft",
+          "url": "https://en.wikipedia.org/wiki/Jet_aircraft"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-sound-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/sound-intensity.json",
+          "url": "repo://dataset/raw/curated/sound-intensity.json"
+        }
+      ],
+      "summary_short": "Standing a few dozen meters from a jet at takeoff is immediately hazardous without protection.",
+      "value": 100.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A gunshot produces a very intense acoustic pulse.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A gunshot produces a very intense acoustic pulse.",
+      "facts": {
+        "canonical_name": "Gunshot at the shooter ear",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
@@ -1671,7 +1671,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-gunshot-intensity",
-      "name": "Gunshot nearby",
+      "name": "Gunshot at the shooter ear",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Gunshot",
       "source_count": 2,
@@ -1707,12 +1707,12 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A jet engine at very close range can exceed 150 dB. Source-side figure: `150 dB` for Representative close-range jet-engine sound level. Converted decibels to linear intensity.",
+      "description": "A jet engine at very close range can exceed 150 dB.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "A jet engine at very close range can exceed 150 dB. Source-side figure: `150 dB` for Representative close-range jet-engine sound level. Converted decibels to linear intensity.",
+      "description_medium": "A jet engine at very close range can exceed 150 dB.",
       "facts": {
-        "canonical_name": "Jet engine nearby",
+        "canonical_name": "Jet engine at 30 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
         "source_trace": {
           "conversion_note": "Converted decibels to linear intensity.",
@@ -1727,7 +1727,7 @@
       },
       "hook": null,
       "id": "obs:sound-intensity:entity-jet-engine-intensity",
-      "name": "Jet engine nearby",
+      "name": "Jet engine at 30 m",
       "qualifiers": {},
       "source": "https://en.wikipedia.org/wiki/Jet_engine",
       "source_count": 2,
@@ -1763,10 +1763,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance. Source-side figure: `180 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description": "At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance. Source-side figure: `180 dB` for Representative sound level. Converted decibels to linear intensity using 1e-12 W/m^2 as the reference.",
+      "description_medium": "At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance.",
       "facts": {
         "canonical_name": "Rocket launch pad",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1839,6 +1839,12 @@
       "description": "Watts per square meter are the canonical storage unit for sound intensity.",
       "name": "watts per square meter",
       "symbol": "W/m^2"
+    },
+    {
+      "conversion_factor": 1.0,
+      "description": "Decibel sound level referenced to the standard threshold of hearing. This is the most intuitive default way to read loudness, even though the canonical stored quantity is physical intensity.",
+      "name": "decibels",
+      "symbol": "dB"
     },
     {
       "conversion_factor": 1000000.0,

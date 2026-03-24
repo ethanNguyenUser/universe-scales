@@ -52,15 +52,15 @@ description_format: markdown
 scale_mode: log
 frontend_group: geometry
 frontend_group_label: Geometry & Scale
-frontend_order: 70
+frontend_order: 220
 items:
 - id: obs:volume:entity-proton
   name: Proton volume
   value: 2.5e-45
-  description: Geometric volume implied by the proton charge radius. Derived using `(4/3)*pi*r^3`.
+  description: Geometric volume implied by the proton charge radius.
   description_format: markdown
   summary_short: Geometric volume implied by the proton charge radius.
-  description_medium: Geometric volume implied by the proton charge radius. Derived using `(4/3)*pi*r^3`.
+  description_medium: Geometric volume implied by the proton charge radius.
   description_long: null
   hook: null
   caveats: null
@@ -102,10 +102,10 @@ items:
 - id: obs:volume:entity-hydrogen-atom
   name: Hydrogen atom volume
   value: 6.2e-31
-  description: Geometric volume implied by the Bohr radius. Derived using `(4/3)*pi*r^3`.
+  description: Geometric volume implied by the Bohr radius.
   description_format: markdown
   summary_short: Geometric volume implied by the Bohr radius.
-  description_medium: Geometric volume implied by the Bohr radius. Derived using `(4/3)*pi*r^3`.
+  description_medium: Geometric volume implied by the Bohr radius.
   description_long: null
   hook: null
   caveats: null
@@ -144,56 +144,13 @@ items:
   qualifiers:
     derivation: (4/3)*pi*r^3
     measurement: volume
-- id: obs:volume:entity-hydrogen-atom-volume
-  name: Hydrogen atom volume
-  value: 1.0e-30
-  description: Order-of-magnitude volume associated with a hydrogen atom. Here the quantity refers to `effective atomic volume`.
-  description_format: markdown
-  summary_short: Order-of-magnitude volume associated with a hydrogen atom.
-  description_medium: Order-of-magnitude volume associated with a hydrogen atom. Here the quantity refers to `effective atomic volume`.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Hydrogen atom volume
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: derived
-      original_value_text: 1e-30
-      source_url: https://en.wikipedia.org/wiki/Hydrogen_atom
-  source: https://en.wikipedia.org/wiki/Hydrogen_atom
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-hydrogen-atom
-    url: https://en.wikipedia.org/wiki/Hydrogen_atom
-    title: Hydrogen atom
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: effective atomic volume
 - id: obs:volume:entity-water
   name: Water molecule volume
   value: 1.1e-29
-  description: Characteristic occupied volume of one water molecule. Here the quantity refers to `single molecule volume`.
+  description: Characteristic occupied volume of one water molecule.
   description_format: markdown
   summary_short: Characteristic occupied volume of one water molecule.
-  description_medium: Characteristic occupied volume of one water molecule. Here the quantity refers to `single molecule volume`.
+  description_medium: Characteristic occupied volume of one water molecule.
   description_long: null
   hook: null
   caveats: null
@@ -230,56 +187,13 @@ items:
   value_type: derived
   qualifiers:
     measurement: single molecule volume
-- id: obs:volume:entity-water-molecule-volume
-  name: Water molecule volume
-  value: 3.0e-29
-  description: Approximate molecular volume of a water molecule.
-  description_format: markdown
-  summary_short: Approximate molecular volume of a water molecule.
-  description_medium: Approximate molecular volume of a water molecule.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Water molecule volume
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: derived
-      original_value_text: 3e-29
-      source_url: https://en.wikipedia.org/wiki/Water
-  source: https://en.wikipedia.org/wiki/Water
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-water
-    url: https://en.wikipedia.org/wiki/Water
-    title: Water
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: molecular volume
 - id: obs:volume:entity-sars-cov-2
   name: SARS-CoV-2 virion volume
   value: 4.2e-22
-  description: Approximate volume of a spherical coronavirus particle. Derived using `(4/3)*pi*r^3`.
+  description: Approximate volume of a spherical coronavirus particle.
   description_format: markdown
   summary_short: Approximate volume of a spherical coronavirus particle.
-  description_medium: Approximate volume of a spherical coronavirus particle. Derived using `(4/3)*pi*r^3`.
+  description_medium: Approximate volume of a spherical coronavirus particle.
   description_long: null
   hook: null
   caveats: null
@@ -321,10 +235,10 @@ items:
 - id: obs:volume:entity-e-coli
   name: Escherichia coli cell volume
   value: 1.0e-18
-  description: Characteristic volume of one E. coli cell. Here the quantity refers to `single cell volume`.
+  description: Characteristic volume of one E. coli cell.
   description_format: markdown
   summary_short: Characteristic volume of one E.
-  description_medium: Characteristic volume of one E. coli cell. Here the quantity refers to `single cell volume`.
+  description_medium: Characteristic volume of one E. coli cell.
   description_long: null
   hook: null
   caveats: null
@@ -364,10 +278,10 @@ items:
 - id: obs:volume:entity-red-blood-cell-volume
   name: Red blood cell volume
   value: 9.0e-17
-  description: Typical volume of a human red blood cell. Here the quantity refers to `cell volume`.
+  description: Typical volume of a human red blood cell.
   description_format: markdown
   summary_short: Typical volume of a human red blood cell.
-  description_medium: Typical volume of a human red blood cell. Here the quantity refers to `cell volume`.
+  description_medium: Typical volume of a human red blood cell.
   description_long: null
   hook: null
   caveats: null
@@ -407,10 +321,10 @@ items:
 - id: obs:volume:entity-human-cell
   name: Human cell volume
   value: 4.0e-15
-  description: Representative volume of a typical human cell. Here the quantity refers to `single cell volume`.
+  description: Representative volume of a typical human cell.
   description_format: markdown
   summary_short: Representative volume of a typical human cell.
-  description_medium: Representative volume of a typical human cell. Here the quantity refers to `single cell volume`.
+  description_medium: Representative volume of a typical human cell.
   description_long: null
   hook: null
   caveats: null
@@ -450,10 +364,10 @@ items:
 - id: obs:volume:scenario-grain-of-salt-volume
   name: Grain of salt volume
   value: 5.2e-13
-  description: Volume of a representative coarse salt grain treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description: Volume of a representative coarse salt grain treated as a sphere.
   description_format: markdown
   summary_short: Volume of a representative coarse salt grain treated as a sphere.
-  description_medium: Volume of a representative coarse salt grain treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_medium: Volume of a representative coarse salt grain treated as a sphere.
   description_long: null
   hook: null
   caveats: null
@@ -495,10 +409,10 @@ items:
 - id: obs:volume:scenario-grain-of-sand-volume:2
   name: Grain of sand volume
   value: 1.0e-12
-  description: Representative volume of a grain of sand. Here the quantity refers to `particle volume`.
+  description: Representative volume of a grain of sand.
   description_format: markdown
   summary_short: Representative volume of a grain of sand.
-  description_medium: Representative volume of a grain of sand. Here the quantity refers to `particle volume`.
+  description_medium: Representative volume of a grain of sand.
   description_long: null
   hook: null
   caveats: null
@@ -538,10 +452,10 @@ items:
 - id: obs:volume:scenario-grain-of-sand-volume
   name: Grain of sand volume
   value: 5.0e-10
-  description: Volume of a representative 1 mm sand grain treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description: Volume of a representative 1 mm sand grain treated as a sphere.
   description_format: markdown
   summary_short: Volume of a representative 1 mm sand grain treated as a sphere.
-  description_medium: Volume of a representative 1 mm sand grain treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_medium: Volume of a representative 1 mm sand grain treated as a sphere.
   description_long: null
   hook: null
   caveats: null
@@ -583,10 +497,10 @@ items:
 - id: obs:volume:scenario-raindrop
   name: Raindrop volume
   value: 6.5e-08
-  description: Volume of a 5 mm raindrop treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description: Volume of a 5 mm raindrop treated as a sphere.
   description_format: markdown
   summary_short: Volume of a 5 mm raindrop treated as a sphere.
-  description_medium: Volume of a 5 mm raindrop treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_medium: Volume of a 5 mm raindrop treated as a sphere.
   description_long: null
   hook: null
   caveats: null
@@ -628,10 +542,10 @@ items:
 - id: obs:volume:scenario-sugar-cube-volume
   name: Sugar cube volume
   value: 1.0e-06
-  description: Representative volume of a sugar cube. Here the quantity refers to `solid volume`.
+  description: Representative volume of a sugar cube.
   description_format: markdown
   summary_short: Representative volume of a sugar cube.
-  description_medium: Representative volume of a sugar cube. Here the quantity refers to `solid volume`.
+  description_medium: Representative volume of a sugar cube.
   description_long: null
   hook: null
   caveats: null
@@ -668,13 +582,56 @@ items:
   value_type: derived
   qualifiers:
     measurement: solid volume
+- id: obs:volume:scenario-teaspoon
+  name: Teaspoon
+  value: 5.0e-06
+  description: Volume of one teaspoon.
+  description_format: markdown
+  summary_short: Volume of one teaspoon.
+  description_medium: Volume of one teaspoon.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Teaspoon
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-06
+      source_url: https://en.wikipedia.org/wiki/Teaspoon
+  source: https://en.wikipedia.org/wiki/Teaspoon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-teaspoon
+    url: https://en.wikipedia.org/wiki/Teaspoon
+    title: Teaspoon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: volume
 - id: obs:volume:scenario-wine-glass-volume
   name: Wine glass volume
   value: 0.000175
-  description: Representative pour volume of a wine glass. Here the quantity refers to `serving volume`.
+  description: Representative pour volume of a wine glass.
   description_format: markdown
   summary_short: Representative pour volume of a wine glass.
-  description_medium: Representative pour volume of a wine glass. Here the quantity refers to `serving volume`.
+  description_medium: Representative pour volume of a wine glass.
   description_long: null
   hook: null
   caveats: null
@@ -754,13 +711,56 @@ items:
   value_type: derived
   qualifiers:
     measurement: capacity
+- id: obs:volume:scenario-soda-can
+  name: Soda can
+  value: 0.000355
+  description: Capacity of a standard soda can.
+  description_format: markdown
+  summary_short: Capacity of a standard soda can.
+  description_medium: Capacity of a standard soda can.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Soda can
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '0.000355'
+      source_url: https://en.wikipedia.org/wiki/Drink_can
+  source: https://en.wikipedia.org/wiki/Drink_can
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-drink-can
+    url: https://en.wikipedia.org/wiki/Drink_can
+    title: Drink can
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: capacity
 - id: obs:volume:scenario-soda-can-volume
   name: Soda can volume
   value: 0.000355
-  description: Representative internal volume of a standard soda can. Here the quantity refers to `capacity`.
+  description: Representative internal volume of a standard soda can.
   description_format: markdown
   summary_short: Representative internal volume of a standard soda can.
-  description_medium: Representative internal volume of a standard soda can. Here the quantity refers to `capacity`.
+  description_medium: Representative internal volume of a standard soda can.
   description_long: null
   hook: null
   caveats: null
@@ -800,10 +800,10 @@ items:
 - id: obs:volume:scenario-wine-bottle
   name: Wine bottle
   value: 0.00075
-  description: Capacity of a typical wine bottle. Here the quantity refers to `capacity`.
+  description: Capacity of a typical wine bottle.
   description_format: markdown
   summary_short: Capacity of a typical wine bottle.
-  description_medium: Capacity of a typical wine bottle. Here the quantity refers to `capacity`.
+  description_medium: Capacity of a typical wine bottle.
   description_long: null
   hook: null
   caveats: null
@@ -886,10 +886,10 @@ items:
 - id: obs:volume:entity-human
   name: Human body volume
   value: 0.07
-  description: Representative displaced volume of an adult human body. Here the quantity refers to `body volume`.
+  description: Representative displaced volume of an adult human body.
   description_format: markdown
   summary_short: Representative displaced volume of an adult human body.
-  description_medium: Representative displaced volume of an adult human body. Here the quantity refers to `body volume`.
+  description_medium: Representative displaced volume of an adult human body.
   description_long: null
   hook: null
   caveats: null
@@ -929,10 +929,10 @@ items:
 - id: obs:volume:scenario-bathtub
   name: Bathtub
   value: 0.15
-  description: Representative fill volume of a household bathtub. Here the quantity refers to `capacity`.
+  description: Representative fill volume of a household bathtub.
   description_format: markdown
   summary_short: Representative fill volume of a household bathtub.
-  description_medium: Representative fill volume of a household bathtub. Here the quantity refers to `capacity`.
+  description_medium: Representative fill volume of a household bathtub.
   description_long: null
   hook: null
   caveats: null
@@ -972,10 +972,10 @@ items:
 - id: obs:volume:scenario-bathtub-volume
   name: Bathtub volume
   value: 0.15
-  description: Representative water volume of a bathtub. Here the quantity refers to `water capacity`.
+  description: Representative water volume of a bathtub.
   description_format: markdown
   summary_short: Representative water volume of a bathtub.
-  description_medium: Representative water volume of a bathtub. Here the quantity refers to `water capacity`.
+  description_medium: Representative water volume of a bathtub.
   description_long: null
   hook: null
   caveats: null
@@ -1098,56 +1098,13 @@ items:
   value_type: derived
   qualifiers:
     measurement: interior volume
-- id: obs:volume:scenario-room-volume:2
-  name: Room volume
-  value: 30.0
-  description: Representative interior volume of a small room. Here the quantity refers to `interior air volume`.
-  description_format: markdown
-  summary_short: Representative interior volume of a small room.
-  description_medium: Representative interior volume of a small room. Here the quantity refers to `interior air volume`.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Room volume
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: derived
-      original_value_text: '30.0'
-      source_url: https://en.wikipedia.org/wiki/Room
-  source: https://en.wikipedia.org/wiki/Room
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-room
-    url: https://en.wikipedia.org/wiki/Room
-    title: Room
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: interior air volume
 - id: obs:volume:scenario-shipping-container-volume
   name: Shipping container volume
   value: 33.0
-  description: Representative internal volume of a standard shipping container. Here the quantity refers to `interior capacity`.
+  description: Representative internal volume of a standard shipping container.
   description_format: markdown
   summary_short: Representative internal volume of a standard shipping container.
-  description_medium: Representative internal volume of a standard shipping container. Here the quantity refers to `interior capacity`.
+  description_medium: Representative internal volume of a standard shipping container.
   description_long: null
   hook: null
   caveats: null
@@ -1230,10 +1187,10 @@ items:
 - id: obs:volume:scenario-swimming-pool
   name: Swimming pool
   value: 40.0
-  description: Representative volume of a small backyard swimming pool. Here the quantity refers to `water volume`.
+  description: Representative volume of a small backyard swimming pool.
   description_format: markdown
   summary_short: Representative volume of a small backyard swimming pool.
-  description_medium: Representative volume of a small backyard swimming pool. Here the quantity refers to `water volume`.
+  description_medium: Representative volume of a small backyard swimming pool.
   description_long: null
   hook: null
   caveats: null
@@ -1273,10 +1230,10 @@ items:
 - id: obs:volume:scenario-swimming-pool-volume
   name: Swimming pool volume
   value: 40.0
-  description: Representative volume of a backyard swimming pool. Here the quantity refers to `water volume`.
+  description: Representative volume of a backyard swimming pool.
   description_format: markdown
   summary_short: Representative volume of a backyard swimming pool.
-  description_medium: Representative volume of a backyard swimming pool. Here the quantity refers to `water volume`.
+  description_medium: Representative volume of a backyard swimming pool.
   description_long: null
   hook: null
   caveats: null
@@ -1359,10 +1316,10 @@ items:
 - id: obs:volume:scenario-freight-train-car-volume
   name: Freight train car volume
   value: 100.0
-  description: Representative cargo volume of a freight train car. Here the quantity refers to `cargo hold volume`.
+  description: Representative cargo volume of a freight train car.
   description_format: markdown
   summary_short: Representative cargo volume of a freight train car.
-  description_medium: Representative cargo volume of a freight train car. Here the quantity refers to `cargo hold volume`.
+  description_medium: Representative cargo volume of a freight train car.
   description_long: null
   hook: null
   caveats: null
@@ -1445,10 +1402,10 @@ items:
 - id: obs:volume:scenario-classroom-volume
   name: Classroom volume
   value: 150.0
-  description: Representative interior volume of a classroom. Here the quantity refers to `interior air volume`.
+  description: Representative interior volume of a classroom.
   description_format: markdown
   summary_short: Representative interior volume of a classroom.
-  description_medium: Representative interior volume of a classroom. Here the quantity refers to `interior air volume`.
+  description_medium: Representative interior volume of a classroom.
   description_long: null
   hook: null
   caveats: null
@@ -1488,10 +1445,10 @@ items:
 - id: obs:volume:scenario-apartment-volume:2
   name: Apartment volume
   value: 200.0
-  description: Representative interior volume of a small apartment. Here the quantity refers to `interior air volume`.
+  description: Representative interior volume of a small apartment.
   description_format: markdown
   summary_short: Representative interior volume of a small apartment.
-  description_medium: Representative interior volume of a small apartment. Here the quantity refers to `interior air volume`.
+  description_medium: Representative interior volume of a small apartment.
   description_long: null
   hook: null
   caveats: null
@@ -1574,10 +1531,10 @@ items:
 - id: obs:volume:scenario-olympic-swimming-pool
   name: Olympic swimming pool
   value: 2500.0
-  description: Volume of an Olympic-size swimming pool. Here the quantity refers to `water volume`.
+  description: Volume of an Olympic-size swimming pool.
   description_format: markdown
   summary_short: Volume of an Olympic-size swimming pool.
-  description_medium: Volume of an Olympic-size swimming pool. Here the quantity refers to `water volume`.
+  description_medium: Volume of an Olympic-size swimming pool.
   description_long: null
   hook: null
   caveats: null
@@ -1617,10 +1574,10 @@ items:
 - id: obs:volume:scenario-oil-tanker-volume
   name: Oil tanker cargo volume
   value: 100000.0
-  description: Representative cargo volume of a large oil tanker. Here the quantity refers to `cargo capacity`.
+  description: Representative cargo volume of a large oil tanker.
   description_format: markdown
   summary_short: Representative cargo volume of a large oil tanker.
-  description_medium: Representative cargo volume of a large oil tanker. Here the quantity refers to `cargo capacity`.
+  description_medium: Representative cargo volume of a large oil tanker.
   description_long: null
   hook: null
   caveats: null
@@ -1660,10 +1617,10 @@ items:
 - id: obs:volume:entity-great-pyramid-of-giza
   name: Great Pyramid of Giza volume
   value: 2600000.0
-  description: Geometric volume of the Great Pyramid of Giza. Here the quantity refers to `geometric volume`.
+  description: Geometric volume of the Great Pyramid of Giza.
   description_format: markdown
   summary_short: Geometric volume of the Great Pyramid of Giza.
-  description_medium: Geometric volume of the Great Pyramid of Giza. Here the quantity refers to `geometric volume`.
+  description_medium: Geometric volume of the Great Pyramid of Giza.
   description_long: null
   hook: null
   caveats: null
@@ -1703,10 +1660,10 @@ items:
 - id: obs:volume:entity-lake-tahoe
   name: Lake Tahoe volume
   value: 151000000000.0
-  description: Water volume of Lake Tahoe. Here the quantity refers to `water volume`.
+  description: Water volume of Lake Tahoe.
   description_format: markdown
   summary_short: Water volume of Lake Tahoe.
-  description_medium: Water volume of Lake Tahoe. Here the quantity refers to `water volume`.
+  description_medium: Water volume of Lake Tahoe.
   description_long: null
   hook: null
   caveats: null
@@ -1789,10 +1746,10 @@ items:
 - id: obs:volume:entity-earth-oceans
   name: Earth's oceans
   value: 1.332e+18
-  description: Total volume of Earth's oceans. Here the quantity refers to `water volume`.
+  description: Total volume of Earth's oceans.
   description_format: markdown
   summary_short: Total volume of Earth's oceans.
-  description_medium: Total volume of Earth's oceans. Here the quantity refers to `water volume`.
+  description_medium: Total volume of Earth's oceans.
   description_long: null
   hook: null
   caveats: null
@@ -1832,10 +1789,10 @@ items:
 - id: obs:volume:entity-moon
   name: Moon volume
   value: 2.2e+19
-  description: Volume of the Moon. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description: Volume of the Moon.
   description_format: markdown
   summary_short: Volume of the Moon.
-  description_medium: Volume of the Moon. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_medium: Volume of the Moon.
   description_long: null
   hook: null
   caveats: null
@@ -1874,13 +1831,56 @@ items:
   qualifiers:
     derivation: (4/3)*pi*r^3
     measurement: volume
+- id: obs:volume:entity-earth
+  name: Earth volume
+  value: 1.083e+21
+  description: Volume of Earth.
+  description_format: markdown
+  summary_short: Volume of Earth.
+  description_medium: Volume of Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '1.083e+21'
+      source_url: https://en.wikipedia.org/wiki/Earth
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q2
+  value_type: measured
+  qualifiers:
+    measurement: planetary volume
 - id: obs:volume:entity-sun
   name: Sun volume
   value: 1.412e+27
-  description: Volume of the Sun. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description: Volume of the Sun.
   description_format: markdown
   summary_short: Volume of the Sun.
-  description_medium: Volume of the Sun. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `volume`.
+  description_medium: Volume of the Sun.
   description_long: null
   hook: null
   caveats: null
@@ -1922,10 +1922,10 @@ items:
 - id: obs:volume:entity-betelgeuse
   name: Betelgeuse volume
   value: 1.0e+38
-  description: Order-of-magnitude volume of Betelgeuse using a representative stellar radius. Derived using `(4/3)*pi*r^3`.
+  description: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
   description_format: markdown
   summary_short: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
-  description_medium: Order-of-magnitude volume of Betelgeuse using a representative stellar radius. Derived using `(4/3)*pi*r^3`.
+  description_medium: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
   description_long: null
   hook: null
   caveats: null
@@ -1967,10 +1967,10 @@ items:
 - id: obs:volume:scenario-oort-cloud
   name: Oort Cloud volume
   value: 1.75e+48
-  description: Volume implied by a spherical Oort Cloud with a 50,000 AU radius. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
+  description: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
   description_format: markdown
   summary_short: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
-  description_medium: Volume implied by a spherical Oort Cloud with a 50,000 AU radius. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
+  description_medium: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
   description_long: null
   hook: null
   caveats: null
@@ -2012,10 +2012,10 @@ items:
 - id: obs:volume:entity-orion-nebula
   name: Orion Nebula volume
   value: 5.6e+51
-  description: Order-of-magnitude volume of the Orion Nebula. Here the quantity refers to `nebular volume`.
+  description: Order-of-magnitude volume of the Orion Nebula.
   description_format: markdown
   summary_short: Order-of-magnitude volume of the Orion Nebula.
-  description_medium: Order-of-magnitude volume of the Orion Nebula. Here the quantity refers to `nebular volume`.
+  description_medium: Order-of-magnitude volume of the Orion Nebula.
   description_long: null
   hook: null
   caveats: null
@@ -2055,10 +2055,10 @@ items:
 - id: obs:volume:entity-milky-way
   name: Milky Way disk volume
   value: 7.9e+60
-  description: Disk volume implied by representative Milky Way radius and thickness. Here the quantity refers to `disk volume`.
+  description: Disk volume implied by representative Milky Way radius and thickness.
   description_format: markdown
   summary_short: Disk volume implied by representative Milky Way radius and thickness.
-  description_medium: Disk volume implied by representative Milky Way radius and thickness. Here the quantity refers to `disk volume`.
+  description_medium: Disk volume implied by representative Milky Way radius and thickness.
   description_long: null
   hook: null
   caveats: null
@@ -2098,10 +2098,10 @@ items:
 - id: obs:volume:entity-local-group
   name: Local Group volume
   value: 4.1e+68
-  description: Characteristic spherical volume of the Local Group. Derived using `(4/3)*pi*r^3`.
+  description: Characteristic spherical volume of the Local Group.
   description_format: markdown
   summary_short: Characteristic spherical volume of the Local Group.
-  description_medium: Characteristic spherical volume of the Local Group. Derived using `(4/3)*pi*r^3`.
+  description_medium: Characteristic spherical volume of the Local Group.
   description_long: null
   hook: null
   caveats: null
@@ -2143,10 +2143,10 @@ items:
 - id: obs:volume:entity-virgo-supercluster
   name: Virgo Supercluster volume
   value: 4.2e+72
-  description: Characteristic spherical volume of the Virgo Supercluster. Derived using `(4/3)*pi*r^3`.
+  description: Characteristic spherical volume of the Virgo Supercluster.
   description_format: markdown
   summary_short: Characteristic spherical volume of the Virgo Supercluster.
-  description_medium: Characteristic spherical volume of the Virgo Supercluster. Derived using `(4/3)*pi*r^3`.
+  description_medium: Characteristic spherical volume of the Virgo Supercluster.
   description_long: null
   hook: null
   caveats: null
@@ -2188,10 +2188,10 @@ items:
 - id: obs:volume:entity-universe
   name: Observable universe volume
   value: 3.57e+80
-  description: Volume of the observable universe treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
+  description: Volume of the observable universe treated as a sphere.
   description_format: markdown
   summary_short: Volume of the observable universe treated as a sphere.
-  description_medium: Volume of the observable universe treated as a sphere. Derived using `(4/3)*pi*r^3`. Here the quantity refers to `spherical volume`.
+  description_medium: Volume of the observable universe treated as a sphere.
   description_long: null
   hook: null
   caveats: null
