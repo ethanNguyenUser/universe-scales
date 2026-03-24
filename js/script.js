@@ -193,6 +193,18 @@ class UniversalScales {
         }
 
         this.dimensionBrowser.innerHTML = '';
+
+        const columnCount = this.getDimensionBrowserColumnCount();
+        this.dimensionBrowser.style.setProperty('--dimension-browser-columns', String(columnCount));
+
+        const columns = Array.from({ length: columnCount }, () => {
+            const column = document.createElement('div');
+            column.className = 'dimension-browser__column';
+            this.dimensionBrowser.appendChild(column);
+            return column;
+        });
+        const columnHeights = new Array(columnCount).fill(0);
+
         for (const [groupLabel, entries] of groups.entries()) {
             const group = document.createElement('section');
             group.className = 'dimension-browser__group';
@@ -218,7 +230,7 @@ class UniversalScales {
                 button.type = 'button';
                 button.className = 'dimension-chip';
                 button.dataset.dimension = entry.slug;
-                button.dataset.searchText = `${entry.name} ${groupLabel}`.toLowerCase();
+                button.dataset.searchText = String(entry.name || '').toLowerCase();
                 button.textContent = entry.name;
                 button.addEventListener('click', async () => {
                     await this.setDimension(entry.slug);
@@ -227,11 +239,21 @@ class UniversalScales {
             }
 
             group.appendChild(chips);
-            this.dimensionBrowser.appendChild(group);
+
+            const shortestColumnIndex = columnHeights.indexOf(Math.min(...columnHeights));
+            columns[shortestColumnIndex].appendChild(group);
+            columnHeights[shortestColumnIndex] += entries.length + 1.6;
         }
 
         this.updateDimensionBrowserSelection();
         this.filterDimensionBrowser(this.dimensionBrowserSearch?.value || '');
+    }
+
+    getDimensionBrowserColumnCount() {
+        const width = window.innerWidth || document.documentElement.clientWidth || 0;
+        if (width <= 760) return 1;
+        if (width <= 1180) return 2;
+        return 3;
     }
 
     setDimensionBrowserOpen(isOpen) {
@@ -278,12 +300,10 @@ class UniversalScales {
         let visibleChipCount = 0;
 
         this.dimensionBrowser.querySelectorAll('.dimension-browser__group').forEach(group => {
-            const groupLabel = group.dataset.groupLabel || '';
-            const groupMatches = !query || groupLabel.includes(query);
             let groupVisibleChipCount = 0;
 
             group.querySelectorAll('.dimension-chip').forEach(button => {
-                const matches = groupMatches || !query || (button.dataset.searchText || '').includes(query);
+                const matches = !query || (button.dataset.searchText || '').includes(query);
                 button.hidden = !matches;
                 if (matches) {
                     groupVisibleChipCount += 1;
@@ -332,7 +352,19 @@ class UniversalScales {
             this.dimensionBrowserSearch.addEventListener('input', (event) => {
                 this.filterDimensionBrowser(event.target.value);
             });
+            this.dimensionBrowserSearch.addEventListener('search', (event) => {
+                this.filterDimensionBrowser(event.target.value);
+            });
         }
+
+        window.addEventListener('resize', () => {
+            clearTimeout(this.dimensionBrowserResizeTimer);
+            this.dimensionBrowserResizeTimer = window.setTimeout(() => {
+                if (this.dimensionCatalog?.length) {
+                    this.renderDimensionBrowser(this.dimensionCatalog);
+                }
+            }, 120);
+        });
 
         document.addEventListener('click', (event) => {
             if (!this.isDimensionBrowserOpen) return;

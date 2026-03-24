@@ -23,6 +23,11 @@ try:
 except ImportError:  # pragma: no cover - fallback path for minimal environments
     yaml = None
 
+try:
+    from PIL import Image
+except ImportError:  # pragma: no cover - environments without Pillow
+    Image = None
+
 USER_AGENT = "UniverseScalesImageDownloader/1.0 (educational dataset project)"
 PLACEHOLDER_BG = (204, 204, 204)
 PLACEHOLDER_BG_TOLERANCE = 8
@@ -85,6 +90,15 @@ SEARCH_SUFFIX_PATTERNS = {
     "sound intensity": [r"\bsound intensity\b"],
     "brightness": [r"\bbrightness\b", r"\bluminosity\b", r"\bluminous intensity\b"],
     "intensity": [r"\bintensity\b"],
+}
+
+MANUAL_IMAGE_FALLBACKS = {
+    ("absorbed-dose", "Sterile insect technique dose"): [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8f/Sterile_Insect_Technique_%2805590009%29_%2848194516176%29.jpg",
+    ],
+    ("micromorts", "Giving birth in a high-income country"): [
+        "https://upload.wikimedia.org/wikipedia/commons/1/15/Maternal_health_%284798750001%29.jpg",
+    ],
 }
 
 # Simple YAML parser for basic YAML files
@@ -166,18 +180,57 @@ class ImageDownloader:
         self.data_dir = project_root / data_dir
         self.images_dir = project_root / images_dir
         self.thumbs_dir = self.images_dir / "thumbs"
+        self.cache_dir = project_root / "dataset" / "cache"
+        self.cache_file = self.cache_dir / "image_lookup_cache.json"
         self.allow_placeholders = allow_placeholders
         
         # Create images directory if it doesn't exist
         self.images_dir.mkdir(exist_ok=True)
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.ssl_context = ssl.create_default_context()
         self.insecure_ssl_context = ssl._create_unverified_context()
         self.insecure_hosts = set()
         self.last_request_time = {}
         self.json_cache = {}
         self.text_cache = {}
-        self.page_image_cache = {}
-        self.web_search_cache = {}
+        self.lookup_cache = self.load_lookup_cache()
+        self.page_image_cache = self.lookup_cache.setdefault("page_image_candidates", {})
+        self.web_search_cache = self.lookup_cache.setdefault("web_search_urls", {})
+        self.web_image_cache = self.lookup_cache.setdefault("web_search_image_candidates", {})
+        self.wikipedia_title_cache = self.lookup_cache.setdefault("wikipedia_titles", {})
+        self.wikipedia_image_cache = self.lookup_cache.setdefault("wikipedia_image_candidates", {})
+        self.wikipedia_embedded_cache = self.lookup_cache.setdefault("wikipedia_embedded_candidates", {})
+        self.commons_search_cache = self.lookup_cache.setdefault("commons_search_candidates", {})
+        self.cache_dirty = False
+        self.cache_write_counter = 0
+
+    def load_lookup_cache(self):
+        if not self.cache_file.exists():
+            return {}
+        try:
+            with open(self.cache_file, "r", encoding="utf-8") as handle:
+                loaded = json.load(handle)
+            return loaded if isinstance(loaded, dict) else {}
+        except Exception as e:
+            print(f"Warning: could not load image lookup cache: {e}")
+            return {}
+
+    def mark_lookup_cache_dirty(self):
+        self.cache_dirty = True
+        self.cache_write_counter += 1
+        if self.cache_write_counter >= 25:
+            self.save_lookup_cache()
+            self.cache_write_counter = 0
+
+    def save_lookup_cache(self):
+        if not self.cache_dirty:
+            return
+        try:
+            with open(self.cache_file, "w", encoding="utf-8") as handle:
+                json.dump(self.lookup_cache, handle, indent=2, sort_keys=True)
+            self.cache_dirty = False
+        except Exception as e:
+            print(f"Warning: could not save image lookup cache: {e}")
 
     def urlopen_with_ssl_fallback(self, req, timeout=30):
         """Open a URL with SSL fallback and backoff for rate-limited sources."""
@@ -276,6 +329,20 @@ class ImageDownloader:
         path = parsed.path.lower()
         return path.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg"))
 
+    def is_valid_existing_image(self, image_path):
+        """Return True if an existing file looks like a readable image."""
+        try:
+            image_path = Path(image_path)
+            if not image_path.exists() or image_path.stat().st_size == 0:
+                return False
+            if Image is None:
+                return image_path.stat().st_size > 1024
+            with Image.open(image_path) as img:
+                img.verify()
+            return True
+        except Exception:
+            return False
+
     def is_promising_page_image_url(self, url):
         parsed = urlparse(str(url or "").strip())
         if parsed.scheme not in {"http", "https"}:
@@ -358,6 +425,7 @@ class ImageDownloader:
             if self.is_promising_page_image_url(candidate)
         ]
         self.page_image_cache[page_url] = filtered
+        self.mark_lookup_cache_dirty()
         return filtered
 
     def extract_search_result_urls(self, html):
@@ -393,19 +461,29 @@ class ImageDownloader:
             html = self.fetch_text(search_url, timeout=12)
             results = self.extract_search_result_urls(html)[:limit]
             self.web_search_cache[query] = results
+            self.mark_lookup_cache_dirty()
             return results
         except Exception as e:
             print(f"Error searching web pages for {query}: {e}")
             self.web_search_cache[query] = []
+            self.mark_lookup_cache_dirty()
             return []
 
     def search_web_page_image_candidates(self, query, limit=4):
+        query = str(query or "").strip()
+        if not query:
+            return []
+        if query in self.web_image_cache:
+            return self.web_image_cache[query]
         candidates = []
         for page_url in self.search_web_page_urls(query, limit=limit):
             candidates.extend(self.get_page_image_candidates(page_url))
             if len(candidates) >= 10:
                 break
-        return self.dedupe_urls(candidates)
+        deduped = self.dedupe_urls(candidates)
+        self.web_image_cache[query] = deduped
+        self.mark_lookup_cache_dirty()
+        return deduped
 
     def get_wikipedia_image_url(self, wikipedia_url):
         """Extract a Wikipedia page title and return multiple candidate image URLs."""
@@ -414,6 +492,8 @@ class ImageDownloader:
     def get_wikipedia_image_candidates(self, page_title):
         """Collect likely article image candidates for a Wikipedia page title."""
         page_title = self.normalize_wikipedia_title(page_title)
+        if page_title in self.wikipedia_image_cache:
+            return self.wikipedia_image_cache[page_title]
         candidates = []
 
         try:
@@ -461,6 +541,8 @@ class ImageDownloader:
                 continue
             seen.add(candidate)
             deduped.append(candidate)
+        self.wikipedia_image_cache[page_title] = deduped
+        self.mark_lookup_cache_dirty()
         return deduped
 
     def is_promising_commons_title(self, title):
@@ -520,6 +602,8 @@ class ImageDownloader:
 
     def get_wikipedia_embedded_image_candidates(self, page_title):
         page_title = self.normalize_wikipedia_title(page_title)
+        if page_title in self.wikipedia_embedded_cache:
+            return self.wikipedia_embedded_cache[page_title]
         params = {
             "action": "query",
             "titles": page_title,
@@ -536,15 +620,22 @@ class ImageDownloader:
                     title = image.get("title", "")
                     if title.startswith("File:"):
                         file_titles.append(title)
-            return self.get_commons_candidates_for_titles(file_titles)
+            candidates = self.get_commons_candidates_for_titles(file_titles)
+            self.wikipedia_embedded_cache[page_title] = candidates
+            self.mark_lookup_cache_dirty()
+            return candidates
         except Exception as e:
             print(f"Error getting embedded Wikipedia images for {page_title}: {e}")
+            self.wikipedia_embedded_cache[page_title] = []
+            self.mark_lookup_cache_dirty()
             return []
 
     def search_wikimedia_commons_candidates(self, query, limit=8):
         query = str(query or "").strip()
         if not query:
             return []
+        if query in self.commons_search_cache:
+            return self.commons_search_cache[query]
         params = {
             "action": "query",
             "generator": "search",
@@ -558,9 +649,14 @@ class ImageDownloader:
         }
         try:
             data = self.fetch_json(self.build_api_url("https://commons.wikimedia.org/w/api.php", params), timeout=12)
-            return self.extract_commons_candidates(data)
+            candidates = self.extract_commons_candidates(data)
+            self.commons_search_cache[query] = candidates
+            self.mark_lookup_cache_dirty()
+            return candidates
         except Exception as e:
             print(f"Error searching Wikimedia Commons for {query}: {e}")
+            self.commons_search_cache[query] = []
+            self.mark_lookup_cache_dirty()
             return []
 
     def search_wikipedia_titles(self, query, limit=4):
@@ -568,6 +664,8 @@ class ImageDownloader:
         query = str(query or "").strip()
         if not query:
             return []
+        if query in self.wikipedia_title_cache:
+            return self.wikipedia_title_cache[query]
         try:
             data = self.fetch_json(
                 "https://en.wikipedia.org/w/api.php"
@@ -579,9 +677,13 @@ class ImageDownloader:
                 title = str(result.get("title", "")).strip()
                 if title:
                     titles.append(title)
+            self.wikipedia_title_cache[query] = titles
+            self.mark_lookup_cache_dirty()
             return titles
         except Exception as e:
             print(f"Error searching Wikipedia for {query}: {e}")
+            self.wikipedia_title_cache[query] = []
+            self.mark_lookup_cache_dirty()
             return []
 
     def generate_search_queries(self, item_name, dimension, source_url=""):
@@ -696,6 +798,13 @@ class ImageDownloader:
                     filepath = self.images_dir / filename
                     with open(filepath, 'wb') as f:
                         f.write(response.read())
+                    if not self.is_valid_existing_image(filepath):
+                        try:
+                            filepath.unlink()
+                        except Exception:
+                            pass
+                        print(f"Rejected invalid image: {filename}")
+                        return False
                     
                     print(f"Downloaded: {filename}")
                     return True
@@ -716,6 +825,9 @@ class ImageDownloader:
         safe_name = re.sub(r'[-\s]+', '_', safe_name)
         
         return f"{safe_dimension.lower()}_{safe_name.lower()}.jpg"
+
+    def get_manual_image_fallbacks(self, dimension, item_name):
+        return MANUAL_IMAGE_FALLBACKS.get((dimension, item_name), [])
     
     def find_missing_images(self, yaml_file):
         """Find all images that are missing for items in a YAML file."""
@@ -752,6 +864,13 @@ class ImageDownloader:
                     'dimension': dimension,
                     'source': item.get('source', '')
                 })
+            elif not self.is_valid_existing_image(image_path):
+                missing_images.append({
+                    'name': item_name,
+                    'filename': filename,
+                    'dimension': dimension,
+                    'source': item.get('source', '')
+                })
         
         print(f"Found {len(missing_images)} missing images for {dimension}")
         return missing_images
@@ -781,6 +900,8 @@ class ImageDownloader:
             if image_path.exists():
                 if self.is_generated_placeholder(image_path):
                     self.purge_placeholder_artifacts(filename)
+                elif not self.is_valid_existing_image(image_path):
+                    print(f"Corrupt image detected for {dimension}/{item_name}: {filename}; refetching")
                 else:
                     print(f"Image already exists for {dimension}/{item_name}: {filename}")
                     skipped_count += 1
@@ -789,20 +910,22 @@ class ImageDownloader:
             candidate_urls = []
 
             source_url = item.get('source', '')
+            source_is_wikipedia = bool(source_url and 'wikipedia.org' in source_url)
             if source_url:
-                if 'wikipedia.org' in source_url:
+                if source_is_wikipedia:
                     candidate_urls.extend(self.get_wikipedia_image_url(source_url))
                     candidate_urls.extend(self.get_wikipedia_embedded_image_candidates(source_url))
                 else:
                     candidate_urls.extend(self.get_page_image_candidates(source_url))
 
             for query in self.generate_search_queries(item_name, dimension, item.get('source', '')):
-                for title in self.search_wikipedia_titles(query):
-                    candidate_urls.extend(self.get_wikipedia_image_candidates(title))
-                    candidate_urls.extend(self.get_wikipedia_embedded_image_candidates(title))
-                candidate_urls.extend(self.search_wikimedia_commons_candidates(query))
-                if len(candidate_urls) < 8:
-                    candidate_urls.extend(self.search_web_page_image_candidates(query))
+                candidate_urls.extend(self.search_web_page_image_candidates(query))
+                if len(candidate_urls) < 8 and (not source_is_wikipedia or not candidate_urls):
+                    for title in self.search_wikipedia_titles(query, limit=2):
+                        candidate_urls.extend(self.get_wikipedia_image_candidates(title))
+                        candidate_urls.extend(self.get_wikipedia_embedded_image_candidates(title))
+                if len(candidate_urls) < 12:
+                    candidate_urls.extend(self.search_wikimedia_commons_candidates(query))
                 if len(candidate_urls) >= 12:
                     break
 
@@ -815,6 +938,14 @@ class ImageDownloader:
                     downloaded = True
                     time.sleep(0.35)
                     break
+
+            if not downloaded:
+                for image_url in self.get_manual_image_fallbacks(dimension, item_name):
+                    if self.download_image(image_url, filename):
+                        downloaded_count += 1
+                        downloaded = True
+                        time.sleep(0.35)
+                        break
 
             if downloaded:
                 print(f"Fetched image for {dimension}/{item_name}: {filename}")
@@ -831,57 +962,60 @@ class ImageDownloader:
     
     def run(self, *, dimension_filter=None):
         """Main function to process all YAML files."""
-        print("Starting automatic image download process...")
-        print("Images will be named as: dimension_item_name.jpg")
-        
-        # Find all YAML files in the data directory
-        yaml_files = list(self.data_dir.glob("*.yaml"))
-        if dimension_filter:
-            normalized_filter = str(dimension_filter).strip().lower()
-            yaml_files = [
-                yaml_file for yaml_file in yaml_files
-                if yaml_file.stem.lower() == normalized_filter
-                or yaml_file.name.lower() == normalized_filter
-            ]
-        
-        if not yaml_files:
-            print(f"No YAML files found in {self.data_dir}")
-            return
-        
-        print(f"Found {len(yaml_files)} YAML files to process")
-        
-        total_downloaded = 0
-        total_skipped = 0
-        
-        # First, show missing images summary
-        print("\n" + "="*50)
-        print("MISSING IMAGES SUMMARY")
-        print("="*50)
-        
-        all_missing = []
-        for yaml_file in yaml_files:
-            missing = self.find_missing_images(yaml_file)
-            all_missing.extend(missing)
-        
-        if all_missing:
-            print(f"\nTotal missing images: {len(all_missing)}")
-            for missing in all_missing:
-                print(f"  - {missing['dimension']}/{missing['name']} -> {missing['filename']}")
-        else:
-            print("\nAll images are present!")
-        
-        print("\n" + "="*50)
-        print("DOWNLOADING MISSING IMAGES")
-        print("="*50)
-        
-        for yaml_file in yaml_files:
-            downloaded, skipped = self.process_yaml_file(yaml_file)
-            total_downloaded += downloaded
-            total_skipped += skipped
-        
-        print(f"\nImage download process completed!")
-        print(f"Total images downloaded: {total_downloaded}")
-        print(f"Total images already existed: {total_skipped}")
+        try:
+            print("Starting automatic image download process...")
+            print("Images will be named as: dimension_item_name.jpg")
+            
+            # Find all YAML files in the data directory
+            yaml_files = list(self.data_dir.glob("*.yaml"))
+            if dimension_filter:
+                normalized_filter = str(dimension_filter).strip().lower()
+                yaml_files = [
+                    yaml_file for yaml_file in yaml_files
+                    if yaml_file.stem.lower() == normalized_filter
+                    or yaml_file.name.lower() == normalized_filter
+                ]
+            
+            if not yaml_files:
+                print(f"No YAML files found in {self.data_dir}")
+                return
+            
+            print(f"Found {len(yaml_files)} YAML files to process")
+            
+            total_downloaded = 0
+            total_skipped = 0
+            
+            # First, show missing images summary
+            print("\n" + "="*50)
+            print("MISSING IMAGES SUMMARY")
+            print("="*50)
+            
+            all_missing = []
+            for yaml_file in yaml_files:
+                missing = self.find_missing_images(yaml_file)
+                all_missing.extend(missing)
+            
+            if all_missing:
+                print(f"\nTotal missing images: {len(all_missing)}")
+                for missing in all_missing:
+                    print(f"  - {missing['dimension']}/{missing['name']} -> {missing['filename']}")
+            else:
+                print("\nAll images are present!")
+            
+            print("\n" + "="*50)
+            print("DOWNLOADING MISSING IMAGES")
+            print("="*50)
+            
+            for yaml_file in yaml_files:
+                downloaded, skipped = self.process_yaml_file(yaml_file)
+                total_downloaded += downloaded
+                total_skipped += skipped
+            
+            print(f"\nImage download process completed!")
+            print(f"Total images downloaded: {total_downloaded}")
+            print(f"Total images already existed: {total_skipped}")
+        finally:
+            self.save_lookup_cache()
 
 def main():
     parser = argparse.ArgumentParser()

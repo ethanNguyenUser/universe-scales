@@ -195,12 +195,12 @@ select:focus {
     min-width: 220px;
     padding: 0.65rem 0.9rem;
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 6px;
     background: var(--bg-primary);
     color: var(--text-primary);
     font-size: 1rem;
     cursor: pointer;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .dimension-browser-toggle:hover {
@@ -210,12 +210,10 @@ select:focus {
 .dimension-browser-toggle:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.18);
 }
 
 .dimension-browser-toggle.is-open {
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
 }
 
 .dimension-browser-toggle__chevron {
@@ -245,12 +243,13 @@ select:focus {
 .dimension-browser-search {
     width: min(100%, 420px);
     padding: 0.72rem 0.95rem;
+    padding-right: 2.3rem;
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 6px;
     background: var(--bg-primary);
     color: var(--text-primary);
     font-size: 0.95rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .dimension-browser-search::placeholder {
@@ -260,7 +259,26 @@ select:focus {
 .dimension-browser-search:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.14);
+}
+
+/* Make the native clear (x) control easier to hit on WebKit browsers */
+.dimension-browser-search::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    border-radius: 999px;
+    background:
+        linear-gradient(45deg, transparent 44%, #3b5f99 44%, #3b5f99 56%, transparent 56%),
+        linear-gradient(-45deg, transparent 44%, #3b5f99 44%, #3b5f99 56%, transparent 56%),
+        rgba(59, 95, 153, 0.08);
+}
+
+.dimension-browser-search::-webkit-search-cancel-button:hover {
+    background:
+        linear-gradient(45deg, transparent 44%, #2f4f82 44%, #2f4f82 56%, transparent 56%),
+        linear-gradient(-45deg, transparent 44%, #2f4f82 44%, #2f4f82 56%, transparent 56%),
+        rgba(59, 95, 153, 0.14);
 }
 
 .dimension-browser-empty {
@@ -276,28 +294,33 @@ select:focus {
 }
 
 .dimension-browser {
-    column-width: 22rem;
-    column-gap: 0.9rem;
-    column-fill: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--dimension-browser-columns, 3), minmax(0, 1fr));
+    gap: 0.9rem;
+    align-items: start;
     margin: 0;
     width: 100%;
     text-align: left;
 }
 
+.dimension-browser__column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    min-width: 0;
+}
+
 .dimension-browser__group {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
+    border-radius: 8px;
     padding: 0.9rem 1rem 1rem;
     display: block;
     gap: 0.75rem;
     width: auto;
     min-width: auto;
     max-width: none;
-    margin: 0 0 0.9rem;
-    break-inside: avoid;
-    vertical-align: top;
+    margin: 0;
 }
 
 .dimension-browser__group--small {
@@ -321,6 +344,7 @@ select:focus {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-secondary);
+    margin-bottom: 1rem;
 }
 
 .dimension-browser__chips {
@@ -338,18 +362,21 @@ select:focus {
     border: 1px solid var(--border-color);
     background: var(--bg-primary);
     color: var(--text-primary);
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 0.45rem 0.8rem;
     font-size: 0.88rem;
     line-height: 1.15;
     text-align: left;
     cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dimension-chip[hidden] {
+    display: none !important;
 }
 
 .dimension-chip:hover {
     border-color: var(--accent-color);
-    transform: translateY(-1px);
 }
 
 .dimension-chip.is-active {
@@ -1776,7 +1803,7 @@ select:focus {
 .tooltip-image {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 240px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0.75rem;
