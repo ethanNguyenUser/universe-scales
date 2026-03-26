@@ -1744,6 +1744,7 @@ select:focus {
     align-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
+    position: relative;
 }
 
 .unit-selector-container label {
@@ -1751,10 +1752,27 @@ select:focus {
     color: var(--text-secondary);
 }
 
-.unit-selector-container select {
-    padding: 0.5rem 1rem;
+.unit-picker {
+    position: relative;
+}
+
+.unit-select-native {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.unit-browser-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    min-width: 220px;
+    padding: 0.5rem 0.85rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-size: 0.9rem;
@@ -1762,14 +1780,83 @@ select:focus {
     transition: border-color 0.2s ease;
 }
 
-.unit-selector-container select:hover {
+.unit-browser-toggle:hover {
     border-color: var(--accent-color);
 }
 
-.unit-selector-container select:focus {
+.unit-browser-toggle:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.unit-browser-toggle__chevron {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.unit-browser-toggle.is-open .unit-browser-toggle__chevron {
+    transform: rotate(180deg);
+}
+
+.unit-browser-current__name {
+    margin-right: 0.2rem;
+}
+
+.unit-browser-panel {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    z-index: var(--z-tooltip);
+    min-width: 320px;
+    max-width: min(90vw, 520px);
+    max-height: 320px;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    padding: 0.5rem;
+}
+
+.unit-browser-panel[hidden] {
+    display: none;
+}
+
+.unit-browser-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+}
+
+.unit-chip {
+    width: 100%;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.45rem 0.65rem;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.unit-chip:hover {
+    border-color: var(--accent-color);
+}
+
+.unit-chip.is-active {
+    border-color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color) 12%, var(--bg-primary));
+}
+
+.unit-chip__name {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.12rem;
+}
+
+.unit-chip__symbol {
+    color: var(--text-secondary);
 }
 
 /* Tooltip Styles */

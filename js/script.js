@@ -50,6 +50,10 @@ class UniversalScales {
         this.dimensionBrowserSearch = document.getElementById('dimension-browser-search');
         this.dimensionBrowserEmpty = document.getElementById('dimension-browser-empty');
         this.unitSelect = document.getElementById('unit-select');
+        this.unitBrowserPanel = document.getElementById('unit-browser-panel');
+        this.unitBrowserList = document.getElementById('unit-browser-list');
+        this.unitBrowserToggle = document.getElementById('unit-browser-toggle');
+        this.unitBrowserCurrent = document.getElementById('unit-browser-current');
         this.notationToggle = document.getElementById('notation-toggle');
         this.darkModeToggle = document.getElementById('dark-mode-toggle');
         this.musicToggle = document.getElementById('music-toggle');
@@ -74,6 +78,7 @@ class UniversalScales {
         // Cache for image existence checks to avoid repeated failed requests
         this.imageExistenceCache = new Map();
         this.isDimensionBrowserOpen = false;
+        this.isUnitBrowserOpen = false;
 
         this.init();
     }
@@ -279,6 +284,80 @@ class UniversalScales {
         this.setDimensionBrowserOpen(nextState);
     }
 
+    renderUnitBrowser(visibleUnits) {
+        if (!this.unitBrowserList) return;
+        this.unitBrowserList.innerHTML = '';
+        for (const { unit } of visibleUnits) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'unit-chip';
+            button.dataset.unitName = unit.name;
+            const unitNameCapitalized = unit.name.charAt(0).toUpperCase() + unit.name.slice(1);
+            const unitLatex = this.unitSymbolToLatex(unit.symbol);
+            button.innerHTML = `
+                <span class="unit-chip__name">${this.escapeHtml(unitNameCapitalized)}</span>
+                <span class="unit-chip__symbol">\\(${this.escapeHtml(unitLatex)}\\)</span>
+            `;
+            button.addEventListener('click', () => this.setCurrentUnit(unit.name));
+            this.unitBrowserList.appendChild(button);
+        }
+        this.typesetMathIfReady(this.unitBrowserList);
+    }
+
+    updateUnitBrowserSelection() {
+        if (!this.unitBrowserList) return;
+        this.unitBrowserList.querySelectorAll('.unit-chip').forEach(button => {
+            button.classList.toggle('is-active', button.dataset.unitName === this.currentUnit);
+        });
+    }
+
+    updateUnitToggleLabel() {
+        if (!this.unitBrowserCurrent || !this.dimensionData?.units) return;
+        const unit = this.dimensionData.units.find(entry => entry.name === this.currentUnit);
+        if (!unit) return;
+        const unitNameCapitalized = unit.name.charAt(0).toUpperCase() + unit.name.slice(1);
+        const unitLatex = this.unitSymbolToLatex(unit.symbol);
+        this.unitBrowserCurrent.innerHTML = `
+            <span class="unit-browser-current__name">${this.escapeHtml(unitNameCapitalized)}</span>
+            <span class="unit-browser-current__symbol">\\(${this.escapeHtml(unitLatex)}\\)</span>
+        `;
+        this.typesetMathIfReady(this.unitBrowserCurrent);
+    }
+
+    setUnitBrowserOpen(isOpen) {
+        this.isUnitBrowserOpen = Boolean(isOpen);
+        if (this.unitBrowserPanel) {
+            this.unitBrowserPanel.hidden = !this.isUnitBrowserOpen;
+        }
+        if (this.unitBrowserToggle) {
+            this.unitBrowserToggle.setAttribute('aria-expanded', this.isUnitBrowserOpen ? 'true' : 'false');
+            this.unitBrowserToggle.classList.toggle('is-open', this.isUnitBrowserOpen);
+        }
+    }
+
+    toggleUnitBrowser(forceState = null) {
+        const nextState = forceState === null ? !this.isUnitBrowserOpen : Boolean(forceState);
+        this.setUnitBrowserOpen(nextState);
+    }
+
+    setCurrentUnit(unitName, { closePicker = true } = {}) {
+        this.currentUnit = unitName;
+        if (this.unitSelect) {
+            this.unitSelect.value = unitName;
+        }
+        this.updateUnitDescription();
+        this.updateUnitBrowserSelection();
+        this.updateUnitToggleLabel();
+        this.updateURL();
+        this.plot.lastTickSet = null;
+        this.plot.lastTickDomain = null;
+        this.plot.lastTickLogRange = null;
+        this.plot.updatePlot();
+        if (closePicker) {
+            this.setUnitBrowserOpen(false);
+        }
+    }
+
     updateDimensionToggleLabel() {
         if (!this.dimensionBrowserCurrent) return;
         const currentEntry = this.dimensionCatalogBySlug.get(this.currentDimension);
@@ -367,11 +446,19 @@ class UniversalScales {
         });
 
         document.addEventListener('click', (event) => {
-            if (!this.isDimensionBrowserOpen) return;
-            const clickedInsideBrowser = this.dimensionBrowserPanel?.contains(event.target);
-            const clickedToggle = this.dimensionBrowserToggle?.contains(event.target);
-            if (!clickedInsideBrowser && !clickedToggle) {
-                this.setDimensionBrowserOpen(false);
+            if (this.isDimensionBrowserOpen) {
+                const clickedInsideDimensionBrowser = this.dimensionBrowserPanel?.contains(event.target);
+                const clickedDimensionToggle = this.dimensionBrowserToggle?.contains(event.target);
+                if (!clickedInsideDimensionBrowser && !clickedDimensionToggle) {
+                    this.setDimensionBrowserOpen(false);
+                }
+            }
+            if (this.isUnitBrowserOpen) {
+                const clickedInsideUnitBrowser = this.unitBrowserPanel?.contains(event.target);
+                const clickedUnitToggle = this.unitBrowserToggle?.contains(event.target);
+                if (!clickedInsideUnitBrowser && !clickedUnitToggle) {
+                    this.setUnitBrowserOpen(false);
+                }
             }
         });
 
@@ -379,18 +466,21 @@ class UniversalScales {
             if (event.key === 'Escape' && this.isDimensionBrowserOpen) {
                 this.setDimensionBrowserOpen(false);
             }
+            if (event.key === 'Escape' && this.isUnitBrowserOpen) {
+                this.setUnitBrowserOpen(false);
+            }
         });
 
         this.unitSelect.addEventListener('change', (e) => {
-            this.currentUnit = e.target.value;
-            this.updateUnitDescription();
-            this.updateURL();
-            // Reset tick cache when unit changes
-            this.plot.lastTickSet = null;
-            this.plot.lastTickDomain = null;
-            this.plot.lastTickLogRange = null;
-            this.plot.updatePlot();
+            this.setCurrentUnit(e.target.value, { closePicker: false });
         });
+
+        if (this.unitBrowserToggle) {
+            this.unitBrowserToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                this.toggleUnitBrowser();
+            });
+        }
 
         this.darkModeToggle.addEventListener('click', () => {
             this.toggleDarkMode();
@@ -592,6 +682,31 @@ class UniversalScales {
         return this.dimensionData?.units?.find(unit => unit.name === this.currentUnit) || null;
     }
 
+    convertBaseValueToUnit(valueBase, unit) {
+        if (!unit) return Number(valueBase);
+        const factor = Number(unit.conversion_factor ?? 1);
+        const offset = Number(unit.offset ?? 0);
+        if (!Number.isFinite(factor) || !Number.isFinite(offset)) return Number.NaN;
+        return Number(valueBase) * factor + offset;
+    }
+
+    isUnitCompatibleWithCurrentScale(unit) {
+        if (!unit) return false;
+        if (this.isLinearScale()) return true;
+        if (unit.special_conversion) return true;
+        if (!Array.isArray(this.dimensionData?.items) || this.dimensionData.items.length === 0) return true;
+
+        for (const item of this.dimensionData.items) {
+            const baseValue = Number(item?.value);
+            if (!Number.isFinite(baseValue) || baseValue <= 0) continue;
+            const converted = this.convertBaseValueToUnit(baseValue, unit);
+            if (!Number.isFinite(converted) || converted <= 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     isDomainZoomed(currentDomain, originalDomain) {
         if (!currentDomain || !originalDomain) return false;
         const delta = Math.max(
@@ -749,6 +864,7 @@ class UniversalScales {
             }
             const yamlText = await response.text();
             this.dimensionData = jsyaml.load(yamlText);
+            this.normalizeDimensionUnitSymbols();
             if (dimension === 'sound-intensity' && Array.isArray(this.dimensionData.units)) {
                 const existingDecibelUnit = this.dimensionData.units.find(unit => unit.name === 'decibels');
                 if (existingDecibelUnit) {
@@ -832,6 +948,31 @@ class UniversalScales {
         }
     }
 
+    normalizeDimensionUnitSymbols() {
+        if (!Array.isArray(this.dimensionData?.units)) return;
+        this.dimensionData.units.forEach((unit) => {
+            if (!unit) return;
+            unit.symbol = this.normalizeMicroPrefixSymbol(unit.symbol, unit.name);
+        });
+    }
+
+    normalizeMicroPrefixSymbol(symbol, unitName) {
+        if (!symbol) return symbol;
+        const name = String(unitName || '').toLowerCase();
+        let normalized = String(symbol).trim();
+
+        normalized = normalized.replace(/\\mu\s*/g, 'μ');
+
+        if (!name.includes('micro')) {
+            return normalized;
+        }
+
+        normalized = normalized.replace(/^u(?=[A-Za-z])/g, 'μ');
+        normalized = normalized.replace(/([/(\[])\s*u(?=[A-Za-z])/g, '$1μ');
+        normalized = normalized.replace(/\bu(?=[A-Za-z])/g, 'μ');
+        return normalized;
+    }
+
     updateUnitSelector() {
         this.unitSelect.innerHTML = '';
 
@@ -840,14 +981,16 @@ class UniversalScales {
         if (this.editor && this.editor.unitOverrides[this.currentDimension]) {
             this.dimensionData.units.forEach((unit, index) => {
                 const isDeleted = this.editor.unitOverrides[this.currentDimension]?.[index]?.isDeleted;
-                if (!isDeleted) {
+                if (!isDeleted && this.isUnitCompatibleWithCurrentScale(unit)) {
                     visibleUnits.push({ unit, index });
                 }
             });
         } else {
             // No overrides, all units are visible
             this.dimensionData.units.forEach((unit, index) => {
-                visibleUnits.push({ unit, index });
+                if (this.isUnitCompatibleWithCurrentScale(unit)) {
+                    visibleUnits.push({ unit, index });
+                }
             });
         }
 
@@ -855,10 +998,12 @@ class UniversalScales {
             const option = document.createElement('option');
             option.value = unit.name;
             // Capitalize first letter for display
-            const unitNameCapitalized = unit.name.charAt(0).toUpperCase() + unit.name.slice(1).toLowerCase();
-            option.textContent = `${unitNameCapitalized} (${unit.symbol})`;
+            const unitNameCapitalized = unit.name.charAt(0).toUpperCase() + unit.name.slice(1);
+            const symbolDisplay = this.formatUnitSymbolDisplayText(unit.symbol);
+            option.textContent = `${unitNameCapitalized} (${symbolDisplay})`;
             this.unitSelect.appendChild(option);
         });
+        this.renderUnitBrowser(visibleUnits);
 
         // Set unit from URL if pending, otherwise use first visible unit
         if (this.pendingUnit && visibleUnits.some(({ unit }) => unit.name === this.pendingUnit)) {
@@ -875,6 +1020,8 @@ class UniversalScales {
 
         // Update unit description
         this.updateUnitDescription();
+        this.updateUnitBrowserSelection();
+        this.updateUnitToggleLabel();
     }
 
     updateRelatedResources() {
@@ -1634,8 +1781,55 @@ class UniversalScales {
     formatUnitSymbolHTML(symbol) {
         if (!symbol) return '';
         let html = this.escapeHtml(symbol);
-        html = html.replace(/\^([+-]?\d+)/g, '<sup>$1</sup>');
+        // Support both compact forms (m^2, l_P) and braced forms (m^{2}, l_{P}).
+        html = html.replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>');
+        html = html.replace(/_\{([^}]+)\}/g, '<sub>$1</sub>');
+        html = html.replace(/\^([A-Za-z0-9+\-]+)/g, '<sup>$1</sup>');
+        html = html.replace(/_([A-Za-z0-9+\-]+)/g, '<sub>$1</sub>');
         return html;
+    }
+
+    formatUnitSymbolDisplayText(symbol) {
+        if (!symbol) return '';
+        let text = String(symbol);
+        text = text.replace(/\^\{([^}]+)\}/g, (_, value) => this.toSuperscript(value));
+        text = text.replace(/_\{([^}]+)\}/g, (_, value) => this.formatSubscriptTokenForSelect(value));
+        text = text.replace(/\^([A-Za-z0-9+\-]+)/g, (_, value) => this.toSuperscript(value));
+        text = text.replace(/_([A-Za-z0-9+\-]+)/g, (_, value) => this.formatSubscriptTokenForSelect(value));
+        return text;
+    }
+
+    unitSymbolToLatex(symbol) {
+        if (!symbol) return '';
+        let latex = String(symbol).trim();
+        if (/\\[A-Za-z]/.test(latex)) {
+            return latex;
+        }
+        latex = latex.replace(/µ|μ/g, '\\mu ');
+        latex = latex.replace(/\^\{([^}]+)\}/g, '^{$1}');
+        latex = latex.replace(/_\{([^}]+)\}/g, '_{$1}');
+        latex = latex.replace(/\^([A-Za-z0-9+\-]+)/g, '^{$1}');
+        latex = latex.replace(/_([A-Za-z0-9+\-]+)/g, '_{$1}');
+        return this.romanizeUnitLatex(latex);
+    }
+
+    romanizeUnitLatex(latex) {
+        if (!latex) return '';
+        return String(latex).replace(/\\[A-Za-z]+|[A-Za-z]+/g, (token) => {
+            if (token.startsWith('\\')) return token;
+            return `\\mathrm{${token}}`;
+        });
+    }
+
+    formatSubscriptTokenForSelect(value) {
+        const token = String(value || '');
+        // Native <select><option> cannot render true math HTML.
+        // Only use unicode subscripts when the full token is representable cleanly.
+        // For symbolic word-like subscripts (earth, sun, jup), preserve underscore text.
+        if (/^[0-9+\-]+$/.test(token)) {
+            return this.toSubscript(token);
+        }
+        return `_${token}`;
     }
 
     formatTooltipValueHTML(formattedValue, unitSymbol) {
@@ -1667,6 +1861,61 @@ class UniversalScales {
             .join('');
     }
 
+    toSubscript(value) {
+        const subscripts = {
+            '0': '₀',
+            '1': '₁',
+            '2': '₂',
+            '3': '₃',
+            '4': '₄',
+            '5': '₅',
+            '6': '₆',
+            '7': '₇',
+            '8': '₈',
+            '9': '₉',
+            '+': '₊',
+            '-': '₋',
+            'a': 'ₐ',
+            'e': 'ₑ',
+            'h': 'ₕ',
+            'i': 'ᵢ',
+            'j': 'ⱼ',
+            'k': 'ₖ',
+            'l': 'ₗ',
+            'm': 'ₘ',
+            'n': 'ₙ',
+            'o': 'ₒ',
+            'p': 'ₚ',
+            'r': 'ᵣ',
+            's': 'ₛ',
+            't': 'ₜ',
+            'u': 'ᵤ',
+            'v': 'ᵥ',
+            'x': 'ₓ',
+            'A': 'ₐ',
+            'E': 'ₑ',
+            'H': 'ₕ',
+            'I': 'ᵢ',
+            'J': 'ⱼ',
+            'K': 'ₖ',
+            'L': 'ₗ',
+            'M': 'ₘ',
+            'N': 'ₙ',
+            'O': 'ₒ',
+            'P': 'ₚ',
+            'R': 'ᵣ',
+            'S': 'ₛ',
+            'T': 'ₜ',
+            'U': 'ᵤ',
+            'V': 'ᵥ',
+            'X': 'ₓ',
+        };
+        return String(value)
+            .split('')
+            .map(char => subscripts[char] || char)
+            .join('');
+    }
+
     normalizeUnitSignature(text) {
         return this.sanitizeTraceText(text)
             .toLowerCase()
@@ -1694,6 +1943,7 @@ class UniversalScales {
         value = value.replace(/\\approx\b/g, '≈');
         value = value.replace(/\\times\b/g, '×');
         value = value.replace(/\s+[x*]\s+/g, ' × ');
+        value = value.replace(/(\d+(?:\.\d+)?)\^([+-]?\d+)/g, (_, base, exponent) => `${base}${this.toSuperscript(exponent)}`);
         value = value.replace(/([A-Za-z]+)\^([+-]?\d+)/g, (_, base, exponent) => `${base}${this.toSuperscript(exponent)}`);
         value = value.replace(/([+-]?\d+(?:\.\d+)?)e([+-]?\d+)/gi, (_, mantissa, exponent) => {
             return `${mantissa} × 10${this.toSuperscript(exponent)}`;
@@ -1722,6 +1972,15 @@ class UniversalScales {
         value = value.replace(/\bpi\s*\*\s*r\^2\b/gi, '\\pi r^2');
         value = value.replace(/\bpi\s*r\^2\b/gi, '\\pi r^2');
         value = value.replace(/(^|[^\\])pi\b/g, '$1\\pi');
+        value = value.replace(/\^(\{[^}]+\}|[A-Za-z0-9+\-.]+)/g, (_match, exponentToken) => {
+            if (exponentToken.startsWith('{')) return `^${exponentToken}`;
+            return `^{${exponentToken}}`;
+        });
+        value = value.replace(/_(\{[^}]+\}|[A-Za-z0-9+\-.]+)/g, (_match, subToken) => {
+            if (subToken.startsWith('{')) return `_${subToken}`;
+            return `_{${subToken}}`;
+        });
+        value = value.replace(/(^|[^\\])count\b/gi, '$1\\mathrm{count}');
         value = value.replace(/\s+[x*]\s+/g, ' \\times ');
         value = value.replace(/([+-]?\d+(?:\.\d+)?)e([+-]?\d+)/gi, '$1 \\\\times 10^{$2}');
         return value;
@@ -1868,6 +2127,12 @@ class UniversalScales {
         if (attempt < 8) {
             window.setTimeout(() => this.typesetMath(element, text, attempt + 1), 150);
         }
+    }
+
+    typesetMathIfReady(element) {
+        if (!element) return;
+        const mathSource = element.textContent || element.innerHTML || '';
+        this.typesetMath(element, mathSource);
     }
 
     preserveMathBlocks(text) {

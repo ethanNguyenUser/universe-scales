@@ -12,6 +12,14 @@ units:
   description: A count is the canonical storage unit for dimensionless tallies of discrete items or states.
   name: count
   symbol: count
+- name: dozens
+  symbol: dozen
+  conversion_factor: 0.08333333333333333
+  description: Dozens are a familiar packaging/counting unit in everyday life.
+- name: moles
+  symbol: mol
+  conversion_factor: 1.6605390671738466e-24
+  description: Moles convert raw counts to Avogadro-scale chemistry quantities.
 - name: thousands
   symbol: k
   conversion_factor: 0.001
@@ -54,483 +62,33 @@ frontend_group: fundamental
 frontend_group_label: Fundamental Scales
 frontend_order: 200
 items:
-- id: obs:counts:scenario-counts-rock-paper-scissors
-  name: Rock-paper-scissors gestures
-  value: 3.0
-  description: The classic hand game starts with just three legal gestures.
-  description_format: markdown
-  summary_short: The classic hand game starts with just three legal gestures.
-  description_medium: The classic hand game starts with just three legal gestures.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Rock-paper-scissors gestures
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '3.0'
-      source_basis: Rock paper scissors uses three standard gestures.
-      source_unit: gestures
-      source_url: https://en.wikipedia.org/wiki/Rock_paper_scissors
-      source_value_text: '3'
-  source: https://en.wikipedia.org/wiki/Rock_paper_scissors
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-rock-paper-scissors
-    url: https://en.wikipedia.org/wiki/Rock_paper_scissors
-    title: Rock paper scissors
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-dna-alphabet
-  name: DNA nucleotide alphabet
-  value: 4.0
-  description: Standard DNA is written with a four-letter molecular alphabet.
-  description_format: markdown
-  summary_short: Standard DNA is written with a four-letter molecular alphabet.
-  description_medium: Standard DNA is written with a four-letter molecular alphabet.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: DNA nucleotide alphabet
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '4.0'
-      source_basis: Canonical DNA uses four nucleobases.
-      source_unit: bases
-      source_url: https://en.wikipedia.org/wiki/Nucleobase
-      source_value_text: '4'
-  source: https://en.wikipedia.org/wiki/Nucleobase
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-nucleobase
-    url: https://en.wikipedia.org/wiki/Nucleobase
-    title: Nucleobase
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-fingers-one-hand
-  name: Fingers on one hand
-  value: 5.0
-  description: One human hand usually supplies the first intuitive five-count.
-  description_format: markdown
-  summary_short: One human hand usually supplies the first intuitive five-count.
-  description_medium: One human hand usually supplies the first intuitive five-count.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Fingers on one hand
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '5.0'
-      source_basis: A typical human hand has five fingers.
-      source_unit: fingers
-      source_url: https://en.wikipedia.org/wiki/Finger
-      source_value_text: '5'
-  source: https://en.wikipedia.org/wiki/Finger
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-finger
-    url: https://en.wikipedia.org/wiki/Finger
-    title: Finger
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-die-faces
-  name: Faces on a die
-  value: 6.0
-  description: A standard die has six equally likely faces.
-  description_format: markdown
-  summary_short: A standard die has six equally likely faces.
-  description_medium: A standard die has six equally likely faces.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Faces on a die
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '6.0'
-      source_basis: A standard cubic die has six faces.
-      source_unit: faces
-      source_url: https://en.wikipedia.org/wiki/Dice
-      source_value_text: '6'
-  source: https://en.wikipedia.org/wiki/Dice
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-dice
-    url: https://en.wikipedia.org/wiki/Dice
-    title: Dice
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-days-week
-  name: Days in a week
-  value: 7.0
-  description: The basic civil week is a seven-day repeating cycle.
-  description_format: markdown
-  summary_short: The basic civil week is a seven-day repeating cycle.
-  description_medium: The basic civil week is a seven-day repeating cycle.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Days in a week
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '7.0'
-      source_basis: The standard civil week has seven days.
-      source_unit: days
-      source_url: https://en.wikipedia.org/wiki/Week
-      source_value_text: '7'
-  source: https://en.wikipedia.org/wiki/Week
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-week
-    url: https://en.wikipedia.org/wiki/Week
-    title: Week
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:entity-solar-system-planets-count
-  name: Planets in the Solar System
-  value: 8.0
-  description: The modern Solar System count stops at eight recognized planets.
-  description_format: markdown
-  summary_short: The modern Solar System count stops at eight recognized planets.
-  description_medium: The modern Solar System count stops at eight recognized planets.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Planets in the Solar System
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '8.0'
-      source_basis: The Solar System has eight planets.
-      source_unit: planets
-      source_url: https://en.wikipedia.org/wiki/Solar_System
-      source_value_text: '8'
-  source: https://en.wikipedia.org/wiki/Solar_System
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-solar-system
-    url: https://en.wikipedia.org/wiki/Solar_System
-    title: Solar System
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-months-year
-  name: Months in a year
+- id: obs:counts:scenario-counts-one-dozen
+  name: One dozen objects
   value: 12.0
-  description: The standard civil year is split into twelve named months.
+  description: A dozen is one of the most common everyday counting bundles.
   description_format: markdown
-  summary_short: The standard civil year is split into twelve named months.
-  description_medium: The standard civil year is split into twelve named months.
+  summary_short: A dozen is one of the most common everyday counting bundles.
+  description_medium: A dozen is one of the most common everyday counting bundles.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Months in a year
+    canonical_name: One dozen objects
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
       method: direct
       original_value_text: '12.0'
-      source_basis: The Gregorian calendar year has twelve months.
-      source_unit: months
-      source_url: https://en.wikipedia.org/wiki/Month
+      source_basis: A dozen is defined as exactly twelve.
+      source_unit: objects
+      source_url: https://en.wikipedia.org/wiki/Dozen
       source_value_text: '12'
-  source: https://en.wikipedia.org/wiki/Month
+  source: https://en.wikipedia.org/wiki/Dozen
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-month
-    url: https://en.wikipedia.org/wiki/Month
-    title: Month
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-hours-day
-  name: Hours in a day
-  value: 24.0
-  description: A full civil day is traditionally divided into twenty-four hours.
-  description_format: markdown
-  summary_short: A full civil day is traditionally divided into twenty-four hours.
-  description_medium: A full civil day is traditionally divided into twenty-four hours.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Hours in a day
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '24.0'
-      source_basis: The modern day is divided into twenty-four hours.
-      source_unit: hours
-      source_url: https://en.wikipedia.org/wiki/Hour
-      source_value_text: '24'
-  source: https://en.wikipedia.org/wiki/Hour
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-hour
-    url: https://en.wikipedia.org/wiki/Hour
-    title: Hour
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-english-alphabet
-  name: Letters in the English alphabet
-  value: 26.0
-  description: Modern English writing works with twenty-six basic letters.
-  description_format: markdown
-  summary_short: Modern English writing works with twenty-six basic letters.
-  description_medium: Modern English writing works with twenty-six basic letters.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Letters in the English alphabet
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '26.0'
-      source_basis: The English alphabet has twenty-six letters.
-      source_unit: letters
-      source_url: https://en.wikipedia.org/wiki/English_alphabet
-      source_value_text: '26'
-  source: https://en.wikipedia.org/wiki/English_alphabet
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-english-alphabet
-    url: https://en.wikipedia.org/wiki/English_alphabet
-    title: English alphabet
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-chess-pieces-start
-  name: Chess pieces at the start of a game
-  value: 32.0
-  description: A chess game opens with thirty-two pieces on the board.
-  description_format: markdown
-  summary_short: A chess game opens with thirty-two pieces on the board.
-  description_medium: A chess game opens with thirty-two pieces on the board.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Chess pieces at the start of a game
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '32.0'
-      source_basis: Standard chess starts with sixteen pieces per side.
-      source_unit: pieces
-      source_url: https://en.wikipedia.org/wiki/Chess
-      source_value_text: '32'
-  source: https://en.wikipedia.org/wiki/Chess
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-chess
-    url: https://en.wikipedia.org/wiki/Chess
-    title: Chess
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-cards-standard-deck
-  name: Cards in a standard deck
-  value: 52.0
-  description: A standard deck compresses four suits into fifty-two distinct cards.
-  description_format: markdown
-  summary_short: A standard deck compresses four suits into fifty-two distinct cards.
-  description_medium: A standard deck compresses four suits into fifty-two distinct cards.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Cards in a standard deck
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '52.0'
-      source_basis: A standard deck contains fifty-two cards.
-      source_unit: cards
-      source_url: https://en.wikipedia.org/wiki/Standard_52-card_deck
-      source_value_text: '52'
-  source: https://en.wikipedia.org/wiki/Standard_52-card_deck
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-standard-52-card-deck
-    url: https://en.wikipedia.org/wiki/Standard_52-card_deck
-    title: Standard 52-card deck
+  - id: src:https-en-wikipedia-org-wiki-dozen
+    url: https://en.wikipedia.org/wiki/Dozen
+    title: Dozen
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -595,51 +153,6 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:counts:scenario-counts-piano-keys
-  name: Piano keys
-  value: 88.0
-  description: The modern full-size piano keyboard has eighty-eight keys.
-  description_format: markdown
-  summary_short: The modern full-size piano keyboard has eighty-eight keys.
-  description_medium: The modern full-size piano keyboard has eighty-eight keys.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Piano keys
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '88.0'
-      source_basis: A modern full-size piano has eighty-eight keys.
-      source_unit: keys
-      source_url: https://en.wikipedia.org/wiki/Piano
-      source_value_text: '88'
-  source: https://en.wikipedia.org/wiki/Piano
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-piano
-    url: https://en.wikipedia.org/wiki/Piano
-    title: Piano
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:counts:entity-adult-human-bones-count
   name: Bones in an adult human body
   value: 206.0
@@ -667,51 +180,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-human-skeleton
     url: https://en.wikipedia.org/wiki/Human_skeleton
     title: Human skeleton
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:counts:scenario-counts-days-year
-  name: Days in a year
-  value: 365.0
-  description: A common civil year contains three hundred sixty-five days.
-  description_format: markdown
-  summary_short: A common civil year contains three hundred sixty-five days.
-  description_medium: A common civil year contains three hundred sixty-five days.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Days in a year
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      method: direct
-      original_value_text: '365.0'
-      source_basis: A common Gregorian year has 365 days.
-      source_unit: days
-      source_url: https://en.wikipedia.org/wiki/Year
-      source_value_text: '365'
-  source: https://en.wikipedia.org/wiki/Year
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-year
-    url: https://en.wikipedia.org/wiki/Year
-    title: Year
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -820,6 +288,51 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
+- id: obs:counts:entity-human-mitochondrial-genome-base-pairs
+  name: Base pairs in the human mitochondrial genome
+  value: 16569.0
+  description: Human mitochondrial DNA is tiny compared with the nuclear genome but still spans over sixteen thousand base pairs.
+  description_format: markdown
+  summary_short: Human mitochondrial DNA is tiny compared with the nuclear genome but still spans over sixteen thousand base pairs.
+  description_medium: Human mitochondrial DNA is tiny compared with the nuclear genome but still spans over sixteen thousand base pairs.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Base pairs in the human mitochondrial genome
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      method: direct
+      original_value_text: '16569.0'
+      source_basis: The human mitochondrial genome has 16,569 base pairs.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Human_mitochondrial_DNA
+      source_value_text: '16569'
+  source: https://en.wikipedia.org/wiki/Human_mitochondrial_DNA
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-mitochondrial-dna
+    url: https://en.wikipedia.org/wiki/Human_mitochondrial_DNA
+    title: Human mitochondrial DNA
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
 - id: obs:counts:entity-human-protein-coding-genes-count
   name: Human protein-coding genes
   value: 20000.0
@@ -910,52 +423,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:counts:scenario-counts-1080p-pixels
-  name: Pixels in a 1080p frame
-  value: 2073600.0
-  description: A single 1080p image already contains a bit over two million pixels.
-  description_format: markdown
-  summary_short: A single 1080p image already contains a bit over two million pixels.
-  description_medium: A single 1080p image already contains a bit over two million pixels.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  facts:
-    canonical_name: Pixels in a 1080p frame
-    ingest_source: dataset/raw/curated/counts.json
-    source_trace:
-      derivation_note: count = width x height = 1920 x 1080
-      method: derived
-      original_value_text: '2073600.0'
-      source_basis: Full HD uses a 1920 by 1080 pixel raster.
-      source_unit: pixels
-      source_url: https://en.wikipedia.org/wiki/1080p
-      source_value_text: 1920 x 1080
-  source: https://en.wikipedia.org/wiki/1080p
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-1080p
-    url: https://en.wikipedia.org/wiki/1080p
-    title: 1080p
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-counts-json
-    url: repo://dataset/raw/curated/counts.json
-    title: dataset/raw/curated/counts.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:counts:scenario-counts-pocket-cube-states
   name: Reachable 2x2 Rubik's Cube states
   value: 3674160.0
@@ -1001,6 +468,51 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
+- id: obs:counts:entity-e-coli-genome-base-pairs
+  name: Base pairs in the E. coli genome
+  value: 4641652.0
+  description: A common bacterium already carries several million base pairs of DNA.
+  description_format: markdown
+  summary_short: A common bacterium already carries several million base pairs of DNA.
+  description_medium: A common bacterium already carries several million base pairs of DNA.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Base pairs in the E. coli genome
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      method: direct
+      original_value_text: '4641652.0'
+      source_basis: The Escherichia coli K-12 genome has 4,641,652 base pairs.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Escherichia_coli
+      source_value_text: '4641652'
+  source: https://en.wikipedia.org/wiki/Escherichia_coli
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escherichia-coli
+    url: https://en.wikipedia.org/wiki/Escherichia_coli
+    title: Escherichia coli
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
 - id: obs:counts:entity-yeast-genome-base-pairs
   name: Base pairs in the yeast genome
   value: 12157105.0
@@ -1028,6 +540,97 @@ items:
   - id: src:https-en-wikipedia-org-wiki-saccharomyces-cerevisiae
     url: https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae
     title: Saccharomyces cerevisiae
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:counts:scenario-counts-8k-pixels
+  name: Pixels in an 8K UHD frame
+  value: 33177600.0
+  description: A single 8K image pushes into the tens of millions of pixels.
+  description_format: markdown
+  summary_short: A single 8K image pushes into the tens of millions of pixels.
+  description_medium: A single 8K image pushes into the tens of millions of pixels.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pixels in an 8K UHD frame
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count = width x height = 7680 x 4320
+      method: derived
+      original_value_text: '33177600.0'
+      source_basis: 8K UHD uses a 7680 by 4320 pixel raster.
+      source_unit: pixels
+      source_url: https://en.wikipedia.org/wiki/8K_resolution
+      source_value_text: 7680 x 4320
+  source: https://en.wikipedia.org/wiki/8K_resolution
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-8k-resolution
+    url: https://en.wikipedia.org/wiki/8K_resolution
+    title: 8K resolution
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:entity-human-genome-base-pairs-count
+  name: Base pairs in the human genome
+  value: 3200000000.0
+  description: The haploid human genome contains about 3.2 billion base pairs.
+  description_format: markdown
+  summary_short: The haploid human genome contains about 3.2 billion base pairs.
+  description_medium: The haploid human genome contains about 3.2 billion base pairs.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Base pairs in the human genome
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      method: direct
+      original_value_text: '3200000000.0'
+      source_basis: The haploid human genome is about 3.2 billion base pairs long.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Human_genome
+      source_value_text: '3200000000'
+  source: https://en.wikipedia.org/wiki/Human_genome
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-genome
+    url: https://en.wikipedia.org/wiki/Human_genome
+    title: Human genome
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1363,6 +966,51 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
+- id: obs:counts:entity-human-gut-bacteria-count
+  name: Bacteria in the human gut
+  value: 38000000000000.0
+  description: The gut microbiome alone contains tens of trillions of bacterial cells.
+  description_format: markdown
+  summary_short: The gut microbiome alone contains tens of trillions of bacterial cells.
+  description_medium: The gut microbiome alone contains tens of trillions of bacterial cells.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bacteria in the human gut
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      method: direct
+      original_value_text: '38000000000000.0'
+      source_basis: A common estimate gives the human body about 38 trillion bacterial cells.
+      source_unit: bacteria
+      source_url: https://en.wikipedia.org/wiki/Gut_microbiota
+      source_value_text: 38 trillion
+  source: https://en.wikipedia.org/wiki/Gut_microbiota
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gut-microbiota
+    url: https://en.wikipedia.org/wiki/Gut_microbiota
+    title: Gut microbiota
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
 - id: obs:counts:entity-human-brain-synapses-count
   name: Synapses in the human brain
   value: 100000000000000.0
@@ -1454,34 +1102,34 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:counts:scenario-counts-60-bit-key-space
-  name: 60-bit key space
-  value: 1.15292150460685e+18
-  description: A 60-bit brute-force search already means more than one quintillion candidate keys.
+- id: obs:counts:scenario-counts-des-key-space
+  name: DES key space
+  value: 7.20575940379279e+16
+  description: DES is historically important partly because its 56-bit key space became brute-forceable.
   description_format: markdown
-  summary_short: A 60-bit brute-force search already means more than one quintillion candidate keys.
-  description_medium: A 60-bit brute-force search already means more than one quintillion candidate keys.
+  summary_short: DES is historically important partly because its 56-bit key space became brute-forceable.
+  description_medium: DES is historically important partly because its 56-bit key space became brute-forceable.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: 60-bit key space
+    canonical_name: DES key space
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
-      derivation_note: count = 2^60
+      derivation_note: count = 2^56
       method: derived
-      original_value_text: '1.15292150460685e+18'
-      source_basis: A 60-bit symmetric key has 2^60 possible values.
+      original_value_text: '7.20575940379279e+16'
+      source_basis: DES uses a 56-bit effective key length.
       source_unit: keys
-      source_url: https://en.wikipedia.org/wiki/Key_space_(cryptography)
-      source_value_text: 2^60
-  source: https://en.wikipedia.org/wiki/Key_space_(cryptography)
+      source_url: https://en.wikipedia.org/wiki/Data_Encryption_Standard
+      source_value_text: 2^56
+  source: https://en.wikipedia.org/wiki/Data_Encryption_Standard
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-key-space-cryptography
-    url: https://en.wikipedia.org/wiki/Key_space_(cryptography)
-    title: Key space (cryptography)
+  - id: src:https-en-wikipedia-org-wiki-data-encryption-standard
+    url: https://en.wikipedia.org/wiki/Data_Encryption_Standard
+    title: Data Encryption Standard
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1775,6 +1423,52 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:counts:scenario-counts-atoms-12g-carbon-12
+  name: Atoms in 12 grams of carbon-12
+  value: 6.02214076e+23
+  description: By definition, 12 grams of carbon-12 contains one mole of atoms.
+  description_format: markdown
+  summary_short: By definition, 12 grams of carbon-12 contains one mole of atoms.
+  description_medium: By definition, 12 grams of carbon-12 contains one mole of atoms.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atoms in 12 grams of carbon-12
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count = N_A = 6.02214076 × 10^23
+      method: derived
+      original_value_text: '6.02214076e+23'
+      source_basis: One mole equals Avogadro's number of entities.
+      source_unit: atoms
+      source_url: https://en.wikipedia.org/wiki/Avogadro_constant
+      source_value_text: N_A
+  source: https://en.wikipedia.org/wiki/Avogadro_constant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-avogadro-constant
+    url: https://en.wikipedia.org/wiki/Avogadro_constant
+    title: Avogadro constant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:counts:scenario-counts-molecules-liter-water
   name: Molecules in one liter of water
   value: 3.34279609309431e+25
@@ -1821,34 +1515,34 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:counts:scenario-counts-possible-50-base-dna-sequences
-  name: Possible 50-base DNA sequences
-  value: 1.26765060022823e+30
-  description: A DNA strand only fifty bases long already spans around 10^30 possible sequences.
+- id: obs:counts:scenario-counts-uuidv4-values
+  name: UUIDv4 values
+  value: 5.31691198313966e+36
+  description: UUIDv4 has 122 random bits, giving a huge but standardized identifier space.
   description_format: markdown
-  summary_short: A DNA strand only fifty bases long already spans around 10^30 possible sequences.
-  description_medium: A DNA strand only fifty bases long already spans around 10^30 possible sequences.
+  summary_short: UUIDv4 has 122 random bits, giving a huge but standardized identifier space.
+  description_medium: UUIDv4 has 122 random bits, giving a huge but standardized identifier space.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Possible 50-base DNA sequences
+    canonical_name: UUIDv4 values
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
-      derivation_note: count = 4^50
+      derivation_note: count = 2^122
       method: derived
-      original_value_text: '1.26765060022823e+30'
-      source_basis: Each of 50 positions can take one of four DNA bases.
-      source_unit: sequences
-      source_url: https://en.wikipedia.org/wiki/DNA
-      source_value_text: 4^50
-  source: https://en.wikipedia.org/wiki/DNA
+      original_value_text: '5.31691198313966e+36'
+      source_basis: UUID version 4 carries 122 random bits after fixed version and variant fields.
+      source_unit: identifiers
+      source_url: https://en.wikipedia.org/wiki/Universally_unique_identifier
+      source_value_text: 2^122
+  source: https://en.wikipedia.org/wiki/Universally_unique_identifier
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-dna
-    url: https://en.wikipedia.org/wiki/DNA
-    title: DNA
+  - id: src:https-en-wikipedia-org-wiki-universally-unique-identifier
+    url: https://en.wikipedia.org/wiki/Universally_unique_identifier
+    title: Universally unique identifier
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1913,33 +1607,34 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:counts:scenario-counts-legal-chess-positions
-  name: Legal chess positions
-  value: 4.82e+44
-  description: The number of legal chess positions is estimated in the tens of quattuordecillion.
+- id: obs:counts:entity-earth-atmosphere-molecules-count
+  name: Molecules in Earth's atmosphere
+  value: 1.1e+44
+  description: Earth's atmosphere contains on the order of 10^44 molecules.
   description_format: markdown
-  summary_short: The number of legal chess positions is estimated in the tens of quattuordecillion.
-  description_medium: The number of legal chess positions is estimated in the tens of quattuordecillion.
+  summary_short: Earth's atmosphere contains on the order of 10^44 molecules.
+  description_medium: Earth's atmosphere contains on the order of 10^44 molecules.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Legal chess positions
+    canonical_name: Molecules in Earth's atmosphere
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
-      method: direct
-      original_value_text: '4.82e+44'
-      source_basis: A standard estimate places the number of legal chess positions around 4.82 x 10^44.
-      source_unit: positions
-      source_url: https://en.wikipedia.org/wiki/Chess#Complexity
-      source_value_text: 4.82 x 10^44
-  source: https://en.wikipedia.org/wiki/Chess#Complexity
+      derivation_note: count ≈ M_atm / M_air × N_A
+      method: derived
+      original_value_text: '1.1e+44'
+      source_basis: Estimated from total atmospheric mass, mean molar mass of air, and Avogadro's constant.
+      source_unit: molecules
+      source_url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+      source_value_text: mass_atmosphere / molar_mass_air × N_A
+  source: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-chess-complexity
-    url: https://en.wikipedia.org/wiki/Chess#Complexity
-    title: Chess
+  - id: src:https-en-wikipedia-org-wiki-atmosphere-of-earth
+    url: https://en.wikipedia.org/wiki/Atmosphere_of_Earth
+    title: Atmosphere of Earth
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1956,36 +1651,173 @@ items:
     role: curation_manifest
     note: null
   wikidata_qid: null
-  value_type: measured
+  value_type: derived
   qualifiers: {}
-- id: obs:counts:scenario-counts-possible-80-base-dna-sequences
-  name: Possible 80-base DNA sequences
+- id: obs:counts:scenario-counts-sha-1-digests
+  name: Possible SHA-1 digests
   value: 1.4615016373309e+48
-  description: Eighty DNA bases already define a sequence space larger than 10^48.
+  description: SHA-1's 160-bit output space contains about 10^48 possible digests.
   description_format: markdown
-  summary_short: Eighty DNA bases already define a sequence space larger than 10^48.
-  description_medium: Eighty DNA bases already define a sequence space larger than 10^48.
+  summary_short: SHA-1's 160-bit output space contains about 10^48 possible digests.
+  description_medium: SHA-1's 160-bit output space contains about 10^48 possible digests.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Possible 80-base DNA sequences
+    canonical_name: Possible SHA-1 digests
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
-      derivation_note: count = 4^80
+      derivation_note: count = 2^160
       method: derived
       original_value_text: '1.4615016373309e+48'
-      source_basis: Each of 80 positions can take one of four DNA bases.
-      source_unit: sequences
-      source_url: https://en.wikipedia.org/wiki/DNA
-      source_value_text: 4^80
-  source: https://en.wikipedia.org/wiki/DNA
+      source_basis: SHA-1 produces 160-bit hash outputs.
+      source_unit: digests
+      source_url: https://en.wikipedia.org/wiki/SHA-1
+      source_value_text: 2^160
+  source: https://en.wikipedia.org/wiki/SHA-1
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-dna
-    url: https://en.wikipedia.org/wiki/DNA
-    title: DNA
+  - id: src:https-en-wikipedia-org-wiki-sha-1
+    url: https://en.wikipedia.org/wiki/SHA-1
+    title: SHA-1
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:entity-earth-atoms-count
+  name: Atoms in Earth
+  value: 1.0e+50
+  description: Earth contains about 10^50 atoms, making planetary matter feel less abstract.
+  description_format: markdown
+  summary_short: Earth contains about 10^50 atoms, making planetary matter feel less abstract.
+  description_medium: Earth contains about 10^50 atoms, making planetary matter feel less abstract.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atoms in Earth
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      method: derived
+      original_value_text: 1e+50
+      source_basis: Order-of-magnitude atom count from Earth mass and average nucleon mass.
+      source_unit: atoms
+      source_url: https://en.wikipedia.org/wiki/Earth
+      source_value_text: ~10^50
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:entity-sun-nucleons-count
+  name: Nucleons in the Sun
+  value: 1.19e+57
+  description: The Sun contains about 10^57 nucleons, a useful stellar particle-count anchor.
+  description_format: markdown
+  summary_short: The Sun contains about 10^57 nucleons, a useful stellar particle-count anchor.
+  description_medium: The Sun contains about 10^57 nucleons, a useful stellar particle-count anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Nucleons in the Sun
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count ≈ M_☉ / m_p
+      method: derived
+      original_value_text: '1.19e+57'
+      source_basis: Estimated by dividing solar mass by proton mass.
+      source_unit: nucleons
+      source_url: https://en.wikipedia.org/wiki/Sun
+      source_value_text: M_sun / m_p
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:scenario-counts-aes-192-key-space
+  name: AES-192 key space
+  value: 6.27710173538668e+57
+  description: AES-192 has a standardized 192-bit key space used in modern cryptography.
+  description_format: markdown
+  summary_short: AES-192 has a standardized 192-bit key space used in modern cryptography.
+  description_medium: AES-192 has a standardized 192-bit key space used in modern cryptography.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: AES-192 key space
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count = 2^192
+      method: derived
+      original_value_text: '6.27710173538668e+57'
+      source_basis: AES-192 uses 192-bit keys.
+      source_unit: keys
+      source_url: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+      source_value_text: 2^192
+  source: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-advanced-encryption-standard
+    url: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+    title: Advanced Encryption Standard
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -2032,6 +1864,51 @@ items:
   - id: src:https-en-wikipedia-org-wiki-standard-52-card-deck
     url: https://en.wikipedia.org/wiki/Standard_52-card_deck
     title: Standard 52-card deck
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:entity-milky-way-baryons-count
+  name: Baryons in the Milky Way
+  value: 1.0e+68
+  description: Converting the Milky Way's baryonic mass into nucleons gives a count around 10^68.
+  description_format: markdown
+  summary_short: Converting the Milky Way's baryonic mass into nucleons gives a count around 10^68.
+  description_medium: Converting the Milky Way's baryonic mass into nucleons gives a count around 10^68.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Baryons in the Milky Way
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      method: derived
+      original_value_text: 1e+68
+      source_basis: Order-of-magnitude conversion from Milky Way baryonic mass to nucleon count.
+      source_unit: baryons
+      source_url: https://en.wikipedia.org/wiki/Milky_Way
+      source_value_text: ~10^68
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milky-way
+    url: https://en.wikipedia.org/wiki/Milky_Way
+    title: Milky Way
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -2141,33 +2018,33 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:counts:scenario-counts-shannon-number
-  name: Shannon number
-  value: 1.0e+120
-  description: Claude Shannon's famous estimate for possible chess games is about 10^120.
+- id: obs:counts:entity-observable-universe-total-particles-count
+  name: Total particles in the observable universe
+  value: 1.0e+90
+  description: Including photons, neutrinos, and baryons gives a rough total near 10^90 particles.
   description_format: markdown
-  summary_short: Claude Shannon's famous estimate for possible chess games is about 10^120.
-  description_medium: Claude Shannon's famous estimate for possible chess games is about 10^120.
+  summary_short: Including photons, neutrinos, and baryons gives a rough total near 10^90 particles.
+  description_medium: Including photons, neutrinos, and baryons gives a rough total near 10^90 particles.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Shannon number
+    canonical_name: Total particles in the observable universe
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
       method: direct
-      original_value_text: 1e+120
-      source_basis: The Shannon number estimates the game-tree complexity of chess at about 10^120.
-      source_unit: games
-      source_url: https://en.wikipedia.org/wiki/Shannon_number
-      source_value_text: 10^120
-  source: https://en.wikipedia.org/wiki/Shannon_number
+      original_value_text: 1e+90
+      source_basis: Order-of-magnitude aggregate from standard cosmological particle-population estimates.
+      source_unit: particles
+      source_url: https://en.wikipedia.org/wiki/Observable_universe
+      source_value_text: ~10^90
+  source: https://en.wikipedia.org/wiki/Observable_universe
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-shannon-number
-    url: https://en.wikipedia.org/wiki/Shannon_number
-    title: Shannon number
+  - id: src:https-en-wikipedia-org-wiki-observable-universe
+    url: https://en.wikipedia.org/wiki/Observable_universe
+    title: Observable universe
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -2186,34 +2063,126 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:counts:scenario-counts-possible-100-aa-proteins
-  name: Possible 100-amino-acid proteins
-  value: 1.26765060022823e+130
-  description: A modest 100-amino-acid protein already lives in an unimaginably large sequence space.
+- id: obs:counts:scenario-counts-sha-384-digests
+  name: Possible SHA-384 digests
+  value: 3.94020061963945e+115
+  description: SHA-384 expands digest space to roughly 10^115 possibilities.
   description_format: markdown
-  summary_short: A modest 100-amino-acid protein already lives in an unimaginably large sequence space.
-  description_medium: A modest 100-amino-acid protein already lives in an unimaginably large sequence space.
+  summary_short: SHA-384 expands digest space to roughly 10^115 possibilities.
+  description_medium: SHA-384 expands digest space to roughly 10^115 possibilities.
   description_long: null
   hook: null
   caveats: null
   content_status: seeded
   facts:
-    canonical_name: Possible 100-amino-acid proteins
+    canonical_name: Possible SHA-384 digests
     ingest_source: dataset/raw/curated/counts.json
     source_trace:
-      derivation_note: count = 20^100
+      derivation_note: count = 2^384
       method: derived
-      original_value_text: '1.26765060022823e+130'
-      source_basis: Each of 100 positions can take one of twenty standard amino acids.
-      source_unit: sequences
-      source_url: https://en.wikipedia.org/wiki/Protein_sequence_space
-      source_value_text: 20^100
-  source: https://en.wikipedia.org/wiki/Protein_sequence_space
+      original_value_text: '3.94020061963945e+115'
+      source_basis: SHA-384 produces 384-bit outputs.
+      source_unit: digests
+      source_url: https://en.wikipedia.org/wiki/SHA-2
+      source_value_text: 2^384
+  source: https://en.wikipedia.org/wiki/SHA-2
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-protein-sequence-space
-    url: https://en.wikipedia.org/wiki/Protein_sequence_space
-    title: Protein sequence space
+  - id: src:https-en-wikipedia-org-wiki-sha-2
+    url: https://en.wikipedia.org/wiki/SHA-2
+    title: SHA-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:scenario-counts-planck-volumes-earth
+  name: Planck volumes in Earth
+  value: 2.57e+125
+  description: Earth's volume corresponds to about 10^125 Planck-volume cells.
+  description_format: markdown
+  summary_short: Earth's volume corresponds to about 10^125 Planck-volume cells.
+  description_medium: Earth's volume corresponds to about 10^125 Planck-volume cells.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck volumes in Earth
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count = V / l_P^3
+      method: derived
+      original_value_text: '2.57e+125'
+      source_basis: Derived from Earth's volume and Planck length.
+      source_unit: Planck volumes
+      source_url: https://en.wikipedia.org/wiki/Earth
+      source_value_text: V_earth / l_P^3
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:scenario-counts-planck-volumes-sun
+  name: Planck volumes in the Sun
+  value: 3.34e+131
+  description: The Sun's volume corresponds to about 10^131 Planck-volume cells.
+  description_format: markdown
+  summary_short: The Sun's volume corresponds to about 10^131 Planck-volume cells.
+  description_medium: The Sun's volume corresponds to about 10^131 Planck-volume cells.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck volumes in the Sun
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count = V / l_P^3
+      method: derived
+      original_value_text: '3.34e+131'
+      source_basis: Derived from solar volume and Planck length.
+      source_unit: Planck volumes
+      source_url: https://en.wikipedia.org/wiki/Sun
+      source_value_text: V_sun / l_P^3
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -2260,6 +2229,52 @@ items:
   - id: src:https-en-wikipedia-org-wiki-sha-2
     url: https://en.wikipedia.org/wiki/SHA-2
     title: SHA-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-counts-json
+    url: repo://dataset/raw/curated/counts.json
+    title: dataset/raw/curated/counts.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:counts:scenario-counts-nist-p-521-private-keys
+  name: NIST P-521 private keys
+  value: 6.86479766013061e+156
+  description: The P-521 elliptic-curve private-key space is on the order of 2^521, near 10^157.
+  description_format: markdown
+  summary_short: The P-521 elliptic-curve private-key space is on the order of 2^521, near 10^157.
+  description_medium: The P-521 elliptic-curve private-key space is on the order of 2^521, near 10^157.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: NIST P-521 private keys
+    ingest_source: dataset/raw/curated/counts.json
+    source_trace:
+      derivation_note: count ≈ 2^521
+      method: derived
+      original_value_text: '6.86479766013061e+156'
+      source_basis: P-521 uses roughly a 521-bit private scalar range.
+      source_unit: keys
+      source_url: https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm
+      source_value_text: 2^521
+  source: https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-elliptic-curve-digital-signature-algorithm
+    url: https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm
+    title: Elliptic Curve Digital Signature Algorithm
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

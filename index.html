@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universe Scales</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/styles.css?v=2.2">
-    <link rel="stylesheet" href="css/mobile.css?v=2.2">
+    <link rel="stylesheet" href="css/styles.css?v=2.5">
+    <link rel="stylesheet" href="css/mobile.css?v=2.5">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -111,8 +111,18 @@
             </div>
 
             <div class="unit-selector-container">
-                <label for="unit-select">Unit:</label>
-                <select id="unit-select">
+                <label for="unit-browser-toggle">Unit:</label>
+                <div class="unit-picker">
+                    <button id="unit-browser-toggle" class="unit-browser-toggle" type="button"
+                        aria-expanded="false" aria-controls="unit-browser-panel">
+                        <span id="unit-browser-current">meters</span>
+                        <span class="unit-browser-toggle__chevron" aria-hidden="true">▾</span>
+                    </button>
+                    <div id="unit-browser-panel" class="unit-browser-panel" hidden>
+                        <div id="unit-browser-list" class="unit-browser-list" aria-label="Unit selector"></div>
+                    </div>
+                </div>
+                <select id="unit-select" class="unit-select-native" aria-hidden="true" tabindex="-1">
                     <!-- Units will be populated dynamically -->
                 </select>
             </div>
@@ -286,11 +296,11 @@
         </footer>
     </div>
 
-    <script src="js/constants.js?v=2.2" defer></script>
-    <script src="js/formatting.js?v=2.2" defer></script>
+    <script src="js/constants.js?v=2.5" defer></script>
+    <script src="js/formatting.js?v=2.5" defer></script>
     <script src="js/editor.js?v=1.9" defer></script>
-    <script src="js/plot.js?v=2.2" defer></script>
-    <script src="js/script.js?v=2.2" defer></script>
+    <script src="js/plot.js?v=2.5" defer></script>
+    <script src="js/script.js?v=3.0" defer></script>
     <script src="js/mobile.js?v=1.9" defer></script>
 </body>
 
