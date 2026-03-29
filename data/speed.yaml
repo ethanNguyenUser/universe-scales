@@ -98,6 +98,42 @@ items:
   name: Fastball
   source: https://en.wikipedia.org/wiki/Baseball
   value: 42
+- name: Blood in the Aorta
+  value: 0.4
+  source: https://en.wikipedia.org/wiki/Blood_flow
+  description: Blood in the aorta moves at a fraction of a meter per second, fast enough to distribute oxygen through the body within a heartbeat. Physiology lives on this speed scale rather than on the much slower drift of capillary exchange. It is a strong internal-body benchmark.
+- name: Hurricane Wind
+  value: 70.0
+  source: https://en.wikipedia.org/wiki/Tropical_cyclone
+  description: Major hurricanes drive winds around seventy meters per second, strong enough to turn pressure differences into structural destruction. This is weather crossing into engineering load territory. It is a memorable atmospheric speed anchor.
+- name: Earth Rotation at Equator
+  value: 465.0
+  source: https://en.wikipedia.org/wiki/Earth%27s_rotation
+  description: A point on the equator moves eastward at about 465 meters per second because Earth spins once per day. We do not feel it because everything nearby shares the same motion. It is one of the most useful examples of huge speeds hiding inside familiar life.
+- name: Geostationary Orbit
+  value: 3070.0
+  source: https://en.wikipedia.org/wiki/Geostationary_orbit
+  description: A satellite in geostationary orbit still moves at about three kilometers per second even though it appears fixed in the sky from the ground. That contrast between apparent stillness and real speed is central to orbital intuition. It is a good anchor above aircraft but below interplanetary probes.
+- name: Earth Orbital Speed
+  value: 29780.0
+  source: https://en.wikipedia.org/wiki/Earth%27s_orbit
+  description: Earth travels around the Sun at nearly 30 kilometers per second, a speed so large that all ordinary terrestrial motion becomes negligible by comparison. Every year we trace a gigantic orbit almost without noticing. This is the canonical planetary-speed benchmark.
+- name: Voyager 1
+  value: 17000.0
+  source: https://en.wikipedia.org/wiki/Voyager_1
+  description: Voyager 1 is moving outward from the Sun at around seventeen kilometers per second, fast by human engineering standards but still slow compared with light. This helps calibrate what “interstellar spacecraft” really means in practice. Space is big enough that even this is patient motion.
+- name: Parker Solar Probe
+  value: 192000.0
+  source: https://en.wikipedia.org/wiki/Parker_Solar_Probe
+  description: Parker Solar Probe reaches close to two hundred kilometers per second near perihelion, making it the fastest human-made object so far. Solar gravity, not just rocket thrust, is doing much of that work. It is a spectacular upper anchor for spacecraft speed.
+- name: Signal in Fiber Optic Cable
+  value: 200000000.0
+  source: https://en.wikipedia.org/wiki/Optical_fiber
+  description: Light slows in glass to about two thirds of its vacuum speed, which still leaves it moving at roughly two hundred million meters per second inside fiber. Internet latency is therefore constrained more by geometry than by electronics. This is an excellent modern benchmark for communication speed.
+- name: Signal in Copper Cable
+  value: 210000000.0
+  source: https://en.wikipedia.org/wiki/Velocity_factor
+  description: Electrical signals in copper do not move at the drift speed of electrons; the electromagnetic disturbance itself moves at a significant fraction of light speed. That distinction is essential for understanding circuits and networks. It makes cable lengths matter in nanosecond-scale engineering.
 units:
 - conversion_factor: 1
   description: Meters per second is the SI unit for speed and follows directly from distance divided by time. It keeps equations simple and converts cleanly to energy via kinetic formulas. Using it aligns laboratory and field measurements. All item values are recorded in m per s before conversion.
@@ -119,3 +155,7 @@ units:
   description: Knots measure speed over water and in the air based on nautical miles per hour. Pilots and captains plan using this unit because charts are drawn in nautical miles. Conversions keep navigation consistent with physics. The factor provides a direct mapping from SI.
   name: knots
   symbol: kn
+- conversion_factor: 3.3356409519815e-09
+  description: Planck speed equals the speed of light, included explicitly as the natural Planck-unit velocity scale.
+  name: Planck speeds
+  symbol: v_P

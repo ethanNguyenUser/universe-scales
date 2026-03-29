@@ -1,0 +1,1550 @@
+dimension: flops
+base_unit: flops
+dimension_description: This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, AI accelerators, and supercomputers. It now includes AI-flavored reference points such as approximate LLM inference workloads and training-scale estimates alongside direct hardware specs. Precision mode still matters in real hardware, so the notes are representative rather than exhaustive.
+related_resources:
+- name: FLOPS
+  url: https://en.wikipedia.org/wiki/FLOPS
+- name: Supercomputer performance
+  url: https://en.wikipedia.org/wiki/Supercomputer#Performance
+show_limitations: true
+units:
+- name: floating-point operations per second
+  symbol: FLOP/s
+  conversion_factor: 1.0
+  description: Floating-point operations per second are the canonical storage unit for this throughput scale.
+- name: megaflops
+  symbol: MFLOP/s
+  conversion_factor: 1.0e-06
+  description: Megaflops are useful for older computers and small embedded devices.
+- name: gigaflops
+  symbol: GFLOP/s
+  conversion_factor: 1.0e-09
+  description: Gigaflops are useful for CPUs and smaller accelerators.
+- name: teraflops
+  symbol: TFLOP/s
+  conversion_factor: 1.0e-12
+  description: Teraflops are useful for modern GPUs and consoles.
+- name: petaflops
+  symbol: PFLOP/s
+  conversion_factor: 1.0e-15
+  description: Petaflops are useful for large clusters and supercomputers.
+- name: exaflops
+  symbol: EFLOP/s
+  conversion_factor: 1.0e-18
+  description: Exaflops are useful for the largest contemporary supercomputers.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: information
+frontend_group_label: Information & Computation
+frontend_order: 630
+items:
+- id: obs:flops:entity-flops-cdc-6600
+  name: CDC 6600
+  value: 3000000.0
+  description: The CDC 6600 is a classic early supercomputer benchmark.
+  description_format: markdown
+  summary_short: The CDC 6600 is a classic early supercomputer benchmark.
+  description_medium: The CDC 6600 is a classic early supercomputer benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: CDC 6600
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '3000000.0'
+      source_basis: Classic peak performance reference for the CDC 6600.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/CDC_6600
+      source_value_text: 3 MFLOPS
+  source: https://en.wikipedia.org/wiki/CDC_6600
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cdc-6600
+    url: https://en.wikipedia.org/wiki/CDC_6600
+    title: CDC 6600
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-cray-1
+  name: Cray-1
+  value: 160000000.0
+  description: The Cray-1 marked a major jump in vector supercomputing.
+  description_format: markdown
+  summary_short: The Cray-1 marked a major jump in vector supercomputing.
+  description_medium: The Cray-1 marked a major jump in vector supercomputing.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cray-1
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '160000000.0'
+      source_basis: Widely cited peak performance for the Cray-1.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Cray-1
+      source_value_text: 160 MFLOPS
+  source: https://en.wikipedia.org/wiki/Cray-1
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cray-1
+    url: https://en.wikipedia.org/wiki/Cray-1
+    title: Cray-1
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-deep-blue
+  name: Deep Blue
+  value: 11380000000.0
+  description: Deep Blue is a classic historical FLOP benchmark from the pre-GPU era.
+  description_format: markdown
+  summary_short: Deep Blue is a classic historical FLOP benchmark from the pre-GPU era.
+  description_medium: Deep Blue is a classic historical FLOP benchmark from the pre-GPU era.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Deep Blue
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: GFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '11380000000.0'
+      source_basis: Deep Blue is often quoted around 11.38 GFLOPS.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)
+      source_value_text: 11.38 GFLOP/s
+  source: https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-deep-blue-chess-computer
+    url: https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)
+    title: Deep Blue (chess computer)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-a-raspberry-pi-4
+  name: A Raspberry Pi 4
+  value: 15000000000.0
+  description: A small single-board computer gives the low end of practical modern FLOP/s.
+  description_format: markdown
+  summary_short: A small single-board computer gives the low end of practical modern FLOP/s.
+  description_medium: A small single-board computer gives the low end of practical modern FLOP/s.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A Raspberry Pi 4
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: GFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '15000000000.0'
+      source_basis: Representative single-board-computer floating-point throughput.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Raspberry_Pi_4
+      source_value_text: 15 GFLOP/s
+  source: https://en.wikipedia.org/wiki/Raspberry_Pi_4
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-raspberry-pi-4
+    url: https://en.wikipedia.org/wiki/Raspberry_Pi_4
+    title: Raspberry Pi 4
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:flops:scenario-flops-an-intel-core-i9-cpu-core
+  name: An Intel Core i9 CPU core
+  value: 100000000000.0
+  description: Modern CPU cores move the scale into the hundred-gigaflop band.
+  description_format: markdown
+  summary_short: Modern CPU cores move the scale into the hundred-gigaflop band.
+  description_medium: Modern CPU cores move the scale into the hundred-gigaflop band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: An Intel Core i9 CPU core
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: GFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '100000000000.0'
+      source_basis: A high-end CPU core can reach about a hundred gigaflops peak in vectorized workloads.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Intel_Core
+      source_value_text: 100 GFLOP/s
+  source: https://en.wikipedia.org/wiki/Intel_Core
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-intel-core
+    url: https://en.wikipedia.org/wiki/Intel_Core
+    title: Intel Core
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: one high-end core
+- id: obs:flops:scenario-70b-llm-single-token-inference-flops
+  name: 70B-parameter LLM single-token inference
+  value: 140000000000.0
+  description: A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.
+  description_format: markdown
+  summary_short: A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.
+  description_medium: A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 70B-parameter LLM single-token inference
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: F \approx 2 N_{\mathrm{params}}
+      method: derived
+      original_value_text: '140000000000.0'
+      source_basis: Order-of-magnitude dense-transformer inference estimate for one generated token.
+      source_unit: FLOP
+      source_url: https://en.wikipedia.org/wiki/Large_language_model
+      source_value_text: 70B parameters x about 2 FLOPs/parameter/token
+  source: https://en.wikipedia.org/wiki/Large_language_model
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-large-language-model
+    url: https://en.wikipedia.org/wiki/Large_language_model
+    title: Large language model
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:flops:entity-flops-playstation-3-cell-processor
+  name: PlayStation 3 Cell processor
+  value: 204800000000.0
+  description: The Cell processor gave consumer hardware an early high-FLOPS benchmark.
+  description_format: markdown
+  summary_short: The Cell processor gave consumer hardware an early high-FLOPS benchmark.
+  description_medium: The Cell processor gave consumer hardware an early high-FLOPS benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: PlayStation 3 Cell processor
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: GFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '204800000000'
+      source_basis: Peak theoretical floating-point throughput for the Cell processor.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Cell_Broadband_Engine
+      source_value_text: 204.8 GFLOPS
+  source: https://en.wikipedia.org/wiki/Cell_Broadband_Engine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cell-broadband-engine
+    url: https://en.wikipedia.org/wiki/Cell_Broadband_Engine
+    title: Cell Broadband Engine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-playstation-3-cell
+  name: PlayStation 3 Cell processor
+  value: 230000000000.0
+  description: The PS3 Cell processor is a consumer-hardware floating-point reference.
+  description_format: markdown
+  summary_short: The PS3 Cell processor is a consumer-hardware floating-point reference.
+  description_medium: The PS3 Cell processor is a consumer-hardware floating-point reference.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: PlayStation 3 Cell processor
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '230000000000.0'
+      source_basis: Approximate peak floating-point throughput of the Cell processor.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/PlayStation_3
+      source_value_text: 230 GFLOPS
+  source: https://en.wikipedia.org/wiki/PlayStation_3
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-playstation-3
+    url: https://en.wikipedia.org/wiki/PlayStation_3
+    title: PlayStation 3
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-ibm-blue-gene-l
+  name: IBM Blue Gene/L
+  value: 570000000000.0
+  description: Blue Gene/L brought supercomputing into the hundreds of gigaflops.
+  description_format: markdown
+  summary_short: Blue Gene/L brought supercomputing into the hundreds of gigaflops.
+  description_medium: Blue Gene/L brought supercomputing into the hundreds of gigaflops.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: IBM Blue Gene/L
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '570000000000.0'
+      source_basis: Reported peak performance for Blue Gene/L.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Blue_Gene
+      source_value_text: 570 GFLOPS
+  source: https://en.wikipedia.org/wiki/Blue_Gene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blue-gene
+    url: https://en.wikipedia.org/wiki/Blue_Gene
+    title: Blue Gene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-an-apple-m2-gpu
+  name: An Apple M2 GPU
+  value: 3600000000000.0
+  description: Integrated laptop and tablet GPUs anchor the low-teraflop range.
+  description_format: markdown
+  summary_short: Integrated laptop and tablet GPUs anchor the low-teraflop range.
+  description_medium: Integrated laptop and tablet GPUs anchor the low-teraflop range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: An Apple M2 GPU
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '3600000000000.0'
+      source_basis: Mobile integrated GPUs operate in the low-teraflop band.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Apple_M2
+      source_value_text: 3.6 TFLOP/s
+  source: https://en.wikipedia.org/wiki/Apple_M2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-apple-m2
+    url: https://en.wikipedia.org/wiki/Apple_M2
+    title: Apple M2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-a-playstation-5-gpu
+  name: A PlayStation 5 GPU
+  value: 10300000000000.0
+  description: Consumer gaming hardware sits comfortably in the teraflop range.
+  description_format: markdown
+  summary_short: Consumer gaming hardware sits comfortably in the teraflop range.
+  description_medium: Consumer gaming hardware sits comfortably in the teraflop range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A PlayStation 5 GPU
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '10300000000000.0'
+      source_basis: Console-class GPU peak is around 10.3 TFLOPS.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/PlayStation_5
+      source_value_text: 10.3 TFLOP/s
+  source: https://en.wikipedia.org/wiki/PlayStation_5
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-playstation-5
+    url: https://en.wikipedia.org/wiki/PlayStation_5
+    title: PlayStation 5
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-apple-m1-max
+  name: Apple M1 Max
+  value: 10400000000000.0
+  description: The M1 Max is a strong laptop-class GPU throughput reference.
+  description_format: markdown
+  summary_short: The M1 Max is a strong laptop-class GPU throughput reference.
+  description_medium: The M1 Max is a strong laptop-class GPU throughput reference.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Apple M1 Max
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '10400000000000.0'
+      source_basis: Approximate GPU peak throughput for Apple M1 Max.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Apple_M1
+      source_value_text: 10.4 TFLOPS
+  source: https://en.wikipedia.org/wiki/Apple_M1
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-apple-m1
+    url: https://en.wikipedia.org/wiki/Apple_M1
+    title: Apple M1
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:scenario-70b-llm-100-token-response-flops
+  name: 70B-parameter LLM 100-token response
+  value: 14000000000000.0
+  description: A short assistant response from a large dense model already pushes into the tens-of-teraflop range.
+  description_format: markdown
+  summary_short: A short assistant response from a large dense model already pushes into the tens-of-teraflop range.
+  description_medium: A short assistant response from a large dense model already pushes into the tens-of-teraflop range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 70B-parameter LLM 100-token response
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: F \approx n_{\mathrm{tokens}} \times 2 N_{\mathrm{params}}
+      method: derived
+      original_value_text: '14000000000000.0'
+      source_basis: Order-of-magnitude inference cost for a 100-token reply from a 70B-parameter dense model.
+      source_unit: FLOP
+      source_url: https://en.wikipedia.org/wiki/Large_language_model
+      source_value_text: 100 tokens x 1.4e11 FLOP/token
+  source: https://en.wikipedia.org/wiki/Large_language_model
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-large-language-model
+    url: https://en.wikipedia.org/wiki/Large_language_model
+    title: Large language model
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:flops:entity-flops-an-nvidia-a100
+  name: An NVIDIA A100
+  value: 19500000000000.0
+  description: Datacenter GPUs live in the tens-of-teraflops band.
+  description_format: markdown
+  summary_short: Datacenter GPUs live in the tens-of-teraflops band.
+  description_medium: Datacenter GPUs live in the tens-of-teraflops band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: An NVIDIA A100
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '19500000000000.0'
+      source_basis: A100 peak FP32 performance is around 19.5 TFLOPS.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/A100_GPU
+      source_value_text: 19.5 TFLOP/s
+  source: https://en.wikipedia.org/wiki/A100_GPU
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-a100-gpu
+    url: https://en.wikipedia.org/wiki/A100_GPU
+    title: A100 GPU
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-nvidia-geforce-rtx-3090
+  name: NVIDIA GeForce RTX 3090
+  value: 35600000000000.0
+  description: A high-end consumer GPU is a useful tens-of-teraflops anchor.
+  description_format: markdown
+  summary_short: A high-end consumer GPU is a useful tens-of-teraflops anchor.
+  description_medium: A high-end consumer GPU is a useful tens-of-teraflops anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: NVIDIA GeForce RTX 3090
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '35600000000000'
+      source_basis: Published FP32 peak throughput figure.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/GeForce_30_series
+      source_value_text: 35.6 TFLOPS
+  source: https://en.wikipedia.org/wiki/GeForce_30_series
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-geforce-30-series
+    url: https://en.wikipedia.org/wiki/GeForce_30_series
+    title: GeForce 30 series
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-nvidia-rtx-3090
+  name: NVIDIA RTX 3090
+  value: 35600000000000.0
+  description: The RTX 3090 is a consumer GPU with high teraflop throughput.
+  description_format: markdown
+  summary_short: The RTX 3090 is a consumer GPU with high teraflop throughput.
+  description_medium: The RTX 3090 is a consumer GPU with high teraflop throughput.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: NVIDIA RTX 3090
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '35600000000000.0'
+      source_basis: Approximate FP32 peak throughput for RTX 3090.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/GeForce_30_series
+      source_value_text: 35.6 TFLOPS
+  source: https://en.wikipedia.org/wiki/GeForce_30_series
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-geforce-30-series
+    url: https://en.wikipedia.org/wiki/GeForce_30_series
+    title: GeForce 30 series
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-an-nvidia-h100
+  name: An NVIDIA H100
+  value: 60000000000000.0
+  description: Hopper-class accelerators extend the datacenter envelope further.
+  description_format: markdown
+  summary_short: Hopper-class accelerators extend the datacenter envelope further.
+  description_medium: Hopper-class accelerators extend the datacenter envelope further.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: An NVIDIA H100
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '60000000000000.0'
+      source_basis: H100-class GPUs push into higher FP64 throughput.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Hopper_(microarchitecture)
+      source_value_text: 60 TFLOP/s
+  source: https://en.wikipedia.org/wiki/Hopper_(microarchitecture)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hopper-microarchitecture
+    url: https://en.wikipedia.org/wiki/Hopper_(microarchitecture)
+    title: Hopper (microarchitecture)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-amd-radeon-rx-7900-xtx
+  name: AMD Radeon RX 7900 XTX
+  value: 61000000000000.0
+  description: The RX 7900 XTX is another high-end consumer GPU benchmark.
+  description_format: markdown
+  summary_short: The RX 7900 XTX is another high-end consumer GPU benchmark.
+  description_medium: The RX 7900 XTX is another high-end consumer GPU benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: AMD Radeon RX 7900 XTX
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '61000000000000.0'
+      source_basis: Approximate peak floating-point throughput for RX 7900 XTX.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Radeon_RX_7000_series
+      source_value_text: 61 TFLOPS
+  source: https://en.wikipedia.org/wiki/Radeon_RX_7000_series
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-radeon-rx-7000-series
+    url: https://en.wikipedia.org/wiki/Radeon_RX_7000_series
+    title: Radeon RX 7000 series
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-an-nvidia-rtx-4090
+  name: An NVIDIA RTX 4090
+  value: 82600000000000.0
+  description: High-end consumer GPUs are an easy teraflop-scale anchor.
+  description_format: markdown
+  summary_short: High-end consumer GPUs are an easy teraflop-scale anchor.
+  description_medium: High-end consumer GPUs are an easy teraflop-scale anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: An NVIDIA RTX 4090
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '82600000000000.0'
+      source_basis: Top consumer GPUs reach tens of teraflops.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/GeForce_40_series
+      source_value_text: 82.6 TFLOP/s
+  source: https://en.wikipedia.org/wiki/GeForce_40_series
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-geforce-40-series
+    url: https://en.wikipedia.org/wiki/GeForce_40_series
+    title: GeForce 40 series
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-amd-mi300x
+  name: AMD MI300X
+  value: 130000000000000.0
+  description: MI300X sits in the data-center accelerator band.
+  description_format: markdown
+  summary_short: MI300X sits in the data-center accelerator band.
+  description_medium: MI300X sits in the data-center accelerator band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: AMD MI300X
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '130000000000000.0'
+      source_basis: Approximate accelerator throughput for AMD MI300X.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/AMD_Instinct
+      source_value_text: 130 TFLOPS
+  source: https://en.wikipedia.org/wiki/AMD_Instinct
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-amd-instinct
+    url: https://en.wikipedia.org/wiki/AMD_Instinct
+    title: AMD Instinct
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-aws-trainium
+  name: AWS Trainium
+  value: 190000000000000.0
+  description: Trainium is a dedicated training accelerator benchmark.
+  description_format: markdown
+  summary_short: Trainium is a dedicated training accelerator benchmark.
+  description_medium: Trainium is a dedicated training accelerator benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: AWS Trainium
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '190000000000000.0'
+      source_basis: Approximate training throughput for AWS Trainium.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/AWS_Trainium
+      source_value_text: 190 TFLOPS
+  source: https://en.wikipedia.org/wiki/AWS_Trainium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aws-trainium
+    url: https://en.wikipedia.org/wiki/AWS_Trainium
+    title: AWS Trainium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-google-tpu-v4
+  name: Google TPU v4
+  value: 275000000000000.0
+  description: TPU v4 continues the accelerator scaling trend.
+  description_format: markdown
+  summary_short: TPU v4 continues the accelerator scaling trend.
+  description_medium: TPU v4 continues the accelerator scaling trend.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Google TPU v4
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '275000000000000.0'
+      source_basis: Approximate per-chip throughput for TPU v4.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+      source_value_text: 275 TFLOPS
+  source: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tensor-processing-unit
+    url: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+    title: Tensor Processing Unit
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-ibm-blue-gene-l:2
+  name: IBM Blue Gene/L
+  value: 360000000000000.0
+  description: Blue Gene/L pushed supercomputing into the hundreds of teraflops.
+  description_format: markdown
+  summary_short: Blue Gene/L pushed supercomputing into the hundreds of teraflops.
+  description_medium: Blue Gene/L pushed supercomputing into the hundreds of teraflops.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: IBM Blue Gene/L
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: TFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '360000000000000'
+      source_basis: Published peak performance figure for Blue Gene/L.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/IBM_Blue_Gene
+      source_value_text: 360 TFLOPS
+  source: https://en.wikipedia.org/wiki/IBM_Blue_Gene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ibm-blue-gene
+    url: https://en.wikipedia.org/wiki/IBM_Blue_Gene
+    title: IBM Blue Gene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-google-tpu-v3
+  name: Google TPU v3
+  value: 420000000000000.0
+  description: TPU v3 is a notable tensor accelerator reference.
+  description_format: markdown
+  summary_short: TPU v3 is a notable tensor accelerator reference.
+  description_medium: TPU v3 is a notable tensor accelerator reference.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Google TPU v3
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '420000000000000.0'
+      source_basis: Approximate peak bfloat16 throughput for TPU v3.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+      source_value_text: 420 TFLOPS
+  source: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tensor-processing-unit
+    url: https://en.wikipedia.org/wiki/Tensor_Processing_Unit
+    title: Tensor Processing Unit
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-tianhe-2
+  name: Tianhe-2
+  value: 3.4e+16
+  description: Tianhe-2 is an important pre-exascale supercomputer benchmark.
+  description_format: markdown
+  summary_short: Tianhe-2 is an important pre-exascale supercomputer benchmark.
+  description_medium: Tianhe-2 is an important pre-exascale supercomputer benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tianhe-2
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: '3.4e+16'
+      source_basis: Published peak performance for Tianhe-2.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Tianhe-2
+      source_value_text: 34 PFLOPS
+  source: https://en.wikipedia.org/wiki/Tianhe-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tianhe-2
+    url: https://en.wikipedia.org/wiki/Tianhe-2
+    title: Tianhe-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-tianhe-2:2
+  name: Tianhe-2
+  value: 5.49e+16
+  description: Tianhe-2 is a major pre-exascale benchmark.
+  description_format: markdown
+  summary_short: Tianhe-2 is a major pre-exascale benchmark.
+  description_medium: Tianhe-2 is a major pre-exascale benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tianhe-2
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: PFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '54900000000000000'
+      source_basis: Published Linpack result and approximate peak class.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Tianhe-2
+      source_value_text: 54.9 PFLOPS
+  source: https://en.wikipedia.org/wiki/Tianhe-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tianhe-2
+    url: https://en.wikipedia.org/wiki/Tianhe-2
+    title: Tianhe-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:scenario-1024-h100-training-cluster-throughput
+  name: 1024 H100 training cluster throughput
+  value: 6.144e+16
+  description: A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.
+  description_format: markdown
+  summary_short: A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.
+  description_medium: A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 1024 H100 training cluster throughput
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: F = 1024 imes 60\,\mathrm{TFLOP/s}
+      method: derived
+      original_value_text: '6.144e+16'
+      source_basis: Approximate FP throughput from a 1024-GPU H100-class cluster.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Nvidia_Hopper
+      source_value_text: 1024 x 60 TFLOP/s
+  source: https://en.wikipedia.org/wiki/Nvidia_Hopper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-nvidia-hopper
+    url: https://en.wikipedia.org/wiki/Nvidia_Hopper
+    title: Nvidia Hopper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:flops:entity-flops-cerebras-wse-2
+  name: Cerebras Wafer Scale Engine 2
+  value: 1.0e+17
+  description: Cerebras WSE-2 is a purpose-built AI chip benchmark.
+  description_format: markdown
+  summary_short: Cerebras WSE-2 is a purpose-built AI chip benchmark.
+  description_medium: Cerebras WSE-2 is a purpose-built AI chip benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cerebras Wafer Scale Engine 2
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: direct
+      original_value_text: 1e+17
+      source_basis: Approximate peak AI throughput for WSE-2.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Cerebras
+      source_value_text: 100 PFLOPS
+  source: https://en.wikipedia.org/wiki/Cerebras
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cerebras
+    url: https://en.wikipedia.org/wiki/Cerebras
+    title: Cerebras
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-summit
+  name: Summit
+  value: 2.0e+17
+  description: Another petaflop benchmark, useful for a different design generation.
+  description_format: markdown
+  summary_short: Another petaflop benchmark, useful for a different design generation.
+  description_medium: Another petaflop benchmark, useful for a different design generation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Summit
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: PFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: 2e+17
+      source_basis: Summit is commonly quoted around 200 petaflops.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Summit_(supercomputer)
+      source_value_text: 200 PFLOP/s
+  source: https://en.wikipedia.org/wiki/Summit_(supercomputer)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-summit-supercomputer
+    url: https://en.wikipedia.org/wiki/Summit_(supercomputer)
+    title: Summit (supercomputer)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-fugaku
+  name: Fugaku
+  value: 4.42e+17
+  description: Petaflop supercomputers are an obvious bridge to exascale systems.
+  description_format: markdown
+  summary_short: Petaflop supercomputers are an obvious bridge to exascale systems.
+  description_medium: Petaflop supercomputers are an obvious bridge to exascale systems.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fugaku
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: PFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '4.42e+17'
+      source_basis: Fugaku has been reported at around 442 petaflops.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Fugaku_(supercomputer)
+      source_value_text: 442 PFLOP/s
+  source: https://en.wikipedia.org/wiki/Fugaku_(supercomputer)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-fugaku-supercomputer
+    url: https://en.wikipedia.org/wiki/Fugaku_(supercomputer)
+    title: Fugaku (supercomputer)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:entity-flops-frontier
+  name: Frontier
+  value: 1.206e+18
+  description: Frontier is the classic exascale anchor.
+  description_format: markdown
+  summary_short: Frontier is the classic exascale anchor.
+  description_medium: Frontier is the classic exascale anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Frontier
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: EFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: '1.206e+18'
+      source_basis: Frontier crossed the exaflop barrier.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Frontier_(supercomputer)
+      source_value_text: 1.206 EFLOP/s
+  source: https://en.wikipedia.org/wiki/Frontier_(supercomputer)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-frontier-supercomputer
+    url: https://en.wikipedia.org/wiki/Frontier_(supercomputer)
+    title: Frontier (supercomputer)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:flops:scenario-flops-a-future-zettaflop-class-machine
+  name: A future zettaflop-class machine
+  value: 1.0e+21
+  description: A zettaflop machine is a forward-looking anchor for the upper end.
+  description_format: markdown
+  summary_short: A zettaflop machine is a forward-looking anchor for the upper end.
+  description_medium: A zettaflop machine is a forward-looking anchor for the upper end.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A future zettaflop-class machine
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      derivation_note: ZFLOP/s to FLOP/s conversion
+      method: derived
+      original_value_text: 1e+21
+      source_basis: A hypothetical but useful upper benchmark for the scale.
+      source_unit: FLOP/s
+      source_url: https://en.wikipedia.org/wiki/Supercomputer
+      source_value_text: 1 ZFLOP/s
+  source: https://en.wikipedia.org/wiki/Supercomputer
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-supercomputer
+    url: https://en.wikipedia.org/wiki/Supercomputer
+    title: Supercomputer
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:flops:entity-gpt3-training-flops-estimate
+  name: GPT-3 training run estimate
+  value: 3.14e+23
+  description: The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.
+  description_format: markdown
+  summary_short: The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.
+  description_medium: The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: GPT-3 training run estimate
+    ingest_source: dataset/raw/curated/flops.json
+    source_trace:
+      method: derived
+      original_value_text: '3.14e+23'
+      source_basis: Representative published estimate of GPT-3 training compute.
+      source_unit: FLOP
+      source_url: https://en.wikipedia.org/wiki/GPT-3
+      source_value_text: about 3.14e23 FLOP
+  source: https://en.wikipedia.org/wiki/GPT-3
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gpt-3
+    url: https://en.wikipedia.org/wiki/GPT-3
+    title: GPT-3
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-flops-json
+    url: repo://dataset/raw/curated/flops.json
+    title: dataset/raw/curated/flops.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: total training compute

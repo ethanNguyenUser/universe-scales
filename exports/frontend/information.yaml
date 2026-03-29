@@ -1,0 +1,2384 @@
+dimension: information
+base_unit: bytes
+dimension_description: Information here means a storage or message size expressed as bytes, whether the source talks about a literal file capacity, a memory size, or a derived information estimate. Some entries are direct capacities like discs and tapes, while others are derived from genome lengths, audio sample rates, or raw video formats. That makes this scale useful for comparing messages, media, genomes, and storage technologies on one logarithmic axis.
+related_resources:
+- name: Information
+  url: https://en.wikipedia.org/wiki/Information
+- name: Byte
+  url: https://en.wikipedia.org/wiki/Byte
+show_limitations: true
+units:
+- conversion_factor: 1.0
+  description: Bytes are the canonical storage unit for information observations.
+  name: bytes
+  symbol: B
+- name: bits
+  symbol: bit
+  conversion_factor: 8.0
+  description: Bits are useful for tiny messages, hashes, and entropy-scale comparisons.
+- name: kilobytes
+  symbol: kB
+  conversion_factor: 0.001
+  description: Kilobytes are useful for tiny files, messages, and genome-scale examples.
+- name: megabytes
+  symbol: MB
+  conversion_factor: 1.0e-06
+  description: Megabytes are useful for songs, photos, and small datasets.
+- name: gigabytes
+  symbol: GB
+  conversion_factor: 1.0e-09
+  description: Gigabytes are useful for genomes, discs, and consumer storage.
+- name: terabytes
+  symbol: TB
+  conversion_factor: 1.0e-12
+  description: Terabytes are useful for large storage devices and archive-scale collections.
+- name: petabytes
+  symbol: PB
+  conversion_factor: 1.0e-15
+  description: Petabytes are useful for datacenter and scientific archive scales.
+- name: exabytes
+  symbol: EB
+  conversion_factor: 1.0e-18
+  description: Exabytes are useful for global-scale data comparisons.
+- name: zettabytes
+  symbol: ZB
+  conversion_factor: 1.0e-21
+  description: Zettabytes are useful for very large aggregate information scales.
+- name: yottabytes
+  symbol: YB
+  conversion_factor: 1.0e-24
+  description: Yottabytes are useful for extreme civilization-scale or physical-information comparisons.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: information
+frontend_group_label: Information & Computation
+frontend_order: 610
+items:
+- id: obs:information:scenario-information-dna-nucleotide
+  name: One DNA nucleotide
+  value: 0.25
+  description: A single DNA base carries about two bits of sequence information, or one quarter of a byte.
+  description_format: markdown
+  summary_short: A single DNA base carries about two bits of sequence information, or one quarter of a byte.
+  description_medium: A single DNA base carries about two bits of sequence information, or one quarter of a byte.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One DNA nucleotide
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits to bytes.
+      derivation_note: bytes = 2 bits / 8
+      method: derived
+      original_value_text: '0.25'
+      source_basis: A four-symbol DNA alphabet carries two bits per nucleotide in an information-theoretic encoding.
+      source_unit: bits per base
+      source_url: https://en.wikipedia.org/wiki/DNA
+      source_value_text: '2'
+  source: https://en.wikipedia.org/wiki/DNA
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dna
+    url: https://en.wikipedia.org/wiki/DNA
+    title: DNA
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-uuid
+  name: UUID
+  value: 16.0
+  description: A UUID is 128 bits long, making it 16 bytes of binary information.
+  description_format: markdown
+  summary_short: A UUID is 128 bits long, making it 16 bytes of binary information.
+  description_medium: A UUID is 128 bits long, making it 16 bytes of binary information.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: UUID
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits to bytes.
+      derivation_note: bytes = 128 bits / 8
+      method: derived
+      original_value_text: '16.0'
+      source_basis: UUIDs are 128-bit identifiers.
+      source_unit: bits
+      source_url: https://en.wikipedia.org/wiki/Universally_unique_identifier
+      source_value_text: '128'
+  source: https://en.wikipedia.org/wiki/Universally_unique_identifier
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-universally-unique-identifier
+    url: https://en.wikipedia.org/wiki/Universally_unique_identifier
+    title: Universally unique identifier
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-ipv4-header
+  name: IPv4 header
+  value: 20.0
+  description: The minimum IPv4 packet header is 20 bytes before options or payload are added.
+  description_format: markdown
+  summary_short: The minimum IPv4 packet header is 20 bytes before options or payload are added.
+  description_medium: The minimum IPv4 packet header is 20 bytes before options or payload are added.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: IPv4 header
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      method: direct
+      original_value_text: '20.0'
+      source_basis: Reported minimum IPv4 header size.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/IPv4
+      source_value_text: '20'
+  source: https://en.wikipedia.org/wiki/IPv4
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ipv4
+    url: https://en.wikipedia.org/wiki/IPv4
+    title: IPv4
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-sha-256-digest
+  name: SHA-256 digest
+  value: 32.0
+  description: A SHA-256 hash output is 256 bits, or 32 bytes.
+  description_format: markdown
+  summary_short: A SHA-256 hash output is 256 bits, or 32 bytes.
+  description_medium: A SHA-256 hash output is 256 bits, or 32 bytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SHA-256 digest
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits to bytes.
+      derivation_note: bytes = 256 bits / 8
+      method: derived
+      original_value_text: '32.0'
+      source_basis: SHA-256 produces 256-bit digests.
+      source_unit: bits
+      source_url: https://en.wikipedia.org/wiki/SHA-2
+      source_value_text: '256'
+  source: https://en.wikipedia.org/wiki/SHA-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sha-2
+    url: https://en.wikipedia.org/wiki/SHA-2
+    title: SHA-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-ipv6-header
+  name: IPv6 header
+  value: 40.0
+  description: The fixed IPv6 header is 40 bytes long.
+  description_format: markdown
+  summary_short: The fixed IPv6 header is 40 bytes long.
+  description_medium: The fixed IPv6 header is 40 bytes long.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: IPv6 header
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      method: direct
+      original_value_text: '40.0'
+      source_basis: Reported IPv6 fixed header size.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/IPv6
+      source_value_text: '40'
+  source: https://en.wikipedia.org/wiki/IPv6
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ipv6
+    url: https://en.wikipedia.org/wiki/IPv6
+    title: IPv6
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-sha-512-digest
+  name: SHA-512 digest
+  value: 64.0
+  description: A SHA-512 hash output is 512 bits, or 64 bytes.
+  description_format: markdown
+  summary_short: A SHA-512 hash output is 512 bits, or 64 bytes.
+  description_medium: A SHA-512 hash output is 512 bits, or 64 bytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SHA-512 digest
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits to bytes.
+      derivation_note: bytes = 512 bits / 8
+      method: derived
+      original_value_text: '64.0'
+      source_basis: SHA-512 produces 512-bit digests.
+      source_unit: bits
+      source_url: https://en.wikipedia.org/wiki/SHA-2
+      source_value_text: '512'
+  source: https://en.wikipedia.org/wiki/SHA-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sha-2
+    url: https://en.wikipedia.org/wiki/SHA-2
+    title: SHA-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-ibm-punch-card
+  name: IBM punch card
+  value: 80.0
+  description: An 80-column punch card became a classic benchmark for a tiny unit of text storage.
+  description_format: markdown
+  summary_short: An 80-column punch card became a classic benchmark for a tiny unit of text storage.
+  description_medium: An 80-column punch card became a classic benchmark for a tiny unit of text storage.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: IBM punch card
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Treated one character column as one byte of text.
+      method: converted
+      original_value_text: '80.0'
+      source_basis: Standard IBM punched cards carried 80 character columns.
+      source_unit: columns
+      source_url: https://en.wikipedia.org/wiki/Punched_card
+      source_value_text: '80'
+  source: https://en.wikipedia.org/wiki/Punched_card
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-punched-card
+    url: https://en.wikipedia.org/wiki/Punched_card
+    title: Punched card
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-sms-message
+  name: SMS text message
+  value: 140.0
+  description: A standard SMS payload is 140 bytes before multipart tricks or richer encodings are involved.
+  description_format: markdown
+  summary_short: A standard SMS payload is 140 bytes before multipart tricks or richer encodings are involved.
+  description_medium: A standard SMS payload is 140 bytes before multipart tricks or richer encodings are involved.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SMS text message
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      method: direct
+      original_value_text: '140.0'
+      source_basis: Reported SMS payload size.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/SMS
+      source_value_text: '140'
+  source: https://en.wikipedia.org/wiki/SMS
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sms
+    url: https://en.wikipedia.org/wiki/SMS
+    title: SMS
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:scenario-information-tweet-limit
+  name: Tweet at the 280-character limit
+  value: 280.0
+  description: A post at the classic 280-character limit is a few hundred bytes if stored as plain ASCII text.
+  description_format: markdown
+  summary_short: A post at the classic 280-character limit is a few hundred bytes if stored as plain ASCII text.
+  description_medium: A post at the classic 280-character limit is a few hundred bytes if stored as plain ASCII text.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tweet at the 280-character limit
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Treated one ASCII character as one byte.
+      method: derived
+      original_value_text: '280.0'
+      source_basis: Twitter's standard post length limit is 280 characters.
+      source_unit: characters
+      source_url: https://en.wikipedia.org/wiki/Twitter
+      source_value_text: '280'
+  source: https://en.wikipedia.org/wiki/Twitter
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-twitter
+    url: https://en.wikipedia.org/wiki/Twitter
+    title: Twitter
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-ethernet-mtu-payload
+  name: Ethernet MTU payload
+  value: 1500.0
+  description: The classic Ethernet maximum transmission unit carries 1500 bytes of payload.
+  description_format: markdown
+  summary_short: The classic Ethernet maximum transmission unit carries 1500 bytes of payload.
+  description_medium: The classic Ethernet maximum transmission unit carries 1500 bytes of payload.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ethernet MTU payload
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      method: direct
+      original_value_text: '1500.0'
+      source_basis: Reported Ethernet MTU payload size.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/Ethernet_frame
+      source_value_text: '1500'
+  source: https://en.wikipedia.org/wiki/Ethernet_frame
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ethernet-frame
+    url: https://en.wikipedia.org/wiki/Ethernet_frame
+    title: Ethernet frame
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:scenario-information-80x25-text-screen
+  name: 80x25 text screen
+  value: 2000.0
+  description: An 80-column by 25-row text screen holds 2000 character cells before attributes or metadata.
+  description_format: markdown
+  summary_short: An 80-column by 25-row text screen holds 2000 character cells before attributes or metadata.
+  description_medium: An 80-column by 25-row text screen holds 2000 character cells before attributes or metadata.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 80x25 text screen
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = 80 x 25
+      method: derived
+      original_value_text: '2000.0'
+      source_basis: Classic text-mode screens often used an 80 by 25 character grid.
+      source_unit: characters
+      source_url: https://en.wikipedia.org/wiki/Text_mode
+      source_value_text: 80 x 25
+  source: https://en.wikipedia.org/wiki/Text_mode
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-text-mode
+    url: https://en.wikipedia.org/wiki/Text_mode
+    title: Text mode
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-qr-code-version-40-l
+  name: QR code Version 40-L
+  value: 2953.0
+  description: A maximum-size low-error-correction QR code can store 2953 bytes of binary data.
+  description_format: markdown
+  summary_short: A maximum-size low-error-correction QR code can store 2953 bytes of binary data.
+  description_medium: A maximum-size low-error-correction QR code can store 2953 bytes of binary data.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: QR code Version 40-L
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      method: direct
+      original_value_text: '2953.0'
+      source_basis: Reported binary storage capacity of a Version 40-L QR code.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/QR_code
+      source_value_text: '2953'
+  source: https://en.wikipedia.org/wiki/QR_code
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-qr-code
+    url: https://en.wikipedia.org/wiki/QR_code
+    title: QR code
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-memory-page-4kib
+  name: 4 KiB memory page
+  value: 4096.0
+  description: A 4 KiB page is a common basic block of virtual memory and storage systems.
+  description_format: markdown
+  summary_short: A 4 KiB page is a common basic block of virtual memory and storage systems.
+  description_medium: A 4 KiB page is a common basic block of virtual memory and storage systems.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 4 KiB memory page
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted kibibytes to bytes.
+      method: converted
+      original_value_text: '4096.0'
+      source_basis: A 4 KiB page is a common memory page size.
+      source_unit: KiB
+      source_url: https://en.wikipedia.org/wiki/Page_(computer_memory)
+      source_value_text: '4'
+  source: https://en.wikipedia.org/wiki/Page_(computer_memory)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-page-computer-memory
+    url: https://en.wikipedia.org/wiki/Page_(computer_memory)
+    title: Page (computer memory)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-human-mitochondrial-genome
+  name: Human mitochondrial genome
+  value: 4142.25
+  description: The human mitochondrial genome is tiny by genomic standards but already several kilobytes in a two-bit encoding.
+  description_format: markdown
+  summary_short: The human mitochondrial genome is tiny by genomic standards but already several kilobytes in a two-bit encoding.
+  description_medium: The human mitochondrial genome is tiny by genomic standards but already several kilobytes in a two-bit encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human mitochondrial genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '4142.25'
+      source_basis: Reported human mitochondrial genome length.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Human_mitochondrial_DNA
+      source_value_text: 16,569
+  source: https://en.wikipedia.org/wiki/Human_mitochondrial_DNA
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-mitochondrial-dna
+    url: https://en.wikipedia.org/wiki/Human_mitochondrial_DNA
+    title: Human mitochondrial DNA
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-sars-cov-2-genome
+  name: SARS-CoV-2 genome
+  value: 7475.75
+  description: The coronavirus genome fits into only a few kilobytes when treated as a compact four-letter sequence.
+  description_format: markdown
+  summary_short: The coronavirus genome fits into only a few kilobytes when treated as a compact four-letter sequence.
+  description_medium: The coronavirus genome fits into only a few kilobytes when treated as a compact four-letter sequence.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SARS-CoV-2 genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '7475.75'
+      source_basis: Reported SARS-CoV-2 genome length.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/SARS-CoV-2
+      source_value_text: 29,903
+  source: https://en.wikipedia.org/wiki/SARS-CoV-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sars-cov-2
+    url: https://en.wikipedia.org/wiki/SARS-CoV-2
+    title: SARS-CoV-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-commodore-64-ram
+  name: Commodore 64 RAM
+  value: 65536.0
+  description: The Commodore 64 famously shipped with 64 kilobytes of RAM, once a whole computer's working memory.
+  description_format: markdown
+  summary_short: The Commodore 64 famously shipped with 64 kilobytes of RAM, once a whole computer's working memory.
+  description_medium: The Commodore 64 famously shipped with 64 kilobytes of RAM, once a whole computer's working memory.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Commodore 64 RAM
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted kilobytes to bytes.
+      method: converted
+      original_value_text: '65536.0'
+      source_basis: Reported Commodore 64 memory capacity.
+      source_unit: KB
+      source_url: https://en.wikipedia.org/wiki/Commodore_64
+      source_value_text: '64'
+  source: https://en.wikipedia.org/wiki/Commodore_64
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-commodore-64
+    url: https://en.wikipedia.org/wiki/Commodore_64
+    title: Commodore 64
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-apollo-guidance-computer-rope-memory
+  name: Apollo Guidance Computer rope memory
+  value: 73728.0
+  description: The fixed rope memory that guided Apollo missions held only tens of kilobytes by modern standards.
+  description_format: markdown
+  summary_short: The fixed rope memory that guided Apollo missions held only tens of kilobytes by modern standards.
+  description_medium: The fixed rope memory that guided Apollo missions held only tens of kilobytes by modern standards.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Apollo Guidance Computer rope memory
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted kilobytes to bytes.
+      method: converted
+      original_value_text: '73728.0'
+      source_basis: Reported Apollo Guidance Computer rope-memory capacity.
+      source_unit: KB
+      source_url: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer
+      source_value_text: '72'
+  source: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-apollo-guidance-computer
+    url: https://en.wikipedia.org/wiki/Apollo_Guidance_Computer
+    title: Apollo Guidance Computer
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-macintosh-128k
+  name: Macintosh 128K
+  value: 131072.0
+  description: The original Macintosh's defining spec was its 128 kilobytes of RAM.
+  description_format: markdown
+  summary_short: The original Macintosh's defining spec was its 128 kilobytes of RAM.
+  description_medium: The original Macintosh's defining spec was its 128 kilobytes of RAM.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Macintosh 128K
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted kilobytes to bytes.
+      method: converted
+      original_value_text: '131072.0'
+      source_basis: Reported Macintosh 128K memory capacity.
+      source_unit: KB
+      source_url: https://en.wikipedia.org/wiki/Macintosh_128K
+      source_value_text: '128'
+  source: https://en.wikipedia.org/wiki/Macintosh_128K
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-macintosh-128k
+    url: https://en.wikipedia.org/wiki/Macintosh_128K
+    title: Macintosh 128K
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:scenario-information-one-second-cd-audio
+  name: One second of CD audio
+  value: 176400.0
+  description: One second of uncompressed CD-quality stereo audio is already a substantial chunk of data.
+  description_format: markdown
+  summary_short: One second of uncompressed CD-quality stereo audio is already a substantial chunk of data.
+  description_medium: One second of uncompressed CD-quality stereo audio is already a substantial chunk of data.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One second of CD audio
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits per second to bytes per second.
+      derivation_note: bytes = sample_rate x bit_depth x channels / 8
+      method: derived
+      original_value_text: '176400.0'
+      source_basis: Compact Disc Digital Audio uses 44.1 kHz stereo at 16 bits per sample.
+      source_unit: PCM
+      source_url: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+      source_value_text: 44,100 samples/s x 16 bits x 2 channels
+  source: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-compact-disc-digital-audio
+    url: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+    title: Compact Disc Digital Audio
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-e-coli-genome-information
+  name: Escherichia coli genome
+  value: 1150000.0
+  description: The genome of E. coli contains millions of base pairs, corresponding to about a megabyte in a compact sequence encoding.
+  description_format: markdown
+  summary_short: The genome of E.
+  description_medium: The genome of E. coli contains millions of base pairs, corresponding to about a megabyte in a compact sequence encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Escherichia coli genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '1150000.0'
+      source_basis: Reported E. coli genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Escherichia_coli
+      source_value_text: 4.6 million
+  source: https://en.wikipedia.org/wiki/Escherichia_coli
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escherichia-coli
+    url: https://en.wikipedia.org/wiki/Escherichia_coli
+    title: Escherichia coli
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-3-5-inch-floppy-disk
+  name: 3.5-inch floppy disk
+  value: 1474560.0
+  description: The 1.44 MB floppy disk became a familiar benchmark for tiny removable storage.
+  description_format: markdown
+  summary_short: The 1.44 MB floppy disk became a familiar benchmark for tiny removable storage.
+  description_medium: The 1.44 MB floppy disk became a familiar benchmark for tiny removable storage.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 3.5-inch floppy disk
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted megabytes to bytes.
+      method: converted
+      original_value_text: '1474560.0'
+      source_basis: Standard high-density 3.5-inch floppy capacity.
+      source_unit: MB
+      source_url: https://en.wikipedia.org/wiki/Floppy_disk
+      source_value_text: '1.44'
+  source: https://en.wikipedia.org/wiki/Floppy_disk
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-floppy-disk
+    url: https://en.wikipedia.org/wiki/Floppy_disk
+    title: Floppy disk
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-yeast-genome-information
+  name: Yeast genome
+  value: 3025000.0
+  description: The baker's yeast genome is a few megabytes in a compact two-bit sequence encoding.
+  description_format: markdown
+  summary_short: The baker's yeast genome is a few megabytes in a compact two-bit sequence encoding.
+  description_medium: The baker's yeast genome is a few megabytes in a compact two-bit sequence encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Yeast genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '3025000.0'
+      source_basis: Reported Saccharomyces cerevisiae genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae
+      source_value_text: 12.1 million
+  source: https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-saccharomyces-cerevisiae
+    url: https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae
+    title: Saccharomyces cerevisiae
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-five-minute-mp3-song
+  name: Five-minute MP3 song at 128 kbit/s
+  value: 4800000.0
+  description: A typical compressed song file lands around a few megabytes rather than hundreds of megabytes.
+  description_format: markdown
+  summary_short: A typical compressed song file lands around a few megabytes rather than hundreds of megabytes.
+  description_medium: A typical compressed song file lands around a few megabytes rather than hundreds of megabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Five-minute MP3 song at 128 kbit/s
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted kilobits per second over five minutes into bytes.
+      derivation_note: bytes = bitrate x duration / 8
+      method: derived
+      original_value_text: '4800000.0'
+      source_basis: Representative MP3 bitrate over a five-minute track.
+      source_unit: kbit/s for 300 s
+      source_url: https://en.wikipedia.org/wiki/MP3
+      source_value_text: '128'
+  source: https://en.wikipedia.org/wiki/MP3
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mp3
+    url: https://en.wikipedia.org/wiki/MP3
+    title: MP3
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-raw-1080p-frame
+  name: Raw 1080p RGB frame
+  value: 6220800.0
+  description: One uncompressed 1080p RGB frame is already several megabytes.
+  description_format: markdown
+  summary_short: One uncompressed 1080p RGB frame is already several megabytes.
+  description_medium: One uncompressed 1080p RGB frame is already several megabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Raw 1080p RGB frame
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = width x height x 3 color bytes
+      method: derived
+      original_value_text: '6220800.0'
+      source_basis: Computed for one 24-bit RGB frame at 1920 by 1080 resolution.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/1080p
+      source_value_text: 1920 x 1080 x 3
+  source: https://en.wikipedia.org/wiki/1080p
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-1080p
+    url: https://en.wikipedia.org/wiki/1080p
+    title: 1080p
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-one-minute-cd-audio
+  name: One minute of CD audio
+  value: 10584000.0
+  description: One minute of uncompressed CD audio is already around ten megabytes.
+  description_format: markdown
+  summary_short: One minute of uncompressed CD audio is already around ten megabytes.
+  description_medium: One minute of uncompressed CD audio is already around ten megabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One minute of CD audio
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits to bytes over one minute.
+      derivation_note: bytes = sample_rate x bit_depth x channels x duration / 8
+      method: derived
+      original_value_text: '10584000.0'
+      source_basis: Compact Disc Digital Audio uses 44.1 kHz stereo at 16 bits per sample.
+      source_unit: PCM
+      source_url: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+      source_value_text: 44,100 samples/s x 16 bits x 2 channels for 60 s
+  source: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-compact-disc-digital-audio
+    url: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+    title: Compact Disc Digital Audio
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-raw-4k-frame
+  name: Raw 4K UHD RGB frame
+  value: 24883200.0
+  description: A single uncompressed 4K RGB frame is roughly twenty-five megabytes.
+  description_format: markdown
+  summary_short: A single uncompressed 4K RGB frame is roughly twenty-five megabytes.
+  description_medium: A single uncompressed 4K RGB frame is roughly twenty-five megabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Raw 4K UHD RGB frame
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = width x height x 3 color bytes
+      method: derived
+      original_value_text: '24883200.0'
+      source_basis: Computed for one 24-bit RGB frame at 3840 by 2160 resolution.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/4K_resolution
+      source_value_text: 3840 x 2160 x 3
+  source: https://en.wikipedia.org/wiki/4K_resolution
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-4k-resolution
+    url: https://en.wikipedia.org/wiki/4K_resolution
+    title: 4K resolution
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-c-elegans-genome-information
+  name: C. elegans genome
+  value: 25000000.0
+  description: The nematode C. elegans genome is around 100 million base pairs, or tens of megabytes in a compact encoding.
+  description_format: markdown
+  summary_short: The nematode C.
+  description_medium: The nematode C. elegans genome is around 100 million base pairs, or tens of megabytes in a compact encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: C. elegans genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '25000000.0'
+      source_basis: Reported Caenorhabditis elegans genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Caenorhabditis_elegans
+      source_value_text: 100 million
+  source: https://en.wikipedia.org/wiki/Caenorhabditis_elegans
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-caenorhabditis-elegans
+    url: https://en.wikipedia.org/wiki/Caenorhabditis_elegans
+    title: Caenorhabditis elegans
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-fruit-fly-genome-information
+  name: Fruit fly genome
+  value: 35000000.0
+  description: The fruit fly genome occupies a few dozen megabytes in a two-bit sequence representation.
+  description_format: markdown
+  summary_short: The fruit fly genome occupies a few dozen megabytes in a two-bit sequence representation.
+  description_medium: The fruit fly genome occupies a few dozen megabytes in a two-bit sequence representation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fruit fly genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '35000000.0'
+      source_basis: Reported Drosophila melanogaster genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+      source_value_text: 140 million
+  source: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-drosophila-melanogaster
+    url: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+    title: Drosophila melanogaster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-zip-100-disk
+  name: Zip 100 disk
+  value: 100000000.0
+  description: A Zip 100 disk marked the jump from floppy-like storage into the hundred-megabyte range.
+  description_format: markdown
+  summary_short: A Zip 100 disk marked the jump from floppy-like storage into the hundred-megabyte range.
+  description_medium: A Zip 100 disk marked the jump from floppy-like storage into the hundred-megabyte range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Zip 100 disk
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted megabytes to bytes.
+      method: converted
+      original_value_text: '100000000.0'
+      source_basis: Reported Zip 100 cartridge capacity.
+      source_unit: MB
+      source_url: https://en.wikipedia.org/wiki/Zip_drive
+      source_value_text: '100'
+  source: https://en.wikipedia.org/wiki/Zip_drive
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-zip-drive
+    url: https://en.wikipedia.org/wiki/Zip_drive
+    title: Zip drive
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-rice-genome-information
+  name: Rice genome
+  value: 107500000.0
+  description: The rice genome is larger than many animal genomes and lands near one hundred megabytes in a compact encoding.
+  description_format: markdown
+  summary_short: The rice genome is larger than many animal genomes and lands near one hundred megabytes in a compact encoding.
+  description_medium: The rice genome is larger than many animal genomes and lands near one hundred megabytes in a compact encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rice genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '107500000.0'
+      source_basis: Reported Oryza sativa genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Oryza_sativa
+      source_value_text: 430 million
+  source: https://en.wikipedia.org/wiki/Oryza_sativa
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oryza-sativa
+    url: https://en.wikipedia.org/wiki/Oryza_sativa
+    title: Oryza sativa
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-one-second-raw-1080p30
+  name: One second of raw 1080p30 video
+  value: 186624000.0
+  description: One second of uncompressed 1080p video at 30 frames per second is already in the hundreds of megabytes.
+  description_format: markdown
+  summary_short: One second of uncompressed 1080p video at 30 frames per second is already in the hundreds of megabytes.
+  description_medium: One second of uncompressed 1080p video at 30 frames per second is already in the hundreds of megabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One second of raw 1080p30 video
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = width x height x 3 color bytes x frame_rate
+      method: derived
+      original_value_text: '186624000.0'
+      source_basis: Computed for one second of 24-bit RGB video at 1920 by 1080 and 30 frames per second.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/1080p
+      source_value_text: 1920 x 1080 x 3 x 30
+  source: https://en.wikipedia.org/wiki/1080p
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-1080p
+    url: https://en.wikipedia.org/wiki/1080p
+    title: 1080p
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-maize-genome-information
+  name: Maize genome
+  value: 575000000.0
+  description: The maize genome sits in the several-hundred-megabyte range in a two-bit sequence encoding.
+  description_format: markdown
+  summary_short: The maize genome sits in the several-hundred-megabyte range in a two-bit sequence encoding.
+  description_medium: The maize genome sits in the several-hundred-megabyte range in a two-bit sequence encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Maize genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '575000000.0'
+      source_basis: Reported maize genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Maize
+      source_value_text: 2.3 billion
+  source: https://en.wikipedia.org/wiki/Maize
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-maize
+    url: https://en.wikipedia.org/wiki/Maize
+    title: Maize
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-one-hour-cd-audio
+  name: One hour of CD audio
+  value: 635040000.0
+  description: One hour of uncompressed CD audio is roughly the size of a small disc image.
+  description_format: markdown
+  summary_short: One hour of uncompressed CD audio is roughly the size of a small disc image.
+  description_medium: One hour of uncompressed CD audio is roughly the size of a small disc image.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One hour of CD audio
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted bits to bytes over one hour.
+      derivation_note: bytes = sample_rate x bit_depth x channels x duration / 8
+      method: derived
+      original_value_text: '635040000.0'
+      source_basis: Compact Disc Digital Audio uses 44.1 kHz stereo at 16 bits per sample.
+      source_unit: PCM
+      source_url: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+      source_value_text: 44,100 samples/s x 16 bits x 2 channels for 3600 s
+  source: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-compact-disc-digital-audio
+    url: https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio
+    title: Compact Disc Digital Audio
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-mouse-genome-information
+  name: Mouse genome
+  value: 675000000.0
+  description: The mouse genome is in the same broad information range as the human genome.
+  description_format: markdown
+  summary_short: The mouse genome is in the same broad information range as the human genome.
+  description_medium: The mouse genome is in the same broad information range as the human genome.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Mouse genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '675000000.0'
+      source_basis: Reported mouse genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Mouse_genome
+      source_value_text: 2.7 billion
+  source: https://en.wikipedia.org/wiki/Mouse_genome
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mouse-genome
+    url: https://en.wikipedia.org/wiki/Mouse_genome
+    title: Mouse genome
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-cd-rom
+  name: CD-ROM
+  value: 700000000.0
+  description: A CD-ROM stores hundreds of megabytes, enough for software that once filled entire shelves of floppies.
+  description_format: markdown
+  summary_short: A CD-ROM stores hundreds of megabytes, enough for software that once filled entire shelves of floppies.
+  description_medium: A CD-ROM stores hundreds of megabytes, enough for software that once filled entire shelves of floppies.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: CD-ROM
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted megabytes to bytes.
+      method: converted
+      original_value_text: '700000000.0'
+      source_basis: Reported common CD-ROM capacity.
+      source_unit: MB
+      source_url: https://en.wikipedia.org/wiki/CD-ROM
+      source_value_text: '700'
+  source: https://en.wikipedia.org/wiki/CD-ROM
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cd-rom
+    url: https://en.wikipedia.org/wiki/CD-ROM
+    title: CD-ROM
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-human-haploid-genome-information
+  name: Human haploid genome
+  value: 800000000.0
+  description: One human haploid genome is under a gigabyte in a compact four-letter sequence encoding.
+  description_format: markdown
+  summary_short: One human haploid genome is under a gigabyte in a compact four-letter sequence encoding.
+  description_medium: One human haploid genome is under a gigabyte in a compact four-letter sequence encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human haploid genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '800000000.0'
+      source_basis: Reported haploid human genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Human_genome
+      source_value_text: 3.2 billion
+  source: https://en.wikipedia.org/wiki/Human_genome
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-genome
+    url: https://en.wikipedia.org/wiki/Human_genome
+    title: Human genome
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:scenario-information-one-second-raw-4k60
+  name: One second of raw 4K60 video
+  value: 1492992000.0
+  description: One uncompressed second of 4K video at 60 frames per second is already around one and a half gigabytes.
+  description_format: markdown
+  summary_short: One uncompressed second of 4K video at 60 frames per second is already around one and a half gigabytes.
+  description_medium: One uncompressed second of 4K video at 60 frames per second is already around one and a half gigabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One second of raw 4K60 video
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = width x height x 3 color bytes x frame_rate
+      method: derived
+      original_value_text: '1492992000.0'
+      source_basis: Computed for one second of 24-bit RGB video at 3840 by 2160 and 60 frames per second.
+      source_unit: bytes
+      source_url: https://en.wikipedia.org/wiki/4K_resolution
+      source_value_text: 3840 x 2160 x 3 x 60
+  source: https://en.wikipedia.org/wiki/4K_resolution
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-4k-resolution
+    url: https://en.wikipedia.org/wiki/4K_resolution
+    title: 4K resolution
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-human-diploid-genome-information
+  name: Human diploid genome
+  value: 1600000000.0
+  description: A diploid human genome is about twice the size of a haploid genome, or around 1.6 gigabytes in a compact sequence encoding.
+  description_format: markdown
+  summary_short: A diploid human genome is about twice the size of a haploid genome, or around 1.6 gigabytes in a compact sequence encoding.
+  description_medium: A diploid human genome is about twice the size of a haploid genome, or around 1.6 gigabytes in a compact sequence encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human diploid genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '1600000000.0'
+      source_basis: Approximate diploid human genome size taken as twice the haploid count.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Human_genome
+      source_value_text: 6.4 billion
+  source: https://en.wikipedia.org/wiki/Human_genome
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-genome
+    url: https://en.wikipedia.org/wiki/Human_genome
+    title: Human genome
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-dvd
+  name: DVD
+  value: 4700000000.0
+  description: A single-layer DVD stores a few gigabytes, enough for a feature-length movie or software release.
+  description_format: markdown
+  summary_short: A single-layer DVD stores a few gigabytes, enough for a feature-length movie or software release.
+  description_medium: A single-layer DVD stores a few gigabytes, enough for a feature-length movie or software release.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: DVD
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted gigabytes to bytes.
+      method: converted
+      original_value_text: '4700000000.0'
+      source_basis: Reported single-layer DVD capacity.
+      source_unit: GB
+      source_url: https://en.wikipedia.org/wiki/DVD
+      source_value_text: '4.7'
+  source: https://en.wikipedia.org/wiki/DVD
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dvd
+    url: https://en.wikipedia.org/wiki/DVD
+    title: DVD
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-lungfish-genome-information
+  name: Lungfish genome
+  value: 10750000000.0
+  description: The lungfish genome is larger still, climbing into double-digit gigabytes in a compact encoding.
+  description_format: markdown
+  summary_short: The lungfish genome is larger still, climbing into double-digit gigabytes in a compact encoding.
+  description_medium: The lungfish genome is larger still, climbing into double-digit gigabytes in a compact encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lungfish genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '10750000000.0'
+      source_basis: Reported lungfish genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Lungfish
+      source_value_text: 43 billion
+  source: https://en.wikipedia.org/wiki/Lungfish
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lungfish
+    url: https://en.wikipedia.org/wiki/Lungfish
+    title: Lungfish
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-blu-ray-disc-information
+  name: Blu-ray Disc
+  value: 25000000000.0
+  description: A single-layer Blu-ray Disc stores 25 gigabytes, comfortably above DVD scale.
+  description_format: markdown
+  summary_short: A single-layer Blu-ray Disc stores 25 gigabytes, comfortably above DVD scale.
+  description_medium: A single-layer Blu-ray Disc stores 25 gigabytes, comfortably above DVD scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blu-ray Disc
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted gigabytes to bytes.
+      method: converted
+      original_value_text: '25000000000.0'
+      source_basis: Reported single-layer Blu-ray capacity.
+      source_unit: GB
+      source_url: https://en.wikipedia.org/wiki/Blu-ray
+      source_value_text: '25'
+  source: https://en.wikipedia.org/wiki/Blu-ray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blu-ray
+    url: https://en.wikipedia.org/wiki/Blu-ray
+    title: Blu-ray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:scenario-information-gpt-3-generated-text-day-proxy
+  name: All GPT-3 generated text in one day (plain-text proxy)
+  value: 27000000000.0
+  description: OpenAI said GPT-3-powered applications were generating billions of words each day, which corresponds to only tens of gigabytes as plain text.
+  description_format: markdown
+  summary_short: OpenAI said GPT-3-powered applications were generating billions of words each day, which corresponds to only tens of gigabytes as plain text.
+  description_medium: OpenAI said GPT-3-powered applications were generating billions of words each day, which corresponds to only tens of gigabytes as plain text.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: All GPT-3 generated text in one day (plain-text proxy)
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = words_per_day x assumed_plain_text_bytes_per_word
+      method: derived
+      original_value_text: '27000000000.0'
+      source_basis: Derived from OpenAI's report that GPT-3 applications were generating more than 4.5 billion words per day.
+      source_unit: bytes
+      source_url: https://openai.com/index/gpt-3-apps/
+      source_value_text: 4.5 billion words/day x 6 bytes/word
+  source: https://openai.com/index/gpt-3-apps/
+  source_count: 2
+  sources:
+  - id: src:https-openai-com-index-gpt-3-apps
+    url: https://openai.com/index/gpt-3-apps/
+    title: gpt-3-apps
+    publisher: openai.com
+    license_text: null
+    source_class: official_dataset
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 6 bytes per word including spaces and punctuation
+    measurement: plain-text output proxy
+- id: obs:information:entity-paris-japonica-genome-information
+  name: Paris japonica genome
+  value: 37250000000.0
+  description: Paris japonica has one of the largest known genomes, tens of gigabytes even in a compact encoding.
+  description_format: markdown
+  summary_short: Paris japonica has one of the largest known genomes, tens of gigabytes even in a compact encoding.
+  description_medium: Paris japonica has one of the largest known genomes, tens of gigabytes even in a compact encoding.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Paris japonica genome
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Used 2 bits per base pair and converted bits to bytes.
+      derivation_note: bytes = base_pairs x 2 / 8
+      method: derived
+      original_value_text: '37250000000.0'
+      source_basis: Reported Paris japonica genome size.
+      source_unit: base pairs
+      source_url: https://en.wikipedia.org/wiki/Paris_japonica
+      source_value_text: 149 billion
+  source: https://en.wikipedia.org/wiki/Paris_japonica
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paris-japonica
+    url: https://en.wikipedia.org/wiki/Paris_japonica
+    title: Paris japonica
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:information:entity-dual-layer-blu-ray-disc
+  name: Dual-layer Blu-ray Disc
+  value: 50000000000.0
+  description: A dual-layer Blu-ray Disc doubles the capacity to 50 gigabytes.
+  description_format: markdown
+  summary_short: A dual-layer Blu-ray Disc doubles the capacity to 50 gigabytes.
+  description_medium: A dual-layer Blu-ray Disc doubles the capacity to 50 gigabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dual-layer Blu-ray Disc
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted gigabytes to bytes.
+      method: converted
+      original_value_text: '50000000000.0'
+      source_basis: Reported dual-layer Blu-ray capacity.
+      source_unit: GB
+      source_url: https://en.wikipedia.org/wiki/Blu-ray
+      source_value_text: '50'
+  source: https://en.wikipedia.org/wiki/Blu-ray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blu-ray
+    url: https://en.wikipedia.org/wiki/Blu-ray
+    title: Blu-ray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-uhd-blu-ray-disc
+  name: UHD Blu-ray Disc
+  value: 100000000000.0
+  description: Triple-layer Ultra HD Blu-ray media reaches 100 gigabytes.
+  description_format: markdown
+  summary_short: Triple-layer Ultra HD Blu-ray media reaches 100 gigabytes.
+  description_medium: Triple-layer Ultra HD Blu-ray media reaches 100 gigabytes.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: UHD Blu-ray Disc
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted gigabytes to bytes.
+      method: converted
+      original_value_text: '100000000000.0'
+      source_basis: Reported UHD Blu-ray triple-layer capacity.
+      source_unit: GB
+      source_url: https://en.wikipedia.org/wiki/Ultra_HD_Blu-ray
+      source_value_text: '100'
+  source: https://en.wikipedia.org/wiki/Ultra_HD_Blu-ray
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ultra-hd-blu-ray
+    url: https://en.wikipedia.org/wiki/Ultra_HD_Blu-ray
+    title: Ultra HD Blu-ray
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-1tb-microsdxc-card
+  name: 1 TB microSDXC card
+  value: 1000000000000.0
+  description: A one-terabyte microSD card compresses enormous storage into something smaller than a fingernail.
+  description_format: markdown
+  summary_short: A one-terabyte microSD card compresses enormous storage into something smaller than a fingernail.
+  description_medium: A one-terabyte microSD card compresses enormous storage into something smaller than a fingernail.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: 1 TB microSDXC card
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted terabytes to bytes.
+      method: converted
+      original_value_text: '1000000000000.0'
+      source_basis: Representative one-terabyte microSDXC capacity.
+      source_unit: TB
+      source_url: https://en.wikipedia.org/wiki/SD_card
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/SD_card
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sd-card
+    url: https://en.wikipedia.org/wiki/SD_card
+    title: SD card
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:entity-lto-9-tape
+  name: LTO-9 tape
+  value: 18000000000000.0
+  description: One modern LTO-9 tape stores eighteen terabytes uncompressed.
+  description_format: markdown
+  summary_short: One modern LTO-9 tape stores eighteen terabytes uncompressed.
+  description_medium: One modern LTO-9 tape stores eighteen terabytes uncompressed.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: LTO-9 tape
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      conversion_note: Converted terabytes to bytes.
+      method: converted
+      original_value_text: '18000000000000.0'
+      source_basis: Reported LTO-9 native tape capacity.
+      source_unit: TB
+      source_url: https://en.wikipedia.org/wiki/Linear_Tape-Open
+      source_value_text: '18'
+  source: https://en.wikipedia.org/wiki/Linear_Tape-Open
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-linear-tape-open
+    url: https://en.wikipedia.org/wiki/Linear_Tape-Open
+    title: Linear Tape-Open
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:information:scenario-information-youtube-uploads-one-year-proxy
+  name: One year of YouTube uploads (compressed-video proxy)
+  value: 2.9565e+17
+  description: At YouTube's reported upload rate, one year of new uploads is already a few tenths of an exabyte even under a modest compression assumption.
+  description_format: markdown
+  summary_short: At YouTube's reported upload rate, one year of new uploads is already a few tenths of an exabyte even under a modest compression assumption.
+  description_medium: At YouTube's reported upload rate, one year of new uploads is already a few tenths of an exabyte even under a modest compression assumption.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One year of YouTube uploads (compressed-video proxy)
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = upload_hours_per_minute x minutes_per_year x seconds_per_hour x bitrate / 8
+      method: derived
+      original_value_text: '2.9565e+17'
+      source_basis: Derived from YouTube's reported upload rate of more than 500 hours of video every minute.
+      source_unit: bytes
+      source_url: https://blog.youtube/news-and-events/youtube-turns-20/
+      source_value_text: 500 hours/minute x 365 days/year x 2.5 Mbit/s
+  source: https://blog.youtube/news-and-events/youtube-turns-20/
+  source_count: 2
+  sources:
+  - id: src:https-blog-youtube-news-and-events-youtube-turns-20
+    url: https://blog.youtube/news-and-events/youtube-turns-20/
+    title: youtube-turns-20
+    publisher: blog.youtube
+    license_text: null
+    source_class: official_dataset
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 2.5 megabits per second average encoded stream
+    measurement: compressed video storage proxy
+- id: obs:information:scenario-information-youtube-tv-watchday-proxy
+  name: One day of YouTube viewing on TVs (compressed-video proxy)
+  value: 3.6e+18
+  description: YouTube says viewers now watch over a billion hours a day on TVs, which corresponds to several exabytes of delivered video even at a modest streaming bitrate.
+  description_format: markdown
+  summary_short: YouTube says viewers now watch over a billion hours a day on TVs, which corresponds to several exabytes of delivered video even at a modest streaming bitrate.
+  description_medium: YouTube says viewers now watch over a billion hours a day on TVs, which corresponds to several exabytes of delivered video even at a modest streaming bitrate.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One day of YouTube viewing on TVs (compressed-video proxy)
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = watched_hours_per_day x seconds_per_hour x bitrate / 8
+      method: derived
+      original_value_text: '3.6e+18'
+      source_basis: Derived from YouTube's report that over one billion hours are watched on TVs daily.
+      source_unit: bytes
+      source_url: https://blog.youtube/inside-youtube/our-big-bets-for-2025/
+      source_value_text: 1 billion hours/day x 8 Mbit/s
+  source: https://blog.youtube/inside-youtube/our-big-bets-for-2025/
+  source_count: 2
+  sources:
+  - id: src:https-blog-youtube-inside-youtube-our-big-bets-for-2025
+    url: https://blog.youtube/inside-youtube/our-big-bets-for-2025/
+    title: our-big-bets-for-2025
+    publisher: blog.youtube
+    license_text: null
+    source_class: official_dataset
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 8 megabits per second delivered stream
+    measurement: streamed video transfer proxy
+- id: obs:information:scenario-information-all-human-dna-on-earth-proxy
+  name: All human DNA on Earth (compact sequence proxy)
+  value: 1.312e+19
+  description: Multiplying a compact human diploid genome by everyone alive today pushes total human genetic sequence information into the exabyte-to-zettabyte gap.
+  description_format: markdown
+  summary_short: Multiplying a compact human diploid genome by everyone alive today pushes total human genetic sequence information into the exabyte-to-zettabyte gap.
+  description_medium: Multiplying a compact human diploid genome by everyone alive today pushes total human genetic sequence information into the exabyte-to-zettabyte gap.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: All human DNA on Earth (compact sequence proxy)
+    ingest_source: dataset/raw/curated/information.json
+    source_trace:
+      derivation_note: bytes = population x compact_diploid_genome_bytes
+      method: derived
+      original_value_text: '1.312e+19'
+      source_basis: Derived from an 8.2 billion world population and the compact-information estimate for one human diploid genome already used elsewhere in this dataset.
+      source_unit: bytes
+      source_url: https://www.un.org/en/global-issues/population
+      source_value_text: 8.2 billion people x 1.6 GB/diploid genome
+  source: https://www.un.org/en/global-issues/population
+  source_count: 2
+  sources:
+  - id: src:https-www-un-org-en-global-issues-population
+    url: https://www.un.org/en/global-issues/population
+    title: population
+    publisher: www.un.org
+    license_text: null
+    source_class: official_dataset
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-information-json
+    url: repo://dataset/raw/curated/information.json
+    title: dataset/raw/curated/information.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 1.6 gigabytes per diploid genome
+    measurement: compact sequence-information proxy

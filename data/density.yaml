@@ -1,0 +1,1810 @@
+dimension: density
+base_unit: kilograms_per_cubic_meter
+dimension_description: Density is mass per unit volume under stated composition, temperature, and pressure assumptions. Most entries below are bulk average densities rather than microscopic local densities, and extreme astrophysical entries are explicitly marked when they refer to stellar cores or degenerate matter.
+related_resources:
+- name: Wikidata density property
+  url: https://www.wikidata.org/wiki/Property:P2054
+- name: Density
+  url: https://en.wikipedia.org/wiki/Density
+show_limitations: true
+units:
+- conversion_factor: 1.0
+  description: Kilograms per cubic meter are the canonical storage unit for density.
+  name: kilograms per cubic meter
+  symbol: kg/m^3
+- conversion_factor: 0.001
+  description: Grams per cubic centimeter are common in chemistry and materials science.
+  name: grams per cubic centimeter
+  symbol: g/cm^3
+- name: kilograms per liter
+  symbol: kg/L
+  conversion_factor: 0.001
+  description: Kilograms per liter are intuitive for liquids and bulk materials.
+- name: pounds per cubic foot
+  symbol: lb/ft^3
+  conversion_factor: 0.0624279605761
+  description: Pounds per cubic foot are common in construction and fluid handling.
+- name: Planck densities
+  symbol: rho_P
+  conversion_factor: 1.939864209505335e-97
+  description: Planck density is the natural extreme density scale from c, hbar, and G.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: materials
+frontend_group_label: Materials & Matter
+frontend_order: 440
+items:
+- id: obs:density:entity-intergalactic-medium
+  name: Intergalactic medium
+  value: 1.0e-27
+  description: Characteristic baryonic density of intergalactic space.
+  description_format: markdown
+  summary_short: Characteristic baryonic density of intergalactic space.
+  description_medium: Characteristic baryonic density of intergalactic space.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Intergalactic medium
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-27
+      source_url: https://en.wikipedia.org/wiki/Intergalactic_medium
+  source: https://en.wikipedia.org/wiki/Intergalactic_medium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-intergalactic-medium
+    url: https://en.wikipedia.org/wiki/Intergalactic_medium
+    title: Intergalactic medium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: characteristic bulk density
+- id: obs:density:entity-interstellar-medium
+  name: Interstellar medium
+  value: 1.0e-21
+  description: Characteristic density of the diffuse interstellar medium.
+  description_format: markdown
+  summary_short: Characteristic density of the diffuse interstellar medium.
+  description_medium: Characteristic density of the diffuse interstellar medium.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Interstellar medium
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-21
+      source_url: https://en.wikipedia.org/wiki/Interstellar_medium
+  source: https://en.wikipedia.org/wiki/Interstellar_medium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-interstellar-medium
+    url: https://en.wikipedia.org/wiki/Interstellar_medium
+    title: Interstellar medium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: characteristic bulk density
+- id: obs:density:scenario-laboratory-vacuum
+  name: Laboratory ultra-high vacuum
+  value: 1.0e-17
+  description: Characteristic mass density of an ultra-high laboratory vacuum.
+  description_format: markdown
+  summary_short: Characteristic mass density of an ultra-high laboratory vacuum.
+  description_medium: Characteristic mass density of an ultra-high laboratory vacuum.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Laboratory ultra-high vacuum
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-17
+      source_url: https://en.wikipedia.org/wiki/Vacuum
+  source: https://en.wikipedia.org/wiki/Vacuum
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-vacuum
+    url: https://en.wikipedia.org/wiki/Vacuum
+    title: Vacuum
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: residual gas density
+- id: obs:density:entity-thermosphere
+  name: Thermosphere at ISS altitude
+  value: 1.0e-12
+  description: Order-of-magnitude density of the upper thermosphere near low Earth orbit.
+  description_format: markdown
+  summary_short: Order-of-magnitude density of the upper thermosphere near low Earth orbit.
+  description_medium: Order-of-magnitude density of the upper thermosphere near low Earth orbit.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Thermosphere at ISS altitude
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-12
+      source_url: https://en.wikipedia.org/wiki/Thermosphere
+  source: https://en.wikipedia.org/wiki/Thermosphere
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-thermosphere
+    url: https://en.wikipedia.org/wiki/Thermosphere
+    title: Thermosphere
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    condition: around 400 km altitude
+    measurement: bulk gas density
+- id: obs:density:entity-hydrogen-gas
+  name: Hydrogen gas
+  value: 0.09
+  description: Density of hydrogen gas near standard conditions.
+  description_format: markdown
+  summary_short: Density of hydrogen gas near standard conditions.
+  description_medium: Density of hydrogen gas near standard conditions.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hydrogen gas
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '0.09'
+      source_url: https://en.wikipedia.org/wiki/Hydrogen
+  source: https://en.wikipedia.org/wiki/Hydrogen
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydrogen
+    url: https://en.wikipedia.org/wiki/Hydrogen
+    title: Hydrogen
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: gas density
+- id: obs:density:entity-helium-gas
+  name: Helium gas
+  value: 0.18
+  description: Density of helium gas near standard conditions.
+  description_format: markdown
+  summary_short: Density of helium gas near standard conditions.
+  description_medium: Density of helium gas near standard conditions.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Helium gas
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '0.18'
+      source_url: https://en.wikipedia.org/wiki/Helium
+  source: https://en.wikipedia.org/wiki/Helium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-helium
+    url: https://en.wikipedia.org/wiki/Helium
+    title: Helium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: gas density
+- id: obs:density:entity-aerogel
+  name: Silica aerogel
+  value: 1.0
+  description: Characteristic bulk density of a very light silica aerogel.
+  description_format: markdown
+  summary_short: Characteristic bulk density of a very light silica aerogel.
+  description_medium: Characteristic bulk density of a very light silica aerogel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silica aerogel
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_url: https://en.wikipedia.org/wiki/Aerogel
+  source: https://en.wikipedia.org/wiki/Aerogel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aerogel
+    url: https://en.wikipedia.org/wiki/Aerogel
+    title: Aerogel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-air
+  name: Air at sea level
+  value: 1.225
+  description: Density of dry air near sea level under standard conditions.
+  description_format: markdown
+  summary_short: Density of dry air near sea level under standard conditions.
+  description_medium: Density of dry air near sea level under standard conditions.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Air at sea level
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1.225'
+      source_url: https://en.wikipedia.org/wiki/Density_of_air
+  source: https://en.wikipedia.org/wiki/Density_of_air
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-density-of-air
+    url: https://en.wikipedia.org/wiki/Density_of_air
+    title: Density of air
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    condition: sea level standard atmosphere
+    measurement: bulk density
+- id: obs:density:scenario-dry-air-sea-level-density
+  name: Dry air at sea level
+  value: 1.225
+  description: Representative density of dry air at sea level.
+  description_format: markdown
+  summary_short: Representative density of dry air at sea level.
+  description_medium: Representative density of dry air at sea level.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dry air at sea level
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1.225'
+      source_url: https://en.wikipedia.org/wiki/Density_of_air
+  source: https://en.wikipedia.org/wiki/Density_of_air
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-density-of-air
+    url: https://en.wikipedia.org/wiki/Density_of_air
+    title: Density of air
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: gas density
+- id: obs:density:entity-styrofoam-density
+  name: Styrofoam
+  value: 30.0
+  description: Representative bulk density of expanded polystyrene foam.
+  description_format: markdown
+  summary_short: Representative bulk density of expanded polystyrene foam.
+  description_medium: Representative bulk density of expanded polystyrene foam.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Styrofoam
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: '30.0'
+      source_url: https://en.wikipedia.org/wiki/Expanded_polystyrene
+  source: https://en.wikipedia.org/wiki/Expanded_polystyrene
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-expanded-polystyrene
+    url: https://en.wikipedia.org/wiki/Expanded_polystyrene
+    title: Expanded polystyrene
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-balsa-wood
+  name: Balsa wood
+  value: 160.0
+  description: Characteristic bulk density of balsa wood.
+  description_format: markdown
+  summary_short: Characteristic bulk density of balsa wood.
+  description_medium: Characteristic bulk density of balsa wood.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Balsa wood
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '160.0'
+      source_url: https://en.wikipedia.org/wiki/Balsa
+  source: https://en.wikipedia.org/wiki/Balsa
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-balsa
+    url: https://en.wikipedia.org/wiki/Balsa
+    title: Balsa
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-cork
+  name: Cork
+  value: 240.0
+  description: Characteristic bulk density of cork.
+  description_format: markdown
+  summary_short: Characteristic bulk density of cork.
+  description_medium: Characteristic bulk density of cork.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cork
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '240.0'
+      source_url: https://en.wikipedia.org/wiki/Cork_(material)
+  source: https://en.wikipedia.org/wiki/Cork_(material)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cork-material
+    url: https://en.wikipedia.org/wiki/Cork_(material)
+    title: Cork (material)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-pine-wood-density
+  name: Pine wood
+  value: 500.0
+  description: Representative bulk density of pine wood.
+  description_format: markdown
+  summary_short: Representative bulk density of pine wood.
+  description_medium: Representative bulk density of pine wood.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pine wood
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '500.0'
+      source_url: https://en.wikipedia.org/wiki/Pine
+  source: https://en.wikipedia.org/wiki/Pine
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pine
+    url: https://en.wikipedia.org/wiki/Pine
+    title: Pine
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-saturn
+  name: Saturn average density
+  value: 687.0
+  description: Average density of Saturn.
+  description_format: markdown
+  summary_short: Average density of Saturn.
+  description_medium: Average density of Saturn.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Saturn average density
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '687.0'
+      source_url: https://en.wikipedia.org/wiki/Saturn
+  source: https://en.wikipedia.org/wiki/Saturn
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-saturn
+    url: https://en.wikipedia.org/wiki/Saturn
+    title: Saturn
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: mean density
+- id: obs:density:entity-oak
+  name: Oak wood
+  value: 750.0
+  description: Characteristic bulk density of oak wood.
+  description_format: markdown
+  summary_short: Characteristic bulk density of oak wood.
+  description_medium: Characteristic bulk density of oak wood.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Oak wood
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: '750.0'
+      source_url: https://en.wikipedia.org/wiki/Oak
+  source: https://en.wikipedia.org/wiki/Oak
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oak
+    url: https://en.wikipedia.org/wiki/Oak
+    title: Oak
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-olive-oil
+  name: Olive oil
+  value: 910.0
+  description: Characteristic bulk density of olive oil.
+  description_format: markdown
+  summary_short: Characteristic bulk density of olive oil.
+  description_medium: Characteristic bulk density of olive oil.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Olive oil
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '910.0'
+      source_url: https://en.wikipedia.org/wiki/Olive_oil
+  source: https://en.wikipedia.org/wiki/Olive_oil
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-olive-oil
+    url: https://en.wikipedia.org/wiki/Olive_oil
+    title: Olive oil
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-ice
+  name: Ice
+  value: 917.0
+  description: Density of ordinary ice near its melting point.
+  description_format: markdown
+  summary_short: Density of ordinary ice near its melting point.
+  description_medium: Density of ordinary ice near its melting point.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ice
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '917.0'
+      source_url: https://en.wikipedia.org/wiki/Ice
+  source: https://en.wikipedia.org/wiki/Ice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ice
+    url: https://en.wikipedia.org/wiki/Ice
+    title: Ice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-human
+  name: Human body
+  value: 985.0
+  description: Representative average density of a human body.
+  description_format: markdown
+  summary_short: Representative average density of a human body.
+  description_medium: Representative average density of a human body.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human body
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: '985.0'
+      source_url: https://en.wikipedia.org/wiki/Human_body
+  source: https://en.wikipedia.org/wiki/Human_body
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body
+    url: https://en.wikipedia.org/wiki/Human_body
+    title: Human body
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q5
+  value_type: derived
+  qualifiers:
+    measurement: average body density
+- id: obs:density:entity-water
+  name: Liquid water
+  value: 1000.0
+  description: Density of liquid water near 4 C.
+  description_format: markdown
+  summary_short: Density of liquid water near 4 C.
+  description_medium: Density of liquid water near 4 C.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid water
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1000.0'
+      source_url: https://en.wikipedia.org/wiki/Water
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q283
+  value_type: measured
+  qualifiers:
+    condition: near 4 C
+    measurement: bulk density
+- id: obs:density:entity-seawater
+  name: Sea water
+  value: 1025.0
+  description: Typical density of seawater.
+  description_format: markdown
+  summary_short: Typical density of seawater.
+  description_medium: Typical density of seawater.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sea water
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1025.0'
+      source_url: https://en.wikipedia.org/wiki/Seawater
+  source: https://en.wikipedia.org/wiki/Seawater
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-seawater
+    url: https://en.wikipedia.org/wiki/Seawater
+    title: Seawater
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: liquid density
+- id: obs:density:entity-milk-density
+  name: Milk
+  value: 1030.0
+  description: Typical density of milk.
+  description_format: markdown
+  summary_short: Typical density of milk.
+  description_medium: Typical density of milk.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Milk
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1030.0'
+      source_url: https://en.wikipedia.org/wiki/Milk
+  source: https://en.wikipedia.org/wiki/Milk
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milk
+    url: https://en.wikipedia.org/wiki/Milk
+    title: Milk
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: liquid density
+- id: obs:density:entity-sun
+  name: Sun average density
+  value: 1408.0
+  description: Mean density of the Sun.
+  description_format: markdown
+  summary_short: Mean density of the Sun.
+  description_medium: Mean density of the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sun average density
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1408.0'
+      source_url: https://en.wikipedia.org/wiki/Sun
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q525
+  value_type: measured
+  qualifiers:
+    measurement: mean density
+- id: obs:density:entity-honey-density
+  name: Honey
+  value: 1420.0
+  description: Typical density of honey.
+  description_format: markdown
+  summary_short: Typical density of honey.
+  description_medium: Typical density of honey.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Honey
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '1420.0'
+      source_url: https://en.wikipedia.org/wiki/Honey
+  source: https://en.wikipedia.org/wiki/Honey
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-honey
+    url: https://en.wikipedia.org/wiki/Honey
+    title: Honey
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: liquid density
+- id: obs:density:entity-concrete-density
+  name: Concrete
+  value: 2400.0
+  description: Representative bulk density of normal concrete.
+  description_format: markdown
+  summary_short: Representative bulk density of normal concrete.
+  description_medium: Representative bulk density of normal concrete.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concrete
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '2400.0'
+      source_url: https://en.wikipedia.org/wiki/Concrete
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-aluminium
+  name: Aluminium
+  value: 2700.0
+  description: Density of aluminium metal.
+  description_format: markdown
+  summary_short: Density of aluminium metal.
+  description_medium: Density of aluminium metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aluminium
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '2700.0'
+      source_url: https://en.wikipedia.org/wiki/Aluminium
+  source: https://en.wikipedia.org/wiki/Aluminium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aluminium
+    url: https://en.wikipedia.org/wiki/Aluminium
+    title: Aluminium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-granite
+  name: Granite
+  value: 2700.0
+  description: Characteristic density of granite.
+  description_format: markdown
+  summary_short: Characteristic density of granite.
+  description_medium: Characteristic density of granite.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Granite
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '2700.0'
+      source_url: https://en.wikipedia.org/wiki/Granite
+  source: https://en.wikipedia.org/wiki/Granite
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-granite
+    url: https://en.wikipedia.org/wiki/Granite
+    title: Granite
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-earth
+  name: Earth average density
+  value: 5514.0
+  description: Mean density of Earth.
+  description_format: markdown
+  summary_short: Mean density of Earth.
+  description_medium: Mean density of Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth average density
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '5514.0'
+      source_url: https://en.wikipedia.org/wiki/Earth
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q2
+  value_type: measured
+  qualifiers:
+    measurement: mean density
+- id: obs:density:entity-steel-density
+  name: Steel
+  value: 7850.0
+  description: Representative bulk density of steel.
+  description_format: markdown
+  summary_short: Representative bulk density of steel.
+  description_medium: Representative bulk density of steel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '7850.0'
+      source_url: https://en.wikipedia.org/wiki/Steel
+  source: https://en.wikipedia.org/wiki/Steel
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-steel
+    url: https://en.wikipedia.org/wiki/Steel
+    title: Steel
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-iron
+  name: Iron
+  value: 7870.0
+  description: Density of iron metal.
+  description_format: markdown
+  summary_short: Density of iron metal.
+  description_medium: Density of iron metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Iron
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '7870.0'
+      source_url: https://en.wikipedia.org/wiki/Iron
+  source: https://en.wikipedia.org/wiki/Iron
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-iron
+    url: https://en.wikipedia.org/wiki/Iron
+    title: Iron
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-copper
+  name: Copper
+  value: 8960.0
+  description: Density of copper metal.
+  description_format: markdown
+  summary_short: Density of copper metal.
+  description_medium: Density of copper metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Copper
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '8960.0'
+      source_url: https://en.wikipedia.org/wiki/Copper
+  source: https://en.wikipedia.org/wiki/Copper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-copper
+    url: https://en.wikipedia.org/wiki/Copper
+    title: Copper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-silver
+  name: Silver
+  value: 10490.0
+  description: Density of silver metal.
+  description_format: markdown
+  summary_short: Density of silver metal.
+  description_medium: Density of silver metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silver
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '10490.0'
+      source_url: https://en.wikipedia.org/wiki/Silver
+  source: https://en.wikipedia.org/wiki/Silver
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-silver
+    url: https://en.wikipedia.org/wiki/Silver
+    title: Silver
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-lead
+  name: Lead
+  value: 11340.0
+  description: Density of lead metal.
+  description_format: markdown
+  summary_short: Density of lead metal.
+  description_medium: Density of lead metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lead
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '11340.0'
+      source_url: https://en.wikipedia.org/wiki/Lead
+  source: https://en.wikipedia.org/wiki/Lead
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lead
+    url: https://en.wikipedia.org/wiki/Lead
+    title: Lead
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-mercury
+  name: Mercury
+  value: 13534.0
+  description: Density of liquid mercury.
+  description_format: markdown
+  summary_short: Density of liquid mercury.
+  description_medium: Density of liquid mercury.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Mercury
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '13534.0'
+      source_url: https://en.wikipedia.org/wiki/Mercury_(element)
+  source: https://en.wikipedia.org/wiki/Mercury_(element)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mercury-element
+    url: https://en.wikipedia.org/wiki/Mercury_(element)
+    title: Mercury (element)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-uranium-density
+  name: Uranium
+  value: 19050.0
+  description: Density of uranium metal.
+  description_format: markdown
+  summary_short: Density of uranium metal.
+  description_medium: Density of uranium metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Uranium
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '19050.0'
+      source_url: https://en.wikipedia.org/wiki/Uranium
+  source: https://en.wikipedia.org/wiki/Uranium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-uranium
+    url: https://en.wikipedia.org/wiki/Uranium
+    title: Uranium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-tungsten-density
+  name: Tungsten
+  value: 19300.0
+  description: Density of tungsten metal.
+  description_format: markdown
+  summary_short: Density of tungsten metal.
+  description_medium: Density of tungsten metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tungsten
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '19300.0'
+      source_url: https://en.wikipedia.org/wiki/Tungsten
+  source: https://en.wikipedia.org/wiki/Tungsten
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tungsten
+    url: https://en.wikipedia.org/wiki/Tungsten
+    title: Tungsten
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-gold
+  name: Gold
+  value: 19320.0
+  description: Density of gold metal.
+  description_format: markdown
+  summary_short: Density of gold metal.
+  description_medium: Density of gold metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Gold
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '19320.0'
+      source_url: https://en.wikipedia.org/wiki/Gold
+  source: https://en.wikipedia.org/wiki/Gold
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gold
+    url: https://en.wikipedia.org/wiki/Gold
+    title: Gold
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-osmium
+  name: Osmium
+  value: 22590.0
+  description: Density of osmium metal.
+  description_format: markdown
+  summary_short: Density of osmium metal.
+  description_medium: Density of osmium metal.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Osmium
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: direct
+      original_value_text: '22590.0'
+      source_url: https://en.wikipedia.org/wiki/Osmium
+  source: https://en.wikipedia.org/wiki/Osmium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-osmium
+    url: https://en.wikipedia.org/wiki/Osmium
+    title: Osmium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-sun-core
+  name: Sun core
+  value: 150000.0
+  description: Characteristic density near the center of the Sun.
+  description_format: markdown
+  summary_short: Characteristic density near the center of the Sun.
+  description_medium: Characteristic density near the center of the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sun core
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: '150000.0'
+      source_url: https://en.wikipedia.org/wiki/Sun
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: core density
+- id: obs:density:entity-white-dwarf
+  name: White dwarf matter
+  value: 1000000000.0
+  description: Characteristic average density of white dwarf matter.
+  description_format: markdown
+  summary_short: Characteristic average density of white dwarf matter.
+  description_medium: Characteristic average density of white dwarf matter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: White dwarf matter
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: '1000000000.0'
+      source_url: https://en.wikipedia.org/wiki/White_dwarf
+  source: https://en.wikipedia.org/wiki/White_dwarf
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-white-dwarf
+    url: https://en.wikipedia.org/wiki/White_dwarf
+    title: White dwarf
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-neutron-star
+  name: Neutron star matter
+  value: 4.0e+17
+  description: Characteristic average density of neutron star matter.
+  description_format: markdown
+  summary_short: Characteristic average density of neutron star matter.
+  description_medium: Characteristic average density of neutron star matter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Neutron star matter
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      method: derived
+      original_value_text: 4e+17
+      source_url: https://en.wikipedia.org/wiki/Neutron_star
+  source: https://en.wikipedia.org/wiki/Neutron_star
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-neutron-star
+    url: https://en.wikipedia.org/wiki/Neutron_star
+    title: Neutron star
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: bulk density
+- id: obs:density:entity-planck-density
+  name: Planck density
+  value: 5.154848506403409e+96
+  description: Planck density is the natural density scale formed from fundamental constants.
+  description_format: markdown
+  summary_short: Planck density is the natural density scale formed from fundamental constants.
+  description_medium: Planck density is the natural density scale formed from fundamental constants.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck density
+    ingest_source: dataset/raw/curated/density.json
+    source_trace:
+      derivation_note: \rho_P = c^5 / (\hbar G^2)
+      method: derived
+      original_value_text: '5.154848506403409e+96'
+      source_basis: Derived from c, ħ, and G using the Planck-unit density scale.
+      source_unit: kg/m^3
+      source_url: https://en.wikipedia.org/wiki/Planck_units
+      source_value_text: 5.154848506403409e96 kg/m^3
+  source: https://en.wikipedia.org/wiki/Planck_units
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-planck-units
+    url: https://en.wikipedia.org/wiki/Planck_units
+    title: Planck units
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-density-json
+    url: repo://dataset/raw/curated/density.json
+    title: dataset/raw/curated/density.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: natural density scale

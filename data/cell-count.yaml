@@ -1,0 +1,874 @@
+dimension: cell-count
+base_unit: count
+dimension_description: This scale counts biological cells, from a single bacterium up to all bacteria on Earth. It is dimensionless mathematically but still extremely informative conceptually. Qualifiers matter because “cell count” can mean one organism, one tissue sample, or a planetary total.
+related_resources:
+- name: Cell
+  url: https://en.wikipedia.org/wiki/Cell_(biology)
+show_limitations: true
+units:
+- name: count
+  symbol: count
+  conversion_factor: 1.0
+  description: Dimensionless count of cells.
+- name: thousand cells
+  symbol: k cells
+  conversion_factor: 0.001
+  description: Thousands of cells are useful for small organisms and samples.
+- name: million cells
+  symbol: M cells
+  conversion_factor: 1.0e-06
+  description: Millions of cells are useful for cultures and tissues.
+- name: billion cells
+  symbol: B cells
+  conversion_factor: 1.0e-09
+  description: Billions of cells are useful for blood and microbiology.
+- name: trillion cells
+  symbol: T cells
+  conversion_factor: 1.0e-12
+  description: Trillions of cells are useful for whole-organism counts.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: health
+frontend_group_label: Health & Biology
+frontend_order: 940
+items:
+- id: obs:cell-count:entity-cell-count-a-bacterium
+  name: A bacterium
+  value: 1.0
+  description: A single bacterium is the lower anchor for cell-count comparisons.
+  description_format: markdown
+  summary_short: A single bacterium is the lower anchor for cell-count comparisons.
+  description_medium: A single bacterium is the lower anchor for cell-count comparisons.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A bacterium
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      method: direct
+      original_value_text: '1'
+      source_basis: One bacterial cell.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Cell_(biology)
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Cell_(biology)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cell-biology
+    url: https://en.wikipedia.org/wiki/Cell_(biology)
+    title: Cell (biology)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:cell-count:entity-cell-count-a-human-oocyte
+  name: A human oocyte
+  value: 1.0
+  description: The human egg is a one-cell starting point for an organism.
+  description_format: markdown
+  summary_short: The human egg is a one-cell starting point for an organism.
+  description_medium: The human egg is a one-cell starting point for an organism.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A human oocyte
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      method: direct
+      original_value_text: '1'
+      source_basis: A single egg cell.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Oocyte
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Oocyte
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oocyte
+    url: https://en.wikipedia.org/wiki/Oocyte
+    title: Oocyte
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:cell-count:entity-cell-count-a-human-red-blood-cell
+  name: A human red blood cell
+  value: 1.0
+  description: A red blood cell is a canonical animal cell-scale object.
+  description_format: markdown
+  summary_short: A red blood cell is a canonical animal cell-scale object.
+  description_medium: A red blood cell is a canonical animal cell-scale object.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A human red blood cell
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      method: direct
+      original_value_text: '1'
+      source_basis: One erythrocyte.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Red_blood_cell
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Red_blood_cell
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-red-blood-cell
+    url: https://en.wikipedia.org/wiki/Red_blood_cell
+    title: Red blood cell
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:cell-count:entity-cell-count-a-yeast-cell
+  name: A yeast cell
+  value: 1.0
+  description: Yeast provides a familiar eukaryotic single-cell example.
+  description_format: markdown
+  summary_short: Yeast provides a familiar eukaryotic single-cell example.
+  description_medium: Yeast provides a familiar eukaryotic single-cell example.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A yeast cell
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      method: direct
+      original_value_text: '1'
+      source_basis: One unicellular yeast cell.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Yeast
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Yeast
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-yeast
+    url: https://en.wikipedia.org/wiki/Yeast
+    title: Yeast
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:cell-count:entity-cell-count-adult-c-elegans-hermaphrodite
+  name: Adult C. elegans hermaphrodite
+  value: 959.0
+  description: The adult nematode has a famously fixed and small cell count.
+  description_format: markdown
+  summary_short: The adult nematode has a famously fixed and small cell count.
+  description_medium: The adult nematode has a famously fixed and small cell count.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Adult C. elegans hermaphrodite
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: adult organism cell count
+      method: derived
+      original_value_text: '959'
+      source_basis: Canonical adult somatic cell count for C. elegans.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Caenorhabditis_elegans
+      source_value_text: 959 cells
+  source: https://en.wikipedia.org/wiki/Caenorhabditis_elegans
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-caenorhabditis-elegans
+    url: https://en.wikipedia.org/wiki/Caenorhabditis_elegans
+    title: Caenorhabditis elegans
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:cell-count:scenario-cell-count-a-zebrafish-embryo
+  name: A zebrafish embryo
+  value: 1000.0
+  description: Early embryos quickly move out of the single-cell band.
+  description_format: markdown
+  summary_short: Early embryos quickly move out of the single-cell band.
+  description_medium: Early embryos quickly move out of the single-cell band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A zebrafish embryo
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: Approximate developmental stage count
+      method: derived
+      original_value_text: '1000'
+      source_basis: Early embryo cell counts are on the order of thousands.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Zebrafish
+      source_value_text: ~1,000 cells
+  source: https://en.wikipedia.org/wiki/Zebrafish
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-zebrafish
+    url: https://en.wikipedia.org/wiki/Zebrafish
+    title: Zebrafish
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: early embryo
+- id: obs:cell-count:scenario-cell-count-drosophila-embryo-at-hatching
+  name: Drosophila embryo at hatching
+  value: 6000.0
+  description: A fruit-fly embryo gives a compact multicellular benchmark.
+  description_format: markdown
+  summary_short: A fruit-fly embryo gives a compact multicellular benchmark.
+  description_medium: A fruit-fly embryo gives a compact multicellular benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Drosophila embryo at hatching
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: developmental cell-count estimate
+      method: derived
+      original_value_text: '6000'
+      source_basis: Approximate cell count at the end of embryogenesis.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+      source_value_text: ~6,000 cells
+  source: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-drosophila-melanogaster
+    url: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+    title: Drosophila melanogaster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: embryo at hatching
+- id: obs:cell-count:scenario-cell-count-a-drop-of-blood
+  name: A drop of blood
+  value: 500000000.0
+  description: A small drop of blood already contains hundreds of millions of cells.
+  description_format: markdown
+  summary_short: A small drop of blood already contains hundreds of millions of cells.
+  description_medium: A small drop of blood already contains hundreds of millions of cells.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A drop of blood
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: cells = concentration x volume
+      method: derived
+      original_value_text: '500000000'
+      source_basis: Roughly 5 million red blood cells per microliter, times ~100 microliters per drop.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Blood
+      source_value_text: 5 million RBC/µL x 100 µL
+  source: https://en.wikipedia.org/wiki/Blood
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood
+    url: https://en.wikipedia.org/wiki/Blood
+    title: Blood
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 100 microliters per drop
+- id: obs:cell-count:scenario-cell-count-an-e-coli-culture-in-one-milliliter
+  name: An E. coli culture in one milliliter
+  value: 1000000000.0
+  description: A milliliter of dense culture jumps by nine orders of magnitude from a lone bacterium.
+  description_format: markdown
+  summary_short: A milliliter of dense culture jumps by nine orders of magnitude from a lone bacterium.
+  description_medium: A milliliter of dense culture jumps by nine orders of magnitude from a lone bacterium.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: An E. coli culture in one milliliter
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: order-of-magnitude lab culture estimate
+      method: derived
+      original_value_text: '1000000000'
+      source_basis: Dense laboratory culture on the order of a billion cells per milliliter.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Escherichia_coli
+      source_value_text: ~1 billion cells
+  source: https://en.wikipedia.org/wiki/Escherichia_coli
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escherichia-coli
+    url: https://en.wikipedia.org/wiki/Escherichia_coli
+    title: Escherichia coli
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: dense culture
+- id: obs:cell-count:scenario-cell-count-dense-e-coli-culture-1ml
+  name: Dense E. coli culture (1 mL)
+  value: 1000000000.0
+  description: A milliliter of dense bacterial culture reaches into the billions of cells.
+  description_format: markdown
+  summary_short: A milliliter of dense bacterial culture reaches into the billions of cells.
+  description_medium: A milliliter of dense bacterial culture reaches into the billions of cells.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dense E. coli culture (1 mL)
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: culture cell-count estimate
+      method: derived
+      original_value_text: '1000000000'
+      source_basis: Dense lab culture order-of-magnitude estimate.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Escherichia_coli
+      source_value_text: ~1e9 cells
+  source: https://en.wikipedia.org/wiki/Escherichia_coli
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escherichia-coli
+    url: https://en.wikipedia.org/wiki/Escherichia_coli
+    title: Escherichia coli
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 1 mL dense culture
+- id: obs:cell-count:entity-cell-count-a-mouse-body
+  name: A mouse body
+  value: 12000000000.0
+  description: A mouse body gives a small-animal whole-organism scale anchor.
+  description_format: markdown
+  summary_short: A mouse body gives a small-animal whole-organism scale anchor.
+  description_medium: A mouse body gives a small-animal whole-organism scale anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A mouse body
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: body cell count estimate
+      method: derived
+      original_value_text: '12000000000'
+      source_basis: Approximate cell count of a small mammal.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Mouse
+      source_value_text: ~1.2e10 cells
+  source: https://en.wikipedia.org/wiki/Mouse
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mouse
+    url: https://en.wikipedia.org/wiki/Mouse
+    title: Mouse
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: adult mouse
+- id: obs:cell-count:entity-cell-count-the-human-brain
+  name: The human brain
+  value: 86000000000.0
+  description: The brain sits near the tens-of-billions band.
+  description_format: markdown
+  summary_short: The brain sits near the tens-of-billions band.
+  description_medium: The brain sits near the tens-of-billions band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: The human brain
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: brain cell count estimate
+      method: derived
+      original_value_text: '86000000000'
+      source_basis: Human brain neuron count plus supporting glia is on the order of tens of billions.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Human_brain
+      source_value_text: ~8.6e10 cells
+  source: https://en.wikipedia.org/wiki/Human_brain
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-brain
+    url: https://en.wikipedia.org/wiki/Human_brain
+    title: Human brain
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: adult human brain
+- id: obs:cell-count:scenario-cell-count-human-brain-neurons
+  name: Human brain neurons
+  value: 86000000000.0
+  description: The human brain is a familiar large-cell-count reference.
+  description_format: markdown
+  summary_short: The human brain is a familiar large-cell-count reference.
+  description_medium: The human brain is a familiar large-cell-count reference.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human brain neurons
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: brain neuron count estimate
+      method: derived
+      original_value_text: '86000000000'
+      source_basis: Order-of-magnitude neuron count used as a cell-count anchor.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Human_brain
+      source_value_text: ~86 billion neurons
+  source: https://en.wikipedia.org/wiki/Human_brain
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-brain
+    url: https://en.wikipedia.org/wiki/Human_brain
+    title: Human brain
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measure: neurons
+- id: obs:cell-count:entity-cell-count-a-mature-oak-tree
+  name: A mature oak tree
+  value: 1000000000000.0
+  description: A mature tree moves the scale into trillion-cell territory.
+  description_format: markdown
+  summary_short: A mature tree moves the scale into trillion-cell territory.
+  description_medium: A mature tree moves the scale into trillion-cell territory.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A mature oak tree
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: tree cell count estimate
+      method: derived
+      original_value_text: '1000000000000'
+      source_basis: Large trees contain trillions of cells across wood, leaves, and roots.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Oak
+      source_value_text: ~1e12 cells
+  source: https://en.wikipedia.org/wiki/Oak
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oak
+    url: https://en.wikipedia.org/wiki/Oak
+    title: Oak
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: mature tree
+- id: obs:cell-count:scenario-cell-count-human-red-blood-cells
+  name: Human red blood cells
+  value: 25000000000000.0
+  description: Red blood cells are one of the largest single-cell populations in a body.
+  description_format: markdown
+  summary_short: Red blood cells are one of the largest single-cell populations in a body.
+  description_medium: Red blood cells are one of the largest single-cell populations in a body.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human red blood cells
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: blood cell count estimate
+      method: derived
+      original_value_text: '25000000000000'
+      source_basis: Typical adult circulating red blood cell count.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Red_blood_cell
+      source_value_text: ~2.5e13 cells
+  source: https://en.wikipedia.org/wiki/Red_blood_cell
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-red-blood-cell
+    url: https://en.wikipedia.org/wiki/Red_blood_cell
+    title: Red blood cell
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: adult human
+- id: obs:cell-count:entity-cell-count-a-human-body
+  name: A human body
+  value: 37000000000000.0
+  description: The adult human body is a useful whole-organism reference for cell counts.
+  description_format: markdown
+  summary_short: The adult human body is a useful whole-organism reference for cell counts.
+  description_medium: The adult human body is a useful whole-organism reference for cell counts.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A human body
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: adult human cell count estimate
+      method: derived
+      original_value_text: '37000000000000'
+      source_basis: Roughly 37 trillion cells in an adult human body.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Human_body
+      source_value_text: 37 trillion cells
+  source: https://en.wikipedia.org/wiki/Human_body
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body
+    url: https://en.wikipedia.org/wiki/Human_body
+    title: Human body
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:cell-count:scenario-cell-count-the-human-gut-microbiome
+  name: The human gut microbiome
+  value: 38000000000000.0
+  description: The microbiome is comparable in size to the human body itself.
+  description_format: markdown
+  summary_short: The microbiome is comparable in size to the human body itself.
+  description_medium: The microbiome is comparable in size to the human body itself.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: The human gut microbiome
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: microbial cell count estimate
+      method: derived
+      original_value_text: '38000000000000'
+      source_basis: Gut microbial cells are on the order of tens of trillions.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Human_gut_microbiota
+      source_value_text: ~3.8e13 cells
+  source: https://en.wikipedia.org/wiki/Human_gut_microbiota
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-gut-microbiota
+    url: https://en.wikipedia.org/wiki/Human_gut_microbiota
+    title: Human gut microbiota
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: adult human gut microbiome
+- id: obs:cell-count:entity-cell-count-a-blue-whale-body
+  name: A blue whale body
+  value: 100000000000000.0
+  description: A blue whale pushes the cell-count scale toward the top of animal life.
+  description_format: markdown
+  summary_short: A blue whale pushes the cell-count scale toward the top of animal life.
+  description_medium: A blue whale pushes the cell-count scale toward the top of animal life.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A blue whale body
+    ingest_source: dataset/raw/curated/cell-count.json
+    source_trace:
+      derivation_note: body cell count estimate
+      method: derived
+      original_value_text: '100000000000000'
+      source_basis: A very large mammal has an enormous cell count.
+      source_unit: cells
+      source_url: https://en.wikipedia.org/wiki/Blue_whale
+      source_value_text: ~1e14 cells
+  source: https://en.wikipedia.org/wiki/Blue_whale
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blue-whale
+    url: https://en.wikipedia.org/wiki/Blue_whale
+    title: Blue whale
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-cell-count-json
+    url: repo://dataset/raw/curated/cell-count.json
+    title: dataset/raw/curated/cell-count.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: adult blue whale

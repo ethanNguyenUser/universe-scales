@@ -1,0 +1,1352 @@
+{
+  "area": {
+    "base_unit": "square_meters",
+    "dimension_description": "Area here means a characteristic area under explicit qualifiers, often a surface area, cross-section, footprint, or geographic extent. Mixing those notions blindly would be misleading, so each entry states what kind of area is being used. The point is coverage across scales, not a claim that all areas answer the same question.",
+    "name": "Area",
+    "quantity_kind": "area",
+    "related_resources": [
+      {
+        "name": "Wikidata area property",
+        "url": "https://www.wikidata.org/wiki/Property:P2046"
+      },
+      {
+        "name": "Area",
+        "url": "https://en.wikipedia.org/wiki/Area"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Square meters are the canonical storage unit for all area observations.",
+        "name": "square meters",
+        "symbol": "m^2"
+      },
+      {
+        "conversion_factor": 10000.0,
+        "description": "Square centimeters are useful for small surfaces and cross-sections.",
+        "name": "square centimeters",
+        "symbol": "cm^2"
+      },
+      {
+        "conversion_factor": 1e-06,
+        "description": "Square kilometers are useful for geography and astronomy.",
+        "name": "square kilometers",
+        "symbol": "km^2"
+      },
+      {
+        "conversion_factor": 0.0001,
+        "description": "Hectares are common for land area and agriculture.",
+        "name": "hectares",
+        "symbol": "ha"
+      },
+      {
+        "conversion_factor": 0.000247105,
+        "description": "Acres are widely used in land records and real estate.",
+        "name": "acres",
+        "symbol": "ac"
+      }
+    ]
+  },
+  "density": {
+    "base_unit": "kilograms_per_cubic_meter",
+    "dimension_description": "Density is mass per unit volume under stated composition, temperature, and pressure assumptions. Most entries below are bulk average densities rather than microscopic local densities, and extreme astrophysical entries are explicitly marked when they refer to stellar cores or degenerate matter.",
+    "name": "Density",
+    "quantity_kind": "density",
+    "related_resources": [
+      {
+        "name": "Wikidata density property",
+        "url": "https://www.wikidata.org/wiki/Property:P2054"
+      },
+      {
+        "name": "Density",
+        "url": "https://en.wikipedia.org/wiki/Density"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Kilograms per cubic meter are the canonical storage unit for density.",
+        "name": "kilograms per cubic meter",
+        "symbol": "kg/m^3"
+      },
+      {
+        "conversion_factor": 0.001,
+        "description": "Grams per cubic centimeter are common in chemistry and materials science.",
+        "name": "grams per cubic centimeter",
+        "symbol": "g/cm^3"
+      }
+    ]
+  },
+  "frequency": {
+    "base_unit": "hertz",
+    "dimension_description": "Frequency measures how often something repeats per second, from once-per-cosmic-era cycles to electromagnetic radiation oscillating millions of trillions of times each second. Some entries here are direct oscillation frequencies, while others are derived from a reported period using frequency = 1 / period. That makes this dimension especially useful for connecting rotations, rhythms, waves, resonance, and light on a single logarithmic axis.",
+    "name": "Frequency",
+    "quantity_kind": "frequency",
+    "related_resources": [
+      {
+        "name": "Frequency",
+        "url": "https://en.wikipedia.org/wiki/Frequency"
+      },
+      {
+        "name": "Angular frequency and oscillation",
+        "url": "https://en.wikipedia.org/wiki/Angular_frequency"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Hertz are cycles per second and the canonical storage unit for frequency.",
+        "name": "hertz",
+        "symbol": "Hz"
+      },
+      {
+        "conversion_factor": 1000000.0,
+        "description": "Microhertz are useful for very slow astronomical or geological cycles.",
+        "name": "microhertz",
+        "symbol": "uHz"
+      }
+    ]
+  },
+  "temperature": {
+    "base_unit": "kelvin",
+    "dimension_description": "Temperature measures how hot or cold a system is, but on a deeper level it tracks the distribution of energy among microscopic degrees of freedom. This makes it one of the rare scales that links kitchen experience, planetary climate, stellar interiors, and particle collisions. Many values are quoted directly in kelvin, while others are converted from Celsius or Fahrenheit values reported in the source.",
+    "name": "Temperature",
+    "quantity_kind": "temperature",
+    "related_resources": [
+      {
+        "name": "Temperature",
+        "url": "https://en.wikipedia.org/wiki/Temperature"
+      },
+      {
+        "name": "Kelvin",
+        "url": "https://en.wikipedia.org/wiki/Kelvin"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Kelvin is the canonical storage unit for thermodynamic temperature.",
+        "name": "kelvin",
+        "symbol": "K"
+      }
+    ]
+  },
+  "viscosity": {
+    "base_unit": "pascal_seconds",
+    "dimension_description": "Dynamic viscosity measures how strongly a fluid resists being sheared or made to flow. Some entries are ordinary room-temperature liquids, others are effective viscosities for materials like glacier ice or the mantle that only flow over long timescales. Because viscosity changes strongly with temperature and composition, qualifiers matter here more than they do for many other scales.",
+    "name": "Viscosity",
+    "quantity_kind": "viscosity",
+    "related_resources": [
+      {
+        "name": "Viscosity",
+        "url": "https://en.wikipedia.org/wiki/Viscosity"
+      },
+      {
+        "name": "Dynamic viscosity",
+        "url": "https://en.wikipedia.org/wiki/Viscosity#Dynamic_viscosity"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Pascal-seconds are the canonical storage unit for dynamic viscosity.",
+        "name": "pascal-seconds",
+        "symbol": "Pa*s"
+      }
+    ]
+  },
+  "charge": {
+    "base_unit": "coulombs",
+    "dimension_description": "Electric charge measures how much net positive or negative charge a system carries. This version now leans toward perspective-giving examples like static shocks, lightning, thunderclouds, batteries, and the Faraday constant rather than long ladders of arbitrary capacitors. The goal is to connect microscopic charge, biology, atmospheric electricity, and stored electrical systems on one axis.",
+    "name": "Charge",
+    "quantity_kind": "charge",
+    "related_resources": [
+      {
+        "name": "Electric charge",
+        "url": "https://en.wikipedia.org/wiki/Electric_charge"
+      },
+      {
+        "name": "Coulomb",
+        "url": "https://en.wikipedia.org/wiki/Coulomb"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Coulombs are the canonical storage unit for electric charge.",
+        "name": "coulombs",
+        "symbol": "C"
+      }
+    ]
+  },
+  "current": {
+    "base_unit": "amperes",
+    "dimension_description": "Electric current measures how quickly charge moves through a circuit, membrane, plasma, or conductor. The examples now deliberately include biology, implants, consumer electronics, household power, heavy industry, and lightning so the scale is easier to orient yourself on. Some values are direct ratings, while others are stated as representative operating currents for a concrete scenario.",
+    "name": "Current",
+    "quantity_kind": "current",
+    "related_resources": [
+      {
+        "name": "Electric current",
+        "url": "https://en.wikipedia.org/wiki/Electric_current"
+      },
+      {
+        "name": "Ampere",
+        "url": "https://en.wikipedia.org/wiki/Ampere"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Amperes are the canonical storage unit for electric current.",
+        "name": "amperes",
+        "symbol": "A"
+      }
+    ]
+  },
+  "magnetic-field": {
+    "base_unit": "tesla",
+    "dimension_description": "Magnetic-field strength is expressed here as magnetic flux density in tesla. Some entries are ambient fields, some are surface fields of magnets or stars, and others are instrument fields from MRI scanners or laboratory magnets. The result is a scale that connects biology, everyday magnets, planets, plasma devices, and compact stars.",
+    "name": "Magnetic Field",
+    "quantity_kind": "magnetic_field",
+    "related_resources": [
+      {
+        "name": "Magnetic field",
+        "url": "https://en.wikipedia.org/wiki/Magnetic_field"
+      },
+      {
+        "name": "Tesla (unit)",
+        "url": "https://en.wikipedia.org/wiki/Tesla_(unit)"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Tesla are the canonical storage unit for magnetic-field strength.",
+        "name": "tesla",
+        "symbol": "T"
+      }
+    ]
+  },
+  "information-rate": {
+    "base_unit": "bits_per_second",
+    "dimension_description": "Information rate measures how quickly symbols, bits, or higher-level messages move through a channel. Some entries here are literal interface or codec rates quoted directly by a standard, while others are derived from a source-side rate such as bytes per second or DNA bases per second. That lets one logarithmic axis connect teletypes, genomes, display links, Ethernet, and modern memory buses.",
+    "name": "Information Rate",
+    "quantity_kind": "information_rate",
+    "related_resources": [
+      {
+        "name": "Bit rate",
+        "url": "https://en.wikipedia.org/wiki/Bit_rate"
+      },
+      {
+        "name": "Data-rate units",
+        "url": "https://en.wikipedia.org/wiki/Data-rate_units"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Bits per second are the canonical storage unit for information-rate observations.",
+        "name": "bits per second",
+        "symbol": "bit/s"
+      }
+    ]
+  },
+  "information": {
+    "base_unit": "bytes",
+    "dimension_description": "Information here means a storage or message size expressed as bytes, whether the source talks about a literal file capacity, a memory size, or a derived information estimate. Some entries are direct capacities like discs and tapes, while others are derived from genome lengths, audio sample rates, or raw video formats. That makes this scale useful for comparing messages, media, genomes, and storage technologies on one logarithmic axis.",
+    "name": "Information",
+    "quantity_kind": "information",
+    "related_resources": [
+      {
+        "name": "Information",
+        "url": "https://en.wikipedia.org/wiki/Information"
+      },
+      {
+        "name": "Byte",
+        "url": "https://en.wikipedia.org/wiki/Byte"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Bytes are the canonical storage unit for information observations.",
+        "name": "bytes",
+        "symbol": "B"
+      }
+    ]
+  },
+  "counts": {
+    "base_unit": "count",
+    "dimension_description": "Counts are dimensionless tallies of discrete things or discrete possibilities: planets, genes, cells, books, stars, IPv6 addresses, or legal game states. Mixing literal inventories with combinatorial possibility spaces would be misleading if that distinction were hidden, so each entry says what is being counted. This scale is useful for comparing everyday finite sets with astronomical and computationally explosive counts on one logarithmic axis.",
+    "name": "Counts",
+    "quantity_kind": "count",
+    "related_resources": [
+      {
+        "name": "Counting",
+        "url": "https://en.wikipedia.org/wiki/Counting"
+      },
+      {
+        "name": "Order of magnitude (numbers)",
+        "url": "https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers)"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "A count is the canonical storage unit for dimensionless tallies of discrete items or states.",
+        "name": "count",
+        "symbol": "count"
+      }
+    ]
+  },
+  "mass": {
+    "base_unit": "kilograms",
+    "dimension_description": "Mass tracks inertia and the amount of matter under a stated definition, from subatomic particles to galaxies. Some entries are direct measurements, while others are derived estimates such as the mass of a lake from its volume and density. Every item names the object and the measurement basis so the scale remains comparable.",
+    "name": "Mass",
+    "quantity_kind": "mass",
+    "related_resources": [
+      {
+        "name": "Wikidata mass property",
+        "url": "https://www.wikidata.org/wiki/Property:P2067"
+      },
+      {
+        "name": "Mass",
+        "url": "https://en.wikipedia.org/wiki/Mass"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "The kilogram is the SI base unit of mass. All canonical mass values in this dataset are stored in kilograms before conversion.",
+        "name": "kilograms",
+        "symbol": "kg"
+      },
+      {
+        "conversion_factor": 1000.0,
+        "description": "Grams are convenient for laboratory and everyday masses.",
+        "name": "grams",
+        "symbol": "g"
+      },
+      {
+        "conversion_factor": 1000000.0,
+        "description": "Milligrams make very small biological and chemical masses readable.",
+        "name": "milligrams",
+        "symbol": "mg"
+      },
+      {
+        "conversion_factor": 0.001,
+        "description": "Metric tons are useful for vehicles, buildings, and cargo.",
+        "name": "metric tons",
+        "symbol": "t"
+      },
+      {
+        "conversion_factor": 1.6744248350691536e-25,
+        "description": "Earth masses are convenient for planetary comparisons.",
+        "name": "earth masses",
+        "symbol": "M_earth"
+      },
+      {
+        "conversion_factor": 5.027652086475616e-31,
+        "description": "Solar masses are convenient for stars, galaxies, and cosmology.",
+        "name": "solar masses",
+        "symbol": "M_sun"
+      }
+    ]
+  },
+  "volume": {
+    "base_unit": "cubic_meters",
+    "dimension_description": "Volume tracks three-dimensional extent under explicit geometric assumptions. Many values here are derived from a stated radius, diameter, or envelope shape rather than directly measured container capacity. Each item therefore includes a short qualifier describing whether it is a literal volume, an effective occupied volume, or an approximate geometric envelope.",
+    "name": "Volume",
+    "quantity_kind": "volume",
+    "related_resources": [
+      {
+        "name": "Wikidata volume property",
+        "url": "https://www.wikidata.org/wiki/Property:P2234"
+      },
+      {
+        "name": "Volume",
+        "url": "https://en.wikipedia.org/wiki/Volume"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "conversion_factor": 1.0,
+        "description": "Cubic meters are the canonical storage unit for volume.",
+        "name": "cubic meters",
+        "symbol": "m^3"
+      },
+      {
+        "conversion_factor": 1000.0,
+        "description": "Liters are convenient for household and laboratory volumes.",
+        "name": "liters",
+        "symbol": "L"
+      },
+      {
+        "conversion_factor": 1000000.0,
+        "description": "Milliliters are useful for droplets, teaspoons, and lab samples.",
+        "name": "milliliters",
+        "symbol": "mL"
+      },
+      {
+        "conversion_factor": 1e-09,
+        "description": "Cubic kilometers are convenient for lakes, planets, and nebulae.",
+        "name": "cubic kilometers",
+        "symbol": "km^3"
+      }
+    ]
+  },
+  "torque": {
+    "base_unit": "newton_meters",
+    "dimension_description": "Torque measures rotational push: how strongly a force tries to twist something around an axis. This scale mixes microscopic rotary motors, hand tools, engines, and utility-scale machinery. Many values are representative operating torques rather than immutable constants, so the qualifiers and source notes matter.",
+    "name": "Torque",
+    "quantity_kind": "torque",
+    "related_resources": [
+      {
+        "name": "Torque",
+        "url": "https://en.wikipedia.org/wiki/Torque"
+      },
+      {
+        "name": "Newton-metre",
+        "url": "https://en.wikipedia.org/wiki/Newton-metre"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "newton-meters",
+        "symbol": "N*m",
+        "conversion_factor": 1.0,
+        "description": "Newton-meters are the canonical storage unit for torque."
+      }
+    ]
+  },
+  "angle": {
+    "base_unit": "radians",
+    "dimension_description": "Angle measures rotational separation or apparent offset. This scale can represent anything from astronomical micro-offsets to human-scale fields of view and full turns. Because angles can be used both for geometry and for apparent size, the description of each item matters.",
+    "name": "Angle",
+    "quantity_kind": "angle",
+    "related_resources": [
+      {
+        "name": "Angle",
+        "url": "https://en.wikipedia.org/wiki/Angle"
+      },
+      {
+        "name": "Radian",
+        "url": "https://en.wikipedia.org/wiki/Radian"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "radians",
+        "symbol": "rad",
+        "conversion_factor": 1.0,
+        "description": "Radians are the canonical storage unit for angle."
+      }
+    ]
+  },
+  "angular-velocity": {
+    "base_unit": "radians_per_second",
+    "dimension_description": "Angular velocity measures how fast something rotates. This scale connects orbital motion, clocks, household appliances, turbines, and compact stars. Many entries are converted from revolutions per minute or periods, so the derivations are intentionally exposed.",
+    "name": "Angular Velocity",
+    "quantity_kind": "angular_velocity",
+    "related_resources": [
+      {
+        "name": "Angular velocity",
+        "url": "https://en.wikipedia.org/wiki/Angular_velocity"
+      },
+      {
+        "name": "Radians per second",
+        "url": "https://en.wikipedia.org/wiki/Radian_per_second"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "radians per second",
+        "symbol": "rad/s",
+        "conversion_factor": 1.0,
+        "description": "Radians per second are the canonical storage unit for angular velocity."
+      }
+    ]
+  },
+  "flow-rate": {
+    "base_unit": "cubic_meters_per_second",
+    "dimension_description": "Flow rate measures how much volume passes a boundary per unit time. This scale is useful for comparing microfluidics, medical drips, household plumbing, industrial systems, and the largest geophysical currents and rivers. Flow depends strongly on context, so representative operating conditions are part of the meaning.",
+    "name": "Flow Rate",
+    "quantity_kind": "flow_rate",
+    "related_resources": [
+      {
+        "name": "Volumetric flow rate",
+        "url": "https://en.wikipedia.org/wiki/Volumetric_flow_rate"
+      },
+      {
+        "name": "Flow measurement",
+        "url": "https://en.wikipedia.org/wiki/Flow_measurement"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "cubic meters per second",
+        "symbol": "m^3/s",
+        "conversion_factor": 1.0,
+        "description": "Cubic meters per second are the canonical storage unit for volumetric flow rate."
+      }
+    ]
+  },
+  "concentration": {
+    "base_unit": "moles_per_cubic_meter",
+    "dimension_description": "This phase-one concentration scale uses molar concentration, stored canonically in moles per cubic meter. It connects trace atmospheric or biochemical concentrations with laboratory solutions and nearly pure substances. Concentration is highly definition-sensitive, so each item states what is dissolved or counted.",
+    "name": "Concentration",
+    "quantity_kind": "concentration",
+    "related_resources": [
+      {
+        "name": "Amount concentration",
+        "url": "https://en.wikipedia.org/wiki/Amount_concentration"
+      },
+      {
+        "name": "Molar concentration",
+        "url": "https://en.wikipedia.org/wiki/Molar_concentration"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "moles per cubic meter",
+        "symbol": "mol/m^3",
+        "conversion_factor": 1.0,
+        "description": "Moles per cubic meter are the canonical storage unit for this concentration scale."
+      }
+    ]
+  },
+  "sound-intensity": {
+    "base_unit": "watts_per_square_meter",
+    "dimension_description": "This scale stores acoustic intensity in watts per square meter, but by default it can be read in decibels because that is how people usually reason about loudness. Most source-side figures are reported in dB SPL and then converted into physical intensity for canonical storage, so the item names emphasize context such as distance from the source. That keeps whispers, appliances, traffic, thunder, jets, and launch pads on one comparable axis while still allowing direct intensity units when needed.",
+    "name": "Loudness",
+    "quantity_kind": "sound_intensity",
+    "related_resources": [
+      {
+        "name": "Sound intensity",
+        "url": "https://en.wikipedia.org/wiki/Sound_intensity"
+      },
+      {
+        "name": "Sound intensity level",
+        "url": "https://en.wikipedia.org/wiki/Sound_intensity#Sound_intensity_level"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "watts per square meter",
+        "symbol": "W/m^2",
+        "conversion_factor": 1.0,
+        "description": "Watts per square meter are the canonical storage unit for sound intensity."
+      },
+      {
+        "name": "decibels",
+        "symbol": "dB",
+        "conversion_factor": 1.0,
+        "description": "Decibel sound level referenced to the standard threshold of hearing. This is the most intuitive default way to read loudness, even though the canonical stored quantity is physical intensity."
+      }
+    ]
+  },
+  "flops": {
+    "base_unit": "flops",
+    "dimension_description": "This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, AI accelerators, and supercomputers. It now includes AI-flavored reference points such as approximate LLM inference workloads and training-scale estimates alongside direct hardware specs. Precision mode still matters in real hardware, so the notes are representative rather than exhaustive.",
+    "name": "FLOPs",
+    "quantity_kind": "flops",
+    "related_resources": [
+      {
+        "name": "FLOPS",
+        "url": "https://en.wikipedia.org/wiki/FLOPS"
+      },
+      {
+        "name": "Supercomputer performance",
+        "url": "https://en.wikipedia.org/wiki/Supercomputer#Performance"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "floating-point operations per second",
+        "symbol": "FLOP/s",
+        "conversion_factor": 1.0,
+        "description": "Floating-point operations per second are the canonical storage unit for this throughput scale."
+      }
+    ]
+  },
+  "scoville": {
+    "base_unit": "scoville_heat_units",
+    "dimension_description": "Scoville heat units are a familiar rough scale for pungency from capsaicinoids. They are not a fundamental physical unit, but they are pedagogically useful for comparing mild peppers, hot sauces, pepper sprays, and nearly pure capsaicin. Reported values often come as ranges, so the entries here use representative central values.",
+    "name": "Scoville Heat",
+    "quantity_kind": "scoville",
+    "related_resources": [
+      {
+        "name": "Scoville scale",
+        "url": "https://en.wikipedia.org/wiki/Scoville_scale"
+      },
+      {
+        "name": "Capsaicin",
+        "url": "https://en.wikipedia.org/wiki/Capsaicin"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "Scoville heat units",
+        "symbol": "SHU",
+        "conversion_factor": 1.0,
+        "description": "Scoville heat units are the canonical storage unit for this pungency scale."
+      }
+    ]
+  },
+  "sound-frequency": {
+    "base_unit": "hertz",
+    "dimension_description": "This hearing-focused frequency scale emphasizes sound-producing or sound-perceiving systems rather than arbitrary oscillations. It connects musical pitch, voice, animal calls, ultrasound, and familiar engineering standards. Because many sources quote ranges, several items use representative center frequencies.",
+    "name": "Sound Frequency",
+    "quantity_kind": "sound_frequency",
+    "related_resources": [
+      {
+        "name": "Audio frequency",
+        "url": "https://en.wikipedia.org/wiki/Audio_frequency"
+      },
+      {
+        "name": "Pitch (music)",
+        "url": "https://en.wikipedia.org/wiki/Pitch_(music)"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "hertz",
+        "symbol": "Hz",
+        "conversion_factor": 1.0,
+        "description": "Hertz are the canonical storage unit for sound frequency."
+      }
+    ]
+  },
+  "visual-angle": {
+    "base_unit": "radians",
+    "dimension_description": "Visual angle measures how large something looks from a given viewpoint. It is one of the most direct ways to compare the apparent size of the Moon, a smartphone pixel, a doorway, or your whole field of view. These are geometry-driven values, so distance assumptions are part of the meaning.",
+    "name": "Visual Angle",
+    "quantity_kind": "visual_angle",
+    "related_resources": [
+      {
+        "name": "Visual angle",
+        "url": "https://en.wikipedia.org/wiki/Visual_angle"
+      },
+      {
+        "name": "Angular diameter",
+        "url": "https://en.wikipedia.org/wiki/Angular_diameter"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "radians",
+        "symbol": "rad",
+        "conversion_factor": 1.0,
+        "description": "Radians are the canonical storage unit for visual angle."
+      }
+    ]
+  },
+  "historical-time": {
+    "base_unit": "years",
+    "dimension_description": "Historical time is stored here as years before the present, so that human memory, recorded history, deep prehistory, and cosmological time can live on one logarithmic axis. It overlaps with duration, but the emphasis is different: these entries are about how far back events sit from now, not how long a process lasted.",
+    "name": "Historical Time",
+    "quantity_kind": "historical_time",
+    "related_resources": [
+      {
+        "name": "Chronology",
+        "url": "https://en.wikipedia.org/wiki/Chronology"
+      },
+      {
+        "name": "Age of the universe",
+        "url": "https://en.wikipedia.org/wiki/Age_of_the_universe"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "years",
+        "symbol": "yr",
+        "conversion_factor": 1.0,
+        "description": "Years are the canonical storage unit for historical time in this dataset."
+      }
+    ]
+  },
+  "event-rate": {
+    "base_unit": "counts_per_second",
+    "dimension_description": "This scale measures how often discrete events happen, canonically in counts per second. It is intentionally broad: biological rhythms, industrial lines, social platforms, digital packets, and physical decays can all be compared once they are expressed as event rates. Each entry states what is being counted so unlike things are not silently conflated.",
+    "name": "Counts per Unit Time",
+    "quantity_kind": "event_rate",
+    "related_resources": [
+      {
+        "name": "Rate",
+        "url": "https://en.wikipedia.org/wiki/Rate_(mathematics)"
+      },
+      {
+        "name": "Frequency",
+        "url": "https://en.wikipedia.org/wiki/Frequency"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "counts per second",
+        "symbol": "1/s",
+        "conversion_factor": 1.0,
+        "description": "Counts per second are the canonical storage unit for event-rate observations."
+      }
+    ]
+  },
+  "probability": {
+    "base_unit": "probability",
+    "dimension_description": "Probability measures how likely a specifically defined event is, from certainty down to essentially impossible random guesses. This is a natural logarithmic scale for rare events like jackpot wins, perfect brackets, and cryptographic hits. The event definition matters more here than almost anywhere else, so the labels are intentionally explicit.",
+    "name": "Probability",
+    "quantity_kind": "probability",
+    "related_resources": [
+      {
+        "name": "Probability",
+        "url": "https://en.wikipedia.org/wiki/Probability"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "probability",
+        "symbol": "p",
+        "conversion_factor": 1.0,
+        "description": "Probability as a fraction from 0 to 1."
+      }
+    ]
+  },
+  "precision": {
+    "base_unit": "relative_uncertainty",
+    "dimension_description": "This scale stores precision as relative uncertainty or fractional error. Smaller values mean higher precision, so it is inverted compared with everyday language like “more precise.” That inversion is worth it because relative uncertainty is much more coherent and log-friendly than a vague notion of accuracy.",
+    "name": "Precision & Accuracy",
+    "quantity_kind": "precision",
+    "related_resources": [
+      {
+        "name": "Measurement uncertainty",
+        "url": "https://en.wikipedia.org/wiki/Measurement_uncertainty"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "relative uncertainty",
+        "symbol": "fraction",
+        "conversion_factor": 1.0,
+        "description": "Fractional uncertainty is the canonical storage unit for precision."
+      }
+    ]
+  },
+  "entropy": {
+    "base_unit": "joules_per_kelvin",
+    "dimension_description": "This first-pass entropy scale focuses on entropy change, not total entropy and not raw microstate counts. That makes the dimension much more concrete: each item is a process like erasing a bit, melting ice, or vaporizing water. Temperature and process definitions matter a lot here, so qualifiers are especially important.",
+    "name": "Entropy",
+    "quantity_kind": "entropy",
+    "related_resources": [
+      {
+        "name": "Entropy",
+        "url": "https://en.wikipedia.org/wiki/Entropy"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "joules per kelvin",
+        "symbol": "J/K",
+        "conversion_factor": 1.0,
+        "description": "Joules per kelvin are the canonical storage unit for entropy change."
+      }
+    ]
+  },
+  "attention": {
+    "base_unit": "person_seconds",
+    "dimension_description": "This scale treats attention pragmatically as person-seconds of engaged time. That is more comparable and more additive than raw views, impressions, or clicks, and it lets a glance, a lecture, a concert, and a livestream all live on one axis. Views and audience counts can still appear as qualifiers or source notes.",
+    "name": "Attention",
+    "quantity_kind": "attention",
+    "related_resources": [
+      {
+        "name": "Attention",
+        "url": "https://en.wikipedia.org/wiki/Attention"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "person-seconds",
+        "symbol": "person*s",
+        "conversion_factor": 1.0,
+        "description": "Person-seconds are the canonical storage unit for this attention scale."
+      }
+    ]
+  },
+  "disease-rarity": {
+    "base_unit": "prevalence_fraction",
+    "dimension_description": "This scale stores disease rarity as prevalence fraction, so higher values mean more common conditions and lower values mean rarer ones. It is intentionally simple and does not collapse incidence, prevalence, lifetime risk, and carrier frequency into one number unless that qualifier is stated. The frontend can later re-express these as “1 in N” when helpful.",
+    "name": "Disease Rarity",
+    "quantity_kind": "disease_rarity",
+    "related_resources": [
+      {
+        "name": "Rare disease",
+        "url": "https://en.wikipedia.org/wiki/Rare_disease"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "prevalence fraction",
+        "symbol": "fraction",
+        "conversion_factor": 1.0,
+        "description": "Fraction of a population affected under the stated qualifier."
+      }
+    ]
+  },
+  "qalys": {
+    "base_unit": "qaly",
+    "dimension_description": "Quality-adjusted life years compress length of life and quality of life into one metric. This is a powerful but highly model-dependent quantity, so each item should state whether it is a stock of healthy time, a gain from an intervention, or a loss from disability. It is useful here because it gives a common pedagogical axis for many health choices.",
+    "name": "QALYs",
+    "quantity_kind": "qalys",
+    "related_resources": [
+      {
+        "name": "Quality-adjusted life year",
+        "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "quality-adjusted life years",
+        "symbol": "QALY",
+        "conversion_factor": 1.0,
+        "description": "Quality-adjusted life years are the canonical storage unit for this health-economics scale."
+      }
+    ]
+  },
+  "micromorts": {
+    "base_unit": "micromorts",
+    "dimension_description": "A micromort is a one-in-a-million chance of death. It is especially useful for one-off acute risks like a skydive, a marathon, or a surgical procedure. Long-term chronic risks can be represented here too, but only if the time basis is stated explicitly.",
+    "name": "Micromorts",
+    "quantity_kind": "micromorts",
+    "related_resources": [
+      {
+        "name": "Micromort",
+        "url": "https://en.wikipedia.org/wiki/Micromort"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "micromorts",
+        "symbol": "uMort",
+        "conversion_factor": 1.0,
+        "description": "One micromort equals a one-in-a-million chance of death."
+      }
+    ]
+  },
+  "cell-count": {
+    "base_unit": "count",
+    "dimension_description": "This scale counts biological cells, from a single bacterium up to all bacteria on Earth. It is dimensionless mathematically but still extremely informative conceptually. Qualifiers matter because “cell count” can mean one organism, one tissue sample, or a planetary total.",
+    "name": "Cell Count",
+    "quantity_kind": "cell_count",
+    "related_resources": [
+      {
+        "name": "Cell",
+        "url": "https://en.wikipedia.org/wiki/Cell_(biology)"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "count",
+        "symbol": "count",
+        "conversion_factor": 1.0,
+        "description": "Dimensionless count of cells."
+      }
+    ]
+  },
+  "absorbed-dose": {
+    "base_unit": "gray",
+    "dimension_description": "Absorbed dose measures how much ionizing-radiation energy is deposited per kilogram. It spans dental X-rays, CT scans, cancer therapy, acute radiation syndrome, and industrial sterilization. Body part, fractionation, and exposure type matter enough here that the qualifiers should stay visible.",
+    "name": "Absorbed Dose",
+    "quantity_kind": "absorbed_dose",
+    "related_resources": [
+      {
+        "name": "Absorbed dose",
+        "url": "https://en.wikipedia.org/wiki/Absorbed_dose"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "gray",
+        "symbol": "Gy",
+        "conversion_factor": 1.0,
+        "description": "Gray are the canonical storage unit for absorbed dose."
+      }
+    ]
+  },
+  "population-density": {
+    "base_unit": "people_per_square_kilometer",
+    "dimension_description": "Population density here means people per unit total land area. It is a clean way to compare remote regions, countries, city-states, boroughs, and extreme urban enclaves. Because jurisdiction boundaries matter, the label should always say what region is being measured.",
+    "name": "Population Density",
+    "quantity_kind": "population_density",
+    "related_resources": [
+      {
+        "name": "Population density",
+        "url": "https://en.wikipedia.org/wiki/Population_density"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "people per square kilometer",
+        "symbol": "people/km^2",
+        "conversion_factor": 1.0,
+        "description": "People per square kilometer are the canonical storage unit for population density."
+      }
+    ]
+  },
+  "physiological-density": {
+    "base_unit": "people_per_square_kilometer_arable_land",
+    "dimension_description": "Physiological density is population divided by arable land area rather than total land area. That makes it a rough measure of how heavily a society leans on its food-producing land. It is more conceptually loaded than ordinary population density, so the arable-land qualifier is essential.",
+    "name": "Physiological Density",
+    "quantity_kind": "physiological_density",
+    "related_resources": [
+      {
+        "name": "Physiological density",
+        "url": "https://en.wikipedia.org/wiki/Physiological_density"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "people per square kilometer of arable land",
+        "symbol": "people/km^2 arable",
+        "conversion_factor": 1.0,
+        "description": "People per square kilometer of arable land are the canonical storage unit for physiological density."
+      }
+    ]
+  },
+  "agricultural-density": {
+    "base_unit": "farmers_per_square_kilometer_arable_land",
+    "dimension_description": "Agricultural density is agricultural population divided by arable land area. It is often used to contrast labor-intensive farming with heavily mechanized farming. The numerator is not total population, so that qualifier should stay visible anywhere the value is shown.",
+    "name": "Agricultural Density",
+    "quantity_kind": "agricultural_density",
+    "related_resources": [
+      {
+        "name": "Agricultural density",
+        "url": "https://en.wikipedia.org/wiki/Agricultural_density"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "farmers per square kilometer of arable land",
+        "symbol": "farmers/km^2 arable",
+        "conversion_factor": 1.0,
+        "description": "Farmers per square kilometer of arable land are the canonical storage unit for agricultural density."
+      }
+    ]
+  },
+  "odor-concentration": {
+    "base_unit": "parts_per_billion_by_volume",
+    "dimension_description": "This first-pass odor scale is not “how smelly” in the abstract. It is the airborne concentration of a named odorant, usually in parts per billion by volume, which makes the axis more objective and shareable. Perception still depends on chemistry and thresholds, so the named compound is part of the data, not a side note.",
+    "name": "Odor Concentration",
+    "quantity_kind": "odor_concentration",
+    "related_resources": [
+      {
+        "name": "Odor",
+        "url": "https://en.wikipedia.org/wiki/Odor"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "parts per billion by volume",
+        "symbol": "ppbv",
+        "conversion_factor": 1.0,
+        "description": "Parts per billion by volume are the canonical storage unit for odor concentration."
+      }
+    ]
+  },
+  "moment-of-inertia": {
+    "base_unit": "kilogram_square_meters",
+    "dimension_description": "Moment of inertia measures resistance to angular acceleration. It depends not just on mass but on how far that mass sits from the axis, which is why a bicycle wheel, a door, and the Earth can all appear here meaningfully. Values are always axis-specific, so the item label matters a lot.",
+    "name": "Moment of Inertia",
+    "quantity_kind": "moment_of_inertia",
+    "related_resources": [
+      {
+        "name": "Moment of inertia",
+        "url": "https://en.wikipedia.org/wiki/Moment_of_inertia"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "kilogram square meters",
+        "symbol": "kg*m^2",
+        "conversion_factor": 1.0,
+        "description": "Kilogram square meters are the canonical storage unit for moment of inertia."
+      }
+    ]
+  },
+  "surface-tension": {
+    "base_unit": "newtons_per_meter",
+    "dimension_description": "Surface tension is the energetic cost of creating more liquid surface, usually expressed as force per unit length. It is highly sensitive to temperature and contaminants, so these are representative values rather than immutable constants. This scale is useful for comparing cryogenic fluids, common liquids, and unusual high-tension metals.",
+    "name": "Surface Tension",
+    "quantity_kind": "surface_tension",
+    "related_resources": [
+      {
+        "name": "Surface tension",
+        "url": "https://en.wikipedia.org/wiki/Surface_tension"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "newtons per meter",
+        "symbol": "N/m",
+        "conversion_factor": 1.0,
+        "description": "Newtons per meter are the canonical storage unit for surface tension."
+      }
+    ]
+  },
+  "salinity": {
+    "base_unit": "mass_fraction",
+    "dimension_description": "This salinity scale stores dissolved-salt content as mass fraction. That makes freshwater, blood plasma, seawater, brines, and hypersaline lakes comparable on one axis. The exact chemical makeup varies, so these are representative total-salinity benchmarks rather than precise ionic analyses.",
+    "name": "Salinity",
+    "quantity_kind": "salinity",
+    "related_resources": [
+      {
+        "name": "Salinity",
+        "url": "https://en.wikipedia.org/wiki/Salinity"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "mass fraction",
+        "symbol": "fraction",
+        "conversion_factor": 1.0,
+        "description": "Mass fraction of dissolved salts."
+      }
+    ]
+  },
+  "hardness": {
+    "base_unit": "pascals",
+    "dimension_description": "Hardness here is treated pragmatically as indentation hardness expressed in pascals where possible. This is not a perfect universal property because Mohs, Vickers, Brinell, and other hardness scales emphasize different tests. Still, a pressure-like canonical scale makes the ordering of soft metals, glass, carbides, and diamond easier to compare logarithmically.",
+    "name": "Hardness",
+    "quantity_kind": "hardness",
+    "related_resources": [
+      {
+        "name": "Hardness",
+        "url": "https://en.wikipedia.org/wiki/Hardness"
+      },
+      {
+        "name": "Vickers hardness test",
+        "url": "https://en.wikipedia.org/wiki/Vickers_hardness_test"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "pascals",
+        "symbol": "Pa",
+        "conversion_factor": 1.0,
+        "description": "Pascals as an approximate indentation-hardness scale."
+      }
+    ]
+  },
+  "strain": {
+    "base_unit": "strain",
+    "dimension_description": "Strain is fractional deformation: how much a material stretches, compresses, or shears relative to its original size. It is dimensionless, but it is still highly informative across engineering, geology, and precision physics. This scale connects tiny metrological strains with yield strains and large deformations in soft materials.",
+    "name": "Strain",
+    "quantity_kind": "strain",
+    "related_resources": [
+      {
+        "name": "Strain (mechanics)",
+        "url": "https://en.wikipedia.org/wiki/Strain_(mechanics)"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "strain",
+        "symbol": "strain",
+        "conversion_factor": 1.0,
+        "description": "Dimensionless fractional deformation."
+      }
+    ]
+  },
+  "thermal-conductivity": {
+    "base_unit": "watts_per_meter_kelvin",
+    "dimension_description": "Thermal conductivity measures how readily heat flows through a material under a temperature gradient. It helps connect insulators, building materials, fluids, metals, semiconductors, and diamond on one scale. Values depend on temperature, porosity, and orientation, so they should be read as representative rather than universal.",
+    "name": "Thermal Conductivity",
+    "quantity_kind": "thermal_conductivity",
+    "related_resources": [
+      {
+        "name": "Thermal conductivity",
+        "url": "https://en.wikipedia.org/wiki/Thermal_conductivity"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "watts per meter kelvin",
+        "symbol": "W/(m*K)",
+        "conversion_factor": 1.0,
+        "description": "Watts per meter kelvin are the canonical storage unit for thermal conductivity."
+      }
+    ]
+  },
+  "specific-heat": {
+    "base_unit": "joules_per_kilogram_kelvin",
+    "dimension_description": "Specific heat capacity measures how much energy a kilogram of material needs to change temperature by one kelvin. This scale is good for intuition about why water moderates climate, why metals heat quickly, and why gases and cryogens behave so differently. Values depend on temperature and phase, so representative conditions matter.",
+    "name": "Specific Heat",
+    "quantity_kind": "specific_heat",
+    "related_resources": [
+      {
+        "name": "Specific heat capacity",
+        "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "joules per kilogram kelvin",
+        "symbol": "J/(kg*K)",
+        "conversion_factor": 1.0,
+        "description": "Joules per kilogram kelvin are the canonical storage unit for specific heat."
+      }
+    ]
+  },
+  "roughness": {
+    "base_unit": "meters",
+    "dimension_description": "This roughness scale treats surface roughness as a characteristic amplitude, usually comparable to an Ra-style average roughness. It connects optical polishing, semiconductor surfaces, paper, skin, machined parts, and construction materials. Surface texture is method-dependent, so the labels and notes matter here more than for simpler geometric scales.",
+    "name": "Roughness",
+    "quantity_kind": "roughness",
+    "related_resources": [
+      {
+        "name": "Surface roughness",
+        "url": "https://en.wikipedia.org/wiki/Surface_roughness"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "meters",
+        "symbol": "m",
+        "conversion_factor": 1.0,
+        "description": "Meters are the canonical storage unit for surface roughness amplitude."
+      }
+    ]
+  },
+  "friction-coefficient": {
+    "base_unit": "coefficient",
+    "dimension_description": "The coefficient of friction is dimensionless, but it still forms a useful comparative scale across lubricated bearings, skis on snow, tires on asphalt, and gecko-inspired adhesion. The meaning depends on the material pair and on whether the value is static, kinetic, or rolling, so the item labels keep that context visible.",
+    "name": "Coefficient of Friction",
+    "quantity_kind": "friction_coefficient",
+    "related_resources": [
+      {
+        "name": "Friction",
+        "url": "https://en.wikipedia.org/wiki/Friction"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "coefficient",
+        "symbol": "mu",
+        "conversion_factor": 1.0,
+        "description": "Dimensionless coefficient of friction."
+      }
+    ]
+  },
+  "correlation": {
+    "base_unit": "absolute_pearson_r",
+    "dimension_description": "This phase-one correlation scale stores the magnitude of Pearson correlation as |r|, from almost no linear association up to perfect correlation. The sign and domain context belong in qualifiers, because a strong negative correlation is just as strong as a strong positive one. This is useful pedagogically, but it is also easy to misuse: correlation depends on the variables chosen, sample definition, and whether the underlying relationship is actually linear.",
+    "name": "Correlation Coefficient",
+    "quantity_kind": "correlation",
+    "related_resources": [
+      {
+        "name": "Pearson correlation coefficient",
+        "url": "https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"
+      },
+      {
+        "name": "Effect size",
+        "url": "https://en.wikipedia.org/wiki/Effect_size"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "absolute Pearson correlation",
+        "symbol": "|r|",
+        "conversion_factor": 1.0,
+        "description": "The canonical stored unit is the absolute magnitude of Pearson correlation."
+      }
+    ]
+  },
+  "effect-size": {
+    "base_unit": "cohens_d",
+    "dimension_description": "This phase-one effect-size scale uses the magnitude of Cohen's d, the standardized difference between two means in units of standard deviations. It is more comparable than raw percentage changes, but only when the underlying comparison is well defined. Large values are genuinely dramatic because they imply groups separated by substantial fractions of a standard deviation or more.",
+    "name": "Effect Size",
+    "quantity_kind": "effect_size",
+    "related_resources": [
+      {
+        "name": "Effect size",
+        "url": "https://en.wikipedia.org/wiki/Effect_size"
+      },
+      {
+        "name": "Cohen's d",
+        "url": "https://en.wikipedia.org/wiki/Effect_size#Cohen%27s_d"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "Cohen's d",
+        "symbol": "d",
+        "conversion_factor": 1.0,
+        "description": "Cohen's d expresses a standardized mean difference in standard-deviation units."
+      }
+    ]
+  },
+  "utility": {
+    "base_unit": "qaly_equivalent",
+    "dimension_description": "This phase-one utility scale is intentionally a proxy: it stores welfare or utility in quality-adjusted life-year equivalents. That makes the values easier to compare with health and time scales, but it is not a universal theory of value. Use it as a pedagogical scaffold for “how much good or bad is this outcome roughly like,” not as a final moral ranking.",
+    "name": "Utility",
+    "quantity_kind": "utility_proxy",
+    "related_resources": [
+      {
+        "name": "Quality-adjusted life year",
+        "url": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year"
+      },
+      {
+        "name": "Utilitarianism",
+        "url": "https://en.wikipedia.org/wiki/Utilitarianism"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "QALY-equivalent",
+        "symbol": "QALYe",
+        "conversion_factor": 1.0,
+        "description": "Phase one stores utility in quality-adjusted life-year equivalents."
+      }
+    ]
+  },
+  "intensity": {
+    "base_unit": "watts_per_square_meter",
+    "dimension_description": "This scale stores physical intensity as power per unit area in watts per square meter. It is meant for radiation, beams, and flux-like limits rather than photometric brightness or sound loudness. That makes it the natural home for solar irradiance, laser focus, collapse-threshold estimates, and the Planck-intensity scale.",
+    "name": "Intensity",
+    "quantity_kind": "irradiance",
+    "related_resources": [
+      {
+        "name": "Irradiance",
+        "url": "https://en.wikipedia.org/wiki/Irradiance"
+      },
+      {
+        "name": "Planck units",
+        "url": "https://en.wikipedia.org/wiki/Planck_units"
+      }
+    ],
+    "show_limitations": true,
+    "stable_flag": true,
+    "units": [
+      {
+        "name": "watts per square meter",
+        "symbol": "W/m^2",
+        "conversion_factor": 1.0,
+        "description": "Canonical storage unit for physical intensity or power flux."
+      },
+      {
+        "name": "kilowatts per square meter",
+        "symbol": "kW/m^2",
+        "conversion_factor": 0.001,
+        "description": "Convenient for sunlight and engineering heat-flux scales."
+      },
+      {
+        "name": "megawatts per square meter",
+        "symbol": "MW/m^2",
+        "conversion_factor": 1e-06,
+        "description": "Useful for concentrated heat flux and industrial beams."
+      },
+      {
+        "name": "watts per square centimeter",
+        "symbol": "W/cm^2",
+        "conversion_factor": 0.0001,
+        "description": "Common beam-intensity unit in laser physics."
+      }
+    ]
+  }
+}

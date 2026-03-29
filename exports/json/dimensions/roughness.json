@@ -1,0 +1,1762 @@
+{
+  "base_unit": "meters",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 31,
+    "candidate_shortfall_to_preferred_target": 19,
+    "empty_bin_count": 10,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 31,
+    "selected_primary_count": 14,
+    "selected_secondary_count": 17,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 31
+    },
+    "target_selected_count": 31
+  },
+  "description_format": "markdown",
+  "dimension": "roughness",
+  "dimension_description": "This roughness scale treats surface roughness as a characteristic amplitude, usually comparable to an Ra-style average roughness. It connects optical polishing, semiconductor surfaces, paper, skin, machined parts, and construction materials. Surface texture is method-dependent, so the labels and notes matter here more than for simpler geometric scales.",
+  "frontend_group": "senses",
+  "frontend_group_label": "Senses & Perception",
+  "frontend_order": 750,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Precision optical flats approach the angstrom-to-subnanometer roughness regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Precision optical flats approach the angstrom-to-subnanometer roughness regime.",
+      "facts": {
+        "canonical_name": "Optical flat",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-10",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Optical_flat",
+          "source_value_text": "1e-10 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-optical-flat-roughness",
+      "name": "Optical flat",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Optical_flat",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-optical-flat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Optical flat",
+          "url": "https://en.wikipedia.org/wiki/Optical_flat"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Precision optical flats approach the angstrom-to-subnanometer roughness regime.",
+      "value": 1e-10,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A polished silicon wafer is nearly atomically flat by macroscopic standards.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A polished silicon wafer is nearly atomically flat by macroscopic standards.",
+      "facts": {
+        "canonical_name": "Silicon wafer",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-10",
+          "source_basis": "Representative RMS roughness for polished semiconductor wafers.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Silicon",
+          "source_value_text": "5e-10"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-silicon-wafer",
+      "name": "Silicon wafer",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Silicon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-silicon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Silicon",
+          "url": "https://en.wikipedia.org/wiki/Silicon"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "A polished silicon wafer is nearly atomically flat by macroscopic standards.",
+      "value": 5e-10,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Semiconductor wafers are astonishingly smooth.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Semiconductor wafers are astonishingly smooth.",
+      "facts": {
+        "canonical_name": "Polished silicon wafer",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-09",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Wafer_(electronics)",
+          "source_value_text": "1e-9 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-silicon-wafer-roughness",
+      "name": "Polished silicon wafer",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wafer_(electronics)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wafer-electronics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wafer (electronics)",
+          "url": "https://en.wikipedia.org/wiki/Wafer_(electronics)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Semiconductor wafers are astonishingly smooth.",
+      "value": 1e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A mirror-polished metal surface is still rough on nanometer scales.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A mirror-polished metal surface is still rough on nanometer scales.",
+      "facts": {
+        "canonical_name": "Mirror polish",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-09",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Polishing",
+          "source_value_text": "2e-9 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-mirror-polish-roughness",
+      "name": "Mirror polish",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Polishing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-polishing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Polishing",
+          "url": "https://en.wikipedia.org/wiki/Polishing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "A mirror-polished metal surface is still rough on nanometer scales.",
+      "value": 2e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Optical mirrors sit in the nanometer roughness regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Optical mirrors sit in the nanometer roughness regime.",
+      "facts": {
+        "canonical_name": "Optical mirror",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-09",
+          "source_basis": "Representative optical mirror surface roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Mirror",
+          "source_value_text": "5e-09"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-optical-mirror",
+      "name": "Optical mirror",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Mirror",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mirror",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mirror",
+          "url": "https://en.wikipedia.org/wiki/Mirror"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Optical mirrors sit in the nanometer roughness regime.",
+      "value": 5e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Optical media are smoother than most everyday materials.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Optical media are smoother than most everyday materials.",
+      "facts": {
+        "canonical_name": "Compact disc surface",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-08",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Compact_disc",
+          "source_value_text": "1e-8 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-cd-surface-roughness",
+      "name": "Compact disc surface",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Compact_disc",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-compact-disc",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Compact disc",
+          "url": "https://en.wikipedia.org/wiki/Compact_disc"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Optical media are smoother than most everyday materials.",
+      "value": 1e-08,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Polished glass remains very smooth, but not atomic-flat.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Polished glass remains very smooth, but not atomic-flat.",
+      "facts": {
+        "canonical_name": "Polished glass",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-08",
+          "source_basis": "Representative polished-glass roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Glass",
+          "source_value_text": "1e-08"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-polished-glass",
+      "name": "Polished glass",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Glass",
+          "url": "https://en.wikipedia.org/wiki/Glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Polished glass remains very smooth, but not atomic-flat.",
+      "value": 1e-08,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges.",
+      "facts": {
+        "canonical_name": "Smartphone glass",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-08",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Glass",
+          "source_value_text": "5e-8 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-smartphone-glass-roughness",
+      "name": "Smartphone glass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Glass",
+          "url": "https://en.wikipedia.org/wiki/Glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges.",
+      "value": 5e-08,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Typical machined parts land in the micron roughness regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Typical machined parts land in the micron roughness regime.",
+      "facts": {
+        "canonical_name": "Machined metal finish",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-06",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Machining",
+          "source_value_text": "1e-6 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-machined-metal-roughness",
+      "name": "Machined metal finish",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Machining",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-machining",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Machining",
+          "url": "https://en.wikipedia.org/wiki/Machining"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Typical machined parts land in the micron roughness regime.",
+      "value": 1e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ground steel is a classic micrometer-scale surface finish.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ground steel is a classic micrometer-scale surface finish.",
+      "facts": {
+        "canonical_name": "Ground steel",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-06",
+          "source_basis": "Representative machined steel roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Steel",
+          "source_value_text": "1e-06"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-ground-steel",
+      "name": "Ground steel",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Steel",
+          "url": "https://en.wikipedia.org/wiki/Steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Ground steel is a classic micrometer-scale surface finish.",
+      "value": 1e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Machined aluminum is a standard engineering finish.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Machined aluminum is a standard engineering finish.",
+      "facts": {
+        "canonical_name": "Machined aluminum",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.6e-06",
+          "source_basis": "Representative machined aluminum roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Aluminium",
+          "source_value_text": "1.6e-06"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-machined-aluminum",
+      "name": "Machined aluminum",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Aluminium",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aluminium",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aluminium",
+          "url": "https://en.wikipedia.org/wiki/Aluminium"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Machined aluminum is a standard engineering finish.",
+      "value": 1.6e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frosted surfaces are deliberately roughened to diffuse light.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frosted surfaces are deliberately roughened to diffuse light.",
+      "facts": {
+        "canonical_name": "Frosted glass",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-06",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Frosted_glass",
+          "source_value_text": "2e-6 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-frosted-glass-roughness",
+      "name": "Frosted glass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Frosted_glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-frosted-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Frosted glass",
+          "url": "https://en.wikipedia.org/wiki/Frosted_glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Frosted surfaces are deliberately roughened to diffuse light.",
+      "value": 2e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Paper is rough enough to feel, yet much smoother than sandpaper.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Paper is rough enough to feel, yet much smoother than sandpaper.",
+      "facts": {
+        "canonical_name": "Paper",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-06",
+          "source_basis": "Representative paper-surface roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Paper",
+          "source_value_text": "5e-06"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-paper",
+      "name": "Paper",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Paper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paper",
+          "url": "https://en.wikipedia.org/wiki/Paper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Paper is rough enough to feel, yet much smoother than sandpaper.",
+      "value": 5e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Paper texture is obvious at the tens-of-microns scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Paper texture is obvious at the tens-of-microns scale.",
+      "facts": {
+        "canonical_name": "Printer paper",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-05",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Paper",
+          "source_value_text": "1e-5 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-printer-paper-roughness",
+      "name": "Printer paper",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Paper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paper",
+          "url": "https://en.wikipedia.org/wiki/Paper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Paper texture is obvious at the tens-of-microns scale.",
+      "value": 1e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fine abrasives are still much rougher than precision surfaces.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fine abrasives are still much rougher than precision surfaces.",
+      "facts": {
+        "canonical_name": "Fine sandpaper",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-05",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Sandpaper",
+          "source_value_text": "2e-5 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-fine-sandpaper-roughness",
+      "name": "Fine sandpaper",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sandpaper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sandpaper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sandpaper",
+          "url": "https://en.wikipedia.org/wiki/Sandpaper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Fine abrasives are still much rougher than precision surfaces.",
+      "value": 2e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Skin texture spans tens of micrometers or more.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Skin texture spans tens of micrometers or more.",
+      "facts": {
+        "canonical_name": "Human skin",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-05",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Skin",
+          "source_value_text": "2e-5 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-skin-roughness",
+      "name": "Human skin",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Skin",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-skin",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Skin",
+          "url": "https://en.wikipedia.org/wiki/Skin"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Skin texture spans tens of micrometers or more.",
+      "value": 2e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Interior walls still have visible texture in oblique light.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Interior walls still have visible texture in oblique light.",
+      "facts": {
+        "canonical_name": "Unpainted drywall",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Drywall",
+          "source_value_text": "5e-5 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-drywall-roughness",
+      "name": "Unpainted drywall",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Drywall",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drywall",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drywall",
+          "url": "https://en.wikipedia.org/wiki/Drywall"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Interior walls still have visible texture in oblique light.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Finished wood is smooth to the hand but not microscopically smooth.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Finished wood is smooth to the hand but not microscopically smooth.",
+      "facts": {
+        "canonical_name": "Planed wood",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Wood",
+          "source_value_text": "5e-5 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-planed-wood-roughness",
+      "name": "Planed wood",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wood",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wood",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wood",
+          "url": "https://en.wikipedia.org/wiki/Wood"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Finished wood is smooth to the hand but not microscopically smooth.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Skin is a biologically textured surface with visible roughness at the tens-of-microns scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Skin is a biologically textured surface with visible roughness at the tens-of-microns scale.",
+      "facts": {
+        "canonical_name": "Human skin",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative skin-surface roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Human_skin",
+          "source_value_text": "5e-05"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-human-skin",
+      "name": "Human skin",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Human_skin",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-human-skin",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Human skin",
+          "url": "https://en.wikipedia.org/wiki/Human_skin"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Skin is a biologically textured surface with visible roughness at the tens-of-microns scale.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A fabric-texture benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A fabric-texture benchmark.",
+      "facts": {
+        "canonical_name": "Felt fabric",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Felt",
+          "source_value_text": "1e-4 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-felt-roughness",
+      "name": "Felt fabric",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Felt",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-felt",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Felt",
+          "url": "https://en.wikipedia.org/wiki/Felt"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "A fabric-texture benchmark.",
+      "value": 0.0001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A familiar food texture benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A familiar food texture benchmark.",
+      "facts": {
+        "canonical_name": "Orange peel texture",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Orange_(fruit)",
+          "source_value_text": "1e-4 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-orange-peel-roughness",
+      "name": "Orange peel texture",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Orange_(fruit)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-orange-fruit",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Orange (fruit)",
+          "url": "https://en.wikipedia.org/wiki/Orange_(fruit)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "A familiar food texture benchmark.",
+      "value": 0.0001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Layer lines in 3D printing often leave a roughness around the hundred-micron scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Layer lines in 3D printing often leave a roughness around the hundred-micron scale.",
+      "facts": {
+        "canonical_name": "3D-printed plastic",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative fused-filament 3D-print surface roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/3D_printing",
+          "source_value_text": "0.0001"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-3d-printed-plastic",
+      "name": "3D-printed plastic",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/3D_printing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-3d-printing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "3D printing",
+          "url": "https://en.wikipedia.org/wiki/3D_printing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Layer lines in 3D printing often leave a roughness around the hundred-micron scale.",
+      "value": 0.0001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sanded wood is rough enough to be clearly tactile.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sanded wood is rough enough to be clearly tactile.",
+      "facts": {
+        "canonical_name": "Sanded wood",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative sanded wood roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Wood",
+          "source_value_text": "0.0001"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-sanded-wood",
+      "name": "Sanded wood",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Wood",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wood",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wood",
+          "url": "https://en.wikipedia.org/wiki/Wood"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Sanded wood is rough enough to be clearly tactile.",
+      "value": 0.0001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Even seasoned cookware is much rougher than polished glass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Even seasoned cookware is much rougher than polished glass.",
+      "facts": {
+        "canonical_name": "Cast iron skillet surface",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0002",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Cast-iron_cookware",
+          "source_value_text": "2e-4 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-cast-iron-pan-roughness",
+      "name": "Cast iron skillet surface",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cast-iron_cookware",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cast-iron-cookware",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cast-iron cookware",
+          "url": "https://en.wikipedia.org/wiki/Cast-iron_cookware"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Even seasoned cookware is much rougher than polished glass.",
+      "value": 0.0002,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Pumice is coarse enough to feel strongly abrasive.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Pumice is coarse enough to feel strongly abrasive.",
+      "facts": {
+        "canonical_name": "Pumice stone",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0005",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Pumice",
+          "source_value_text": "5e-4 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-pumice-roughness",
+      "name": "Pumice stone",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Pumice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pumice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Pumice",
+          "url": "https://en.wikipedia.org/wiki/Pumice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Pumice is coarse enough to feel strongly abrasive.",
+      "value": 0.0005,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Concrete has clearly perceptible millimeter-scale texture.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Concrete has clearly perceptible millimeter-scale texture.",
+      "facts": {
+        "canonical_name": "Concrete sidewalk",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.001",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Concrete",
+          "source_value_text": "1e-3 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-concrete-roughness",
+      "name": "Concrete sidewalk",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Concrete",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-concrete",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Concrete",
+          "url": "https://en.wikipedia.org/wiki/Concrete"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Concrete has clearly perceptible millimeter-scale texture.",
+      "value": 0.001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Road asphalt is a coarse macroscopic surface.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Road asphalt is a coarse macroscopic surface.",
+      "facts": {
+        "canonical_name": "Road asphalt",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.001",
+          "source_basis": "Representative asphalt macrotexture roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Asphalt_concrete",
+          "source_value_text": "0.001"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-road-asphalt",
+      "name": "Road asphalt",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Asphalt_concrete",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-asphalt-concrete",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Asphalt concrete",
+          "url": "https://en.wikipedia.org/wiki/Asphalt_concrete"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Road asphalt is a coarse macroscopic surface.",
+      "value": 0.001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Bark surface texture is coarse on the millimeter scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Bark surface texture is coarse on the millimeter scale.",
+      "facts": {
+        "canonical_name": "Tree bark",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.002",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Bark_(botany)",
+          "source_value_text": "2e-3 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-tree-bark-roughness",
+      "name": "Tree bark",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bark_(botany)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bark-botany",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bark (botany)",
+          "url": "https://en.wikipedia.org/wiki/Bark_(botany)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Bark surface texture is coarse on the millimeter scale.",
+      "value": 0.002,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Road surfaces are rough on the millimeter scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Road surfaces are rough on the millimeter scale.",
+      "facts": {
+        "canonical_name": "Asphalt road",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.005",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Asphalt_concrete",
+          "source_value_text": "5e-3 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-asphalt-roughness",
+      "name": "Asphalt road",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Asphalt_concrete",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-asphalt-concrete",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Asphalt concrete",
+          "url": "https://en.wikipedia.org/wiki/Asphalt_concrete"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Road surfaces are rough on the millimeter scale.",
+      "value": 0.005,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Loose gravel reaches centimeter-scale roughness.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Loose gravel reaches centimeter-scale roughness.",
+      "facts": {
+        "canonical_name": "Gravel surface",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.01",
+          "source_basis": "Representative roughness.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Gravel",
+          "source_value_text": "1e-2 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:entity-gravel-roughness",
+      "name": "Gravel surface",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Gravel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gravel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gravel",
+          "url": "https://en.wikipedia.org/wiki/Gravel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Loose gravel reaches centimeter-scale roughness.",
+      "value": 0.01,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cobblestones are highly rough by everyday-surface standards.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cobblestones are highly rough by everyday-surface standards.",
+      "facts": {
+        "canonical_name": "Cobblestone",
+        "ingest_source": "dataset/raw/curated/roughness.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.01",
+          "source_basis": "Representative cobblestone surface amplitude.",
+          "source_unit": "m",
+          "source_url": "https://en.wikipedia.org/wiki/Cobblestone",
+          "source_value_text": "0.01"
+        }
+      },
+      "hook": null,
+      "id": "obs:roughness:scenario-roughness-cobblestone",
+      "name": "Cobblestone",
+      "qualifiers": {
+        "measurement": "surface roughness"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cobblestone",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cobblestone",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cobblestone",
+          "url": "https://en.wikipedia.org/wiki/Cobblestone"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-roughness-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/roughness.json",
+          "url": "repo://dataset/raw/curated/roughness.json"
+        }
+      ],
+      "summary_short": "Cobblestones are highly rough by everyday-surface standards.",
+      "value": 0.01,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Surface roughness",
+      "url": "https://en.wikipedia.org/wiki/Surface_roughness"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Meters are the canonical storage unit for surface roughness amplitude.",
+      "name": "meters",
+      "symbol": "m"
+    },
+    {
+      "conversion_factor": 1000000000.0,
+      "description": "Useful for optics and semiconductors.",
+      "name": "nanometers",
+      "symbol": "nm"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Useful for machining and paper.",
+      "name": "micrometers",
+      "symbol": "um"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Useful for concrete and coarse materials.",
+      "name": "millimeters",
+      "symbol": "mm"
+    }
+  ]
+}

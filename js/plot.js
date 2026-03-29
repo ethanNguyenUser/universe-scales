@@ -22,6 +22,7 @@ class PlotRenderer {
         this.lastTickLogRange = null; // Store log range for zoom level tracking
         this.actualItemExtent = null; // Store actual item extent (for zoom limits)
         this.originalItemsHeight = null; // Store original itemsHeight to preserve vertical layout when zoomed
+        this.xScaleMode = 'log';
     }
     
     initPlot() {
@@ -58,8 +59,7 @@ class PlotRenderer {
             .attr('clip-path', `url(#${this.itemsClipId})`);
         
         // Create scales
-        this.xScale = d3.scaleLog()
-            .range([0, this.width]);
+        this.ensureXScaleMode('log');
         
         this.yScale = d3.scaleLinear()
             .range([this.height, 0]);
@@ -76,6 +76,10 @@ class PlotRenderer {
             .attr('transform', `translate(0,0)`)
             .attr('clip-path', `url(#${this.axisClipId})`)
             .style('pointer-events', 'none'); // Don't block zoom events
+        
+        // Create background rectangle for top axis (to cover items when axis moves down)
+        // Will be created/positioned in drawItems to ensure it's above items but below axis
+        this.xAxisTopBackground = null; // Will be created when needed
         
         // Add grid lines (no clip path needed - they're within plot area)
         this.gridGroup = this.mainGroup.append('g')
@@ -146,7 +150,96 @@ class PlotRenderer {
         this.app.width = this.width;
         this.app.height = this.height;
     }
+
+    getScaleMode() {
+        return this.app.dimensionData?.scale_mode === 'linear' ? 'linear' : 'log';
+    }
+
+    isLinearScale() {
+        return this.getScaleMode() === 'linear';
+    }
+
+    ensureXScaleMode(mode = this.getScaleMode()) {
+        if (this.xScale && this.xScaleMode === mode) {
+            this.xScale.range([0, this.width]);
+            this.app.xScale = this.xScale;
+            return;
+        }
+
+        this.xScaleMode = mode;
+        this.xScale = mode === 'linear'
+            ? d3.scaleLinear().range([0, this.width])
+            : d3.scaleLog().range([0, this.width]);
+
+        this.app.xScale = this.xScale;
+        this.lastTickSet = null;
+        this.lastTickDomain = null;
+        this.lastTickLogRange = null;
+    }
+
+    domainChangedSignificantly(currentDomain, nextDomain) {
+        if (!currentDomain || !nextDomain) return true;
+        const delta = Math.max(
+            Math.abs(currentDomain[0] - nextDomain[0]),
+            Math.abs(currentDomain[1] - nextDomain[1])
+        );
+        const scale = Math.max(
+            Math.abs(nextDomain[0]),
+            Math.abs(nextDomain[1]),
+            Math.abs(nextDomain[1] - nextDomain[0]),
+            1
+        );
+        return (delta / scale) > CONFIG.DOMAIN_CHANGE_THRESHOLD;
+    }
+
+    isDomainZoomed(currentDomain, originalDomain) {
+        if (!currentDomain || !originalDomain) return false;
+        const delta = Math.max(
+            Math.abs(currentDomain[0] - originalDomain[0]),
+            Math.abs(currentDomain[1] - originalDomain[1])
+        );
+        const scale = Math.max(
+            Math.abs(originalDomain[0]),
+            Math.abs(originalDomain[1]),
+            Math.abs(originalDomain[1] - originalDomain[0]),
+            1
+        );
+        return (delta / scale) > CONFIG.ZOOM_DETECTION_THRESHOLD;
+    }
+
+    extendDomain(extent) {
+        const [minValue, maxValue] = extent;
+        if (this.isLinearScale()) {
+            const range = maxValue - minValue;
+            const basis = range > 0 ? range : Math.max(Math.abs(minValue), Math.abs(maxValue), 1);
+            const padding = basis * CONFIG.LINEAR_EXTENT_PADDING_RATIO;
+            return [minValue - padding, maxValue + padding];
+        }
+
+        return [minValue * CONFIG.EXTENT_LOWER_MULTIPLIER, maxValue * CONFIG.EXTENT_UPPER_MULTIPLIER];
+    }
     
+    generateAxisTicks() {
+        if (this.isLinearScale()) {
+            return this.generateLinearTicks();
+        }
+        return this.generatePowerOfTenTicks();
+    }
+
+    generateLinearTicks() {
+        const [min, max] = this.xScale.domain();
+        const minLabelSpacing = window.matchMedia(`(max-width: ${CONFIG.MOBILE_BREAKPOINT}px)`).matches
+            ? CONFIG.LABEL_SPACING_MOBILE
+            : CONFIG.LABEL_SPACING_DESKTOP;
+        const maxByWidth = Math.max(CONFIG.TICK_MIN_COUNT, Math.floor(this.width / minLabelSpacing));
+        const targetCount = Math.max(CONFIG.TICK_MIN_COUNT, Math.min(CONFIG.AXIS_TICKS, maxByWidth));
+        const ticks = this.xScale.ticks(targetCount).filter(Number.isFinite);
+        if (ticks.length > 0) {
+            return ticks;
+        }
+        return [min, max].filter(Number.isFinite);
+    }
+
     generatePowerOfTenTicks() {
         // Get the current domain
         const [min, max] = this.xScale.domain();
@@ -294,7 +387,7 @@ class PlotRenderer {
         this.gridGroup.selectAll('.grid-line').remove();
         
         // Vertical grid lines - use the same tick values as axes for consistency
-        const tickValues = this.generatePowerOfTenTicks();
+        const tickValues = this.generateAxisTicks();
         const yDomain = this.yScale.domain();
         const yTop = this.yScale(yDomain[1]);
         const yBottom = this.yScale(0);
@@ -591,6 +684,7 @@ class PlotRenderer {
         
         // Get all items
         const allItems = this.app.getAllItems();
+        this.ensureXScaleMode();
         
         // Update scales
         const values = allItems.map(item => item.convertedValue);
@@ -600,14 +694,13 @@ class PlotRenderer {
         this.actualItemExtent = [...extent];
         this.app.actualItemExtent = this.actualItemExtent;
         
-        // Extend the lower bound to provide more space for text labels
-        const extendedExtent = [extent[0] * CONFIG.EXTENT_LOWER_MULTIPLIER, extent[1] * CONFIG.EXTENT_UPPER_MULTIPLIER];
+        const extendedExtent = this.extendDomain(extent);
         
         // Store original domain for zoom reset
         // Reset original domain when dimension/unit changes (check if domain changed significantly)
         const currentDomain = this.xScale.domain();
         if (!this.originalXDomain || 
-            Math.abs(currentDomain[1] - extendedExtent[1]) / extendedExtent[1] > CONFIG.DOMAIN_CHANGE_THRESHOLD) {
+            this.domainChangedSignificantly(currentDomain, extendedExtent)) {
             // Domain changed significantly, reset zoom
             this.originalXDomain = [...extendedExtent];
             this.xScale.domain(extendedExtent);
@@ -617,8 +710,7 @@ class PlotRenderer {
             }
         } else {
             // Check if currently zoomed
-            const isZoomed = Math.abs(currentDomain[0] - this.originalXDomain[0]) / this.originalXDomain[0] > CONFIG.ZOOM_DETECTION_THRESHOLD ||
-                           Math.abs(currentDomain[1] - this.originalXDomain[1]) / this.originalXDomain[1] > CONFIG.ZOOM_DETECTION_THRESHOLD;
+            const isZoomed = this.isDomainZoomed(currentDomain, this.originalXDomain);
             
             if (!isZoomed) {
                 // Not zoomed, use original domain
@@ -687,12 +779,12 @@ class PlotRenderer {
         this.xAxisTop.attr('transform', `translate(0,${this.yScale(itemsHeight)})`);
         
         // Generate ticks that are only powers of 10 (1eX format) for even spacing
-        const tickValues = this.generatePowerOfTenTicks();
+        const tickValues = this.generateAxisTicks();
 
         this.xAxis.call(
             d3.axisBottom(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         // Extend axis domain lines to full container width
         const svgWidth = +this.svg.attr('width') || 0;
@@ -702,20 +794,20 @@ class PlotRenderer {
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxis);
         }
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         this.xAxisTop.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxisTop);
         }
         
@@ -724,6 +816,32 @@ class PlotRenderer {
         
         // Draw items only (no bands for now)
         this.drawItems(positionedItems);
+        
+        // Create/update background rectangle for top axis after items are drawn
+        // Append it after items so it's above items, then move axis after it so axis is on top
+        if (!this.xAxisTopBackground) {
+            this.xAxisTopBackground = this.mainGroup.append('rect')
+                .attr('class', 'axis-top-background')
+                .attr('x', -this.margin.left)
+                .attr('y', 0)
+                .attr('width', 0)
+                .attr('height', 0)
+                .style('pointer-events', 'none')
+                .style('opacity', 0);
+        }
+        
+        // Move top axis to be after background (so it renders on top)
+        // This ensures rendering order: items < background < axis
+        const topAxisNode = this.xAxisTop.node();
+        const backgroundNode = this.xAxisTopBackground.node();
+        if (topAxisNode.parentNode && backgroundNode.nextSibling !== topAxisNode) {
+            topAxisNode.parentNode.insertBefore(topAxisNode, backgroundNode.nextSibling);
+        }
+        
+        // Update sticky top axis after plot update
+        if (this.app.updateStickyAxis) {
+            this.app.updateStickyAxis();
+        }
     }
     
     updatePlotAfterZoom() {
@@ -732,7 +850,7 @@ class PlotRenderer {
         this.updateItemsClip();
         
         // Generate ticks that are only powers of 10 (1eX format) for even spacing
-        const tickValues = this.generatePowerOfTenTicks();
+        const tickValues = this.generateAxisTicks();
         
         // Get SVG dimensions for axis lines (SVG matches container)
         const svgWidth = +this.svg.attr('width') || 0;
@@ -742,26 +860,26 @@ class PlotRenderer {
         this.xAxis.call(
             d3.axisBottom(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         this.xAxis.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxis);
         }
         
         this.xAxisTop.call(
             d3.axisTop(this.xScale)
                 .tickValues(tickValues)
-                .tickFormat(d => this.app.formatNumber(d, 0))
+                .tickFormat(d => this.app.formatAxisValue(d, 0))
         );
         this.xAxisTop.select('.domain')
             .attr('d', `M${axisLeft},0H${axisRight}`);
         
         // Post-process mathematical notation labels to use proper SVG superscripts
-        if (this.app.notationMode === 'mathematical') {
+        if (this.app.notationMode === 'mathematical' && !this.app.usesLinearDisplayValues()) {
             this.app.processMathematicalLabels(this.xAxisTop);
         }
         
@@ -798,6 +916,11 @@ class PlotRenderer {
         // We just need to ensure it uses the correct offset
         this.mainGroup.selectAll('.item-label')
             .attr('x', CONFIG.LABEL_OFFSET_X);
+        
+        // Update sticky top axis after zoom update
+        if (this.app.updateStickyAxis) {
+            this.app.updateStickyAxis();
+        }
     }
     
     updatePlotColors() {
@@ -824,4 +947,3 @@ class PlotRenderer {
             .attr('stroke', lineColor);
     }
 }
-

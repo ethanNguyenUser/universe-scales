@@ -71,6 +71,7 @@ const CONFIG = {
     // Domain extent
     EXTENT_LOWER_MULTIPLIER: 0.1, // Extend lower bound for text label space
     EXTENT_UPPER_MULTIPLIER: 1e1, // Extend upper bound for domain
+    LINEAR_EXTENT_PADDING_RATIO: 0.08, // Padding for linear-scale domains
     
     // Tick generation thresholds
     TICK_ZOOM_LEVEL_CHANGE_THRESHOLD: 0.15, // 15% change in range (lower for more responsive tick updates)

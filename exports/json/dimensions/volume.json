@@ -1,0 +1,2782 @@
+{
+  "base_unit": "cubic_meters",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 52,
+    "candidate_shortfall_to_preferred_target": 0,
+    "empty_bin_count": 4,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 50,
+    "selected_primary_count": 20,
+    "selected_secondary_count": 30,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 50
+    },
+    "target_selected_count": 50
+  },
+  "description_format": "markdown",
+  "dimension": "volume",
+  "dimension_description": "Volume tracks three-dimensional extent under explicit geometric assumptions. Many values here are derived from a stated radius, diameter, or envelope shape rather than directly measured container capacity. Each item therefore includes a short qualifier describing whether it is a literal volume, an effective occupied volume, or an approximate geometric envelope.",
+  "frontend_group": "geometry",
+  "frontend_group_label": "Geometry & Scale",
+  "frontend_order": 220,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Geometric volume implied by the proton charge radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Geometric volume implied by the proton charge radius.",
+      "facts": {
+        "canonical_name": "Proton volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "2.5e-45",
+          "source_url": "https://en.wikipedia.org/wiki/Proton"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-proton",
+      "name": "Proton volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Proton",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-proton",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Proton",
+          "url": "https://en.wikipedia.org/wiki/Proton"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Geometric volume implied by the proton charge radius.",
+      "value": 2.5e-45,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Geometric volume implied by the Bohr radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Geometric volume implied by the Bohr radius.",
+      "facts": {
+        "canonical_name": "Hydrogen atom volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "6.2e-31",
+          "source_url": "https://en.wikipedia.org/wiki/Hydrogen_atom"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-hydrogen-atom",
+      "name": "Hydrogen atom volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hydrogen_atom",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hydrogen-atom",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hydrogen atom",
+          "url": "https://en.wikipedia.org/wiki/Hydrogen_atom"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Geometric volume implied by the Bohr radius.",
+      "value": 6.2e-31,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Characteristic occupied volume of one water molecule.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Characteristic occupied volume of one water molecule.",
+      "facts": {
+        "canonical_name": "Water molecule volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.1e-29",
+          "source_url": "https://en.wikipedia.org/wiki/Water"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-water",
+      "name": "Water molecule volume",
+      "qualifiers": {
+        "measurement": "single molecule volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Water",
+          "url": "https://en.wikipedia.org/wiki/Water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Characteristic occupied volume of one water molecule.",
+      "value": 1.1e-29,
+      "value_type": "derived",
+      "wikidata_qid": "Q283"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate volume of a spherical coronavirus particle.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate volume of a spherical coronavirus particle.",
+      "facts": {
+        "canonical_name": "SARS-CoV-2 virion volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "4.2e-22",
+          "source_url": "https://en.wikipedia.org/wiki/SARS-CoV-2"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-sars-cov-2",
+      "name": "SARS-CoV-2 virion volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/SARS-CoV-2",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sars-cov-2",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "SARS-CoV-2",
+          "url": "https://en.wikipedia.org/wiki/SARS-CoV-2"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Approximate volume of a spherical coronavirus particle.",
+      "value": 4.2e-22,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Characteristic volume of one E. coli cell.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Characteristic volume of one E. coli cell.",
+      "facts": {
+        "canonical_name": "Escherichia coli cell volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-18",
+          "source_url": "https://en.wikipedia.org/wiki/Escherichia_coli"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-e-coli",
+      "name": "Escherichia coli cell volume",
+      "qualifiers": {
+        "measurement": "single cell volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-escherichia-coli",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Escherichia coli",
+          "url": "https://en.wikipedia.org/wiki/Escherichia_coli"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Characteristic volume of one E.",
+      "value": 1e-18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Typical volume of a human red blood cell.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Typical volume of a human red blood cell.",
+      "facts": {
+        "canonical_name": "Red blood cell volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9e-17",
+          "source_url": "https://en.wikipedia.org/wiki/Red_blood_cell"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-red-blood-cell-volume",
+      "name": "Red blood cell volume",
+      "qualifiers": {
+        "measurement": "cell volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-red-blood-cell",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Red blood cell",
+          "url": "https://en.wikipedia.org/wiki/Red_blood_cell"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Typical volume of a human red blood cell.",
+      "value": 9e-17,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative volume of a typical human cell.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative volume of a typical human cell.",
+      "facts": {
+        "canonical_name": "Human cell volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4e-15",
+          "source_url": "https://en.wikipedia.org/wiki/Cell_(biology)"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-human-cell",
+      "name": "Human cell volume",
+      "qualifiers": {
+        "measurement": "single cell volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cell_(biology)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cell-biology",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cell (biology)",
+          "url": "https://en.wikipedia.org/wiki/Cell_(biology)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative volume of a typical human cell.",
+      "value": 4e-15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of a representative coarse salt grain treated as a sphere.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of a representative coarse salt grain treated as a sphere.",
+      "facts": {
+        "canonical_name": "Grain of salt volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "5.2e-13",
+          "source_url": "https://en.wikipedia.org/wiki/Salt"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-grain-of-salt-volume",
+      "name": "Grain of salt volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Salt",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-salt",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Salt",
+          "url": "https://en.wikipedia.org/wiki/Salt"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of a representative coarse salt grain treated as a sphere.",
+      "value": 5.2e-13,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative volume of a grain of sand.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative volume of a grain of sand.",
+      "facts": {
+        "canonical_name": "Grain of sand volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-12",
+          "source_url": "https://en.wikipedia.org/wiki/Sand"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-grain-of-sand-volume:2",
+      "name": "Grain of sand volume",
+      "qualifiers": {
+        "measurement": "particle volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sand",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sand",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sand",
+          "url": "https://en.wikipedia.org/wiki/Sand"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative volume of a grain of sand.",
+      "value": 1e-12,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of a representative 1 mm sand grain treated as a sphere.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of a representative 1 mm sand grain treated as a sphere.",
+      "facts": {
+        "canonical_name": "Grain of sand volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "5e-10",
+          "source_url": "https://en.wikipedia.org/wiki/Sand"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-grain-of-sand-volume",
+      "name": "Grain of sand volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sand",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sand",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sand",
+          "url": "https://en.wikipedia.org/wiki/Sand"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of a representative 1 mm sand grain treated as a sphere.",
+      "value": 5e-10,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of a 5 mm raindrop treated as a sphere.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of a 5 mm raindrop treated as a sphere.",
+      "facts": {
+        "canonical_name": "Raindrop volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "6.5e-08",
+          "source_url": "https://en.wikipedia.org/wiki/Raindrop"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-raindrop",
+      "name": "Raindrop volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Raindrop",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-raindrop",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Raindrop",
+          "url": "https://en.wikipedia.org/wiki/Raindrop"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of a 5 mm raindrop treated as a sphere.",
+      "value": 6.5e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative volume of a sugar cube.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative volume of a sugar cube.",
+      "facts": {
+        "canonical_name": "Sugar cube volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-06",
+          "source_url": "https://en.wikipedia.org/wiki/Sugar_cube"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-sugar-cube-volume",
+      "name": "Sugar cube volume",
+      "qualifiers": {
+        "measurement": "solid volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sugar_cube",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sugar-cube",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sugar cube",
+          "url": "https://en.wikipedia.org/wiki/Sugar_cube"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative volume of a sugar cube.",
+      "value": 1e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of one teaspoon.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of one teaspoon.",
+      "facts": {
+        "canonical_name": "Teaspoon",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-06",
+          "source_url": "https://en.wikipedia.org/wiki/Teaspoon"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-teaspoon",
+      "name": "Teaspoon",
+      "qualifiers": {
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Teaspoon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-teaspoon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Teaspoon",
+          "url": "https://en.wikipedia.org/wiki/Teaspoon"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of one teaspoon.",
+      "value": 5e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative pour volume of a wine glass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative pour volume of a wine glass.",
+      "facts": {
+        "canonical_name": "Wine glass volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.000175",
+          "source_url": "https://en.wikipedia.org/wiki/Wine_glass"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-wine-glass-volume",
+      "name": "Wine glass volume",
+      "qualifiers": {
+        "measurement": "serving volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Wine_glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wine-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wine glass",
+          "url": "https://en.wikipedia.org/wiki/Wine_glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative pour volume of a wine glass.",
+      "value": 0.000175,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative capacity of a coffee mug.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative capacity of a coffee mug.",
+      "facts": {
+        "canonical_name": "Coffee mug",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.0003",
+          "source_url": "https://en.wikipedia.org/wiki/Mug"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-coffee-mug",
+      "name": "Coffee mug",
+      "qualifiers": {
+        "measurement": "capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Mug",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mug",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mug",
+          "url": "https://en.wikipedia.org/wiki/Mug"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative capacity of a coffee mug.",
+      "value": 0.0003,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Capacity of a standard soda can.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Capacity of a standard soda can.",
+      "facts": {
+        "canonical_name": "Soda can",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.000355",
+          "source_url": "https://en.wikipedia.org/wiki/Drink_can"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-soda-can",
+      "name": "Soda can",
+      "qualifiers": {
+        "measurement": "capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Drink_can",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drink-can",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drink can",
+          "url": "https://en.wikipedia.org/wiki/Drink_can"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Capacity of a standard soda can.",
+      "value": 0.000355,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative internal volume of a standard soda can.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative internal volume of a standard soda can.",
+      "facts": {
+        "canonical_name": "Soda can volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.000355",
+          "source_url": "https://en.wikipedia.org/wiki/Drink_can"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-soda-can-volume",
+      "name": "Soda can volume",
+      "qualifiers": {
+        "measurement": "capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Drink_can",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drink-can",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drink can",
+          "url": "https://en.wikipedia.org/wiki/Drink_can"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative internal volume of a standard soda can.",
+      "value": 0.000355,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Capacity of a typical wine bottle.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Capacity of a typical wine bottle.",
+      "facts": {
+        "canonical_name": "Wine bottle",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.00075",
+          "source_url": "https://en.wikipedia.org/wiki/Wine_bottle"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-wine-bottle",
+      "name": "Wine bottle",
+      "qualifiers": {
+        "measurement": "capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Wine_bottle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wine-bottle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wine bottle",
+          "url": "https://en.wikipedia.org/wiki/Wine_bottle"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Capacity of a typical wine bottle.",
+      "value": 0.00075,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative capacity of a household bucket.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative capacity of a household bucket.",
+      "facts": {
+        "canonical_name": "Bucket",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.01",
+          "source_url": "https://en.wikipedia.org/wiki/Bucket"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-bucket",
+      "name": "Bucket",
+      "qualifiers": {
+        "measurement": "capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bucket",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bucket",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bucket",
+          "url": "https://en.wikipedia.org/wiki/Bucket"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative capacity of a household bucket.",
+      "value": 0.01,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative displaced volume of an adult human body.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative displaced volume of an adult human body.",
+      "facts": {
+        "canonical_name": "Human body volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.07",
+          "source_url": "https://en.wikipedia.org/wiki/Human_body"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-human",
+      "name": "Human body volume",
+      "qualifiers": {
+        "measurement": "body volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Human_body",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-human-body",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Human body",
+          "url": "https://en.wikipedia.org/wiki/Human_body"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative displaced volume of an adult human body.",
+      "value": 0.07,
+      "value_type": "derived",
+      "wikidata_qid": "Q5"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative fill volume of a household bathtub.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative fill volume of a household bathtub.",
+      "facts": {
+        "canonical_name": "Bathtub",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.15",
+          "source_url": "https://en.wikipedia.org/wiki/Bathtub"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-bathtub",
+      "name": "Bathtub",
+      "qualifiers": {
+        "measurement": "capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bathtub",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bathtub",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bathtub",
+          "url": "https://en.wikipedia.org/wiki/Bathtub"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative fill volume of a household bathtub.",
+      "value": 0.15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative water volume of a bathtub.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative water volume of a bathtub.",
+      "facts": {
+        "canonical_name": "Bathtub volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.15",
+          "source_url": "https://en.wikipedia.org/wiki/Bathtub"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-bathtub-volume",
+      "name": "Bathtub volume",
+      "qualifiers": {
+        "measurement": "water capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bathtub",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bathtub",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bathtub",
+          "url": "https://en.wikipedia.org/wiki/Bathtub"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative water volume of a bathtub.",
+      "value": 0.15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate outer envelope volume of a family car.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate outer envelope volume of a family car.",
+      "facts": {
+        "canonical_name": "Family car envelope volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "12.0",
+          "source_url": "https://en.wikipedia.org/wiki/Car"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-family-car-envelope",
+      "name": "Family car envelope volume",
+      "qualifiers": {
+        "measurement": "outer envelope volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Car",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-car",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Car",
+          "url": "https://en.wikipedia.org/wiki/Car"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Approximate outer envelope volume of a family car.",
+      "value": 12.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative interior volume of a single room.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative interior volume of a single room.",
+      "facts": {
+        "canonical_name": "Room volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "30.0",
+          "source_url": "https://en.wikipedia.org/wiki/Room"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-room-volume",
+      "name": "Room volume",
+      "qualifiers": {
+        "measurement": "interior volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Room",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-room",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Room",
+          "url": "https://en.wikipedia.org/wiki/Room"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative interior volume of a single room.",
+      "value": 30.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative internal volume of a standard shipping container.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative internal volume of a standard shipping container.",
+      "facts": {
+        "canonical_name": "Shipping container volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "33.0",
+          "source_url": "https://en.wikipedia.org/wiki/Intermodal_container"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-shipping-container-volume",
+      "name": "Shipping container volume",
+      "qualifiers": {
+        "measurement": "interior capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Intermodal_container",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-intermodal-container",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Intermodal container",
+          "url": "https://en.wikipedia.org/wiki/Intermodal_container"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative internal volume of a standard shipping container.",
+      "value": 33.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative internal volume of a standard shipping container.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative internal volume of a standard shipping container.",
+      "facts": {
+        "canonical_name": "Shipping container",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "33.2",
+          "source_url": "https://en.wikipedia.org/wiki/Intermodal_container"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-shipping-container",
+      "name": "Shipping container",
+      "qualifiers": {
+        "measurement": "internal volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Intermodal_container",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-intermodal-container",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Intermodal container",
+          "url": "https://en.wikipedia.org/wiki/Intermodal_container"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative internal volume of a standard shipping container.",
+      "value": 33.2,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative volume of a small backyard swimming pool.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative volume of a small backyard swimming pool.",
+      "facts": {
+        "canonical_name": "Swimming pool",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "40.0",
+          "source_url": "https://en.wikipedia.org/wiki/Swimming_pool"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-swimming-pool",
+      "name": "Swimming pool",
+      "qualifiers": {
+        "measurement": "water volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Swimming_pool",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-swimming-pool",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Swimming pool",
+          "url": "https://en.wikipedia.org/wiki/Swimming_pool"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative volume of a small backyard swimming pool.",
+      "value": 40.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative volume of a backyard swimming pool.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative volume of a backyard swimming pool.",
+      "facts": {
+        "canonical_name": "Swimming pool volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "40.0",
+          "source_url": "https://en.wikipedia.org/wiki/Swimming_pool"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-swimming-pool-volume",
+      "name": "Swimming pool volume",
+      "qualifiers": {
+        "measurement": "water volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Swimming_pool",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-swimming-pool",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Swimming pool",
+          "url": "https://en.wikipedia.org/wiki/Swimming_pool"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative volume of a backyard swimming pool.",
+      "value": 40.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate outer envelope volume of a city bus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate outer envelope volume of a city bus.",
+      "facts": {
+        "canonical_name": "City bus envelope volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "75.0",
+          "source_url": "https://en.wikipedia.org/wiki/Bus"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-bus-envelope",
+      "name": "City bus envelope volume",
+      "qualifiers": {
+        "measurement": "outer envelope volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bus",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bus",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bus",
+          "url": "https://en.wikipedia.org/wiki/Bus"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Approximate outer envelope volume of a city bus.",
+      "value": 75.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative cargo volume of a freight train car.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative cargo volume of a freight train car.",
+      "facts": {
+        "canonical_name": "Freight train car volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "100.0",
+          "source_url": "https://en.wikipedia.org/wiki/Freight_car"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-freight-train-car-volume",
+      "name": "Freight train car volume",
+      "qualifiers": {
+        "measurement": "cargo hold volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Freight_car",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-freight-car",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Freight car",
+          "url": "https://en.wikipedia.org/wiki/Freight_car"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative cargo volume of a freight train car.",
+      "value": 100.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative interior volume of a modest apartment.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative interior volume of a modest apartment.",
+      "facts": {
+        "canonical_name": "Apartment",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "120.0",
+          "source_url": "https://en.wikipedia.org/wiki/Apartment"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-apartment-volume",
+      "name": "Apartment",
+      "qualifiers": {
+        "measurement": "interior volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Apartment",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-apartment",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Apartment",
+          "url": "https://en.wikipedia.org/wiki/Apartment"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative interior volume of a modest apartment.",
+      "value": 120.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative interior volume of a classroom.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative interior volume of a classroom.",
+      "facts": {
+        "canonical_name": "Classroom volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "150.0",
+          "source_url": "https://en.wikipedia.org/wiki/Classroom"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-classroom-volume",
+      "name": "Classroom volume",
+      "qualifiers": {
+        "measurement": "interior air volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Classroom",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-classroom",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Classroom",
+          "url": "https://en.wikipedia.org/wiki/Classroom"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative interior volume of a classroom.",
+      "value": 150.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative interior volume of a small apartment.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative interior volume of a small apartment.",
+      "facts": {
+        "canonical_name": "Apartment volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "200.0",
+          "source_url": "https://en.wikipedia.org/wiki/Apartment"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-apartment-volume:2",
+      "name": "Apartment volume",
+      "qualifiers": {
+        "measurement": "interior air volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Apartment",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-apartment",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Apartment",
+          "url": "https://en.wikipedia.org/wiki/Apartment"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative interior volume of a small apartment.",
+      "value": 200.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative interior volume of a modest detached house.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative interior volume of a modest detached house.",
+      "facts": {
+        "canonical_name": "House interior volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "400.0",
+          "source_url": "https://en.wikipedia.org/wiki/House"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-house-interior",
+      "name": "House interior volume",
+      "qualifiers": {
+        "measurement": "interior volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/House",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-house",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "House",
+          "url": "https://en.wikipedia.org/wiki/House"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative interior volume of a modest detached house.",
+      "value": 400.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of an Olympic-size swimming pool.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of an Olympic-size swimming pool.",
+      "facts": {
+        "canonical_name": "Olympic swimming pool",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2500.0",
+          "source_url": "https://en.wikipedia.org/wiki/Olympic-size_swimming_pool"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-olympic-swimming-pool",
+      "name": "Olympic swimming pool",
+      "qualifiers": {
+        "measurement": "water volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Olympic-size_swimming_pool",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-olympic-size-swimming-pool",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Olympic-size swimming pool",
+          "url": "https://en.wikipedia.org/wiki/Olympic-size_swimming_pool"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of an Olympic-size swimming pool.",
+      "value": 2500.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative cargo volume of a large oil tanker.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative cargo volume of a large oil tanker.",
+      "facts": {
+        "canonical_name": "Oil tanker cargo volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "100000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Oil_tanker"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-oil-tanker-volume",
+      "name": "Oil tanker cargo volume",
+      "qualifiers": {
+        "measurement": "cargo capacity"
+      },
+      "source": "https://en.wikipedia.org/wiki/Oil_tanker",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-oil-tanker",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Oil tanker",
+          "url": "https://en.wikipedia.org/wiki/Oil_tanker"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Representative cargo volume of a large oil tanker.",
+      "value": 100000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Geometric volume of the Great Pyramid of Giza.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Geometric volume of the Great Pyramid of Giza.",
+      "facts": {
+        "canonical_name": "Great Pyramid of Giza volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2600000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-great-pyramid-of-giza",
+      "name": "Great Pyramid of Giza volume",
+      "qualifiers": {
+        "measurement": "geometric volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-great-pyramid-of-giza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Great Pyramid of Giza",
+          "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Geometric volume of the Great Pyramid of Giza.",
+      "value": 2600000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Water volume of Lake Tahoe.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Water volume of Lake Tahoe.",
+      "facts": {
+        "canonical_name": "Lake Tahoe volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "151000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-lake-tahoe",
+      "name": "Lake Tahoe volume",
+      "qualifiers": {
+        "measurement": "water volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lake_Tahoe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lake-tahoe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lake Tahoe",
+          "url": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Water volume of Lake Tahoe.",
+      "value": 151000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.",
+      "facts": {
+        "canonical_name": "Mount Everest envelope volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10000000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Everest"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-mount-everest",
+      "name": "Mount Everest envelope volume",
+      "qualifiers": {
+        "measurement": "envelope volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Mount_Everest",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mount-everest",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mount Everest",
+          "url": "https://en.wikipedia.org/wiki/Mount_Everest"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.",
+      "value": 10000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Total volume of Earth's oceans.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Total volume of Earth's oceans.",
+      "facts": {
+        "canonical_name": "Earth's oceans",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.332e+18",
+          "source_url": "https://en.wikipedia.org/wiki/Ocean"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-earth-oceans",
+      "name": "Earth's oceans",
+      "qualifiers": {
+        "measurement": "water volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Ocean",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ocean",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ocean",
+          "url": "https://en.wikipedia.org/wiki/Ocean"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Total volume of Earth's oceans.",
+      "value": 1.332e+18,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of the Moon.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of the Moon.",
+      "facts": {
+        "canonical_name": "Moon volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "2.2e+19",
+          "source_url": "https://en.wikipedia.org/wiki/Moon"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-moon",
+      "name": "Moon volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Moon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moon",
+          "url": "https://en.wikipedia.org/wiki/Moon"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of the Moon.",
+      "value": 2.2e+19,
+      "value_type": "derived",
+      "wikidata_qid": "Q405"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of Earth.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of Earth.",
+      "facts": {
+        "canonical_name": "Earth volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.083e+21",
+          "source_url": "https://en.wikipedia.org/wiki/Earth"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-earth",
+      "name": "Earth volume",
+      "qualifiers": {
+        "measurement": "planetary volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Earth",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-earth",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Earth",
+          "url": "https://en.wikipedia.org/wiki/Earth"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of Earth.",
+      "value": 1.083e+21,
+      "value_type": "measured",
+      "wikidata_qid": "Q2"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of the Sun.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of the Sun.",
+      "facts": {
+        "canonical_name": "Sun volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "1.412e+27",
+          "source_url": "https://en.wikipedia.org/wiki/Sun"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-sun",
+      "name": "Sun volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sun",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sun",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sun",
+          "url": "https://en.wikipedia.org/wiki/Sun"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of the Sun.",
+      "value": 1.412e+27,
+      "value_type": "derived",
+      "wikidata_qid": "Q525"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Order-of-magnitude volume of Betelgeuse using a representative stellar radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Order-of-magnitude volume of Betelgeuse using a representative stellar radius.",
+      "facts": {
+        "canonical_name": "Betelgeuse volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "1e+38",
+          "source_url": "https://en.wikipedia.org/wiki/Betelgeuse"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-betelgeuse",
+      "name": "Betelgeuse volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Betelgeuse",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-betelgeuse",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Betelgeuse",
+          "url": "https://en.wikipedia.org/wiki/Betelgeuse"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Order-of-magnitude volume of Betelgeuse using a representative stellar radius.",
+      "value": 1e+38,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume implied by a spherical Oort Cloud with a 50,000 AU radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume implied by a spherical Oort Cloud with a 50,000 AU radius.",
+      "facts": {
+        "canonical_name": "Oort Cloud volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "1.75e+48",
+          "source_url": "https://en.wikipedia.org/wiki/Oort_cloud"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:scenario-oort-cloud",
+      "name": "Oort Cloud volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "spherical volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Oort_cloud",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-oort-cloud",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Oort cloud",
+          "url": "https://en.wikipedia.org/wiki/Oort_cloud"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume implied by a spherical Oort Cloud with a 50,000 AU radius.",
+      "value": 1.75e+48,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Order-of-magnitude volume of the Orion Nebula.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Order-of-magnitude volume of the Orion Nebula.",
+      "facts": {
+        "canonical_name": "Orion Nebula volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5.6e+51",
+          "source_url": "https://en.wikipedia.org/wiki/Orion_Nebula"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-orion-nebula",
+      "name": "Orion Nebula volume",
+      "qualifiers": {
+        "measurement": "nebular volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Orion_Nebula",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-orion-nebula",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Orion Nebula",
+          "url": "https://en.wikipedia.org/wiki/Orion_Nebula"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Order-of-magnitude volume of the Orion Nebula.",
+      "value": 5.6e+51,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Disk volume implied by representative Milky Way radius and thickness.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Disk volume implied by representative Milky Way radius and thickness.",
+      "facts": {
+        "canonical_name": "Milky Way disk volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7.9e+60",
+          "source_url": "https://en.wikipedia.org/wiki/Milky_Way"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-milky-way",
+      "name": "Milky Way disk volume",
+      "qualifiers": {
+        "measurement": "disk volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Milky_Way",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-milky-way",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Milky Way",
+          "url": "https://en.wikipedia.org/wiki/Milky_Way"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Disk volume implied by representative Milky Way radius and thickness.",
+      "value": 7.9e+60,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Characteristic spherical volume of the Local Group.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Characteristic spherical volume of the Local Group.",
+      "facts": {
+        "canonical_name": "Local Group volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "4.1e+68",
+          "source_url": "https://en.wikipedia.org/wiki/Local_Group"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-local-group",
+      "name": "Local Group volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "spherical volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Local_Group",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-local-group",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Local Group",
+          "url": "https://en.wikipedia.org/wiki/Local_Group"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Characteristic spherical volume of the Local Group.",
+      "value": 4.1e+68,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Characteristic spherical volume of the Virgo Supercluster.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Characteristic spherical volume of the Virgo Supercluster.",
+      "facts": {
+        "canonical_name": "Virgo Supercluster volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "4.2e+72",
+          "source_url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-virgo-supercluster",
+      "name": "Virgo Supercluster volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "spherical volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-virgo-supercluster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Virgo Supercluster",
+          "url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Characteristic spherical volume of the Virgo Supercluster.",
+      "value": 4.2e+72,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of the observable universe treated as a sphere.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of the observable universe treated as a sphere.",
+      "facts": {
+        "canonical_name": "Observable universe volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "3.57e+80",
+          "source_url": "https://en.wikipedia.org/wiki/Universe"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-universe",
+      "name": "Observable universe volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "spherical volume"
+      },
+      "source": "https://en.wikipedia.org/wiki/Universe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-universe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Universe",
+          "url": "https://en.wikipedia.org/wiki/Universe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of the observable universe treated as a sphere.",
+      "value": 3.57e+80,
+      "value_type": "derived",
+      "wikidata_qid": "Q1"
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Wikidata volume property",
+      "url": "https://www.wikidata.org/wiki/Property:P2234"
+    },
+    {
+      "name": "Volume",
+      "url": "https://en.wikipedia.org/wiki/Volume"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Cubic meters are the canonical storage unit for volume.",
+      "name": "cubic meters",
+      "symbol": "m^3"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Liters are convenient for household and laboratory volumes.",
+      "name": "liters",
+      "symbol": "L"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Milliliters are useful for droplets, teaspoons, and lab samples.",
+      "name": "milliliters",
+      "symbol": "mL"
+    },
+    {
+      "conversion_factor": 1e-09,
+      "description": "Cubic kilometers are convenient for lakes, planets, and nebulae.",
+      "name": "cubic kilometers",
+      "symbol": "km^3"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Cubic centimeters are common for engines, syringes, and lab volumes.",
+      "name": "cubic centimeters",
+      "symbol": "cm^3"
+    },
+    {
+      "conversion_factor": 61023.7440947323,
+      "description": "Cubic inches are useful for displacement and small mechanical volumes.",
+      "name": "cubic inches",
+      "symbol": "in^3"
+    },
+    {
+      "conversion_factor": 35.3146667215,
+      "description": "Cubic feet are useful for rooms, refrigerators, and gas volumes.",
+      "name": "cubic feet",
+      "symbol": "ft^3"
+    },
+    {
+      "conversion_factor": 264.1720523581,
+      "description": "Gallons are a familiar unit for household and fuel volumes.",
+      "name": "gallons",
+      "symbol": "gal"
+    },
+    {
+      "conversion_factor": 202884.13621106,
+      "description": "Teaspoons are useful for tiny everyday cooking-scale volumes.",
+      "name": "teaspoons",
+      "symbol": "tsp"
+    },
+    {
+      "conversion_factor": 2.369e+104,
+      "description": "Planck volume is the natural volume scale from the Planck length cubed.",
+      "name": "Planck volumes",
+      "symbol": "l_P^3"
+    }
+  ]
+}

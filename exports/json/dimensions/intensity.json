@@ -1,0 +1,855 @@
+{
+  "base_unit": "watts_per_square_meter",
+  "coverage_report": {
+    "bin_count": 12,
+    "candidate_count": 14,
+    "candidate_shortfall_to_preferred_target": 10,
+    "empty_bin_count": 4,
+    "preferred_max_items": 40,
+    "preferred_target_items": 24,
+    "required_min_items": 12,
+    "selected_count": 14,
+    "selected_primary_count": 8,
+    "selected_secondary_count": 6,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 14
+    },
+    "target_selected_count": 14
+  },
+  "description_format": "markdown",
+  "dimension": "intensity",
+  "dimension_description": "This scale stores physical intensity as power per unit area in watts per square meter. It is meant for radiation, beams, and flux-like limits rather than photometric brightness or sound loudness. That makes it the natural home for solar irradiance, laser focus, collapse-threshold estimates, and the Planck-intensity scale.",
+  "frontend_group": "fields",
+  "frontend_group_label": "Fields, Waves & Radiation",
+  "frontend_order": 560,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Full moonlight delivers only about a milliwatt per square meter, which is why night scenes still feel dim even when the Moon seems bright.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Full moonlight delivers only about a milliwatt per square meter, which is why night scenes still feel dim even when the Moon seems bright.",
+      "facts": {
+        "canonical_name": "Full moon at Earth's surface",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.001",
+          "source_basis": "Representative full-moon irradiance at Earth's surface.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Moonlight",
+          "source_value_text": "about 1 mW/m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-full-moon-earth-surface",
+      "name": "Full moon at Earth's surface",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Moonlight",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moonlight",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moonlight",
+          "url": "https://en.wikipedia.org/wiki/Moonlight"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Full moonlight delivers only about a milliwatt per square meter, which is why night scenes still feel dim even when the Moon seems bright.",
+      "value": 0.001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Even out near Pluto, sunlight still carries nearly a watt per square meter.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Even out near Pluto, sunlight still carries nearly a watt per square meter.",
+      "facts": {
+        "canonical_name": "Sunlight at Pluto orbit",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I = 1361 / 39.5^2",
+          "method": "derived",
+          "original_value_text": "0.87",
+          "source_basis": "Derived from the inverse-square falloff of the solar constant.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Solar_constant",
+          "source_value_text": "1361 W/m^2 at 1 AU and Pluto at 39.5 AU"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-sunlight-pluto-orbit",
+      "name": "Sunlight at Pluto orbit",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Solar_constant",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-solar-constant",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Solar constant",
+          "url": "https://en.wikipedia.org/wiki/Solar_constant"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Even out near Pluto, sunlight still carries nearly a watt per square meter.",
+      "value": 0.87,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Direct midday sun on the ground is about a kilowatt per square meter, which is why roofs, skin, and solar panels all feel it immediately.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Direct midday sun on the ground is about a kilowatt per square meter, which is why roofs, skin, and solar panels all feel it immediately.",
+      "facts": {
+        "canonical_name": "Noon sunlight at Earth's surface",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000.0",
+          "source_basis": "Representative clear-sky noon solar irradiance at Earth's surface.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Solar_irradiance",
+          "source_value_text": "about 1000 W/m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-noon-sunlight-earth-surface",
+      "name": "Noon sunlight at Earth's surface",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Solar_irradiance",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-solar-irradiance",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Solar irradiance",
+          "url": "https://en.wikipedia.org/wiki/Solar_irradiance"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Direct midday sun on the ground is about a kilowatt per square meter, which is why roofs, skin, and solar panels all feel it immediately.",
+      "value": 1000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Just outside Earth's atmosphere, the Sun delivers about 1361 watts per square meter on a surface facing it directly.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Just outside Earth's atmosphere, the Sun delivers about 1361 watts per square meter on a surface facing it directly.",
+      "facts": {
+        "canonical_name": "Solar constant at Earth orbit",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1361.0",
+          "source_basis": "Solar constant near 1 AU.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Solar_constant",
+          "source_value_text": "1361 W/m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:entity-solar-constant-earth-orbit",
+      "name": "Solar constant at Earth orbit",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Solar_constant",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-solar-constant",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Solar constant",
+          "url": "https://en.wikipedia.org/wiki/Solar_constant"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Just outside Earth's atmosphere, the Sun delivers about 1361 watts per square meter on a surface facing it directly.",
+      "value": 1361.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At Mercury's orbit the Sun is roughly seven times harsher than at Earth, pushing toward ten kilowatts per square meter.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At Mercury's orbit the Sun is roughly seven times harsher than at Earth, pushing toward ten kilowatts per square meter.",
+      "facts": {
+        "canonical_name": "Sunlight at Mercury orbit",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I = 1361 / 0.387098^2",
+          "method": "derived",
+          "original_value_text": "9083.8",
+          "source_basis": "Derived from the inverse-square scaling of the solar constant.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Solar_constant",
+          "source_value_text": "1361 W/m^2 at 1 AU and Mercury at 0.387098 AU"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-sunlight-mercury-orbit",
+      "name": "Sunlight at Mercury orbit",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Solar_constant",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-solar-constant",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Solar constant",
+          "url": "https://en.wikipedia.org/wiki/Solar_constant"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "At Mercury's orbit the Sun is roughly seven times harsher than at Earth, pushing toward ten kilowatts per square meter.",
+      "value": 9083.8,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A modest continuous laser becomes surprisingly fierce when its power is packed into a millimeter-scale spot.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A modest continuous laser becomes surprisingly fierce when its power is packed into a millimeter-scale spot.",
+      "facts": {
+        "canonical_name": "5 W laser focused to a 1 mm spot",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I = P / A = 5 / (\\pi (0.5 \\times 10^{-3})^2)",
+          "method": "derived",
+          "original_value_text": "6366197.7",
+          "source_basis": "Representative focused-beam intensity.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Laser",
+          "source_value_text": "5 W over a circular spot with diameter 1 mm"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-5w-laser-1mm-spot",
+      "name": "5 W laser focused to a 1 mm spot",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Laser",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-laser",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Laser",
+          "url": "https://en.wikipedia.org/wiki/Laser"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "A modest continuous laser becomes surprisingly fierce when its power is packed into a millimeter-scale spot.",
+      "value": 6366197.7,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At the Sun's visible surface, every square meter radiates tens of megawatts outward.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At the Sun's visible surface, every square meter radiates tens of megawatts outward.",
+      "facts": {
+        "canonical_name": "Solar photosphere surface flux",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "F = \\sigma T^4",
+          "method": "derived",
+          "original_value_text": "63300000.0",
+          "source_basis": "Derived from the Stefan-Boltzmann law for the Sun's effective surface temperature.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Sun",
+          "source_value_text": "effective temperature 5772 K"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:entity-solar-photosphere-surface-flux",
+      "name": "Solar photosphere surface flux",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sun",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sun",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sun",
+          "url": "https://en.wikipedia.org/wiki/Sun"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "At the Sun's visible surface, every square meter radiates tens of megawatts outward.",
+      "value": 63300000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Petawatt-class lasers become extreme because the pulse power is squeezed into a microscopic focal spot.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Petawatt-class lasers become extreme because the pulse power is squeezed into a microscopic focal spot.",
+      "facts": {
+        "canonical_name": "1 PW laser focused to a 1 um spot",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I = P / A = 10^{15} / (\\pi (0.5 \\times 10^{-6})^2)",
+          "method": "derived",
+          "original_value_text": "1.2732395447351627e+27",
+          "source_basis": "Representative petawatt-laser focal intensity.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/High-intensity_laser",
+          "source_value_text": "1 PW over a circular spot with diameter 1 um"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-1pw-laser-1um-spot",
+      "name": "1 PW laser focused to a 1 um spot",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/High-intensity_laser",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-high-intensity-laser",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "High-intensity laser",
+          "url": "https://en.wikipedia.org/wiki/High-intensity_laser"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Petawatt-class lasers become extreme because the pulse power is squeezed into a microscopic focal spot.",
+      "value": 1.2732395447351627e+27,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This is the QED vacuum-breakdown intensity scale where empty space itself is expected to become unstable to pair production.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is the QED vacuum-breakdown intensity scale where empty space itself is expected to become unstable to pair production.",
+      "facts": {
+        "canonical_name": "Schwinger critical intensity",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I = \\tfrac{1}{2} c \\varepsilon_0 E^2",
+          "method": "derived",
+          "original_value_text": "2.3125295958274636e+33",
+          "source_basis": "Derived from the Schwinger critical field.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Schwinger_limit",
+          "source_value_text": "critical electric field 1.32e18 V/m"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:entity-schwinger-critical-intensity",
+      "name": "Schwinger critical intensity",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Schwinger_limit",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-schwinger-limit",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Schwinger limit",
+          "url": "https://en.wikipedia.org/wiki/Schwinger_limit"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "This is the QED vacuum-breakdown intensity scale where empty space itself is expected to become unstable to pair production.",
+      "value": 2.3125295958274636e+33,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "If you tried to confine power into a kilometer-scale beam beyond this order of magnitude, gravity itself would become part of the engineering problem.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "If you tried to confine power into a kilometer-scale beam beyond this order of magnitude, gravity itself would become part of the engineering problem.",
+      "facts": {
+        "canonical_name": "Collapse-threshold focused beam at 1 km radius",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I_{\\max}(R) \\sim c^5 / (G R^2)",
+          "method": "derived",
+          "original_value_text": "3.6282549044112805e+46",
+          "source_basis": "Order-of-magnitude gravitational-collapse threshold for a focused beam.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Schwarzschild_radius",
+          "source_value_text": "R = 1000 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-collapse-threshold-1km",
+      "name": "Collapse-threshold focused beam at 1 km radius",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Schwarzschild_radius",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-schwarzschild-radius",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Schwarzschild radius",
+          "url": "https://en.wikipedia.org/wiki/Schwarzschild_radius"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "If you tried to confine power into a kilometer-scale beam beyond this order of magnitude, gravity itself would become part of the engineering problem.",
+      "value": 3.6282549044112805e+46,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Focused into a one-meter patch, this is the order-of-magnitude intensity where a beam would flirt with gravitational collapse.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Focused into a one-meter patch, this is the order-of-magnitude intensity where a beam would flirt with gravitational collapse.",
+      "facts": {
+        "canonical_name": "Collapse-threshold focused beam at 1 m radius",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I_{\\max}(R) \\sim c^5 / (G R^2)",
+          "method": "derived",
+          "original_value_text": "3.6282549044112803e+52",
+          "source_basis": "Order-of-magnitude gravitational-collapse threshold for a focused beam.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Schwarzschild_radius",
+          "source_value_text": "R = 1 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-collapse-threshold-1m",
+      "name": "Collapse-threshold focused beam at 1 m radius",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Schwarzschild_radius",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-schwarzschild-radius",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Schwarzschild radius",
+          "url": "https://en.wikipedia.org/wiki/Schwarzschild_radius"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Focused into a one-meter patch, this is the order-of-magnitude intensity where a beam would flirt with gravitational collapse.",
+      "value": 3.6282549044112803e+52,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Shrinking the focus by a thousand multiplies the collapse-threshold intensity by a million.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Shrinking the focus by a thousand multiplies the collapse-threshold intensity by a million.",
+      "facts": {
+        "canonical_name": "Collapse-threshold focused beam at 1 mm radius",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I_{\\max}(R) \\sim c^5 / (G R^2)",
+          "method": "derived",
+          "original_value_text": "3.6282549044112805e+58",
+          "source_basis": "Order-of-magnitude gravitational-collapse threshold for a focused beam.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Schwarzschild_radius",
+          "source_value_text": "R = 1 mm"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-collapse-threshold-1mm",
+      "name": "Collapse-threshold focused beam at 1 mm radius",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Schwarzschild_radius",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-schwarzschild-radius",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Schwarzschild radius",
+          "url": "https://en.wikipedia.org/wiki/Schwarzschild_radius"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Shrinking the focus by a thousand multiplies the collapse-threshold intensity by a million.",
+      "value": 3.6282549044112805e+58,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At proton-scale focusing the collapse estimate becomes so extreme that quantum gravity is impossible to ignore.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At proton-scale focusing the collapse estimate becomes so extreme that quantum gravity is impossible to ignore.",
+      "facts": {
+        "canonical_name": "Collapse-threshold focused beam at proton scale",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I_{\\max}(R) \\sim c^5 / (G R^2)",
+          "method": "derived",
+          "original_value_text": "5.142084615095352e+82",
+          "source_basis": "Order-of-magnitude gravitational-collapse threshold evaluated at a proton-sized focus.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Proton_radius",
+          "source_value_text": "R = 0.84 fm"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:scenario-intensity-collapse-threshold-proton-radius",
+      "name": "Collapse-threshold focused beam at proton scale",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Proton_radius",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-proton-radius",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Proton radius",
+          "url": "https://en.wikipedia.org/wiki/Proton_radius"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "At proton-scale focusing the collapse estimate becomes so extreme that quantum gravity is impossible to ignore.",
+      "value": 5.142084615095352e+82,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Planck intensity is the natural power-flux scale built from c, G, and hbar, and it sits far beyond any known physical source.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Planck intensity is the natural power-flux scale built from c, G, and hbar, and it sits far beyond any known physical source.",
+      "facts": {
+        "canonical_name": "Planck intensity",
+        "ingest_source": "dataset/raw/curated/intensity.json",
+        "source_trace": {
+          "derivation_note": "I_P = c^8 / (\\hbar G^2)",
+          "method": "derived",
+          "original_value_text": "1.3889225061773014e+122",
+          "source_basis": "Natural Planck-unit intensity scale.",
+          "source_unit": "W/m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Planck_units",
+          "source_value_text": "derived from c, G, and hbar"
+        }
+      },
+      "hook": null,
+      "id": "obs:intensity:entity-planck-intensity",
+      "name": "Planck intensity",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Planck_units",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-planck-units",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Planck units",
+          "url": "https://en.wikipedia.org/wiki/Planck_units"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-intensity-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/intensity.json",
+          "url": "repo://dataset/raw/curated/intensity.json"
+        }
+      ],
+      "summary_short": "Planck intensity is the natural power-flux scale built from c, G, and hbar, and it sits far beyond any known physical source.",
+      "value": 1.3889225061773014e+122,
+      "value_type": "derived",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 40,
+  "preferred_target_items": 24,
+  "related_resources": [
+    {
+      "name": "Irradiance",
+      "url": "https://en.wikipedia.org/wiki/Irradiance"
+    },
+    {
+      "name": "Planck units",
+      "url": "https://en.wikipedia.org/wiki/Planck_units"
+    }
+  ],
+  "required_min_items": 12,
+  "scale_mode": "log",
+  "selection_bin_count": 12,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Canonical storage unit for physical intensity or power flux.",
+      "name": "watts per square meter",
+      "symbol": "W/m^2"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Convenient for sunlight and engineering heat-flux scales.",
+      "name": "kilowatts per square meter",
+      "symbol": "kW/m^2"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Useful for concentrated heat flux and industrial beams.",
+      "name": "megawatts per square meter",
+      "symbol": "MW/m^2"
+    },
+    {
+      "conversion_factor": 0.0001,
+      "description": "Common beam-intensity unit in laser physics.",
+      "name": "watts per square centimeter",
+      "symbol": "W/cm^2"
+    },
+    {
+      "conversion_factor": 1e-09,
+      "description": "Useful for very intense beams and compact heat fluxes.",
+      "name": "gigawatts per square meter",
+      "symbol": "GW/m^2"
+    },
+    {
+      "conversion_factor": 1e-12,
+      "description": "Useful for extreme laser systems and astrophysical fluxes.",
+      "name": "terawatts per square meter",
+      "symbol": "TW/m^2"
+    },
+    {
+      "conversion_factor": 2.158e-114,
+      "description": "Planck intensity is the natural maximum intensity scale c^8/(hbar G^2).",
+      "name": "Planck intensities",
+      "symbol": "I_P"
+    }
+  ]
+}

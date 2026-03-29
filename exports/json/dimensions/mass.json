@@ -1,0 +1,2900 @@
+{
+  "base_unit": "kilograms",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 54,
+    "candidate_shortfall_to_preferred_target": 0,
+    "empty_bin_count": 3,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 50,
+    "selected_primary_count": 21,
+    "selected_secondary_count": 29,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 50
+    },
+    "target_selected_count": 50
+  },
+  "description_format": "markdown",
+  "dimension": "mass",
+  "dimension_description": "Mass tracks inertia and the amount of matter under a stated definition, from subatomic particles to galaxies. Some entries are direct measurements, while others are derived estimates such as the mass of a lake from its volume and density. Every item names the object and the measurement basis so the scale remains comparable.",
+  "frontend_group": "fundamental",
+  "frontend_group_label": "Fundamental Scales",
+  "frontend_order": 140,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Rest mass of a single electron.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Rest mass of a single electron.",
+      "facts": {
+        "canonical_name": "Electron",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9.109e-31",
+          "source_url": "https://en.wikipedia.org/wiki/Electron"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-electron",
+      "name": "Electron",
+      "qualifiers": {
+        "measurement": "rest mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Electron",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-electron",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Electron",
+          "url": "https://en.wikipedia.org/wiki/Electron"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Rest mass of a single electron.",
+      "value": 9.109e-31,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Rest mass of a single proton.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Rest mass of a single proton.",
+      "facts": {
+        "canonical_name": "Proton",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.673e-27",
+          "source_url": "https://en.wikipedia.org/wiki/Proton"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-proton",
+      "name": "Proton",
+      "qualifiers": {
+        "measurement": "rest mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Proton",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-proton",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Proton",
+          "url": "https://en.wikipedia.org/wiki/Proton"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Rest mass of a single proton.",
+      "value": 1.673e-27,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of one H2O molecule.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of one H2O molecule.",
+      "facts": {
+        "canonical_name": "Water molecule",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "18 u converted to kilograms",
+          "method": "derived",
+          "original_value_text": "2.9915e-26",
+          "source_url": "https://en.wikipedia.org/wiki/Water"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-water",
+      "name": "Water molecule",
+      "qualifiers": {
+        "derivation": "18 u converted to kilograms",
+        "measurement": "single molecule"
+      },
+      "source": "https://en.wikipedia.org/wiki/Water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Water",
+          "url": "https://en.wikipedia.org/wiki/Water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of one H2O molecule.",
+      "value": 2.9915e-26,
+      "value_type": "derived",
+      "wikidata_qid": "Q283"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Characteristic mass of a bacterial ribosome.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Characteristic mass of a bacterial ribosome.",
+      "facts": {
+        "canonical_name": "Ribosome",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4e-21",
+          "source_url": "https://en.wikipedia.org/wiki/Ribosome"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-ribosome",
+      "name": "Ribosome",
+      "qualifiers": {
+        "measurement": "representative bacterial ribosome"
+      },
+      "source": "https://en.wikipedia.org/wiki/Ribosome",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ribosome",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ribosome",
+          "url": "https://en.wikipedia.org/wiki/Ribosome"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Characteristic mass of a bacterial ribosome.",
+      "value": 4e-21,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of a single influenza virus particle.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of a single influenza virus particle.",
+      "facts": {
+        "canonical_name": "Influenza virion",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-18",
+          "source_url": "https://en.wikipedia.org/wiki/Influenza"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-influenza-virus",
+      "name": "Influenza virion",
+      "qualifiers": {
+        "measurement": "single virion"
+      },
+      "source": "https://en.wikipedia.org/wiki/Influenza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-influenza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Influenza",
+          "url": "https://en.wikipedia.org/wiki/Influenza"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of a single influenza virus particle.",
+      "value": 1e-18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate wet mass of one E. coli cell.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate wet mass of one E. coli cell.",
+      "facts": {
+        "canonical_name": "Escherichia coli cell",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-15",
+          "source_url": "https://en.wikipedia.org/wiki/Escherichia_coli"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-e-coli",
+      "name": "Escherichia coli cell",
+      "qualifiers": {
+        "condition": "wet mass",
+        "measurement": "single cell"
+      },
+      "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-escherichia-coli",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Escherichia coli",
+          "url": "https://en.wikipedia.org/wiki/Escherichia_coli"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate wet mass of one E.",
+      "value": 1e-15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate mass of a single human egg cell.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate mass of a single human egg cell.",
+      "facts": {
+        "canonical_name": "Human ovum",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e-10",
+          "source_url": "https://en.wikipedia.org/wiki/Egg_cell"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-human-ovum",
+      "name": "Human ovum",
+      "qualifiers": {
+        "measurement": "single cell"
+      },
+      "source": "https://en.wikipedia.org/wiki/Egg_cell",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-egg-cell",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Egg cell",
+          "url": "https://en.wikipedia.org/wiki/Egg_cell"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate mass of a single human egg cell.",
+      "value": 5e-10,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
+      "facts": {
+        "canonical_name": "Planck mass",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "m_P = \\sqrt{\\hbar c / G}",
+          "method": "derived",
+          "original_value_text": "2.176434342051127e-08",
+          "source_basis": "Derived from \u0127, c, and G using the Planck-unit mass scale.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Planck_units",
+          "source_value_text": "2.176434342051127e-08 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-planck-mass",
+      "name": "Planck mass",
+      "qualifiers": {
+        "measurement": "natural mass scale"
+      },
+      "source": "https://en.wikipedia.org/wiki/Planck_units",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-planck-units",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Planck units",
+          "url": "https://en.wikipedia.org/wiki/Planck_units"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
+      "value": 2.176434342051127e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of one dry grain of rice.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of one dry grain of rice.",
+      "facts": {
+        "canonical_name": "Grain of rice",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e-05",
+          "source_url": "https://en.wikipedia.org/wiki/Rice"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:scenario-grain-of-rice",
+      "name": "Grain of rice",
+      "qualifiers": {
+        "condition": "dry",
+        "measurement": "single grain"
+      },
+      "source": "https://en.wikipedia.org/wiki/Rice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rice",
+          "url": "https://en.wikipedia.org/wiki/Rice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of one dry grain of rice.",
+      "value": 2e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of an adult worker honey bee.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of an adult worker honey bee.",
+      "facts": {
+        "canonical_name": "Honey bee",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.0001",
+          "source_url": "https://en.wikipedia.org/wiki/Honey_bee"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-honey-bee",
+      "name": "Honey bee",
+      "qualifiers": {
+        "measurement": "worker adult"
+      },
+      "source": "https://en.wikipedia.org/wiki/Honey_bee",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-honey-bee",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Honey bee",
+          "url": "https://en.wikipedia.org/wiki/Honey_bee"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of an adult worker honey bee.",
+      "value": 0.0001,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative body mass of an adult house mouse.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative body mass of an adult house mouse.",
+      "facts": {
+        "canonical_name": "House mouse",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.02",
+          "source_url": "https://en.wikipedia.org/wiki/House_mouse"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-house-mouse",
+      "name": "House mouse",
+      "qualifiers": {
+        "measurement": "adult body mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/House_mouse",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-house-mouse",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "House mouse",
+          "url": "https://en.wikipedia.org/wiki/House_mouse"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative body mass of an adult house mouse.",
+      "value": 0.02,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of an adult domestic cat.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of an adult domestic cat.",
+      "facts": {
+        "canonical_name": "Cat",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4.0",
+          "source_url": "https://en.wikipedia.org/wiki/Cat"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-cat",
+      "name": "Cat",
+      "qualifiers": {
+        "measurement": "adult body mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cat",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cat",
+          "url": "https://en.wikipedia.org/wiki/Cat"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of an adult domestic cat.",
+      "value": 4.0,
+      "value_type": "derived",
+      "wikidata_qid": "Q146"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of an adult human.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of an adult human.",
+      "facts": {
+        "canonical_name": "Human",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "70.0",
+          "source_url": "https://en.wikipedia.org/wiki/Human_body_weight"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-human",
+      "name": "Human",
+      "qualifiers": {
+        "measurement": "adult body mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Human_body_weight",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-human-body-weight",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Human body weight",
+          "url": "https://en.wikipedia.org/wiki/Human_body_weight"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of an adult human.",
+      "value": 70.0,
+      "value_type": "derived",
+      "wikidata_qid": "Q5"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of an adult giraffe.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of an adult giraffe.",
+      "facts": {
+        "canonical_name": "Giraffe",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1200.0",
+          "source_url": "https://en.wikipedia.org/wiki/Giraffe"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-giraffe",
+      "name": "Giraffe",
+      "qualifiers": {
+        "measurement": "adult body mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Giraffe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-giraffe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Giraffe",
+          "url": "https://en.wikipedia.org/wiki/Giraffe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of an adult giraffe.",
+      "value": 1200.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative curb mass of a family sedan or hatchback.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative curb mass of a family sedan or hatchback.",
+      "facts": {
+        "canonical_name": "Family car",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1500.0",
+          "source_url": "https://en.wikipedia.org/wiki/Car"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:scenario-family-car",
+      "name": "Family car",
+      "qualifiers": {
+        "measurement": "curb mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Car",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-car",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Car",
+          "url": "https://en.wikipedia.org/wiki/Car"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative curb mass of a family sedan or hatchback.",
+      "value": 1500.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of a large adult blue whale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of a large adult blue whale.",
+      "facts": {
+        "canonical_name": "Blue whale",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "150000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Blue_whale"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-blue-whale",
+      "name": "Blue whale",
+      "qualifiers": {
+        "measurement": "adult body mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Blue_whale",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-blue-whale",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Blue whale",
+          "url": "https://en.wikipedia.org/wiki/Blue_whale"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of a large adult blue whale.",
+      "value": 150000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate maximum takeoff mass of a Boeing 747.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate maximum takeoff mass of a Boeing 747.",
+      "facts": {
+        "canonical_name": "Boeing 747",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "400000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Boeing_747"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:scenario-boeing-747",
+      "name": "Boeing 747",
+      "qualifiers": {
+        "measurement": "maximum takeoff mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Boeing_747",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-boeing-747",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Boeing 747",
+          "url": "https://en.wikipedia.org/wiki/Boeing_747"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate maximum takeoff mass of a Boeing 747.",
+      "value": 400000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate structural mass of the Eiffel Tower.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate structural mass of the Eiffel Tower.",
+      "facts": {
+        "canonical_name": "Eiffel Tower",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10100000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-eiffel-tower",
+      "name": "Eiffel Tower",
+      "qualifiers": {
+        "measurement": "structural mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-eiffel-tower",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Eiffel Tower",
+          "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate structural mass of the Eiffel Tower.",
+      "value": 10100000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate mass of the Great Pyramid of Giza.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate mass of the Great Pyramid of Giza.",
+      "facts": {
+        "canonical_name": "Great Pyramid of Giza",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5750000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-great-pyramid-of-giza",
+      "name": "Great Pyramid of Giza",
+      "qualifiers": {
+        "measurement": "estimated total stone mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-great-pyramid-of-giza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Great Pyramid of Giza",
+          "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate mass of the Great Pyramid of Giza.",
+      "value": 5750000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass estimate for Halley's Comet.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass estimate for Halley's Comet.",
+      "facts": {
+        "canonical_name": "Halley's Comet",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "220000000000000.0",
+          "source_basis": "Reported approximate mass of Halley's Comet.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+          "source_value_text": "2.2 x 10^14 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-halleys-comet-mass",
+      "name": "Halley's Comet",
+      "qualifiers": {
+        "measurement": "estimated comet mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-halley-27s-comet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Halley's Comet",
+          "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass estimate for Halley's Comet.",
+      "value": 220000000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of Lake Superior's water using its volume and freshwater density.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of Lake Superior's water using its volume and freshwater density.",
+      "facts": {
+        "canonical_name": "Lake Superior",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "volume times density",
+          "method": "derived",
+          "original_value_text": "1.2e+16",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Superior"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-lake-superior",
+      "name": "Lake Superior",
+      "qualifiers": {
+        "derivation": "volume times density",
+        "measurement": "water mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lake_Superior",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lake-superior",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lake Superior",
+          "url": "https://en.wikipedia.org/wiki/Lake_Superior"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of Lake Superior's water using its volume and freshwater density.",
+      "value": 1.2e+16,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of the dwarf planet Ceres.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of the dwarf planet Ceres.",
+      "facts": {
+        "canonical_name": "Ceres",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9.38e+20",
+          "source_url": "https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-ceres",
+      "name": "Ceres",
+      "qualifiers": {
+        "measurement": "gravitationally inferred mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ceres-dwarf-planet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ceres (dwarf planet)",
+          "url": "https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of the dwarf planet Ceres.",
+      "value": 9.38e+20,
+      "value_type": "measured",
+      "wikidata_qid": "Q596"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of the dwarf planet Pluto.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of the dwarf planet Pluto.",
+      "facts": {
+        "canonical_name": "Pluto",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.309e+22",
+          "source_basis": "Reported Pluto mass.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Pluto",
+          "source_value_text": "1.309 x 10^22 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-pluto",
+      "name": "Pluto",
+      "qualifiers": {
+        "measurement": "dwarf-planet mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Pluto",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pluto",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Pluto",
+          "url": "https://en.wikipedia.org/wiki/Pluto"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of the dwarf planet Pluto.",
+      "value": 1.309e+22,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of Earth's Moon.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of Earth's Moon.",
+      "facts": {
+        "canonical_name": "Moon",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7.35e+22",
+          "source_url": "https://en.wikipedia.org/wiki/Moon"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-moon",
+      "name": "Moon",
+      "qualifiers": {
+        "measurement": "gravitationally inferred mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Moon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moon",
+          "url": "https://en.wikipedia.org/wiki/Moon"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of Earth's Moon.",
+      "value": 7.35e+22,
+      "value_type": "measured",
+      "wikidata_qid": "Q405"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of Venus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of Venus.",
+      "facts": {
+        "canonical_name": "Venus",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "4.8675e+24",
+          "source_basis": "Reported Venus mass.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Venus",
+          "source_value_text": "4.8675 x 10^24 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-venus",
+      "name": "Venus",
+      "qualifiers": {
+        "measurement": "planetary mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Venus",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-venus",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Venus",
+          "url": "https://en.wikipedia.org/wiki/Venus"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of Venus.",
+      "value": 4.8675e+24,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of Uranus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of Uranus.",
+      "facts": {
+        "canonical_name": "Uranus",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "8.681e+25",
+          "source_basis": "Reported Uranus mass.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Uranus",
+          "source_value_text": "8.681 x 10^25 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-uranus",
+      "name": "Uranus",
+      "qualifiers": {
+        "measurement": "planetary mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Uranus",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-uranus",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Uranus",
+          "url": "https://en.wikipedia.org/wiki/Uranus"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of Uranus.",
+      "value": 8.681e+25,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of Neptune.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of Neptune.",
+      "facts": {
+        "canonical_name": "Neptune",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.024e+26",
+          "source_basis": "Reported Neptune mass.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Neptune",
+          "source_value_text": "1.024 x 10^26 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-neptune",
+      "name": "Neptune",
+      "qualifiers": {
+        "measurement": "planetary mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Neptune",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-neptune",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Neptune",
+          "url": "https://en.wikipedia.org/wiki/Neptune"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of Neptune.",
+      "value": 1.024e+26,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of Saturn.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of Saturn.",
+      "facts": {
+        "canonical_name": "Saturn",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5.683e+26",
+          "source_basis": "Reported Saturn mass.",
+          "source_unit": "kg",
+          "source_url": "https://en.wikipedia.org/wiki/Saturn",
+          "source_value_text": "5.683 x 10^26 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-saturn",
+      "name": "Saturn",
+      "qualifiers": {
+        "measurement": "planetary mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Saturn",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-saturn",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Saturn",
+          "url": "https://en.wikipedia.org/wiki/Saturn"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of Saturn.",
+      "value": 5.683e+26,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative lower-bound brown dwarf mass near the deuterium-burning limit.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative lower-bound brown dwarf mass near the deuterium-burning limit.",
+      "facts": {
+        "canonical_name": "Brown dwarf at the deuterium limit",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted Jupiter masses to kilograms using the canonical Jupiter-mass constant.",
+          "derivation_note": "13 jupiter_masses converted to kilograms",
+          "method": "derived",
+          "original_value_text": "2.4674e+28",
+          "source_basis": "Brown dwarfs are commonly defined above about 13 Jupiter masses.",
+          "source_unit": "M_jup",
+          "source_url": "https://en.wikipedia.org/wiki/Brown_dwarf",
+          "source_value_text": "13 Jupiter masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-brown-dwarf-deuterium-limit",
+      "name": "Brown dwarf at the deuterium limit",
+      "qualifiers": {
+        "derivation": "13 jupiter_masses converted to kilograms",
+        "measurement": "threshold brown-dwarf mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Brown_dwarf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brown-dwarf",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brown dwarf",
+          "url": "https://en.wikipedia.org/wiki/Brown_dwarf"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "A representative lower-bound brown dwarf mass near the deuterium-burning limit.",
+      "value": 2.4674e+28,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of the ultracool red dwarf star TRAPPIST-1.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of the ultracool red dwarf star TRAPPIST-1.",
+      "facts": {
+        "canonical_name": "TRAPPIST-1",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "1.77021e+29",
+          "source_basis": "Reported TRAPPIST-1 stellar mass.",
+          "source_unit": "M_sun",
+          "source_url": "https://en.wikipedia.org/wiki/TRAPPIST-1",
+          "source_value_text": "0.089 solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-trappist-1",
+      "name": "TRAPPIST-1",
+      "qualifiers": {
+        "measurement": "stellar mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/TRAPPIST-1",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-trappist-1",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "TRAPPIST-1",
+          "url": "https://en.wikipedia.org/wiki/TRAPPIST-1"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of the ultracool red dwarf star TRAPPIST-1.",
+      "value": 1.77021e+29,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of the Sun.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of the Sun.",
+      "facts": {
+        "canonical_name": "Sun",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.989e+30",
+          "source_url": "https://en.wikipedia.org/wiki/Sun"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-sun",
+      "name": "Sun",
+      "qualifiers": {
+        "measurement": "stellar mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sun",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sun",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sun",
+          "url": "https://en.wikipedia.org/wiki/Sun"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of the Sun.",
+      "value": 1.989e+30,
+      "value_type": "measured",
+      "wikidata_qid": "Q525"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
+      "facts": {
+        "canonical_name": "Sirius A",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "4.103307e+30",
+          "source_basis": "Reported Sirius A stellar mass.",
+          "source_unit": "M_sun",
+          "source_url": "https://en.wikipedia.org/wiki/Sirius",
+          "source_value_text": "2.063 solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-sirius-a",
+      "name": "Sirius A",
+      "qualifiers": {
+        "measurement": "stellar mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sirius",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sirius",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sirius",
+          "url": "https://en.wikipedia.org/wiki/Sirius"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
+      "value": 4.103307e+30,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
+      "facts": {
+        "canonical_name": "Cygnus X-1 black hole",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "2.94372e+31",
+          "source_basis": "NASA states the black hole has about 14.8 times the mass of the Sun.",
+          "source_unit": "M_sun",
+          "source_url": "https://science.nasa.gov/resource/devoured-by-gravity-poster/",
+          "source_value_text": "14.8 solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-cygnus-x-1",
+      "name": "Cygnus X-1 black hole",
+      "qualifiers": {
+        "measurement": "black hole mass"
+      },
+      "source": "https://science.nasa.gov/resource/devoured-by-gravity-poster/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-resource-devoured-by-gravity-poster",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "devoured-by-gravity-poster",
+          "url": "https://science.nasa.gov/resource/devoured-by-gravity-poster/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
+      "value": 2.94372e+31,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
+      "facts": {
+        "canonical_name": "Betelgeuse",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "3.28185e+31",
+          "source_basis": "Reported Betelgeuse mass estimate.",
+          "source_unit": "M_sun",
+          "source_url": "https://en.wikipedia.org/wiki/Betelgeuse",
+          "source_value_text": "16.5 solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-betelgeuse",
+      "name": "Betelgeuse",
+      "qualifiers": {
+        "measurement": "stellar mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Betelgeuse",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-betelgeuse",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Betelgeuse",
+          "url": "https://en.wikipedia.org/wiki/Betelgeuse"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
+      "value": 3.28185e+31,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
+      "facts": {
+        "canonical_name": "R136a1",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "5.27085e+32",
+          "source_basis": "ESO describes R136a1 as having a current mass of about 265 Suns.",
+          "source_unit": "M_sun",
+          "source_url": "https://www.eso.org/public/images/eso1030a/",
+          "source_value_text": "265 solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-r136a1",
+      "name": "R136a1",
+      "qualifiers": {
+        "measurement": "current stellar mass"
+      },
+      "source": "https://www.eso.org/public/images/eso1030a/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-eso-org-public-images-eso1030a",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.eso.org",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "eso1030a",
+          "url": "https://www.eso.org/public/images/eso1030a/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
+      "value": 5.27085e+32,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.",
+      "facts": {
+        "canonical_name": "R136 star cluster",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "9.945e+34",
+          "source_basis": "Derived from ESO's description that the cluster packs tens of thousands of stars into the region.",
+          "source_unit": "stars",
+          "source_url": "https://www.eso.org/public/images/eso1030a/",
+          "source_value_text": "50,000 stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-r136-cluster",
+      "name": "R136 star cluster",
+      "qualifiers": {
+        "assumption": "roughly 50,000 stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://www.eso.org/public/images/eso1030a/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-eso-org-public-images-eso1030a",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.eso.org",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "eso1030a",
+          "url": "https://www.eso.org/public/images/eso1030a/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.",
+      "value": 9.945e+34,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.",
+      "facts": {
+        "canonical_name": "Messier 14",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "2.9835e+35",
+          "source_basis": "Derived from NASA's statement that Messier 14 is home to over 150,000 stars.",
+          "source_unit": "stars",
+          "source_url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-14/",
+          "source_value_text": "150,000 stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-messier-14",
+      "name": "Messier 14",
+      "qualifiers": {
+        "assumption": "150,000 stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-14/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-mission-hubble-science-explore-the-night-sky-hubble-messier-catalog-messier-14",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "messier-14",
+          "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-14/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.",
+      "value": 2.9835e+35,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
+      "facts": {
+        "canonical_name": "Sagittarius A*",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "7.956e+36",
+          "source_basis": "NASA states Sagittarius A* contains about 4 million solar masses.",
+          "source_unit": "M_sun",
+          "source_url": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/",
+          "source_value_text": "4 million solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-sagittarius-a-star",
+      "name": "Sagittarius A*",
+      "qualifiers": {
+        "measurement": "supermassive black hole mass"
+      },
+      "source": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-jpl-nasa-gov-edu-resources-teachable-moment-how-scientists-captured-the-first-image-of-a-black-hole",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "how-scientists-captured-the-first-image-of-a-black-hole",
+          "url": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
+      "value": 7.956e+36,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
+      "facts": {
+        "canonical_name": "Omega Centauri",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "9.945e+36",
+          "source_basis": "ESO reports a total cluster mass of about five million Suns.",
+          "source_unit": "M_sun",
+          "source_url": "https://www.eso.org/public/images/eso9411a/",
+          "source_value_text": "5 million solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-omega-centauri",
+      "name": "Omega Centauri",
+      "qualifiers": {
+        "measurement": "total cluster mass"
+      },
+      "source": "https://www.eso.org/public/images/eso9411a/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-eso-org-public-images-eso9411a",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.eso.org",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "eso9411a",
+          "url": "https://www.eso.org/public/images/eso9411a/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
+      "value": 9.945e+36,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
+      "facts": {
+        "canonical_name": "M60-UCD1",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "2.7846e+38",
+          "source_basis": "Derived from NASA's statement that M60-UCD1 contains 140 million stars.",
+          "source_unit": "stars",
+          "source_url": "https://science.nasa.gov/missions/hubble/hubble-helps-find-smallest-known-galaxy-with-a-supermassive-black-hole/",
+          "source_value_text": "140 million stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-m60-ucd1",
+      "name": "M60-UCD1",
+      "qualifiers": {
+        "assumption": "140 million stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://science.nasa.gov/missions/hubble/hubble-helps-find-smallest-known-galaxy-with-a-supermassive-black-hole/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-missions-hubble-hubble-helps-find-smallest-known-galaxy-with-a-supermassive-black-hole",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "hubble-helps-find-smallest-known-galaxy-with-a-supermassive-black-hole",
+          "url": "https://science.nasa.gov/missions/hubble/hubble-helps-find-smallest-known-galaxy-with-a-supermassive-black-hole/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
+      "value": 2.7846e+38,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.",
+      "facts": {
+        "canonical_name": "NGC 5474",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Used an order-of-magnitude star count of five billion and multiplied by solar mass.",
+          "method": "derived",
+          "original_value_text": "9.945e+39",
+          "source_basis": "Derived from NASA's description that NGC 5474 contains several billion stars.",
+          "source_unit": "stars",
+          "source_url": "https://science.nasa.gov/missions/hubble/hubble-sees-a-dwarf-galaxy-shaped-by-a-grand-design/",
+          "source_value_text": "5 billion stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-ngc-5474",
+      "name": "NGC 5474",
+      "qualifiers": {
+        "assumption": "about 5 billion stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://science.nasa.gov/missions/hubble/hubble-sees-a-dwarf-galaxy-shaped-by-a-grand-design/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-missions-hubble-hubble-sees-a-dwarf-galaxy-shaped-by-a-grand-design",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "hubble-sees-a-dwarf-galaxy-shaped-by-a-grand-design",
+          "url": "https://science.nasa.gov/missions/hubble/hubble-sees-a-dwarf-galaxy-shaped-by-a-grand-design/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.",
+      "value": 9.945e+39,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass of the supermassive black hole at the center of Messier 87.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass of the supermassive black hole at the center of Messier 87.",
+      "facts": {
+        "canonical_name": "M87*",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "conversion_note": "Converted solar masses to kilograms using the canonical solar-mass constant.",
+          "method": "converted",
+          "original_value_text": "1.29285e+40",
+          "source_basis": "NASA reports that M87* contains 6.5 billion solar masses.",
+          "source_unit": "M_sun",
+          "source_url": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/",
+          "source_value_text": "6.5 billion solar masses"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-m87-star",
+      "name": "M87*",
+      "qualifiers": {
+        "measurement": "supermassive black hole mass"
+      },
+      "source": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-jpl-nasa-gov-edu-resources-teachable-moment-how-scientists-captured-the-first-image-of-a-black-hole",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "how-scientists-captured-the-first-image-of-a-black-hole",
+          "url": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Mass of the supermassive black hole at the center of Messier 87.",
+      "value": 1.29285e+40,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.",
+      "facts": {
+        "canonical_name": "Large Magellanic Cloud",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "1.989e+40",
+          "source_basis": "Derived from the reported estimate that the Large Magellanic Cloud contains about ten billion stars.",
+          "source_unit": "stars",
+          "source_url": "https://en.wikipedia.org/wiki/Large_Magellanic_Cloud",
+          "source_value_text": "10 billion stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-large-magellanic-cloud",
+      "name": "Large Magellanic Cloud",
+      "qualifiers": {
+        "assumption": "10 billion stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://en.wikipedia.org/wiki/Large_Magellanic_Cloud",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-large-magellanic-cloud",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Large Magellanic Cloud",
+          "url": "https://en.wikipedia.org/wiki/Large_Magellanic_Cloud"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.",
+      "value": 1.989e+40,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.",
+      "facts": {
+        "canonical_name": "Triangulum Galaxy",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "7.956e+40",
+          "source_basis": "Derived from the reported estimate that the Triangulum Galaxy contains about forty billion stars.",
+          "source_unit": "stars",
+          "source_url": "https://en.wikipedia.org/wiki/Triangulum_Galaxy",
+          "source_value_text": "40 billion stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-triangulum-galaxy",
+      "name": "Triangulum Galaxy",
+      "qualifiers": {
+        "assumption": "40 billion stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://en.wikipedia.org/wiki/Triangulum_Galaxy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-triangulum-galaxy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Triangulum Galaxy",
+          "url": "https://en.wikipedia.org/wiki/Triangulum_Galaxy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.",
+      "value": 7.956e+40,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.",
+      "facts": {
+        "canonical_name": "Whirlpool Galaxy",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "1.989e+41",
+          "source_basis": "Derived from the reported estimate that the Whirlpool Galaxy contains about one hundred billion stars.",
+          "source_unit": "stars",
+          "source_url": "https://en.wikipedia.org/wiki/Whirlpool_Galaxy",
+          "source_value_text": "100 billion stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-whirlpool-galaxy",
+      "name": "Whirlpool Galaxy",
+      "qualifiers": {
+        "assumption": "100 billion stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://en.wikipedia.org/wiki/Whirlpool_Galaxy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-whirlpool-galaxy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Whirlpool Galaxy",
+          "url": "https://en.wikipedia.org/wiki/Whirlpool_Galaxy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.",
+      "value": 1.989e+41,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.",
+      "facts": {
+        "canonical_name": "M60",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "7.956e+41",
+          "source_basis": "Derived from NASA's estimate that M60 contains 400 billion stars.",
+          "source_unit": "stars",
+          "source_url": "https://science.nasa.gov/asset/hubble/dwarf-galaxy-near-m60",
+          "source_value_text": "400 billion stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-m60",
+      "name": "M60",
+      "qualifiers": {
+        "assumption": "400 billion stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://science.nasa.gov/asset/hubble/dwarf-galaxy-near-m60",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-asset-hubble-dwarf-galaxy-near-m60",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "dwarf-galaxy-near-m60",
+          "url": "https://science.nasa.gov/asset/hubble/dwarf-galaxy-near-m60"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.",
+      "value": 7.956e+41,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
+      "facts": {
+        "canonical_name": "Andromeda galaxy",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "derivation_note": "Assumed an average stellar mass near one solar mass, then multiplied star count by solar mass.",
+          "method": "derived",
+          "original_value_text": "1.989e+42",
+          "source_basis": "Derived from NASA's estimate that Andromeda contains over one trillion stars.",
+          "source_unit": "stars",
+          "source_url": "https://science.nasa.gov/missions/hubble/nasas-hubble-traces-hidden-history-of-andromeda-galaxy/",
+          "source_value_text": "1 trillion stars"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-andromeda",
+      "name": "Andromeda galaxy",
+      "qualifiers": {
+        "assumption": "1 trillion stars at about one solar mass each",
+        "derivation": "star_count * solar_mass",
+        "measurement": "stellar mass proxy from star count"
+      },
+      "source": "https://science.nasa.gov/missions/hubble/nasas-hubble-traces-hidden-history-of-andromeda-galaxy/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-missions-hubble-nasas-hubble-traces-hidden-history-of-andromeda-galaxy",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "nasas-hubble-traces-hidden-history-of-andromeda-galaxy",
+          "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-traces-hidden-history-of-andromeda-galaxy/"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
+      "value": 1.989e+42,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Representative mass of the Milky Way including dark matter.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Representative mass of the Milky Way including dark matter.",
+      "facts": {
+        "canonical_name": "Milky Way",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.98e+42",
+          "source_url": "https://en.wikipedia.org/wiki/Milky_Way"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-milky-way",
+      "name": "Milky Way",
+      "qualifiers": {
+        "measurement": "total estimated mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Milky_Way",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-milky-way",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Milky Way",
+          "url": "https://en.wikipedia.org/wiki/Milky_Way"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Representative mass of the Milky Way including dark matter.",
+      "value": 2.98e+42,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Order-of-magnitude mass of the Virgo Supercluster.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Order-of-magnitude mass of the Virgo Supercluster.",
+      "facts": {
+        "canonical_name": "Virgo Supercluster",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e+45",
+          "source_url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-virgo-supercluster",
+      "name": "Virgo Supercluster",
+      "qualifiers": {
+        "measurement": "estimated total mass"
+      },
+      "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-virgo-supercluster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Virgo Supercluster",
+          "url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Order-of-magnitude mass of the Virgo Supercluster.",
+      "value": 2e+45,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Order-of-magnitude mass of matter in the observable universe.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Order-of-magnitude mass of matter in the observable universe.",
+      "facts": {
+        "canonical_name": "Observable universe",
+        "ingest_source": "dataset/raw/curated/mass.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e+53",
+          "source_url": "https://en.wikipedia.org/wiki/Universe"
+        }
+      },
+      "hook": null,
+      "id": "obs:mass:entity-universe",
+      "name": "Observable universe",
+      "qualifiers": {
+        "measurement": "observable universe mass estimate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Universe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-universe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Universe",
+          "url": "https://en.wikipedia.org/wiki/Universe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-mass-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/mass.json",
+          "url": "repo://dataset/raw/curated/mass.json"
+        }
+      ],
+      "summary_short": "Order-of-magnitude mass of matter in the observable universe.",
+      "value": 1e+53,
+      "value_type": "derived",
+      "wikidata_qid": "Q1"
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Wikidata mass property",
+      "url": "https://www.wikidata.org/wiki/Property:P2067"
+    },
+    {
+      "name": "Mass",
+      "url": "https://en.wikipedia.org/wiki/Mass"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "The kilogram is the SI base unit of mass. All canonical mass values in this dataset are stored in kilograms before conversion.",
+      "name": "kilograms",
+      "symbol": "kg"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Grams are convenient for laboratory and everyday masses.",
+      "name": "grams",
+      "symbol": "g"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Milligrams make very small biological and chemical masses readable.",
+      "name": "milligrams",
+      "symbol": "mg"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Metric tons are useful for vehicles, buildings, and cargo.",
+      "name": "metric tons",
+      "symbol": "t"
+    },
+    {
+      "conversion_factor": 1.6744248350691536e-25,
+      "description": "Earth masses are convenient for planetary comparisons.",
+      "name": "earth masses",
+      "symbol": "M_earth"
+    },
+    {
+      "conversion_factor": 5.027652086475616e-31,
+      "description": "Solar masses are convenient for stars, galaxies, and cosmology.",
+      "name": "solar masses",
+      "symbol": "M_sun"
+    },
+    {
+      "conversion_factor": 1000000000.0,
+      "description": "Micrograms are useful for drugs, particulates, and trace quantities.",
+      "name": "micrograms",
+      "symbol": "ug"
+    },
+    {
+      "conversion_factor": 35.27396195,
+      "description": "Ounces are a familiar small-mass unit in everyday contexts.",
+      "name": "ounces",
+      "symbol": "oz"
+    },
+    {
+      "conversion_factor": 2.2046226218,
+      "description": "Pounds are a familiar body-mass and cargo unit in the United States.",
+      "name": "pounds",
+      "symbol": "lb"
+    },
+    {
+      "conversion_factor": 6.0221407621e+26,
+      "description": "Atomic mass units are useful for atoms, isotopes, and molecules.",
+      "name": "atomic mass units",
+      "symbol": "u"
+    },
+    {
+      "conversion_factor": 5000.0,
+      "description": "Carats are used for gemstones and other small high-value masses.",
+      "name": "carats",
+      "symbol": "ct"
+    },
+    {
+      "conversion_factor": 1.3605442176871e-23,
+      "description": "Lunar masses are useful for moons and small planetary bodies.",
+      "name": "lunar masses",
+      "symbol": "M_moon"
+    },
+    {
+      "conversion_factor": 5.2687038988409e-28,
+      "description": "Jupiter masses are useful for giant planets and brown dwarfs.",
+      "name": "jupiter masses",
+      "symbol": "M_jup"
+    },
+    {
+      "conversion_factor": 45946714.65122226,
+      "description": "Planck mass is the natural quantum-gravity mass scale.",
+      "name": "Planck masses",
+      "symbol": "m_P"
+    }
+  ]
+}

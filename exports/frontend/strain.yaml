@@ -1,0 +1,1035 @@
+dimension: strain
+base_unit: strain
+dimension_description: 'Strain is fractional deformation: how much a material stretches, compresses, or shears relative to its original size. It is dimensionless, but it is still highly informative across engineering, geology, and precision physics. This scale connects tiny metrological strains with yield strains and large deformations in soft materials.'
+related_resources:
+- name: Strain (mechanics)
+  url: https://en.wikipedia.org/wiki/Strain_(mechanics)
+show_limitations: true
+units:
+- name: strain
+  symbol: strain
+  conversion_factor: 1.0
+  description: Dimensionless fractional deformation.
+- name: percent strain
+  symbol: '%'
+  conversion_factor: 100.0
+  description: Common engineering display for larger strains.
+- name: microstrain
+  symbol: ue
+  conversion_factor: 1000000.0
+  description: Common metrology and structural-health unit.
+- name: parts per million
+  symbol: ppm
+  conversion_factor: 1000000.0
+  description: Equivalent display for small strains.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: materials
+frontend_group_label: Materials & Matter
+frontend_order: 510
+items:
+- id: obs:strain:entity-ligo-strain
+  name: LIGO strain sensitivity
+  value: 1.0e-21
+  description: Gravitational-wave detectors measure some of the tiniest strains humans have ever resolved.
+  description_format: markdown
+  summary_short: Gravitational-wave detectors measure some of the tiniest strains humans have ever resolved.
+  description_medium: Gravitational-wave detectors measure some of the tiniest strains humans have ever resolved.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: LIGO strain sensitivity
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-21
+      source_basis: Representative detectable strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/LIGO
+      source_value_text: 1e-21
+  source: https://en.wikipedia.org/wiki/LIGO
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ligo
+    url: https://en.wikipedia.org/wiki/LIGO
+    title: LIGO
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:entity-atomic-vibration-strain
+  name: Atomic thermal vibration scale
+  value: 1.0e-12
+  description: Atomic-scale displacements over macroscopic lengths can correspond to tiny strains.
+  description_format: markdown
+  summary_short: Atomic-scale displacements over macroscopic lengths can correspond to tiny strains.
+  description_medium: Atomic-scale displacements over macroscopic lengths can correspond to tiny strains.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Atomic thermal vibration scale
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-12
+      source_basis: Reference tiny strain scale.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Strain_(mechanics)
+      source_value_text: 1e-12
+  source: https://en.wikipedia.org/wiki/Strain_(mechanics)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-strain-mechanics
+    url: https://en.wikipedia.org/wiki/Strain_(mechanics)
+    title: Strain (mechanics)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:entity-earth-tide-strain
+  name: Earth tide strain
+  value: 1.0e-08
+  description: Earth tides produce measurable crustal strains.
+  description_format: markdown
+  summary_short: Earth tides produce measurable crustal strains.
+  description_medium: Earth tides produce measurable crustal strains.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth tide strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-08
+      source_basis: Representative Earth-tide strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Earth_tide
+      source_value_text: 1e-8
+  source: https://en.wikipedia.org/wiki/Earth_tide
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth-tide
+    url: https://en.wikipedia.org/wiki/Earth_tide
+    title: Earth tide
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:entity-microstrain-reference
+  name: Structural-health microstrain
+  value: 1.0e-06
+  description: A microstrain is a standard engineering small-deformation unit.
+  description_format: markdown
+  summary_short: A microstrain is a standard engineering small-deformation unit.
+  description_medium: A microstrain is a standard engineering small-deformation unit.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Structural-health microstrain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      conversion_note: Converted microstrain to fractional strain.
+      method: derived
+      original_value_text: 1e-06
+      source_basis: Reference microstrain.
+      source_unit: microstrain
+      source_url: https://en.wikipedia.org/wiki/Strain_gauge
+      source_value_text: 1 microstrain
+  source: https://en.wikipedia.org/wiki/Strain_gauge
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-strain-gauge
+    url: https://en.wikipedia.org/wiki/Strain_gauge
+    title: Strain gauge
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:strain:scenario-strain-microstrain
+  name: Microstrain
+  value: 1.0e-06
+  description: Microstrain is a metrology-scale deformation benchmark.
+  description_format: markdown
+  summary_short: Microstrain is a metrology-scale deformation benchmark.
+  description_medium: Microstrain is a metrology-scale deformation benchmark.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Microstrain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-06
+      source_basis: Representative microstrain level used in structural monitoring.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Strain_(mechanics)
+      source_value_text: 1e-06
+  source: https://en.wikipedia.org/wiki/Strain_(mechanics)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-strain-mechanics
+    url: https://en.wikipedia.org/wiki/Strain_(mechanics)
+    title: Strain (mechanics)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:entity-tectonic-strain
+  name: Crustal tectonic strain accumulation
+  value: 1.0e-05
+  description: Tectonic loading builds strain over long timescales.
+  description_format: markdown
+  summary_short: Tectonic loading builds strain over long timescales.
+  description_medium: Tectonic loading builds strain over long timescales.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Crustal tectonic strain accumulation
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-05
+      source_basis: Representative tectonic strain accumulation.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Strain_(geology)
+      source_value_text: 1e-5
+  source: https://en.wikipedia.org/wiki/Strain_(geology)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-strain-geology
+    url: https://en.wikipedia.org/wiki/Strain_(geology)
+    title: Strain (geology)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:scenario-strain-crustal-strain
+  name: Crustal strain
+  value: 1.0e-05
+  description: Tectonic strain can be tiny in absolute terms but still decisive geologically.
+  description_format: markdown
+  summary_short: Tectonic strain can be tiny in absolute terms but still decisive geologically.
+  description_medium: Tectonic strain can be tiny in absolute terms but still decisive geologically.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Crustal strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-05
+      source_basis: Representative crustal strain rate or accumulated strain in tectonic settings.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Strain_(materials_science)
+      source_value_text: 1e-05
+  source: https://en.wikipedia.org/wiki/Strain_(materials_science)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-strain-materials-science
+    url: https://en.wikipedia.org/wiki/Strain_(materials_science)
+    title: Strain (materials science)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:scenario-strain-bridge-thermal-expansion
+  name: Bridge thermal expansion
+  value: 0.0001
+  description: Thermal expansion of bridges is a practical small-strain example.
+  description_format: markdown
+  summary_short: Thermal expansion of bridges is a practical small-strain example.
+  description_medium: Thermal expansion of bridges is a practical small-strain example.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bridge thermal expansion
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0001'
+      source_basis: Representative thermal strain from seasonal expansion in civil structures.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Thermal_expansion
+      source_value_text: '0.0001'
+  source: https://en.wikipedia.org/wiki/Thermal_expansion
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-thermal-expansion
+    url: https://en.wikipedia.org/wiki/Thermal_expansion
+    title: Thermal expansion
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:entity-steel-thermal-strain-100k
+  name: Steel thermal expansion over 100 K
+  value: 0.0012
+  description: Thermal expansion over a large temperature swing already reaches engineering-scale strain.
+  description_format: markdown
+  summary_short: Thermal expansion over a large temperature swing already reaches engineering-scale strain.
+  description_medium: Thermal expansion over a large temperature swing already reaches engineering-scale strain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel thermal expansion over 100 K
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.0012'
+      source_basis: Representative thermal strain for steel over 100 K.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Thermal_expansion
+      source_value_text: '0.0012'
+  source: https://en.wikipedia.org/wiki/Thermal_expansion
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-thermal-expansion
+    url: https://en.wikipedia.org/wiki/Thermal_expansion
+    title: Thermal expansion
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:entity-steel-yield-strain
+  name: Steel yield strain
+  value: 0.002
+  description: Steel begins to yield at only a few tenths of a percent strain.
+  description_format: markdown
+  summary_short: Steel begins to yield at only a few tenths of a percent strain.
+  description_medium: Steel begins to yield at only a few tenths of a percent strain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel yield strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.002'
+      source_basis: Representative steel yield strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Yield_(engineering)
+      source_value_text: '0.002'
+  source: https://en.wikipedia.org/wiki/Yield_(engineering)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-yield-engineering
+    url: https://en.wikipedia.org/wiki/Yield_(engineering)
+    title: Yield (engineering)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:scenario-strain-steel-elastic-strain
+  name: Steel elastic strain
+  value: 0.002
+  description: Structural steel leaves the linear elastic range at small strain.
+  description_format: markdown
+  summary_short: Structural steel leaves the linear elastic range at small strain.
+  description_medium: Structural steel leaves the linear elastic range at small strain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Steel elastic strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.002'
+      source_basis: Representative elastic strain near the yield point of steel.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Young%27s_modulus
+      source_value_text: '0.002'
+  source: https://en.wikipedia.org/wiki/Young%27s_modulus
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-young-27s-modulus
+    url: https://en.wikipedia.org/wiki/Young%27s_modulus
+    title: Young's modulus
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:entity-concrete-failure-strain
+  name: Concrete compressive failure
+  value: 0.003
+  description: Concrete fails at only a few tenths of a percent strain.
+  description_format: markdown
+  summary_short: Concrete fails at only a few tenths of a percent strain.
+  description_medium: Concrete fails at only a few tenths of a percent strain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Concrete compressive failure
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.003'
+      source_basis: Representative compressive-failure strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Concrete
+      source_value_text: '0.003'
+  source: https://en.wikipedia.org/wiki/Concrete
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-concrete
+    url: https://en.wikipedia.org/wiki/Concrete
+    title: Concrete
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:entity-aluminum-yield-strain
+  name: Aluminum yield strain
+  value: 0.005
+  description: Aluminum typically yields at a somewhat larger strain than steel.
+  description_format: markdown
+  summary_short: Aluminum typically yields at a somewhat larger strain than steel.
+  description_medium: Aluminum typically yields at a somewhat larger strain than steel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aluminum yield strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.005'
+      source_basis: Representative aluminum yield strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Yield_(engineering)
+      source_value_text: '0.005'
+  source: https://en.wikipedia.org/wiki/Yield_(engineering)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-yield-engineering
+    url: https://en.wikipedia.org/wiki/Yield_(engineering)
+    title: Yield (engineering)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:scenario-strain-paper-stretch
+  name: Paper stretch
+  value: 0.01
+  description: Paper stretching gives a visibly small but measurable strain.
+  description_format: markdown
+  summary_short: Paper stretching gives a visibly small but measurable strain.
+  description_medium: Paper stretching gives a visibly small but measurable strain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Paper stretch
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.01'
+      source_basis: Representative tensile strain for paper before failure.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Paper
+      source_value_text: '0.01'
+  source: https://en.wikipedia.org/wiki/Paper
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-paper
+    url: https://en.wikipedia.org/wiki/Paper
+    title: Paper
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:scenario-strain-tendon-strain
+  name: Tendon strain
+  value: 0.05
+  description: Tendons are designed to stretch, but only modestly.
+  description_format: markdown
+  summary_short: Tendons are designed to stretch, but only modestly.
+  description_medium: Tendons are designed to stretch, but only modestly.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tendon strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.05'
+      source_basis: Representative physiological tendon strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Tendon
+      source_value_text: '0.05'
+  source: https://en.wikipedia.org/wiki/Tendon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tendon
+    url: https://en.wikipedia.org/wiki/Tendon
+    title: Tendon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:entity-tendon-failure-strain
+  name: Human tendon failure strain
+  value: 0.08
+  description: Biological tissues can deform much more than structural metals.
+  description_format: markdown
+  summary_short: Biological tissues can deform much more than structural metals.
+  description_medium: Biological tissues can deform much more than structural metals.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human tendon failure strain
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.08'
+      source_basis: Representative tendon failure strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Tendon
+      source_value_text: '0.08'
+  source: https://en.wikipedia.org/wiki/Tendon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tendon
+    url: https://en.wikipedia.org/wiki/Tendon
+    title: Tendon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:scenario-strain-human-skin-stretch
+  name: Human skin stretch
+  value: 0.2
+  description: Human skin can deform significantly without failing.
+  description_format: markdown
+  summary_short: Human skin can deform significantly without failing.
+  description_medium: Human skin can deform significantly without failing.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human skin stretch
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.2'
+      source_basis: Representative elastic skin stretch.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Human_skin
+      source_value_text: '0.2'
+  source: https://en.wikipedia.org/wiki/Human_skin
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-skin
+    url: https://en.wikipedia.org/wiki/Human_skin
+    title: Human skin
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:entity-stretch-fabric-strain
+  name: Stretch fabric
+  value: 0.3
+  description: Stretch textiles operate at very large everyday strains.
+  description_format: markdown
+  summary_short: Stretch textiles operate at very large everyday strains.
+  description_medium: Stretch textiles operate at very large everyday strains.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Stretch fabric
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '0.3'
+      source_basis: Representative textile strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Spandex
+      source_value_text: '0.3'
+  source: https://en.wikipedia.org/wiki/Spandex
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-spandex
+    url: https://en.wikipedia.org/wiki/Spandex
+    title: Spandex
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:entity-rubber-band-strain
+  name: Rubber band extension
+  value: 1.0
+  description: Elastomers can sustain order-unity strain.
+  description_format: markdown
+  summary_short: Elastomers can sustain order-unity strain.
+  description_medium: Elastomers can sustain order-unity strain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber band extension
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Representative rubber-band strain.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Rubber
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Rubber
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rubber
+    url: https://en.wikipedia.org/wiki/Rubber
+    title: Rubber
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:strain:scenario-strain-rubber-band-stretch
+  name: Rubber band stretch
+  value: 1.0
+  description: Rubber bands are an easy one-to-one strain example.
+  description_format: markdown
+  summary_short: Rubber bands are an easy one-to-one strain example.
+  description_medium: Rubber bands are an easy one-to-one strain example.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rubber band stretch
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '1.0'
+      source_basis: Representative extension roughly equal to original length.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Rubber_band
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Rubber_band
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-rubber-band
+    url: https://en.wikipedia.org/wiki/Rubber_band
+    title: Rubber band
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:scenario-strain-silicone-elastomer
+  name: Silicone elastomer
+  value: 2.0
+  description: Soft elastomers can tolerate strains above 100 percent.
+  description_format: markdown
+  summary_short: Soft elastomers can tolerate strains above 100 percent.
+  description_medium: Soft elastomers can tolerate strains above 100 percent.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Silicone elastomer
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '2.0'
+      source_basis: Representative tensile strain for silicone elastomer.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Silicone
+      source_value_text: '2'
+  source: https://en.wikipedia.org/wiki/Silicone
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-silicone
+    url: https://en.wikipedia.org/wiki/Silicone
+    title: Silicone
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain
+- id: obs:strain:scenario-strain-balloon-inflation
+  name: Balloon inflation
+  value: 3.0
+  description: Inflating a balloon is a simple large-strain example.
+  description_format: markdown
+  summary_short: Inflating a balloon is a simple large-strain example.
+  description_medium: Inflating a balloon is a simple large-strain example.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Balloon inflation
+    ingest_source: dataset/raw/curated/strain.json
+    source_trace:
+      method: direct
+      original_value_text: '3.0'
+      source_basis: Representative circumferential stretch during inflation.
+      source_unit: strain
+      source_url: https://en.wikipedia.org/wiki/Balloon
+      source_value_text: '3'
+  source: https://en.wikipedia.org/wiki/Balloon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-balloon
+    url: https://en.wikipedia.org/wiki/Balloon
+    title: Balloon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-strain-json
+    url: repo://dataset/raw/curated/strain.json
+    title: dataset/raw/curated/strain.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: dimensionless strain

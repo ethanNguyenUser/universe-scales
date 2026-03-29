@@ -113,6 +113,10 @@
     .tooltip-source {
         font-size: 0.8rem;
     }
+    .tooltip-description {
+        max-height: min(42vh, 18rem);
+        overflow-y: auto;
+    }
     .tooltip-image {
         max-height: 140px;
     }
@@ -130,6 +134,9 @@
         .tooltip-description,
         .tooltip-source {
             font-size: 0.75rem;
+        }
+        .tooltip-description {
+            max-height: min(38vh, 14rem);
         }
         .tooltip-image {
             max-height: 100px;
@@ -221,6 +228,8 @@
             grid-row: 1 / -1; /* Span from first to last row */
             margin-bottom: 0;
             align-self: start;
+            max-height: min(50vh, 14rem);
+            overflow-y: auto;
         }
         
         /* Reduce footer and unit description text size in landscape */
@@ -258,7 +267,7 @@
 
     /* Smaller font for image upload buttons on mobile */
     .image-upload-controls * {
-        font-size: 0.7rem !important;
+        font-size: 0.6rem !important;
     }
     .image-upload-controls .file-input-label.btn,
     .image-upload-controls label.btn,
@@ -267,8 +276,8 @@
     .image-upload-controls button.btn.btn-small,
     .image-upload-controls button.btn.btn-small.btn-danger,
     .image-upload-controls button {
-        font-size: 0.7rem !important;
-        padding: 0.2rem 0.4rem !important;
+        font-size: 0.6rem !important;
+        padding: 0.15rem 0.3rem !important;
     }
     /* Center text in Choose Image button on mobile */
     .image-upload-controls .file-input-label.btn,
@@ -300,16 +309,86 @@
         gap: 0.5rem;
     }
 
+    .dimension-picker {
+        flex: 1 1 100%;
+    }
+
+    .dimension-browser-toggle {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dimension-browser-panel {
+        width: 100%;
+        margin-top: 0.85rem;
+    }
+
+    .dimension-browser-toolbar {
+        margin-bottom: 0.7rem;
+    }
+
+    .dimension-browser-search,
+    .dimension-browser-empty {
+        width: 100%;
+    }
+
+    .dimension-browser {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .dimension-browser__column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .dimension-browser__group {
+        padding: 0.75rem 0.8rem 0.85rem;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .dimension-browser__chips {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dimension-chip {
+        width: 100%;
+        text-align: left;
+    }
+
     .control-group {
         width: 100%;
         justify-content: center;
     }
 
-    #dimension-select,
-    #unit-select {
+    #dimension-select {
         width: 100%;
         font-size: 1rem;
         padding: 0.65rem 0.9rem;
+    }
+
+    .unit-picker {
+        width: 100%;
+    }
+
+    .unit-browser-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .unit-browser-panel {
+        min-width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .unit-browser-list {
+        grid-template-columns: 1fr;
     }
 
     .notation-toggle {
@@ -378,7 +457,7 @@
 
     /* Smaller font for image upload buttons on mobile */
     .image-upload-controls * {
-        font-size: 0.5rem !important;
+        font-size: 0.45rem !important;
     }
     .image-upload-controls .file-input-label.btn,
     .image-upload-controls label.btn,
@@ -387,8 +466,8 @@
     .image-upload-controls button.btn.btn-small,
     .image-upload-controls button.btn.btn-small.btn-danger,
     .image-upload-controls button {
-        font-size: 0.5rem !important;
-        padding: 0.2rem 0.4rem !important;
+        font-size: 0.45rem !important;
+        padding: 0.15rem 0.3rem !important;
     }
     /* Center text in Choose Image button on mobile */
     .image-upload-controls .file-input-label.btn,

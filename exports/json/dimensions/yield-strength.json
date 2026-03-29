@@ -1,0 +1,1891 @@
+{
+  "base_unit": "pascals",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 36,
+    "candidate_shortfall_to_preferred_target": 14,
+    "empty_bin_count": 16,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 36,
+    "selected_primary_count": 8,
+    "selected_secondary_count": 28,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 36
+    },
+    "target_selected_count": 36
+  },
+  "description_format": "markdown",
+  "dimension": "yield-strength",
+  "dimension_description": "Yield strength marks the stress where a material stops returning to its original shape and begins to deform permanently. Engineers usually define it by a 0.2 percent offset on a tensile test curve at room temperature unless noted. The value depends strongly on processing, microstructure, and loading rate. Each entry states a representative condition so comparisons are meaningful.",
+  "frontend_group": "materials",
+  "frontend_group_label": "Materials & Matter",
+  "frontend_order": 430,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Flexible polymer foams yield when cell walls buckle and collapse, absorbing energy as they densify. The stress plateau around this value is prized for cushioning. Strain rate and temperature swing the response in real products. The number is for an open cell polyurethane foam in compression.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Flexible polymer foams yield when cell walls buckle and collapse, absorbing energy as they densify. The stress plateau around this value is prized for cushioning. Strain rate and temperature swing the response in real products. The number is for an open cell polyurethane foam in compression.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Foam",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e5",
+          "source_url": "https://en.wikipedia.org/wiki/Foam"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-foam",
+      "name": "Foam",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Foam",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-foam",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Foam",
+          "url": "https://en.wikipedia.org/wiki/Foam"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Flexible polymer foams yield when cell walls buckle and collapse, absorbing energy as they densify.",
+      "value": 100000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Articular cartilage yields at low stress in compression because it is mostly water constrained by a collagen network. Permeability and rate control the response, which is why joints feel different under fast and slow loading. Degeneration lowers this threshold further. The value is for healthy tissue under confined compression.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Articular cartilage yields at low stress in compression because it is mostly water constrained by a collagen network. Permeability and rate control the response, which is why joints feel different under fast and slow loading. Degeneration lowers this threshold further. The value is for healthy tissue under confined compression.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Cartilage",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Cartilage"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-cartilage",
+      "name": "Cartilage",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cartilage",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cartilage",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cartilage",
+          "url": "https://en.wikipedia.org/wiki/Cartilage"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Articular cartilage yields at low stress in compression because it is mostly water constrained by a collagen network.",
+      "value": 1000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Soft elastomeric rubber shows a low apparent yield because long polymer chains uncoil and slide instead of breaking. Under slow uniaxial tension at room temperature it flows at stresses near this level. Fillers and crosslink density can raise the value substantially. The number is for a common natural rubber compound.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Soft elastomeric rubber shows a low apparent yield because long polymer chains uncoil and slide instead of breaking. Under slow uniaxial tension at room temperature it flows at stresses near this level. Fillers and crosslink density can raise the value substantially. The number is for a common natural rubber compound.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Rubber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e6",
+          "source_url": "https://en.wikipedia.org/wiki/Rubber"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-rubber",
+      "name": "Rubber",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Rubber",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rubber",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rubber",
+          "url": "https://en.wikipedia.org/wiki/Rubber"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Soft elastomeric rubber shows a low apparent yield because long polymer chains uncoil and slide instead of breaking.",
+      "value": 1000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Water ice can support only a few megapascals before it begins to flow or fracture permanently under load, which is why glaciers creep on long timescales and skate blades bite into a thin stressed surface. Temperature matters enormously here; colder ice is stronger. The value is for polycrystalline ice near common terrestrial conditions rather than the deep interiors of icy moons.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Water ice can support only a few megapascals before it begins to flow or fracture permanently under load, which is why glaciers creep on long timescales and skate blades bite into a thin stressed surface. Temperature matters enormously here; colder ice is stronger. The value is for polycrystalline ice near common terrestrial conditions rather than the deep interiors of icy moons.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Ice",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e6",
+          "source_url": "https://en.wikipedia.org/wiki/Ice"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-ice",
+      "name": "Ice",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ice",
+          "url": "https://en.wikipedia.org/wiki/Ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Water ice can support only a few megapascals before it begins to flow or fracture permanently under load, which is why glaciers creep on long timescales and skate blades bite into a thin stressed surface.",
+      "value": 5000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fired clay bricks tolerate high compression but very little ductile deformation; treating their compressive strength as a yield proxy places them around this stress scale. Masonry works because loads are kept mostly compressive and well distributed. Mortar joints and flaws dominate real walls more than the brick material alone. The value is a representative engineering-grade brick scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fired clay bricks tolerate high compression but very little ductile deformation; treating their compressive strength as a yield proxy places them around this stress scale. Masonry works because loads are kept mostly compressive and well distributed. Mortar joints and flaws dominate real walls more than the brick material alone. The value is a representative engineering-grade brick scale.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Brick",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.5e7",
+          "source_url": "https://en.wikipedia.org/wiki/Brick"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-brick",
+      "name": "Brick",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brick",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brick",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brick",
+          "url": "https://en.wikipedia.org/wiki/Brick"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Fired clay bricks tolerate high compression but very little ductile deformation; treating their compressive strength as a yield proxy places them around this stress scale.",
+      "value": 15000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Lead yields at very low stress for a metal, which is why it deforms so readily under pressure and has long been useful in seals and radiation shielding where shape conformity matters. The softness comes from metallic bonding in a crystal that slips easily. Room-temperature creep is already relevant. The value is a common handbook number for pure lead.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Lead yields at very low stress for a metal, which is why it deforms so readily under pressure and has long been useful in seals and radiation shielding where shape conformity matters. The softness comes from metallic bonding in a crystal that slips easily. Room-temperature creep is already relevant. The value is a common handbook number for pure lead.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Lead",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.8e7",
+          "source_url": "https://en.wikipedia.org/wiki/Lead"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-lead",
+      "name": "Lead",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lead",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lead",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lead",
+          "url": "https://en.wikipedia.org/wiki/Lead"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Lead yields at very low stress for a metal, which is why it deforms so readily under pressure and has long been useful in seals and radiation shielding where shape conformity matters.",
+      "value": 18000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Common polyethylene yields at only a few tens of megapascals, which is why it makes flexible bottles and films instead of structural beams. Molecular weight, branching, and crystallinity all shift the exact threshold. Designers exploit the easy yielding to absorb impacts without brittle fracture. The value is representative for high-density polyethylene.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Common polyethylene yields at only a few tens of megapascals, which is why it makes flexible bottles and films instead of structural beams. Molecular weight, branching, and crystallinity all shift the exact threshold. Designers exploit the easy yielding to absorb impacts without brittle fracture. The value is representative for high-density polyethylene.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Polyethylene",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e7",
+          "source_url": "https://en.wikipedia.org/wiki/Polyethylene"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-polyethylene",
+      "name": "Polyethylene",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Polyethylene",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-polyethylene",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Polyethylene",
+          "url": "https://en.wikipedia.org/wiki/Polyethylene"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Common polyethylene yields at only a few tens of megapascals, which is why it makes flexible bottles and films instead of structural beams.",
+      "value": 20000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ordinary concrete carries little tensile yield because cracks propagate early, so reinforcement carries tension. In compression its apparent yield is higher due to microcrack closure and friction. Curing conditions dominate strength variation on site. The number is a compressive yield proxy for structural mixes.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ordinary concrete carries little tensile yield because cracks propagate early, so reinforcement carries tension. In compression its apparent yield is higher due to microcrack closure and friction. Curing conditions dominate strength variation on site. The number is a compressive yield proxy for structural mixes.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Concrete",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e7",
+          "source_url": "https://en.wikipedia.org/wiki/Concrete"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-concrete",
+      "name": "Concrete",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Concrete",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-concrete",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Concrete",
+          "url": "https://en.wikipedia.org/wiki/Concrete"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Ordinary concrete carries little tensile yield because cracks propagate early, so reinforcement carries tension.",
+      "value": 30000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Softwood loaded along the grain yields around this stress as lignin and cellulose microfibrils begin to slip. Across the grain the value is far lower due to anisotropy. Moisture content and knots matter greatly for real beams. The number assumes clear spruce in tension parallel to grain.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Softwood loaded along the grain yields around this stress as lignin and cellulose microfibrils begin to slip. Across the grain the value is far lower due to anisotropy. Moisture content and knots matter greatly for real beams. The number assumes clear spruce in tension parallel to grain.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Wood (Soft)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e7",
+          "source_url": "https://en.wikipedia.org/wiki/Wood"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-wood-soft",
+      "name": "Wood (Soft)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wood",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wood",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wood",
+          "url": "https://en.wikipedia.org/wiki/Wood"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Softwood loaded along the grain yields around this stress as lignin and cellulose microfibrils begin to slip.",
+      "value": 30000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "ABS plastic sits in the middle ground between tough engineering polymers and disposable consumer plastics. It can take a fair amount of stress before it yields permanently, which is why it appears in housings, toys, and protective shells. Print orientation changes the number for 3D-printed parts, but molded material is more consistent. The value here is for bulk ABS at room temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "ABS plastic sits in the middle ground between tough engineering polymers and disposable consumer plastics. It can take a fair amount of stress before it yields permanently, which is why it appears in housings, toys, and protective shells. Print orientation changes the number for 3D-printed parts, but molded material is more consistent. The value here is for bulk ABS at room temperature.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "ABS Plastic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4e7",
+          "source_url": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-abs-plastic",
+      "name": "ABS Plastic",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-acrylonitrile-butadiene-styrene",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Acrylonitrile butadiene styrene",
+          "url": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "ABS plastic sits in the middle ground between tough engineering polymers and disposable consumer plastics.",
+      "value": 40000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tendons behave viscoelastically and yield when collagen fibrils begin to slide irreversibly. Warm up raises extensibility and delays yield onset. Rehabilitation protocols keep loads well below this value for safety. The number is for bovine Achilles tendon in tension.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tendons behave viscoelastically and yield when collagen fibrils begin to slide irreversibly. Warm up raises extensibility and delays yield onset. Rehabilitation protocols keep loads well below this value for safety. The number is for bovine Achilles tendon in tension.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Tendon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e7",
+          "source_url": "https://en.wikipedia.org/wiki/Tendon"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-tendon",
+      "name": "Tendon",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tendon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tendon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tendon",
+          "url": "https://en.wikipedia.org/wiki/Tendon"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Tendons behave viscoelastically and yield when collagen fibrils begin to slide irreversibly.",
+      "value": 50000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "PLA is relatively stiff for a commodity plastic and yields at a somewhat higher stress than ABS in many room-temperature tests. That is part of why desktop 3D prints in PLA can feel crisp and rigid even when they remain somewhat brittle. Heat softens it quickly, however. The value is a representative yield stress for solid PLA.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "PLA is relatively stiff for a commodity plastic and yields at a somewhat higher stress than ABS in many room-temperature tests. That is part of why desktop 3D prints in PLA can feel crisp and rigid even when they remain somewhat brittle. Heat softens it quickly, however. The value is a representative yield stress for solid PLA.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "PLA Plastic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "6e7",
+          "source_url": "https://en.wikipedia.org/wiki/Polylactic_acid"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-pla-plastic",
+      "name": "PLA Plastic",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Polylactic_acid",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-polylactic-acid",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Polylactic acid",
+          "url": "https://en.wikipedia.org/wiki/Polylactic_acid"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "PLA is relatively stiff for a commodity plastic and yields at a somewhat higher stress than ABS in many room-temperature tests.",
+      "value": 60000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Annealed copper yields at lower stress than steels but offers excellent electrical and thermal conduction. Cold work raises yield at the cost of ductility, a trade used in springs and connectors. Purity and grain size are decisive. The number is for oxygen free copper in tension.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Annealed copper yields at lower stress than steels but offers excellent electrical and thermal conduction. Cold work raises yield at the cost of ductility, a trade used in springs and connectors. Purity and grain size are decisive. The number is for oxygen free copper in tension.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Copper",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7e7",
+          "source_url": "https://en.wikipedia.org/wiki/Copper"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-copper",
+      "name": "Copper",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Copper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-copper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Copper",
+          "url": "https://en.wikipedia.org/wiki/Copper"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Annealed copper yields at lower stress than steels but offers excellent electrical and thermal conduction.",
+      "value": 70000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Bamboo carries impressive stress along the grain because its fibers are aligned for structural efficiency. Nature effectively built a lightweight composite column long before humans named the concept. Moisture, node spacing, and species change the exact figure. The value is for mature structural bamboo loaded along the fibers.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Bamboo carries impressive stress along the grain because its fibers are aligned for structural efficiency. Nature effectively built a lightweight composite column long before humans named the concept. Moisture, node spacing, and species change the exact figure. The value is for mature structural bamboo loaded along the fibers.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Bamboo",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e7",
+          "source_url": "https://en.wikipedia.org/wiki/Bamboo"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-bamboo",
+      "name": "Bamboo",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bamboo",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bamboo",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bamboo",
+          "url": "https://en.wikipedia.org/wiki/Bamboo"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Bamboo carries impressive stress along the grain because its fibers are aligned for structural efficiency.",
+      "value": 80000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Nylon yields when polymer chains slide past each other after straightening, a process sensitive to moisture. Conditioned samples can appear tougher but softer. Designers account for this by specifying conditioning state. The value is for dry as molded nylon 6.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Nylon yields when polymer chains slide past each other after straightening, a process sensitive to moisture. Conditioned samples can appear tougher but softer. Designers account for this by specifying conditioning state. The value is for dry as molded nylon 6.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Nylon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e7",
+          "source_url": "https://en.wikipedia.org/wiki/Nylon"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-nylon",
+      "name": "Nylon",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Nylon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nylon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nylon",
+          "url": "https://en.wikipedia.org/wiki/Nylon"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Nylon yields when polymer chains slide past each other after straightening, a process sensitive to moisture.",
+      "value": 80000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cortical bone in tension yields near this stress when microcracks coalesce, while compression values are higher. Age, mineralization, and loading direction all shift the number. Implants are designed to share load to stay below this limit. The value quoted is longitudinal tension at body temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cortical bone in tension yields near this stress when microcracks coalesce, while compression values are higher. Age, mineralization, and loading direction all shift the number. Implants are designed to share load to stay below this limit. The value quoted is longitudinal tension at body temperature.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Bone",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e8",
+          "source_url": "https://en.wikipedia.org/wiki/Bone"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-bone",
+      "name": "Bone",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bone",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bone",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bone",
+          "url": "https://en.wikipedia.org/wiki/Bone"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Cortical bone in tension yields near this stress when microcracks coalesce, while compression values are higher.",
+      "value": 100000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cast iron is strong in compression but comparatively unforgiving in tension, with little plastic range before fracture. Even so, engineering tables often place its yield-like limit in the low hundreds of megapascals for rough comparison. Historic bridges and machine frames relied on its stiffness and castability. The value here is a representative gray-iron scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cast iron is strong in compression but comparatively unforgiving in tension, with little plastic range before fracture. Even so, engineering tables often place its yield-like limit in the low hundreds of megapascals for rough comparison. Historic bridges and machine frames relied on its stiffness and castability. The value here is a representative gray-iron scale.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Cast Iron",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.3e8",
+          "source_url": "https://en.wikipedia.org/wiki/Cast_iron"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-cast-iron",
+      "name": "Cast Iron",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cast_iron",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cast-iron",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cast iron",
+          "url": "https://en.wikipedia.org/wiki/Cast_iron"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Cast iron is strong in compression but comparatively unforgiving in tension, with little plastic range before fracture.",
+      "value": 130000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Magnesium alloys are lighter than aluminum and can still reach respectable yield stresses for automotive and aerospace weight savings. Corrosion and flammability concerns mean design margins stay conservative. Their appeal is specific strength rather than absolute strength. The value is for a common structural magnesium alloy.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Magnesium alloys are lighter than aluminum and can still reach respectable yield stresses for automotive and aerospace weight savings. Corrosion and flammability concerns mean design margins stay conservative. Their appeal is specific strength rather than absolute strength. The value is for a common structural magnesium alloy.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Magnesium Alloy",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.6e8",
+          "source_url": "https://en.wikipedia.org/wiki/Magnesium_alloy"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-magnesium-alloy",
+      "name": "Magnesium Alloy",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnesium_alloy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnesium-alloy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnesium alloy",
+          "url": "https://en.wikipedia.org/wiki/Magnesium_alloy"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Magnesium alloys are lighter than aluminum and can still reach respectable yield stresses for automotive and aerospace weight savings.",
+      "value": 160000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Brass yields around a couple hundred megapascals depending on composition and temper, making it easy to machine and form into valves, fittings, and musical hardware. The same workability that manufacturers love also explains why brass is not used where high-strength steels dominate. Alloying with zinc tunes the tradeoff. The number is a representative cartridge-brass scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Brass yields around a couple hundred megapascals depending on composition and temper, making it easy to machine and form into valves, fittings, and musical hardware. The same workability that manufacturers love also explains why brass is not used where high-strength steels dominate. Alloying with zinc tunes the tradeoff. The number is a representative cartridge-brass scale.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Brass",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e8",
+          "source_url": "https://en.wikipedia.org/wiki/Brass"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-brass",
+      "name": "Brass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Brass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-brass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Brass",
+          "url": "https://en.wikipedia.org/wiki/Brass"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Brass yields around a couple hundred megapascals depending on composition and temper, making it easy to machine and form into valves, fittings, and musical hardware.",
+      "value": 200000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Austenitic stainless steels like 304 trade very high yield for corrosion resistance and ductility, landing near this range in the annealed condition. Cold work can push them much higher. Kitchens, chemical plants, and architecture all live in this regime. The value here is a common room-temperature figure for 304 stainless.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Austenitic stainless steels like 304 trade very high yield for corrosion resistance and ductility, landing near this range in the annealed condition. Cold work can push them much higher. Kitchens, chemical plants, and architecture all live in this regime. The value here is a common room-temperature figure for 304 stainless.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Stainless Steel (304)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.15e8",
+          "source_url": "https://en.wikipedia.org/wiki/SAE_304_stainless_steel"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-stainless-steel-304",
+      "name": "Stainless Steel (304)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/SAE_304_stainless_steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sae-304-stainless-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "SAE 304 stainless steel",
+          "url": "https://en.wikipedia.org/wiki/SAE_304_stainless_steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Austenitic stainless steels like 304 trade very high yield for corrosion resistance and ductility, landing near this range in the annealed condition.",
+      "value": 215000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mild low carbon steel yields at a few hundred megapascals and then work hardens, giving it a forgiving ductile plateau. This makes it ideal for beams and automobile bodies. Strain aging and temperature can introduce a L\u00fcders band, the familiar yield point elongation. The value reflects a classic structural grade.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mild low carbon steel yields at a few hundred megapascals and then work hardens, giving it a forgiving ductile plateau. This makes it ideal for beams and automobile bodies. Strain aging and temperature can introduce a L\u00fcders band, the familiar yield point elongation. The value reflects a classic structural grade.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Steel (Mild)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5e8",
+          "source_url": "https://en.wikipedia.org/wiki/Steel"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-steel-mild",
+      "name": "Steel (Mild)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Steel",
+          "url": "https://en.wikipedia.org/wiki/Steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Mild low carbon steel yields at a few hundred megapascals and then work hardens, giving it a forgiving ductile plateau.",
+      "value": 250000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Commercially pure aluminum has a modest yield, but work hardening and alloying create big gains. The value here is for a common 6061 T6 alloy in tension at room temperature using the 0.2 percent offset. Welding locally erases this strengthening unless re treated. The number is a staple in mechanical design tables.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Commercially pure aluminum has a modest yield, but work hardening and alloying create big gains. The value here is for a common 6061 T6 alloy in tension at room temperature using the 0.2 percent offset. Welding locally erases this strengthening unless re treated. The number is a staple in mechanical design tables.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Aluminum",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.8e8",
+          "source_url": "https://en.wikipedia.org/wiki/Aluminium"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-aluminum",
+      "name": "Aluminum",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Aluminium",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aluminium",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aluminium",
+          "url": "https://en.wikipedia.org/wiki/Aluminium"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Commercially pure aluminum has a modest yield, but work hardening and alloying create big gains.",
+      "value": 280000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Glass lacks a conventional yield in tension because flaws trigger brittle fracture before plastic flow. Under high hydrostatic pressure or in compression it can withstand much higher stresses. Surface treatments like tempering raise the effective limit. The value shown is an upper bound in compression before crushing.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Glass lacks a conventional yield in tension because flaws trigger brittle fracture before plastic flow. Under high hydrostatic pressure or in compression it can withstand much higher stresses. Surface treatments like tempering raise the effective limit. The value shown is an upper bound in compression before crushing.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Glass",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "7e8",
+          "source_url": "https://en.wikipedia.org/wiki/Glass"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-glass",
+      "name": "Glass",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Glass",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-glass",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Glass",
+          "url": "https://en.wikipedia.org/wiki/Glass"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Glass lacks a conventional yield in tension because flaws trigger brittle fracture before plastic flow.",
+      "value": 700000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Titanium alloys combine moderate density with high yield and corrosion resistance, perfect for airframes and implants. Microstructure from alpha beta processing controls the plateau. At cryogenic temperatures yield rises further. The value is for Ti 6Al 4V in the annealed condition.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Titanium alloys combine moderate density with high yield and corrosion resistance, perfect for airframes and implants. Microstructure from alpha beta processing controls the plateau. At cryogenic temperatures yield rises further. The value is for Ti 6Al 4V in the annealed condition.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Titanium",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e8",
+          "source_url": "https://en.wikipedia.org/wiki/Titanium"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-titanium",
+      "name": "Titanium",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Titanium",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-titanium",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Titanium",
+          "url": "https://en.wikipedia.org/wiki/Titanium"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Titanium alloys combine moderate density with high yield and corrosion resistance, perfect for airframes and implants.",
+      "value": 800000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High-performance nickel superalloys such as Inconel 718 keep their strength at temperatures where ordinary steels soften badly. That is why turbine disks, rocket hardware, and hot-section fasteners lean on them. The metallurgy is more complicated than the round number suggests, but the design consequence is simple: they yield late. The value is a representative room-temperature yield strength.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High-performance nickel superalloys such as Inconel 718 keep their strength at temperatures where ordinary steels soften badly. That is why turbine disks, rocket hardware, and hot-section fasteners lean on them. The metallurgy is more complicated than the round number suggests, but the design consequence is simple: they yield late. The value is a representative room-temperature yield strength.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Inconel 718",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e9",
+          "source_url": "https://en.wikipedia.org/wiki/Inconel"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-inconel-718",
+      "name": "Inconel 718",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Inconel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-inconel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Inconel",
+          "url": "https://en.wikipedia.org/wiki/Inconel"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "High-performance nickel superalloys such as Inconel 718 keep their strength at temperatures where ordinary steels soften badly.",
+      "value": 1000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High strength low alloy steels and martensitic grades push yield into the gigapascal range. Toughness becomes the balancing act to avoid brittle failures. Heat treatment recipes tune both yield and impact resistance. The number represents a quenched and tempered structural steel.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High strength low alloy steels and martensitic grades push yield into the gigapascal range. Toughness becomes the balancing act to avoid brittle failures. Heat treatment recipes tune both yield and impact resistance. The number represents a quenched and tempered structural steel.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Steel (High Strength)",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e9",
+          "source_url": "https://en.wikipedia.org/wiki/Steel"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-steel-high-strength",
+      "name": "Steel (High Strength)",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Steel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-steel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Steel",
+          "url": "https://en.wikipedia.org/wiki/Steel"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "High strength low alloy steels and martensitic grades push yield into the gigapascal range.",
+      "value": 1000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Spider dragline silk is one of nature\u2019s most impressive fibers, combining high strength with extensibility in a protein-based material. Its yield-like onset depends on humidity and exact species, but it clearly belongs in the advanced-materials range rather than the textile one. Researchers chase synthetic analogues for the same reason. The value is a representative tensile yield scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Spider dragline silk is one of nature\u2019s most impressive fibers, combining high strength with extensibility in a protein-based material. Its yield-like onset depends on humidity and exact species, but it clearly belongs in the advanced-materials range rather than the textile one. Researchers chase synthetic analogues for the same reason. The value is a representative tensile yield scale.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Spider Silk",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.1e9",
+          "source_url": "https://en.wikipedia.org/wiki/Spider_silk"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-spider-silk",
+      "name": "Spider Silk",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Spider_silk",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-spider-silk",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Spider silk",
+          "url": "https://en.wikipedia.org/wiki/Spider_silk"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Spider dragline silk is one of nature\u2019s most impressive fibers, combining high strength with extensibility in a protein-based material.",
+      "value": 1100000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Engineering ceramics exhibit very high apparent yield in compression with limited ductility. Their grain boundaries and defects set failure in tension. Designers exploit them where hot hardness matters more than give. The value is for alumina under compressive loading.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Engineering ceramics exhibit very high apparent yield in compression with limited ductility. Their grain boundaries and defects set failure in tension. Designers exploit them where hot hardness matters more than give. The value is for alumina under compressive loading.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Ceramic",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e9",
+          "source_url": "https://en.wikipedia.org/wiki/Ceramic"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-ceramic",
+      "name": "Ceramic",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ceramic",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ceramic",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ceramic",
+          "url": "https://en.wikipedia.org/wiki/Ceramic"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Engineering ceramics exhibit very high apparent yield in compression with limited ductility.",
+      "value": 2000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ultra-high-molecular-weight polyethylene fibers sold as Dyneema or Spectra achieve multi-gigapascal strength by aligning long polymer chains. On a stress scale they compete with metals while remaining light enough to float. Ballistic protection and high-performance ropes make direct use of this. The value represents a high-grade fiber rather than the bulk plastic.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ultra-high-molecular-weight polyethylene fibers sold as Dyneema or Spectra achieve multi-gigapascal strength by aligning long polymer chains. On a stress scale they compete with metals while remaining light enough to float. Ballistic protection and high-performance ropes make direct use of this. The value represents a high-grade fiber rather than the bulk plastic.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Dyneema Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e9",
+          "source_url": "https://en.wikipedia.org/wiki/Ultra-high-molecular-weight_polyethylene"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-dyneema-fiber",
+      "name": "Dyneema Fiber",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ultra-high-molecular-weight_polyethylene",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ultra-high-molecular-weight-polyethylene",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ultra-high-molecular-weight polyethylene",
+          "url": "https://en.wikipedia.org/wiki/Ultra-high-molecular-weight_polyethylene"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Ultra-high-molecular-weight polyethylene fibers sold as Dyneema or Spectra achieve multi-gigapascal strength by aligning long polymer chains.",
+      "value": 3000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Silicon carbide is a very hard ceramic that can sustain enormous compressive stress with little permanent deformation before fracture. In engineering practice that puts its effective yield-like limit in the gigapascal range. The same bonding that gives it abrasive hardness also makes it useful in armor and high-temperature applications. The value is a representative compressive strength scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Silicon carbide is a very hard ceramic that can sustain enormous compressive stress with little permanent deformation before fracture. In engineering practice that puts its effective yield-like limit in the gigapascal range. The same bonding that gives it abrasive hardness also makes it useful in armor and high-temperature applications. The value is a representative compressive strength scale.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Silicon Carbide",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e9",
+          "source_url": "https://en.wikipedia.org/wiki/Silicon_carbide"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-silicon-carbide",
+      "name": "Silicon Carbide",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Silicon_carbide",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-silicon-carbide",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Silicon carbide",
+          "url": "https://en.wikipedia.org/wiki/Silicon_carbide"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Silicon carbide is a very hard ceramic that can sustain enormous compressive stress with little permanent deformation before fracture.",
+      "value": 3000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Kevlar fiber under tension shows a high apparent yield due to oriented aromatic chains. In composites it carries loads efficiently along the fiber direction while the matrix supports shear. Impact helmets exploit this anisotropy. The number is for single fiber tensile yield.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Kevlar fiber under tension shows a high apparent yield due to oriented aromatic chains. In composites it carries loads efficiently along the fiber direction while the matrix supports shear. Impact helmets exploit this anisotropy. The number is for single fiber tensile yield.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Kevlar Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.6e9",
+          "source_url": "https://en.wikipedia.org/wiki/Kevlar"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-kevlar-fiber",
+      "name": "Kevlar Fiber",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Kevlar",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-kevlar",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Kevlar",
+          "url": "https://en.wikipedia.org/wiki/Kevlar"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Kevlar fiber under tension shows a high apparent yield due to oriented aromatic chains.",
+      "value": 3600000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Carbon fiber composites have no single yield value; it depends on fiber direction and matrix. Along the fibers, stress at first matrix cracking is far below fiber failure. Layup design sets the usable envelope. The number is a unidirectional tensile yield along the fiber direction.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Carbon fiber composites have no single yield value; it depends on fiber direction and matrix. Along the fibers, stress at first matrix cracking is far below fiber failure. Layup design sets the usable envelope. The number is a unidirectional tensile yield along the fiber direction.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Carbon Fiber",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e9",
+          "source_url": "https://en.wikipedia.org/wiki/Carbon_fiber"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-carbon-fiber",
+      "name": "Carbon Fiber",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Carbon_fiber",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-carbon-fiber",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Carbon fiber",
+          "url": "https://en.wikipedia.org/wiki/Carbon_fiber"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Carbon fiber composites have no single yield value; it depends on fiber direction and matrix.",
+      "value": 5000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Diamond has extraordinary theoretical strength, but practical yield depends on flaws and direction. Under compression tiny samples sustain immense stresses without plasticity. Machining diamond relies on brittle fracture, not yielding. The value shown is an upper bound inferred from indentation.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Diamond has extraordinary theoretical strength, but practical yield depends on flaws and direction. Under compression tiny samples sustain immense stresses without plasticity. Machining diamond relies on brittle fracture, not yielding. The value shown is an upper bound inferred from indentation.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Diamond",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5e10",
+          "source_url": "https://en.wikipedia.org/wiki/Diamond"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-diamond",
+      "name": "Diamond",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Diamond",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-diamond",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Diamond",
+          "url": "https://en.wikipedia.org/wiki/Diamond"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Diamond has extraordinary theoretical strength, but practical yield depends on flaws and direction.",
+      "value": 50000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Graphene sheets approach ideal strength at nanoscale, with yield set by breaking sp2 bonds. Defects and grain boundaries reduce the value in larger films. Experiments use nanoindenters to probe this regime. The number represents pristine monolayer strength in tension.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Graphene sheets approach ideal strength at nanoscale, with yield set by breaking sp2 bonds. Defects and grain boundaries reduce the value in larger films. Experiments use nanoindenters to probe this regime. The number represents pristine monolayer strength in tension.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Graphene",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e11",
+          "source_url": "https://en.wikipedia.org/wiki/Graphene"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-graphene",
+      "name": "Graphene",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Graphene",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-graphene",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Graphene",
+          "url": "https://en.wikipedia.org/wiki/Graphene"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Graphene sheets approach ideal strength at nanoscale, with yield set by breaking sp2 bonds.",
+      "value": 100000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The neutron star crust behaves like an ultra strong lattice where yield refers to the onset of plastic flow under astronomical shear. Models connect this to starquakes that glitch pulsar rotation. No terrestrial lab can reproduce the conditions. The value is a theoretical estimate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The neutron star crust behaves like an ultra strong lattice where yield refers to the onset of plastic flow under astronomical shear. Models connect this to starquakes that glitch pulsar rotation. No terrestrial lab can reproduce the conditions. The value is a theoretical estimate.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Neutron Star Crust",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e25",
+          "source_url": "https://en.wikipedia.org/wiki/Neutron_star"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-neutron-star-crust",
+      "name": "Neutron Star Crust",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Neutron_star",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-neutron-star",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Neutron star",
+          "url": "https://en.wikipedia.org/wiki/Neutron_star"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "The neutron star crust behaves like an ultra strong lattice where yield refers to the onset of plastic flow under astronomical shear.",
+      "value": 1e+25,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Near a black hole event horizon, conventional material concepts blur, but effective stresses in accretion flows can be cast as yields. Magnetic fields and radiation pressure set the limits rather than crystalline defects. The language is metaphorical but useful for order of magnitude. The value signals a physics extreme.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Near a black hole event horizon, conventional material concepts blur, but effective stresses in accretion flows can be cast as yields. Magnetic fields and radiation pressure set the limits rather than crystalline defects. The language is metaphorical but useful for order of magnitude. The value signals a physics extreme.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/yield-strength.yaml",
+        "legacy_item_name": "Black Hole Horizon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e30",
+          "source_url": "https://en.wikipedia.org/wiki/Black_hole"
+        }
+      },
+      "hook": null,
+      "id": "obs:yield-strength:scenario-yield-strength-black-hole-horizon",
+      "name": "Black Hole Horizon",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Black_hole",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-black-hole",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Black hole",
+          "url": "https://en.wikipedia.org/wiki/Black_hole"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-yield-strength-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/yield-strength.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/yield-strength.yaml"
+        }
+      ],
+      "summary_short": "Near a black hole event horizon, conventional material concepts blur, but effective stresses in accretion flows can be cast as yields.",
+      "value": 1e+30,
+      "value_type": "derived",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1,
+      "description": "Pascals measure stress as force per unit area and serve as the base unit for yield strength. Reporting in pascals keeps comparisons across metals, polymers, and tissues consistent. Engineers usually think in megapascals for convenience. All item values are stored in pascals before conversion.",
+      "name": "pascals",
+      "symbol": "Pa"
+    },
+    {
+      "conversion_factor": "1e-6",
+      "description": "Megapascals compress large pascal numbers into human readable figures for structural materials. A hundred to a thousand megapascals covers most metals. Using MPa aligns with datasheets and testing reports. Convert by multiplying pascals by 1e-6.",
+      "name": "megapascals",
+      "symbol": "MPa"
+    },
+    {
+      "conversion_factor": "1e-9",
+      "description": "Gigapascals describe very high yield ranges seen in advanced steels, ceramics, and theoretical limits. It is also natural for hardness and indentation scales. While not daily for builders, researchers live in this unit. Convert by multiplying pascals by 1e-9.",
+      "name": "gigapascals",
+      "symbol": "GPa"
+    }
+  ]
+}

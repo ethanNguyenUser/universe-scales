@@ -1,0 +1,2931 @@
+{
+  "base_unit": "hertz",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 54,
+    "candidate_shortfall_to_preferred_target": 0,
+    "empty_bin_count": 4,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 50,
+    "selected_primary_count": 20,
+    "selected_secondary_count": 30,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 50
+    },
+    "target_selected_count": 50
+  },
+  "description_format": "markdown",
+  "dimension": "frequency",
+  "dimension_description": "Frequency measures how often something repeats per second, from once-per-cosmic-era cycles to electromagnetic radiation oscillating millions of trillions of times each second. Some entries here are direct oscillation frequencies, while others are derived from a reported period using frequency = 1 / period. That makes this dimension especially useful for connecting rotations, rhythms, waves, resonance, and light on a single logarithmic axis.",
+  "frontend_group": "fields",
+  "frontend_group_label": "Fields, Waves & Radiation",
+  "frontend_order": 510,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "If the age of the universe were treated as one period, this is the corresponding frequency.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "If the age of the universe were treated as one period, this is the corresponding frequency.",
+      "facts": {
+        "canonical_name": "Inverse age of the universe",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "1 year converted to seconds before taking the reciprocal.",
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "2.285e-18",
+          "source_basis": "Frequency computed as one divided by the reported age.",
+          "source_unit": "years",
+          "source_url": "https://en.wikipedia.org/wiki/Age_of_the_universe",
+          "source_value_text": "13.8 billion years"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-inverse-age-of-universe",
+      "name": "Inverse age of the universe",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "inverse of elapsed time"
+      },
+      "source": "https://en.wikipedia.org/wiki/Age_of_the_universe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-age-of-the-universe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Age of the universe",
+          "url": "https://en.wikipedia.org/wiki/Age_of_the_universe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "If the age of the universe were treated as one period, this is the corresponding frequency.",
+      "value": 2.285e-18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frequency corresponding to the Sun taking about 230 million years to orbit the Milky Way once.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frequency corresponding to the Sun taking about 230 million years to orbit the Milky Way once.",
+      "facts": {
+        "canonical_name": "Galactic year",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "1.378e-16",
+          "source_basis": "Frequency computed as one orbit per galactic year.",
+          "source_unit": "years",
+          "source_url": "https://en.wikipedia.org/wiki/Galactic_year",
+          "source_value_text": "230 million years"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-galactic-year",
+      "name": "Galactic year",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "Milky Way orbital frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Galactic_year",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-galactic-year",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Galactic year",
+          "url": "https://en.wikipedia.org/wiki/Galactic_year"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Frequency corresponding to the Sun taking about 230 million years to orbit the Milky Way once.",
+      "value": 1.378e-16,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frequency corresponding to the Sun's roughly 11-year activity cycle.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frequency corresponding to the Sun's roughly 11-year activity cycle.",
+      "facts": {
+        "canonical_name": "Solar cycle",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "2.882e-09",
+          "source_basis": "Frequency computed from the quoted solar-cycle period.",
+          "source_unit": "years",
+          "source_url": "https://en.wikipedia.org/wiki/Solar_cycle",
+          "source_value_text": "11 years"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-solar-cycle",
+      "name": "Solar cycle",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "magnetic activity cycle frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Solar_cycle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-solar-cycle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Solar cycle",
+          "url": "https://en.wikipedia.org/wiki/Solar_cycle"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Frequency corresponding to the Sun's roughly 11-year activity cycle.",
+      "value": 2.882e-09,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frequency of Earth's yearly orbit around the Sun.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frequency of Earth's yearly orbit around the Sun.",
+      "facts": {
+        "canonical_name": "Earth orbit around the Sun",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "3.169e-08",
+          "source_basis": "Frequency computed from one revolution per year.",
+          "source_unit": "year",
+          "source_url": "https://en.wikipedia.org/wiki/Orbital_period",
+          "source_value_text": "1 year"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-earth-orbit-frequency",
+      "name": "Earth orbit around the Sun",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "orbital frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Orbital_period",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-orbital-period",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Orbital period",
+          "url": "https://en.wikipedia.org/wiki/Orbital_period"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Frequency of Earth's yearly orbit around the Sun.",
+      "value": 3.169e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frequency corresponding to one full lunar phase cycle.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frequency corresponding to one full lunar phase cycle.",
+      "facts": {
+        "canonical_name": "Synodic month",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "3.919e-07",
+          "source_basis": "Frequency computed from the synodic month.",
+          "source_unit": "days",
+          "source_url": "https://en.wikipedia.org/wiki/Lunar_month",
+          "source_value_text": "29.53 days"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-synodic-month",
+      "name": "Synodic month",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "lunar phase cycle frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lunar_month",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lunar-month",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lunar month",
+          "url": "https://en.wikipedia.org/wiki/Lunar_month"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Frequency corresponding to one full lunar phase cycle.",
+      "value": 3.919e-07,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frequency corresponding to a once-per-day circadian rhythm.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frequency corresponding to a once-per-day circadian rhythm.",
+      "facts": {
+        "canonical_name": "Circadian cycle",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "1.157e-05",
+          "source_basis": "Frequency computed from a 24-hour cycle.",
+          "source_unit": "hours",
+          "source_url": "https://en.wikipedia.org/wiki/Circadian_rhythm",
+          "source_value_text": "24 hours"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-circadian-rhythm",
+      "name": "Circadian cycle",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "daily biological rhythm"
+      },
+      "source": "https://en.wikipedia.org/wiki/Circadian_rhythm",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-circadian-rhythm",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Circadian rhythm",
+          "url": "https://en.wikipedia.org/wiki/Circadian_rhythm"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Frequency corresponding to a once-per-day circadian rhythm.",
+      "value": 1.157e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Frequency corresponding to a semidiurnal tide, about one cycle every 12.4 hours.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Frequency corresponding to a semidiurnal tide, about one cycle every 12.4 hours.",
+      "facts": {
+        "canonical_name": "Semidiurnal tide",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "2.237e-05",
+          "source_basis": "Frequency computed from the semidiurnal tidal period.",
+          "source_unit": "hours",
+          "source_url": "https://en.wikipedia.org/wiki/Tide",
+          "source_value_text": "12.42 hours"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-semidiurnal-tide",
+      "name": "Semidiurnal tide",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "tidal cycle frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Tide",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tide",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tide",
+          "url": "https://en.wikipedia.org/wiki/Tide"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Frequency corresponding to a semidiurnal tide, about one cycle every 12.4 hours.",
+      "value": 2.237e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A minute hand completes one full turn per hour.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A minute hand completes one full turn per hour.",
+      "facts": {
+        "canonical_name": "Minute hand revolution",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = 1 / period",
+          "method": "derived",
+          "original_value_text": "0.0002778",
+          "source_basis": "Frequency computed from one revolution every hour.",
+          "source_unit": "hours",
+          "source_url": "https://en.wikipedia.org/wiki/Clock",
+          "source_value_text": "1 hour per revolution"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-minute-hand",
+      "name": "Minute hand revolution",
+      "qualifiers": {
+        "derivation": "frequency = 1 / period",
+        "measurement": "clock hand rotation frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Clock",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-clock",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Clock",
+          "url": "https://en.wikipedia.org/wiki/Clock"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A minute hand completes one full turn per hour.",
+      "value": 0.0002778,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative adult breathing rate of about 15 breaths per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative adult breathing rate of about 15 breaths per minute.",
+      "facts": {
+        "canonical_name": "Resting breathing",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.25",
+          "source_basis": "Converted from breaths per minute to hertz.",
+          "source_unit": "breaths/min",
+          "source_url": "https://en.wikipedia.org/wiki/Respiratory_rate",
+          "source_value_text": "15 breaths per minute"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-resting-breathing",
+      "name": "Resting breathing",
+      "qualifiers": {
+        "measurement": "breathing rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Respiratory_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-respiratory-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Respiratory rate",
+          "url": "https://en.wikipedia.org/wiki/Respiratory_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative adult breathing rate of about 15 breaths per minute.",
+      "value": 0.25,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A slow metronome tempo of 40 beats per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A slow metronome tempo of 40 beats per minute.",
+      "facts": {
+        "canonical_name": "Slow metronome",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.667",
+          "source_basis": "Converted from beats per minute to hertz.",
+          "source_unit": "beats/min",
+          "source_url": "https://en.wikipedia.org/wiki/Metronome",
+          "source_value_text": "40 beats per minute"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-slow-metronome",
+      "name": "Slow metronome",
+      "qualifiers": {
+        "measurement": "tempo pulse rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Metronome",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-metronome",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Metronome",
+          "url": "https://en.wikipedia.org/wiki/Metronome"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A slow metronome tempo of 40 beats per minute.",
+      "value": 0.667,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative resting heart rate of about 72 beats per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative resting heart rate of about 72 beats per minute.",
+      "facts": {
+        "canonical_name": "Resting heartbeat",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.2",
+          "source_basis": "Converted from beats per minute to hertz.",
+          "source_unit": "beats/min",
+          "source_url": "https://en.wikipedia.org/wiki/Heart_rate",
+          "source_value_text": "72 beats per minute"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-resting-heartbeat",
+      "name": "Resting heartbeat",
+      "qualifiers": {
+        "measurement": "heart rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Heart_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-heart-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Heart rate",
+          "url": "https://en.wikipedia.org/wiki/Heart_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative resting heart rate of about 72 beats per minute.",
+      "value": 1.2,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative walking cadence of about 108 steps per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative walking cadence of about 108 steps per minute.",
+      "facts": {
+        "canonical_name": "Human walking cadence",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.8",
+          "source_basis": "Converted from steps per minute to hertz.",
+          "source_unit": "steps/min",
+          "source_url": "https://en.wikipedia.org/wiki/Cadence_(gait)",
+          "source_value_text": "108 steps per minute"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-walking-cadence",
+      "name": "Human walking cadence",
+      "qualifiers": {
+        "measurement": "step frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cadence_(gait)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cadence-gait",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cadence (gait)",
+          "url": "https://en.wikipedia.org/wiki/Cadence_(gait)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative walking cadence of about 108 steps per minute.",
+      "value": 1.8,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A ceiling fan spinning at roughly 180 revolutions per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A ceiling fan spinning at roughly 180 revolutions per minute.",
+      "facts": {
+        "canonical_name": "Ceiling fan on high",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3.0",
+          "source_basis": "Converted from revolutions per minute to hertz.",
+          "source_unit": "rpm",
+          "source_url": "https://en.wikipedia.org/wiki/Ceiling_fan",
+          "source_value_text": "180 rpm"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-ceiling-fan",
+      "name": "Ceiling fan on high",
+      "qualifiers": {
+        "measurement": "rotational frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Ceiling_fan",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ceiling-fan",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ceiling fan",
+          "url": "https://en.wikipedia.org/wiki/Ceiling_fan"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A ceiling fan spinning at roughly 180 revolutions per minute.",
+      "value": 3.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The fundamental Schumann resonance of the Earth-ionosphere cavity.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The fundamental Schumann resonance of the Earth-ionosphere cavity.",
+      "facts": {
+        "canonical_name": "Schumann resonance",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7.83",
+          "source_basis": "Reported as the fundamental Schumann resonance.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Schumann_resonances",
+          "source_value_text": "7.83 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-schumann-resonance",
+      "name": "Schumann resonance",
+      "qualifiers": {
+        "measurement": "fundamental resonant mode"
+      },
+      "source": "https://en.wikipedia.org/wiki/Schumann_resonances",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-schumann-resonances",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Schumann resonances",
+          "url": "https://en.wikipedia.org/wiki/Schumann_resonances"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The fundamental Schumann resonance of the Earth-ionosphere cavity.",
+      "value": 7.83,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative alpha-brainwave frequency near 10 hertz.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative alpha-brainwave frequency near 10 hertz.",
+      "facts": {
+        "canonical_name": "Alpha brain waves",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10.0",
+          "source_basis": "Representative alpha-wave frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Alpha_wave",
+          "source_value_text": "10 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-alpha-wave",
+      "name": "Alpha brain waves",
+      "qualifiers": {
+        "measurement": "representative alpha rhythm"
+      },
+      "source": "https://en.wikipedia.org/wiki/Alpha_wave",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-alpha-wave",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Alpha wave",
+          "url": "https://en.wikipedia.org/wiki/Alpha_wave"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative alpha-brainwave frequency near 10 hertz.",
+      "value": 10.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A car engine idling around 800 revolutions per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A car engine idling around 800 revolutions per minute.",
+      "facts": {
+        "canonical_name": "Car engine idle",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "13.33",
+          "source_basis": "Converted from revolutions per minute to hertz.",
+          "source_unit": "rpm",
+          "source_url": "https://en.wikipedia.org/wiki/Idle_speed",
+          "source_value_text": "800 rpm"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-engine-idle",
+      "name": "Car engine idle",
+      "qualifiers": {
+        "measurement": "crankshaft rotation frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Idle_speed",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-idle-speed",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Idle speed",
+          "url": "https://en.wikipedia.org/wiki/Idle_speed"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A car engine idling around 800 revolutions per minute.",
+      "value": 13.33,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A washing machine spin speed of about 1200 revolutions per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A washing machine spin speed of about 1200 revolutions per minute.",
+      "facts": {
+        "canonical_name": "Washing machine spin cycle",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "20.0",
+          "source_basis": "Converted from revolutions per minute to hertz.",
+          "source_unit": "rpm",
+          "source_url": "https://en.wikipedia.org/wiki/Washing_machine",
+          "source_value_text": "1200 rpm"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-washing-machine",
+      "name": "Washing machine spin cycle",
+      "qualifiers": {
+        "measurement": "drum rotation frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Washing_machine",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-washing-machine",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Washing machine",
+          "url": "https://en.wikipedia.org/wiki/Washing_machine"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A washing machine spin speed of about 1200 revolutions per minute.",
+      "value": 20.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative low-frequency cat purr near 25 hertz.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative low-frequency cat purr near 25 hertz.",
+      "facts": {
+        "canonical_name": "Cat purr",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "25.0",
+          "source_basis": "Representative purr-frequency value.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Purr",
+          "source_value_text": "25 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-cat-purr",
+      "name": "Cat purr",
+      "qualifiers": {
+        "measurement": "representative purr frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Purr",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-purr",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Purr",
+          "url": "https://en.wikipedia.org/wiki/Purr"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative low-frequency cat purr near 25 hertz.",
+      "value": 25.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The common mains-electricity frequency used in North America.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The common mains-electricity frequency used in North America.",
+      "facts": {
+        "canonical_name": "AC mains power",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "60.0",
+          "source_basis": "Reported mains-electricity frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Mains_electricity",
+          "source_value_text": "60 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-ac-mains",
+      "name": "AC mains power",
+      "qualifiers": {
+        "measurement": "line frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Mains_electricity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mains-electricity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mains electricity",
+          "url": "https://en.wikipedia.org/wiki/Mains_electricity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The common mains-electricity frequency used in North America.",
+      "value": 60.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative hummingbird wingbeat rate around 70 beats per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative hummingbird wingbeat rate around 70 beats per second.",
+      "facts": {
+        "canonical_name": "Hummingbird wingbeat",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "70.0",
+          "source_basis": "Representative hummingbird wingbeat frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Hummingbird",
+          "source_value_text": "70 beats per second"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-hummingbird-wingbeat",
+      "name": "Hummingbird wingbeat",
+      "qualifiers": {
+        "measurement": "wingbeat frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hummingbird",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hummingbird",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hummingbird",
+          "url": "https://en.wikipedia.org/wiki/Hummingbird"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative hummingbird wingbeat rate around 70 beats per second.",
+      "value": 70.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative male speaking fundamental frequency.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative male speaking fundamental frequency.",
+      "facts": {
+        "canonical_name": "Male speaking pitch",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "120.0",
+          "source_basis": "Representative male voice fundamental.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Voice_frequency",
+          "source_value_text": "120 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-male-voice",
+      "name": "Male speaking pitch",
+      "qualifiers": {
+        "measurement": "fundamental frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Voice_frequency",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-voice-frequency",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Voice frequency",
+          "url": "https://en.wikipedia.org/wiki/Voice_frequency"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative male speaking fundamental frequency.",
+      "value": 120.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative female speaking fundamental frequency.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative female speaking fundamental frequency.",
+      "facts": {
+        "canonical_name": "Female speaking pitch",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "210.0",
+          "source_basis": "Representative female voice fundamental.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Voice_frequency",
+          "source_value_text": "210 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-female-voice",
+      "name": "Female speaking pitch",
+      "qualifiers": {
+        "measurement": "fundamental frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Voice_frequency",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-voice-frequency",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Voice frequency",
+          "url": "https://en.wikipedia.org/wiki/Voice_frequency"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative female speaking fundamental frequency.",
+      "value": 210.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative honey-bee wingbeat frequency.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative honey-bee wingbeat frequency.",
+      "facts": {
+        "canonical_name": "Honey bee wingbeat",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "230.0",
+          "source_basis": "Representative honey-bee wingbeat frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Honey_bee",
+          "source_value_text": "230 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-honey-bee-wingbeat",
+      "name": "Honey bee wingbeat",
+      "qualifiers": {
+        "measurement": "wingbeat frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Honey_bee",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-honey-bee",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Honey bee",
+          "url": "https://en.wikipedia.org/wiki/Honey_bee"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative honey-bee wingbeat frequency.",
+      "value": 230.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The musical note middle C in equal temperament.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The musical note middle C in equal temperament.",
+      "facts": {
+        "canonical_name": "Middle C",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "261.63",
+          "source_basis": "Reported equal-temperament note frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Middle_C",
+          "source_value_text": "261.63 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-middle-c",
+      "name": "Middle C",
+      "qualifiers": {
+        "measurement": "musical note frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Middle_C",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-middle-c",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Middle C",
+          "url": "https://en.wikipedia.org/wiki/Middle_C"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The musical note middle C in equal temperament.",
+      "value": 261.63,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Standard concert pitch used for orchestral tuning.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Standard concert pitch used for orchestral tuning.",
+      "facts": {
+        "canonical_name": "Concert A4",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "440.0",
+          "source_basis": "Standard concert-pitch reference.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Concert_pitch",
+          "source_value_text": "440 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-concert-a4",
+      "name": "Concert A4",
+      "qualifiers": {
+        "measurement": "musical reference pitch"
+      },
+      "source": "https://en.wikipedia.org/wiki/Concert_pitch",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-concert-pitch",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Concert pitch",
+          "url": "https://en.wikipedia.org/wiki/Concert_pitch"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Standard concert pitch used for orchestral tuning.",
+      "value": 440.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative mosquito wingbeat frequency that creates the familiar whine.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative mosquito wingbeat frequency that creates the familiar whine.",
+      "facts": {
+        "canonical_name": "Mosquito wingbeat",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "500.0",
+          "source_basis": "Representative mosquito wingbeat frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Mosquito",
+          "source_value_text": "500 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-mosquito-wingbeat",
+      "name": "Mosquito wingbeat",
+      "qualifiers": {
+        "measurement": "wingbeat frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Mosquito",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mosquito",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mosquito",
+          "url": "https://en.wikipedia.org/wiki/Mosquito"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative mosquito wingbeat frequency that creates the familiar whine.",
+      "value": 500.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The A one octave above concert A4.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The A one octave above concert A4.",
+      "facts": {
+        "canonical_name": "Concert A5",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "880.0",
+          "source_basis": "Equal-temperament note frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Concert_pitch",
+          "source_value_text": "880 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-concert-a5",
+      "name": "Concert A5",
+      "qualifiers": {
+        "measurement": "musical note frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Concert_pitch",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-concert-pitch",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Concert pitch",
+          "url": "https://en.wikipedia.org/wiki/Concert_pitch"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The A one octave above concert A4.",
+      "value": 880.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A high orchestral note frequency near the top of common instrument ranges.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A high orchestral note frequency near the top of common instrument ranges.",
+      "facts": {
+        "canonical_name": "Violin high E7",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2637.0",
+          "source_basis": "Equal-temperament note frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Musical_note",
+          "source_value_text": "2637 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-high-e7",
+      "name": "Violin high E7",
+      "qualifiers": {
+        "measurement": "musical note frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Musical_note",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-musical-note",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Musical note",
+          "url": "https://en.wikipedia.org/wiki/Musical_note"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A high orchestral note frequency near the top of common instrument ranges.",
+      "value": 2637.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The highest C on a standard piano keyboard.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The highest C on a standard piano keyboard.",
+      "facts": {
+        "canonical_name": "Piano top C8",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "4186.0",
+          "source_basis": "Piano-key frequency table.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Piano_key_frequencies",
+          "source_value_text": "4186 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-piano-c8",
+      "name": "Piano top C8",
+      "qualifiers": {
+        "measurement": "musical note frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Piano_key_frequencies",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-piano-key-frequencies",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Piano key frequencies",
+          "url": "https://en.wikipedia.org/wiki/Piano_key_frequencies"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The highest C on a standard piano keyboard.",
+      "value": 4186.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A high-speed dental drill running around 400,000 revolutions per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A high-speed dental drill running around 400,000 revolutions per minute.",
+      "facts": {
+        "canonical_name": "Dentist drill rotation",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "6667.0",
+          "source_basis": "Converted from revolutions per minute to hertz.",
+          "source_unit": "rpm",
+          "source_url": "https://en.wikipedia.org/wiki/Dental_drill",
+          "source_value_text": "400,000 rpm"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-dentist-drill",
+      "name": "Dentist drill rotation",
+      "qualifiers": {
+        "measurement": "rotational frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Dental_drill",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dental-drill",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dental drill",
+          "url": "https://en.wikipedia.org/wiki/Dental_drill"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A high-speed dental drill running around 400,000 revolutions per minute.",
+      "value": 6667.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The conventional upper edge of young human hearing.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The conventional upper edge of young human hearing.",
+      "facts": {
+        "canonical_name": "Upper limit of human hearing",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "20000.0",
+          "source_basis": "Conventional human hearing range upper bound.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Hearing_range",
+          "source_value_text": "20,000 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-hearing-upper-limit",
+      "name": "Upper limit of human hearing",
+      "qualifiers": {
+        "measurement": "audible upper bound"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hearing_range",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hearing-range",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hearing range",
+          "url": "https://en.wikipedia.org/wiki/Hearing_range"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The conventional upper edge of young human hearing.",
+      "value": 20000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative dog-whistle frequency just above normal human hearing.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative dog-whistle frequency just above normal human hearing.",
+      "facts": {
+        "canonical_name": "Dog whistle",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from kilohertz to hertz.",
+          "method": "converted",
+          "original_value_text": "23000.0",
+          "source_basis": "Representative dog-whistle frequency.",
+          "source_unit": "kHz",
+          "source_url": "https://en.wikipedia.org/wiki/Dog_whistle",
+          "source_value_text": "23 kHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-dog-whistle",
+      "name": "Dog whistle",
+      "qualifiers": {
+        "measurement": "representative whistle frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Dog_whistle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dog-whistle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dog whistle",
+          "url": "https://en.wikipedia.org/wiki/Dog_whistle"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative dog-whistle frequency just above normal human hearing.",
+      "value": 23000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative bat echolocation call frequency.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative bat echolocation call frequency.",
+      "facts": {
+        "canonical_name": "Bat echolocation",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from kilohertz to hertz.",
+          "method": "converted",
+          "original_value_text": "50000.0",
+          "source_basis": "Representative bat echolocation frequency.",
+          "source_unit": "kHz",
+          "source_url": "https://en.wikipedia.org/wiki/Bat",
+          "source_value_text": "50 kHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-bat-echolocation",
+      "name": "Bat echolocation",
+      "qualifiers": {
+        "measurement": "representative call frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bat",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bat",
+          "url": "https://en.wikipedia.org/wiki/Bat"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative bat echolocation call frequency.",
+      "value": 50000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative medical-ultrasound probe frequency around one megahertz.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative medical-ultrasound probe frequency around one megahertz.",
+      "facts": {
+        "canonical_name": "Medical ultrasound probe",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from megahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "1000000.0",
+          "source_basis": "Representative medical-ultrasound operating frequency.",
+          "source_unit": "MHz",
+          "source_url": "https://en.wikipedia.org/wiki/Medical_ultrasound",
+          "source_value_text": "1 MHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-medical-ultrasound",
+      "name": "Medical ultrasound probe",
+      "qualifiers": {
+        "measurement": "representative ultrasound transducer frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Medical_ultrasound",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-medical-ultrasound",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Medical ultrasound",
+          "url": "https://en.wikipedia.org/wiki/Medical_ultrasound"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative medical-ultrasound probe frequency around one megahertz.",
+      "value": 1000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The proton nuclear-magnetic-resonance frequency in a 1-tesla magnetic field.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The proton nuclear-magnetic-resonance frequency in a 1-tesla magnetic field.",
+      "facts": {
+        "canonical_name": "Proton NMR at 1 tesla",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from megahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "42580000.0",
+          "source_basis": "Reported proton gyromagnetic response at 1 tesla.",
+          "source_unit": "MHz",
+          "source_url": "https://en.wikipedia.org/wiki/Larmor_precession",
+          "source_value_text": "42.58 MHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-proton-nmr-1t",
+      "name": "Proton NMR at 1 tesla",
+      "qualifiers": {
+        "measurement": "Larmor precession frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Larmor_precession",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-larmor-precession",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Larmor precession",
+          "url": "https://en.wikipedia.org/wiki/Larmor_precession"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The proton nuclear-magnetic-resonance frequency in a 1-tesla magnetic field.",
+      "value": 42580000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The primary civilian GPS L1 carrier frequency.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The primary civilian GPS L1 carrier frequency.",
+      "facts": {
+        "canonical_name": "GPS L1 carrier",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from megahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "1575420000.0",
+          "source_basis": "Published GPS L1 carrier frequency.",
+          "source_unit": "MHz",
+          "source_url": "https://en.wikipedia.org/wiki/GPS_signals",
+          "source_value_text": "1575.42 MHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-gps-l1",
+      "name": "GPS L1 carrier",
+      "qualifiers": {
+        "measurement": "navigation signal carrier frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/GPS_signals",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gps-signals",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "GPS signals",
+          "url": "https://en.wikipedia.org/wiki/GPS_signals"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The primary civilian GPS L1 carrier frequency.",
+      "value": 1575420000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative Bluetooth carrier frequency in the 2.4-gigahertz ISM band.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative Bluetooth carrier frequency in the 2.4-gigahertz ISM band.",
+      "facts": {
+        "canonical_name": "Bluetooth channel",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from gigahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "2402000000.0",
+          "source_basis": "Representative Bluetooth channel frequency.",
+          "source_unit": "GHz",
+          "source_url": "https://en.wikipedia.org/wiki/Bluetooth",
+          "source_value_text": "2.402 GHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-bluetooth",
+      "name": "Bluetooth channel",
+      "qualifiers": {
+        "measurement": "carrier frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bluetooth",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bluetooth",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bluetooth",
+          "url": "https://en.wikipedia.org/wiki/Bluetooth"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative Bluetooth carrier frequency in the 2.4-gigahertz ISM band.",
+      "value": 2402000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The common microwave-oven operating frequency used to excite water molecules.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The common microwave-oven operating frequency used to excite water molecules.",
+      "facts": {
+        "canonical_name": "Microwave oven",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from gigahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "2450000000.0",
+          "source_basis": "Published microwave-oven operating frequency.",
+          "source_unit": "GHz",
+          "source_url": "https://en.wikipedia.org/wiki/Microwave_oven",
+          "source_value_text": "2.45 GHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-microwave-oven",
+      "name": "Microwave oven",
+      "qualifiers": {
+        "measurement": "magnetron operating frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Microwave_oven",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-microwave-oven",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Microwave oven",
+          "url": "https://en.wikipedia.org/wiki/Microwave_oven"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The common microwave-oven operating frequency used to excite water molecules.",
+      "value": 2450000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative wireless-network carrier in the 5-gigahertz Wi-Fi band.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative wireless-network carrier in the 5-gigahertz Wi-Fi band.",
+      "facts": {
+        "canonical_name": "Wi-Fi 5 gigahertz band",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from gigahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "5000000000.0",
+          "source_basis": "Representative Wi-Fi band frequency.",
+          "source_unit": "GHz",
+          "source_url": "https://en.wikipedia.org/wiki/Wi-Fi",
+          "source_value_text": "5 GHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-wifi-5ghz",
+      "name": "Wi-Fi 5 gigahertz band",
+      "qualifiers": {
+        "measurement": "wireless carrier frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Wi-Fi",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wi-fi",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wi-Fi",
+          "url": "https://en.wikipedia.org/wiki/Wi-Fi"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative wireless-network carrier in the 5-gigahertz Wi-Fi band.",
+      "value": 5000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The exact hyperfine transition used to define the SI second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The exact hyperfine transition used to define the SI second.",
+      "facts": {
+        "canonical_name": "Cesium-133 clock transition",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9192631770.0",
+          "source_basis": "Exact cesium-133 hyperfine transition frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://www.nist.gov/pml/time-and-frequency-division/time-realization/cesium-fountain-atomic-clocks",
+          "source_value_text": "9,192,631,770 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-cesium-clock-transition",
+      "name": "Cesium-133 clock transition",
+      "qualifiers": {
+        "measurement": "hyperfine transition frequency"
+      },
+      "source": "https://www.nist.gov/pml/time-and-frequency-division/time-realization/cesium-fountain-atomic-clocks",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-nist-gov-pml-time-and-frequency-division-time-realization-cesium-fountain-atomic-clocks",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.nist.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "cesium-fountain-atomic-clocks",
+          "url": "https://www.nist.gov/pml/time-and-frequency-division/time-realization/cesium-fountain-atomic-clocks"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "The exact hyperfine transition used to define the SI second.",
+      "value": 9192631770.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative automotive radar carrier around 24 gigahertz.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative automotive radar carrier around 24 gigahertz.",
+      "facts": {
+        "canonical_name": "Automotive radar",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from gigahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "24000000000.0",
+          "source_basis": "Representative automotive-radar frequency.",
+          "source_unit": "GHz",
+          "source_url": "https://en.wikipedia.org/wiki/Radar",
+          "source_value_text": "24 GHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-automotive-radar",
+      "name": "Automotive radar",
+      "qualifiers": {
+        "measurement": "radar carrier frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Radar",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-radar",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Radar",
+          "url": "https://en.wikipedia.org/wiki/Radar"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative automotive radar carrier around 24 gigahertz.",
+      "value": 24000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative high-band 5G carrier around 28 gigahertz.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative high-band 5G carrier around 28 gigahertz.",
+      "facts": {
+        "canonical_name": "5G FR2 millimeter wave",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from gigahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "28000000000.0",
+          "source_basis": "Representative 5G FR2 carrier frequency.",
+          "source_unit": "GHz",
+          "source_url": "https://en.wikipedia.org/wiki/5G_NR_frequency_bands",
+          "source_value_text": "28 GHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:scenario-frequency-5g-fr2",
+      "name": "5G FR2 millimeter wave",
+      "qualifiers": {
+        "measurement": "wireless carrier frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/5G_NR_frequency_bands",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-5g-nr-frequency-bands",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "5G NR frequency bands",
+          "url": "https://en.wikipedia.org/wiki/5G_NR_frequency_bands"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative high-band 5G carrier around 28 gigahertz.",
+      "value": 28000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative frequency in the terahertz gap between microwaves and infrared.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative frequency in the terahertz gap between microwaves and infrared.",
+      "facts": {
+        "canonical_name": "Terahertz radiation",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from terahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "1000000000000.0",
+          "source_basis": "Representative terahertz-radiation frequency.",
+          "source_unit": "THz",
+          "source_url": "https://en.wikipedia.org/wiki/Terahertz_radiation",
+          "source_value_text": "1 THz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-terahertz-radiation",
+      "name": "Terahertz radiation",
+      "qualifiers": {
+        "measurement": "representative terahertz frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Terahertz_radiation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-terahertz-radiation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Terahertz radiation",
+          "url": "https://en.wikipedia.org/wiki/Terahertz_radiation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative frequency in the terahertz gap between microwaves and infrared.",
+      "value": 1000000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Optical frequency corresponding to the common 10.6-micrometer CO2 laser line.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Optical frequency corresponding to the common 10.6-micrometer CO2 laser line.",
+      "facts": {
+        "canonical_name": "Carbon dioxide laser",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = c / wavelength",
+          "method": "derived",
+          "original_value_text": "28300000000000.0",
+          "source_basis": "Frequency computed from wavelength using c / lambda.",
+          "source_unit": "micrometers",
+          "source_url": "https://en.wikipedia.org/wiki/Carbon_dioxide_laser",
+          "source_value_text": "10.6 um wavelength"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-co2-laser",
+      "name": "Carbon dioxide laser",
+      "qualifiers": {
+        "derivation": "frequency = c / wavelength",
+        "measurement": "optical frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Carbon_dioxide_laser",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-carbon-dioxide-laser",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Carbon dioxide laser",
+          "url": "https://en.wikipedia.org/wiki/Carbon_dioxide_laser"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Optical frequency corresponding to the common 10.6-micrometer CO2 laser line.",
+      "value": 28300000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Optical frequency corresponding to red light near 650 nanometers.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Optical frequency corresponding to red light near 650 nanometers.",
+      "facts": {
+        "canonical_name": "Red light",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = c / wavelength",
+          "method": "derived",
+          "original_value_text": "462000000000000.0",
+          "source_basis": "Frequency computed from wavelength using c / lambda.",
+          "source_unit": "nanometers",
+          "source_url": "https://en.wikipedia.org/wiki/Visible_spectrum",
+          "source_value_text": "650 nm wavelength"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-red-light",
+      "name": "Red light",
+      "qualifiers": {
+        "derivation": "frequency = c / wavelength",
+        "measurement": "optical frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Visible_spectrum",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-visible-spectrum",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Visible spectrum",
+          "url": "https://en.wikipedia.org/wiki/Visible_spectrum"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Optical frequency corresponding to red light near 650 nanometers.",
+      "value": 462000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Optical frequency corresponding to green light near 550 nanometers.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Optical frequency corresponding to green light near 550 nanometers.",
+      "facts": {
+        "canonical_name": "Green light",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = c / wavelength",
+          "method": "derived",
+          "original_value_text": "545000000000000.0",
+          "source_basis": "Frequency computed from wavelength using c / lambda.",
+          "source_unit": "nanometers",
+          "source_url": "https://en.wikipedia.org/wiki/Visible_spectrum",
+          "source_value_text": "550 nm wavelength"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-green-light",
+      "name": "Green light",
+      "qualifiers": {
+        "derivation": "frequency = c / wavelength",
+        "measurement": "optical frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Visible_spectrum",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-visible-spectrum",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Visible spectrum",
+          "url": "https://en.wikipedia.org/wiki/Visible_spectrum"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Optical frequency corresponding to green light near 550 nanometers.",
+      "value": 545000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Optical frequency corresponding to blue light near 450 nanometers.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Optical frequency corresponding to blue light near 450 nanometers.",
+      "facts": {
+        "canonical_name": "Blue light",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "derivation_note": "frequency = c / wavelength",
+          "method": "derived",
+          "original_value_text": "667000000000000.0",
+          "source_basis": "Frequency computed from wavelength using c / lambda.",
+          "source_unit": "nanometers",
+          "source_url": "https://en.wikipedia.org/wiki/Visible_spectrum",
+          "source_value_text": "450 nm wavelength"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-blue-light",
+      "name": "Blue light",
+      "qualifiers": {
+        "derivation": "frequency = c / wavelength",
+        "measurement": "optical frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Visible_spectrum",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-visible-spectrum",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Visible spectrum",
+          "url": "https://en.wikipedia.org/wiki/Visible_spectrum"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "Optical frequency corresponding to blue light near 450 nanometers.",
+      "value": 667000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative ultraviolet frequency above visible violet light.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative ultraviolet frequency above visible violet light.",
+      "facts": {
+        "canonical_name": "Ultraviolet radiation",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "conversion_note": "Converted from petahertz to hertz.",
+          "method": "converted",
+          "original_value_text": "1000000000000000.0",
+          "source_basis": "Representative ultraviolet frequency.",
+          "source_unit": "PHz",
+          "source_url": "https://en.wikipedia.org/wiki/Ultraviolet",
+          "source_value_text": "1 PHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-ultraviolet-radiation",
+      "name": "Ultraviolet radiation",
+      "qualifiers": {
+        "measurement": "representative ultraviolet frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Ultraviolet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ultraviolet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ultraviolet",
+          "url": "https://en.wikipedia.org/wiki/Ultraviolet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative ultraviolet frequency above visible violet light.",
+      "value": 1000000000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative frequency in the soft X-ray band.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative frequency in the soft X-ray band.",
+      "facts": {
+        "canonical_name": "Soft X-ray",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e+17",
+          "source_basis": "Representative soft X-ray frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/X-ray",
+          "source_value_text": "1e17 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-soft-x-ray",
+      "name": "Soft X-ray",
+      "qualifiers": {
+        "measurement": "representative X-ray frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/X-ray",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-x-ray",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "X-ray",
+          "url": "https://en.wikipedia.org/wiki/X-ray"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative frequency in the soft X-ray band.",
+      "value": 1e+17,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A representative gamma-ray frequency far above X-rays.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A representative gamma-ray frequency far above X-rays.",
+      "facts": {
+        "canonical_name": "Gamma ray",
+        "ingest_source": "dataset/raw/curated/frequency.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e+20",
+          "source_basis": "Representative gamma-ray frequency.",
+          "source_unit": "Hz",
+          "source_url": "https://en.wikipedia.org/wiki/Gamma_ray",
+          "source_value_text": "1e20 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:frequency:entity-gamma-ray",
+      "name": "Gamma ray",
+      "qualifiers": {
+        "measurement": "representative gamma-ray frequency"
+      },
+      "source": "https://en.wikipedia.org/wiki/Gamma_ray",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gamma-ray",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gamma ray",
+          "url": "https://en.wikipedia.org/wiki/Gamma_ray"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-frequency-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/frequency.json",
+          "url": "repo://dataset/raw/curated/frequency.json"
+        }
+      ],
+      "summary_short": "A representative gamma-ray frequency far above X-rays.",
+      "value": 1e+20,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Frequency",
+      "url": "https://en.wikipedia.org/wiki/Frequency"
+    },
+    {
+      "name": "Angular frequency and oscillation",
+      "url": "https://en.wikipedia.org/wiki/Angular_frequency"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Hertz are cycles per second and the canonical storage unit for frequency.",
+      "name": "hertz",
+      "symbol": "Hz"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Microhertz are useful for very slow astronomical or geological cycles.",
+      "name": "microhertz",
+      "symbol": "uHz"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Millihertz are useful for very slow cycles such as astronomical and climatic periods.",
+      "name": "millihertz",
+      "symbol": "mHz"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Kilohertz are useful for sound, motors, and rotating machinery.",
+      "name": "kilohertz",
+      "symbol": "kHz"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Megahertz are useful for radio, resonance, and spectroscopy.",
+      "name": "megahertz",
+      "symbol": "MHz"
+    },
+    {
+      "conversion_factor": 1e-09,
+      "description": "Gigahertz are useful for microwaves, wireless systems, and atomic transitions.",
+      "name": "gigahertz",
+      "symbol": "GHz"
+    },
+    {
+      "conversion_factor": 1e-12,
+      "description": "Terahertz are useful for infrared and submillimeter radiation.",
+      "name": "terahertz",
+      "symbol": "THz"
+    },
+    {
+      "conversion_factor": 60.0,
+      "description": "RPM gives an intuitive view of rotating machinery and cyclic motion.",
+      "name": "revolutions per minute",
+      "symbol": "rpm"
+    }
+  ]
+}

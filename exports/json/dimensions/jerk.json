@@ -1,0 +1,1732 @@
+{
+  "base_unit": "meters_per_second_cubed",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 33,
+    "candidate_shortfall_to_preferred_target": 17,
+    "empty_bin_count": 11,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 33,
+    "selected_primary_count": 13,
+    "selected_secondary_count": 20,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 33
+    },
+    "target_selected_count": 33
+  },
+  "description_format": "markdown",
+  "dimension": "jerk",
+  "dimension_description": "Jerk is the time rate of change of acceleration, indicating how abruptly a motion profile is being altered. Human comfort is strongly tied to jerk limits rather than raw acceleration because nerves respond to changes. Vehicles, elevators, and robots therefore shape motion with bounded jerk for smoothness. Each value below states the scenario and operating condition so the number maps to a real ride or mechanism.",
+  "frontend_group": "motion",
+  "frontend_group_label": "Motion & Mechanics",
+  "frontend_order": 350,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Tectonic plates creeping a few centimeters per year change acceleration so slowly that their jerk is nearly zero on human timescales. Over millions of years these tiny changes build mountains and open oceans. Instruments infer such motion from strain accumulation and earthquakes. The value expresses a characteristic background jerk of continental drift.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Tectonic plates creeping a few centimeters per year change acceleration so slowly that their jerk is nearly zero on human timescales. Over millions of years these tiny changes build mountains and open oceans. Instruments infer such motion from strain accumulation and earthquakes. The value expresses a characteristic background jerk of continental drift.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Continental Drift",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-15",
+          "source_url": "https://en.wikipedia.org/wiki/Continental_drift"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-continental-drift",
+      "name": "Continental Drift",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Continental_drift",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-continental-drift",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Continental drift",
+          "url": "https://en.wikipedia.org/wiki/Continental_drift"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Tectonic plates creeping a few centimeters per year change acceleration so slowly that their jerk is nearly zero on human timescales.",
+      "value": 1e-15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A glacier changes speed so gradually that even year-to-year acceleration changes correspond to tiny jerk.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A glacier changes speed so gradually that even year-to-year acceleration changes correspond to tiny jerk.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Glacier Flow",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-13",
+          "source_url": "https://en.wikipedia.org/wiki/Glacier"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-glacier-flow",
+      "name": "Glacier Flow",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Glacier",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-glacier",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Glacier",
+          "url": "https://en.wikipedia.org/wiki/Glacier"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A glacier changes speed so gradually that even year-to-year acceleration changes correspond to tiny jerk.",
+      "value": 1e-13,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The growth tip of a plant accelerates its extension as hormones surge with daylight and water, but the changes are still microscopic per second. Garden timelapses show the motion only when hours are compressed into seconds. Biophysics models treat this as a viscoelastic expansion with gentle jerk. The number gives a laboratory scale for seedlings.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The growth tip of a plant accelerates its extension as hormones surge with daylight and water, but the changes are still microscopic per second. Garden timelapses show the motion only when hours are compressed into seconds. Biophysics models treat this as a viscoelastic expansion with gentle jerk. The number gives a laboratory scale for seedlings.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Plant Growth",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-12",
+          "source_url": "https://en.wikipedia.org/wiki/Plant_growth"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-plant-growth",
+      "name": "Plant Growth",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Plant_growth",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-plant-growth",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Plant growth",
+          "url": "https://en.wikipedia.org/wiki/Plant_growth"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "The growth tip of a plant accelerates its extension as hormones surge with daylight and water, but the changes are still microscopic per second.",
+      "value": 1e-12,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A snail starts and stops with small changes in acceleration as muscles cycle, producing a barely perceptible jerk per second. The mucus layer damps sharp transitions that would otherwise waste energy. Sensors on tiny sleds can record the rhythm in controlled tracks. The value is a middle range for steady crawling.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A snail starts and stops with small changes in acceleration as muscles cycle, producing a barely perceptible jerk per second. The mucus layer damps sharp transitions that would otherwise waste energy. Sensors on tiny sleds can record the rhythm in controlled tracks. The value is a middle range for steady crawling.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Snail Movement",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-9",
+          "source_url": "https://en.wikipedia.org/wiki/Snail"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-snail-movement",
+      "name": "Snail Movement",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Snail",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-snail",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Snail",
+          "url": "https://en.wikipedia.org/wiki/Snail"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A snail starts and stops with small changes in acceleration as muscles cycle, producing a barely perceptible jerk per second.",
+      "value": 1e-09,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Electric hospital beds ramp motion gently so patients are not jolted.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Electric hospital beds ramp motion gently so patients are not jolted.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Hospital Bed Adjustment",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.05",
+          "source_url": "https://en.wikipedia.org/wiki/Hospital_bed"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-hospital-bed-adjustment",
+      "name": "Hospital Bed Adjustment",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hospital_bed",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hospital-bed",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hospital bed",
+          "url": "https://en.wikipedia.org/wiki/Hospital_bed"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Electric hospital beds ramp motion gently so patients are not jolted.",
+      "value": 0.05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High-speed passenger trains are tuned for low jerk during departure so standing riders remain comfortable.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High-speed passenger trains are tuned for low jerk during departure so standing riders remain comfortable.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Shinkansen Departure",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.4",
+          "source_url": "https://en.wikipedia.org/wiki/Shinkansen"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-shinkansen-departure",
+      "name": "Shinkansen Departure",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Shinkansen",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-shinkansen",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Shinkansen",
+          "url": "https://en.wikipedia.org/wiki/Shinkansen"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "High-speed passenger trains are tuned for low jerk during departure so standing riders remain comfortable.",
+      "value": 0.4,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A wheelchair start can be very gentle when the rider wants comfort over snap. The low jerk reflects a soft ramp in acceleration that keeps the motion smooth and predictable.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A wheelchair start can be very gentle when the rider wants comfort over snap. The low jerk reflects a soft ramp in acceleration that keeps the motion smooth and predictable.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Wheelchair start",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.5",
+          "source_url": "https://en.wikipedia.org/wiki/Wheelchair"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-wheelchair-start",
+      "name": "Wheelchair start",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wheelchair",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wheelchair",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wheelchair",
+          "url": "https://en.wikipedia.org/wiki/Wheelchair"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A wheelchair start can be very gentle when the rider wants comfort over snap.",
+      "value": 0.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Passenger elevators are tuned to avoid a harsh lurch at the beginning of motion. Low jerk makes the ride feel smooth and reduces the sensation of being thrown backward.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Passenger elevators are tuned to avoid a harsh lurch at the beginning of motion. Low jerk makes the ride feel smooth and reduces the sensation of being thrown backward.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Passenger elevator start",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.0",
+          "source_url": "https://en.wikipedia.org/wiki/Elevator"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-passenger-elevator-start",
+      "name": "Passenger elevator start",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Elevator",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-elevator",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Elevator",
+          "url": "https://en.wikipedia.org/wiki/Elevator"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Passenger elevators are tuned to avoid a harsh lurch at the beginning of motion.",
+      "value": 1.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A city bus usually brakes with moderate jerk so standing passengers do not stumble. The motion is more abrupt than an elevator but still constrained for comfort.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A city bus usually brakes with moderate jerk so standing passengers do not stumble. The motion is more abrupt than an elevator but still constrained for comfort.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "City bus braking",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.0",
+          "source_url": "https://en.wikipedia.org/wiki/Bus"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-city-bus-braking",
+      "name": "City bus braking",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bus",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bus",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bus",
+          "url": "https://en.wikipedia.org/wiki/Bus"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A city bus usually brakes with moderate jerk so standing passengers do not stumble.",
+      "value": 2.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Humans adjust pace during walking with modest jerk as we push off and land each step. Comfortable sidewalks and shoes keep these transients low. Gait labs smooth rehabilitative robots by limiting jerk rather than acceleration peaks. The value corresponds to level ground at everyday speed.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Humans adjust pace during walking with modest jerk as we push off and land each step. Comfortable sidewalks and shoes keep these transients low. Gait labs smooth rehabilitative robots by limiting jerk rather than acceleration peaks. The value corresponds to level ground at everyday speed.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Human Walking",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2",
+          "source_url": "https://en.wikipedia.org/wiki/Walking"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-human-walking",
+      "name": "Human Walking",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Walking",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-walking",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Walking",
+          "url": "https://en.wikipedia.org/wiki/Walking"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Humans adjust pace during walking with modest jerk as we push off and land each step.",
+      "value": 2.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A manual wheelchair stopping abruptly can create a few meters per second cubed of jerk.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A manual wheelchair stopping abruptly can create a few meters per second cubed of jerk.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Wheelchair Stop",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.5",
+          "source_url": "https://en.wikipedia.org/wiki/Wheelchair"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-wheelchair-stop",
+      "name": "Wheelchair Stop",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wheelchair",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wheelchair",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wheelchair",
+          "url": "https://en.wikipedia.org/wiki/Wheelchair"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A manual wheelchair stopping abruptly can create a few meters per second cubed of jerk.",
+      "value": 2.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A family car merging briskly on a highway ramps acceleration in a few seconds, generating a noticeable but tolerable jerk. Electronics in modern powertrains spread the rise to protect comfort and traction. Passengers sense roughness when jerk spikes due to shifting. The number represents a controlled pedal input.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A family car merging briskly on a highway ramps acceleration in a few seconds, generating a noticeable but tolerable jerk. Electronics in modern powertrains spread the rise to protect comfort and traction. Passengers sense roughness when jerk spikes due to shifting. The number represents a controlled pedal input.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Car Acceleration",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5",
+          "source_url": "https://en.wikipedia.org/wiki/Automobile"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-car-acceleration",
+      "name": "Car Acceleration",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Automobile",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-automobile",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Automobile",
+          "url": "https://en.wikipedia.org/wiki/Automobile"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A family car merging briskly on a highway ramps acceleration in a few seconds, generating a noticeable but tolerable jerk.",
+      "value": 5.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A comfortable lane change uses a bounded jerk curve rather than a sharp steering step. The driver or controller eases the lateral acceleration in and out.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A comfortable lane change uses a bounded jerk curve rather than a sharp steering step. The driver or controller eases the lateral acceleration in and out.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Car lane change",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5.0",
+          "source_url": "https://en.wikipedia.org/wiki/Lane_change"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-car-lane-change",
+      "name": "Car lane change",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lane_change",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lane-change",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lane change",
+          "url": "https://en.wikipedia.org/wiki/Lane_change"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A comfortable lane change uses a bounded jerk curve rather than a sharp steering step.",
+      "value": 5.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A commuter train with well tuned traction control limits jerk during departure so standing passengers keep balance. The sensation is a smooth glide rather than a lurch. Operators set jerk limits in software per line and rolling stock. The number is a service target for urban rail.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A commuter train with well tuned traction control limits jerk during departure so standing passengers keep balance. The sensation is a smooth glide rather than a lurch. Operators set jerk limits in software per line and rolling stock. The number is a service target for urban rail.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Metro Train Departure",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8",
+          "source_url": "https://en.wikipedia.org/wiki/Railway_traction"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-metro-train-departure",
+      "name": "Metro Train Departure",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Railway_traction",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-railway-traction",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Railway traction",
+          "url": "https://en.wikipedia.org/wiki/Railway_traction"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A commuter train with well tuned traction control limits jerk during departure so standing passengers keep balance.",
+      "value": 8.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A quadcopter commanded into a fast climb changes acceleration very abruptly.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A quadcopter commanded into a fast climb changes acceleration very abruptly.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Drone Punch-Out",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10",
+          "source_url": "https://en.wikipedia.org/wiki/Quadcopter"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-drone-punch-out",
+      "name": "Drone Punch-Out",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Quadcopter",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quadcopter",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quadcopter",
+          "url": "https://en.wikipedia.org/wiki/Quadcopter"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A quadcopter commanded into a fast climb changes acceleration very abruptly.",
+      "value": 10.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Elevator controllers are tuned for low jerk during start and stop to prevent drinks from sloshing. The profile is often a smooth S curve designed explicitly around jerk limits. People recognize a well tuned elevator by the lack of a jolt at arrival. The figure is a typical target for modern mid rise systems.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Elevator controllers are tuned for low jerk during start and stop to prevent drinks from sloshing. The profile is often a smooth S curve designed explicitly around jerk limits. People recognize a well tuned elevator by the lack of a jolt at arrival. The figure is a typical target for modern mid rise systems.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Elevator",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10",
+          "source_url": "https://en.wikipedia.org/wiki/Elevator"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-elevator",
+      "name": "Elevator",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Elevator",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-elevator",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Elevator",
+          "url": "https://en.wikipedia.org/wiki/Elevator"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Elevator controllers are tuned for low jerk during start and stop to prevent drinks from sloshing.",
+      "value": 10.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Industrial robot arms often use jerk-limited trajectories to keep parts from shaking or slipping. The jerk is high enough for speed but still shaped for repeatability.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Industrial robot arms often use jerk-limited trajectories to keep parts from shaking or slipping. The jerk is high enough for speed but still shaped for repeatability.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Robot arm pick-and-place",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10.0",
+          "source_url": "https://en.wikipedia.org/wiki/Industrial_robot"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-robot-arm-pick-and-place",
+      "name": "Robot arm pick-and-place",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Industrial_robot",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-industrial-robot",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Industrial robot",
+          "url": "https://en.wikipedia.org/wiki/Industrial_robot"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Industrial robot arms often use jerk-limited trajectories to keep parts from shaking or slipping.",
+      "value": 10.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A commuter train can accelerate decisively while still keeping jerk within a tolerable range for passengers. The start feels brisk but not explosive.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A commuter train can accelerate decisively while still keeping jerk within a tolerable range for passengers. The start feels brisk but not explosive.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Passenger train station departure",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "20.0",
+          "source_url": "https://en.wikipedia.org/wiki/Train"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-passenger-train-station-departure",
+      "name": "Passenger train station departure",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Train",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-train",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Train",
+          "url": "https://en.wikipedia.org/wiki/Train"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A commuter train can accelerate decisively while still keeping jerk within a tolerable range for passengers.",
+      "value": 20.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Industrial robot arms moving between pick and place positions follow S curve profiles to cap jerk and avoid vibration. Payload and arm stiffness determine how tight the jerk bounds can be. Lower jerk extends tool life and improves placement accuracy. The figure is common for collaborative robots working near people.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Industrial robot arms moving between pick and place positions follow S curve profiles to cap jerk and avoid vibration. Payload and arm stiffness determine how tight the jerk bounds can be. Lower jerk extends tool life and improves placement accuracy. The figure is common for collaborative robots working near people.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Robot Arm Motion",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "20",
+          "source_url": "https://en.wikipedia.org/wiki/Motion_profile"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-robot-arm-motion",
+      "name": "Robot Arm Motion",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Motion_profile",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-motion-profile",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Motion profile",
+          "url": "https://en.wikipedia.org/wiki/Motion_profile"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Industrial robot arms moving between pick and place positions follow S curve profiles to cap jerk and avoid vibration.",
+      "value": 20.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Roller coasters deliberately permit much larger jerk than ordinary transit to create a dramatic thrill. The crest or drop transition is one of the moments riders feel most strongly.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Roller coasters deliberately permit much larger jerk than ordinary transit to create a dramatic thrill. The crest or drop transition is one of the moments riders feel most strongly.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Roller coaster crest transition",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "30.0",
+          "source_url": "https://en.wikipedia.org/wiki/Roller_coaster"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-roller-coaster-crest-transition",
+      "name": "Roller coaster crest transition",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Roller_coaster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-roller-coaster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Roller coaster",
+          "url": "https://en.wikipedia.org/wiki/Roller_coaster"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Roller coasters deliberately permit much larger jerk than ordinary transit to create a dramatic thrill.",
+      "value": 30.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Roller coasters create designed patterns of jerk to deliver thrills without injury, especially in banked turns and airtime hills. Designers talk about snap, crackle, and pop as nicknames for the sensations. Standards set both jerk and g limits for rider safety. The number reflects a modern steel coaster transition.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Roller coasters create designed patterns of jerk to deliver thrills without injury, especially in banked turns and airtime hills. Designers talk about snap, crackle, and pop as nicknames for the sensations. Standards set both jerk and g limits for rider safety. The number reflects a modern steel coaster transition.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Roller Coaster Transition",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "30",
+          "source_url": "https://en.wikipedia.org/wiki/Roller_coaster"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-roller-coaster-transition",
+      "name": "Roller Coaster Transition",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Roller_coaster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-roller-coaster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Roller coaster",
+          "url": "https://en.wikipedia.org/wiki/Roller_coaster"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Roller coasters create designed patterns of jerk to deliver thrills without injury, especially in banked turns and airtime hills.",
+      "value": 30.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The space shuttle launch stack ramped thrust over seconds to manage structural loads, yet liftoff still involved substantial jerk as constraints released. Control systems shape this profile to avoid pogo oscillations. Viewers sense the shift from rumble to climb as the jerk crosses thresholds. The value is for the initial ascent phase.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The space shuttle launch stack ramped thrust over seconds to manage structural loads, yet liftoff still involved substantial jerk as constraints released. Control systems shape this profile to avoid pogo oscillations. Viewers sense the shift from rumble to climb as the jerk crosses thresholds. The value is for the initial ascent phase.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Space Shuttle",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "30",
+          "source_url": "https://en.wikipedia.org/wiki/Space_Shuttle"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-space-shuttle",
+      "name": "Space Shuttle",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Space_Shuttle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-space-shuttle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Space Shuttle",
+          "url": "https://en.wikipedia.org/wiki/Space_Shuttle"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "The space shuttle launch stack ramped thrust over seconds to manage structural loads, yet liftoff still involved substantial jerk as constraints released.",
+      "value": 30.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Drop-tower rides shape jerk carefully because riders feel it immediately at the onset of the drop.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Drop-tower rides shape jerk carefully because riders feel it immediately at the onset of the drop.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Amusement Ride Drop Transition",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "40",
+          "source_url": "https://en.wikipedia.org/wiki/Drop_tower"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-amusement-ride-drop-transition",
+      "name": "Amusement Ride Drop Transition",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Drop_tower",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drop-tower",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drop tower",
+          "url": "https://en.wikipedia.org/wiki/Drop_tower"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Drop-tower rides shape jerk carefully because riders feel it immediately at the onset of the drop.",
+      "value": 40.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Formula 1 cars change acceleration rapidly under braking and corner entry, subjecting drivers to high jerk along with high g. Neck muscles and harnesses manage these quick transitions repeatedly per lap. Teams trade tire grip against driver comfort in setup. The number is characteristic of a late braking maneuver on a dry track.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Formula 1 cars change acceleration rapidly under braking and corner entry, subjecting drivers to high jerk along with high g. Neck muscles and harnesses manage these quick transitions repeatedly per lap. Teams trade tire grip against driver comfort in setup. The number is characteristic of a late braking maneuver on a dry track.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Formula 1 Car",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "50",
+          "source_url": "https://en.wikipedia.org/wiki/Formula_One"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-formula-1-car",
+      "name": "Formula 1 Car",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Formula_One",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-formula-one",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Formula One",
+          "url": "https://en.wikipedia.org/wiki/Formula_One"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Formula 1 cars change acceleration rapidly under braking and corner entry, subjecting drivers to high jerk along with high g.",
+      "value": 50.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A skateboard wheel striking a curb produces a sharp, very noticeable jerk.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A skateboard wheel striking a curb produces a sharp, very noticeable jerk.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Skateboard Hitting a Curb",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "50",
+          "source_url": "https://en.wikipedia.org/wiki/Skateboarding"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-skateboard-hitting-a-curb",
+      "name": "Skateboard Hitting a Curb",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Skateboarding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-skateboarding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Skateboarding",
+          "url": "https://en.wikipedia.org/wiki/Skateboarding"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A skateboard wheel striking a curb produces a sharp, very noticeable jerk.",
+      "value": 50.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The acceleration of a punch rises fast enough to create a high jerk over a very short interval.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The acceleration of a punch rises fast enough to create a high jerk over a very short interval.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Boxer Punch Onset",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "80",
+          "source_url": "https://en.wikipedia.org/wiki/Punch_(combat)"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-boxer-punch-onset",
+      "name": "Boxer Punch Onset",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Punch_(combat)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-punch-combat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Punch (combat)",
+          "url": "https://en.wikipedia.org/wiki/Punch_(combat)"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "The acceleration of a punch rises fast enough to create a high jerk over a very short interval.",
+      "value": 80.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A jet fighter in an evasive maneuver can generate very high jerk as pilots snap into tight turns or roll. Life support like pressure suits helps with sustained acceleration, but jerk dictates how abrupt the onset feels. Tactics balance structural limits and pilot tolerance. The number is for a sharp onset at subsonic speed.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A jet fighter in an evasive maneuver can generate very high jerk as pilots snap into tight turns or roll. Life support like pressure suits helps with sustained acceleration, but jerk dictates how abrupt the onset feels. Tactics balance structural limits and pilot tolerance. The number is for a sharp onset at subsonic speed.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Jet Fighter",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "100",
+          "source_url": "https://en.wikipedia.org/wiki/Fighter_aircraft"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-jet-fighter",
+      "name": "Jet Fighter",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Fighter_aircraft",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fighter-aircraft",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fighter aircraft",
+          "url": "https://en.wikipedia.org/wiki/Fighter_aircraft"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A jet fighter in an evasive maneuver can generate very high jerk as pilots snap into tight turns or roll.",
+      "value": 100.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A top fuel dragster applies thrust almost instantly, producing extreme jerk at the green light. The chassis flex and tire deformation absorb part of the onset but not all. Spectators feel it in their chests as the sound and air pulse. The number reflects the brutal first fractions of a second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A top fuel dragster applies thrust almost instantly, producing extreme jerk at the green light. The chassis flex and tire deformation absorb part of the onset but not all. Spectators feel it in their chests as the sound and air pulse. The number reflects the brutal first fractions of a second.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Dragster",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "200",
+          "source_url": "https://en.wikipedia.org/wiki/Dragster"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-dragster",
+      "name": "Dragster",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Dragster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dragster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dragster",
+          "url": "https://en.wikipedia.org/wiki/Dragster"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A top fuel dragster applies thrust almost instantly, producing extreme jerk at the green light.",
+      "value": 200.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A launch vehicle can ramp acceleration quickly enough that the jerk is far beyond everyday transport. Structural loads, passenger tolerance, and guidance all constrain how sharp the ramp can be.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A launch vehicle can ramp acceleration quickly enough that the jerk is far beyond everyday transport. Structural loads, passenger tolerance, and guidance all constrain how sharp the ramp can be.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Rocket launch",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "200.0",
+          "source_url": "https://en.wikipedia.org/wiki/Rocket_launch"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-rocket-launch",
+      "name": "Rocket launch",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Rocket_launch",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rocket-launch",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rocket launch",
+          "url": "https://en.wikipedia.org/wiki/Rocket_launch"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A launch vehicle can ramp acceleration quickly enough that the jerk is far beyond everyday transport.",
+      "value": 200.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A car wheel hitting a pothole creates a very abrupt suspension-driven jerk pulse.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A car wheel hitting a pothole creates a very abrupt suspension-driven jerk pulse.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Pothole Impact in a Car",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "500",
+          "source_url": "https://en.wikipedia.org/wiki/Pothole"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-pothole-impact-in-a-car",
+      "name": "Pothole Impact in a Car",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Pothole",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pothole",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Pothole",
+          "url": "https://en.wikipedia.org/wiki/Pothole"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "A car wheel hitting a pothole creates a very abrupt suspension-driven jerk pulse.",
+      "value": 500.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Laboratory centrifuges ramp speed following programmed jerk limits to protect samples from shear. In blood work, gentle jerk preserves cell membranes while still reaching target g levels quickly. The profile is a textbook case of motion planning. The figure is a modern bench top ramp setting.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Laboratory centrifuges ramp speed following programmed jerk limits to protect samples from shear. In blood work, gentle jerk preserves cell membranes while still reaching target g levels quickly. The profile is a textbook case of motion planning. The figure is a modern bench top ramp setting.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Centrifuge",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "10000",
+          "source_url": "https://en.wikipedia.org/wiki/Centrifuge"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-centrifuge",
+      "name": "Centrifuge",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Centrifuge",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-centrifuge",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Centrifuge",
+          "url": "https://en.wikipedia.org/wiki/Centrifuge"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Laboratory centrifuges ramp speed following programmed jerk limits to protect samples from shear.",
+      "value": 10000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Crash tests intentionally create very high jerk as vehicles decelerate in milliseconds against barriers. Dummies measure how quickly acceleration changes because injuries correlate with jerk as well as peak g. Energy absorbing structures spread the jerk in time to save lives. The value corresponds to a severe frontal impact.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Crash tests intentionally create very high jerk as vehicles decelerate in milliseconds against barriers. Dummies measure how quickly acceleration changes because injuries correlate with jerk as well as peak g. Energy absorbing structures spread the jerk in time to save lives. The value corresponds to a severe frontal impact.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Crash Test",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "50000",
+          "source_url": "https://en.wikipedia.org/wiki/Crash_test"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-crash-test",
+      "name": "Crash Test",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Crash_test",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-crash-test",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Crash test",
+          "url": "https://en.wikipedia.org/wiki/Crash_test"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "Crash tests intentionally create very high jerk as vehicles decelerate in milliseconds against barriers.",
+      "value": 50000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The tip of a cracking whip experiences one of the most abrupt everyday changes in acceleration.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The tip of a cracking whip experiences one of the most abrupt everyday changes in acceleration.",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/jerk.yaml",
+        "legacy_item_name": "Whip Crack Tip Motion",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1000000",
+          "source_url": "https://en.wikipedia.org/wiki/Whip"
+        }
+      },
+      "hook": null,
+      "id": "obs:jerk:scenario-jerk-whip-crack-tip-motion",
+      "name": "Whip Crack Tip Motion",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Whip",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-whip",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Whip",
+          "url": "https://en.wikipedia.org/wiki/Whip"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-jerk-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/jerk.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/jerk.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/jerk.yaml"
+        }
+      ],
+      "summary_short": "The tip of a cracking whip experiences one of the most abrupt everyday changes in acceleration.",
+      "value": 1000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1,
+      "description": "Meters per second cubed is the SI unit for jerk, defined as change in acceleration per second. It keeps motion planning equations simple and consistent. Engineers prefer this when specifying comfort limits for vehicles and lifts. All item values are recorded in m per s3 before conversion.",
+      "name": "meters per second cubed",
+      "symbol": "m/s3"
+    },
+    {
+      "conversion_factor": 3.28084,
+      "description": "Feet per second cubed expresses jerk in imperial units for legacy systems and ergonomics tables. It converts cleanly from SI using the foot to meter ratio. Using this unit helps compare historical data without rewriting specifications. Values here follow the exact linear conversion.",
+      "name": "feet per second cubed",
+      "symbol": "ft/s3"
+    }
+  ]
+}

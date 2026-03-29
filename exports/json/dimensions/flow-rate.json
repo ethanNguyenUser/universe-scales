@@ -1,0 +1,2428 @@
+{
+  "base_unit": "cubic_meters_per_second",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 43,
+    "candidate_shortfall_to_preferred_target": 7,
+    "empty_bin_count": 4,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 43,
+    "selected_primary_count": 20,
+    "selected_secondary_count": 23,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 43
+    },
+    "target_selected_count": 43
+  },
+  "description_format": "markdown",
+  "dimension": "flow-rate",
+  "dimension_description": "Flow rate measures how much volume passes a boundary per unit time. This scale is useful for comparing microfluidics, medical drips, household plumbing, industrial systems, and the largest geophysical currents and rivers. Flow depends strongly on context, so representative operating conditions are part of the meaning.",
+  "frontend_group": "materials",
+  "frontend_group_label": "Materials & Matter",
+  "frontend_order": 460,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Patch-clamp and single-cell perfusion systems operate at truly tiny volumetric flow rates.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Patch-clamp and single-cell perfusion systems operate at truly tiny volumetric flow rates.",
+      "facts": {
+        "canonical_name": "Patch-clamp perfusion",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-13",
+          "source_basis": "Representative single-cell perfusion flow rate.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Patch_clamp",
+          "source_value_text": "1e-13 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-patch-clamp",
+      "name": "Patch-clamp perfusion",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Patch_clamp",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-patch-clamp",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Patch clamp",
+          "url": "https://en.wikipedia.org/wiki/Patch_clamp"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "Patch-clamp and single-cell perfusion systems operate at truly tiny volumetric flow rates.",
+      "value": 1e-13,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A tiny microfluidic flow rate on the picoliter-per-second scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A tiny microfluidic flow rate on the picoliter-per-second scale.",
+      "facts": {
+        "canonical_name": "Microfluidic channel",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-12",
+          "source_basis": "Representative microfluidic flow rate.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Microfluidics",
+          "source_value_text": "1e-12"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-microfluidic-channel-flow",
+      "name": "Microfluidic channel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Microfluidics",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-microfluidics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Microfluidics",
+          "url": "https://en.wikipedia.org/wiki/Microfluidics"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A tiny microfluidic flow rate on the picoliter-per-second scale.",
+      "value": 1e-12,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Inkjet droplets correspond to extremely small volumetric flow rates when averaged over firing time.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Inkjet droplets correspond to extremely small volumetric flow rates when averaged over firing time.",
+      "facts": {
+        "canonical_name": "Inkjet nozzle",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-11",
+          "source_basis": "Representative inkjet nozzle flow rate.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Inkjet_printing",
+          "source_value_text": "1e-11"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-inkjet-nozzle-flow",
+      "name": "Inkjet nozzle",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Inkjet_printing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-inkjet-printing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Inkjet printing",
+          "url": "https://en.wikipedia.org/wiki/Inkjet_printing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "Inkjet droplets correspond to extremely small volumetric flow rates when averaged over firing time.",
+      "value": 1e-11,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A slow medical infusion can be just tens of picoliters per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A slow medical infusion can be just tens of picoliters per second.",
+      "facts": {
+        "canonical_name": "Insulin pump basal delivery",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-11",
+          "source_basis": "Representative slow insulin-pump delivery rate.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Insulin_pump",
+          "source_value_text": "5e-11"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-insulin-pump-flow",
+      "name": "Insulin pump basal delivery",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Insulin_pump",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-insulin-pump",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Insulin pump",
+          "url": "https://en.wikipedia.org/wiki/Insulin_pump"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A slow medical infusion can be just tens of picoliters per second.",
+      "value": 5e-11,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A slow IV drip is still far above microfluidic chip flows.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A slow IV drip is still far above microfluidic chip flows.",
+      "facts": {
+        "canonical_name": "IV drip",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted milliliters per hour to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "8e-10",
+          "source_basis": "Representative slow IV-drip rate.",
+          "source_unit": "mL/h",
+          "source_url": "https://en.wikipedia.org/wiki/Intravenous_therapy",
+          "source_value_text": "about 3 mL/h"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-iv-drip-flow",
+      "name": "IV drip",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Intravenous_therapy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-intravenous-therapy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Intravenous therapy",
+          "url": "https://en.wikipedia.org/wiki/Intravenous_therapy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A slow IV drip is still far above microfluidic chip flows.",
+      "value": 8e-10,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A drip emitter releases water only by the milliliter over long intervals.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A drip emitter releases water only by the milliliter over long intervals.",
+      "facts": {
+        "canonical_name": "Drip irrigation emitter",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted milliliters per hour to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "1e-09",
+          "source_basis": "Converted a representative drip-emitter rate from milliliters per hour to cubic meters per second.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Drip_irrigation",
+          "source_value_text": "3.6 mL/h"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-drip-irrigation-emitter",
+      "name": "Drip irrigation emitter",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Drip_irrigation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drip-irrigation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drip irrigation",
+          "url": "https://en.wikipedia.org/wiki/Drip_irrigation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A drip emitter releases water only by the milliliter over long intervals.",
+      "value": 1e-09,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A slow intravenous drip is a tiny but concrete human-scale flow.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A slow intravenous drip is a tiny but concrete human-scale flow.",
+      "facts": {
+        "canonical_name": "IV drip",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "m^3/s from mL/min",
+          "method": "derived",
+          "original_value_text": "1.7e-08",
+          "source_basis": "Representative drip rate of 1 mL/min.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Intravenous_therapy",
+          "source_value_text": "1.7e-08"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-iv-drip",
+      "name": "IV drip",
+      "qualifiers": {
+        "measurement": "fluid delivery rate"
+      },
+      "source": "https://en.wikipedia.org/wiki/Intravenous_therapy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-intravenous-therapy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Intravenous therapy",
+          "url": "https://en.wikipedia.org/wiki/Intravenous_therapy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A slow intravenous drip is a tiny but concrete human-scale flow.",
+      "value": 1.7e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A drip emitter delivers water at a very small but practical gardening flow rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A drip emitter delivers water at a very small but practical gardening flow rate.",
+      "facts": {
+        "canonical_name": "Garden drip emitter",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per hour to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "5.555555555555555e-07",
+          "source_basis": "Representative garden drip-emitter flow rate.",
+          "source_unit": "L/h",
+          "source_url": "https://en.wikipedia.org/wiki/Drip_irrigation",
+          "source_value_text": "2 L/h"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-garden-drip-emitter-flow",
+      "name": "Garden drip emitter",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Drip_irrigation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drip-irrigation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drip irrigation",
+          "url": "https://en.wikipedia.org/wiki/Drip_irrigation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A drip emitter delivers water at a very small but practical gardening flow rate.",
+      "value": 5.555555555555555e-07,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A 30 mL espresso shot pulled in 30 seconds averages a microliter-scale flow per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A 30 mL espresso shot pulled in 30 seconds averages a microliter-scale flow per second.",
+      "facts": {
+        "canonical_name": "Espresso shot extraction",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "Q = volume / time",
+          "method": "derived",
+          "original_value_text": "1e-06",
+          "source_basis": "Representative espresso extraction rate.",
+          "source_unit": "mL and s",
+          "source_url": "https://en.wikipedia.org/wiki/Espresso",
+          "source_value_text": "30 mL in 30 s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-espresso-shot",
+      "name": "Espresso shot extraction",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Espresso",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-espresso",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Espresso",
+          "url": "https://en.wikipedia.org/wiki/Espresso"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A 30 mL espresso shot pulled in 30 seconds averages a microliter-scale flow per second.",
+      "value": 1e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A pour-over dripper sits just above espresso on a volumetric-flow scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A pour-over dripper sits just above espresso on a volumetric-flow scale.",
+      "facts": {
+        "canonical_name": "Pour-over coffee dripper",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "Q = volume / time",
+          "method": "derived",
+          "original_value_text": "1.6666666666666665e-06",
+          "source_basis": "Representative pour-over coffee flow rate.",
+          "source_unit": "mL and min",
+          "source_url": "https://en.wikipedia.org/wiki/Coffee_preparation",
+          "source_value_text": "300 mL in 3 min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-pour-over-coffee",
+      "name": "Pour-over coffee dripper",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Coffee_preparation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-coffee-preparation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Coffee preparation",
+          "url": "https://en.wikipedia.org/wiki/Coffee_preparation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A pour-over dripper sits just above espresso on a volumetric-flow scale.",
+      "value": 1.6666666666666665e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The aorta carries blood at a rate on the order of liters per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The aorta carries blood at a rate on the order of liters per minute.",
+      "facts": {
+        "canonical_name": "Blood through the aorta",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative resting cardiac output through the aorta.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Aorta",
+          "source_value_text": "5e-05"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-aorta",
+      "name": "Blood through the aorta",
+      "qualifiers": {
+        "measurement": "physiological flow"
+      },
+      "source": "https://en.wikipedia.org/wiki/Aorta",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-aorta",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Aorta",
+          "url": "https://en.wikipedia.org/wiki/Aorta"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The aorta carries blood at a rate on the order of liters per minute.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A low-flow shower head cuts the discharge to conserve water while remaining usable.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A low-flow shower head cuts the discharge to conserve water while remaining usable.",
+      "facts": {
+        "canonical_name": "Water-efficient shower head",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative low-flow shower head discharge.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Shower_head",
+          "source_value_text": "0.05 L/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-low-flow-shower-head",
+      "name": "Water-efficient shower head",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Shower_head",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-shower-head",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Shower head",
+          "url": "https://en.wikipedia.org/wiki/Shower_head"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A low-flow shower head cuts the discharge to conserve water while remaining usable.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Resting cardiac output is a useful physiology benchmark in liters per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Resting cardiac output is a useful physiology benchmark in liters per minute.",
+      "facts": {
+        "canonical_name": "Cardiac output",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "5 L/min to m^3/s",
+          "method": "derived",
+          "original_value_text": "8.3e-05",
+          "source_basis": "Representative adult resting cardiac output of about 5 L/min.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Cardiac_output",
+          "source_value_text": "8.3e-05"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-cardiac-output",
+      "name": "Cardiac output",
+      "qualifiers": {
+        "measurement": "heart pump output"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cardiac_output",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cardiac-output",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cardiac output",
+          "url": "https://en.wikipedia.org/wiki/Cardiac_output"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "Resting cardiac output is a useful physiology benchmark in liters per minute.",
+      "value": 8.3e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A resting adult pumps about five liters of blood each minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A resting adult pumps about five liters of blood each minute.",
+      "facts": {
+        "canonical_name": "Human cardiac output",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per minute to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "8.33e-05",
+          "source_basis": "Representative human cardiac output.",
+          "source_unit": "L/min",
+          "source_url": "https://en.wikipedia.org/wiki/Cardiac_output",
+          "source_value_text": "5 L/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-human-cardiac-output",
+      "name": "Human cardiac output",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cardiac_output",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cardiac-output",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cardiac output",
+          "url": "https://en.wikipedia.org/wiki/Cardiac_output"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A resting adult pumps about five liters of blood each minute.",
+      "value": 8.33e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A typical faucet flow rate is around a tenth of a liter each second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A typical faucet flow rate is around a tenth of a liter each second.",
+      "facts": {
+        "canonical_name": "Kitchen faucet",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per minute to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative kitchen-faucet flow rate.",
+          "source_unit": "L/min",
+          "source_url": "https://en.wikipedia.org/wiki/Tap_(valve)",
+          "source_value_text": "6 L/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-kitchen-faucet-flow",
+      "name": "Kitchen faucet",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tap_(valve)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tap-valve",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tap (valve)",
+          "url": "https://en.wikipedia.org/wiki/Tap_(valve)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A typical faucet flow rate is around a tenth of a liter each second.",
+      "value": 0.0001,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A typical household faucet is a familiar plumbing benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A typical household faucet is a familiar plumbing benchmark.",
+      "facts": {
+        "canonical_name": "Faucet",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "6 L/min to m^3/s",
+          "method": "derived",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative kitchen faucet flow rate around 6 L/min.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Faucet",
+          "source_value_text": "0.0001"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-faucet",
+      "name": "Faucet",
+      "qualifiers": {
+        "measurement": "tap flow"
+      },
+      "source": "https://en.wikipedia.org/wiki/Faucet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-faucet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Faucet",
+          "url": "https://en.wikipedia.org/wiki/Faucet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A typical household faucet is a familiar plumbing benchmark.",
+      "value": 0.0001,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A garden sprinkler pushes a modest stream that is easy to visualize at household scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A garden sprinkler pushes a modest stream that is easy to visualize at household scale.",
+      "facts": {
+        "canonical_name": "Garden sprinkler",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0001",
+          "source_basis": "Representative household sprinkler discharge.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Sprinkler",
+          "source_value_text": "0.1 L/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-garden-sprinkler",
+      "name": "Garden sprinkler",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sprinkler",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sprinkler",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sprinkler",
+          "url": "https://en.wikipedia.org/wiki/Sprinkler"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A garden sprinkler pushes a modest stream that is easy to visualize at household scale.",
+      "value": 0.0001,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At rest, a person moves on the order of a tenth of a liter of air each second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At rest, a person moves on the order of a tenth of a liter of air each second.",
+      "facts": {
+        "canonical_name": "Human resting breathing air intake",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per minute to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.000125",
+          "source_basis": "Representative resting ventilation.",
+          "source_unit": "L/min",
+          "source_url": "https://en.wikipedia.org/wiki/Tidal_volume",
+          "source_value_text": "7.5 L/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-resting-breathing-air-flow",
+      "name": "Human resting breathing air intake",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tidal_volume",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tidal-volume",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tidal volume",
+          "url": "https://en.wikipedia.org/wiki/Tidal_volume"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "At rest, a person moves on the order of a tenth of a liter of air each second.",
+      "value": 0.000125,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A low-flow shower head still moves more water than a kitchen faucet.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A low-flow shower head still moves more water than a kitchen faucet.",
+      "facts": {
+        "canonical_name": "Shower head",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per minute to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.00016",
+          "source_basis": "Representative shower-head flow rate.",
+          "source_unit": "L/min",
+          "source_url": "https://en.wikipedia.org/wiki/Shower",
+          "source_value_text": "9.5 L/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-shower-head-flow",
+      "name": "Shower head",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Shower",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-shower",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Shower",
+          "url": "https://en.wikipedia.org/wiki/Shower"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A low-flow shower head still moves more water than a kitchen faucet.",
+      "value": 0.00016,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A CPAP system pushes continuous airflow on the order of ten liters per minute.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A CPAP system pushes continuous airflow on the order of ten liters per minute.",
+      "facts": {
+        "canonical_name": "CPAP machine airflow",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per minute to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.00016666666666666666",
+          "source_basis": "Representative CPAP airflow.",
+          "source_unit": "L/min",
+          "source_url": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure",
+          "source_value_text": "10 L/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-cpap-airflow",
+      "name": "CPAP machine airflow",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-continuous-positive-airway-pressure",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Continuous positive airway pressure",
+          "url": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A CPAP system pushes continuous airflow on the order of ten liters per minute.",
+      "value": 0.00016666666666666666,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A shower head delivers noticeably more water than a faucet.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A shower head delivers noticeably more water than a faucet.",
+      "facts": {
+        "canonical_name": "Shower",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "liters per minute to cubic meters per second",
+          "method": "derived",
+          "original_value_text": "0.0002",
+          "source_basis": "Representative shower flow near 12 L/min.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Shower",
+          "source_value_text": "0.0002"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-shower",
+      "name": "Shower",
+      "qualifiers": {
+        "measurement": "shower flow"
+      },
+      "source": "https://en.wikipedia.org/wiki/Shower",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-shower",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Shower",
+          "url": "https://en.wikipedia.org/wiki/Shower"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A shower head delivers noticeably more water than a faucet.",
+      "value": 0.0002,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A garden hose occupies the upper household range.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A garden hose occupies the upper household range.",
+      "facts": {
+        "canonical_name": "Garden hose",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "derivation_note": "liters per minute to cubic meters per second",
+          "method": "derived",
+          "original_value_text": "0.0003",
+          "source_basis": "Representative hose flow around 18 L/min.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Garden_hose",
+          "source_value_text": "0.0003"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-garden-hose",
+      "name": "Garden hose",
+      "qualifiers": {
+        "measurement": "hose flow"
+      },
+      "source": "https://en.wikipedia.org/wiki/Garden_hose",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-garden-hose",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Garden hose",
+          "url": "https://en.wikipedia.org/wiki/Garden_hose"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A garden hose occupies the upper household range.",
+      "value": 0.0003,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A garden hose produces a substantial household flow rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A garden hose produces a substantial household flow rate.",
+      "facts": {
+        "canonical_name": "Garden hose",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per minute to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.0006",
+          "source_basis": "Representative garden-hose flow rate.",
+          "source_unit": "L/min",
+          "source_url": "https://en.wikipedia.org/wiki/Hose",
+          "source_value_text": "36 L/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-garden-hose-flow",
+      "name": "Garden hose",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hose",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hose",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hose",
+          "url": "https://en.wikipedia.org/wiki/Hose"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A garden hose produces a substantial household flow rate.",
+      "value": 0.0006,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A toilet flush briefly produces a few liters per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A toilet flush briefly produces a few liters per second.",
+      "facts": {
+        "canonical_name": "Toilet flush peak flow",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per second to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.002",
+          "source_basis": "Representative flush peak flow.",
+          "source_unit": "L/s",
+          "source_url": "https://en.wikipedia.org/wiki/Flush_toilet",
+          "source_value_text": "2 L/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-toilet-flush-flow",
+      "name": "Toilet flush peak flow",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Flush_toilet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-flush-toilet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Flush toilet",
+          "url": "https://en.wikipedia.org/wiki/Flush_toilet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A toilet flush briefly produces a few liters per second.",
+      "value": 0.002,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A fire hose can deliver roughly ten liters each second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A fire hose can deliver roughly ten liters each second.",
+      "facts": {
+        "canonical_name": "Fire hose",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "conversion_note": "Converted liters per second to cubic meters per second.",
+          "method": "derived",
+          "original_value_text": "0.01",
+          "source_basis": "Representative fire-hose flow rate.",
+          "source_unit": "L/s",
+          "source_url": "https://en.wikipedia.org/wiki/Fire_hose",
+          "source_value_text": "10 L/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-fire-hose-flow",
+      "name": "Fire hose",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Fire_hose",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fire-hose",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fire hose",
+          "url": "https://en.wikipedia.org/wiki/Fire_hose"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A fire hose can deliver roughly ten liters each second.",
+      "value": 0.01,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
+      "facts": {
+        "canonical_name": "Fire hydrant",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.015",
+          "source_basis": "Representative fire-hydrant discharge rate.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Fire_hydrant",
+          "source_value_text": "0.015 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-fire-hydrant-flow",
+      "name": "Fire hydrant",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Fire_hydrant",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fire-hydrant",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fire hydrant",
+          "url": "https://en.wikipedia.org/wiki/Fire_hydrant"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
+      "value": 0.015,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A hydrant sits far above domestic plumbing and into emergency-response scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A hydrant sits far above domestic plumbing and into emergency-response scale.",
+      "facts": {
+        "canonical_name": "Fire hydrant",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.1",
+          "source_basis": "Representative hydrant discharge on the order of 100 L/s.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Fire_hydrant",
+          "source_value_text": "0.1"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-fire-hydrant",
+      "name": "Fire hydrant",
+      "qualifiers": {
+        "measurement": "hydrant discharge"
+      },
+      "source": "https://en.wikipedia.org/wiki/Fire_hydrant",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fire-hydrant",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fire hydrant",
+          "url": "https://en.wikipedia.org/wiki/Fire_hydrant"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A hydrant sits far above domestic plumbing and into emergency-response scale.",
+      "value": 0.1,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An oil pipeline moves flow on the order of whole cubic meters per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An oil pipeline moves flow on the order of whole cubic meters per second.",
+      "facts": {
+        "canonical_name": "Oil pipeline segment",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.0",
+          "source_basis": "Representative pipeline flow rate.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Pipeline_transport",
+          "source_value_text": "1"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-oil-pipeline-flow",
+      "name": "Oil pipeline segment",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Pipeline_transport",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pipeline-transport",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Pipeline transport",
+          "url": "https://en.wikipedia.org/wiki/Pipeline_transport"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "An oil pipeline moves flow on the order of whole cubic meters per second.",
+      "value": 1.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Large water mains bridge household plumbing and city-scale infrastructure.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Large water mains bridge household plumbing and city-scale infrastructure.",
+      "facts": {
+        "canonical_name": "Municipal water main",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.0",
+          "source_basis": "Representative distribution-main flow for a large city segment.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Water_distribution_system",
+          "source_value_text": "1"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-flow-rate-municipal-water-main",
+      "name": "Municipal water main",
+      "qualifiers": {
+        "measurement": "main flow"
+      },
+      "source": "https://en.wikipedia.org/wiki/Water_distribution_system",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-water-distribution-system",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Water distribution system",
+          "url": "https://en.wikipedia.org/wiki/Water_distribution_system"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "Large water mains bridge household plumbing and city-scale infrastructure.",
+      "value": 1.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Old Faithful expels water at tens of cubic meters per second during eruption.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Old Faithful expels water at tens of cubic meters per second during eruption.",
+      "facts": {
+        "canonical_name": "Old Faithful eruption",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "14.0",
+          "source_basis": "Representative Old Faithful eruption flow.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Old_Faithful",
+          "source_value_text": "14 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-old-faithful-flow",
+      "name": "Old Faithful eruption",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Old_Faithful",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-old-faithful",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Old Faithful",
+          "url": "https://en.wikipedia.org/wiki/Old_Faithful"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "Old Faithful expels water at tens of cubic meters per second during eruption.",
+      "value": 14.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The River Thames provides a city-scale river-flow benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The River Thames provides a city-scale river-flow benchmark.",
+      "facts": {
+        "canonical_name": "Thames River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "65.0",
+          "source_basis": "Representative mean discharge of the Thames.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/River_Thames",
+          "source_value_text": "65 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-thames-river-flow",
+      "name": "Thames River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/River_Thames",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-river-thames",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "River Thames",
+          "url": "https://en.wikipedia.org/wiki/River_Thames"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The River Thames provides a city-scale river-flow benchmark.",
+      "value": 65.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Colorado River discharge is a recognizable mid-sized river flow.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Colorado River discharge is a recognizable mid-sized river flow.",
+      "facts": {
+        "canonical_name": "Colorado River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "620.0",
+          "source_basis": "Representative discharge for the Colorado River.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Colorado_River",
+          "source_value_text": "620 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-colorado-river-flow",
+      "name": "Colorado River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Colorado_River",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-colorado-river",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Colorado River",
+          "url": "https://en.wikipedia.org/wiki/Colorado_River"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Colorado River discharge is a recognizable mid-sized river flow.",
+      "value": 620.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A large hydropower penstock carries a major engineered water flow.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A large hydropower penstock carries a major engineered water flow.",
+      "facts": {
+        "canonical_name": "Hoover Dam penstock",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "700.0",
+          "source_basis": "Representative Hoover Dam turbine-penstock flow.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Hoover_Dam",
+          "source_value_text": "700 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-hoover-dam-penstock-flow",
+      "name": "Hoover Dam penstock",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hoover_Dam",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hoover-dam",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hoover Dam",
+          "url": "https://en.wikipedia.org/wiki/Hoover_Dam"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "A large hydropower penstock carries a major engineered water flow.",
+      "value": 700.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Niagara Falls discharges a few thousand cubic meters of water each second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Niagara Falls discharges a few thousand cubic meters of water each second.",
+      "facts": {
+        "canonical_name": "Niagara Falls",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2400.0",
+          "source_basis": "Representative Niagara discharge.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Niagara_Falls",
+          "source_value_text": "2400"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-niagara-falls-flow",
+      "name": "Niagara Falls",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Niagara_Falls",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-niagara-falls",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Niagara Falls",
+          "url": "https://en.wikipedia.org/wiki/Niagara_Falls"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "Niagara Falls discharges a few thousand cubic meters of water each second.",
+      "value": 2400.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Nile carries a modest continental river discharge compared with the Amazon.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Nile carries a modest continental river discharge compared with the Amazon.",
+      "facts": {
+        "canonical_name": "Nile River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2800.0",
+          "source_basis": "Representative discharge for the Nile River.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Nile",
+          "source_value_text": "2800 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-nile-river-flow",
+      "name": "Nile River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Nile",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nile",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nile",
+          "url": "https://en.wikipedia.org/wiki/Nile"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Nile carries a modest continental river discharge compared with the Amazon.",
+      "value": 2800.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Danube is a large European river with a substantial discharge.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Danube is a large European river with a substantial discharge.",
+      "facts": {
+        "canonical_name": "Danube River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6500.0",
+          "source_basis": "Representative discharge for the Danube River.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Danube",
+          "source_value_text": "6500 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-danube-river-flow",
+      "name": "Danube River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Danube",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-danube",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Danube",
+          "url": "https://en.wikipedia.org/wiki/Danube"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Danube is a large European river with a substantial discharge.",
+      "value": 6500.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Mississippi River carries tens of thousands of cubic meters per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Mississippi River carries tens of thousands of cubic meters per second.",
+      "facts": {
+        "canonical_name": "Mississippi River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "17000.0",
+          "source_basis": "Representative Mississippi discharge.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Mississippi_River",
+          "source_value_text": "17000"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-mississippi-river-flow",
+      "name": "Mississippi River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Mississippi_River",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mississippi-river",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mississippi River",
+          "url": "https://en.wikipedia.org/wiki/Mississippi_River"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Mississippi River carries tens of thousands of cubic meters per second.",
+      "value": 17000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Yangtze is among the world's biggest river flows.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Yangtze is among the world's biggest river flows.",
+      "facts": {
+        "canonical_name": "Yangtze River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "30000.0",
+          "source_basis": "Representative discharge for the Yangtze River.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Yangtze",
+          "source_value_text": "30000 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-yangtze-river-flow",
+      "name": "Yangtze River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Yangtze",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-yangtze",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Yangtze",
+          "url": "https://en.wikipedia.org/wiki/Yangtze"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Yangtze is among the world's biggest river flows.",
+      "value": 30000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Congo River is a giant tropical river with enormous discharge.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Congo River is a giant tropical river with enormous discharge.",
+      "facts": {
+        "canonical_name": "Congo River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "41000.0",
+          "source_basis": "Representative discharge for the Congo River.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Congo_River",
+          "source_value_text": "41000 m^3/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-congo-river-flow",
+      "name": "Congo River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Congo_River",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-congo-river",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Congo River",
+          "url": "https://en.wikipedia.org/wiki/Congo_River"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Congo River is a giant tropical river with enormous discharge.",
+      "value": 41000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Amazon is the largest river by discharge on Earth.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Amazon is the largest river by discharge on Earth.",
+      "facts": {
+        "canonical_name": "Amazon River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "209000.0",
+          "source_basis": "Representative Amazon discharge.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Amazon_River",
+          "source_value_text": "209000"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-amazon-river-flow",
+      "name": "Amazon River",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Amazon_River",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-amazon-river",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Amazon River",
+          "url": "https://en.wikipedia.org/wiki/Amazon_River"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Amazon is the largest river by discharge on Earth.",
+      "value": 209000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Amazon is the classic giant-river discharge reference.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Amazon is the classic giant-river discharge reference.",
+      "facts": {
+        "canonical_name": "Amazon River",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "210000.0",
+          "source_basis": "Representative average discharge of the Amazon River.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Amazon_River",
+          "source_value_text": "210000"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-flow-rate-amazon-river",
+      "name": "Amazon River",
+      "qualifiers": {
+        "measurement": "river discharge"
+      },
+      "source": "https://en.wikipedia.org/wiki/Amazon_River",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-amazon-river",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Amazon River",
+          "url": "https://en.wikipedia.org/wiki/Amazon_River"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Amazon is the classic giant-river discharge reference.",
+      "value": 210000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "All rivers together deliver over a million cubic meters of freshwater per second to the oceans.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "All rivers together deliver over a million cubic meters of freshwater per second to the oceans.",
+      "facts": {
+        "canonical_name": "Global river discharge to oceans",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1300000.0",
+          "source_basis": "Representative global river discharge.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Drainage_basin",
+          "source_value_text": "1.3e6"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:scenario-global-river-discharge",
+      "name": "Global river discharge to oceans",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Drainage_basin",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drainage-basin",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drainage basin",
+          "url": "https://en.wikipedia.org/wiki/Drainage_basin"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "All rivers together deliver over a million cubic meters of freshwater per second to the oceans.",
+      "value": 1300000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Gulf Stream carries tens of millions of cubic meters of seawater each second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Gulf Stream carries tens of millions of cubic meters of seawater each second.",
+      "facts": {
+        "canonical_name": "Gulf Stream transport",
+        "ingest_source": "dataset/raw/curated/flow-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "30000000.0",
+          "source_basis": "Representative Gulf Stream transport.",
+          "source_unit": "m^3/s",
+          "source_url": "https://en.wikipedia.org/wiki/Gulf_Stream",
+          "source_value_text": "3e7"
+        }
+      },
+      "hook": null,
+      "id": "obs:flow-rate:entity-gulf-stream-flow",
+      "name": "Gulf Stream transport",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Gulf_Stream",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gulf-stream",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gulf Stream",
+          "url": "https://en.wikipedia.org/wiki/Gulf_Stream"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-flow-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/flow-rate.json",
+          "url": "repo://dataset/raw/curated/flow-rate.json"
+        }
+      ],
+      "summary_short": "The Gulf Stream carries tens of millions of cubic meters of seawater each second.",
+      "value": 30000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Volumetric flow rate",
+      "url": "https://en.wikipedia.org/wiki/Volumetric_flow_rate"
+    },
+    {
+      "name": "Flow measurement",
+      "url": "https://en.wikipedia.org/wiki/Flow_measurement"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Cubic meters per second are the canonical storage unit for volumetric flow rate.",
+      "name": "cubic meters per second",
+      "symbol": "m^3/s"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Liters per second are useful for plumbing, pumps, and physiology.",
+      "name": "liters per second",
+      "symbol": "L/s"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Milliliters per second are useful for drips and microfluidics.",
+      "name": "milliliters per second",
+      "symbol": "mL/s"
+    },
+    {
+      "conversion_factor": 60000.0,
+      "description": "Liters per minute are useful for household and industrial flow.",
+      "name": "liters per minute",
+      "symbol": "L/min"
+    }
+  ]
+}

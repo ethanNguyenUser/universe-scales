@@ -1,0 +1,176 @@
+base_unit: pascals
+dimension: yield-strength
+dimension_description: Yield strength marks the stress where a material stops returning to its original shape and begins to deform permanently. Engineers usually define it by a 0.2 percent offset on a tensile test curve at room temperature unless noted. The value depends strongly on processing, microstructure, and loading rate. Each entry states a representative condition so comparisons are meaningful.
+items:
+- description: Soft elastomeric rubber shows a low apparent yield because long polymer chains uncoil and slide instead of breaking. Under slow uniaxial tension at room temperature it flows at stresses near this level. Fillers and crosslink density can raise the value substantially. The number is for a common natural rubber compound.
+  name: Rubber
+  source: https://en.wikipedia.org/wiki/Rubber
+  value: 1e6
+- description: Flexible polymer foams yield when cell walls buckle and collapse, absorbing energy as they densify. The stress plateau around this value is prized for cushioning. Strain rate and temperature swing the response in real products. The number is for an open cell polyurethane foam in compression.
+  name: Foam
+  source: https://en.wikipedia.org/wiki/Foam
+  value: 1e5
+- description: Softwood loaded along the grain yields around this stress as lignin and cellulose microfibrils begin to slip. Across the grain the value is far lower due to anisotropy. Moisture content and knots matter greatly for real beams. The number assumes clear spruce in tension parallel to grain.
+  name: Wood (Soft)
+  source: https://en.wikipedia.org/wiki/Wood
+  value: 3e7
+- description: Articular cartilage yields at low stress in compression because it is mostly water constrained by a collagen network. Permeability and rate control the response, which is why joints feel different under fast and slow loading. Degeneration lowers this threshold further. The value is for healthy tissue under confined compression.
+  name: Cartilage
+  source: https://en.wikipedia.org/wiki/Cartilage
+  value: 1e6
+- description: Cortical bone in tension yields near this stress when microcracks coalesce, while compression values are higher. Age, mineralization, and loading direction all shift the number. Implants are designed to share load to stay below this limit. The value quoted is longitudinal tension at body temperature.
+  name: Bone
+  source: https://en.wikipedia.org/wiki/Bone
+  value: 1e8
+- description: Tendons behave viscoelastically and yield when collagen fibrils begin to slide irreversibly. Warm up raises extensibility and delays yield onset. Rehabilitation protocols keep loads well below this value for safety. The number is for bovine Achilles tendon in tension.
+  name: Tendon
+  source: https://en.wikipedia.org/wiki/Tendon
+  value: 5e7
+- description: Commercially pure aluminum has a modest yield, but work hardening and alloying create big gains. The value here is for a common 6061 T6 alloy in tension at room temperature using the 0.2 percent offset. Welding locally erases this strengthening unless re treated. The number is a staple in mechanical design tables.
+  name: Aluminum
+  source: https://en.wikipedia.org/wiki/Aluminium
+  value: 2.8e8
+- description: Mild low carbon steel yields at a few hundred megapascals and then work hardens, giving it a forgiving ductile plateau. This makes it ideal for beams and automobile bodies. Strain aging and temperature can introduce a Lüders band, the familiar yield point elongation. The value reflects a classic structural grade.
+  name: Steel (Mild)
+  source: https://en.wikipedia.org/wiki/Steel
+  value: 2.5e8
+- description: High strength low alloy steels and martensitic grades push yield into the gigapascal range. Toughness becomes the balancing act to avoid brittle failures. Heat treatment recipes tune both yield and impact resistance. The number represents a quenched and tempered structural steel.
+  name: Steel (High Strength)
+  source: https://en.wikipedia.org/wiki/Steel
+  value: 1e9
+- description: Titanium alloys combine moderate density with high yield and corrosion resistance, perfect for airframes and implants. Microstructure from alpha beta processing controls the plateau. At cryogenic temperatures yield rises further. The value is for Ti 6Al 4V in the annealed condition.
+  name: Titanium
+  source: https://en.wikipedia.org/wiki/Titanium
+  value: 8e8
+- description: Ordinary concrete carries little tensile yield because cracks propagate early, so reinforcement carries tension. In compression its apparent yield is higher due to microcrack closure and friction. Curing conditions dominate strength variation on site. The number is a compressive yield proxy for structural mixes.
+  name: Concrete
+  source: https://en.wikipedia.org/wiki/Concrete
+  value: 3e7
+- description: Glass lacks a conventional yield in tension because flaws trigger brittle fracture before plastic flow. Under high hydrostatic pressure or in compression it can withstand much higher stresses. Surface treatments like tempering raise the effective limit. The value shown is an upper bound in compression before crushing.
+  name: Glass
+  source: https://en.wikipedia.org/wiki/Glass
+  value: 7e8
+- description: Engineering ceramics exhibit very high apparent yield in compression with limited ductility. Their grain boundaries and defects set failure in tension. Designers exploit them where hot hardness matters more than give. The value is for alumina under compressive loading.
+  name: Ceramic
+  source: https://en.wikipedia.org/wiki/Ceramic
+  value: 2e9
+- description: Carbon fiber composites have no single yield value; it depends on fiber direction and matrix. Along the fibers, stress at first matrix cracking is far below fiber failure. Layup design sets the usable envelope. The number is a unidirectional tensile yield along the fiber direction.
+  name: Carbon Fiber
+  source: https://en.wikipedia.org/wiki/Carbon_fiber
+  value: 5e9
+- description: Diamond has extraordinary theoretical strength, but practical yield depends on flaws and direction. Under compression tiny samples sustain immense stresses without plasticity. Machining diamond relies on brittle fracture, not yielding. The value shown is an upper bound inferred from indentation.
+  name: Diamond
+  source: https://en.wikipedia.org/wiki/Diamond
+  value: 5e10
+- description: Graphene sheets approach ideal strength at nanoscale, with yield set by breaking sp2 bonds. Defects and grain boundaries reduce the value in larger films. Experiments use nanoindenters to probe this regime. The number represents pristine monolayer strength in tension.
+  name: Graphene
+  source: https://en.wikipedia.org/wiki/Graphene
+  value: 1e11
+- description: Annealed copper yields at lower stress than steels but offers excellent electrical and thermal conduction. Cold work raises yield at the cost of ductility, a trade used in springs and connectors. Purity and grain size are decisive. The number is for oxygen free copper in tension.
+  name: Copper
+  source: https://en.wikipedia.org/wiki/Copper
+  value: 7e7
+- description: Nylon yields when polymer chains slide past each other after straightening, a process sensitive to moisture. Conditioned samples can appear tougher but softer. Designers account for this by specifying conditioning state. The value is for dry as molded nylon 6.
+  name: Nylon
+  source: https://en.wikipedia.org/wiki/Nylon
+  value: 8e7
+- description: Kevlar fiber under tension shows a high apparent yield due to oriented aromatic chains. In composites it carries loads efficiently along the fiber direction while the matrix supports shear. Impact helmets exploit this anisotropy. The number is for single fiber tensile yield.
+  name: Kevlar Fiber
+  source: https://en.wikipedia.org/wiki/Kevlar
+  value: 3.6e9
+- description: The neutron star crust behaves like an ultra strong lattice where yield refers to the onset of plastic flow under astronomical shear. Models connect this to starquakes that glitch pulsar rotation. No terrestrial lab can reproduce the conditions. The value is a theoretical estimate.
+  name: Neutron Star Crust
+  source: https://en.wikipedia.org/wiki/Neutron_star
+  value: 1e25
+- description: Near a black hole event horizon, conventional material concepts blur, but effective stresses in accretion flows can be cast as yields. Magnetic fields and radiation pressure set the limits rather than crystalline defects. The language is metaphorical but useful for order of magnitude. The value signals a physics extreme.
+  name: Black Hole Horizon
+  source: https://en.wikipedia.org/wiki/Black_hole
+  value: 1e30
+- description: >-
+    Water ice can support only a few megapascals before it begins to flow or fracture permanently under load, which is why glaciers creep on long timescales and skate blades bite into a thin stressed surface. Temperature matters enormously here; colder ice is stronger. The value is for polycrystalline ice near common terrestrial conditions rather than the deep interiors of icy moons.
+  name: Ice
+  source: https://en.wikipedia.org/wiki/Ice
+  value: 5e6
+- description: >-
+    Common polyethylene yields at only a few tens of megapascals, which is why it makes flexible bottles and films instead of structural beams. Molecular weight, branching, and crystallinity all shift the exact threshold. Designers exploit the easy yielding to absorb impacts without brittle fracture. The value is representative for high-density polyethylene.
+  name: Polyethylene
+  source: https://en.wikipedia.org/wiki/Polyethylene
+  value: 2e7
+- description: >-
+    Fired clay bricks tolerate high compression but very little ductile deformation; treating their compressive strength as a yield proxy places them around this stress scale. Masonry works because loads are kept mostly compressive and well distributed. Mortar joints and flaws dominate real walls more than the brick material alone. The value is a representative engineering-grade brick scale.
+  name: Brick
+  source: https://en.wikipedia.org/wiki/Brick
+  value: 1.5e7
+- description: >-
+    Lead yields at very low stress for a metal, which is why it deforms so readily under pressure and has long been useful in seals and radiation shielding where shape conformity matters. The softness comes from metallic bonding in a crystal that slips easily. Room-temperature creep is already relevant. The value is a common handbook number for pure lead.
+  name: Lead
+  source: https://en.wikipedia.org/wiki/Lead
+  value: 1.8e7
+- description: >-
+    ABS plastic sits in the middle ground between tough engineering polymers and disposable consumer plastics. It can take a fair amount of stress before it yields permanently, which is why it appears in housings, toys, and protective shells. Print orientation changes the number for 3D-printed parts, but molded material is more consistent. The value here is for bulk ABS at room temperature.
+  name: ABS Plastic
+  source: https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene
+  value: 4e7
+- description: >-
+    PLA is relatively stiff for a commodity plastic and yields at a somewhat higher stress than ABS in many room-temperature tests. That is part of why desktop 3D prints in PLA can feel crisp and rigid even when they remain somewhat brittle. Heat softens it quickly, however. The value is a representative yield stress for solid PLA.
+  name: PLA Plastic
+  source: https://en.wikipedia.org/wiki/Polylactic_acid
+  value: 6e7
+- description: >-
+    Bamboo carries impressive stress along the grain because its fibers are aligned for structural efficiency. Nature effectively built a lightweight composite column long before humans named the concept. Moisture, node spacing, and species change the exact figure. The value is for mature structural bamboo loaded along the fibers.
+  name: Bamboo
+  source: https://en.wikipedia.org/wiki/Bamboo
+  value: 8e7
+- description: >-
+    Cast iron is strong in compression but comparatively unforgiving in tension, with little plastic range before fracture. Even so, engineering tables often place its yield-like limit in the low hundreds of megapascals for rough comparison. Historic bridges and machine frames relied on its stiffness and castability. The value here is a representative gray-iron scale.
+  name: Cast Iron
+  source: https://en.wikipedia.org/wiki/Cast_iron
+  value: 1.3e8
+- description: >-
+    Magnesium alloys are lighter than aluminum and can still reach respectable yield stresses for automotive and aerospace weight savings. Corrosion and flammability concerns mean design margins stay conservative. Their appeal is specific strength rather than absolute strength. The value is for a common structural magnesium alloy.
+  name: Magnesium Alloy
+  source: https://en.wikipedia.org/wiki/Magnesium_alloy
+  value: 1.6e8
+- description: >-
+    Brass yields around a couple hundred megapascals depending on composition and temper, making it easy to machine and form into valves, fittings, and musical hardware. The same workability that manufacturers love also explains why brass is not used where high-strength steels dominate. Alloying with zinc tunes the tradeoff. The number is a representative cartridge-brass scale.
+  name: Brass
+  source: https://en.wikipedia.org/wiki/Brass
+  value: 2e8
+- description: >-
+    Austenitic stainless steels like 304 trade very high yield for corrosion resistance and ductility, landing near this range in the annealed condition. Cold work can push them much higher. Kitchens, chemical plants, and architecture all live in this regime. The value here is a common room-temperature figure for 304 stainless.
+  name: Stainless Steel (304)
+  source: https://en.wikipedia.org/wiki/SAE_304_stainless_steel
+  value: 2.15e8
+- description: >-
+    High-performance nickel superalloys such as Inconel 718 keep their strength at temperatures where ordinary steels soften badly. That is why turbine disks, rocket hardware, and hot-section fasteners lean on them. The metallurgy is more complicated than the round number suggests, but the design consequence is simple: they yield late. The value is a representative room-temperature yield strength.
+  name: Inconel 718
+  source: https://en.wikipedia.org/wiki/Inconel
+  value: 1e9
+- description: >-
+    Spider dragline silk is one of nature’s most impressive fibers, combining high strength with extensibility in a protein-based material. Its yield-like onset depends on humidity and exact species, but it clearly belongs in the advanced-materials range rather than the textile one. Researchers chase synthetic analogues for the same reason. The value is a representative tensile yield scale.
+  name: Spider Silk
+  source: https://en.wikipedia.org/wiki/Spider_silk
+  value: 1.1e9
+- description: >-
+    Ultra-high-molecular-weight polyethylene fibers sold as Dyneema or Spectra achieve multi-gigapascal strength by aligning long polymer chains. On a stress scale they compete with metals while remaining light enough to float. Ballistic protection and high-performance ropes make direct use of this. The value represents a high-grade fiber rather than the bulk plastic.
+  name: Dyneema Fiber
+  source: https://en.wikipedia.org/wiki/Ultra-high-molecular-weight_polyethylene
+  value: 3e9
+- description: >-
+    Silicon carbide is a very hard ceramic that can sustain enormous compressive stress with little permanent deformation before fracture. In engineering practice that puts its effective yield-like limit in the gigapascal range. The same bonding that gives it abrasive hardness also makes it useful in armor and high-temperature applications. The value is a representative compressive strength scale.
+  name: Silicon Carbide
+  source: https://en.wikipedia.org/wiki/Silicon_carbide
+  value: 3e9
+units:
+- conversion_factor: 1
+  description: Pascals measure stress as force per unit area and serve as the base unit for yield strength. Reporting in pascals keeps comparisons across metals, polymers, and tissues consistent. Engineers usually think in megapascals for convenience. All item values are stored in pascals before conversion.
+  name: pascals
+  symbol: Pa
+- conversion_factor: 1e-6
+  description: Megapascals compress large pascal numbers into human readable figures for structural materials. A hundred to a thousand megapascals covers most metals. Using MPa aligns with datasheets and testing reports. Convert by multiplying pascals by 1e-6.
+  name: megapascals
+  symbol: MPa
+- conversion_factor: 1e-9
+  description: Gigapascals describe very high yield ranges seen in advanced steels, ceramics, and theoretical limits. It is also natural for hardness and indentation scales. While not daily for builders, researchers live in this unit. Convert by multiplying pascals by 1e-9.
+  name: gigapascals
+  symbol: GPa

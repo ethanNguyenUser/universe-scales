@@ -1,0 +1,2252 @@
+{
+  "base_unit": "square_meters",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 40,
+    "candidate_shortfall_to_preferred_target": 10,
+    "empty_bin_count": 7,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 40,
+    "selected_primary_count": 17,
+    "selected_secondary_count": 23,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 40
+    },
+    "target_selected_count": 40
+  },
+  "description_format": "markdown",
+  "dimension": "area",
+  "dimension_description": "Area here means a characteristic area under explicit qualifiers, often a surface area, cross-section, footprint, or geographic extent. Mixing those notions blindly would be misleading, so each entry states what kind of area is being used. The point is coverage across scales, not a claim that all areas answer the same question.",
+  "frontend_group": "geometry",
+  "frontend_group_label": "Geometry & Scale",
+  "frontend_order": 210,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This is the target size implied by the proton's [charge radius](https://en.wikipedia.org/wiki/Charge_radius). In scattering experiments, an area this small is still enough to show that a proton is not a hard bead but a quantum object with internal structure.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is the target size implied by the proton's [charge radius](https://en.wikipedia.org/wiki/Charge_radius). In scattering experiments, an area this small is still enough to show that a proton is not a hard bead but a quantum object with internal structure.",
+      "facts": {
+        "canonical_name": "Proton cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "2.2e-30",
+          "source_url": "https://en.wikipedia.org/wiki/Proton"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-proton",
+      "name": "Proton cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Proton",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-proton",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Proton",
+          "url": "https://en.wikipedia.org/wiki/Proton"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic geometric cross-section implied by the proton charge radius.",
+      "value": 2.2e-30,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A hydrogen atom covers an area almost ten orders of magnitude larger than a proton's cross-section. That leap comes from the [Bohr radius](https://en.wikipedia.org/wiki/Bohr_radius), a vivid reminder that atoms are mostly empty space whose size is set by quantum rules.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A hydrogen atom covers an area almost ten orders of magnitude larger than a proton's cross-section. That leap comes from the [Bohr radius](https://en.wikipedia.org/wiki/Bohr_radius), a vivid reminder that atoms are mostly empty space whose size is set by quantum rules.",
+      "facts": {
+        "canonical_name": "Hydrogen atom cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "8.8e-21",
+          "source_url": "https://en.wikipedia.org/wiki/Hydrogen_atom"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-hydrogen-atom",
+      "name": "Hydrogen atom cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Hydrogen_atom",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hydrogen-atom",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hydrogen atom",
+          "url": "https://en.wikipedia.org/wiki/Hydrogen_atom"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic geometric cross-section implied by the Bohr radius.",
+      "value": 8.8e-21,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This is roughly the patch of space a single water molecule presents in a collision. At this scale, area begins to control diffusion, viscosity, and the hydrogen-bond traffic that gives liquid water so many of its strange bulk properties.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is roughly the patch of space a single water molecule presents in a collision. At this scale, area begins to control diffusion, viscosity, and the hydrogen-bond traffic that gives liquid water so many of its strange bulk properties.",
+      "facts": {
+        "canonical_name": "Water molecule cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "5.9e-20",
+          "source_url": "https://en.wikipedia.org/wiki/Water"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-water",
+      "name": "Water molecule cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Water",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-water",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Water",
+          "url": "https://en.wikipedia.org/wiki/Water"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic molecular cross-section of a water molecule.",
+      "value": 5.9e-20,
+      "value_type": "derived",
+      "wikidata_qid": "Q283"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The [DNA double helix](https://en.wikipedia.org/wiki/Nucleic_acid_double_helix) keeps an almost constant width across life. That narrow area is wide enough for proteins to read its grooves, yet compact enough for meters of DNA to be folded into a cell nucleus.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The [DNA double helix](https://en.wikipedia.org/wiki/Nucleic_acid_double_helix) keeps an almost constant width across life. That narrow area is wide enough for proteins to read its grooves, yet compact enough for meters of DNA to be folded into a cell nucleus.",
+      "facts": {
+        "canonical_name": "DNA helix cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "3.1e-18",
+          "source_url": "https://en.wikipedia.org/wiki/DNA"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-dna",
+      "name": "DNA helix cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/DNA",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dna",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DNA",
+          "url": "https://en.wikipedia.org/wiki/DNA"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Cross-sectional area of the DNA double helix using a 2 nm diameter.",
+      "value": 3.1e-18,
+      "value_type": "derived",
+      "wikidata_qid": "Q7430"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A coronavirus particle is tiny enough to drift with air currents yet large enough to carry a forest of spike proteins. Its cross-section sits in the awkward middle where biology is no longer molecular but not yet cellular.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A coronavirus particle is tiny enough to drift with air currents yet large enough to carry a forest of spike proteins. Its cross-section sits in the awkward middle where biology is no longer molecular but not yet cellular.",
+      "facts": {
+        "canonical_name": "SARS-CoV-2 virion cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "7.9e-15",
+          "source_url": "https://en.wikipedia.org/wiki/SARS-CoV-2"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-sars-cov-2",
+      "name": "SARS-CoV-2 virion cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/SARS-CoV-2",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sars-cov-2",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "SARS-CoV-2",
+          "url": "https://en.wikipedia.org/wiki/SARS-CoV-2"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Approximate cross-sectional area of a spherical coronavirus particle.",
+      "value": 7.9e-15,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "For a virus, surface area is where the action is: attachment, entry, and escape all happen on the shell. On influenza, this tiny membrane hosts the proteins that bind to host cells and later help new virions break free.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "For a virus, surface area is where the action is: attachment, entry, and escape all happen on the shell. On influenza, this tiny membrane hosts the proteins that bind to host cells and later help new virions break free.",
+      "facts": {
+        "canonical_name": "Influenza virion surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "4.5e-14",
+          "source_url": "https://en.wikipedia.org/wiki/Influenza"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-influenza-virus",
+      "name": "Influenza virion surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Influenza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-influenza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Influenza",
+          "url": "https://en.wikipedia.org/wiki/Influenza"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Approximate surface area of a spherical influenza virion.",
+      "value": 4.5e-14,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A red blood cell has far more membrane area than its outline suggests because of its [biconcave](https://en.wikipedia.org/wiki/Red_blood_cell#Human_red_blood_cells) shape. That extra area helps it exchange gases quickly while still squeezing through capillaries narrower than the cell itself.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A red blood cell has far more membrane area than its outline suggests because of its [biconcave](https://en.wikipedia.org/wiki/Red_blood_cell#Human_red_blood_cells) shape. That extra area helps it exchange gases quickly while still squeezing through capillaries narrower than the cell itself.",
+      "facts": {
+        "canonical_name": "Red blood cell surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.4e-10",
+          "source_url": "https://en.wikipedia.org/wiki/Red_blood_cell"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-red-blood-cell",
+      "name": "Red blood cell surface area",
+      "qualifiers": {
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-red-blood-cell",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Red blood cell",
+          "url": "https://en.wikipedia.org/wiki/Red_blood_cell"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic membrane surface area of a red blood cell.",
+      "value": 1.4e-10,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A coarse salt grain is already enormous compared with molecules, yet still small enough that texture matters on the tongue. That is part of why flaky and fine salts can feel different even when the chemistry is identical.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A coarse salt grain is already enormous compared with molecules, yet still small enough that texture matters on the tongue. That is part of why flaky and fine salts can feel different even when the chemistry is identical.",
+      "facts": {
+        "canonical_name": "Grain of salt cross-section",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "7.9e-09",
+          "source_url": "https://en.wikipedia.org/wiki/Salt"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-grain-of-salt-cross-section",
+      "name": "Grain of salt cross-section",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Salt",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-salt",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Salt",
+          "url": "https://en.wikipedia.org/wiki/Salt"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Cross-sectional area of a representative coarse salt grain treated as a sphere.",
+      "value": 7.9e-09,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A sand grain looks inert, but its surface is where weathering, dissolution, and chemical exchange happen. Multiply this tiny area across a beach or dune field and sand becomes an enormous reactive interface rather than a passive pile of grains.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A sand grain looks inert, but its surface is where weathering, dissolution, and chemical exchange happen. Multiply this tiny area across a beach or dune field and sand becomes an enormous reactive interface rather than a passive pile of grains.",
+      "facts": {
+        "canonical_name": "Grain of sand surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "3e-06",
+          "source_url": "https://en.wikipedia.org/wiki/Sand"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-grain-of-sand-surface",
+      "name": "Grain of sand surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sand",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sand",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sand",
+          "url": "https://en.wikipedia.org/wiki/Sand"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Surface area of a representative 1 mm sand grain treated as a sphere.",
+      "value": 3e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A stamp is a good hand-scale anchor: larger than a fingernail, smaller than a card, and easy to picture instantly. It marks the point where area stops feeling microscopic and starts feeling graspable.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A stamp is a good hand-scale anchor: larger than a fingernail, smaller than a card, and easy to picture instantly. It marks the point where area stops feeling microscopic and starts feeling graspable.",
+      "facts": {
+        "canonical_name": "Postage stamp face area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.0004",
+          "source_url": "https://en.wikipedia.org/wiki/Postage_stamp"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-postage-stamp",
+      "name": "Postage stamp face area",
+      "qualifiers": {
+        "measurement": "rectangular face area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Postage_stamp",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-postage-stamp",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Postage stamp",
+          "url": "https://en.wikipedia.org/wiki/Postage_stamp"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Front-face area of a representative postage stamp.",
+      "value": 0.0004,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A payment card is one of the most standardized rectangles in daily life. Its area is so familiar that it makes a surprisingly good reference for screens, labels, badges, and other palm-sized surfaces.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A payment card is one of the most standardized rectangles in daily life. Its area is so familiar that it makes a surprisingly good reference for screens, labels, badges, and other palm-sized surfaces.",
+      "facts": {
+        "canonical_name": "Credit card face area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.004998",
+          "source_url": "https://en.wikipedia.org/wiki/Payment_card_number"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-credit-card",
+      "name": "Credit card face area",
+      "qualifiers": {
+        "measurement": "rectangular face area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Payment_card_number",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-payment-card-number",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Payment card number",
+          "url": "https://en.wikipedia.org/wiki/Payment_card_number"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Front-face area of an ISO ID-1 payment card.",
+      "value": 0.004998,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A phone display feels small in the hand, but its lit area is already approaching that of a small sheet of paper. The diagonal size people quote hides how quickly usable area grows as screens become taller and wider.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A phone display feels small in the hand, but its lit area is already approaching that of a small sheet of paper. The diagonal size people quote hides how quickly usable area grows as screens become taller and wider.",
+      "facts": {
+        "canonical_name": "Smartphone screen area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.011",
+          "source_url": "https://en.wikipedia.org/wiki/Smartphone"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-smartphone-screen",
+      "name": "Smartphone screen area",
+      "qualifiers": {
+        "measurement": "display area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Smartphone",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-smartphone",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Smartphone",
+          "url": "https://en.wikipedia.org/wiki/Smartphone"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative active display area of a modern smartphone.",
+      "value": 0.011,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A5 is notebook-sized: intimate enough for a journal, large enough for diagrams and serious notes. It also sits neatly in the ISO paper system, where two A5 sheets make one A4.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A5 is notebook-sized: intimate enough for a journal, large enough for diagrams and serious notes. It also sits neatly in the ISO paper system, where two A5 sheets make one A4.",
+      "facts": {
+        "canonical_name": "A5 sheet area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0155",
+          "source_url": "https://en.wikipedia.org/wiki/Paper_size"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-a5-paper",
+      "name": "A5 sheet area",
+      "qualifiers": {
+        "measurement": "sheet area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Paper_size",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paper-size",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paper size",
+          "url": "https://en.wikipedia.org/wiki/Paper_size"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Area of one A5 sheet of paper.",
+      "value": 0.0155,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A laptop display only looks modest until you compare its active area with a phone's. That jump in surface helps explain why moving from mobile to laptop work feels like getting a real desk back.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A laptop display only looks modest until you compare its active area with a phone's. That jump in surface helps explain why moving from mobile to laptop work feels like getting a real desk back.",
+      "facts": {
+        "canonical_name": "Laptop screen area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.025",
+          "source_url": "https://en.wikipedia.org/wiki/Laptop"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-laptop-screen",
+      "name": "Laptop screen area",
+      "qualifiers": {
+        "measurement": "display area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Laptop",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-laptop",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Laptop",
+          "url": "https://en.wikipedia.org/wiki/Laptop"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative active display area of a modern laptop.",
+      "value": 0.025,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A4 is the quiet default of offices, printers, forms, and handouts across much of the world. People rarely think of it in square meters, but its area is one of the best everyday anchors on this scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A4 is the quiet default of offices, printers, forms, and handouts across much of the world. People rarely think of it in square meters, but its area is one of the best everyday anchors on this scale.",
+      "facts": {
+        "canonical_name": "A4 sheet area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.0624",
+          "source_url": "https://en.wikipedia.org/wiki/Paper_size"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-a4-paper",
+      "name": "A4 sheet area",
+      "qualifiers": {
+        "measurement": "sheet area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Paper_size",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paper-size",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paper size",
+          "url": "https://en.wikipedia.org/wiki/Paper_size"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Area of one A4 sheet of paper.",
+      "value": 0.0624,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "An adult human carries a total skin area larger than most people guess. That broad surface is what makes sweating, touch, heat loss, and barrier protection body-scale processes rather than merely local ones.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "An adult human carries a total skin area larger than most people guess. That broad surface is what makes sweating, touch, heat loss, and barrier protection body-scale processes rather than merely local ones.",
+      "facts": {
+        "canonical_name": "Human skin area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.7",
+          "source_url": "https://en.wikipedia.org/wiki/Human_skin"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-human",
+      "name": "Human skin area",
+      "qualifiers": {
+        "measurement": "skin surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Human_skin",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-human-skin",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Human skin",
+          "url": "https://en.wikipedia.org/wiki/Human_skin"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative total skin surface area of an adult human.",
+      "value": 1.7,
+      "value_type": "derived",
+      "wikidata_qid": "Q5"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A parking space is a revealing unit of built land use: a patch of city large enough to store one car while it does nothing. Once you start noticing them, paved landscapes begin to look like area spent on idle machines.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A parking space is a revealing unit of built land use: a patch of city large enough to store one car while it does nothing. Once you start noticing them, paved landscapes begin to look like area spent on idle machines.",
+      "facts": {
+        "canonical_name": "Parking space",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "12.5",
+          "source_url": "https://en.wikipedia.org/wiki/Parking_space"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-parking-space",
+      "name": "Parking space",
+      "qualifiers": {
+        "measurement": "footprint area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Parking_space",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-parking-space",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Parking space",
+          "url": "https://en.wikipedia.org/wiki/Parking_space"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative footprint area of one parking space.",
+      "value": 12.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A tennis court is small on a map but large in motion. Its area is just enough that shot placement, recovery time, and court coverage become the geometry of the sport.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A tennis court is small on a map but large in motion. Its area is just enough that shot placement, recovery time, and court coverage become the geometry of the sport.",
+      "facts": {
+        "canonical_name": "Tennis court",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "260.9",
+          "source_url": "https://en.wikipedia.org/wiki/Tennis_court"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-tennis-court",
+      "name": "Tennis court",
+      "qualifiers": {
+        "measurement": "court area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Tennis_court",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tennis-court",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tennis court",
+          "url": "https://en.wikipedia.org/wiki/Tennis_court"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Total doubles court area including playing surface.",
+      "value": 260.9,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A basketball court packs a whole game into a surface small enough to stay visually legible from the stands. That compact area is part of why basketball feels dense, quick, and spatially crowded.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A basketball court packs a whole game into a surface small enough to stay visually legible from the stands. That compact area is part of why basketball feels dense, quick, and spatially crowded.",
+      "facts": {
+        "canonical_name": "Basketball court",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "420.0",
+          "source_url": "https://en.wikipedia.org/wiki/Basketball_court"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-basketball-court",
+      "name": "Basketball court",
+      "qualifiers": {
+        "measurement": "court area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Basketball_court",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-basketball-court",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Basketball court",
+          "url": "https://en.wikipedia.org/wiki/Basketball_court"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative area of a basketball court.",
+      "value": 420.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A football field is one of the most common mental rulers for large areas in the United States. Even one field already spans thousands of square meters, which is why people reach for it when a number starts to get hard to picture.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A football field is one of the most common mental rulers for large areas in the United States. Even one field already spans thousands of square meters, which is why people reach for it when a number starts to get hard to picture.",
+      "facts": {
+        "canonical_name": "American football field",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5351.0",
+          "source_url": "https://en.wikipedia.org/wiki/American_football_field"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-football-field",
+      "name": "American football field",
+      "qualifiers": {
+        "measurement": "field area including end zones"
+      },
+      "source": "https://en.wikipedia.org/wiki/American_football_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-american-football-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "American football field",
+          "url": "https://en.wikipedia.org/wiki/American_football_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Total area of a 120 by 53 1/3 yard American football field.",
+      "value": 5351.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A soccer pitch is large enough that open space becomes a strategic resource in its own right. Compared with indoor courts, the jump in area turns fitness, shape, and passing lanes into core features of the game.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A soccer pitch is large enough that open space becomes a strategic resource in its own right. Compared with indoor courts, the jump in area turns fitness, shape, and passing lanes into core features of the game.",
+      "facts": {
+        "canonical_name": "Soccer pitch",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7140.0",
+          "source_url": "https://en.wikipedia.org/wiki/Football_pitch"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-soccer-pitch",
+      "name": "Soccer pitch",
+      "qualifiers": {
+        "measurement": "pitch area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Football_pitch",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-football-pitch",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Football pitch",
+          "url": "https://en.wikipedia.org/wiki/Football_pitch"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Representative area of a soccer pitch.",
+      "value": 7140.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Central Park is not just a big park; it is a designed landscape inserted into one of the densest urban grids on Earth. On an area scale it already feels less like a park and more like a district of Manhattan set aside for trees, water, and paths.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Central Park is not just a big park; it is a designed landscape inserted into one of the densest urban grids on Earth. On an area scale it already feels less like a park and more like a district of Manhattan set aside for trees, water, and paths.",
+      "facts": {
+        "canonical_name": "Central Park",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3410000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Central_Park"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-central-park",
+      "name": "Central Park",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Central_Park",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-central-park",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Central Park",
+          "url": "https://en.wikipedia.org/wiki/Central_Park"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Central Park in New York City.",
+      "value": 3410000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Manhattan feels enormous culturally, but its land area is surprisingly compact. That mismatch between symbolic size and physical size is part of what makes the island such a useful anchor for urban scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Manhattan feels enormous culturally, but its land area is surprisingly compact. That mismatch between symbolic size and physical size is part of what makes the island such a useful anchor for urban scale.",
+      "facts": {
+        "canonical_name": "Manhattan",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "59100000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Manhattan"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-manhattan",
+      "name": "Manhattan",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Manhattan",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-manhattan",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Manhattan",
+          "url": "https://en.wikipedia.org/wiki/Manhattan"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Manhattan.",
+      "value": 59100000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Paris proper is smaller in area than many people expect from a world city. Its influence comes not from sprawl but from density, history, and the way so much culture is packed into a relatively tight footprint.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Paris proper is smaller in area than many people expect from a world city. Its influence comes not from sprawl but from density, history, and the way so much culture is packed into a relatively tight footprint.",
+      "facts": {
+        "canonical_name": "Paris",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "105400000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Paris"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-paris",
+      "name": "Paris",
+      "qualifiers": {
+        "measurement": "commune land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Paris",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-paris",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Paris",
+          "url": "https://en.wikipedia.org/wiki/Paris"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of the city of Paris.",
+      "value": 105400000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A lake surface is a different kind of area from land: it is a boundary between water and sky rather than a place to stand. At Tahoe's scale, that interface is already large enough to shape local weather, ecology, and evaporation.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A lake surface is a different kind of area from land: it is a boundary between water and sky rather than a place to stand. At Tahoe's scale, that interface is already large enough to shape local weather, ecology, and evaporation.",
+      "facts": {
+        "canonical_name": "Lake Tahoe surface",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "496000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-lake-tahoe",
+      "name": "Lake Tahoe surface",
+      "qualifiers": {
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Lake_Tahoe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lake-tahoe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lake Tahoe",
+          "url": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Surface area of Lake Tahoe.",
+      "value": 496000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "New York City is much larger than its iconic core. Once all five boroughs are counted together, the city shifts from island-sized intuition into something much closer to a full region.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "New York City is much larger than its iconic core. Once all five boroughs are counted together, the city shifts from island-sized intuition into something much closer to a full region.",
+      "facts": {
+        "canonical_name": "New York City",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "784000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/New_York_City"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-new-york-city",
+      "name": "New York City",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/New_York_City",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-new-york-city",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "New York City",
+          "url": "https://en.wikipedia.org/wiki/New_York_City"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of New York City.",
+      "value": 784000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Rhode Island is the clich\u00e9 example of a small state, yet even the smallest U.S. state is far beyond park or city scale. It reminds you how quickly administrative geography becomes physically large.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Rhode Island is the clich\u00e9 example of a small state, yet even the smallest U.S. state is far beyond park or city scale. It reminds you how quickly administrative geography becomes physically large.",
+      "facts": {
+        "canonical_name": "Rhode Island",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "4000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Rhode_Island"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-rhode-island",
+      "name": "Rhode Island",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Rhode_Island",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rhode-island",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rhode Island",
+          "url": "https://en.wikipedia.org/wiki/Rhode_Island"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of the state of Rhode Island.",
+      "value": 4000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The [Caspian Sea](https://en.wikipedia.org/wiki/Caspian_Sea) behaves more like an inland geographic world than like a familiar lake. Its surface is large enough that coastlines, fisheries, and climate effects unfold on the scale of nations.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The [Caspian Sea](https://en.wikipedia.org/wiki/Caspian_Sea) behaves more like an inland geographic world than like a familiar lake. Its surface is large enough that coastlines, fisheries, and climate effects unfold on the scale of nations.",
+      "facts": {
+        "canonical_name": "Caspian Sea surface",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "371000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-caspian-sea",
+      "name": "Caspian Sea surface",
+      "qualifiers": {
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Caspian_Sea",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-caspian-sea",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Caspian Sea",
+          "url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Surface area of the Caspian Sea.",
+      "value": 371000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Texas is large enough that weather systems, ecosystems, and travel times vary dramatically within one state. At this scale, area stops feeling like a parcel and starts feeling like a world with internal regions.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Texas is large enough that weather systems, ecosystems, and travel times vary dramatically within one state. At this scale, area stops feeling like a parcel and starts feeling like a world with internal regions.",
+      "facts": {
+        "canonical_name": "Texas",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "696200000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Texas"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-texas",
+      "name": "Texas",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Texas",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-texas",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Texas",
+          "url": "https://en.wikipedia.org/wiki/Texas"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Texas.",
+      "value": 696200000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Greenland is famous for looking absurdly huge on some map projections, but even after correcting for that distortion it is still enormous. Much of that area is ice sheet, which makes the island feel more like a frozen cap than a conventional landmass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Greenland is famous for looking absurdly huge on some map projections, but even after correcting for that distortion it is still enormous. Much of that area is ice sheet, which makes the island feel more like a frozen cap than a conventional landmass.",
+      "facts": {
+        "canonical_name": "Greenland",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2166000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Greenland"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-greenland",
+      "name": "Greenland",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Greenland",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-greenland",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Greenland",
+          "url": "https://en.wikipedia.org/wiki/Greenland"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Greenland.",
+      "value": 2166000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Australia sits near the threshold where 'island' stops feeling like the right word and 'continent' begins to. Its area is large enough to contain deserts, reefs, rainforests, and journeys that feel more intercontinental than local.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Australia sits near the threshold where 'island' stops feeling like the right word and 'continent' begins to. Its area is large enough to contain deserts, reefs, rainforests, and journeys that feel more intercontinental than local.",
+      "facts": {
+        "canonical_name": "Australia",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7690000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Australia"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-australia",
+      "name": "Australia",
+      "qualifiers": {
+        "measurement": "land area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Australia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-australia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Australia",
+          "url": "https://en.wikipedia.org/wiki/Australia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Land area of Australia.",
+      "value": 7690000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Moon's entire surface is only a bit larger than Africa's. That comparison makes the lunar world feel less like a distant dot and more like a place with continental-scale landscapes.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Moon's entire surface is only a bit larger than Africa's. That comparison makes the lunar world feel less like a distant dot and more like a place with continental-scale landscapes.",
+      "facts": {
+        "canonical_name": "Moon surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "37900000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Moon"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-moon",
+      "name": "Moon surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Moon",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moon",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moon",
+          "url": "https://en.wikipedia.org/wiki/Moon"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Total surface area of the Moon.",
+      "value": 37900000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": "Q405"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Earth's surface sounds abstract until you remember that most of it is ocean. The total is planetary, but the land humans actually occupy is only a comparatively thin fraction of the whole shell.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Earth's surface sounds abstract until you remember that most of it is ocean. The total is planetary, but the land humans actually occupy is only a comparatively thin fraction of the whole shell.",
+      "facts": {
+        "canonical_name": "Earth surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "510000000000000.0",
+          "source_url": "https://en.wikipedia.org/wiki/Earth"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-earth",
+      "name": "Earth surface area",
+      "qualifiers": {
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Earth",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-earth",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Earth",
+          "url": "https://en.wikipedia.org/wiki/Earth"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Total surface area of Earth.",
+      "value": 510000000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": "Q2"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Jupiter has no solid surface in the everyday sense, so this refers to the visible cloud-top envelope. It is a useful reminder that area scales with radius squared: even a modest increase in size produces a huge increase in surface.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Jupiter has no solid surface in the everyday sense, so this refers to the visible cloud-top envelope. It is a useful reminder that area scales with radius squared: even a modest increase in size produces a huge increase in surface.",
+      "facts": {
+        "canonical_name": "Jupiter surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "6.14e+16",
+          "source_url": "https://en.wikipedia.org/wiki/Jupiter"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-jupiter",
+      "name": "Jupiter surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Jupiter",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-jupiter",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Jupiter",
+          "url": "https://en.wikipedia.org/wiki/Jupiter"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Total surface area of Jupiter using its mean radius.",
+      "value": 6.14e+16,
+      "value_type": "derived",
+      "wikidata_qid": "Q319"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Sun's visible surface is vast enough to hold roughly twelve thousand Earths' worth of area. This is the radiant skin from which sunlight escapes, so stellar physics often looks less like studying a point and more like studying weather on a sphere.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Sun's visible surface is vast enough to hold roughly twelve thousand Earths' worth of area. This is the radiant skin from which sunlight escapes, so stellar physics often looks less like studying a point and more like studying weather on a sphere.",
+      "facts": {
+        "canonical_name": "Sun surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "6.09e+18",
+          "source_url": "https://en.wikipedia.org/wiki/Sun"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-sun",
+      "name": "Sun surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sun",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sun",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sun",
+          "url": "https://en.wikipedia.org/wiki/Sun"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Photospheric surface area of the Sun.",
+      "value": 6.09e+18,
+      "value_type": "derived",
+      "wikidata_qid": "Q525"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This is the area of a disk reaching out to Neptune's orbit, not a filled solid plate. Most of that region is emptiness, which is exactly why the Solar System can be both enormous and sparse at the same time.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is the area of a disk reaching out to Neptune's orbit, not a filled solid plate. Most of that region is emptiness, which is exactly why the Solar System can be both enormous and sparse at the same time.",
+      "facts": {
+        "canonical_name": "Solar system disk to Neptune",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "6.34e+25",
+          "source_url": "https://en.wikipedia.org/wiki/Neptune"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:scenario-solar-system-disk-neptune",
+      "name": "Solar system disk to Neptune",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "orbital disk area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Neptune",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-neptune",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Neptune",
+          "url": "https://en.wikipedia.org/wiki/Neptune"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Disk area enclosed by Neptune's mean orbital radius.",
+      "value": 6.34e+25,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Milky Way's disk spreads stars, gas, and dust across an immense plane, yet the stars themselves occupy very little of it. A galaxy at this scale is less like a crowded city and more like a thin luminous ecosystem.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Milky Way's disk spreads stars, gas, and dust across an immense plane, yet the stars themselves occupy very little of it. A galaxy at this scale is less like a crowded city and more like a thin luminous ecosystem.",
+      "facts": {
+        "canonical_name": "Milky Way stellar disk area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "7e+41",
+          "source_url": "https://en.wikipedia.org/wiki/Milky_Way"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-milky-way",
+      "name": "Milky Way stellar disk area",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "disk area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Milky_Way",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-milky-way",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Milky Way",
+          "url": "https://en.wikipedia.org/wiki/Milky_Way"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Disk area implied by the Milky Way's characteristic radius.",
+      "value": 7e+41,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This cross-section spans the gravitational neighborhood that contains the Milky Way, Andromeda, and dozens of smaller galaxies. At this scale, a full galaxy is no longer the landscape; it is one landmark inside a region whose emptiness is measured in megaparsecs.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This cross-section spans the gravitational neighborhood that contains the Milky Way, Andromeda, and dozens of smaller galaxies. At this scale, a full galaxy is no longer the landscape; it is one landmark inside a region whose emptiness is measured in megaparsecs.",
+      "facts": {
+        "canonical_name": "Local Group cross-sectional area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "6.6e+45",
+          "source_url": "https://en.wikipedia.org/wiki/Local_Group"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-local-group",
+      "name": "Local Group cross-sectional area",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Local_Group",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-local-group",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Local Group",
+          "url": "https://en.wikipedia.org/wiki/Local_Group"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic cross-sectional area implied by a 1.5 Mpc radius Local Group.",
+      "value": 6.6e+45,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "By the time you reach supercluster scale, even rich galaxy clusters stop feeling like worlds and start feeling like nodes in a loose web. This area is the footprint of large-scale structure: the kind of scale on which the Milky Way, Andromeda, and Virgo cluster all count as local detail rather than the main event.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "By the time you reach supercluster scale, even rich galaxy clusters stop feeling like worlds and start feeling like nodes in a loose web. This area is the footprint of large-scale structure: the kind of scale on which the Milky Way, Andromeda, and Virgo cluster all count as local detail rather than the main event.",
+      "facts": {
+        "canonical_name": "Virgo Supercluster cross-sectional area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "pi*r^2",
+          "method": "derived",
+          "original_value_text": "8.2e+47",
+          "source_url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-virgo-supercluster",
+      "name": "Virgo Supercluster cross-sectional area",
+      "qualifiers": {
+        "derivation": "pi*r^2",
+        "measurement": "cross-sectional area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-virgo-supercluster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Virgo Supercluster",
+          "url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Characteristic cross-sectional area implied by a representative Virgo Supercluster radius.",
+      "value": 8.2e+47,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "This is not a physical wall but the area of our cosmic horizon, set by the fact that light has had only a finite time to reach us. The radius is about $46$ billion light-years, so the oldest [cosmic microwave background](https://en.wikipedia.org/wiki/Cosmic_microwave_background) light and every galaxy we can ever map both live inside the same observable shell. On this scale, area becomes a statement about access to information, not just geometry.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is not a physical wall but the area of our cosmic horizon, set by the fact that light has had only a finite time to reach us. The radius is about $46$ billion light-years, so the oldest [cosmic microwave background](https://en.wikipedia.org/wiki/Cosmic_microwave_background) light and every galaxy we can ever map both live inside the same observable shell. On this scale, area becomes a statement about access to information, not just geometry.",
+      "facts": {
+        "canonical_name": "Observable universe boundary area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "2.44e+54",
+          "source_url": "https://en.wikipedia.org/wiki/Universe"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-universe",
+      "name": "Observable universe boundary area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "measurement": "surface area"
+      },
+      "source": "https://en.wikipedia.org/wiki/Universe",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-universe",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Universe",
+          "url": "https://en.wikipedia.org/wiki/Universe"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Surface area of the observable universe treated as a sphere.",
+      "value": 2.44e+54,
+      "value_type": "derived",
+      "wikidata_qid": "Q1"
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Wikidata area property",
+      "url": "https://www.wikidata.org/wiki/Property:P2046"
+    },
+    {
+      "name": "Area",
+      "url": "https://en.wikipedia.org/wiki/Area"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Square meters are the canonical storage unit for all area observations.",
+      "name": "square meters",
+      "symbol": "m^2"
+    },
+    {
+      "conversion_factor": 10000.0,
+      "description": "Square centimeters are useful for small surfaces and cross-sections.",
+      "name": "square centimeters",
+      "symbol": "cm^2"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Square kilometers are useful for geography and astronomy.",
+      "name": "square kilometers",
+      "symbol": "km^2"
+    },
+    {
+      "conversion_factor": 0.0001,
+      "description": "Hectares are common for land area and agriculture.",
+      "name": "hectares",
+      "symbol": "ha"
+    },
+    {
+      "conversion_factor": 0.000247105,
+      "description": "Acres are widely used in land records and real estate.",
+      "name": "acres",
+      "symbol": "ac"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Square millimeters are useful for apertures, wounds, and machining.",
+      "name": "square millimeters",
+      "symbol": "mm^2"
+    },
+    {
+      "conversion_factor": 10.7639104167,
+      "description": "Square feet are a familiar unit for room and building floor area.",
+      "name": "square feet",
+      "symbol": "ft^2"
+    },
+    {
+      "conversion_factor": 3.8610215854e-07,
+      "description": "Square miles are useful for large land and regional areas.",
+      "name": "square miles",
+      "symbol": "mi^2"
+    },
+    {
+      "conversion_factor": 3.828e+69,
+      "description": "Planck area is the natural area scale from the Planck length squared.",
+      "name": "Planck areas",
+      "symbol": "l_P^2"
+    }
+  ]
+}

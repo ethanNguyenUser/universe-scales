@@ -1,0 +1,322 @@
+[
+  {
+    "canonical_name": "A bacterium",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Cell_(biology)",
+    "subject_key": "entity:cell-count:a-bacterium",
+    "subject_type": "entity",
+    "summary": "A single bacterium is the lower anchor for cell-count comparisons.",
+    "value_base": 1,
+    "value_type": "measured",
+    "source_value_text": "1",
+    "source_unit": "cells",
+    "source_basis": "One bacterial cell."
+  },
+  {
+    "canonical_name": "A yeast cell",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Yeast",
+    "subject_key": "entity:cell-count:a-yeast-cell",
+    "subject_type": "entity",
+    "summary": "Yeast provides a familiar eukaryotic single-cell example.",
+    "value_base": 1,
+    "value_type": "measured",
+    "source_value_text": "1",
+    "source_unit": "cells",
+    "source_basis": "One unicellular yeast cell."
+  },
+  {
+    "canonical_name": "A human red blood cell",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+    "subject_key": "entity:cell-count:a-human-red-blood-cell",
+    "subject_type": "entity",
+    "summary": "A red blood cell is a canonical animal cell-scale object.",
+    "value_base": 1,
+    "value_type": "measured",
+    "source_value_text": "1",
+    "source_unit": "cells",
+    "source_basis": "One erythrocyte."
+  },
+  {
+    "canonical_name": "A human oocyte",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Oocyte",
+    "subject_key": "entity:cell-count:a-human-oocyte",
+    "subject_type": "entity",
+    "summary": "The human egg is a one-cell starting point for an organism.",
+    "value_base": 1,
+    "value_type": "measured",
+    "source_value_text": "1",
+    "source_unit": "cells",
+    "source_basis": "A single egg cell."
+  },
+  {
+    "canonical_name": "A zebrafish embryo",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Zebrafish",
+    "subject_key": "scenario:cell-count:a-zebrafish-embryo",
+    "subject_type": "scenario",
+    "summary": "Early embryos quickly move out of the single-cell band.",
+    "value_base": 1000,
+    "value_type": "derived",
+    "source_value_text": "~1,000 cells",
+    "source_unit": "cells",
+    "source_basis": "Early embryo cell counts are on the order of thousands.",
+    "derivation_note": "Approximate developmental stage count",
+    "qualifiers": {
+      "assumption": "early embryo"
+    }
+  },
+  {
+    "canonical_name": "A drop of blood",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Blood",
+    "subject_key": "scenario:cell-count:a-drop-of-blood",
+    "subject_type": "scenario",
+    "summary": "A small drop of blood already contains hundreds of millions of cells.",
+    "value_base": 500000000,
+    "value_type": "derived",
+    "source_value_text": "5 million RBC/\u00b5L x 100 \u00b5L",
+    "source_unit": "cells",
+    "source_basis": "Roughly 5 million red blood cells per microliter, times ~100 microliters per drop.",
+    "derivation_note": "cells = concentration x volume",
+    "qualifiers": {
+      "assumption": "100 microliters per drop"
+    }
+  },
+  {
+    "canonical_name": "An E. coli culture in one milliliter",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Escherichia_coli",
+    "subject_key": "scenario:cell-count:an-e-coli-culture-in-one-milliliter",
+    "subject_type": "scenario",
+    "summary": "A milliliter of dense culture jumps by nine orders of magnitude from a lone bacterium.",
+    "value_base": 1000000000,
+    "value_type": "derived",
+    "source_value_text": "~1 billion cells",
+    "source_unit": "cells",
+    "source_basis": "Dense laboratory culture on the order of a billion cells per milliliter.",
+    "derivation_note": "order-of-magnitude lab culture estimate",
+    "qualifiers": {
+      "assumption": "dense culture"
+    }
+  },
+  {
+    "canonical_name": "A mouse body",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Mouse",
+    "subject_key": "entity:cell-count:a-mouse-body",
+    "subject_type": "entity",
+    "summary": "A mouse body gives a small-animal whole-organism scale anchor.",
+    "value_base": 12000000000,
+    "value_type": "derived",
+    "source_value_text": "~1.2e10 cells",
+    "source_unit": "cells",
+    "source_basis": "Approximate cell count of a small mammal.",
+    "derivation_note": "body cell count estimate",
+    "qualifiers": {
+      "assumption": "adult mouse"
+    }
+  },
+  {
+    "canonical_name": "The human brain",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Human_brain",
+    "subject_key": "entity:cell-count:the-human-brain",
+    "subject_type": "entity",
+    "summary": "The brain sits near the tens-of-billions band.",
+    "value_base": 86000000000,
+    "value_type": "derived",
+    "source_value_text": "~8.6e10 cells",
+    "source_unit": "cells",
+    "source_basis": "Human brain neuron count plus supporting glia is on the order of tens of billions.",
+    "derivation_note": "brain cell count estimate",
+    "qualifiers": {
+      "assumption": "adult human brain"
+    }
+  },
+  {
+    "canonical_name": "A mature oak tree",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Oak",
+    "subject_key": "entity:cell-count:a-mature-oak-tree",
+    "subject_type": "entity",
+    "summary": "A mature tree moves the scale into trillion-cell territory.",
+    "value_base": 1000000000000,
+    "value_type": "derived",
+    "source_value_text": "~1e12 cells",
+    "source_unit": "cells",
+    "source_basis": "Large trees contain trillions of cells across wood, leaves, and roots.",
+    "derivation_note": "tree cell count estimate",
+    "qualifiers": {
+      "assumption": "mature tree"
+    }
+  },
+  {
+    "canonical_name": "A human body",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Human_body",
+    "subject_key": "entity:cell-count:a-human-body",
+    "subject_type": "entity",
+    "summary": "The adult human body is a useful whole-organism reference for cell counts.",
+    "value_base": 37000000000000,
+    "value_type": "measured",
+    "source_value_text": "37 trillion cells",
+    "source_unit": "cells",
+    "source_basis": "Roughly 37 trillion cells in an adult human body.",
+    "derivation_note": "adult human cell count estimate"
+  },
+  {
+    "canonical_name": "The human gut microbiome",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Human_gut_microbiota",
+    "subject_key": "scenario:cell-count:the-human-gut-microbiome",
+    "subject_type": "scenario",
+    "summary": "The microbiome is comparable in size to the human body itself.",
+    "value_base": 38000000000000,
+    "value_type": "derived",
+    "source_value_text": "~3.8e13 cells",
+    "source_unit": "cells",
+    "source_basis": "Gut microbial cells are on the order of tens of trillions.",
+    "derivation_note": "microbial cell count estimate",
+    "qualifiers": {
+      "assumption": "adult human gut microbiome"
+    }
+  },
+  {
+    "canonical_name": "A blue whale body",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Blue_whale",
+    "subject_key": "entity:cell-count:a-blue-whale-body",
+    "subject_type": "entity",
+    "summary": "A blue whale pushes the cell-count scale toward the top of animal life.",
+    "value_base": 100000000000000,
+    "value_type": "derived",
+    "source_value_text": "~1e14 cells",
+    "source_unit": "cells",
+    "source_basis": "A very large mammal has an enormous cell count.",
+    "derivation_note": "body cell count estimate",
+    "qualifiers": {
+      "assumption": "adult blue whale"
+    }
+  },
+  {
+    "canonical_name": "Adult C. elegans hermaphrodite",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Caenorhabditis_elegans",
+    "subject_key": "entity:cell-count:adult-c-elegans-hermaphrodite",
+    "subject_type": "entity",
+    "summary": "The adult nematode has a famously fixed and small cell count.",
+    "value_base": 959,
+    "value_type": "measured",
+    "source_value_text": "959 cells",
+    "source_unit": "cells",
+    "source_basis": "Canonical adult somatic cell count for C. elegans.",
+    "derivation_note": "adult organism cell count"
+  },
+  {
+    "canonical_name": "Drosophila embryo at hatching",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Drosophila_melanogaster",
+    "subject_key": "scenario:cell-count:drosophila-embryo-at-hatching",
+    "subject_type": "scenario",
+    "summary": "A fruit-fly embryo gives a compact multicellular benchmark.",
+    "value_base": 6000,
+    "value_type": "derived",
+    "source_value_text": "~6,000 cells",
+    "source_unit": "cells",
+    "source_basis": "Approximate cell count at the end of embryogenesis.",
+    "derivation_note": "developmental cell-count estimate",
+    "qualifiers": {
+      "assumption": "embryo at hatching"
+    }
+  },
+  {
+    "canonical_name": "Human brain neurons",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Human_brain",
+    "subject_key": "scenario:cell-count:human-brain-neurons",
+    "subject_type": "scenario",
+    "summary": "The human brain is a familiar large-cell-count reference.",
+    "value_base": 86000000000,
+    "value_type": "measured",
+    "source_value_text": "~86 billion neurons",
+    "source_unit": "cells",
+    "source_basis": "Order-of-magnitude neuron count used as a cell-count anchor.",
+    "derivation_note": "brain neuron count estimate",
+    "qualifiers": {
+      "measure": "neurons"
+    }
+  },
+  {
+    "canonical_name": "Human red blood cells",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Red_blood_cell",
+    "subject_key": "scenario:cell-count:human-red-blood-cells",
+    "subject_type": "scenario",
+    "summary": "Red blood cells are one of the largest single-cell populations in a body.",
+    "value_base": 25000000000000,
+    "value_type": "derived",
+    "source_value_text": "~2.5e13 cells",
+    "source_unit": "cells",
+    "source_basis": "Typical adult circulating red blood cell count.",
+    "derivation_note": "blood cell count estimate",
+    "qualifiers": {
+      "assumption": "adult human"
+    }
+  },
+  {
+    "canonical_name": "Dense E. coli culture (1 mL)",
+    "category": "biology",
+    "dimension": "cell-count",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Escherichia_coli",
+    "subject_key": "scenario:cell-count:dense-e-coli-culture-1ml",
+    "subject_type": "scenario",
+    "summary": "A milliliter of dense bacterial culture reaches into the billions of cells.",
+    "value_base": 1000000000,
+    "value_type": "derived",
+    "source_value_text": "~1e9 cells",
+    "source_unit": "cells",
+    "source_basis": "Dense lab culture order-of-magnitude estimate.",
+    "derivation_note": "culture cell-count estimate",
+    "qualifiers": {
+      "assumption": "1 mL dense culture"
+    }
+  }
+]

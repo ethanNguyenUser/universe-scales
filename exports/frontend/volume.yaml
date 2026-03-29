@@ -1,0 +1,2236 @@
+dimension: volume
+base_unit: cubic_meters
+dimension_description: Volume tracks three-dimensional extent under explicit geometric assumptions. Many values here are derived from a stated radius, diameter, or envelope shape rather than directly measured container capacity. Each item therefore includes a short qualifier describing whether it is a literal volume, an effective occupied volume, or an approximate geometric envelope.
+related_resources:
+- name: Wikidata volume property
+  url: https://www.wikidata.org/wiki/Property:P2234
+- name: Volume
+  url: https://en.wikipedia.org/wiki/Volume
+show_limitations: true
+units:
+- conversion_factor: 1.0
+  description: Cubic meters are the canonical storage unit for volume.
+  name: cubic meters
+  symbol: m^3
+- conversion_factor: 1000.0
+  description: Liters are convenient for household and laboratory volumes.
+  name: liters
+  symbol: L
+- conversion_factor: 1000000.0
+  description: Milliliters are useful for droplets, teaspoons, and lab samples.
+  name: milliliters
+  symbol: mL
+- conversion_factor: 1.0e-09
+  description: Cubic kilometers are convenient for lakes, planets, and nebulae.
+  name: cubic kilometers
+  symbol: km^3
+- name: cubic centimeters
+  symbol: cm^3
+  conversion_factor: 1000000.0
+  description: Cubic centimeters are common for engines, syringes, and lab volumes.
+- name: cubic inches
+  symbol: in^3
+  conversion_factor: 61023.7440947323
+  description: Cubic inches are useful for displacement and small mechanical volumes.
+- name: cubic feet
+  symbol: ft^3
+  conversion_factor: 35.3146667215
+  description: Cubic feet are useful for rooms, refrigerators, and gas volumes.
+- name: gallons
+  symbol: gal
+  conversion_factor: 264.1720523581
+  description: Gallons are a familiar unit for household and fuel volumes.
+- name: teaspoons
+  symbol: tsp
+  conversion_factor: 202884.13621106
+  description: Teaspoons are useful for tiny everyday cooking-scale volumes.
+- name: Planck volumes
+  symbol: l_P^3
+  conversion_factor: 2.369e+104
+  description: Planck volume is the natural volume scale from the Planck length cubed.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: geometry
+frontend_group_label: Geometry & Scale
+frontend_order: 220
+items:
+- id: obs:volume:entity-proton
+  name: Proton volume
+  value: 2.5e-45
+  description: Geometric volume implied by the proton charge radius.
+  description_format: markdown
+  summary_short: Geometric volume implied by the proton charge radius.
+  description_medium: Geometric volume implied by the proton charge radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Proton volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '2.5e-45'
+      source_url: https://en.wikipedia.org/wiki/Proton
+  source: https://en.wikipedia.org/wiki/Proton
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-proton
+    url: https://en.wikipedia.org/wiki/Proton
+    title: Proton
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:entity-hydrogen-atom
+  name: Hydrogen atom volume
+  value: 6.2e-31
+  description: Geometric volume implied by the Bohr radius.
+  description_format: markdown
+  summary_short: Geometric volume implied by the Bohr radius.
+  description_medium: Geometric volume implied by the Bohr radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hydrogen atom volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '6.2e-31'
+      source_url: https://en.wikipedia.org/wiki/Hydrogen_atom
+  source: https://en.wikipedia.org/wiki/Hydrogen_atom
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydrogen-atom
+    url: https://en.wikipedia.org/wiki/Hydrogen_atom
+    title: Hydrogen atom
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:entity-water
+  name: Water molecule volume
+  value: 1.1e-29
+  description: Characteristic occupied volume of one water molecule.
+  description_format: markdown
+  summary_short: Characteristic occupied volume of one water molecule.
+  description_medium: Characteristic occupied volume of one water molecule.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Water molecule volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '1.1e-29'
+      source_url: https://en.wikipedia.org/wiki/Water
+  source: https://en.wikipedia.org/wiki/Water
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-water
+    url: https://en.wikipedia.org/wiki/Water
+    title: Water
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q283
+  value_type: derived
+  qualifiers:
+    measurement: single molecule volume
+- id: obs:volume:entity-sars-cov-2
+  name: SARS-CoV-2 virion volume
+  value: 4.2e-22
+  description: Approximate volume of a spherical coronavirus particle.
+  description_format: markdown
+  summary_short: Approximate volume of a spherical coronavirus particle.
+  description_medium: Approximate volume of a spherical coronavirus particle.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SARS-CoV-2 virion volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '4.2e-22'
+      source_url: https://en.wikipedia.org/wiki/SARS-CoV-2
+  source: https://en.wikipedia.org/wiki/SARS-CoV-2
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sars-cov-2
+    url: https://en.wikipedia.org/wiki/SARS-CoV-2
+    title: SARS-CoV-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:entity-e-coli
+  name: Escherichia coli cell volume
+  value: 1.0e-18
+  description: Characteristic volume of one E. coli cell.
+  description_format: markdown
+  summary_short: Characteristic volume of one E.
+  description_medium: Characteristic volume of one E. coli cell.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Escherichia coli cell volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-18
+      source_url: https://en.wikipedia.org/wiki/Escherichia_coli
+  source: https://en.wikipedia.org/wiki/Escherichia_coli
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-escherichia-coli
+    url: https://en.wikipedia.org/wiki/Escherichia_coli
+    title: Escherichia coli
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: single cell volume
+- id: obs:volume:entity-red-blood-cell-volume
+  name: Red blood cell volume
+  value: 9.0e-17
+  description: Typical volume of a human red blood cell.
+  description_format: markdown
+  summary_short: Typical volume of a human red blood cell.
+  description_medium: Typical volume of a human red blood cell.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Red blood cell volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: 9e-17
+      source_url: https://en.wikipedia.org/wiki/Red_blood_cell
+  source: https://en.wikipedia.org/wiki/Red_blood_cell
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-red-blood-cell
+    url: https://en.wikipedia.org/wiki/Red_blood_cell
+    title: Red blood cell
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: cell volume
+- id: obs:volume:entity-human-cell
+  name: Human cell volume
+  value: 4.0e-15
+  description: Representative volume of a typical human cell.
+  description_format: markdown
+  summary_short: Representative volume of a typical human cell.
+  description_medium: Representative volume of a typical human cell.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human cell volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: 4e-15
+      source_url: https://en.wikipedia.org/wiki/Cell_(biology)
+  source: https://en.wikipedia.org/wiki/Cell_(biology)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cell-biology
+    url: https://en.wikipedia.org/wiki/Cell_(biology)
+    title: Cell (biology)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: single cell volume
+- id: obs:volume:scenario-grain-of-salt-volume
+  name: Grain of salt volume
+  value: 5.2e-13
+  description: Volume of a representative coarse salt grain treated as a sphere.
+  description_format: markdown
+  summary_short: Volume of a representative coarse salt grain treated as a sphere.
+  description_medium: Volume of a representative coarse salt grain treated as a sphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Grain of salt volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '5.2e-13'
+      source_url: https://en.wikipedia.org/wiki/Salt
+  source: https://en.wikipedia.org/wiki/Salt
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-salt
+    url: https://en.wikipedia.org/wiki/Salt
+    title: Salt
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:scenario-grain-of-sand-volume:2
+  name: Grain of sand volume
+  value: 1.0e-12
+  description: Representative volume of a grain of sand.
+  description_format: markdown
+  summary_short: Representative volume of a grain of sand.
+  description_medium: Representative volume of a grain of sand.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Grain of sand volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-12
+      source_url: https://en.wikipedia.org/wiki/Sand
+  source: https://en.wikipedia.org/wiki/Sand
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sand
+    url: https://en.wikipedia.org/wiki/Sand
+    title: Sand
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: particle volume
+- id: obs:volume:scenario-grain-of-sand-volume
+  name: Grain of sand volume
+  value: 5.0e-10
+  description: Volume of a representative 1 mm sand grain treated as a sphere.
+  description_format: markdown
+  summary_short: Volume of a representative 1 mm sand grain treated as a sphere.
+  description_medium: Volume of a representative 1 mm sand grain treated as a sphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Grain of sand volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: 5e-10
+      source_url: https://en.wikipedia.org/wiki/Sand
+  source: https://en.wikipedia.org/wiki/Sand
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sand
+    url: https://en.wikipedia.org/wiki/Sand
+    title: Sand
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:scenario-raindrop
+  name: Raindrop volume
+  value: 6.5e-08
+  description: Volume of a 5 mm raindrop treated as a sphere.
+  description_format: markdown
+  summary_short: Volume of a 5 mm raindrop treated as a sphere.
+  description_medium: Volume of a 5 mm raindrop treated as a sphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Raindrop volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '6.5e-08'
+      source_url: https://en.wikipedia.org/wiki/Raindrop
+  source: https://en.wikipedia.org/wiki/Raindrop
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-raindrop
+    url: https://en.wikipedia.org/wiki/Raindrop
+    title: Raindrop
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:scenario-sugar-cube-volume
+  name: Sugar cube volume
+  value: 1.0e-06
+  description: Representative volume of a sugar cube.
+  description_format: markdown
+  summary_short: Representative volume of a sugar cube.
+  description_medium: Representative volume of a sugar cube.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sugar cube volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: 1e-06
+      source_url: https://en.wikipedia.org/wiki/Sugar_cube
+  source: https://en.wikipedia.org/wiki/Sugar_cube
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sugar-cube
+    url: https://en.wikipedia.org/wiki/Sugar_cube
+    title: Sugar cube
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: solid volume
+- id: obs:volume:scenario-teaspoon
+  name: Teaspoon
+  value: 5.0e-06
+  description: Volume of one teaspoon.
+  description_format: markdown
+  summary_short: Volume of one teaspoon.
+  description_medium: Volume of one teaspoon.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Teaspoon
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: 5e-06
+      source_url: https://en.wikipedia.org/wiki/Teaspoon
+  source: https://en.wikipedia.org/wiki/Teaspoon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-teaspoon
+    url: https://en.wikipedia.org/wiki/Teaspoon
+    title: Teaspoon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: volume
+- id: obs:volume:scenario-wine-glass-volume
+  name: Wine glass volume
+  value: 0.000175
+  description: Representative pour volume of a wine glass.
+  description_format: markdown
+  summary_short: Representative pour volume of a wine glass.
+  description_medium: Representative pour volume of a wine glass.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wine glass volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '0.000175'
+      source_url: https://en.wikipedia.org/wiki/Wine_glass
+  source: https://en.wikipedia.org/wiki/Wine_glass
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wine-glass
+    url: https://en.wikipedia.org/wiki/Wine_glass
+    title: Wine glass
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: serving volume
+- id: obs:volume:scenario-coffee-mug
+  name: Coffee mug
+  value: 0.0003
+  description: Representative capacity of a coffee mug.
+  description_format: markdown
+  summary_short: Representative capacity of a coffee mug.
+  description_medium: Representative capacity of a coffee mug.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Coffee mug
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '0.0003'
+      source_url: https://en.wikipedia.org/wiki/Mug
+  source: https://en.wikipedia.org/wiki/Mug
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mug
+    url: https://en.wikipedia.org/wiki/Mug
+    title: Mug
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: capacity
+- id: obs:volume:scenario-soda-can
+  name: Soda can
+  value: 0.000355
+  description: Capacity of a standard soda can.
+  description_format: markdown
+  summary_short: Capacity of a standard soda can.
+  description_medium: Capacity of a standard soda can.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Soda can
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '0.000355'
+      source_url: https://en.wikipedia.org/wiki/Drink_can
+  source: https://en.wikipedia.org/wiki/Drink_can
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-drink-can
+    url: https://en.wikipedia.org/wiki/Drink_can
+    title: Drink can
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: capacity
+- id: obs:volume:scenario-soda-can-volume
+  name: Soda can volume
+  value: 0.000355
+  description: Representative internal volume of a standard soda can.
+  description_format: markdown
+  summary_short: Representative internal volume of a standard soda can.
+  description_medium: Representative internal volume of a standard soda can.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Soda can volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '0.000355'
+      source_url: https://en.wikipedia.org/wiki/Drink_can
+  source: https://en.wikipedia.org/wiki/Drink_can
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-drink-can
+    url: https://en.wikipedia.org/wiki/Drink_can
+    title: Drink can
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: capacity
+- id: obs:volume:scenario-wine-bottle
+  name: Wine bottle
+  value: 0.00075
+  description: Capacity of a typical wine bottle.
+  description_format: markdown
+  summary_short: Capacity of a typical wine bottle.
+  description_medium: Capacity of a typical wine bottle.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Wine bottle
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '0.00075'
+      source_url: https://en.wikipedia.org/wiki/Wine_bottle
+  source: https://en.wikipedia.org/wiki/Wine_bottle
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wine-bottle
+    url: https://en.wikipedia.org/wiki/Wine_bottle
+    title: Wine bottle
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: capacity
+- id: obs:volume:scenario-bucket
+  name: Bucket
+  value: 0.01
+  description: Representative capacity of a household bucket.
+  description_format: markdown
+  summary_short: Representative capacity of a household bucket.
+  description_medium: Representative capacity of a household bucket.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bucket
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '0.01'
+      source_url: https://en.wikipedia.org/wiki/Bucket
+  source: https://en.wikipedia.org/wiki/Bucket
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bucket
+    url: https://en.wikipedia.org/wiki/Bucket
+    title: Bucket
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: capacity
+- id: obs:volume:entity-human
+  name: Human body volume
+  value: 0.07
+  description: Representative displaced volume of an adult human body.
+  description_format: markdown
+  summary_short: Representative displaced volume of an adult human body.
+  description_medium: Representative displaced volume of an adult human body.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human body volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '0.07'
+      source_url: https://en.wikipedia.org/wiki/Human_body
+  source: https://en.wikipedia.org/wiki/Human_body
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body
+    url: https://en.wikipedia.org/wiki/Human_body
+    title: Human body
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q5
+  value_type: derived
+  qualifiers:
+    measurement: body volume
+- id: obs:volume:scenario-bathtub
+  name: Bathtub
+  value: 0.15
+  description: Representative fill volume of a household bathtub.
+  description_format: markdown
+  summary_short: Representative fill volume of a household bathtub.
+  description_medium: Representative fill volume of a household bathtub.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bathtub
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '0.15'
+      source_url: https://en.wikipedia.org/wiki/Bathtub
+  source: https://en.wikipedia.org/wiki/Bathtub
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bathtub
+    url: https://en.wikipedia.org/wiki/Bathtub
+    title: Bathtub
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: capacity
+- id: obs:volume:scenario-bathtub-volume
+  name: Bathtub volume
+  value: 0.15
+  description: Representative water volume of a bathtub.
+  description_format: markdown
+  summary_short: Representative water volume of a bathtub.
+  description_medium: Representative water volume of a bathtub.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bathtub volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '0.15'
+      source_url: https://en.wikipedia.org/wiki/Bathtub
+  source: https://en.wikipedia.org/wiki/Bathtub
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bathtub
+    url: https://en.wikipedia.org/wiki/Bathtub
+    title: Bathtub
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: water capacity
+- id: obs:volume:scenario-family-car-envelope
+  name: Family car envelope volume
+  value: 12.0
+  description: Approximate outer envelope volume of a family car.
+  description_format: markdown
+  summary_short: Approximate outer envelope volume of a family car.
+  description_medium: Approximate outer envelope volume of a family car.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Family car envelope volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '12.0'
+      source_url: https://en.wikipedia.org/wiki/Car
+  source: https://en.wikipedia.org/wiki/Car
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-car
+    url: https://en.wikipedia.org/wiki/Car
+    title: Car
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: outer envelope volume
+- id: obs:volume:scenario-room-volume
+  name: Room volume
+  value: 30.0
+  description: Representative interior volume of a single room.
+  description_format: markdown
+  summary_short: Representative interior volume of a single room.
+  description_medium: Representative interior volume of a single room.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Room volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '30.0'
+      source_url: https://en.wikipedia.org/wiki/Room
+  source: https://en.wikipedia.org/wiki/Room
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-room
+    url: https://en.wikipedia.org/wiki/Room
+    title: Room
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: interior volume
+- id: obs:volume:scenario-shipping-container-volume
+  name: Shipping container volume
+  value: 33.0
+  description: Representative internal volume of a standard shipping container.
+  description_format: markdown
+  summary_short: Representative internal volume of a standard shipping container.
+  description_medium: Representative internal volume of a standard shipping container.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Shipping container volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '33.0'
+      source_url: https://en.wikipedia.org/wiki/Intermodal_container
+  source: https://en.wikipedia.org/wiki/Intermodal_container
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-intermodal-container
+    url: https://en.wikipedia.org/wiki/Intermodal_container
+    title: Intermodal container
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: interior capacity
+- id: obs:volume:scenario-shipping-container
+  name: Shipping container
+  value: 33.2
+  description: Representative internal volume of a standard shipping container.
+  description_format: markdown
+  summary_short: Representative internal volume of a standard shipping container.
+  description_medium: Representative internal volume of a standard shipping container.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Shipping container
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '33.2'
+      source_url: https://en.wikipedia.org/wiki/Intermodal_container
+  source: https://en.wikipedia.org/wiki/Intermodal_container
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-intermodal-container
+    url: https://en.wikipedia.org/wiki/Intermodal_container
+    title: Intermodal container
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: internal volume
+- id: obs:volume:scenario-swimming-pool
+  name: Swimming pool
+  value: 40.0
+  description: Representative volume of a small backyard swimming pool.
+  description_format: markdown
+  summary_short: Representative volume of a small backyard swimming pool.
+  description_medium: Representative volume of a small backyard swimming pool.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Swimming pool
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '40.0'
+      source_url: https://en.wikipedia.org/wiki/Swimming_pool
+  source: https://en.wikipedia.org/wiki/Swimming_pool
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-swimming-pool
+    url: https://en.wikipedia.org/wiki/Swimming_pool
+    title: Swimming pool
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: water volume
+- id: obs:volume:scenario-swimming-pool-volume
+  name: Swimming pool volume
+  value: 40.0
+  description: Representative volume of a backyard swimming pool.
+  description_format: markdown
+  summary_short: Representative volume of a backyard swimming pool.
+  description_medium: Representative volume of a backyard swimming pool.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Swimming pool volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '40.0'
+      source_url: https://en.wikipedia.org/wiki/Swimming_pool
+  source: https://en.wikipedia.org/wiki/Swimming_pool
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-swimming-pool
+    url: https://en.wikipedia.org/wiki/Swimming_pool
+    title: Swimming pool
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: water volume
+- id: obs:volume:scenario-bus-envelope
+  name: City bus envelope volume
+  value: 75.0
+  description: Approximate outer envelope volume of a city bus.
+  description_format: markdown
+  summary_short: Approximate outer envelope volume of a city bus.
+  description_medium: Approximate outer envelope volume of a city bus.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: City bus envelope volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '75.0'
+      source_url: https://en.wikipedia.org/wiki/Bus
+  source: https://en.wikipedia.org/wiki/Bus
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bus
+    url: https://en.wikipedia.org/wiki/Bus
+    title: Bus
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: outer envelope volume
+- id: obs:volume:scenario-freight-train-car-volume
+  name: Freight train car volume
+  value: 100.0
+  description: Representative cargo volume of a freight train car.
+  description_format: markdown
+  summary_short: Representative cargo volume of a freight train car.
+  description_medium: Representative cargo volume of a freight train car.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Freight train car volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '100.0'
+      source_url: https://en.wikipedia.org/wiki/Freight_car
+  source: https://en.wikipedia.org/wiki/Freight_car
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-freight-car
+    url: https://en.wikipedia.org/wiki/Freight_car
+    title: Freight car
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: cargo hold volume
+- id: obs:volume:scenario-apartment-volume
+  name: Apartment
+  value: 120.0
+  description: Representative interior volume of a modest apartment.
+  description_format: markdown
+  summary_short: Representative interior volume of a modest apartment.
+  description_medium: Representative interior volume of a modest apartment.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Apartment
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '120.0'
+      source_url: https://en.wikipedia.org/wiki/Apartment
+  source: https://en.wikipedia.org/wiki/Apartment
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-apartment
+    url: https://en.wikipedia.org/wiki/Apartment
+    title: Apartment
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: interior volume
+- id: obs:volume:scenario-classroom-volume
+  name: Classroom volume
+  value: 150.0
+  description: Representative interior volume of a classroom.
+  description_format: markdown
+  summary_short: Representative interior volume of a classroom.
+  description_medium: Representative interior volume of a classroom.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Classroom volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '150.0'
+      source_url: https://en.wikipedia.org/wiki/Classroom
+  source: https://en.wikipedia.org/wiki/Classroom
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-classroom
+    url: https://en.wikipedia.org/wiki/Classroom
+    title: Classroom
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: interior air volume
+- id: obs:volume:scenario-apartment-volume:2
+  name: Apartment volume
+  value: 200.0
+  description: Representative interior volume of a small apartment.
+  description_format: markdown
+  summary_short: Representative interior volume of a small apartment.
+  description_medium: Representative interior volume of a small apartment.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Apartment volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '200.0'
+      source_url: https://en.wikipedia.org/wiki/Apartment
+  source: https://en.wikipedia.org/wiki/Apartment
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-apartment
+    url: https://en.wikipedia.org/wiki/Apartment
+    title: Apartment
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: interior air volume
+- id: obs:volume:scenario-house-interior
+  name: House interior volume
+  value: 400.0
+  description: Representative interior volume of a modest detached house.
+  description_format: markdown
+  summary_short: Representative interior volume of a modest detached house.
+  description_medium: Representative interior volume of a modest detached house.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: House interior volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '400.0'
+      source_url: https://en.wikipedia.org/wiki/House
+  source: https://en.wikipedia.org/wiki/House
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-house
+    url: https://en.wikipedia.org/wiki/House
+    title: House
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: interior volume
+- id: obs:volume:scenario-olympic-swimming-pool
+  name: Olympic swimming pool
+  value: 2500.0
+  description: Volume of an Olympic-size swimming pool.
+  description_format: markdown
+  summary_short: Volume of an Olympic-size swimming pool.
+  description_medium: Volume of an Olympic-size swimming pool.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Olympic swimming pool
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '2500.0'
+      source_url: https://en.wikipedia.org/wiki/Olympic-size_swimming_pool
+  source: https://en.wikipedia.org/wiki/Olympic-size_swimming_pool
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-olympic-size-swimming-pool
+    url: https://en.wikipedia.org/wiki/Olympic-size_swimming_pool
+    title: Olympic-size swimming pool
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: water volume
+- id: obs:volume:scenario-oil-tanker-volume
+  name: Oil tanker cargo volume
+  value: 100000.0
+  description: Representative cargo volume of a large oil tanker.
+  description_format: markdown
+  summary_short: Representative cargo volume of a large oil tanker.
+  description_medium: Representative cargo volume of a large oil tanker.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Oil tanker cargo volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '100000.0'
+      source_url: https://en.wikipedia.org/wiki/Oil_tanker
+  source: https://en.wikipedia.org/wiki/Oil_tanker
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oil-tanker
+    url: https://en.wikipedia.org/wiki/Oil_tanker
+    title: Oil tanker
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: cargo capacity
+- id: obs:volume:entity-great-pyramid-of-giza
+  name: Great Pyramid of Giza volume
+  value: 2600000.0
+  description: Geometric volume of the Great Pyramid of Giza.
+  description_format: markdown
+  summary_short: Geometric volume of the Great Pyramid of Giza.
+  description_medium: Geometric volume of the Great Pyramid of Giza.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Great Pyramid of Giza volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '2600000.0'
+      source_url: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+  source: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-great-pyramid-of-giza
+    url: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+    title: Great Pyramid of Giza
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: geometric volume
+- id: obs:volume:entity-lake-tahoe
+  name: Lake Tahoe volume
+  value: 151000000000.0
+  description: Water volume of Lake Tahoe.
+  description_format: markdown
+  summary_short: Water volume of Lake Tahoe.
+  description_medium: Water volume of Lake Tahoe.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lake Tahoe volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '151000000000.0'
+      source_url: https://en.wikipedia.org/wiki/Lake_Tahoe
+  source: https://en.wikipedia.org/wiki/Lake_Tahoe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lake-tahoe
+    url: https://en.wikipedia.org/wiki/Lake_Tahoe
+    title: Lake Tahoe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: water volume
+- id: obs:volume:entity-mount-everest
+  name: Mount Everest envelope volume
+  value: 10000000000000.0
+  description: Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.
+  description_format: markdown
+  summary_short: Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.
+  description_medium: Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Mount Everest envelope volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '10000000000000.0'
+      source_url: https://en.wikipedia.org/wiki/Mount_Everest
+  source: https://en.wikipedia.org/wiki/Mount_Everest
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mount-everest
+    url: https://en.wikipedia.org/wiki/Mount_Everest
+    title: Mount Everest
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: envelope volume
+- id: obs:volume:entity-earth-oceans
+  name: Earth's oceans
+  value: 1.332e+18
+  description: Total volume of Earth's oceans.
+  description_format: markdown
+  summary_short: Total volume of Earth's oceans.
+  description_medium: Total volume of Earth's oceans.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth's oceans
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '1.332e+18'
+      source_url: https://en.wikipedia.org/wiki/Ocean
+  source: https://en.wikipedia.org/wiki/Ocean
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ocean
+    url: https://en.wikipedia.org/wiki/Ocean
+    title: Ocean
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: water volume
+- id: obs:volume:entity-moon
+  name: Moon volume
+  value: 2.2e+19
+  description: Volume of the Moon.
+  description_format: markdown
+  summary_short: Volume of the Moon.
+  description_medium: Volume of the Moon.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Moon volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '2.2e+19'
+      source_url: https://en.wikipedia.org/wiki/Moon
+  source: https://en.wikipedia.org/wiki/Moon
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-moon
+    url: https://en.wikipedia.org/wiki/Moon
+    title: Moon
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q405
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:entity-earth
+  name: Earth volume
+  value: 1.083e+21
+  description: Volume of Earth.
+  description_format: markdown
+  summary_short: Volume of Earth.
+  description_medium: Volume of Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '1.083e+21'
+      source_url: https://en.wikipedia.org/wiki/Earth
+  source: https://en.wikipedia.org/wiki/Earth
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-earth
+    url: https://en.wikipedia.org/wiki/Earth
+    title: Earth
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q2
+  value_type: measured
+  qualifiers:
+    measurement: planetary volume
+- id: obs:volume:entity-sun
+  name: Sun volume
+  value: 1.412e+27
+  description: Volume of the Sun.
+  description_format: markdown
+  summary_short: Volume of the Sun.
+  description_medium: Volume of the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sun volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '1.412e+27'
+      source_url: https://en.wikipedia.org/wiki/Sun
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q525
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:entity-betelgeuse
+  name: Betelgeuse volume
+  value: 1.0e+38
+  description: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
+  description_format: markdown
+  summary_short: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
+  description_medium: Order-of-magnitude volume of Betelgeuse using a representative stellar radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Betelgeuse volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: 1e+38
+      source_url: https://en.wikipedia.org/wiki/Betelgeuse
+  source: https://en.wikipedia.org/wiki/Betelgeuse
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-betelgeuse
+    url: https://en.wikipedia.org/wiki/Betelgeuse
+    title: Betelgeuse
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:scenario-oort-cloud
+  name: Oort Cloud volume
+  value: 1.75e+48
+  description: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
+  description_format: markdown
+  summary_short: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
+  description_medium: Volume implied by a spherical Oort Cloud with a 50,000 AU radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Oort Cloud volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '1.75e+48'
+      source_url: https://en.wikipedia.org/wiki/Oort_cloud
+  source: https://en.wikipedia.org/wiki/Oort_cloud
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oort-cloud
+    url: https://en.wikipedia.org/wiki/Oort_cloud
+    title: Oort cloud
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: spherical volume
+- id: obs:volume:entity-orion-nebula
+  name: Orion Nebula volume
+  value: 5.6e+51
+  description: Order-of-magnitude volume of the Orion Nebula.
+  description_format: markdown
+  summary_short: Order-of-magnitude volume of the Orion Nebula.
+  description_medium: Order-of-magnitude volume of the Orion Nebula.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Orion Nebula volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '5.6e+51'
+      source_url: https://en.wikipedia.org/wiki/Orion_Nebula
+  source: https://en.wikipedia.org/wiki/Orion_Nebula
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-orion-nebula
+    url: https://en.wikipedia.org/wiki/Orion_Nebula
+    title: Orion Nebula
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: nebular volume
+- id: obs:volume:entity-milky-way
+  name: Milky Way disk volume
+  value: 7.9e+60
+  description: Disk volume implied by representative Milky Way radius and thickness.
+  description_format: markdown
+  summary_short: Disk volume implied by representative Milky Way radius and thickness.
+  description_medium: Disk volume implied by representative Milky Way radius and thickness.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Milky Way disk volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: derived
+      original_value_text: '7.9e+60'
+      source_url: https://en.wikipedia.org/wiki/Milky_Way
+  source: https://en.wikipedia.org/wiki/Milky_Way
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-milky-way
+    url: https://en.wikipedia.org/wiki/Milky_Way
+    title: Milky Way
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    measurement: disk volume
+- id: obs:volume:entity-local-group
+  name: Local Group volume
+  value: 4.1e+68
+  description: Characteristic spherical volume of the Local Group.
+  description_format: markdown
+  summary_short: Characteristic spherical volume of the Local Group.
+  description_medium: Characteristic spherical volume of the Local Group.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Local Group volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '4.1e+68'
+      source_url: https://en.wikipedia.org/wiki/Local_Group
+  source: https://en.wikipedia.org/wiki/Local_Group
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-local-group
+    url: https://en.wikipedia.org/wiki/Local_Group
+    title: Local Group
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: spherical volume
+- id: obs:volume:entity-virgo-supercluster
+  name: Virgo Supercluster volume
+  value: 4.2e+72
+  description: Characteristic spherical volume of the Virgo Supercluster.
+  description_format: markdown
+  summary_short: Characteristic spherical volume of the Virgo Supercluster.
+  description_medium: Characteristic spherical volume of the Virgo Supercluster.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Virgo Supercluster volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '4.2e+72'
+      source_url: https://en.wikipedia.org/wiki/Virgo_Supercluster
+  source: https://en.wikipedia.org/wiki/Virgo_Supercluster
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-virgo-supercluster
+    url: https://en.wikipedia.org/wiki/Virgo_Supercluster
+    title: Virgo Supercluster
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: spherical volume
+- id: obs:volume:entity-universe
+  name: Observable universe volume
+  value: 3.57e+80
+  description: Volume of the observable universe treated as a sphere.
+  description_format: markdown
+  summary_short: Volume of the observable universe treated as a sphere.
+  description_medium: Volume of the observable universe treated as a sphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Observable universe volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '3.57e+80'
+      source_url: https://en.wikipedia.org/wiki/Universe
+  source: https://en.wikipedia.org/wiki/Universe
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-universe
+    url: https://en.wikipedia.org/wiki/Universe
+    title: Universe
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q1
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: spherical volume

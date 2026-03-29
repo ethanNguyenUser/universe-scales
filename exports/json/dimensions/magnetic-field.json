@@ -1,0 +1,2124 @@
+{
+  "base_unit": "tesla",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 37,
+    "candidate_shortfall_to_preferred_target": 13,
+    "empty_bin_count": 9,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 37,
+    "selected_primary_count": 15,
+    "selected_secondary_count": 22,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 37
+    },
+    "target_selected_count": 37
+  },
+  "description_format": "markdown",
+  "dimension": "magnetic-field",
+  "dimension_description": "Magnetic-field strength is expressed here as magnetic flux density in tesla. Some entries are ambient fields, some are surface fields of magnets or stars, and others are instrument fields from MRI scanners or laboratory magnets. The result is a scale that connects biology, everyday magnets, planets, plasma devices, and compact stars.",
+  "frontend_group": "fields",
+  "frontend_group_label": "Fields, Waves & Radiation",
+  "frontend_order": 540,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The magnetic field between galaxies may be only around a femtotesla or less.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The magnetic field between galaxies may be only around a femtotesla or less.",
+      "facts": {
+        "canonical_name": "Intergalactic magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-15",
+          "source_basis": "Representative intergalactic magnetic-field scale.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Intergalactic_space",
+          "source_value_text": "1 fT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-intergalactic-magnetic-field",
+      "name": "Intergalactic magnetic field",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Intergalactic_space",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-intergalactic-space",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Intergalactic space",
+          "url": "https://en.wikipedia.org/wiki/Intergalactic_space"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The magnetic field between galaxies may be only around a femtotesla or less.",
+      "value": 1e-15,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The magnetic signals measured outside the human brain are around hundreds of femtotesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The magnetic signals measured outside the human brain are around hundreds of femtotesla.",
+      "facts": {
+        "canonical_name": "Human brain magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-13",
+          "source_basis": "Representative magnetoencephalography field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetoencephalography",
+          "source_value_text": "100 fT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-human-brain-magnetic-field",
+      "name": "Human brain magnetic field",
+      "qualifiers": {
+        "measurement": "external field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetoencephalography",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetoencephalography",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetoencephalography",
+          "url": "https://en.wikipedia.org/wiki/Magnetoencephalography"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The magnetic signals measured outside the human brain are around hundreds of femtotesla.",
+      "value": 1e-13,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A well-shielded magnetic measurement environment aims for fields around a picotesla or below.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A well-shielded magnetic measurement environment aims for fields around a picotesla or below.",
+      "facts": {
+        "canonical_name": "Quiet-room magnetic noise floor",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-12",
+          "source_basis": "Representative shielded-room magnetic noise floor.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_shielding",
+          "source_value_text": "1 pT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:scenario-magnetic-field-quiet-room-noise-floor",
+      "name": "Quiet-room magnetic noise floor",
+      "qualifiers": {
+        "measurement": "ambient field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetic_shielding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-shielding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic shielding",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_shielding"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A well-shielded magnetic measurement environment aims for fields around a picotesla or below.",
+      "value": 1e-12,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The heart produces magnetic fields in the tens of picotesla range outside the chest.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The heart produces magnetic fields in the tens of picotesla range outside the chest.",
+      "facts": {
+        "canonical_name": "Human heart magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-11",
+          "source_basis": "Representative magnetocardiography field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetocardiography",
+          "source_value_text": "50 pT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-human-heart-magnetic-field",
+      "name": "Human heart magnetic field",
+      "qualifiers": {
+        "measurement": "external field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetocardiography",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetocardiography",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetocardiography",
+          "url": "https://en.wikipedia.org/wiki/Magnetocardiography"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The heart produces magnetic fields in the tens of picotesla range outside the chest.",
+      "value": 5e-11,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Milky Way's large-scale magnetic field is often described in the tenths-of-nanotesla range.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Milky Way's large-scale magnetic field is often described in the tenths-of-nanotesla range.",
+      "facts": {
+        "canonical_name": "Galactic magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-10",
+          "source_basis": "Representative galactic magnetic-field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Galactic_magnetic_field",
+          "source_value_text": "0.1 nT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-galactic-magnetic-field",
+      "name": "Galactic magnetic field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Galactic_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-galactic-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Galactic magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Galactic_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The Milky Way's large-scale magnetic field is often described in the tenths-of-nanotesla range.",
+      "value": 1e-10,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The diffuse interstellar medium still carries a weak magnetic field.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The diffuse interstellar medium still carries a weak magnetic field.",
+      "facts": {
+        "canonical_name": "Interstellar magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-10",
+          "source_basis": "Representative interstellar magnetic-field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Interstellar_medium",
+          "source_value_text": "0.1 nT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-interstellar-magnetic-field",
+      "name": "Interstellar magnetic field",
+      "qualifiers": {
+        "assumption": "order-of-magnitude representative value",
+        "measurement": "field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Interstellar_medium",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-interstellar-medium",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Interstellar medium",
+          "url": "https://en.wikipedia.org/wiki/Interstellar_medium"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The diffuse interstellar medium still carries a weak magnetic field.",
+      "value": 1e-10,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The magnetic field carried through the solar system is only a few nanotesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The magnetic field carried through the solar system is only a few nanotesla.",
+      "facts": {
+        "canonical_name": "Interplanetary magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-09",
+          "source_basis": "Representative interplanetary magnetic-field strength near Earth orbit.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field",
+          "source_value_text": "5 nT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-interplanetary-magnetic-field",
+      "name": "Interplanetary magnetic field",
+      "qualifiers": {
+        "measurement": "field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-interplanetary-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Interplanetary magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The magnetic field carried through the solar system is only a few nanotesla.",
+      "value": 5e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The interplanetary magnetic field near Earth is typically only a few nanotesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The interplanetary magnetic field near Earth is typically only a few nanotesla.",
+      "facts": {
+        "canonical_name": "Solar wind magnetic field near Earth",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-09",
+          "source_basis": "Representative interplanetary magnetic field near Earth.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field",
+          "source_value_text": "5 nT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-solar-wind-field-near-earth",
+      "name": "Solar wind magnetic field near Earth",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-interplanetary-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Interplanetary magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The interplanetary magnetic field near Earth is typically only a few nanotesla.",
+      "value": 5e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At the magnetic equator, Earth's field is roughly tens of microtesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At the magnetic equator, Earth's field is roughly tens of microtesla.",
+      "facts": {
+        "canonical_name": "Earth magnetic field at the magnetic equator",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3e-05",
+          "source_basis": "Representative field strength near the magnetic equator.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
+          "source_value_text": "30 uT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-earth-magnetic-equator-field",
+      "name": "Earth magnetic field at the magnetic equator",
+      "qualifiers": {
+        "measurement": "field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-earth-27s-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Earth's magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "At the magnetic equator, Earth's field is roughly tens of microtesla.",
+      "value": 3e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Earth's magnetic field is strong enough to steer compasses while still only tens of microtesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Earth's magnetic field is strong enough to steer compasses while still only tens of microtesla.",
+      "facts": {
+        "canonical_name": "Earth magnetic field at the surface",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "5e-05",
+          "source_basis": "Representative Earth surface magnetic-field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
+          "source_value_text": "50 uT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-earth-surface-magnetic-field",
+      "name": "Earth magnetic field at the surface",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-earth-27s-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Earth's magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Earth's magnetic field is strong enough to steer compasses while still only tens of microtesla.",
+      "value": 5e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Near Earth's magnetic poles the field is a bit stronger than at the equator.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Near Earth's magnetic poles the field is a bit stronger than at the equator.",
+      "facts": {
+        "canonical_name": "Earth magnetic field near the poles",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6e-05",
+          "source_basis": "Representative polar field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
+          "source_value_text": "60 uT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-earth-magnetic-pole-field",
+      "name": "Earth magnetic field near the poles",
+      "qualifiers": {
+        "measurement": "field strength"
+      },
+      "source": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-earth-27s-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Earth's magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Near Earth's magnetic poles the field is a bit stronger than at the equator.",
+      "value": 6e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Jupiter's cloud-top field is several hundred microtesla, much stronger than Earth's.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Jupiter's cloud-top field is several hundred microtesla, much stronger than Earth's.",
+      "facts": {
+        "canonical_name": "Jupiter equatorial magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.00042",
+          "source_basis": "Representative Jovian equatorial magnetic-field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetosphere_of_Jupiter",
+          "source_value_text": "420 uT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-jupiter-equatorial-magnetic-field",
+      "name": "Jupiter equatorial magnetic field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnetosphere_of_Jupiter",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetosphere-of-jupiter",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetosphere of Jupiter",
+          "url": "https://en.wikipedia.org/wiki/Magnetosphere_of_Jupiter"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Jupiter's cloud-top field is several hundred microtesla, much stronger than Earth's.",
+      "value": 0.00042,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A common refrigerator magnet is only a few millitesla at its surface.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A common refrigerator magnet is only a few millitesla at its surface.",
+      "facts": {
+        "canonical_name": "Small refrigerator magnet surface field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.005",
+          "source_basis": "Representative refrigerator-magnet surface field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Refrigerator_magnet",
+          "source_value_text": "5 mT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-fridge-magnet-field",
+      "name": "Small refrigerator magnet surface field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Refrigerator_magnet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-refrigerator-magnet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Refrigerator magnet",
+          "url": "https://en.wikipedia.org/wiki/Refrigerator_magnet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A common refrigerator magnet is only a few millitesla at its surface.",
+      "value": 0.005,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A modest permanent bar magnet often reaches around a few hundred gauss at the pole.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A modest permanent bar magnet often reaches around a few hundred gauss at the pole.",
+      "facts": {
+        "canonical_name": "Bar magnet pole field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.05",
+          "source_basis": "Representative bar-magnet pole field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnet",
+          "source_value_text": "50 mT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-bar-magnet-field",
+      "name": "Bar magnet pole field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnet",
+          "url": "https://en.wikipedia.org/wiki/Magnet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A modest permanent bar magnet often reaches around a few hundred gauss at the pole.",
+      "value": 0.05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sunspots concentrate solar magnetic flux into fields of a few tenths of a tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sunspots concentrate solar magnetic flux into fields of a few tenths of a tesla.",
+      "facts": {
+        "canonical_name": "Sunspot magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.3",
+          "source_basis": "Representative sunspot magnetic field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Sunspot",
+          "source_value_text": "0.3 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-sunspot-magnetic-field",
+      "name": "Sunspot magnetic field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sunspot",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sunspot",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sunspot",
+          "url": "https://en.wikipedia.org/wiki/Sunspot"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Sunspots concentrate solar magnetic flux into fields of a few tenths of a tesla.",
+      "value": 0.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A strong neodymium magnet can reach fractions of a tesla at the surface.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A strong neodymium magnet can reach fractions of a tesla at the surface.",
+      "facts": {
+        "canonical_name": "Neodymium magnet surface field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.5",
+          "source_basis": "Representative surface field for a strong neodymium magnet.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Neodymium_magnet",
+          "source_value_text": "0.5 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-neodymium-magnet-surface-field",
+      "name": "Neodymium magnet surface field",
+      "qualifiers": {
+        "measurement": "surface field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Neodymium_magnet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-neodymium-magnet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Neodymium magnet",
+          "url": "https://en.wikipedia.org/wiki/Neodymium_magnet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A strong neodymium magnet can reach fractions of a tesla at the surface.",
+      "value": 0.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Low-field open MRI scanners trade image quality for patient access and comfort.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Low-field open MRI scanners trade image quality for patient access and comfort.",
+      "facts": {
+        "canonical_name": "Open MRI field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.55",
+          "source_basis": "Representative low-field open MRI strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+          "source_value_text": "0.55 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-open-mri-field",
+      "name": "Open MRI field",
+      "qualifiers": {
+        "measurement": "scanner field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-resonance-imaging",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic resonance imaging",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Low-field open MRI scanners trade image quality for patient access and comfort.",
+      "value": 0.55,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Magnetic recording heads work with local fields approaching a tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Magnetic recording heads work with local fields approaching a tesla.",
+      "facts": {
+        "canonical_name": "Hard-drive write head field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.8",
+          "source_basis": "Representative hard-drive write-head field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_storage",
+          "source_value_text": "0.8 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-hard-drive-write-head-field",
+      "name": "Hard-drive write head field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnetic_storage",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-storage",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic storage",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_storage"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Magnetic recording heads work with local fields approaching a tesla.",
+      "value": 0.8,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The narrow magnetic gap in a loudspeaker is often around a tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The narrow magnetic gap in a loudspeaker is often around a tesla.",
+      "facts": {
+        "canonical_name": "Loudspeaker magnet gap field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.0",
+          "source_basis": "Representative loudspeaker magnet gap field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Loudspeaker",
+          "source_value_text": "1 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-loudspeaker-gap-field",
+      "name": "Loudspeaker magnet gap field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Loudspeaker",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-loudspeaker",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Loudspeaker",
+          "url": "https://en.wikipedia.org/wiki/Loudspeaker"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The narrow magnetic gap in a loudspeaker is often around a tesla.",
+      "value": 1.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A standard clinical MRI scanner commonly operates at 1.5 tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A standard clinical MRI scanner commonly operates at 1.5 tesla.",
+      "facts": {
+        "canonical_name": "Clinical MRI scanner field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.5",
+          "source_basis": "Common clinical MRI field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+          "source_value_text": "1.5 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-mri-1-5t-field",
+      "name": "Clinical MRI scanner field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-resonance-imaging",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic resonance imaging",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A standard clinical MRI scanner commonly operates at 1.5 tesla.",
+      "value": 1.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A TMS coil can briefly generate fields of a few tesla near the scalp.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A TMS coil can briefly generate fields of a few tesla near the scalp.",
+      "facts": {
+        "canonical_name": "Transcranial magnetic stimulation pulse",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.0",
+          "source_basis": "Representative TMS pulse field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation",
+          "source_value_text": "2 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-tms-coil-field",
+      "name": "Transcranial magnetic stimulation pulse",
+      "qualifiers": {
+        "measurement": "peak coil field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-transcranial-magnetic-stimulation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Transcranial magnetic stimulation",
+          "url": "https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A TMS coil can briefly generate fields of a few tesla near the scalp.",
+      "value": 2.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Many research and higher-end clinical MRI systems operate at 3 tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Many research and higher-end clinical MRI systems operate at 3 tesla.",
+      "facts": {
+        "canonical_name": "Research MRI scanner field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3.0",
+          "source_basis": "Common research MRI field strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+          "source_value_text": "3 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-mri-3t-field",
+      "name": "Research MRI scanner field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-resonance-imaging",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic resonance imaging",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Many research and higher-end clinical MRI systems operate at 3 tesla.",
+      "value": 3.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ultra-high-field MRI pushes into the several-tesla regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ultra-high-field MRI pushes into the several-tesla regime.",
+      "facts": {
+        "canonical_name": "Ultra-high-field MRI scanner",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7.0",
+          "source_basis": "Representative ultra-high-field MRI strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+          "source_value_text": "7 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-mri-7t-field",
+      "name": "Ultra-high-field MRI scanner",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-resonance-imaging",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic resonance imaging",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Ultra-high-field MRI pushes into the several-tesla regime.",
+      "value": 7.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Fusion tokamaks rely on strong magnetic confinement fields.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fusion tokamaks rely on strong magnetic confinement fields.",
+      "facts": {
+        "canonical_name": "Tokamak magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10.0",
+          "source_basis": "Representative tokamak confinement field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Tokamak",
+          "source_value_text": "10 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-tokamak-10t-field",
+      "name": "Tokamak magnetic field",
+      "qualifiers": {
+        "measurement": "confinement field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Tokamak",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tokamak",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tokamak",
+          "url": "https://en.wikipedia.org/wiki/Tokamak"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Fusion tokamaks rely on strong magnetic confinement fields.",
+      "value": 10.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Research MRI systems can reach well beyond clinical 3 tesla scanners.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Research MRI systems can reach well beyond clinical 3 tesla scanners.",
+      "facts": {
+        "canonical_name": "Magnetic resonance imaging field at 11.7 tesla",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "11.7",
+          "source_basis": "Representative ultra-high-field MRI strength.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+          "source_value_text": "11.7 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-mri-11-7t-field",
+      "name": "Magnetic resonance imaging field at 11.7 tesla",
+      "qualifiers": {
+        "measurement": "scanner field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-resonance-imaging",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic resonance imaging",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Research MRI systems can reach well beyond clinical 3 tesla scanners.",
+      "value": 11.7,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Large tokamaks use fields of order ten tesla to confine plasma.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Large tokamaks use fields of order ten tesla to confine plasma.",
+      "facts": {
+        "canonical_name": "Magnetic field in a fusion tokamak",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "13.0",
+          "source_basis": "Representative tokamak confinement field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Tokamak",
+          "source_value_text": "13 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-tokamak-magnetic-field",
+      "name": "Magnetic field in a fusion tokamak",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tokamak",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tokamak",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tokamak",
+          "url": "https://en.wikipedia.org/wiki/Tokamak"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Large tokamaks use fields of order ten tesla to confine plasma.",
+      "value": 13.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High-end NMR spectrometers operate at very strong static magnetic fields.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High-end NMR spectrometers operate at very strong static magnetic fields.",
+      "facts": {
+        "canonical_name": "NMR spectrometer field at 14.1 tesla",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "14.1",
+          "source_basis": "Representative 600 MHz-class NMR spectrometer field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance",
+          "source_value_text": "14.1 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-nmr-spectrometer-field-14-1t",
+      "name": "NMR spectrometer field at 14.1 tesla",
+      "qualifiers": {
+        "measurement": "spectrometer field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nuclear-magnetic-resonance",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nuclear magnetic resonance",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "High-end NMR spectrometers operate at very strong static magnetic fields.",
+      "value": 14.1,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Specialized research magnets can exceed 20 tesla in static field.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Specialized research magnets can exceed 20 tesla in static field.",
+      "facts": {
+        "canonical_name": "High-field laboratory magnet",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "20.0",
+          "source_basis": "Representative high-field laboratory magnet.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetic_field",
+          "source_value_text": "20 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-high-field-lab-magnet-20t",
+      "name": "High-field laboratory magnet",
+      "qualifiers": {
+        "measurement": "magnet field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetic field",
+          "url": "https://en.wikipedia.org/wiki/Magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Specialized research magnets can exceed 20 tesla in static field.",
+      "value": 20.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A powerful steady laboratory magnet can reach tens of tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A powerful steady laboratory magnet can reach tens of tesla.",
+      "facts": {
+        "canonical_name": "Strong laboratory superconducting magnet",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "20.0",
+          "source_basis": "Representative strong superconducting laboratory magnet.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Superconducting_magnet",
+          "source_value_text": "20 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-strong-lab-magnet-field",
+      "name": "Strong laboratory superconducting magnet",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Superconducting_magnet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-superconducting-magnet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Superconducting magnet",
+          "url": "https://en.wikipedia.org/wiki/Superconducting_magnet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A powerful steady laboratory magnet can reach tens of tesla.",
+      "value": 20.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Modern superconducting magnets can push the static field into the low-twenties of tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Modern superconducting magnets can push the static field into the low-twenties of tesla.",
+      "facts": {
+        "canonical_name": "Superconducting laboratory magnet",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "23.0",
+          "source_basis": "Representative superconducting laboratory magnet field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Superconducting_magnet",
+          "source_value_text": "23 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-superconducting-lab-magnet-23t",
+      "name": "Superconducting laboratory magnet",
+      "qualifiers": {
+        "measurement": "magnet field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Superconducting_magnet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-superconducting-magnet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Superconducting magnet",
+          "url": "https://en.wikipedia.org/wiki/Superconducting_magnet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Modern superconducting magnets can push the static field into the low-twenties of tesla.",
+      "value": 23.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "High-end NMR spectrometers operate in the tens-of-tesla regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "High-end NMR spectrometers operate in the tens-of-tesla regime.",
+      "facts": {
+        "canonical_name": "NMR spectrometer field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "23.5",
+          "source_basis": "Representative high-field NMR spectrometer magnet.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy",
+          "source_value_text": "23.5 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-nmr-spectrometer-field",
+      "name": "NMR spectrometer field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-nuclear-magnetic-resonance-spectroscopy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Nuclear magnetic resonance spectroscopy",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "High-end NMR spectrometers operate in the tens-of-tesla regime.",
+      "value": 23.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Pulsed magnets can briefly reach fields far beyond continuous laboratory magnets.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Pulsed magnets can briefly reach fields far beyond continuous laboratory magnets.",
+      "facts": {
+        "canonical_name": "Pulsed laboratory magnet field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "45.0",
+          "source_basis": "Representative pulsed-laboratory magnet field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/High_magnetic_field",
+          "source_value_text": "45 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-pulsed-lab-magnet-45t",
+      "name": "Pulsed laboratory magnet field",
+      "qualifiers": {
+        "measurement": "pulsed field"
+      },
+      "source": "https://en.wikipedia.org/wiki/High_magnetic_field",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-high-magnetic-field",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "High magnetic field",
+          "url": "https://en.wikipedia.org/wiki/High_magnetic_field"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Pulsed magnets can briefly reach fields far beyond continuous laboratory magnets.",
+      "value": 45.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The strongest pulsed laboratory magnets reach around one hundred tesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The strongest pulsed laboratory magnets reach around one hundred tesla.",
+      "facts": {
+        "canonical_name": "World-class pulsed laboratory magnet",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100.0",
+          "source_basis": "Representative extreme pulsed laboratory magnetic field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Pulsed_power",
+          "source_value_text": "100 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-pulsed-lab-magnet-field",
+      "name": "World-class pulsed laboratory magnet",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Pulsed_power",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-pulsed-power",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Pulsed power",
+          "url": "https://en.wikipedia.org/wiki/Pulsed_power"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "The strongest pulsed laboratory magnets reach around one hundred tesla.",
+      "value": 100.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Magnetic white dwarfs can reach around one hundred kilotesla at the surface.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Magnetic white dwarfs can reach around one hundred kilotesla at the surface.",
+      "facts": {
+        "canonical_name": "White dwarf surface magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000.0",
+          "source_basis": "Representative magnetic white-dwarf surface field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/White_dwarf",
+          "source_value_text": "100 kT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-white-dwarf-magnetic-field",
+      "name": "White dwarf surface magnetic field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/White_dwarf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-white-dwarf",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "White dwarf",
+          "url": "https://en.wikipedia.org/wiki/White_dwarf"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Magnetic white dwarfs can reach around one hundred kilotesla at the surface.",
+      "value": 100000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A neutron star typically carries a magnetic field around one hundred megatesla.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A neutron star typically carries a magnetic field around one hundred megatesla.",
+      "facts": {
+        "canonical_name": "Ordinary neutron-star magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000000.0",
+          "source_basis": "Representative neutron-star surface magnetic field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Neutron_star",
+          "source_value_text": "100 MT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-neutron-star-magnetic-field",
+      "name": "Ordinary neutron-star magnetic field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Neutron_star",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-neutron-star",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Neutron star",
+          "url": "https://en.wikipedia.org/wiki/Neutron_star"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "A neutron star typically carries a magnetic field around one hundred megatesla.",
+      "value": 100000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Magnetars reach around ten gigatesla, among the strongest known fields in the universe.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Magnetars reach around ten gigatesla, among the strongest known fields in the universe.",
+      "facts": {
+        "canonical_name": "Extreme magnetar magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10000000000.0",
+          "source_basis": "Representative magnetar surface magnetic field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetar",
+          "source_value_text": "10 GT"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-magnetar-magnetic-field",
+      "name": "Extreme magnetar magnetic field",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Magnetar",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetar",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetar",
+          "url": "https://en.wikipedia.org/wiki/Magnetar"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Magnetars reach around ten gigatesla, among the strongest known fields in the universe.",
+      "value": 10000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Magnetars have the strongest known large-scale magnetic fields in the universe.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Magnetars have the strongest known large-scale magnetic fields in the universe.",
+      "facts": {
+        "canonical_name": "Magnetar magnetic field",
+        "ingest_source": "dataset/raw/curated/magnetic-field.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000000000.0",
+          "source_basis": "Representative magnetar surface field.",
+          "source_unit": "T",
+          "source_url": "https://en.wikipedia.org/wiki/Magnetar",
+          "source_value_text": "10^11 T"
+        }
+      },
+      "hook": null,
+      "id": "obs:magnetic-field:entity-magnetar-1e11t-field",
+      "name": "Magnetar magnetic field",
+      "qualifiers": {
+        "measurement": "stellar surface field"
+      },
+      "source": "https://en.wikipedia.org/wiki/Magnetar",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-magnetar",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Magnetar",
+          "url": "https://en.wikipedia.org/wiki/Magnetar"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-magnetic-field-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/magnetic-field.json",
+          "url": "repo://dataset/raw/curated/magnetic-field.json"
+        }
+      ],
+      "summary_short": "Magnetars have the strongest known large-scale magnetic fields in the universe.",
+      "value": 100000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Magnetic field",
+      "url": "https://en.wikipedia.org/wiki/Magnetic_field"
+    },
+    {
+      "name": "Tesla (unit)",
+      "url": "https://en.wikipedia.org/wiki/Tesla_(unit)"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Tesla are the canonical storage unit for magnetic-field strength.",
+      "name": "tesla",
+      "symbol": "T"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "Microtesla are useful for planetary and ambient environmental fields.",
+      "name": "microtesla",
+      "symbol": "uT"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Millitesla are useful for everyday magnets and sensors.",
+      "name": "millitesla",
+      "symbol": "mT"
+    },
+    {
+      "conversion_factor": 10000.0,
+      "description": "Gauss remain common in magnetics, astronomy, and older literature.",
+      "name": "gauss",
+      "symbol": "G"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Kilotesla are useful for white dwarfs and extreme laboratory fields.",
+      "name": "kilotesla",
+      "symbol": "kT"
+    },
+    {
+      "conversion_factor": 1e-06,
+      "description": "Megatesla are useful for neutron stars and extreme astrophysical fields.",
+      "name": "megatesla",
+      "symbol": "MT"
+    },
+    {
+      "conversion_factor": 1e-09,
+      "description": "Gigatesla are useful for magnetars and the most extreme known fields.",
+      "name": "gigatesla",
+      "symbol": "GT"
+    }
+  ]
+}

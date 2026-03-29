@@ -146,6 +146,46 @@ items:
   name: Warm Room Air (1 m3, plus 10 C)
   source: https://en.wikipedia.org/wiki/Heat_capacity
   value: 7e3
+- name: AA Battery
+  value: 11000.0
+  source: https://en.wikipedia.org/wiki/AA_battery
+  description: A typical AA battery stores around ten thousand joules, enough for remote controls and flashlights but tiny next to vehicles or the human body over a day. It is an excellent everyday energy packet. Many low-power devices live inside this budget.
+- name: One Step Up a Stair
+  value: 50.0
+  source: https://en.wikipedia.org/wiki/Work_(physics)
+  description: Lifting your body by a single stair costs only a few dozen joules, which feels negligible in isolation but adds up fast over flights of stairs or hikes. Everyday effort is often many small energy transfers stacked together. This is a good bodily benchmark.
+- name: One Kilogram Lifted One Meter
+  value: 9.8
+  source: https://en.wikipedia.org/wiki/Gravitational_energy
+  description: Raising one kilogram by one meter on Earth takes just under ten joules. This is one of the cleanest everyday gravitational-energy benchmarks in physics. It makes work feel concrete.
+- name: Liter of Gasoline
+  value: 34000000.0
+  source: https://en.wikipedia.org/wiki/Gasoline
+  description: A liter of gasoline stores tens of megajoules of chemical energy, which is why liquid fuels have dominated transport for so long. The number is startling compared with batteries or food. Combustion packs a lot of change into a small bottle.
+- name: One Ton of TNT
+  value: 4200000000.0
+  source: https://en.wikipedia.org/wiki/TNT_equivalent
+  description: A ton of TNT is a standard explosive-energy yardstick, large enough to matter for demolitions and accidents but still tiny next to nuclear or planetary events. It provides a useful step between lightning and kiloton-scale blasts. Hazard scales often lean on it.
+- name: Earthquake (Magnitude 7)
+  value: 2000000000000000.0
+  source: https://en.wikipedia.org/wiki/Moment_magnitude_scale
+  description: A magnitude-7 earthquake releases energy on the order of a petajoule, enough to rearrange landscapes and infrastructure across a region. Seismic scales are logarithmic, which is why one extra magnitude matters so much. Geological events climb the energy ladder fast.
+- name: Tsar Bomba
+  value: 2.1e+17
+  source: https://en.wikipedia.org/wiki/Tsar_Bomba
+  description: The largest nuclear device ever tested released about 2e17 joules, pushing human-made explosions far above ordinary industrial scales. At this point energy becomes geopolitical and planetary in consequence. Few benchmarks make that jump so starkly.
+- name: One Kilogram of Uranium Fissioned
+  value: 80000000000000.0
+  source: https://en.wikipedia.org/wiki/Nuclear_fission
+  description: If one kilogram of fissile uranium were fully fissioned, it would release tens of terajoules. This helps explain why nuclear fuels are so energy-dense compared with chemical fuels. Mass-energy bookkeeping starts to become visible here.
+- name: World Electricity Use (1 year)
+  value: 1.0e+20
+  source: https://en.wikipedia.org/wiki/World_energy_supply_and_consumption
+  description: Human civilization uses around 10^20 joules of electricity per year, a scale where infrastructure, climate, and economics all meet. It is large enough to feel planetary but still tiny next to the Suns output. This is a good civilization-scale anchor.
+- name: Chicxulub Impact
+  value: 4.0e+23
+  source: https://en.wikipedia.org/wiki/Chicxulub_crater
+  description: The Chicxulub impact released on the order of 10^23 joules, enough to reshape climate and ecosystems globally. This is where geology and extinction connect through energy. Planetary history contains events vastly beyond any human technology.
 units:
 - conversion_factor: 1
   description: The joule is the SI work and energy unit defined as one newton applied over one meter. It relates directly to heat through mechanical equivalence and to electricity via watts times seconds. Counting in joules lets you add chemical, thermal, mechanical, and radiant budgets without changing units. In this dataset all item values are recorded in joules before conversion.
@@ -171,3 +211,7 @@ units:
   description: The electronvolt measures the energy gained by a single electron when it moves through one volt of potential. It is natural for atomic and particle physics where energies arrive as quanta. Large numbers of electronvolts map comfortably to keV, MeV, and GeV in accelerators and detectors. Converting to joules ties the microscopic to macroscopic engines.
   name: electronvolts
   symbol: eV
+- conversion_factor: 5.112262516908872e-10
+  description: Planck energy is the natural high-energy scale from fundamental constants.
+  name: Planck energies
+  symbol: E_P

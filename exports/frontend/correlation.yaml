@@ -1,0 +1,1118 @@
+dimension: correlation
+base_unit: absolute_pearson_r
+dimension_description: 'This phase-one correlation scale stores the magnitude of Pearson correlation as |r|, from almost no linear association up to perfect correlation. The sign and domain context belong in qualifiers, because a strong negative correlation is just as strong as a strong positive one. This is useful pedagogically, but it is also easy to misuse: correlation depends on the variables chosen, sample definition, and whether the underlying relationship is actually linear.'
+related_resources:
+- name: Pearson correlation coefficient
+  url: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+- name: Effect size
+  url: https://en.wikipedia.org/wiki/Effect_size
+show_limitations: true
+units:
+- name: absolute Pearson correlation
+  symbol: '|r|'
+  conversion_factor: 1.0
+  description: The canonical stored unit is the absolute magnitude of Pearson correlation.
+- name: percent of perfect correlation
+  symbol: '% perfect'
+  conversion_factor: 100.0
+  description: 100% means a perfect linear correlation magnitude of 1.
+- name: permille of perfect correlation
+  symbol: permille
+  conversion_factor: 1000.0
+  description: Permille is handy for very tiny correlation magnitudes.
+- name: basis points of perfect correlation
+  symbol: bp
+  conversion_factor: 10000.0
+  description: Basis points are useful when comparing very small correlations.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: linear
+frontend_group: society
+frontend_group_label: Society, Economy & Abstract Quantities
+frontend_order: 1060
+items:
+- id: obs:correlation:scenario-correlation-shoe-size-and-iq
+  name: Shoe size and IQ
+  value: 0.05
+  description: A near-zero correlation anchor.
+  description_format: markdown
+  summary_short: A near-zero correlation anchor.
+  description_medium: A near-zero correlation anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Shoe size and IQ
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.05'
+      source_basis: Adult shoe size and IQ are essentially unrelated once age is controlled.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Spurious_relationship
+      source_value_text: '0.05'
+  source: https://en.wikipedia.org/wiki/Spurious_relationship
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-spurious-relationship
+    url: https://en.wikipedia.org/wiki/Spurious_relationship
+    title: Spurious relationship
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-bmi-and-blood-pressure
+  name: BMI and blood pressure
+  value: 0.35
+  description: Many health risk factors live in the low-to-moderate range.
+  description_format: markdown
+  summary_short: Many health risk factors live in the low-to-moderate range.
+  description_medium: Many health risk factors live in the low-to-moderate range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: BMI and blood pressure
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.35'
+      source_basis: Higher BMI is associated with higher blood pressure, but not strongly enough to predict any one person.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Blood_pressure
+      source_value_text: '0.35'
+  source: https://en.wikipedia.org/wiki/Blood_pressure
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blood-pressure
+    url: https://en.wikipedia.org/wiki/Blood_pressure
+    title: Blood pressure
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-education-and-income
+  name: Education and income
+  value: 0.35
+  description: Social variables often show meaningful but noisy correlations.
+  description_format: markdown
+  summary_short: Social variables often show meaningful but noisy correlations.
+  description_medium: Social variables often show meaningful but noisy correlations.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Education and income
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.35'
+      source_basis: More schooling is associated with higher income but far from deterministically.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Income
+      source_value_text: '0.35'
+  source: https://en.wikipedia.org/wiki/Income
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-income
+    url: https://en.wikipedia.org/wiki/Income
+    title: Income
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-study-hours-and-exam-score
+  name: Study hours and exam score
+  value: 0.4
+  description: Education outcomes often live in the middle of the correlation range.
+  description_format: markdown
+  summary_short: Education outcomes often live in the middle of the correlation range.
+  description_medium: Education outcomes often live in the middle of the correlation range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Study hours and exam score
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.4'
+      source_basis: Study time helps, but prior preparation and test skill add lots of noise.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.40'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-sat-score-and-first-year-gpa
+  name: SAT score and first-year GPA
+  value: 0.45
+  description: A familiar moderate predictive correlation.
+  description_format: markdown
+  summary_short: A familiar moderate predictive correlation.
+  description_medium: A familiar moderate predictive correlation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: SAT score and first-year GPA
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.45'
+      source_basis: Standardized scores predict college performance only moderately well.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/SAT
+      source_value_text: '0.45'
+  source: https://en.wikipedia.org/wiki/SAT
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sat
+    url: https://en.wikipedia.org/wiki/SAT
+    title: SAT
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-exercise-minutes-and-resting-heart-rate
+  name: Exercise minutes and resting heart rate
+  value: 0.5
+  description: Exercise and resting pulse usually move in opposite directions.
+  description_format: markdown
+  summary_short: Exercise and resting pulse usually move in opposite directions.
+  description_medium: Exercise and resting pulse usually move in opposite directions.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Exercise minutes and resting heart rate
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.5'
+      source_basis: More regular endurance exercise is associated with lower resting heart rate.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Resting_heart_rate
+      source_value_text: '0.50'
+  source: https://en.wikipedia.org/wiki/Resting_heart_rate
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-resting-heart-rate
+    url: https://en.wikipedia.org/wiki/Resting_heart_rate
+    title: Resting heart rate
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative
+- id: obs:correlation:scenario-correlation-advertising-spend-and-sales
+  name: Advertising spend and sales
+  value: 0.55
+  description: Marketing data often lives in the moderate-correlation band.
+  description_format: markdown
+  summary_short: Marketing data often lives in the moderate-correlation band.
+  description_medium: Marketing data often lives in the moderate-correlation band.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Advertising spend and sales
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.55'
+      source_basis: More advertising often coincides with higher sales, though causality and confounding matter.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Advertising
+      source_value_text: '0.55'
+  source: https://en.wikipedia.org/wiki/Advertising
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-advertising
+    url: https://en.wikipedia.org/wiki/Advertising
+    title: Advertising
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-hours-slept-and-next-day-sleepiness
+  name: Hours slept and next-day sleepiness
+  value: 0.55
+  description: An intuitively negative human-performance correlation.
+  description_format: markdown
+  summary_short: An intuitively negative human-performance correlation.
+  description_medium: An intuitively negative human-performance correlation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hours slept and next-day sleepiness
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.55'
+      source_basis: More sleep is associated with less next-day sleepiness.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Sleep_deprivation
+      source_value_text: '0.55'
+  source: https://en.wikipedia.org/wiki/Sleep_deprivation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sleep-deprivation
+    url: https://en.wikipedia.org/wiki/Sleep_deprivation
+    title: Sleep deprivation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative
+- id: obs:correlation:scenario-correlation-rainfall-and-wildfire-risk
+  name: Rainfall and wildfire risk
+  value: 0.6
+  description: Hydrology and fire danger often move in opposite directions.
+  description_format: markdown
+  summary_short: Hydrology and fire danger often move in opposite directions.
+  description_medium: Hydrology and fire danger often move in opposite directions.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rainfall and wildfire risk
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.6'
+      source_basis: Wetter conditions usually suppress fire risk.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Wildfire
+      source_value_text: '0.60'
+  source: https://en.wikipedia.org/wiki/Wildfire
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-wildfire
+    url: https://en.wikipedia.org/wiki/Wildfire
+    title: Wildfire
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative
+- id: obs:correlation:scenario-correlation-height-and-weight
+  name: Height and weight
+  value: 0.65
+  description: Height and weight are strongly but not tightly coupled.
+  description_format: markdown
+  summary_short: Height and weight are strongly but not tightly coupled.
+  description_medium: Height and weight are strongly but not tightly coupled.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Height and weight
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.65'
+      source_basis: Body mass tends to rise with height but with substantial variance.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.65'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-tree-ring-width-and-rainfall
+  name: Tree-ring width and rainfall
+  value: 0.65
+  description: Environmental records often show moderate-to-strong climate correlations.
+  description_format: markdown
+  summary_short: Environmental records often show moderate-to-strong climate correlations.
+  description_medium: Environmental records often show moderate-to-strong climate correlations.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tree-ring width and rainfall
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.65'
+      source_basis: In water-limited regions, wetter years often produce wider tree rings.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Dendrochronology
+      source_value_text: '0.65'
+  source: https://en.wikipedia.org/wiki/Dendrochronology
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dendrochronology
+    url: https://en.wikipedia.org/wiki/Dendrochronology
+    title: Dendrochronology
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-age-and-reaction-time
+  name: Age and reaction time
+  value: 0.7
+  description: Older age is strongly associated with slower responses.
+  description_format: markdown
+  summary_short: Older age is strongly associated with slower responses.
+  description_medium: Older age is strongly associated with slower responses.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Age and reaction time
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.7'
+      source_basis: Reaction time typically slows with age.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Reaction_time
+      source_value_text: '0.70'
+  source: https://en.wikipedia.org/wiki/Reaction_time
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-reaction-time
+    url: https://en.wikipedia.org/wiki/Reaction_time
+    title: Reaction time
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative
+- id: obs:correlation:scenario-correlation-ice-cream-sales-and-drowning-deaths
+  name: Ice cream sales and drowning deaths
+  value: 0.7
+  description: A classic correlation-does-not-imply-causation story.
+  description_format: markdown
+  summary_short: A classic correlation-does-not-imply-causation story.
+  description_medium: A classic correlation-does-not-imply-causation story.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ice cream sales and drowning deaths
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.7'
+      source_basis: Both rise in hot weather, making this a standard confounding example.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
+      source_value_text: '0.70'
+  source: https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation-does-not-imply-causation
+    url: https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
+    title: Correlation does not imply causation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    note: confounded by weather
+    sign: positive
+- id: obs:correlation:scenario-correlation-smoking-pack-years-and-lung-cancer-risk
+  name: Smoking pack-years and lung cancer risk
+  value: 0.7
+  description: Smoking exposure and lung harm move together clearly.
+  description_format: markdown
+  summary_short: Smoking exposure and lung harm move together clearly.
+  description_medium: Smoking exposure and lung harm move together clearly.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Smoking pack-years and lung cancer risk
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.7'
+      source_basis: Heavier lifetime smoking is strongly associated with higher lung-cancer risk.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Smoking_and_health
+      source_value_text: '0.70'
+  source: https://en.wikipedia.org/wiki/Smoking_and_health
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-smoking-and-health
+    url: https://en.wikipedia.org/wiki/Smoking_and_health
+    title: Smoking and health
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-temperature-and-drowning-deaths
+  name: Temperature and drowning deaths
+  value: 0.7
+  description: This is a good example of a real but mediated correlation.
+  description_format: markdown
+  summary_short: This is a good example of a real but mediated correlation.
+  description_medium: This is a good example of a real but mediated correlation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Temperature and drowning deaths
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.7'
+      source_basis: Hot weather draws more people to water and raises exposure.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
+      source_value_text: '0.70'
+  source: https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation-does-not-imply-causation
+    url: https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation
+    title: Correlation does not imply causation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-gdp-per-capita-and-life-expectancy
+  name: GDP per capita and life expectancy
+  value: 0.75
+  description: National wealth and lifespan are strongly related.
+  description_format: markdown
+  summary_short: National wealth and lifespan are strongly related.
+  description_medium: National wealth and lifespan are strongly related.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: GDP per capita and life expectancy
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.75'
+      source_basis: Richer countries often have longer life expectancy, though not perfectly.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.75'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-outdoor-temperature-and-ice-cream-sales
+  name: Outdoor temperature and ice cream sales
+  value: 0.8
+  description: A classic strong positive everyday correlation.
+  description_format: markdown
+  summary_short: A classic strong positive everyday correlation.
+  description_medium: A classic strong positive everyday correlation.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Outdoor temperature and ice cream sales
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.8'
+      source_basis: Warm days usually boost ice cream demand.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.80'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-rainfall-and-umbrella-sales
+  name: Rainfall and umbrella sales
+  value: 0.82
+  description: Rain and umbrella sales move together strongly.
+  description_format: markdown
+  summary_short: Rain and umbrella sales move together strongly.
+  description_medium: Rain and umbrella sales move together strongly.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Rainfall and umbrella sales
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.82'
+      source_basis: Umbrella purchases rise when it rains.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.82'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-co2-concentration-and-global-temperature-anomaly
+  name: CO2 concentration and global temperature anomaly
+  value: 0.85
+  description: A climate-data correlation people often want an intuitive anchor for.
+  description_format: markdown
+  summary_short: A climate-data correlation people often want an intuitive anchor for.
+  description_medium: A climate-data correlation people often want an intuitive anchor for.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: CO2 concentration and global temperature anomaly
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.85'
+      source_basis: Long-run atmospheric CO2 and temperature anomaly series are strongly associated.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.85'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-latitude-and-average-annual-temperature
+  name: Latitude and average annual temperature
+  value: 0.9
+  description: Latitude is a strong negative correlate of annual temperature.
+  description_format: markdown
+  summary_short: Latitude is a strong negative correlate of annual temperature.
+  description_medium: Latitude is a strong negative correlate of annual temperature.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Latitude and average annual temperature
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.9'
+      source_basis: Higher latitude generally means lower average solar input and colder climate.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.90'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative
+- id: obs:correlation:scenario-correlation-outdoor-temperature-and-heating-demand
+  name: Outdoor temperature and heating demand
+  value: 0.92
+  description: Cold weather and heating bills are almost mirror images.
+  description_format: markdown
+  summary_short: Cold weather and heating bills are almost mirror images.
+  description_medium: Cold weather and heating bills are almost mirror images.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Outdoor temperature and heating demand
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.92'
+      source_basis: Heating demand rises sharply as outdoor temperature falls.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Heating_degree_day
+      source_value_text: '0.92'
+  source: https://en.wikipedia.org/wiki/Heating_degree_day
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-heating-degree-day
+    url: https://en.wikipedia.org/wiki/Heating_degree_day
+    title: Heating degree day
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative
+- id: obs:correlation:scenario-correlation-height-and-arm-span
+  name: Height and arm span
+  value: 0.98
+  description: Height and arm span are nearly locked together in adults.
+  description_format: markdown
+  summary_short: Height and arm span are nearly locked together in adults.
+  description_medium: Height and arm span are nearly locked together in adults.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Height and arm span
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.98'
+      source_basis: Arm span is one of the strongest simple anthropometric correlates of height.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.98'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: positive
+- id: obs:correlation:scenario-correlation-speed-and-travel-time-for-a-fixed-distance
+  name: Speed and travel time for a fixed distance
+  value: 0.99
+  description: A near-perfect negative relationship that everyone has experienced.
+  description_format: markdown
+  summary_short: A near-perfect negative relationship that everyone has experienced.
+  description_medium: A near-perfect negative relationship that everyone has experienced.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Speed and travel time for a fixed distance
+    ingest_source: dataset/raw/curated/correlation.json
+    source_trace:
+      method: direct
+      original_value_text: '0.99'
+      source_basis: For a fixed route, higher speed strongly lowers travel time.
+      source_unit: '|r|'
+      source_url: https://en.wikipedia.org/wiki/Correlation
+      source_value_text: '0.99'
+  source: https://en.wikipedia.org/wiki/Correlation
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-correlation
+    url: https://en.wikipedia.org/wiki/Correlation
+    title: Correlation
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-correlation-json
+    url: repo://dataset/raw/curated/correlation.json
+    title: dataset/raw/curated/correlation.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: absolute Pearson correlation
+    sign: negative

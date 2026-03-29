@@ -1,0 +1,728 @@
+[
+  {
+    "canonical_name": "Leakage current of a good capacitor",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Leakage_(electronics)",
+    "subject_key": "scenario:current:capacitor-leakage",
+    "subject_type": "scenario",
+    "summary": "Tiny leakage currents in good capacitors can be in the picoampere range.",
+    "value_base": 1e-12,
+    "value_type": "measured",
+    "source_value_text": "1 pA",
+    "source_unit": "A",
+    "source_basis": "Representative capacitor leakage current.",
+    "qualifiers": {
+      "measurement": "leakage current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Single ion-channel current",
+    "category": "biology",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Patch_clamp",
+    "subject_key": "entity:single-ion-channel-current",
+    "subject_type": "entity",
+    "summary": "A single biological ion channel often carries only a few picoamperes.",
+    "value_base": 5e-12,
+    "value_type": "measured",
+    "source_value_text": "5 pA",
+    "source_unit": "A",
+    "source_basis": "Representative patch-clamp current for a single ion channel.",
+    "qualifiers": {
+      "measurement": "channel current"
+    }
+  },
+  {
+    "canonical_name": "Dark current of a photodiode",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Photodiode",
+    "subject_key": "entity:photodiode-dark-current",
+    "subject_type": "entity",
+    "summary": "Photodiode dark current often sits in the nanoampere range.",
+    "value_base": 1e-09,
+    "value_type": "measured",
+    "source_value_text": "1 nA",
+    "source_unit": "A",
+    "source_basis": "Representative silicon photodiode dark current.",
+    "qualifiers": {
+      "measurement": "dark current",
+      "assumption": "representative device"
+    }
+  },
+  {
+    "canonical_name": "Bias current of an op-amp input",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Input_bias_current",
+    "subject_key": "entity:op-amp-bias-current",
+    "subject_type": "entity",
+    "summary": "Some precision op-amp inputs draw only tens of nanoamperes or less.",
+    "value_base": 1e-08,
+    "value_type": "measured",
+    "source_value_text": "10 nA",
+    "source_unit": "A",
+    "source_basis": "Representative op-amp input bias current.",
+    "qualifiers": {
+      "measurement": "input bias current"
+    }
+  },
+  {
+    "canonical_name": "Microcontroller sleep current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Microcontroller",
+    "subject_key": "entity:microcontroller-sleep-current",
+    "subject_type": "entity",
+    "summary": "A sleeping microcontroller can draw only microamps.",
+    "value_base": 1e-06,
+    "value_type": "measured",
+    "source_value_text": "1 uA",
+    "source_unit": "A",
+    "source_basis": "Representative deep-sleep current for a low-power microcontroller.",
+    "qualifiers": {
+      "measurement": "idle current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Quartz wristwatch current draw",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Quartz_clock",
+    "subject_key": "entity:quartz-watch-current",
+    "subject_type": "entity",
+    "summary": "A quartz wristwatch can run on just a few microamperes.",
+    "value_base": 2e-06,
+    "value_type": "measured",
+    "source_value_text": "2 uA",
+    "source_unit": "A",
+    "source_basis": "Representative quartz-watch operating current.",
+    "qualifiers": {
+      "measurement": "operating current"
+    }
+  },
+  {
+    "canonical_name": "LED indicator current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+    "subject_key": "entity:led-indicator-current",
+    "subject_type": "entity",
+    "summary": "A standard panel LED often runs at about twenty milliamperes.",
+    "value_base": 0.02,
+    "value_type": "measured",
+    "source_value_text": "20 mA",
+    "source_unit": "A",
+    "source_basis": "Representative LED indicator operating current.",
+    "qualifiers": {
+      "measurement": "operating current"
+    }
+  },
+  {
+    "canonical_name": "USB 2.0 port current limit",
+    "category": "interface",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/USB_hardware",
+    "subject_key": "entity:usb-2-port-current",
+    "subject_type": "entity",
+    "summary": "Classic USB 2.0 ports were designed around a half-ampere current limit.",
+    "value_base": 0.5,
+    "value_type": "measured",
+    "source_value_text": "0.5 A",
+    "source_unit": "A",
+    "source_basis": "USB 2.0 standard high-power current limit."
+  },
+  {
+    "canonical_name": "Smartphone wall charger current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Smartphone_charger",
+    "subject_key": "entity:smartphone-wall-charger-current",
+    "subject_type": "entity",
+    "summary": "A common wall charger for a phone draws a couple of amps on the low-voltage side.",
+    "value_base": 2.0,
+    "value_type": "measured",
+    "source_value_text": "2 A",
+    "source_unit": "A",
+    "source_basis": "Representative phone-charger output current.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "Smartphone fast-charging current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/USB_hardware",
+    "subject_key": "entity:smartphone-fast-charge-current",
+    "subject_type": "entity",
+    "summary": "Fast phone charging commonly uses a few amperes of current.",
+    "value_base": 2.5,
+    "value_type": "measured",
+    "source_value_text": "2.5 A",
+    "source_unit": "A",
+    "source_basis": "Representative smartphone fast-charging current.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "USB-C default charging current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/USB-C",
+    "subject_key": "entity:usb-c-default-current",
+    "subject_type": "entity",
+    "summary": "USB-C can deliver a few amps at the default charging level.",
+    "value_base": 3.0,
+    "value_type": "measured",
+    "source_value_text": "3 A",
+    "source_unit": "A",
+    "source_basis": "Representative USB-C default current capability.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "Laptop AC adapter current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Power_supply_unit_(computer)",
+    "subject_key": "entity:laptop-ac-adapter-current",
+    "subject_type": "entity",
+    "summary": "Laptop power bricks often provide a few amps at their output voltage.",
+    "value_base": 3.25,
+    "value_type": "measured",
+    "source_value_text": "3.25 A",
+    "source_unit": "A",
+    "source_basis": "Representative laptop adapter output current.",
+    "qualifiers": {
+      "measurement": "adapter output current"
+    }
+  },
+  {
+    "canonical_name": "USB Power Delivery 5 amp current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/USB#USB_Power_Delivery",
+    "subject_key": "entity:usb-pd-5a-current",
+    "subject_type": "entity",
+    "summary": "High-power USB Power Delivery cables can carry five amps.",
+    "value_base": 5.0,
+    "value_type": "measured",
+    "source_value_text": "5 A",
+    "source_unit": "A",
+    "source_basis": "Representative USB Power Delivery current limit.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "Vacuum cleaner current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Vacuum_cleaner",
+    "subject_key": "entity:vacuum-cleaner-current",
+    "subject_type": "entity",
+    "summary": "A household vacuum cleaner typically draws several amps from the wall.",
+    "value_base": 8.0,
+    "value_type": "measured",
+    "source_value_text": "8 A",
+    "source_unit": "A",
+    "source_basis": "Representative vacuum cleaner mains current.",
+    "qualifiers": {
+      "measurement": "mains current",
+      "assumption": "typical household appliance"
+    }
+  },
+  {
+    "canonical_name": "Household toaster current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Toaster",
+    "subject_key": "entity:toaster-current",
+    "subject_type": "entity",
+    "summary": "A countertop toaster on 120 V mains draws on the order of eight to nine amperes.",
+    "value_base": 8.333333333333334,
+    "value_type": "derived",
+    "source_value_text": "1000 W at 120 V",
+    "source_unit": "A",
+    "source_basis": "Derived from representative toaster power and line voltage.",
+    "derivation_note": "I = P / V",
+    "qualifiers": {
+      "measurement": "operating current",
+      "assumption": "1000 watt toaster on 120 V"
+    }
+  },
+  {
+    "canonical_name": "Hair dryer current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Hair_dryer",
+    "subject_key": "entity:hair-dryer-current",
+    "subject_type": "entity",
+    "summary": "A hair dryer is one of the larger everyday loads on a home outlet.",
+    "value_base": 10.0,
+    "value_type": "measured",
+    "source_value_text": "10 A",
+    "source_unit": "A",
+    "source_basis": "Representative hair dryer mains current.",
+    "qualifiers": {
+      "measurement": "mains current",
+      "assumption": "typical household appliance"
+    }
+  },
+  {
+    "canonical_name": "Microwave oven current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Microwave_oven",
+    "subject_key": "entity:microwave-oven-current",
+    "subject_type": "entity",
+    "summary": "A microwave oven can pull around a dozen amps from a domestic circuit.",
+    "value_base": 12.0,
+    "value_type": "measured",
+    "source_value_text": "12 A",
+    "source_unit": "A",
+    "source_basis": "Representative microwave oven mains current.",
+    "qualifiers": {
+      "measurement": "mains current",
+      "assumption": "typical household appliance"
+    }
+  },
+  {
+    "canonical_name": "Electric kettle current on 120 V mains",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Electric_kettle",
+    "subject_key": "entity:kettle-current",
+    "subject_type": "entity",
+    "summary": "An electric kettle on US mains is close to the 15 A branch-circuit range.",
+    "value_base": 12.5,
+    "value_type": "derived",
+    "source_value_text": "1500 W at 120 V",
+    "source_unit": "A",
+    "source_basis": "Derived from representative kettle power and line voltage.",
+    "derivation_note": "I = P / V",
+    "qualifiers": {
+      "measurement": "operating current",
+      "assumption": "1500 watt kettle on 120 V"
+    }
+  },
+  {
+    "canonical_name": "Space heater current",
+    "category": "everyday",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Space_heater",
+    "subject_key": "entity:space-heater-current",
+    "subject_type": "entity",
+    "summary": "Portable electric heaters sit near the upper edge of a household circuit.",
+    "value_base": 12.5,
+    "value_type": "measured",
+    "source_value_text": "12.5 A",
+    "source_unit": "A",
+    "source_basis": "Representative space-heater mains current.",
+    "qualifiers": {
+      "measurement": "mains current",
+      "assumption": "typical household appliance"
+    }
+  },
+  {
+    "canonical_name": "15-amp household breaker rating",
+    "category": "infrastructure",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Circuit_breaker",
+    "subject_key": "entity:household-breaker-15a",
+    "subject_type": "entity",
+    "summary": "A common North American branch circuit is rated for fifteen amperes.",
+    "value_base": 15.0,
+    "value_type": "measured",
+    "source_value_text": "15 A",
+    "source_unit": "A",
+    "source_basis": "Common residential branch-circuit breaker rating."
+  },
+  {
+    "canonical_name": "20-amp household breaker rating",
+    "category": "infrastructure",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Circuit_breaker",
+    "subject_key": "entity:household-breaker-20a",
+    "subject_type": "entity",
+    "summary": "Heavier household circuits are often rated at twenty amperes.",
+    "value_base": 20.0,
+    "value_type": "measured",
+    "source_value_text": "20 A",
+    "source_unit": "A",
+    "source_basis": "Common residential branch-circuit breaker rating."
+  },
+  {
+    "canonical_name": "Electric vehicle level-2 charging current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Charging_station",
+    "subject_key": "entity:electric-vehicle-level2-current",
+    "subject_type": "entity",
+    "summary": "A level-2 electric-vehicle charger can deliver tens of amps.",
+    "value_base": 32.0,
+    "value_type": "measured",
+    "source_value_text": "32 A",
+    "source_unit": "A",
+    "source_basis": "Representative level-2 EV charging current.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "MIG welding current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Arc_welding",
+    "subject_key": "entity:mig-welder-current",
+    "subject_type": "entity",
+    "summary": "A hobby welding machine often runs at a few hundred amperes or less.",
+    "value_base": 120.0,
+    "value_type": "measured",
+    "source_value_text": "120 A",
+    "source_unit": "A",
+    "source_basis": "Representative MIG welding current.",
+    "qualifiers": {
+      "measurement": "welding current"
+    }
+  },
+  {
+    "canonical_name": "Car starter motor current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Starter_(engine)",
+    "subject_key": "entity:car-starter-current",
+    "subject_type": "entity",
+    "summary": "Starting a car engine can pull a few hundred amperes from the battery.",
+    "value_base": 300.0,
+    "value_type": "measured",
+    "source_value_text": "300 A",
+    "source_unit": "A",
+    "source_basis": "Representative starter-motor current.",
+    "qualifiers": {
+      "measurement": "starting current"
+    }
+  },
+  {
+    "canonical_name": "DC fast charger current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Charging_station",
+    "subject_key": "entity:dc-fast-charger-current",
+    "subject_type": "entity",
+    "summary": "Fast DC chargers can push hundreds of amps into a battery pack.",
+    "value_base": 300.0,
+    "value_type": "measured",
+    "source_value_text": "300 A",
+    "source_unit": "A",
+    "source_basis": "Representative DC fast-charging current.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "DC fast-charge EV cable current",
+    "category": "infrastructure",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Charging_station",
+    "subject_key": "entity:ev-fast-charge-current",
+    "subject_type": "entity",
+    "summary": "High-power EV fast charging can operate around five hundred amperes.",
+    "value_base": 500.0,
+    "value_type": "measured",
+    "source_value_text": "500 A",
+    "source_unit": "A",
+    "source_basis": "Representative high-power EV charging current.",
+    "qualifiers": {
+      "measurement": "charging current"
+    }
+  },
+  {
+    "canonical_name": "Urban rail traction current",
+    "category": "infrastructure",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Third_rail",
+    "subject_key": "entity:urban-rail-current",
+    "subject_type": "entity",
+    "summary": "Electric rail systems commonly handle kiloampere-scale traction currents.",
+    "value_base": 1000.0,
+    "value_type": "measured",
+    "source_value_text": "1000 A",
+    "source_unit": "A",
+    "source_basis": "Representative urban-rail traction current.",
+    "qualifiers": {
+      "measurement": "traction current"
+    }
+  },
+  {
+    "canonical_name": "LHC main dipole circuit current",
+    "category": "fields",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://home.cern/science/engineering/pulling-together-superconducting-electromagnets",
+    "subject_key": "entity:lhc-dipole-current",
+    "subject_type": "entity",
+    "summary": "CERN's LHC dipole magnets run at nearly twelve kiloamperes.",
+    "value_base": 11850.0,
+    "value_type": "measured",
+    "source_value_text": "11850 A",
+    "source_unit": "A",
+    "source_basis": "CERN reports the LHC dipole current is about 11,850 A.",
+    "source_class": "official_dataset"
+  },
+  {
+    "canonical_name": "Lightning return-stroke current",
+    "category": "physics",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Lightning",
+    "subject_key": "entity:lightning-return-stroke-current",
+    "subject_type": "entity",
+    "summary": "The return stroke of lightning is one of nature's largest currents.",
+    "value_base": 30000.0,
+    "value_type": "measured",
+    "source_value_text": "30 kA",
+    "source_unit": "A",
+    "source_basis": "Representative cloud-to-ground lightning current.",
+    "qualifiers": {
+      "measurement": "peak discharge current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Electric arc furnace current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Electric_arc_furnace",
+    "subject_key": "entity:electric-arc-furnace-current",
+    "subject_type": "entity",
+    "summary": "Industrial arc furnaces use enormous currents to sustain the arc.",
+    "value_base": 100000.0,
+    "value_type": "measured",
+    "source_value_text": "100 kA",
+    "source_unit": "A",
+    "source_basis": "Representative electric arc furnace operating current.",
+    "qualifiers": {
+      "measurement": "arc current",
+      "assumption": "representative industrial value"
+    }
+  },
+  {
+    "canonical_name": "Hall-Heroult aluminum cell current",
+    "category": "infrastructure",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process",
+    "subject_key": "entity:aluminum-smelter-current",
+    "subject_type": "entity",
+    "summary": "Industrial aluminum smelting cells operate at hundreds of kiloamperes.",
+    "value_base": 300000.0,
+    "value_type": "measured",
+    "source_value_text": "300 kA",
+    "source_unit": "A",
+    "source_basis": "Representative Hall-Heroult cell current.",
+    "qualifiers": {
+      "measurement": "cell current"
+    }
+  },
+  {
+    "canonical_name": "Railgun pulse current",
+    "category": "engineering",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Railgun",
+    "subject_key": "entity:railgun-current",
+    "subject_type": "entity",
+    "summary": "Experimental railguns can use megaampere-scale current pulses.",
+    "value_base": 1000000.0,
+    "value_type": "measured",
+    "source_value_text": "1 MA",
+    "source_unit": "A",
+    "source_basis": "Representative railgun pulse current.",
+    "qualifiers": {
+      "measurement": "pulse current"
+    }
+  },
+  {
+    "canonical_name": "Z-pinch current in Sandia Z Machine",
+    "category": "fields",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Z_Pulsed_Power_Facility",
+    "subject_key": "entity:z-machine-current",
+    "subject_type": "entity",
+    "summary": "The Z Machine uses tens of megaamperes in an extreme pulsed-power discharge.",
+    "value_base": 20000000.0,
+    "value_type": "measured",
+    "source_value_text": "20 MA",
+    "source_unit": "A",
+    "source_basis": "Representative Z Machine discharge current.",
+    "qualifiers": {
+      "measurement": "pulse current"
+    }
+  },
+  {
+    "canonical_name": "Planck current",
+    "category": "physics",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Planck_units",
+    "subject_key": "entity:planck-current",
+    "subject_type": "entity",
+    "summary": "Planck current is the natural current scale formed from fundamental constants.",
+    "value_base": 3.478872753751307e+25,
+    "value_type": "derived",
+    "source_value_text": "3.478872753751307e25 A",
+    "source_unit": "A",
+    "source_basis": "Derived from c, ħ, G, and ε0 using the Planck-unit current scale.",
+    "derivation_note": "I_P = \\sqrt{4\\pi\\varepsilon_0 c^6 / G}",
+    "qualifiers": {
+      "measurement": "natural current scale"
+    }
+  },
+  {
+    "canonical_name": "Rod photoreceptor dark current",
+    "category": "biology",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Dark_current_(biology)",
+    "subject_key": "entity:rod-photoreceptor-dark-current",
+    "subject_type": "entity",
+    "summary": "Retinal rod cells carry a tiny standing dark current in the absence of light.",
+    "value_base": 2e-12,
+    "value_type": "measured",
+    "source_value_text": "2 pA",
+    "source_unit": "A",
+    "source_basis": "Representative dark current of a rod photoreceptor.",
+    "qualifiers": {
+      "measurement": "cell current"
+    }
+  },
+  {
+    "canonical_name": "Neuron action potential membrane current",
+    "category": "biology",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Action_potential",
+    "subject_key": "entity:neuron-action-potential-current",
+    "subject_type": "entity",
+    "summary": "A firing neuron briefly drives membrane currents far above a single ion channel.",
+    "value_base": 1e-06,
+    "value_type": "measured",
+    "source_value_text": "1 uA",
+    "source_unit": "A",
+    "source_basis": "Representative peak transmembrane current during an action potential.",
+    "qualifiers": {
+      "measurement": "cell current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Cochlear implant electrode current",
+    "category": "health",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Cochlear_implant",
+    "subject_key": "entity:cochlear-implant-current",
+    "subject_type": "entity",
+    "summary": "Cochlear implants stimulate auditory nerves with currents in the hundreds of microamps.",
+    "value_base": 0.0003,
+    "value_type": "measured",
+    "source_value_text": "300 uA",
+    "source_unit": "A",
+    "source_basis": "Representative cochlear implant stimulation current.",
+    "qualifiers": {
+      "measurement": "stimulation current"
+    }
+  },
+  {
+    "canonical_name": "Deep brain stimulator pulse current",
+    "category": "health",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Deep_brain_stimulation",
+    "subject_key": "entity:deep-brain-stimulator-current",
+    "subject_type": "entity",
+    "summary": "Deep brain stimulators run with milliamp-scale pulses rather than household-scale current.",
+    "value_base": 0.003,
+    "value_type": "measured",
+    "source_value_text": "3 mA",
+    "source_unit": "A",
+    "source_basis": "Representative deep-brain stimulation pulse current.",
+    "qualifiers": {
+      "measurement": "stimulation current"
+    }
+  },
+  {
+    "canonical_name": "Pacemaker standby current",
+    "category": "medicine",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker",
+    "subject_key": "entity:pacemaker-standby-current",
+    "subject_type": "entity",
+    "summary": "An implanted pacemaker lives for years because its average current stays down in the tens of microamps.",
+    "value_base": 1e-05,
+    "value_type": "derived",
+    "source_value_text": "10 uA",
+    "source_unit": "A",
+    "source_basis": "Representative average current draw for an implanted pacemaker.",
+    "qualifiers": {
+      "measurement": "device average current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  },
+  {
+    "canonical_name": "Hearing aid current draw",
+    "category": "medicine",
+    "dimension": "current",
+    "display_eligible": true,
+    "source_url": "https://en.wikipedia.org/wiki/Hearing_aid",
+    "subject_key": "entity:hearing-aid-current-draw",
+    "subject_type": "entity",
+    "summary": "Tiny battery-powered hearing aids operate in the tens-of-microamps to low-hundreds-of-microamps band.",
+    "value_base": 5e-05,
+    "value_type": "derived",
+    "source_value_text": "50 uA",
+    "source_unit": "A",
+    "source_basis": "Representative hearing-aid operating current.",
+    "qualifiers": {
+      "measurement": "device current",
+      "assumption": "order-of-magnitude representative value"
+    }
+  }
+]

@@ -1,0 +1,1051 @@
+dimension: attention
+base_unit: person_seconds
+dimension_description: This scale treats attention pragmatically as person-seconds of engaged time. That is more comparable and more additive than raw views, impressions, or clicks, and it lets a glance, a lecture, a concert, and a livestream all live on one axis. Views and audience counts can still appear as qualifiers or source notes.
+related_resources:
+- name: Attention
+  url: https://en.wikipedia.org/wiki/Attention
+show_limitations: true
+units:
+- name: person-seconds
+  symbol: person*s
+  conversion_factor: 1.0
+  description: Person-seconds are the canonical storage unit for this attention scale.
+- name: person-minutes
+  symbol: person*min
+  conversion_factor: 0.0166666666667
+  description: Person-minutes are useful for short media and tasks.
+- name: person-hours
+  symbol: person*h
+  conversion_factor: 0.0002777777778
+  description: Person-hours are useful for classes, meetings, and media.
+- name: person-days
+  symbol: person*d
+  conversion_factor: 1.15740741e-05
+  description: Person-days are useful for aggregate events and projects.
+- name: person-years
+  symbol: person*yr
+  conversion_factor: 3.168808781e-08
+  description: Person-years are useful for very large attention totals.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: society
+frontend_group_label: Society, Economy & Abstract Quantities
+frontend_order: 1090
+items:
+- id: obs:attention:entity-attention-one-person-second-of-focused-attention
+  name: One person-second of focused attention
+  value: 1.0
+  description: The smallest everyday unit of attention.
+  description_format: markdown
+  summary_short: The smallest everyday unit of attention.
+  description_medium: The smallest everyday unit of attention.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One person-second of focused attention
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      method: direct
+      original_value_text: '1'
+      source_basis: A single person paying attention for one second.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Attention
+      source_value_text: '1'
+  source: https://en.wikipedia.org/wiki/Attention
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-attention
+    url: https://en.wikipedia.org/wiki/Attention
+    title: Attention
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:attention:entity-attention-one-person-minute-of-focused-attention
+  name: One person-minute of focused attention
+  value: 60.0
+  description: A minute of attention is enough for a short message or headline.
+  description_format: markdown
+  summary_short: A minute of attention is enough for a short message or headline.
+  description_medium: A minute of attention is enough for a short message or headline.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One person-minute of focused attention
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      method: direct
+      original_value_text: '60'
+      source_basis: Sixty person-seconds.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Attention
+      source_value_text: '60'
+  source: https://en.wikipedia.org/wiki/Attention
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-attention
+    url: https://en.wikipedia.org/wiki/Attention
+    title: Attention
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:attention:entity-attention-one-person-hour-of-focused-work
+  name: One person-hour of focused work
+  value: 3600.0
+  description: One person-hour is a useful planning unit for attention and labor.
+  description_format: markdown
+  summary_short: One person-hour is a useful planning unit for attention and labor.
+  description_medium: One person-hour is a useful planning unit for attention and labor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One person-hour of focused work
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      method: direct
+      original_value_text: '3600'
+      source_basis: Sixty person-minutes.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Person-hour
+      source_value_text: '3600'
+  source: https://en.wikipedia.org/wiki/Person-hour
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-person-hour
+    url: https://en.wikipedia.org/wiki/Person-hour
+    title: Person-hour
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:attention:scenario-attention-one-eight-hour-workday
+  name: One eight-hour workday
+  value: 28800.0
+  description: A standard workday is a durable anchor on the attention scale.
+  description_format: markdown
+  summary_short: A standard workday is a durable anchor on the attention scale.
+  description_medium: A standard workday is a durable anchor on the attention scale.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One eight-hour workday
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 8 x 3600
+      method: derived
+      original_value_text: '28800'
+      source_basis: Eight hours of focus by one person.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Working_time
+      source_value_text: 8 hours
+  source: https://en.wikipedia.org/wiki/Working_time
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-working-time
+    url: https://en.wikipedia.org/wiki/Working_time
+    title: Working time
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: 8 hours
+- id: obs:attention:scenario-attention-a-classroom-period
+  name: A classroom period
+  value: 81000.0
+  description: A normal class already accumulates a large attention budget.
+  description_format: markdown
+  summary_short: A normal class already accumulates a large attention budget.
+  description_medium: A normal class already accumulates a large attention budget.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A classroom period
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 30 x 45 x 60
+      method: derived
+      original_value_text: '81000'
+      source_basis: Thirty students for forty-five minutes.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Classroom
+      source_value_text: 30 students x 45 min
+  source: https://en.wikipedia.org/wiki/Classroom
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-classroom
+    url: https://en.wikipedia.org/wiki/Classroom
+    title: Classroom
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-200-seat-lecture-hall-for-one-hour
+  name: A 200-seat lecture hall for one hour
+  value: 720000.0
+  description: Live teaching scales attention faster than it feels from the stage.
+  description_format: markdown
+  summary_short: Live teaching scales attention faster than it feels from the stage.
+  description_medium: Live teaching scales attention faster than it feels from the stage.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A 200-seat lecture hall for one hour
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 200 x 3600
+      method: derived
+      original_value_text: '720000'
+      source_basis: Two hundred listeners for one hour.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Lecture
+      source_value_text: 200 people x 1 hour
+  source: https://en.wikipedia.org/wiki/Lecture
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lecture
+    url: https://en.wikipedia.org/wiki/Lecture
+    title: Lecture
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-sold-out-movie-theater-for-a-two-hour-film
+  name: A sold-out movie theater for a two-hour film
+  value: 1080000.0
+  description: Even a single screening creates over a million person-seconds.
+  description_format: markdown
+  summary_short: Even a single screening creates over a million person-seconds.
+  description_medium: Even a single screening creates over a million person-seconds.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A sold-out movie theater for a two-hour film
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 150 x 2 x 3600
+      method: derived
+      original_value_text: '1080000'
+      source_basis: One hundred fifty viewers for two hours.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Cinema
+      source_value_text: 150 viewers x 2 hours
+  source: https://en.wikipedia.org/wiki/Cinema
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cinema
+    url: https://en.wikipedia.org/wiki/Cinema
+    title: Cinema
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-one-person-year-of-continuous-attention
+  name: One person-year of continuous attention
+  value: 31536000.0
+  description: A person-year is a natural large human-scale anchor.
+  description_format: markdown
+  summary_short: A person-year is a natural large human-scale anchor.
+  description_medium: A person-year is a natural large human-scale anchor.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One person-year of continuous attention
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 365 x 24 x 3600
+      method: derived
+      original_value_text: '31536000'
+      source_basis: One year of continuous attention by one person.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Year
+      source_value_text: 1 year
+  source: https://en.wikipedia.org/wiki/Year
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-year
+    url: https://en.wikipedia.org/wiki/Year
+    title: Year
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-million-readers-for-one-minute
+  name: A million readers for one minute
+  value: 60000000.0
+  description: Big audiences make even short content attention-intensive.
+  description_format: markdown
+  summary_short: Big audiences make even short content attention-intensive.
+  description_medium: Big audiences make even short content attention-intensive.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A million readers for one minute
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e6 x 60
+      method: derived
+      original_value_text: '60000000'
+      source_basis: A million people for one minute.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Reading
+      source_value_text: 1,000,000 readers x 1 min
+  source: https://en.wikipedia.org/wiki/Reading
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-reading
+    url: https://en.wikipedia.org/wiki/Reading
+    title: Reading
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-taylor-swift-stadium-show
+  name: A Taylor Swift stadium show
+  value: 777600000.0
+  description: A single mega-concert creates close to a billion person-seconds.
+  description_format: markdown
+  summary_short: A single mega-concert creates close to a billion person-seconds.
+  description_medium: A single mega-concert creates close to a billion person-seconds.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A Taylor Swift stadium show
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 72000 x 3 x 3600
+      method: derived
+      original_value_text: '777600000'
+      source_basis: A packed stadium for three hours.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/The_Eras_Tour
+      source_value_text: 72,000 fans x 3 hours
+  source: https://en.wikipedia.org/wiki/The_Eras_Tour
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-the-eras-tour
+    url: https://en.wikipedia.org/wiki/The_Eras_Tour
+    title: The Eras Tour
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-twitch-stream-with-100-000-concurrent-viewers-for-4-hours
+  name: A Twitch stream with 100,000 concurrent viewers for 4 hours
+  value: 1440000000.0
+  description: Long live streams convert concurrency into very large attention totals.
+  description_format: markdown
+  summary_short: Long live streams convert concurrency into very large attention totals.
+  description_medium: Long live streams convert concurrency into very large attention totals.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A Twitch stream with 100,000 concurrent viewers for 4 hours
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 100000 x 4 x 3600
+      method: derived
+      original_value_text: '1440000000'
+      source_basis: One hundred thousand viewers for four hours.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Twitch_(service)
+      source_value_text: 100,000 viewers x 4 hours
+  source: https://en.wikipedia.org/wiki/Twitch_(service)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-twitch-service
+    url: https://en.wikipedia.org/wiki/Twitch_(service)
+    title: Twitch (service)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-podcast-episode-with-1-million-listens-at-45-minutes-each
+  name: A podcast episode with 1 million listens at 45 minutes each
+  value: 2700000000.0
+  description: Podcasts turn modest audiences into giant cumulative attention.
+  description_format: markdown
+  summary_short: Podcasts turn modest audiences into giant cumulative attention.
+  description_medium: Podcasts turn modest audiences into giant cumulative attention.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A podcast episode with 1 million listens at 45 minutes each
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e6 x 45 x 60
+      method: derived
+      original_value_text: '2700000000'
+      source_basis: A million listeners each spend forty-five minutes.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Podcast
+      source_value_text: 1,000,000 listens x 45 min
+  source: https://en.wikipedia.org/wiki/Podcast
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-podcast
+    url: https://en.wikipedia.org/wiki/Podcast
+    title: Podcast
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-viral-clip-watched-by-100-million-people-for-30-seconds
+  name: A viral clip watched by 100 million people for 30 seconds
+  value: 3000000000.0
+  description: Short viral media can absorb billions of person-seconds fast.
+  description_format: markdown
+  summary_short: Short viral media can absorb billions of person-seconds fast.
+  description_medium: Short viral media can absorb billions of person-seconds fast.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A viral clip watched by 100 million people for 30 seconds
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e8 x 30
+      method: derived
+      original_value_text: '3000000000'
+      source_basis: One hundred million viewers for thirty seconds.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Online_video_platform
+      source_value_text: 100 million viewers x 30 s
+  source: https://en.wikipedia.org/wiki/Online_video_platform
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-online-video-platform
+    url: https://en.wikipedia.org/wiki/Online_video_platform
+    title: Online video platform
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-ted-talk-with-10-million-full-views
+  name: A TED talk with 10 million full views
+  value: 10800000000.0
+  description: Moderately viral educational media accumulates massive attention.
+  description_format: markdown
+  summary_short: Moderately viral educational media accumulates massive attention.
+  description_medium: Moderately viral educational media accumulates massive attention.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A TED talk with 10 million full views
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e7 x 18 x 60
+      method: derived
+      original_value_text: '10800000000'
+      source_basis: Ten million viewers spending eighteen minutes each.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/TED_(conference)
+      source_value_text: 10 million viewers x 18 min
+  source: https://en.wikipedia.org/wiki/TED_(conference)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-ted-conference
+    url: https://en.wikipedia.org/wiki/TED_(conference)
+    title: TED (conference)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-mrbeast-scale-video-watched-by-100-million-viewers-for-15-minutes
+  name: A MrBeast-scale video watched by 100 million viewers for 15 minutes
+  value: 90000000000.0
+  description: Large creator media can rival broadcast attention.
+  description_format: markdown
+  summary_short: Large creator media can rival broadcast attention.
+  description_medium: Large creator media can rival broadcast attention.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A MrBeast-scale video watched by 100 million viewers for 15 minutes
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e8 x 15 x 60
+      method: derived
+      original_value_text: '90000000000'
+      source_basis: One hundred million viewers spending fifteen minutes each.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/MrBeast
+      source_value_text: 100 million viewers x 15 min
+  source: https://en.wikipedia.org/wiki/MrBeast
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-mrbeast
+    url: https://en.wikipedia.org/wiki/MrBeast
+    title: MrBeast
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-bestselling-book-read-by-10-million-people-for-8-hours-each
+  name: A bestselling book read by 10 million people for 8 hours each
+  value: 288000000000.0
+  description: Books quietly accumulate immense total attention.
+  description_format: markdown
+  summary_short: Books quietly accumulate immense total attention.
+  description_medium: Books quietly accumulate immense total attention.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A bestselling book read by 10 million people for 8 hours each
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e7 x 8 x 3600
+      method: derived
+      original_value_text: '288000000000'
+      source_basis: Ten million readers spend eight hours each.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Best_seller
+      source_value_text: 10 million readers x 8 hours
+  source: https://en.wikipedia.org/wiki/Best_seller
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-best-seller
+    url: https://en.wikipedia.org/wiki/Best_seller
+    title: Best seller
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-blockbuster-movie-seen-by-50-million-viewers-for-2-hours
+  name: A blockbuster movie seen by 50 million viewers for 2 hours
+  value: 360000000000.0
+  description: Major films collect hundreds of billions of person-seconds.
+  description_format: markdown
+  summary_short: Major films collect hundreds of billions of person-seconds.
+  description_medium: Major films collect hundreds of billions of person-seconds.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A blockbuster movie seen by 50 million viewers for 2 hours
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 5e7 x 2 x 3600
+      method: derived
+      original_value_text: '360000000000'
+      source_basis: Fifty million viewers for two hours.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Blockbuster_(entertainment)
+      source_value_text: 50 million viewers x 2 hours
+  source: https://en.wikipedia.org/wiki/Blockbuster_(entertainment)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blockbuster-entertainment
+    url: https://en.wikipedia.org/wiki/Blockbuster_(entertainment)
+    title: Blockbuster (entertainment)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-presidential-debate-watched-by-70-million-viewers-for-90-minutes
+  name: A presidential debate watched by 70 million viewers for 90 minutes
+  value: 378000000000.0
+  description: Politics can gather blockbuster-level shared attention.
+  description_format: markdown
+  summary_short: Politics can gather blockbuster-level shared attention.
+  description_medium: Politics can gather blockbuster-level shared attention.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A presidential debate watched by 70 million viewers for 90 minutes
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 70e6 x 90 x 60
+      method: derived
+      original_value_text: '378000000000'
+      source_basis: Seventy million viewers for ninety minutes.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/United_States_presidential_debates
+      source_value_text: 70 million viewers x 90 min
+  source: https://en.wikipedia.org/wiki/United_States_presidential_debates
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-united-states-presidential-debates
+    url: https://en.wikipedia.org/wiki/United_States_presidential_debates
+    title: United States presidential debates
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-a-super-bowl-broadcast
+  name: A Super Bowl broadcast
+  value: 392400000000.0
+  description: A marquee live event is one of the clearest attention concentration examples.
+  description_format: markdown
+  summary_short: A marquee live event is one of the clearest attention concentration examples.
+  description_medium: A marquee live event is one of the clearest attention concentration examples.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A Super Bowl broadcast
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 123e6 x 53 x 60
+      method: derived
+      original_value_text: '392400000000'
+      source_basis: About 123 million viewers watching roughly 53 minutes.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Super_Bowl
+      source_value_text: 123 million viewers x 53 min
+  source: https://en.wikipedia.org/wiki/Super_Bowl
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-super-bowl
+    url: https://en.wikipedia.org/wiki/Super_Bowl
+    title: Super Bowl
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: viewers and watch time approximated
+- id: obs:attention:scenario-attention-a-fifa-world-cup-final-broadcast
+  name: A FIFA World Cup final broadcast
+  value: 540000000000.0
+  description: Global sports broadcasts are civilization-scale attention events.
+  description_format: markdown
+  summary_short: Global sports broadcasts are civilization-scale attention events.
+  description_medium: Global sports broadcasts are civilization-scale attention events.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: A FIFA World Cup final broadcast
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1.5e9 x 360
+      method: derived
+      original_value_text: '540000000000'
+      source_basis: Enormous reach even with short average engaged viewing produces giant totals.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/FIFA_World_Cup
+      source_value_text: 1.5 billion viewers x 6 min average equivalent
+  source: https://en.wikipedia.org/wiki/FIFA_World_Cup
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-fifa-world-cup
+    url: https://en.wikipedia.org/wiki/FIFA_World_Cup
+    title: FIFA World Cup
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: engaged-viewing equivalent
+- id: obs:attention:scenario-attention-one-day-of-youtube-watch-time
+  name: One day of YouTube watch time
+  value: 3600000000000.0
+  description: Global platforms gather astonishing daily attention totals.
+  description_format: markdown
+  summary_short: Global platforms gather astonishing daily attention totals.
+  description_medium: Global platforms gather astonishing daily attention totals.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One day of YouTube watch time
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 1e9 x 3600
+      method: derived
+      original_value_text: '3600000000000'
+      source_basis: A billion watch-hours per day equals 3.6 trillion person-seconds.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/YouTube
+      source_value_text: 1 billion hours/day
+  source: https://en.wikipedia.org/wiki/YouTube
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-youtube
+    url: https://en.wikipedia.org/wiki/YouTube
+    title: YouTube
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:attention:scenario-attention-one-day-of-worldwide-television-viewing
+  name: One day of worldwide television viewing
+  value: 18000000000000.0
+  description: Television remains one of the biggest shared attention sinks on Earth.
+  description_format: markdown
+  summary_short: Television remains one of the biggest shared attention sinks on Earth.
+  description_medium: Television remains one of the biggest shared attention sinks on Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: One day of worldwide television viewing
+    ingest_source: dataset/raw/curated/attention.json
+    source_trace:
+      derivation_note: 5e9 x 3600
+      method: derived
+      original_value_text: '18000000000000'
+      source_basis: Five billion people for one hour each.
+      source_unit: person*s
+      source_url: https://en.wikipedia.org/wiki/Television
+      source_value_text: 5 billion people x 1 hour
+  source: https://en.wikipedia.org/wiki/Television
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-television
+    url: https://en.wikipedia.org/wiki/Television
+    title: Television
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-attention-json
+    url: repo://dataset/raw/curated/attention.json
+    title: dataset/raw/curated/attention.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: one hour per person

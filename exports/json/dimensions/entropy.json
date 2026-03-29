@@ -1,0 +1,2341 @@
+{
+  "base_unit": "joules_per_kelvin",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 41,
+    "candidate_shortfall_to_preferred_target": 9,
+    "empty_bin_count": 7,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 41,
+    "selected_primary_count": 17,
+    "selected_secondary_count": 24,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 41
+    },
+    "target_selected_count": 41
+  },
+  "description_format": "markdown",
+  "dimension": "entropy",
+  "dimension_description": "This first-pass entropy scale focuses on entropy change, not total entropy and not raw microstate counts. That makes the dimension much more concrete: each item is a process like erasing a bit, melting ice, or vaporizing water. Temperature and process definitions matter a lot here, so qualifiers are especially important.",
+  "frontend_group": "fields",
+  "frontend_group_label": "Fields, Waves & Radiation",
+  "frontend_order": 520,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Landauer's principle gives a minimum entropy export per erased bit at room temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Landauer's principle gives a minimum entropy export per erased bit at room temperature.",
+      "facts": {
+        "canonical_name": "One bit erased",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "9.57e-24",
+          "source_basis": "Representative entropy change for one bit erased near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Landauer%27s_principle",
+          "source_value_text": "9.57e-24"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-one-bit-erased-entropy",
+      "name": "One bit erased",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Landauer%27s_principle",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-landauer-27s-principle",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Landauer's principle",
+          "url": "https://en.wikipedia.org/wiki/Landauer%27s_principle"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Landauer's principle gives a minimum entropy export per erased bit at room temperature.",
+      "value": 9.57e-24,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2.",
+      "facts": {
+        "canonical_name": "One ideal-gas molecule doubling volume",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "Delta S = k_B ln 2",
+          "method": "derived",
+          "original_value_text": "9.57e-24",
+          "source_basis": "Entropy change for one molecule doubling volume.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)",
+          "source_value_text": "k_B ln 2"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-single-molecule-doubling-entropy",
+      "name": "One ideal-gas molecule doubling volume",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-statistical-thermodynamics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy (statistical thermodynamics)",
+          "url": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2.",
+      "value": 9.57e-24,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A single protein folding event sits at the frontier where chemistry becomes biology. The molecule is small, but its shape matters enough to decide whether it can bind, catalyze, or signal. This is the first place on the scale where one molecule's conformation starts to matter more than a bulk sample.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single protein folding event sits at the frontier where chemistry becomes biology. The molecule is small, but its shape matters enough to decide whether it can bind, catalyze, or signal. This is the first place on the scale where one molecule's conformation starts to matter more than a bulk sample.",
+      "facts": {
+        "canonical_name": "Protein folding of one molecule",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-21",
+          "source_basis": "Order-of-magnitude entropy change for one protein folding event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Protein_folding",
+          "source_value_text": "1e-21"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-single-protein-folding-entropy",
+      "name": "Protein folding of one molecule",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Protein_folding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-protein-folding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Protein folding",
+          "url": "https://en.wikipedia.org/wiki/Protein_folding"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A single protein-folding event produces a tiny but real entropy change.",
+      "value": 1e-21,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "RNA does not need to be protein-sized to matter. Even a short hairpin loop can flip between folded and unfolded states, and that switch is one of the cleanest examples of a structure that is small enough to be molecular yet organized enough to carry information.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "RNA does not need to be protein-sized to matter. Even a short hairpin loop can flip between folded and unfolded states, and that switch is one of the cleanest examples of a structure that is small enough to be molecular yet organized enough to carry information.",
+      "facts": {
+        "canonical_name": "RNA hairpin folding",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "3e-20",
+          "source_basis": "Representative entropy change for one RNA hairpin folding event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/RNA_secondary_structure",
+          "source_value_text": "3e-20"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-rna-hairpin-folding-entropy",
+      "name": "RNA hairpin folding",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/RNA_secondary_structure",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rna-secondary-structure",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "RNA secondary structure",
+          "url": "https://en.wikipedia.org/wiki/RNA_secondary_structure"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A small RNA hairpin folds and unfolds with a tiny entropy change that biophysics can still detect.",
+      "value": 3e-20,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A single base pair is too small to look dramatic, but that is exactly why it is useful here. DNA spends part of its life in a breathing, flickering state, and those brief openings are part of how replication and repair reach the sequence underneath.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A single base pair is too small to look dramatic, but that is exactly why it is useful here. DNA spends part of its life in a breathing, flickering state, and those brief openings are part of how replication and repair reach the sequence underneath.",
+      "facts": {
+        "canonical_name": "DNA base-pair opening",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2e-18",
+          "source_basis": "Representative entropy change for one base-pair opening and closing event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/DNA",
+          "source_value_text": "2e-18"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-dna-base-pair-opening-entropy",
+      "name": "DNA base-pair opening",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/DNA",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dna",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DNA",
+          "url": "https://en.wikipedia.org/wiki/DNA"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "One DNA base pair breathing open is a subtle entropy fluctuation inside the molecule that stores heredity.",
+      "value": 2e-18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Gene regulation often turns on one protein docking event at a specific stretch of DNA. That makes the entropy change tiny in absolute terms, but the biological effect can be outsized because a single binding event can alter which genes are active.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Gene regulation often turns on one protein docking event at a specific stretch of DNA. That makes the entropy change tiny in absolute terms, but the biological effect can be outsized because a single binding event can alter which genes are active.",
+      "facts": {
+        "canonical_name": "Transcription factor binding to DNA",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-16",
+          "source_basis": "Representative entropy change for a single protein-DNA binding event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Transcription_factor",
+          "source_value_text": "1e-16"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-transcription-factor-binding-entropy",
+      "name": "Transcription factor binding to DNA",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Transcription_factor",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-transcription-factor",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Transcription factor",
+          "url": "https://en.wikipedia.org/wiki/Transcription_factor"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A protein landing on a DNA site is the kind of molecular switch that changes which genes get heard.",
+      "value": 1e-16,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Viruses are good scale anchors because they are built by self-assembly rather than by broad metabolism. A capsid snaps together from many pieces at once, which makes the entropy bookkeeping feel more like organized construction than ordinary chemistry.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Viruses are good scale anchors because they are built by self-assembly rather than by broad metabolism. A capsid snaps together from many pieces at once, which makes the entropy bookkeeping feel more like organized construction than ordinary chemistry.",
+      "facts": {
+        "canonical_name": "Virus capsid assembly",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-14",
+          "source_basis": "Representative entropy change for assembling one viral capsid.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Viral_capsid",
+          "source_value_text": "1e-14"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-virus-capsid-assembly-entropy",
+      "name": "Virus capsid assembly",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Viral_capsid",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-viral-capsid",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Viral capsid",
+          "url": "https://en.wikipedia.org/wiki/Viral_capsid"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A viral shell self-assembling from many proteins is a tiny system with a very large organizational payoff.",
+      "value": 1e-14,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Binary fission is a dramatic biological event even though the entropy change is still microscopic on the everyday scale. The point is not that the number is big, but that a whole cell can reorganize itself and split while staying far below any melting or freezing benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Binary fission is a dramatic biological event even though the entropy change is still microscopic on the everyday scale. The point is not that the number is big, but that a whole cell can reorganize itself and split while staying far below any melting or freezing benchmark.",
+      "facts": {
+        "canonical_name": "Bacterial cell division",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-12",
+          "source_basis": "Representative entropy change for one bacterial cell division.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Binary_fission",
+          "source_value_text": "1e-12"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-bacterial-cell-division-entropy",
+      "name": "Bacterial cell division",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Binary_fission",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-binary-fission",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Binary fission",
+          "url": "https://en.wikipedia.org/wiki/Binary_fission"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "One bacterium splitting into two is a life-scale event that still sits far below kitchen-scale phase changes.",
+      "value": 1e-12,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "This is a good middle ground between pure molecular binding and full cellular behavior. One signal arriving at the right receptor can start a cascade, so a small entropy change can carry a surprisingly large amount of biological consequence.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This is a good middle ground between pure molecular binding and full cellular behavior. One signal arriving at the right receptor can start a cascade, so a small entropy change can carry a surprisingly large amount of biological consequence.",
+      "facts": {
+        "canonical_name": "Hormone-receptor signaling burst",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-09",
+          "source_basis": "Representative entropy change for a small receptor-mediated signaling event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Signal_transduction",
+          "source_value_text": "1e-9"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-hormone-receptor-signaling-entropy",
+      "name": "Hormone-receptor signaling burst",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Signal_transduction",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-signal-transduction",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Signal transduction",
+          "url": "https://en.wikipedia.org/wiki/Signal_transduction"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A receptor turning a hormone signal into cellular action is a meaningful bridge from single molecules to living systems.",
+      "value": 1e-09,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Fermentation is one of the rare biological processes that is both chemically precise and immediately familiar. The same pathway that powers yeast also leaves visible bubbles, heat, and flavor, which makes the entropy change feel physical rather than abstract.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Fermentation is one of the rare biological processes that is both chemically precise and immediately familiar. The same pathway that powers yeast also leaves visible bubbles, heat, and flavor, which makes the entropy change feel physical rather than abstract.",
+      "facts": {
+        "canonical_name": "Yeast fermentation burst",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1e-06",
+          "source_basis": "Representative entropy change for a small yeast fermentation event.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Fermentation",
+          "source_value_text": "1e-6"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-yeast-fermentation-entropy",
+      "name": "Yeast fermentation burst",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Fermentation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-fermentation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Fermentation",
+          "url": "https://en.wikipedia.org/wiki/Fermentation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A small fermentation batch is a living chemistry process you can smell, taste, and watch inflate a dough or brew.",
+      "value": 1e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A fruit fly is tiny enough to hold the biological part of this scale together. It is a whole animal, not a molecule or a cell, yet warming it by a degree still sits far below anything kitchen-sized. That makes it a good anchor for the jump from molecular biology to animal bodies.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A fruit fly is tiny enough to hold the biological part of this scale together. It is a whole animal, not a molecule or a cell, yet warming it by a degree still sits far below anything kitchen-sized. That makes it a good anchor for the jump from molecular biology to animal bodies.",
+      "facts": {
+        "canonical_name": "Fruit fly warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T_2 / T_1)",
+          "method": "derived",
+          "original_value_text": "1.2e-05",
+          "source_basis": "Estimated from a representative 1 mg fruit fly and water-rich tissue heat capacity near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Drosophila_melanogaster",
+          "source_value_text": "1.2e-5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-fruit-fly-warming",
+      "name": "Fruit fly warming",
+      "qualifiers": {
+        "assumption": "1 mg body mass, c \u2248 3500 J/(kg K), \u0394T = 1 K"
+      },
+      "source": "https://en.wikipedia.org/wiki/Drosophila_melanogaster",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-drosophila-melanogaster",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Drosophila melanogaster",
+          "url": "https://en.wikipedia.org/wiki/Drosophila_melanogaster"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A fruit fly warming by one degree is small in absolute terms but already far above single-cell events.",
+      "value": 1.2e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A honeybee makes the scale feel more alive than a block of metal but still much smaller than a mammal or a room. It belongs in the awkward middle where metabolism, motion, and body size all matter at once.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A honeybee makes the scale feel more alive than a block of metal but still much smaller than a mammal or a room. It belongs in the awkward middle where metabolism, motion, and body size all matter at once.",
+      "facts": {
+        "canonical_name": "Honeybee warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T_2 / T_1)",
+          "method": "derived",
+          "original_value_text": "0.0012",
+          "source_basis": "Estimated from a representative 100 mg honeybee and water-rich tissue heat capacity near room temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Honey_bee",
+          "source_value_text": "1.2e-3 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-honeybee-warming",
+      "name": "Honeybee warming",
+      "qualifiers": {
+        "assumption": "100 mg body mass, c \u2248 3500 J/(kg K), \u0394T = 1 K"
+      },
+      "source": "https://en.wikipedia.org/wiki/Honey_bee",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-honey-bee",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Honey bee",
+          "url": "https://en.wikipedia.org/wiki/Honey_bee"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A honeybee warming by one degree sits between insect life and everyday heat.",
+      "value": 0.0012,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A mouse is small enough to fit in one hand, but thermodynamically it already behaves like a recognizably macroscopic animal. This is a useful bridge because it sits well above insects and cells while still far below household pots, kettles, and phase changes.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A mouse is small enough to fit in one hand, but thermodynamically it already behaves like a recognizably macroscopic animal. This is a useful bridge because it sits well above insects and cells while still far below household pots, kettles, and phase changes.",
+      "facts": {
+        "canonical_name": "Mouse warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T_2 / T_1)",
+          "method": "derived",
+          "original_value_text": "0.24",
+          "source_basis": "Estimated from a representative 20 g mouse and water-rich tissue heat capacity near body temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Mouse",
+          "source_value_text": "0.24 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-mouse-warming",
+      "name": "Mouse warming",
+      "qualifiers": {
+        "assumption": "20 g body mass, c \u2248 3500 J/(kg K), \u0394T = 1 K"
+      },
+      "source": "https://en.wikipedia.org/wiki/Mouse",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mouse",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mouse",
+          "url": "https://en.wikipedia.org/wiki/Mouse"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A mouse warming by one degree brings the scale into whole-animal thermodynamics.",
+      "value": 0.24,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A copper block is a useful reminder that solids often resist entropy change more than liquids do. Even a one-degree shift is enough to make the bookkeeping visible, but not so much that the material stops feeling like a solid piece of metal.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A copper block is a useful reminder that solids often resist entropy change more than liquids do. Even a one-degree shift is enough to make the bookkeeping visible, but not so much that the material stops feeling like a solid piece of metal.",
+      "facts": {
+        "canonical_name": "Copper block warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "1.3",
+          "source_basis": "Entropy change from copper heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Copper",
+          "source_value_text": "1.3 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-copper-block-1c",
+      "name": "Copper block warming",
+      "qualifiers": {
+        "assumption": "copper near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Copper",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-copper",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Copper",
+          "url": "https://en.wikipedia.org/wiki/Copper"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A copper block changes entropy only modestly when you warm it by a single degree.",
+      "value": 1.3,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Iron gives the same idea a slightly different texture: common, heavy, and still thermodynamically modest. A one-degree warming changes the state of the block, but not in a way that feels dramatic from the outside.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Iron gives the same idea a slightly different texture: common, heavy, and still thermodynamically modest. A one-degree warming changes the state of the block, but not in a way that feels dramatic from the outside.",
+      "facts": {
+        "canonical_name": "Iron block warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "1.5",
+          "source_basis": "Entropy change from iron heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Iron",
+          "source_value_text": "1.5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-iron-block-1c",
+      "name": "Iron block warming",
+      "qualifiers": {
+        "assumption": "iron near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Iron",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-iron",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Iron",
+          "url": "https://en.wikipedia.org/wiki/Iron"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Iron is another everyday solid whose entropy barely budges under a one-degree change.",
+      "value": 1.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Air is easy to overlook because it is invisible, but a roomful of it still has thermal memory. Heating it by one degree moves entropy in a way that feels smaller than water, which is part of why air warms and cools so quickly.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Air is easy to overlook because it is invisible, but a roomful of it still has thermal memory. Heating it by one degree moves entropy in a way that feels smaller than water, which is part of why air warms and cools so quickly.",
+      "facts": {
+        "canonical_name": "Room air warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "3.4",
+          "source_basis": "Entropy change from air heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "3.4 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-roomful-air-1c",
+      "name": "Room air warming",
+      "qualifiers": {
+        "assumption": "air near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Air responds lightly to heating, so a roomful of it changes entropy far less than the same mass of water.",
+      "value": 3.4,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "For a mole of ideal gas, doubling volume changes entropy by R ln 2.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "For a mole of ideal gas, doubling volume changes entropy by R ln 2.",
+      "facts": {
+        "canonical_name": "One mole ideal gas doubling volume",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "Delta S = R ln 2",
+          "method": "derived",
+          "original_value_text": "5.76",
+          "source_basis": "Entropy change for one mole of ideal gas doubling volume.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+          "source_value_text": "R ln 2"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-one-mole-ideal-gas-doubling-entropy",
+      "name": "One mole ideal gas doubling volume",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-of-mixing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy of mixing",
+          "url": "https://en.wikipedia.org/wiki/Entropy_of_mixing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "For a mole of ideal gas, doubling volume changes entropy by R ln 2.",
+      "value": 5.76,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "At macroscopic scale, molecular events become everyday thermodynamic quantities.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At macroscopic scale, molecular events become everyday thermodynamic quantities.",
+      "facts": {
+        "canonical_name": "Protein folding of one mole of protein",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "10.0",
+          "source_basis": "Order-of-magnitude entropy change for a mole of folding events.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Protein_folding",
+          "source_value_text": "10"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-mole-protein-folding-entropy",
+      "name": "Protein folding of one mole of protein",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Protein_folding",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-protein-folding",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Protein folding",
+          "url": "https://en.wikipedia.org/wiki/Protein_folding"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "At macroscopic scale, molecular events become everyday thermodynamic quantities.",
+      "value": 10.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Ideal-gas mixing provides a clean compositional entropy example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Ideal-gas mixing provides a clean compositional entropy example.",
+      "facts": {
+        "canonical_name": "Nitrogen and oxygen mixing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "-R sum(x ln x)",
+          "method": "derived",
+          "original_value_text": "11.5",
+          "source_basis": "Ideal mixing entropy for two equal one-mole components at equal pressure.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+          "source_value_text": "~11.5 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-mix-1mol-nitrogen-with-1mol-oxygen",
+      "name": "Nitrogen and oxygen mixing",
+      "qualifiers": {
+        "assumption": "ideal gas mixture"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-of-mixing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy of mixing",
+          "url": "https://en.wikipedia.org/wiki/Entropy_of_mixing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Ideal-gas mixing provides a clean compositional entropy example.",
+      "value": 11.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark.",
+      "facts": {
+        "canonical_name": "Equal ideal-gas mixing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S_mix = 2 R ln 2",
+          "method": "derived",
+          "original_value_text": "11.53",
+          "source_basis": "Entropy of mixing for an equal binary mixture.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+          "source_value_text": "11.53 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-mix-1-mole-ideal-gases",
+      "name": "Equal ideal-gas mixing",
+      "qualifiers": {
+        "assumption": "binary equal mixture"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy-of-mixing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy of mixing",
+          "url": "https://en.wikipedia.org/wiki/Entropy_of_mixing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark.",
+      "value": 11.53,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A pot of water is a better mental image than a bare kilogram because it is something you could actually heat on a stove. The number is modest, but it reminds you that entropy changes can hide in plain sight until they are multiplied by bulk.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A pot of water is a better mental image than a bare kilogram because it is something you could actually heat on a stove. The number is modest, but it reminds you that entropy changes can hide in plain sight until they are multiplied by bulk.",
+      "facts": {
+        "canonical_name": "Pot of water warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "13.9",
+          "source_basis": "Entropy change from heat capacity and a 1 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy",
+          "source_value_text": "13.9 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-pot-water-1c",
+      "name": "Pot of water warming",
+      "qualifiers": {
+        "assumption": "water near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy",
+          "url": "https://en.wikipedia.org/wiki/Entropy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Water is still the classic everyday benchmark, because its heat capacity makes even a small temperature change matter.",
+      "value": 13.9,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A bottle of water is a clean household benchmark: familiar, heavy enough to picture, and still small enough to handle. It sits in the everyday middle where heat capacity starts to feel like a real physical property instead of a formula.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A bottle of water is a clean household benchmark: familiar, heavy enough to picture, and still small enough to handle. It sits in the everyday middle where heat capacity starts to feel like a real physical property instead of a formula.",
+      "facts": {
+        "canonical_name": "Bottle of water warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "14.3",
+          "source_basis": "Entropy increase for warming roughly one liter of water by one kelvin.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Heat_capacity",
+          "source_value_text": "1 kg water by 1 K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-warm-liter-water-1c-entropy",
+      "name": "Bottle of water warming",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A bottle of water gives the scale a household-sized feel without losing the thermodynamic meaning.",
+      "value": 14.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A chilled soda can is one of the few entropy benchmarks you can hold in your hand and immediately recognize. It belongs on the scale because everyday cooling is the kind of change people experience constantly, even if they never name it thermodynamically.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A chilled soda can is one of the few entropy benchmarks you can hold in your hand and immediately recognize. It belongs on the scale because everyday cooling is the kind of change people experience constantly, even if they never name it thermodynamically.",
+      "facts": {
+        "canonical_name": "Chill a soda can",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "16.0",
+          "source_basis": "Representative entropy change for cooling a can-sized drink by 10 K.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "16"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-chill-soda-can-entropy",
+      "name": "Chill a soda can",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A chilled soda can is a small, familiar entropy change that sits well below cooking and phase-change examples.",
+      "value": 16.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Dissolving salt in water is an everyday entropy-increasing process.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Dissolving salt in water is an everyday entropy-increasing process.",
+      "facts": {
+        "canonical_name": "Salt dissolving into water",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "solution entropy estimate",
+          "method": "derived",
+          "original_value_text": "20",
+          "source_basis": "Representative order-of-magnitude entropy of solution.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+          "source_value_text": "~20 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-dissolve-1mol-of-sodium-chloride",
+      "name": "Salt dissolving into water",
+      "qualifiers": {
+        "assumption": "dilute aqueous solution"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sodium-chloride",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sodium chloride",
+          "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Dissolving salt in water is an everyday entropy-increasing process.",
+      "value": 20.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Freezing a small kitchen ice cube is a more intuitive everyday entropy change than a laboratory gram.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Freezing a small kitchen ice cube is a more intuitive everyday entropy change than a laboratory gram.",
+      "facts": {
+        "canonical_name": "Ice cube freezing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = mL/T",
+          "method": "derived",
+          "original_value_text": "24.4",
+          "source_basis": "Entropy change for freezing about a 20 g ice cube at the phase boundary.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "20 g water freezing at 0 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-freeze-1g-water-entropy",
+      "name": "Ice cube freezing",
+      "qualifiers": {
+        "assumption": "20 gram ice cube"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Freezing a small kitchen ice cube is a more intuitive everyday entropy change than a laboratory gram.",
+      "value": 24.4,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Melting a single ice cube gives a kitchen-scale entropy increase you can picture.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Melting a single ice cube gives a kitchen-scale entropy increase you can picture.",
+      "facts": {
+        "canonical_name": "Ice cube melting",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = mL/T",
+          "method": "derived",
+          "original_value_text": "24.4",
+          "source_basis": "Entropy change for melting about a 20 g ice cube at the phase boundary.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "20 g ice melting at 0 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-melt-1g-ice-entropy",
+      "name": "Ice cube melting",
+      "qualifiers": {
+        "assumption": "20 gram ice cube"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Melting a single ice cube gives a kitchen-scale entropy increase you can picture.",
+      "value": 24.4,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Salt in water is a simple, familiar system that hides a surprisingly rich rearrangement of molecules. It is a good example of entropy because nothing dramatic happens visually, yet the microscopic order changes enough to matter.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Salt in water is a simple, familiar system that hides a surprisingly rich rearrangement of molecules. It is a good example of entropy because nothing dramatic happens visually, yet the microscopic order changes enough to matter.",
+      "facts": {
+        "canonical_name": "Dissolve table salt in water",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "Representative dissolution entropy change",
+          "method": "derived",
+          "original_value_text": "40",
+          "source_basis": "Order-of-magnitude entropy change for salt dissolution in water.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+          "source_value_text": "~40 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-dissolve-table-salt",
+      "name": "Dissolve table salt in water",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sodium-chloride",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sodium chloride",
+          "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Table salt dissolving in water is ordinary chemistry that still pushes entropy upward in a noticeable way.",
+      "value": 40.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A ten-degree warming is still domestic-scale, but it makes the entropy jump feel much less subtle.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A ten-degree warming is still domestic-scale, but it makes the entropy jump feel much less subtle.",
+      "facts": {
+        "canonical_name": "Kettle warming",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T2 / T1)",
+          "method": "derived",
+          "original_value_text": "136",
+          "source_basis": "Entropy change from heat capacity and a 10 C temperature increase.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Entropy",
+          "source_value_text": "136 J/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-warm-kettle-water-10c",
+      "name": "Kettle warming",
+      "qualifiers": {
+        "assumption": "water near room temperature"
+      },
+      "source": "https://en.wikipedia.org/wiki/Entropy",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-entropy",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Entropy",
+          "url": "https://en.wikipedia.org/wiki/Entropy"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A ten-degree warming is still domestic-scale, but it makes the entropy jump feel much less subtle.",
+      "value": 136.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Cooling a liter bottle of water from room temperature to the fridge is a relatable everyday entropy change.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Cooling a liter bottle of water from room temperature to the fridge is a relatable everyday entropy change.",
+      "facts": {
+        "canonical_name": "Bottle of water chilling in a fridge",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = m c ln(T_2/T_1)",
+          "method": "derived",
+          "original_value_text": "235.0",
+          "source_basis": "Entropy change magnitude from cooling a liter of water from room temperature to refrigerator temperature.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+          "source_value_text": "1 kg water from 293 K to 277 K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-chill-1l-water-room-to-fridge",
+      "name": "Bottle of water chilling in a fridge",
+      "qualifiers": {
+        "assumption": "room temperature 20 C, fridge 4 C",
+        "measurement": "entropy change magnitude"
+      },
+      "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-specific-heat-capacity",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Specific heat capacity",
+          "url": "https://en.wikipedia.org/wiki/Specific_heat_capacity"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Cooling a liter bottle of water from room temperature to the fridge is a relatable everyday entropy change.",
+      "value": 235.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Freezing a whole tray of kitchen ice cubes is a much easier entropy benchmark to picture than a single gram or molecule count.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Freezing a whole tray of kitchen ice cubes is a much easier entropy benchmark to picture than a single gram or molecule count.",
+      "facts": {
+        "canonical_name": "Ice tray freezing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = mL/T",
+          "method": "derived",
+          "original_value_text": "293.0",
+          "source_basis": "Entropy change for a tray holding roughly twelve 20 g ice cubes.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "240 g water freezing at 0 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-freeze-one-tray-of-ice-cubes",
+      "name": "Ice tray freezing",
+      "qualifiers": {
+        "assumption": "12 ice cubes of about 20 g each",
+        "measurement": "entropy change magnitude"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Freezing a whole tray of kitchen ice cubes is a much easier entropy benchmark to picture than a single gram or molecule count.",
+      "value": 293.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A household ice tray is a more believable mental model than a laboratory quantity because most people have seen one in a freezer. The entropy change is large enough to be unavoidable, but it is still tied to an ordinary object rather than a pure number.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A household ice tray is a more believable mental model than a laboratory quantity because most people have seen one in a freezer. The entropy change is large enough to be unavoidable, but it is still tied to an ordinary object rather than a pure number.",
+      "facts": {
+        "canonical_name": "Household ice tray freezing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "1220",
+          "source_basis": "Entropy change magnitude from latent heat of fusion at 0 C.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "1.22 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-freeze-household-ice-tray",
+      "name": "Household ice tray freezing",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "A full ice tray is a better everyday picture of latent entropy than an abstract kilogram.",
+      "value": 1220.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Melting a tray of ice is the same thermodynamic event in reverse, and that reversal is easy to picture because it happens in kitchens every day. It is a good reminder that entropy is often about direction as much as size.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Melting a tray of ice is the same thermodynamic event in reverse, and that reversal is easy to picture because it happens in kitchens every day. It is a good reminder that entropy is often about direction as much as size.",
+      "facts": {
+        "canonical_name": "Household ice tray melting",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "1220",
+          "source_basis": "Entropy change from latent heat of fusion at 0 C.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+          "source_value_text": "1.22 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-melt-household-ice-tray",
+      "name": "Household ice tray melting",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-fusion",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of fusion",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Melting a tray of ice is the same thermodynamic event in reverse, and that reversal is easy to picture because it happens in kitchens every day.",
+      "value": 1220.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Boiling a mug of water is a much more tangible entropy jump than a single gram sample.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Boiling a mug of water is a much more tangible entropy jump than a single gram sample.",
+      "facts": {
+        "canonical_name": "Mug of water boiling",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = mL/T",
+          "method": "derived",
+          "original_value_text": "1512.0",
+          "source_basis": "Entropy change for boiling about one mug of water at the phase boundary.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "250 g water boiling at 100 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-boil-1g-water-entropy",
+      "name": "Mug of water boiling",
+      "qualifiers": {
+        "assumption": "250 gram mug of water"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Boiling a mug of water is a much more tangible entropy jump than a single gram sample.",
+      "value": 1512.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Condensing a mug-sized amount of steam back to water is easier to picture than a one-gram laboratory sample.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Condensing a mug-sized amount of steam back to water is easier to picture than a one-gram laboratory sample.",
+      "facts": {
+        "canonical_name": "Mug of steam condensing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = mL/T",
+          "method": "derived",
+          "original_value_text": "1512.0",
+          "source_basis": "Entropy change for condensing about one mug of steam at the phase boundary.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "250 g steam condensing at 100 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-condense-1g-steam-entropy",
+      "name": "Mug of steam condensing",
+      "qualifiers": {
+        "assumption": "250 gram mug of water"
+      },
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Condensing a mug-sized amount of steam back to water is easier to picture than a one-gram laboratory sample.",
+      "value": 1512.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Dry ice is memorable because it skips liquid water entirely and goes straight from solid to gas. That makes it one of the cleanest ways to see a phase change whose entropy jump is visible before the chemistry is even explained.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Dry ice is memorable because it skips liquid water entirely and goes straight from solid to gas. That makes it one of the cleanest ways to see a phase change whose entropy jump is visible before the chemistry is even explained.",
+      "facts": {
+        "canonical_name": "Sublime a block of dry ice",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "2940",
+          "source_basis": "Entropy change from latent heat of sublimation near the sublimation point.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Dry_ice",
+          "source_value_text": "2.94 kJ/K"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-sublime-dry-ice-block",
+      "name": "Sublime a block of dry ice",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Dry_ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dry-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dry ice",
+          "url": "https://en.wikipedia.org/wiki/Dry_ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Dry ice makes sublimation visible in a way that feels almost theatrical.",
+      "value": 2940.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Evaporating a liter of water exports a surprisingly large amount of entropy.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Evaporating a liter of water exports a surprisingly large amount of entropy.",
+      "facts": {
+        "canonical_name": "Pot of water evaporating away",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6000.0",
+          "source_basis": "Approximate entropy change for vaporizing one liter of water.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "6e3"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-evaporate-1l-water-entropy",
+      "name": "Pot of water evaporating away",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Evaporating a liter of water exports a surprisingly large amount of entropy.",
+      "value": 6000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Bringing a full kettle to a rolling boil gives a more intuitive everyday benchmark than a bare laboratory kilogram.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Bringing a full kettle to a rolling boil gives a more intuitive everyday benchmark than a bare laboratory kilogram.",
+      "facts": {
+        "canonical_name": "Full kettle boiling",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "6050",
+          "source_basis": "Latent entropy change for a full kettle of water at its boiling point.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "1 kg water boiling at 100 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-boil-full-kettle-of-water",
+      "name": "Full kettle boiling",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Bringing a full kettle to a rolling boil gives a more intuitive everyday benchmark than a bare laboratory kilogram.",
+      "value": 6050.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The same kettle-scale water cycle runs the entropy change in reverse when the steam condenses.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The same kettle-scale water cycle runs the entropy change in reverse when the steam condenses.",
+      "facts": {
+        "canonical_name": "Kettle steam condensing",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "derivation_note": "\u0394S = Q_rev / T",
+          "method": "derived",
+          "original_value_text": "6050",
+          "source_basis": "Latent entropy change for kettle-scale steam condensation.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+          "source_value_text": "1 kg steam condensing at 100 C"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:scenario-entropy-steam-from-full-kettle-condensing",
+      "name": "Kettle steam condensing",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-enthalpy-of-vaporization",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Enthalpy of vaporization",
+          "url": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "The same kettle-scale water cycle runs the entropy change in reverse when the steam condenses.",
+      "value": 6050.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Human metabolism exports entropy continuously as it dissipates energy at body temperature.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Human metabolism exports entropy continuously as it dissipates energy at body temperature.",
+      "facts": {
+        "canonical_name": "Daily human metabolism",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "27000.0",
+          "source_basis": "Order-of-magnitude daily metabolic entropy export.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Basal_metabolic_rate",
+          "source_value_text": "2.7e4"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-daily-human-metabolism-entropy",
+      "name": "Daily human metabolism",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Basal_metabolic_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-basal-metabolic-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Basal metabolic rate",
+          "url": "https://en.wikipedia.org/wiki/Basal_metabolic_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Human metabolism exports entropy continuously as it dissipates energy at body temperature.",
+      "value": 27000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Combustion on everyday energy scales implies very large entropy exports.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Combustion on everyday energy scales implies very large entropy exports.",
+      "facts": {
+        "canonical_name": "Gasoline combustion",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "140000.0",
+          "source_basis": "Order-of-magnitude entropy export from burning one liter of gasoline.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Gasoline",
+          "source_value_text": "1.4e5"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-burn-1l-gasoline-entropy",
+      "name": "Gasoline combustion",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Gasoline",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gasoline",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Gasoline",
+          "url": "https://en.wikipedia.org/wiki/Gasoline"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Combustion on everyday energy scales implies very large entropy exports.",
+      "value": 140000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Sea ice formation is where an ordinary phase change becomes part of the planetary climate machine. The numbers are large because the surface area is enormous, and that is exactly why the event matters to weather, albedo, and the oceans beneath it.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sea ice formation is where an ordinary phase change becomes part of the planetary climate machine. The numbers are large because the surface area is enormous, and that is exactly why the event matters to weather, albedo, and the oceans beneath it.",
+      "facts": {
+        "canonical_name": "Form Arctic sea ice",
+        "ingest_source": "dataset/raw/curated/entropy.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000000.0",
+          "source_basis": "Order-of-magnitude entropy change for freezing one cubic meter of seawater.",
+          "source_unit": "J/K",
+          "source_url": "https://en.wikipedia.org/wiki/Sea_ice",
+          "source_value_text": "1e6"
+        }
+      },
+      "hook": null,
+      "id": "obs:entropy:entity-form-arctic-sea-ice-entropy",
+      "name": "Form Arctic sea ice",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Sea_ice",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sea-ice",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sea ice",
+          "url": "https://en.wikipedia.org/wiki/Sea_ice"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-entropy-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/entropy.json",
+          "url": "repo://dataset/raw/curated/entropy.json"
+        }
+      ],
+      "summary_short": "Sea ice formation is a geophysical phase change that matters at climate scale rather than in a beaker.",
+      "value": 1000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Entropy",
+      "url": "https://en.wikipedia.org/wiki/Entropy"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Joules per kelvin are the canonical storage unit for entropy change.",
+      "name": "joules per kelvin",
+      "symbol": "J/K"
+    },
+    {
+      "conversion_factor": 1000.0,
+      "description": "Millijoules per kelvin are useful for small laboratory-scale entropy changes.",
+      "name": "millijoules per kelvin",
+      "symbol": "mJ/K"
+    },
+    {
+      "conversion_factor": 0.001,
+      "description": "Kilojoules per kelvin are useful for large thermal processes.",
+      "name": "kilojoules per kelvin",
+      "symbol": "kJ/K"
+    },
+    {
+      "conversion_factor": 7.242970516e+22,
+      "description": "Boltzmann-constant units are useful for microscopic entropy changes.",
+      "name": "Boltzmann constants",
+      "symbol": "k_B"
+    }
+  ]
+}

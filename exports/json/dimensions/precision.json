@@ -1,0 +1,1348 @@
+{
+  "base_unit": "relative_uncertainty",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 23,
+    "candidate_shortfall_to_preferred_target": 27,
+    "empty_bin_count": 12,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 23,
+    "selected_primary_count": 12,
+    "selected_secondary_count": 11,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 23
+    },
+    "target_selected_count": 23
+  },
+  "description_format": "markdown",
+  "dimension": "precision",
+  "dimension_description": "This scale stores precision as relative uncertainty or fractional error. Smaller values mean higher precision, so it is inverted compared with everyday language like \u201cmore precise.\u201d That inversion is worth it because relative uncertainty is much more coherent and log-friendly than a vague notion of accuracy.",
+  "frontend_group": "society",
+  "frontend_group_label": "Society, Economy & Abstract Quantities",
+  "frontend_order": 1050,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Gravitational-wave detectors are a spectacular far-tail precision anchor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Gravitational-wave detectors are a spectacular far-tail precision anchor.",
+      "facts": {
+        "canonical_name": "LIGO strain sensitivity",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-21",
+          "source_basis": "LIGO detects relative spacetime strains around one part in 10^21.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/LIGO",
+          "source_value_text": "1e-21"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-ligo-strain-sensitivity",
+      "name": "LIGO strain sensitivity",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/LIGO",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ligo",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "LIGO",
+          "url": "https://en.wikipedia.org/wiki/LIGO"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Gravitational-wave detectors are a spectacular far-tail precision anchor.",
+      "value": 1e-21,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Modern clock metrology pushes into the quadrillionth level.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Modern clock metrology pushes into the quadrillionth level.",
+      "facts": {
+        "canonical_name": "Cesium fountain clock",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-15",
+          "source_basis": "Primary time standards are often quoted around 10^-15 or better.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Cesium_standard",
+          "source_value_text": "1e-15"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-cesium-fountain-clock",
+      "name": "Cesium fountain clock",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Cesium_standard",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cesium-standard",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cesium standard",
+          "url": "https://en.wikipedia.org/wiki/Cesium_standard"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Modern clock metrology pushes into the quadrillionth level.",
+      "value": 1e-15,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Navigation timing is far more precise than most people realize.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Navigation timing is far more precise than most people realize.",
+      "facts": {
+        "canonical_name": "GPS satellite clock",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-14",
+          "source_basis": "Spaceborne atomic clocks operate in the 10^-14 regime or better.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/GPS_signals",
+          "source_value_text": "1e-14"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-gps-satellite-clock",
+      "name": "GPS satellite clock",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/GPS_signals",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-gps-signals",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "GPS signals",
+          "url": "https://en.wikipedia.org/wiki/GPS_signals"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Navigation timing is far more precise than most people realize.",
+      "value": 1e-14,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Atomic frequency standards quickly jump many orders of magnitude past everyday clocks.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Atomic frequency standards quickly jump many orders of magnitude past everyday clocks.",
+      "facts": {
+        "canonical_name": "Rubidium frequency standard",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-11",
+          "source_basis": "Rubidium standards provide long-term frequency stability around this scale.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Rubidium_standard",
+          "source_value_text": "1e-11"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-rubidium-frequency-standard",
+      "name": "Rubidium frequency standard",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Rubidium_standard",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rubidium-standard",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rubidium standard",
+          "url": "https://en.wikipedia.org/wiki/Rubidium_standard"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Atomic frequency standards quickly jump many orders of magnitude past everyday clocks.",
+      "value": 1e-11,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Analytical chemistry often works in the ppb regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Analytical chemistry often works in the ppb regime.",
+      "facts": {
+        "canonical_name": "Parts-per-billion laboratory chemical assay",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-09",
+          "source_basis": "Parts-per-billion is a standard analytical chemistry benchmark.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Parts-per_notation",
+          "source_value_text": "1 ppb"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-parts-per-billion-laboratory-chemical-assay",
+      "name": "Parts-per-billion laboratory chemical assay",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Parts-per_notation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-parts-per-notation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Parts-per notation",
+          "url": "https://en.wikipedia.org/wiki/Parts-per_notation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Analytical chemistry often works in the ppb regime.",
+      "value": 1e-09,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Chip fabrication lives deep in the precision tail.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Chip fabrication lives deep in the precision tail.",
+      "facts": {
+        "canonical_name": "Semiconductor overlay accuracy",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "1e-9 / 1e-2",
+          "method": "derived",
+          "original_value_text": "1e-07",
+          "source_basis": "A nanometer across a centimeter-scale wafer map is 10^-7 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Photolithography",
+          "source_value_text": "1 nm on 10 mm"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-semiconductor-overlay-accuracy",
+      "name": "Semiconductor overlay accuracy",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Photolithography",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-photolithography",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Photolithography",
+          "url": "https://en.wikipedia.org/wiki/Photolithography"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Chip fabrication lives deep in the precision tail.",
+      "value": 1e-07,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Geodesy pushes positioning into the sub-ppm range.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Geodesy pushes positioning into the sub-ppm range.",
+      "facts": {
+        "canonical_name": "Survey-grade GNSS baseline",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "0.01 / 100000",
+          "method": "derived",
+          "original_value_text": "1e-07",
+          "source_basis": "Centimeter geodesy over 100 km is 10^-7 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Real-time_kinematic_positioning",
+          "source_value_text": "1 cm on 100 km"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-survey-grade-gnss-baseline",
+      "name": "Survey-grade GNSS baseline",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Real-time_kinematic_positioning",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-real-time-kinematic-positioning",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Real-time kinematic positioning",
+          "url": "https://en.wikipedia.org/wiki/Real-time_kinematic_positioning"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Geodesy pushes positioning into the sub-ppm range.",
+      "value": 1e-07,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Dimensional metrology gets surprisingly sharp with simple tools.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Dimensional metrology gets surprisingly sharp with simple tools.",
+      "facts": {
+        "canonical_name": "Micrometer screw gauge on a 10 mm shaft",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "1e-7 / 1e-2",
+          "method": "derived",
+          "original_value_text": "1e-05",
+          "source_basis": "Sub-micrometer resolution over a centimeter gives 10^-5 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Micrometer_(device)",
+          "source_value_text": "0.1 um on 10 mm"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-micrometer-screw-gauge-on-a-10-mm-shaft",
+      "name": "Micrometer screw gauge on a 10 mm shaft",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Micrometer_(device)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-micrometer-device",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Micrometer (device)",
+          "url": "https://en.wikipedia.org/wiki/Micrometer_(device)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Dimensional metrology gets surprisingly sharp with simple tools.",
+      "value": 1e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Surveying is a good bridge between everyday and metrology precision.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Surveying is a good bridge between everyday and metrology precision.",
+      "facts": {
+        "canonical_name": "Surveyor total-station distance measurement",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "0.001 / 100",
+          "method": "derived",
+          "original_value_text": "1e-05",
+          "source_basis": "A millimeter over 100 meters is one part in 100,000.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Total_station",
+          "source_value_text": "1 mm on 100 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-surveyor-total-station-distance-measurement",
+      "name": "Surveyor total-station distance measurement",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Total_station",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-total-station",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Total station",
+          "url": "https://en.wikipedia.org/wiki/Total_station"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Surveying is a good bridge between everyday and metrology precision.",
+      "value": 1e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Quartz timekeeping lives in the tens-of-parts-per-million band.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Quartz timekeeping lives in the tens-of-parts-per-million band.",
+      "facts": {
+        "canonical_name": "Quartz wristwatch monthly rate",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "60 / (30 x 24 x 3600)",
+          "method": "derived",
+          "original_value_text": "2e-05",
+          "source_basis": "About 60 seconds drift over ~2.6 million seconds is around 2e-5.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Quartz_clock",
+          "source_value_text": "1 minute per month"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-quartz-wristwatch-monthly-rate",
+      "name": "Quartz wristwatch monthly rate",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Quartz_clock",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-quartz-clock",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Quartz clock",
+          "url": "https://en.wikipedia.org/wiki/Quartz_clock"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Quartz timekeeping lives in the tens-of-parts-per-million band.",
+      "value": 2e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Satellite navigation can be coarse locally but impressive over long baselines.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Satellite navigation can be coarse locally but impressive over long baselines.",
+      "facts": {
+        "canonical_name": "Civilian GPS on a 100 km trip",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "5 / 100000",
+          "method": "derived",
+          "original_value_text": "5e-05",
+          "source_basis": "A few meters over a 100 km route is roughly 5e-5 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+          "source_value_text": "5 m on 100 km"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-civilian-gps-on-a-100-km-trip",
+      "name": "Civilian GPS on a 100 km trip",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-global-positioning-system",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Global Positioning System",
+          "url": "https://en.wikipedia.org/wiki/Global_Positioning_System"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Satellite navigation can be coarse locally but impressive over long baselines.",
+      "value": 5e-05,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Routine machining moves into the hundred-ppm regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Routine machining moves into the hundred-ppm regime.",
+      "facts": {
+        "canonical_name": "Machine-shop milled part",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "10e-6 / 0.1",
+          "method": "derived",
+          "original_value_text": "0.0001",
+          "source_basis": "Ten micrometers on a 100 mm part is 10^-4 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Machining",
+          "source_value_text": "10 um on 100 mm"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-machine-shop-milled-part",
+      "name": "Machine-shop milled part",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Machining",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-machining",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Machining",
+          "url": "https://en.wikipedia.org/wiki/Machining"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Routine machining moves into the hundred-ppm regime.",
+      "value": 0.0001,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Hand tools can already beat the 10^-3 regime comfortably.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Hand tools can already beat the 10^-3 regime comfortably.",
+      "facts": {
+        "canonical_name": "Tape measure on a 2 m board",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "0.001 / 2",
+          "method": "derived",
+          "original_value_text": "0.0005",
+          "source_basis": "A millimeter on two meters is five parts in ten thousand.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Tape_measure",
+          "source_value_text": "1 mm on 2 m"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-tape-measure-on-a-2-m-board",
+      "name": "Tape measure on a 2 m board",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Tape_measure",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-tape-measure",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Tape measure",
+          "url": "https://en.wikipedia.org/wiki/Tape_measure"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Hand tools can already beat the 10^-3 regime comfortably.",
+      "value": 0.0005,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Sports timing gives a nice intuitive millesimal-scale example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Sports timing gives a nice intuitive millesimal-scale example.",
+      "facts": {
+        "canonical_name": "Stopwatch timing a 100 m sprint",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "0.01 / 10",
+          "method": "derived",
+          "original_value_text": "0.001",
+          "source_basis": "Hundredth-second timing on a 10 second event is 10^-3 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Stopwatch",
+          "source_value_text": "0.01 s on 10 s"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-stopwatch-timing-a-100-m-sprint",
+      "name": "Stopwatch timing a 100 m sprint",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Stopwatch",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-stopwatch",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Stopwatch",
+          "url": "https://en.wikipedia.org/wiki/Stopwatch"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Sports timing gives a nice intuitive millesimal-scale example.",
+      "value": 0.001,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Digital scales make sub-percent precision routine at home.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Digital scales make sub-percent precision routine at home.",
+      "facts": {
+        "canonical_name": "Digital bathroom scale on a 70 kg person",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "0.1 / 70",
+          "method": "derived",
+          "original_value_text": "0.0014",
+          "source_basis": "A 0.1 kg resolution on a 70 kg measurement gives 1.4e-3 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Weighing_scale",
+          "source_value_text": "0.1 kg on 70 kg"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-digital-bathroom-scale-on-a-70-kg-person",
+      "name": "Digital bathroom scale on a 70 kg person",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Weighing_scale",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-weighing-scale",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Weighing scale",
+          "url": "https://en.wikipedia.org/wiki/Weighing_scale"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Digital scales make sub-percent precision routine at home.",
+      "value": 0.0014,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Basic electronics measurement quickly reaches the 10^-3 regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Basic electronics measurement quickly reaches the 10^-3 regime.",
+      "facts": {
+        "canonical_name": "Digital multimeter on a 5 V USB rail",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "0.01 / 5",
+          "method": "derived",
+          "original_value_text": "0.002",
+          "source_basis": "Centivolt resolution on a 5 V signal is about two parts per thousand.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Multimeter",
+          "source_value_text": "0.01 V on 5 V"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-digital-multimeter-on-a-5-v-usb-rail",
+      "name": "Digital multimeter on a 5 V USB rail",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Multimeter",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-multimeter",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Multimeter",
+          "url": "https://en.wikipedia.org/wiki/Multimeter"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Basic electronics measurement quickly reaches the 10^-3 regime.",
+      "value": 0.002,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Recipe-scale precision is a good everyday millesimal benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Recipe-scale precision is a good everyday millesimal benchmark.",
+      "facts": {
+        "canonical_name": "Kitchen scale measuring 500 g of flour",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "derivation_note": "1 / 500",
+          "method": "derived",
+          "original_value_text": "0.002",
+          "source_basis": "A 1 g step on a 500 g quantity gives 2e-3 relative uncertainty.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Weighing_scale",
+          "source_value_text": "1 g on 500 g"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-kitchen-scale-measuring-500-g-of-flour",
+      "name": "Kitchen scale measuring 500 g of flour",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Weighing_scale",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-weighing-scale",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Weighing scale",
+          "url": "https://en.wikipedia.org/wiki/Weighing_scale"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Recipe-scale precision is a good everyday millesimal benchmark.",
+      "value": 0.002,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A mechanical scale is noticeably coarse but still useful.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A mechanical scale is noticeably coarse but still useful.",
+      "facts": {
+        "canonical_name": "Analog bathroom scale",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.01",
+          "source_basis": "About 1 kg uncertainty on a 100 kg full-scale reading is around one percent.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Weighing_scale",
+          "source_value_text": "1%"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-analog-bathroom-scale",
+      "name": "Analog bathroom scale",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Weighing_scale",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-weighing-scale",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Weighing scale",
+          "url": "https://en.wikipedia.org/wiki/Weighing_scale"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "A mechanical scale is noticeably coarse but still useful.",
+      "value": 0.01,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Driving instrumentation is useful but relatively coarse.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Driving instrumentation is useful but relatively coarse.",
+      "facts": {
+        "canonical_name": "Car speedometer at highway speed",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.02",
+          "source_basis": "Vehicle speed readings are not high-precision instruments.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Speedometer",
+          "source_value_text": "2%"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-car-speedometer-at-highway-speed",
+      "name": "Car speedometer at highway speed",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Speedometer",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-speedometer",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Speedometer",
+          "url": "https://en.wikipedia.org/wiki/Speedometer"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Driving instrumentation is useful but relatively coarse.",
+      "value": 0.02,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Home medical devices live in the percent-level precision band.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Home medical devices live in the percent-level precision band.",
+      "facts": {
+        "canonical_name": "Consumer blood pressure cuff",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.02",
+          "source_basis": "A couple of mmHg on a ~120 mmHg reading is a few percent.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Sphygmomanometer",
+          "source_value_text": "2%"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-consumer-blood-pressure-cuff",
+      "name": "Consumer blood pressure cuff",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sphygmomanometer",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sphygmomanometer",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sphygmomanometer",
+          "url": "https://en.wikipedia.org/wiki/Sphygmomanometer"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Home medical devices live in the percent-level precision band.",
+      "value": 0.02,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Daily weather forecasts are good but far from metrology-grade.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Daily weather forecasts are good but far from metrology-grade.",
+      "facts": {
+        "canonical_name": "Weather forecast daily high temperature",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.03",
+          "source_basis": "A few degrees on a few-hundred-kelvin baseline is a few percent.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Weather_forecasting",
+          "source_value_text": "3%"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-weather-forecast-daily-high-temperature",
+      "name": "Weather forecast daily high temperature",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Weather_forecasting",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-weather-forecasting",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Weather forecasting",
+          "url": "https://en.wikipedia.org/wiki/Weather_forecasting"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Daily weather forecasts are good but far from metrology-grade.",
+      "value": 0.03,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Room-size judgments are a natural everyday precision example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Room-size judgments are a natural everyday precision example.",
+      "facts": {
+        "canonical_name": "Eyeballing the width of a room",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.1",
+          "source_basis": "Unaided room-scale distance estimates are often off by around a tenth.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Estimation",
+          "source_value_text": "10%"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-eyeballing-the-width-of-a-room",
+      "name": "Eyeballing the width of a room",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Estimation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-estimation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Estimation",
+          "url": "https://en.wikipedia.org/wiki/Estimation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Room-size judgments are a natural everyday precision example.",
+      "value": 0.1,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Human estimation gets noisy quickly without counting aids.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Human estimation gets noisy quickly without counting aids.",
+      "facts": {
+        "canonical_name": "Eyeballing a crowd size",
+        "ingest_source": "dataset/raw/curated/precision.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.2",
+          "source_basis": "Unaided crowd estimates are often only accurate to tens of percent.",
+          "source_unit": "fractional uncertainty",
+          "source_url": "https://en.wikipedia.org/wiki/Estimation",
+          "source_value_text": "20%"
+        }
+      },
+      "hook": null,
+      "id": "obs:precision:scenario-precision-eyeballing-a-crowd-size",
+      "name": "Eyeballing a crowd size",
+      "qualifiers": {
+        "measurement": "fractional uncertainty"
+      },
+      "source": "https://en.wikipedia.org/wiki/Estimation",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-estimation",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Estimation",
+          "url": "https://en.wikipedia.org/wiki/Estimation"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-precision-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/precision.json",
+          "url": "repo://dataset/raw/curated/precision.json"
+        }
+      ],
+      "summary_short": "Human estimation gets noisy quickly without counting aids.",
+      "value": 0.2,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Measurement uncertainty",
+      "url": "https://en.wikipedia.org/wiki/Measurement_uncertainty"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Fractional uncertainty is the canonical storage unit for precision.",
+      "name": "relative uncertainty",
+      "symbol": "fraction"
+    },
+    {
+      "conversion_factor": 100.0,
+      "description": "Relative uncertainty shown as a percent.",
+      "name": "percent",
+      "symbol": "%"
+    },
+    {
+      "conversion_factor": 1000000.0,
+      "description": "PPM is useful for clocks and electronics.",
+      "name": "parts per million",
+      "symbol": "ppm"
+    },
+    {
+      "conversion_factor": 1000000000.0,
+      "description": "PPB is useful for very high precision.",
+      "name": "parts per billion",
+      "symbol": "ppb"
+    },
+    {
+      "conversion_factor": 1000000000000.0,
+      "description": "PPT is useful for the most precise metrology references.",
+      "name": "parts per trillion",
+      "symbol": "ppt"
+    }
+  ]
+}

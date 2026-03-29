@@ -1,0 +1,1328 @@
+{
+  "base_unit": "counts_per_second",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 23,
+    "candidate_shortfall_to_preferred_target": 27,
+    "empty_bin_count": 13,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 23,
+    "selected_primary_count": 11,
+    "selected_secondary_count": 12,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 23
+    },
+    "target_selected_count": 23
+  },
+  "description_format": "markdown",
+  "dimension": "event-rate",
+  "dimension_description": "This scale measures how often discrete events happen, canonically in counts per second. It is intentionally broad: biological rhythms, industrial lines, social platforms, digital packets, and physical decays can all be compared once they are expressed as event rates. Each entry states what is being counted so unlike things are not silently conflated.",
+  "frontend_group": "society",
+  "frontend_group_label": "Society, Economy & Abstract Quantities",
+  "frontend_order": 1030,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A familiar very-slow repeating event.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A familiar very-slow repeating event.",
+      "facts": {
+        "canonical_name": "Halley comet returns",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "1 / period_seconds",
+          "method": "derived",
+          "original_value_text": "4.211127753487993e-10",
+          "source_basis": "One return every 75.3 years.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+          "source_value_text": "1 per 75.3 years"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-halley-comet-returns",
+      "name": "Halley comet returns",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-halley-27s-comet",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Halley's Comet",
+          "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "A familiar very-slow repeating event.",
+      "value": 4.211127753487993e-10,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Civic life gives a good once-per-years event rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Civic life gives a good once-per-years event rate.",
+      "facts": {
+        "canonical_name": "US presidential election",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "1 / period_seconds",
+          "method": "derived",
+          "original_value_text": "7.927447995941146e-09",
+          "source_basis": "A presidential election occurs every four years.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/United_States_presidential_election",
+          "source_value_text": "1 per 4 years"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-us-presidential-election",
+      "name": "US presidential election",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/United_States_presidential_election",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-united-states-presidential-election",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "United States presidential election",
+          "url": "https://en.wikipedia.org/wiki/United_States_presidential_election"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Civic life gives a good once-per-years event rate.",
+      "value": 7.927447995941146e-09,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Once-per-year events sit near 3e-8 per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Once-per-year events sit near 3e-8 per second.",
+      "facts": {
+        "canonical_name": "Birthday",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "1 / period_seconds",
+          "method": "derived",
+          "original_value_text": "3.1709791983764586e-08",
+          "source_basis": "One birthday per year.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Birthday",
+          "source_value_text": "1 per year"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-birthday",
+      "name": "Birthday",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Birthday",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-birthday",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Birthday",
+          "url": "https://en.wikipedia.org/wiki/Birthday"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Once-per-year events sit near 3e-8 per second.",
+      "value": 3.1709791983764586e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Breathing is one of the best everyday biological rate anchors.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Breathing is one of the best everyday biological rate anchors.",
+      "facts": {
+        "canonical_name": "Resting breathing",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "12 / 60",
+          "method": "derived",
+          "original_value_text": "0.2",
+          "source_basis": "Twelve breaths per minute.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Respiratory_rate",
+          "source_value_text": "12 breaths/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-resting-breathing",
+      "name": "Resting breathing",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Respiratory_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-respiratory-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Respiratory rate",
+          "url": "https://en.wikipedia.org/wiki/Respiratory_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Breathing is one of the best everyday biological rate anchors.",
+      "value": 0.2,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A resting heart runs at roughly one event per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A resting heart runs at roughly one event per second.",
+      "facts": {
+        "canonical_name": "Resting heartbeat",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "60 / 60",
+          "method": "derived",
+          "original_value_text": "1.0",
+          "source_basis": "Sixty beats per minute.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Heart_rate",
+          "source_value_text": "60 beats/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-resting-heartbeat",
+      "name": "Resting heartbeat",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Heart_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-heart-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Heart rate",
+          "url": "https://en.wikipedia.org/wiki/Heart_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "A resting heart runs at roughly one event per second.",
+      "value": 1.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Global mortality is slower than global births on a per-second basis.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Global mortality is slower than global births on a per-second basis.",
+      "facts": {
+        "canonical_name": "World deaths",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.9",
+          "source_basis": "Roughly sixty million deaths per year globally.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Mortality_rate",
+          "source_value_text": "1.9 deaths/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-world-deaths",
+      "name": "World deaths",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Mortality_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-mortality-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Mortality rate",
+          "url": "https://en.wikipedia.org/wiki/Mortality_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Global mortality is slower than global births on a per-second basis.",
+      "value": 1.9,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Walking sits just above the heartbeat scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Walking sits just above the heartbeat scale.",
+      "facts": {
+        "canonical_name": "Walking cadence",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "120 / 60",
+          "method": "derived",
+          "original_value_text": "2.0",
+          "source_basis": "One hundred twenty steps per minute.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Cadence_(gait)",
+          "source_value_text": "120 steps/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-walking-cadence",
+      "name": "Walking cadence",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Cadence_(gait)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-cadence-gait",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Cadence (gait)",
+          "url": "https://en.wikipedia.org/wiki/Cadence_(gait)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Walking sits just above the heartbeat scale.",
+      "value": 2.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Speech is a useful information-adjacent event-rate example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Speech is a useful information-adjacent event-rate example.",
+      "facts": {
+        "canonical_name": "Conversational speech",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "150 / 60",
+          "method": "derived",
+          "original_value_text": "2.5",
+          "source_basis": "About one hundred fifty words per minute.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Speech",
+          "source_value_text": "150 words/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-conversational-speech",
+      "name": "Conversational speech",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Speech",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-speech",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Speech",
+          "url": "https://en.wikipedia.org/wiki/Speech"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Speech is a useful information-adjacent event-rate example.",
+      "value": 2.5,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A neat human-performed event-rate anchor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A neat human-performed event-rate anchor.",
+      "facts": {
+        "canonical_name": "Clapping rapidly",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "4.0",
+          "source_basis": "A fast applause rhythm.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Clapping",
+          "source_value_text": "4 claps/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-clapping-rapidly",
+      "name": "Clapping rapidly",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Clapping",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-clapping",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Clapping",
+          "url": "https://en.wikipedia.org/wiki/Clapping"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "A neat human-performed event-rate anchor.",
+      "value": 4.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Demography gives a nice few-per-second global rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Demography gives a nice few-per-second global rate.",
+      "facts": {
+        "canonical_name": "World births",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "4.3",
+          "source_basis": "Roughly 140 million births per year globally.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Birth_rate",
+          "source_value_text": "4.3 births/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-world-births",
+      "name": "World births",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Birth_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-birth-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Birth rate",
+          "url": "https://en.wikipedia.org/wiki/Birth_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Demography gives a nice few-per-second global rate.",
+      "value": 4.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Typing lives in the low-single-digit events-per-second band.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Typing lives in the low-single-digit events-per-second band.",
+      "facts": {
+        "canonical_name": "Typing at 60 wpm",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "derivation_note": "60 x 5 / 60",
+          "method": "derived",
+          "original_value_text": "5.0",
+          "source_basis": "Sixty words per minute at five characters per word.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Words_per_minute",
+          "source_value_text": "300 chars/min"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-typing-at-60-wpm",
+      "name": "Typing at 60 wpm",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Words_per_minute",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-words-per-minute",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Words per minute",
+          "url": "https://en.wikipedia.org/wiki/Words_per_minute"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Typing lives in the low-single-digit events-per-second band.",
+      "value": 5.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Internet production rates are easier to grasp when mapped to seconds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Internet production rates are easier to grasp when mapped to seconds.",
+      "facts": {
+        "canonical_name": "YouTube uploads",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "8.3",
+          "source_basis": "Using one video-hour-equivalent per uploaded hour block gives about 8.3 per second.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/YouTube",
+          "source_value_text": "500 hours/min uploaded"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-youtube-uploads",
+      "name": "YouTube uploads",
+      "qualifiers": {
+        "context": "video-hour equivalents"
+      },
+      "source": "https://en.wikipedia.org/wiki/YouTube",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-youtube",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "YouTube",
+          "url": "https://en.wikipedia.org/wiki/YouTube"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Internet production rates are easier to grasp when mapped to seconds.",
+      "value": 8.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Film gives an accessible tens-per-second event rate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Film gives an accessible tens-per-second event rate.",
+      "facts": {
+        "canonical_name": "Camera frame rate",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "24.0",
+          "source_basis": "Standard cinematic frame rate.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Frame_rate",
+          "source_value_text": "24 fps"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-camera-frame-rate",
+      "name": "Camera frame rate",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Frame_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-frame-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Frame rate",
+          "url": "https://en.wikipedia.org/wiki/Frame_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Film gives an accessible tens-per-second event rate.",
+      "value": 24.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Planetary weather is surprisingly eventful.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Planetary weather is surprisingly eventful.",
+      "facts": {
+        "canonical_name": "Lightning strikes on Earth",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "50.0",
+          "source_basis": "Earth is struck by lightning roughly tens of times per second.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Lightning",
+          "source_value_text": "50 flashes/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-lightning-strikes-on-earth",
+      "name": "Lightning strikes on Earth",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Lightning",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-lightning",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Lightning",
+          "url": "https://en.wikipedia.org/wiki/Lightning"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Planetary weather is surprisingly eventful.",
+      "value": 50.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Small animals often move far faster than human intuition expects.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Small animals often move far faster than human intuition expects.",
+      "facts": {
+        "canonical_name": "Hummingbird wingbeat",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "70.0",
+          "source_basis": "Representative hummingbird wingbeat frequency.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Hummingbird",
+          "source_value_text": "70 beats/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-hummingbird-wingbeat",
+      "name": "Hummingbird wingbeat",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hummingbird",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hummingbird",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hummingbird",
+          "url": "https://en.wikipedia.org/wiki/Hummingbird"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Small animals often move far faster than human intuition expects.",
+      "value": 70.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Display technology moves event rates into the hundreds per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Display technology moves event rates into the hundreds per second.",
+      "facts": {
+        "canonical_name": "High-refresh display",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "144.0",
+          "source_basis": "A common gaming-monitor refresh rate.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Refresh_rate",
+          "source_value_text": "144 Hz"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-high-refresh-display",
+      "name": "High-refresh display",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Refresh_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-refresh-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Refresh rate",
+          "url": "https://en.wikipedia.org/wiki/Refresh_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Display technology moves event rates into the hundreds per second.",
+      "value": 144.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Insect motion moves biological event rates into the hundreds per second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Insect motion moves biological event rates into the hundreds per second.",
+      "facts": {
+        "canonical_name": "Honeybee wingbeat",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "230.0",
+          "source_basis": "Representative bee wingbeat frequency.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Bee",
+          "source_value_text": "230 beats/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-honeybee-wingbeat",
+      "name": "Honeybee wingbeat",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bee",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bee",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bee",
+          "url": "https://en.wikipedia.org/wiki/Bee"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Insect motion moves biological event rates into the hundreds per second.",
+      "value": 230.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Neural signaling bridges biology and electronics.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Neural signaling bridges biology and electronics.",
+      "facts": {
+        "canonical_name": "Neuron upper-end firing rate",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000.0",
+          "source_basis": "Fast-spiking neurons can reach around a kilohertz.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Action_potential",
+          "source_value_text": "1000 spikes/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-neuron-upper-end-firing-rate",
+      "name": "Neuron upper-end firing rate",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Action_potential",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-action-potential",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Action potential",
+          "url": "https://en.wikipedia.org/wiki/Action_potential"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Neural signaling bridges biology and electronics.",
+      "value": 1000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Storage hardware quickly enters the megascale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Storage hardware quickly enters the megascale.",
+      "facts": {
+        "canonical_name": "SSD random IOPS",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1000000.0",
+          "source_basis": "Fast SSDs can sustain around a million input/output operations per second.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Input/output_operations_per_second",
+          "source_value_text": "1,000,000 ops/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-ssd-random-iops",
+      "name": "SSD random IOPS",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Input/output_operations_per_second",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-input-output-operations-per-second",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "output operations per second",
+          "url": "https://en.wikipedia.org/wiki/Input/output_operations_per_second"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Storage hardware quickly enters the megascale.",
+      "value": 1000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Particle physics routinely lives in the tens-of-millions-per-second range.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Particle physics routinely lives in the tens-of-millions-per-second range.",
+      "facts": {
+        "canonical_name": "LHC bunch crossings",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "40000000.0",
+          "source_basis": "The Large Hadron Collider bunch-crossing rate is about 40 MHz.",
+          "source_unit": "events/s",
+          "source_url": "https://home.cern/science/accelerators/large-hadron-collider",
+          "source_value_text": "40 MHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-lhc-bunch-crossings",
+      "name": "LHC bunch crossings",
+      "qualifiers": {},
+      "source": "https://home.cern/science/accelerators/large-hadron-collider",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-home-cern-science-accelerators-large-hadron-collider",
+          "license_text": null,
+          "note": null,
+          "publisher": "home.cern",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "large-hadron-collider",
+          "url": "https://home.cern/science/accelerators/large-hadron-collider"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Particle physics routinely lives in the tens-of-millions-per-second range.",
+      "value": 40000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Biotech can rival communications hardware on event throughput.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Biotech can rival communications hardware on event throughput.",
+      "facts": {
+        "canonical_name": "Human genome sequencing on one instrument",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "100000000.0",
+          "source_basis": "Modern instruments can output on the order of 10^8 bases per second.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/DNA_sequencing",
+          "source_value_text": "100 million bases/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-human-genome-sequencing-on-one-instrument",
+      "name": "Human genome sequencing on one instrument",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/DNA_sequencing",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dna-sequencing",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "DNA sequencing",
+          "url": "https://en.wikipedia.org/wiki/DNA_sequencing"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Biotech can rival communications hardware on event throughput.",
+      "value": 100000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Modern processors make billions of identical repeated events every second.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Modern processors make billions of identical repeated events every second.",
+      "facts": {
+        "canonical_name": "CPU clock at 3 GHz",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "3000000000.0",
+          "source_basis": "A 3 GHz clock ticks three billion times per second.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Clock_rate",
+          "source_value_text": "3 GHz"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-cpu-clock-at-3-ghz",
+      "name": "CPU clock at 3 GHz",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Clock_rate",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-clock-rate",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Clock rate",
+          "url": "https://en.wikipedia.org/wiki/Clock_rate"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Modern processors make billions of identical repeated events every second.",
+      "value": 3000000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Global proof-of-work computation is a gigantic event-rate machine.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Global proof-of-work computation is a gigantic event-rate machine.",
+      "facts": {
+        "canonical_name": "Bitcoin network hash attempts",
+        "ingest_source": "dataset/raw/curated/event-rate.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e+20",
+          "source_basis": "The Bitcoin network hash rate is often around 10^20 per second.",
+          "source_unit": "events/s",
+          "source_url": "https://en.wikipedia.org/wiki/Bitcoin_network",
+          "source_value_text": "1e20 hashes/s"
+        }
+      },
+      "hook": null,
+      "id": "obs:event-rate:scenario-event-rate-bitcoin-network-hash-attempts",
+      "name": "Bitcoin network hash attempts",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bitcoin_network",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bitcoin-network",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bitcoin network",
+          "url": "https://en.wikipedia.org/wiki/Bitcoin_network"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-event-rate-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/event-rate.json",
+          "url": "repo://dataset/raw/curated/event-rate.json"
+        }
+      ],
+      "summary_short": "Global proof-of-work computation is a gigantic event-rate machine.",
+      "value": 1e+20,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Rate",
+      "url": "https://en.wikipedia.org/wiki/Rate_(mathematics)"
+    },
+    {
+      "name": "Frequency",
+      "url": "https://en.wikipedia.org/wiki/Frequency"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Counts per second are the canonical storage unit for event-rate observations.",
+      "name": "counts per second",
+      "symbol": "1/s"
+    },
+    {
+      "conversion_factor": 60.0,
+      "description": "Counts per minute are useful for physiology and everyday repeated events.",
+      "name": "counts per minute",
+      "symbol": "1/min"
+    },
+    {
+      "conversion_factor": 3600.0,
+      "description": "Counts per hour are useful for slow recurring processes.",
+      "name": "counts per hour",
+      "symbol": "1/h"
+    },
+    {
+      "conversion_factor": 86400.0,
+      "description": "Counts per day are useful for social and operational rates.",
+      "name": "counts per day",
+      "symbol": "1/day"
+    },
+    {
+      "conversion_factor": 31557600.0,
+      "description": "Counts per year are useful for large-scale production or civilizational activity.",
+      "name": "counts per year",
+      "symbol": "1/yr"
+    }
+  ]
+}

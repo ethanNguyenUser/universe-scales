@@ -1,0 +1,2187 @@
+{
+  "base_unit": "kilogram_square_meters",
+  "coverage_report": {
+    "bin_count": 24,
+    "candidate_count": 39,
+    "candidate_shortfall_to_preferred_target": 11,
+    "empty_bin_count": 14,
+    "preferred_max_items": 80,
+    "preferred_target_items": 50,
+    "required_min_items": 24,
+    "selected_count": 39,
+    "selected_primary_count": 10,
+    "selected_secondary_count": 29,
+    "selected_shortfall_to_required_min": 0,
+    "source_class_distribution": {
+      "secondary_reference": 39
+    },
+    "target_selected_count": 39
+  },
+  "description_format": "markdown",
+  "dimension": "moment-of-inertia",
+  "dimension_description": "Moment of inertia measures resistance to angular acceleration. It depends not just on mass but on how far that mass sits from the axis, which is why a bicycle wheel, a door, and the Earth can all appear here meaningfully. Values are always axis-specific, so the item label matters a lot.",
+  "frontend_group": "motion",
+  "frontend_group_label": "Motion & Mechanics",
+  "frontend_order": 370,
+  "items": [
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A tiny dust mote has an almost negligible rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A tiny dust mote has an almost negligible rotational inertia.",
+      "facts": {
+        "canonical_name": "Dust mote sphere",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-24",
+          "source_basis": "Order-of-magnitude tiny-particle rotational inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Dust",
+          "source_value_text": "1e-24 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-dust-mote-moi",
+      "name": "Dust mote sphere",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Dust",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-dust",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Dust",
+          "url": "https://en.wikipedia.org/wiki/Dust"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A tiny dust mote has an almost negligible rotational inertia.",
+      "value": 1e-24,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A ping-pong ball is a very light thin shell with tiny rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A ping-pong ball is a very light thin shell with tiny rotational inertia.",
+      "facts": {
+        "canonical_name": "Ping-pong ball",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = 2/3 m r^2",
+          "method": "derived",
+          "original_value_text": "7.2e-07",
+          "source_basis": "Thin-shell estimate for a table-tennis ball.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Table_tennis_ball",
+          "source_value_text": "2.7 g, 20 mm radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-ping-pong-ball-moi",
+      "name": "Ping-pong ball",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Table_tennis_ball",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-table-tennis-ball",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Table tennis ball",
+          "url": "https://en.wikipedia.org/wiki/Table_tennis_ball"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A ping-pong ball is a very light thin shell with tiny rotational inertia.",
+      "value": 7.2e-07,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A hard-drive platter is in the few-micro kilogram-square-meter regime.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A hard-drive platter is in the few-micro kilogram-square-meter regime.",
+      "facts": {
+        "canonical_name": "Hard-drive platter",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "7e-06",
+          "source_basis": "Representative platter moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Hard_disk_drive",
+          "source_value_text": "7e-6 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-hdd-platter-moi",
+      "name": "Hard-drive platter",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Hard_disk_drive",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-hard-disk-drive",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Hard disk drive",
+          "url": "https://en.wikipedia.org/wiki/Hard_disk_drive"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A hard-drive platter is in the few-micro kilogram-square-meter regime.",
+      "value": 7e-06,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A golf ball is compact enough that its inertia stays in the micro scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A golf ball is compact enough that its inertia stays in the micro scale.",
+      "facts": {
+        "canonical_name": "Golf ball",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = 2/5 m r^2",
+          "method": "derived",
+          "original_value_text": "8.37437097e-06",
+          "source_basis": "Solid-sphere estimate for a golf ball.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Golf_ball",
+          "source_value_text": "45.93 g, 21.35 mm radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-golf-ball-moi",
+      "name": "Golf ball",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Golf_ball",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-golf-ball",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Golf ball",
+          "url": "https://en.wikipedia.org/wiki/Golf_ball"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A golf ball is compact enough that its inertia stays in the micro scale.",
+      "value": 8.37437097e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A compact disc is a familiar small rigid-body moment-of-inertia reference.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A compact disc is a familiar small rigid-body moment-of-inertia reference.",
+      "facts": {
+        "canonical_name": "CD about its center",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e-05",
+          "source_basis": "Representative CD moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Compact_disc",
+          "source_value_text": "1e-5 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-cd-moi",
+      "name": "CD about its center",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Compact_disc",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-compact-disc",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Compact disc",
+          "url": "https://en.wikipedia.org/wiki/Compact_disc"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A compact disc is a familiar small rigid-body moment-of-inertia reference.",
+      "value": 1e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A yo-yo stores rotational energy with a small but tangible moment of inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A yo-yo stores rotational energy with a small but tangible moment of inertia.",
+      "facts": {
+        "canonical_name": "Yo-yo",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2e-05",
+          "source_basis": "Representative yo-yo moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Yo-yo",
+          "source_value_text": "2e-5 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-yoyo-moi",
+      "name": "Yo-yo",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Yo-yo",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-yo-yo",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Yo-yo",
+          "url": "https://en.wikipedia.org/wiki/Yo-yo"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A yo-yo stores rotational energy with a small but tangible moment of inertia.",
+      "value": 2e-05,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A smartphone spun about its center behaves like a small rectangular plate.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A smartphone spun about its center behaves like a small rectangular plate.",
+      "facts": {
+        "canonical_name": "Smartphone about center",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = 1/12 m (w^2 + h^2)",
+          "method": "derived",
+          "original_value_text": "0.0005204166666666667",
+          "source_basis": "Rectangular-plate estimate for a smartphone.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Smartphone",
+          "source_value_text": "200 g, 75 x 160 mm"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-smartphone",
+      "name": "Smartphone about center",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Smartphone",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-smartphone",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Smartphone",
+          "url": "https://en.wikipedia.org/wiki/Smartphone"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A smartphone spun about its center behaves like a small rectangular plate.",
+      "value": 0.0005204166666666667,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A soccer ball sits clearly above tennis and baseball on a rotational-inertia scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A soccer ball sits clearly above tennis and baseball on a rotational-inertia scale.",
+      "facts": {
+        "canonical_name": "Soccer ball",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = 2/3 m r^2",
+          "method": "derived",
+          "original_value_text": "0.0034686666666666663",
+          "source_basis": "Thin-shell estimate for a soccer ball.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Ball_(association_football)",
+          "source_value_text": "430 g, 110 mm radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-soccer-ball-moi",
+      "name": "Soccer ball",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ball_(association_football)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ball-association-football",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ball (association football)",
+          "url": "https://en.wikipedia.org/wiki/Ball_(association_football)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A soccer ball sits clearly above tennis and baseball on a rotational-inertia scale.",
+      "value": 0.0034686666666666663,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A solid sphere is slightly easier to spin than a disk of the same mass and radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A solid sphere is slightly easier to spin than a disk of the same mass and radius.",
+      "facts": {
+        "canonical_name": "Solid sphere",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.004",
+          "source_basis": "Standard rigid-body formula I = (2/5) mr^2 for a solid sphere.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+          "source_value_text": "1 kg, 0.1 m radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-solid-sphere",
+      "name": "Solid sphere",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-list-of-moments-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "List of moments of inertia",
+          "url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A solid sphere is slightly easier to spin than a disk of the same mass and radius.",
+      "value": 0.004,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A compact disk-like object resists rotation less than a ring of the same mass and radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A compact disk-like object resists rotation less than a ring of the same mass and radius.",
+      "facts": {
+        "canonical_name": "Solid disk",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.005",
+          "source_basis": "Standard rigid-body formula I = (1/2) mr^2 for a solid disk.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+          "source_value_text": "1 kg, 0.1 m radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-solid-disk",
+      "name": "Solid disk",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-list-of-moments-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "List of moments of inertia",
+          "url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A compact disk-like object resists rotation less than a ring of the same mass and radius.",
+      "value": 0.005,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A basketball larger radius dominates its moment of inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A basketball larger radius dominates its moment of inertia.",
+      "facts": {
+        "canonical_name": "Basketball",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = 2/3 m r^2",
+          "method": "derived",
+          "original_value_text": "0.005952",
+          "source_basis": "Thin-shell estimate for a basketball.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Basketball_(ball)",
+          "source_value_text": "620 g, 120 mm radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-basketball-moi",
+      "name": "Basketball",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Basketball_(ball)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-basketball-ball",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Basketball (ball)",
+          "url": "https://en.wikipedia.org/wiki/Basketball_(ball)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A basketball larger radius dominates its moment of inertia.",
+      "value": 0.005952,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A thin hollow sphere puts more mass toward the outside, raising the inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A thin hollow sphere puts more mass toward the outside, raising the inertia.",
+      "facts": {
+        "canonical_name": "Hollow sphere",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.006666666666666667",
+          "source_basis": "Standard rigid-body formula I = (2/3) mr^2 for a hollow sphere.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+          "source_value_text": "1 kg, 0.1 m radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-hollow-sphere",
+      "name": "Hollow sphere",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-list-of-moments-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "List of moments of inertia",
+          "url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A thin hollow sphere puts more mass toward the outside, raising the inertia.",
+      "value": 0.006666666666666667,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Mass pushed out to the rim makes the ring harder to spin up.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mass pushed out to the rim makes the ring harder to spin up.",
+      "facts": {
+        "canonical_name": "Thin ring",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.01",
+          "source_basis": "Standard rigid-body formula I = mr^2 for a thin ring.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+          "source_value_text": "1 kg, 0.1 m radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-thin-ring",
+      "name": "Thin ring",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-list-of-moments-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "List of moments of inertia",
+          "url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Mass pushed out to the rim makes the ring harder to spin up.",
+      "value": 0.01,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A bowling ball is compact but still carries noticeable rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A bowling ball is compact but still carries noticeable rotational inertia.",
+      "facts": {
+        "canonical_name": "Bowling ball",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.033",
+          "source_basis": "Estimated from a standard bowling ball treated as a solid sphere.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Bowling_ball",
+          "source_value_text": "0.033"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-moment-of-inertia-bowling-ball",
+      "name": "Bowling ball",
+      "qualifiers": {
+        "measurement": "about center"
+      },
+      "source": "https://en.wikipedia.org/wiki/Bowling_ball",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bowling-ball",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bowling ball",
+          "url": "https://en.wikipedia.org/wiki/Bowling_ball"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A bowling ball is compact but still carries noticeable rotational inertia.",
+      "value": 0.033,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A long thin rod spun about its middle is a clean classroom example of rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A long thin rod spun about its middle is a clean classroom example of rotational inertia.",
+      "facts": {
+        "canonical_name": "Broomstick",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = (1/12) m L^2",
+          "method": "derived",
+          "original_value_text": "0.0833",
+          "source_basis": "Thin rod approximation, I = (1/12) mL^2, for a 1 m rod of about 1 kg.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Rod_(optics)",
+          "source_value_text": "0.0833"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-broomstick-about-center",
+      "name": "Broomstick",
+      "qualifiers": {
+        "assumption": "1 kg, 1 m rod",
+        "measurement": "about center"
+      },
+      "source": "https://en.wikipedia.org/wiki/Rod_(optics)",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-rod-optics",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Rod (optics)",
+          "url": "https://en.wikipedia.org/wiki/Rod_(optics)"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A long thin rod spun about its middle is a clean classroom example of rotational inertia.",
+      "value": 0.0833,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A one-kilogram, one-meter rod has a simple center-of-mass moment of inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A one-kilogram, one-meter rod has a simple center-of-mass moment of inertia.",
+      "facts": {
+        "canonical_name": "Thin rod about center",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.08333333333333333",
+          "source_basis": "Standard rigid-body formula I = (1/12) mL^2 for a thin rod about its center.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+          "source_value_text": "1 kg, 1 m rod"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-thin-rod-center",
+      "name": "Thin rod about center",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-list-of-moments-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "List of moments of inertia",
+          "url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A one-kilogram, one-meter rod has a simple center-of-mass moment of inertia.",
+      "value": 0.08333333333333333,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A bicycle wheel is a classic intuitive inertia example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A bicycle wheel is a classic intuitive inertia example.",
+      "facts": {
+        "canonical_name": "Bicycle wheel",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.14",
+          "source_basis": "Representative bicycle wheel moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Bicycle_wheel",
+          "source_value_text": "0.14 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-bicycle-wheel-moi",
+      "name": "Bicycle wheel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Bicycle_wheel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-bicycle-wheel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Bicycle wheel",
+          "url": "https://en.wikipedia.org/wiki/Bicycle_wheel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A bicycle wheel is a classic intuitive inertia example.",
+      "value": 0.14,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A bat is much easier to swing from the handle than from the barrel end.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A bat is much easier to swing from the handle than from the barrel end.",
+      "facts": {
+        "canonical_name": "Baseball bat about handle",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.22",
+          "source_basis": "Representative moment of inertia for a baseball bat swung about the handle.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Baseball_bat",
+          "source_value_text": "representative bat geometry"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-baseball-bat-handle",
+      "name": "Baseball bat about handle",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Baseball_bat",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-baseball-bat",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Baseball bat",
+          "url": "https://en.wikipedia.org/wiki/Baseball_bat"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A bat is much easier to swing from the handle than from the barrel end.",
+      "value": 0.22,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Flywheels deliberately store rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Flywheels deliberately store rotational inertia.",
+      "facts": {
+        "canonical_name": "Engine flywheel",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.3",
+          "source_basis": "Representative engine flywheel moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Flywheel",
+          "source_value_text": "0.3 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-engine-flywheel-moi",
+      "name": "Engine flywheel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Flywheel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-flywheel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Flywheel",
+          "url": "https://en.wikipedia.org/wiki/Flywheel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Flywheels deliberately store rotational inertia.",
+      "value": 0.3,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The same rod about one end is four times harder to spin.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The same rod about one end is four times harder to spin.",
+      "facts": {
+        "canonical_name": "Thin rod about end",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.3333333333333333",
+          "source_basis": "Standard rigid-body formula I = (1/3) mL^2 for a thin rod about one end.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+          "source_value_text": "1 kg, 1 m rod"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-thin-rod-end",
+      "name": "Thin rod about end",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-list-of-moments-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "List of moments of inertia",
+          "url": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "The same rod about one end is four times harder to spin.",
+      "value": 0.3333333333333333,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Pulling mass closer to the axis dramatically lowers the skater\u2019s moment of inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Pulling mass closer to the axis dramatically lowers the skater\u2019s moment of inertia.",
+      "facts": {
+        "canonical_name": "Figure skater with arms in",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "0.5",
+          "source_basis": "Representative compact human-body inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Figure_skating",
+          "source_value_text": "0.5"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-figure-skater-arms-in",
+      "name": "Figure skater with arms in",
+      "qualifiers": {
+        "measurement": "about vertical axis",
+        "posture": "arms in"
+      },
+      "source": "https://en.wikipedia.org/wiki/Figure_skating",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-figure-skating",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Figure skating",
+          "url": "https://en.wikipedia.org/wiki/Figure_skating"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Pulling mass closer to the axis dramatically lowers the skater\u2019s moment of inertia.",
+      "value": 0.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A motorcycle wheel carries several times the rotational inertia of a bicycle wheel.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A motorcycle wheel carries several times the rotational inertia of a bicycle wheel.",
+      "facts": {
+        "canonical_name": "Motorcycle wheel",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = m r^2",
+          "method": "derived",
+          "original_value_text": "0.7168",
+          "source_basis": "Hoop-like estimate for a motorcycle wheel.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Motorcycle_wheel",
+          "source_value_text": "7 kg, 320 mm radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-motorcycle-wheel-moi",
+      "name": "Motorcycle wheel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Motorcycle_wheel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-motorcycle-wheel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Motorcycle wheel",
+          "url": "https://en.wikipedia.org/wiki/Motorcycle_wheel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A motorcycle wheel carries several times the rotational inertia of a bicycle wheel.",
+      "value": 0.7168,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A car wheel sits around the one-kilogram-square-meter scale.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A car wheel sits around the one-kilogram-square-meter scale.",
+      "facts": {
+        "canonical_name": "Car wheel",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.2",
+          "source_basis": "Representative car wheel moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Wheel",
+          "source_value_text": "1.2 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-car-wheel-moi",
+      "name": "Car wheel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Wheel",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-wheel",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Wheel",
+          "url": "https://en.wikipedia.org/wiki/Wheel"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A car wheel sits around the one-kilogram-square-meter scale.",
+      "value": 1.2,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A door resists angular acceleration much more than its mass alone suggests because the mass sits far from the hinge.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A door resists angular acceleration much more than its mass alone suggests because the mass sits far from the hinge.",
+      "facts": {
+        "canonical_name": "Door about its hinge",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.5",
+          "source_basis": "Representative door moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Door",
+          "source_value_text": "1.5 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-door-moi",
+      "name": "Door about its hinge",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Door",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-door",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Door",
+          "url": "https://en.wikipedia.org/wiki/Door"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A door resists angular acceleration much more than its mass alone suggests because the mass sits far from the hinge.",
+      "value": 1.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A human rotating with arms extended has a much larger inertia than a hand-held object.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A human rotating with arms extended has a much larger inertia than a hand-held object.",
+      "facts": {
+        "canonical_name": "Figure skater",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.0",
+          "source_basis": "Representative upright human-body inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Figure_skating",
+          "source_value_text": "2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-figure-skater",
+      "name": "Figure skater",
+      "qualifiers": {
+        "measurement": "about vertical axis"
+      },
+      "source": "https://en.wikipedia.org/wiki/Figure_skating",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-figure-skating",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Figure skating",
+          "url": "https://en.wikipedia.org/wiki/Figure_skating"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A human rotating with arms extended has a much larger inertia than a hand-held object.",
+      "value": 2.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A seated human on a swivel chair is a familiar body-scale rotational inertia benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A seated human on a swivel chair is a familiar body-scale rotational inertia benchmark.",
+      "facts": {
+        "canonical_name": "Person on swivel chair",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.5",
+          "source_basis": "Representative human rotational inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Moment_of_inertia",
+          "source_value_text": "2.5 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-swivel-chair-person-moi",
+      "name": "Person on swivel chair",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Moment_of_inertia",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moment-of-inertia",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moment of inertia",
+          "url": "https://en.wikipedia.org/wiki/Moment_of_inertia"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A seated human on a swivel chair is a familiar body-scale rotational inertia benchmark.",
+      "value": 2.5,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Extending the arms moves mass outward and greatly increases rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Extending the arms moves mass outward and greatly increases rotational inertia.",
+      "facts": {
+        "canonical_name": "Ice skater with arms out",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "4.0",
+          "source_basis": "Representative whole-body rotational inertia for a skater with arms extended.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Ice_dance",
+          "source_value_text": "representative skater posture"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-ice-skater-arms-out",
+      "name": "Ice skater with arms out",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Ice_dance",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-ice-dance",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Ice dance",
+          "url": "https://en.wikipedia.org/wiki/Ice_dance"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Extending the arms moves mass outward and greatly increases rotational inertia.",
+      "value": 4.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A heavy truck wheel pushes rotational inertia into the tens.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A heavy truck wheel pushes rotational inertia into the tens.",
+      "facts": {
+        "canonical_name": "Truck wheel",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I = m r^2",
+          "method": "derived",
+          "original_value_text": "20.0",
+          "source_basis": "Hoop-like estimate for a truck wheel.",
+          "source_unit": "geometry",
+          "source_url": "https://en.wikipedia.org/wiki/Truck",
+          "source_value_text": "80 kg, 500 mm radius"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-truck-wheel-moi",
+      "name": "Truck wheel",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Truck",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-truck",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Truck",
+          "url": "https://en.wikipedia.org/wiki/Truck"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A heavy truck wheel pushes rotational inertia into the tens.",
+      "value": 20.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A playground merry-go-round shows how quickly inertia grows with both mass and radius.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A playground merry-go-round shows how quickly inertia grows with both mass and radius.",
+      "facts": {
+        "canonical_name": "Merry-go-round",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "400.0",
+          "source_basis": "Representative merry-go-round moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Merry-go-round",
+          "source_value_text": "400 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-merry-go-round-moi",
+      "name": "Merry-go-round",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Merry-go-round",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-merry-go-round",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Merry-go-round",
+          "url": "https://en.wikipedia.org/wiki/Merry-go-round"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A playground merry-go-round shows how quickly inertia grows with both mass and radius.",
+      "value": 400.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A passenger car has much larger rotational inertia than bicycle-scale objects.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A passenger car has much larger rotational inertia than bicycle-scale objects.",
+      "facts": {
+        "canonical_name": "Car",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "derivation_note": "I ~ m r^2",
+          "method": "derived",
+          "original_value_text": "3500.0",
+          "source_basis": "Order-of-magnitude estimate from a 1500 kg car with a few-meter characteristic radius.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Car",
+          "source_value_text": "3500"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:scenario-moment-of-inertia-car-about-vertical-axis",
+      "name": "Car",
+      "qualifiers": {
+        "measurement": "about vertical axis"
+      },
+      "source": "https://en.wikipedia.org/wiki/Car",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-car",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Car",
+          "url": "https://en.wikipedia.org/wiki/Car"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A passenger car has much larger rotational inertia than bicycle-scale objects.",
+      "value": 3500.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A helicopter rotor stores substantial rotational inertia.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A helicopter rotor stores substantial rotational inertia.",
+      "facts": {
+        "canonical_name": "Helicopter rotor",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "30000.0",
+          "source_basis": "Representative helicopter rotor moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Helicopter_rotor",
+          "source_value_text": "3e4 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-helicopter-rotor-moi",
+      "name": "Helicopter rotor",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Helicopter_rotor",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-helicopter-rotor",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Helicopter rotor",
+          "url": "https://en.wikipedia.org/wiki/Helicopter_rotor"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "A helicopter rotor stores substantial rotational inertia.",
+      "value": 30000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The ISS has an enormous rotational inertia compared with vehicles on Earth.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The ISS has an enormous rotational inertia compared with vehicles on Earth.",
+      "facts": {
+        "canonical_name": "International Space Station",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "400000000.0",
+          "source_basis": "Order-of-magnitude ISS inertia about a principal axis.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/International_Space_Station",
+          "source_value_text": "4e8 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-iss-moi",
+      "name": "International Space Station",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/International_Space_Station",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-international-space-station",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "International Space Station",
+          "url": "https://en.wikipedia.org/wiki/International_Space_Station"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "The ISS has an enormous rotational inertia compared with vehicles on Earth.",
+      "value": 400000000.0,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Planetary bodies have enormous moments of inertia even before you reach stars.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Planetary bodies have enormous moments of inertia even before you reach stars.",
+      "facts": {
+        "canonical_name": "Moon about its spin axis",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "8.7e+34",
+          "source_basis": "Order-of-magnitude lunar moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
+          "source_value_text": "8.7e34 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-moon-moi",
+      "name": "Moon about its spin axis",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moment-of-inertia-factor",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moment of inertia factor",
+          "url": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Planetary bodies have enormous moments of inertia even before you reach stars.",
+      "value": 8.7e+34,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Earth\u2019s spin inertia is a planetary-scale reference point on this axis.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Earth\u2019s spin inertia is a planetary-scale reference point on this axis.",
+      "facts": {
+        "canonical_name": "Earth",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "8e+37",
+          "source_basis": "Approximate Earth axial moment of inertia using the standard planetary factor.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Earth",
+          "source_value_text": "8e+37"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-moment-of-inertia-earth",
+      "name": "Earth",
+      "qualifiers": {
+        "measurement": "about rotation axis"
+      },
+      "source": "https://en.wikipedia.org/wiki/Earth",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-earth",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Earth",
+          "url": "https://en.wikipedia.org/wiki/Earth"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Earth\u2019s spin inertia is a planetary-scale reference point on this axis.",
+      "value": 8e+37,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Earth is a useful large-scale rotational-inertia benchmark.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Earth is a useful large-scale rotational-inertia benchmark.",
+      "facts": {
+        "canonical_name": "Earth about its spin axis",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "8.04e+37",
+          "source_basis": "Reported Earth moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
+          "source_value_text": "8.04e37 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-earth-moi",
+      "name": "Earth about its spin axis",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moment-of-inertia-factor",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moment of inertia factor",
+          "url": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "The Earth is a useful large-scale rotational-inertia benchmark.",
+      "value": 8.04e+37,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Compact stars can have Earth-like rotational inertia despite vastly smaller radii because of their huge density.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Compact stars can have Earth-like rotational inertia despite vastly smaller radii because of their huge density.",
+      "facts": {
+        "canonical_name": "Neutron star",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1e+38",
+          "source_basis": "Representative neutron-star moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Neutron_star",
+          "source_value_text": "1e38 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-neutron-star-moi",
+      "name": "Neutron star",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Neutron_star",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-neutron-star",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Neutron star",
+          "url": "https://en.wikipedia.org/wiki/Neutron_star"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Compact stars can have Earth-like rotational inertia despite vastly smaller radii because of their huge density.",
+      "value": 1e+38,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Jupiter sits far above terrestrial objects because of its size and mass.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Jupiter sits far above terrestrial objects because of its size and mass.",
+      "facts": {
+        "canonical_name": "Jupiter",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "2.5e+42",
+          "source_basis": "Approximate Jovian axial moment of inertia from mass and radius.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Jupiter",
+          "source_value_text": "2.5e+42"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-moment-of-inertia-jupiter",
+      "name": "Jupiter",
+      "qualifiers": {
+        "measurement": "about rotation axis"
+      },
+      "source": "https://en.wikipedia.org/wiki/Jupiter",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-jupiter",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Jupiter",
+          "url": "https://en.wikipedia.org/wiki/Jupiter"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "Jupiter sits far above terrestrial objects because of its size and mass.",
+      "value": 2.5e+42,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Sun\u2019s rotational inertia is a useful stellar-scale anchor.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Sun\u2019s rotational inertia is a useful stellar-scale anchor.",
+      "facts": {
+        "canonical_name": "Sun",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6.9e+46",
+          "source_basis": "Approximate solar axial moment of inertia from mass, radius, and standard structure factor.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Sun",
+          "source_value_text": "6.9e+46"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-moment-of-inertia-sun",
+      "name": "Sun",
+      "qualifiers": {
+        "measurement": "about rotation axis"
+      },
+      "source": "https://en.wikipedia.org/wiki/Sun",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-sun",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Sun",
+          "url": "https://en.wikipedia.org/wiki/Sun"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "The Sun\u2019s rotational inertia is a useful stellar-scale anchor.",
+      "value": 6.9e+46,
+      "value_type": "measured",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Sun's rotational inertia dwarfs any planetary example.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Sun's rotational inertia dwarfs any planetary example.",
+      "facts": {
+        "canonical_name": "Sun about its spin axis",
+        "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "6.9e+46",
+          "source_basis": "Order-of-magnitude solar moment of inertia.",
+          "source_unit": "kg*m^2",
+          "source_url": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
+          "source_value_text": "6.9e46 kg*m^2"
+        }
+      },
+      "hook": null,
+      "id": "obs:moment-of-inertia:entity-sun-moi",
+      "name": "Sun about its spin axis",
+      "qualifiers": {},
+      "source": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-moment-of-inertia-factor",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Moment of inertia factor",
+          "url": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-moment-of-inertia-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/moment-of-inertia.json",
+          "url": "repo://dataset/raw/curated/moment-of-inertia.json"
+        }
+      ],
+      "summary_short": "The Sun's rotational inertia dwarfs any planetary example.",
+      "value": 6.9e+46,
+      "value_type": "measured",
+      "wikidata_qid": null
+    }
+  ],
+  "preferred_max_items": 80,
+  "preferred_target_items": 50,
+  "related_resources": [
+    {
+      "name": "Moment of inertia",
+      "url": "https://en.wikipedia.org/wiki/Moment_of_inertia"
+    }
+  ],
+  "required_min_items": 24,
+  "scale_mode": "log",
+  "selection_bin_count": 24,
+  "show_limitations": true,
+  "units": [
+    {
+      "conversion_factor": 1.0,
+      "description": "Kilogram square meters are the canonical storage unit for moment of inertia.",
+      "name": "kilogram square meters",
+      "symbol": "kg*m^2"
+    },
+    {
+      "conversion_factor": 10000000.0,
+      "description": "Common small-rotor and flywheel unit.",
+      "name": "gram square centimeters",
+      "symbol": "g*cm^2"
+    }
+  ]
+}

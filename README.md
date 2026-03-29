@@ -1,46 +1,48 @@
 # [Universe Scales](https://ethannguyenuser.github.io/universe-scales/)
 
-An interactive logarithmic visualization of the universe's dimensions, from quantum to cosmic scales.
+An interactive visualization of the universe's dimensions, from quantum to cosmic scales.
 
 ## Features
 
-- **Interactive Logarithmic Plots**: Visualize items across 12 different dimensions on logarithmic scales
-- **Multiple Dimensions**: Length, Duration, Speed, Acceleration, Jerk, Brightness, Force, Energy, Costs, Pressure, Young's Modulus, Yield Strength
+- **Interactive Plots**: Visualize items across many dimensions on logarithmic or linear scales, depending on the quantity
+- **Dimension Browser**: Expand a grouped selector with search instead of using a long dropdown
+- **Multiple Dimensions**: Length, Duration, Mass, Area, Volume, Density, Current, Temperature, Counts, Brightness, and many more
 - **Pan & Zoom**: Drag to pan horizontally, scroll to zoom in/out, double-click to reset zoom
 - **Item Editor**: Visual editor to add, edit, and delete items with image upload support
 - **YAML Import/Export**: Import and export YAML files for easy data management
+- **Canonical Dataset Pipeline**: Build a normalized SQLite corpus and derive the site YAML from it
+- **Content Overrides**: Store longer museum-style descriptions and structured source notes separately from the core values
 - **Unit Conversion**: Switch between different units (meters/feet, seconds/minutes, etc.)
 - **Number Notation Toggle**: Switch between scientific notation (1e10) and standard notation
 - **Dark Mode**: Toggle between light and dark themes
 - **Background Music**: Optional ambient background music
 - **Responsive Design**: Works on desktop and mobile devices
-- **URL Management**: Shareable links for specific dimensions
+- **URL Management**: Shareable links for specific dimensions and units
 
 ## Dimensions Covered
 
-1. **Length**: From Planck length to observable universe
-2. **Duration**: From Planck time to age of universe
-3. **Speed**: From continental drift to speed of light
-4. **Acceleration**: From geological processes to black hole gravity
-5. **Jerk**: Rate of change of acceleration
-6. **Brightness**: From deep space to gamma ray bursts
-7. **Force**: From molecular forces to black hole gravity
-8. **Energy**: From photon energy to cosmic events
-9. **Costs**: From grain of rice to global GDP
-10. **Pressure**: From vacuum to black hole pressure
-11. **Young's Modulus**: Material stiffness from rubber to neutron stars
-12. **Yield Strength**: Material strength from foam to cosmic extremes
+1. **Fundamental scales**: Length, duration, mass, electric current, temperature, counts, luminous intensity
+2. **Geometry and scale**: Area, volume
+3. **Motion and mechanics**: Speed, acceleration, jerk, force, torque, moment of inertia, angle, angular velocity
+4. **Fields and waves**: Brightness, frequency, charge, magnetic field, loudness, sound frequency
+5. **Materials and matter**: Pressure, density, viscosity, flow rate, surface tension, salinity, concentration, hardness, strain, thermal conductivity, specific heat
+6. **Information and computation**: Information, information rate, FLOPs
+7. **Senses and perception**: Scoville heat, odor concentration, roughness, coefficient of friction, visual angle
+8. **Global and geography**: Population density, physiological density, agricultural density
+9. **Abstract and social**: Costs, historical time, counts, counts per unit time, probability, precision and accuracy, correlation coefficient, effect size, utility, QALYs, micromorts, absorbed dose, disease rarity, cell count, attention
 
 ## Data Structure
 
-Each dimension is defined in a YAML file with:
-- Base unit and conversion factors
-- Bands (groupings of related items)
-- Items with values, descriptions, and source links
+The project now has two data layers:
+
+- **Canonical dataset** in `dataset/` and `exports/`, where subjects, observations, sources, units, and content overrides are normalized in SQLite and JSON.
+- **Frontend payloads** in `exports/frontend/` and `data/`, where the browser reads generated YAML bundles for each dimension.
+
+The site still consumes YAML, but YAML is no longer the source of truth for the pipeline-managed dimensions.
 
 ## Usage
 
-1. Select a dimension from the dropdown
+1. Click the dimension selector to open the grouped browser, then browse or search for a dimension
 2. Choose your preferred unit
 3. **Navigate the plot**: Drag to pan horizontally, scroll to zoom in/out, double-click to reset zoom
 4. Hover over items for descriptions and source links
@@ -60,6 +62,16 @@ Each dimension is defined in a YAML file with:
 - **Currency API**: exchangerate-api.com for live rates
 - **Deployment**: GitHub Pages compatible
 
+## Canonical Dataset
+
+The project includes a normalized SQLite-backed data pipeline that generates the frontend YAML bundles and supporting JSON exports.
+
+- Build the dataset: `./venv/bin/python scripts/dataset/build_dataset.py`
+- Verify the generated artifacts: `./venv/bin/python scripts/dataset/verify_dataset.py`
+- Query the dataset: `./venv/bin/python scripts/query_dataset.py between mass 1e-9 1e9 --selected-only`
+
+See [DATASET_PIPELINE.md](DATASET_PIPELINE.md) for the source model, output artifacts, and contributor workflow.
+
 ## File Structure
 
 ```
@@ -75,7 +87,7 @@ Each dimension is defined in a YAML file with:
 │   ├── editor.js       # Item editor functionality
 │   ├── formatting.js   # Number formatting utilities
 │   └── mobile.js       # Mobile-specific functionality
-├── data/               # YAML data files
+├── data/               # Generated frontend YAML files
 │   ├── length.yaml
 │   ├── duration.yaml
 │   ├── speed.yaml
@@ -88,10 +100,14 @@ Each dimension is defined in a YAML file with:
 │   ├── pressure.yaml
 │   ├── youngs-modulus.yaml
 │   └── yield-strength.yaml
+├── dataset/            # Canonical raw inputs and SQLite artifacts
+├── exports/            # Generated JSON, YAML, and SQLite exports
 ├── scripts/            # Python utility scripts
-│   ├── download_images.py    # Automatic image downloader
-│   └── sort_yaml_items.py    # YAML item sorter
+│   ├── download_images.py     # Automatic image downloader
+│   ├── generate_thumbnails.py # Generate optimized thumbnails for bandwidth savings
+│   └── sort_yaml_items.py     # YAML item sorter
 ├── images/             # Item images
+│   └── thumbs/         # Optimized thumbnail versions (generated)
 └── README.md           # This file
 ```
 
@@ -107,16 +123,31 @@ To add new items or dimensions:
 5. Click "Save All Changes" to persist your edits
 6. Export YAML to save your changes to a file
 
-**Using YAML Files:**
-1. Edit the appropriate YAML file in the `data/` directory
-2. Follow the existing structure with bands and items
-3. Include accurate values, descriptions, and source links
-4. Use `scripts/sort_yaml_items.py` to automatically sort items by value
-5. Test the visualization in the browser
+**Using the canonical dataset pipeline:**
+1. Add or revise structured facts in `dataset/raw/curated/<dimension>.json`
+2. Add or revise narrative overrides in `dataset/raw/content/<dimension>.json`
+3. Update dimension metadata in `dataset/raw/config/`
+4. Rebuild with `./venv/bin/python scripts/dataset/build_dataset.py`
+5. Verify with `./venv/bin/python scripts/dataset/verify_dataset.py`
+6. Review the generated artifacts in `exports/` and `data/`
+
+**Using YAML Files directly:**
+1. Edit a generated YAML file only for quick frontend-only experiments
+2. Expect pipeline rebuilds to overwrite managed dimensions
+3. Prefer putting durable changes back into `dataset/raw/`
 
 **Utility Scripts:**
-- `scripts/download_images.py`: Automatically downloads images for items from Wikipedia and Unsplash
+- `scripts/download_images.py`: Automatically downloads images for items from public sources
 - `scripts/sort_yaml_items.py`: Sorts YAML file items by their value field
+- `scripts/generate_thumbnails.py`: Generates optimized thumbnail versions of images to reduce bandwidth usage (see SCALABILITY_ANALYSIS.md)
+- `scripts/suppress_broken_pipe.py`: HTTP server wrapper that suppresses harmless BrokenPipeError exceptions for cleaner logs
+
+## Performance & Scalability
+
+The site uses optimized thumbnails by default to reduce bandwidth usage:
+- Thumbnails load automatically for faster browsing
+- Click thumbnails to view full-resolution images
+- See `SCALABILITY_ANALYSIS.md` for detailed scalability analysis and optimization strategies
 
 ## License
 

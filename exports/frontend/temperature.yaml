@@ -1,0 +1,2373 @@
+dimension: temperature
+base_unit: kelvin
+dimension_description: Temperature measures how hot or cold a system is, but on a deeper level it tracks the distribution of energy among microscopic degrees of freedom. This makes it one of the rare scales that links kitchen experience, planetary climate, stellar interiors, and particle collisions. Many values are quoted directly in kelvin, while others are converted from Celsius or Fahrenheit values reported in the source.
+related_resources:
+- name: Temperature
+  url: https://en.wikipedia.org/wiki/Temperature
+- name: Kelvin
+  url: https://en.wikipedia.org/wiki/Kelvin
+show_limitations: true
+units:
+- conversion_factor: 1.0
+  description: Kelvin is the canonical storage unit for thermodynamic temperature.
+  name: kelvin
+  symbol: K
+- name: celsius
+  symbol: deg C
+  conversion_factor: 1.0
+  offset: -273.15
+  description: Celsius is the most intuitive everyday temperature scale.
+- name: fahrenheit
+  symbol: deg F
+  conversion_factor: 1.8
+  offset: -459.67
+  description: Fahrenheit remains common for weather and household temperatures in the United States.
+- name: millikelvin
+  symbol: mK
+  conversion_factor: 1000.0
+  description: Millikelvin are useful for cryogenic and quantum systems.
+- name: microkelvin
+  symbol: uK
+  conversion_factor: 1000000.0
+  description: Microkelvin are useful for ultracold atoms and precision experiments.
+- name: megakelvin
+  symbol: MK
+  conversion_factor: 1.0e-06
+  description: Megakelvin are useful for stellar interiors and hot plasmas.
+- name: Planck temperatures
+  symbol: T_P
+  conversion_factor: 7.057929871370515e-33
+  description: Planck temperature is the natural high-temperature scale in Planck units.
+required_min_items: 24
+preferred_target_items: 50
+preferred_max_items: 80
+selection_bin_count: 24
+description_format: markdown
+scale_mode: log
+frontend_group: fundamental
+frontend_group_label: Fundamental Scales
+frontend_order: 180
+items:
+- id: obs:temperature:entity-bose-einstein-condensate
+  name: Bose-Einstein condensate
+  value: 1.0e-10
+  description: A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.
+  description_format: markdown
+  summary_short: A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.
+  description_medium: A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Bose-Einstein condensate
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted nanokelvin to kelvin.
+      method: converted
+      original_value_text: 1e-10
+      source_basis: Representative condensate temperature scale.
+      source_unit: nK
+      source_url: https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate
+      source_value_text: 0.1 nK
+  source: https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-bose-e2-80-93einstein-condensate
+    url: https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate
+    title: Bose–Einstein condensate
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: ultracold atom temperature
+- id: obs:temperature:entity-optical-lattice-clock-atoms-temperature
+  name: Optical lattice clock atoms
+  value: 1.0e-07
+  description: Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.
+  description_format: markdown
+  summary_short: Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.
+  description_medium: Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Optical lattice clock atoms
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-07
+      source_basis: Representative atom temperature in an optical lattice clock.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Optical_lattice_clock
+      source_value_text: 100 nK
+  source: https://en.wikipedia.org/wiki/Optical_lattice_clock
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-optical-lattice-clock
+    url: https://en.wikipedia.org/wiki/Optical_lattice_clock
+    title: Optical lattice clock
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:temperature:entity-laser-cooled-atom-cloud-temperature
+  name: Laser-cooled atom cloud
+  value: 1.0e-06
+  description: Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.
+  description_format: markdown
+  summary_short: Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.
+  description_medium: Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Laser-cooled atom cloud
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: 1e-06
+      source_basis: Representative temperature of a laser-cooled atomic cloud.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Laser_cooling
+      source_value_text: 1 uK
+  source: https://en.wikipedia.org/wiki/Laser_cooling
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-laser-cooling
+    url: https://en.wikipedia.org/wiki/Laser_cooling
+    title: Laser cooling
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:temperature:entity-adiabatic-demagnetization-stage
+  name: Adiabatic demagnetization stage
+  value: 0.001
+  description: Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.
+  description_format: markdown
+  summary_short: Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.
+  description_medium: Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Adiabatic demagnetization stage
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '0.001'
+      source_basis: Representative temperature reached in adiabatic-demagnetization stages.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Adiabatic_demagnetization
+      source_value_text: 1 mK
+  source: https://en.wikipedia.org/wiki/Adiabatic_demagnetization
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-adiabatic-demagnetization
+    url: https://en.wikipedia.org/wiki/Adiabatic_demagnetization
+    title: Adiabatic demagnetization
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers: {}
+- id: obs:temperature:entity-dilution-refrigerator
+  name: Dilution refrigerator
+  value: 0.005
+  description: A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.
+  description_format: markdown
+  summary_short: A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.
+  description_medium: A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dilution refrigerator
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted millikelvin to kelvin.
+      method: converted
+      original_value_text: '0.005'
+      source_basis: Representative dilution refrigerator operating temperature.
+      source_unit: mK
+      source_url: https://en.wikipedia.org/wiki/Dilution_refrigerator
+      source_value_text: 5 mK
+  source: https://en.wikipedia.org/wiki/Dilution_refrigerator
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dilution-refrigerator
+    url: https://en.wikipedia.org/wiki/Dilution_refrigerator
+    title: Dilution refrigerator
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: mixing chamber temperature
+- id: obs:temperature:entity-cosmic-neutrino-background
+  name: Cosmic neutrino background
+  value: 1.95
+  description: The effective present-day temperature associated with the cosmic neutrino background.
+  description_format: markdown
+  summary_short: The effective present-day temperature associated with the cosmic neutrino background.
+  description_medium: The effective present-day temperature associated with the cosmic neutrino background.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Cosmic neutrino background
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '1.95'
+      source_basis: Reported effective neutrino-background temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Cosmic_neutrino_background
+      source_value_text: 1.95 K
+  source: https://en.wikipedia.org/wiki/Cosmic_neutrino_background
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-cosmic-neutrino-background
+    url: https://en.wikipedia.org/wiki/Cosmic_neutrino_background
+    title: Cosmic neutrino background
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: effective background temperature
+- id: obs:temperature:entity-liquid-helium
+  name: Liquid helium boiling point
+  value: 4.22
+  description: The normal boiling point of helium, used widely in cryogenic cooling.
+  description_format: markdown
+  summary_short: The normal boiling point of helium, used widely in cryogenic cooling.
+  description_medium: The normal boiling point of helium, used widely in cryogenic cooling.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid helium boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '4.22'
+      source_basis: Reported normal boiling point of helium.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Helium
+      source_value_text: 4.22 K
+  source: https://en.wikipedia.org/wiki/Helium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-helium
+    url: https://en.wikipedia.org/wiki/Helium
+    title: Helium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
+- id: obs:temperature:entity-liquid-hydrogen
+  name: Liquid hydrogen boiling point
+  value: 20.28
+  description: The normal boiling point of hydrogen, important for rocket propellant handling.
+  description_format: markdown
+  summary_short: The normal boiling point of hydrogen, important for rocket propellant handling.
+  description_medium: The normal boiling point of hydrogen, important for rocket propellant handling.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid hydrogen boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '20.28'
+      source_basis: Reported normal boiling point of hydrogen.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Hydrogen
+      source_value_text: 20.28 K
+  source: https://en.wikipedia.org/wiki/Hydrogen
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-hydrogen
+    url: https://en.wikipedia.org/wiki/Hydrogen
+    title: Hydrogen
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
+- id: obs:temperature:entity-triton-temperature
+  name: Triton surface
+  value: 38.0
+  description: The frigid surface temperature of Neptune's moon Triton.
+  description_format: markdown
+  summary_short: The frigid surface temperature of Neptune's moon Triton.
+  description_medium: The frigid surface temperature of Neptune's moon Triton.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Triton surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '38.0'
+      source_basis: Reported representative Triton surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Triton_(moon)
+      source_value_text: 38 K
+  source: https://en.wikipedia.org/wiki/Triton_(moon)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-triton-moon
+    url: https://en.wikipedia.org/wiki/Triton_(moon)
+    title: Triton (moon)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface temperature
+- id: obs:temperature:entity-pluto-temperature
+  name: Pluto surface
+  value: 44.0
+  description: A representative temperature for the surface of Pluto.
+  description_format: markdown
+  summary_short: A representative temperature for the surface of Pluto.
+  description_medium: A representative temperature for the surface of Pluto.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pluto surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '44.0'
+      source_basis: Reported representative Pluto surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Pluto
+      source_value_text: 44 K
+  source: https://en.wikipedia.org/wiki/Pluto
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pluto
+    url: https://en.wikipedia.org/wiki/Pluto
+    title: Pluto
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface temperature
+- id: obs:temperature:entity-neptune-cloud-tops
+  name: Neptune cloud tops
+  value: 55.0
+  description: A representative temperature for the cloud tops of Neptune.
+  description_format: markdown
+  summary_short: A representative temperature for the cloud tops of Neptune.
+  description_medium: A representative temperature for the cloud tops of Neptune.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Neptune cloud tops
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '55.0'
+      source_basis: Reported Neptune cloud-top temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Neptune
+      source_value_text: 55 K
+  source: https://en.wikipedia.org/wiki/Neptune
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-neptune
+    url: https://en.wikipedia.org/wiki/Neptune
+    title: Neptune
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: cloud-top temperature
+- id: obs:temperature:entity-liquid-nitrogen
+  name: Liquid nitrogen boiling point
+  value: 77.36
+  description: The boiling point of liquid nitrogen, common in laboratory cryogenics.
+  description_format: markdown
+  summary_short: The boiling point of liquid nitrogen, common in laboratory cryogenics.
+  description_medium: The boiling point of liquid nitrogen, common in laboratory cryogenics.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid nitrogen boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '77.36'
+      source_basis: Reported boiling point of liquid nitrogen.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Liquid_nitrogen
+      source_value_text: 77.36 K
+  source: https://en.wikipedia.org/wiki/Liquid_nitrogen
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-liquid-nitrogen
+    url: https://en.wikipedia.org/wiki/Liquid_nitrogen
+    title: Liquid nitrogen
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
+- id: obs:temperature:entity-liquid-oxygen
+  name: Liquid oxygen boiling point
+  value: 90.19
+  description: The boiling point of oxygen at standard pressure.
+  description_format: markdown
+  summary_short: The boiling point of oxygen at standard pressure.
+  description_medium: The boiling point of oxygen at standard pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid oxygen boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '90.19'
+      source_basis: Reported normal boiling point of oxygen.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Oxygen
+      source_value_text: 90.19 K
+  source: https://en.wikipedia.org/wiki/Oxygen
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-oxygen
+    url: https://en.wikipedia.org/wiki/Oxygen
+    title: Oxygen
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
+- id: obs:temperature:entity-titan-temperature
+  name: Titan surface
+  value: 94.0
+  description: The approximate surface temperature of Saturn's moon Titan.
+  description_format: markdown
+  summary_short: The approximate surface temperature of Saturn's moon Titan.
+  description_medium: The approximate surface temperature of Saturn's moon Titan.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Titan surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '94.0'
+      source_basis: Reported Titan surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Titan_(moon)
+      source_value_text: 94 K
+  source: https://en.wikipedia.org/wiki/Titan_(moon)
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-titan-moon
+    url: https://en.wikipedia.org/wiki/Titan_(moon)
+    title: Titan (moon)
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface temperature
+- id: obs:temperature:entity-liquid-methane
+  name: Liquid methane boiling point
+  value: 111.66
+  description: The boiling point of methane at standard pressure.
+  description_format: markdown
+  summary_short: The boiling point of methane at standard pressure.
+  description_medium: The boiling point of methane at standard pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Liquid methane boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '111.66'
+      source_basis: Reported boiling point of methane.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Methane
+      source_value_text: 111.66 K
+  source: https://en.wikipedia.org/wiki/Methane
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-methane
+    url: https://en.wikipedia.org/wiki/Methane
+    title: Methane
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
+- id: obs:temperature:entity-dry-ice
+  name: Dry ice sublimation point
+  value: 194.65
+  description: The sublimation temperature of dry ice at standard pressure.
+  description_format: markdown
+  summary_short: The sublimation temperature of dry ice at standard pressure.
+  description_medium: The sublimation temperature of dry ice at standard pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Dry ice sublimation point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '194.65'
+      source_basis: Reported dry-ice sublimation temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Dry_ice
+      source_value_text: -78.5 C
+  source: https://en.wikipedia.org/wiki/Dry_ice
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-dry-ice
+    url: https://en.wikipedia.org/wiki/Dry_ice
+    title: Dry ice
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: sublimation temperature at 1 atmosphere
+- id: obs:temperature:entity-mars-average-temperature
+  name: Mars average surface
+  value: 210.0
+  description: A representative average surface temperature for Mars.
+  description_format: markdown
+  summary_short: A representative average surface temperature for Mars.
+  description_medium: A representative average surface temperature for Mars.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Mars average surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '210.0'
+      source_basis: Reported average Martian surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Climate_of_Mars
+      source_value_text: 210 K
+  source: https://en.wikipedia.org/wiki/Climate_of_Mars
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-climate-of-mars
+    url: https://en.wikipedia.org/wiki/Climate_of_Mars
+    title: Climate of Mars
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: average surface temperature
+- id: obs:temperature:scenario-temperature-household-freezer
+  name: Household freezer
+  value: 255.15
+  description: A typical household-freezer setting in the United States.
+  description_format: markdown
+  summary_short: A typical household-freezer setting in the United States.
+  description_medium: A typical household-freezer setting in the United States.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Household freezer
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '255.15'
+      source_basis: Representative household freezer temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Freezer
+      source_value_text: -18 C
+  source: https://en.wikipedia.org/wiki/Freezer
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-freezer
+    url: https://en.wikipedia.org/wiki/Freezer
+    title: Freezer
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: typical operating temperature
+- id: obs:temperature:entity-ice-melting-point
+  name: Ice melting point
+  value: 273.15
+  description: The familiar melting point of ice at standard atmospheric pressure.
+  description_format: markdown
+  summary_short: The familiar melting point of ice at standard atmospheric pressure.
+  description_medium: The familiar melting point of ice at standard atmospheric pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Ice melting point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '273.15'
+      source_basis: Standard melting point of ice.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Melting_point
+      source_value_text: 0 C
+  source: https://en.wikipedia.org/wiki/Melting_point
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-melting-point
+    url: https://en.wikipedia.org/wiki/Melting_point
+    title: Melting point
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: melting point at 1 atmosphere
+- id: obs:temperature:scenario-temperature-refrigerator-interior
+  name: Refrigerator interior
+  value: 277.15
+  description: A typical refrigerator interior temperature for food safety.
+  description_format: markdown
+  summary_short: A typical refrigerator interior temperature for food safety.
+  description_medium: A typical refrigerator interior temperature for food safety.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Refrigerator interior
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '277.15'
+      source_basis: Representative refrigerator temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Refrigerator
+      source_value_text: 4 C
+  source: https://en.wikipedia.org/wiki/Refrigerator
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-refrigerator
+    url: https://en.wikipedia.org/wiki/Refrigerator
+    title: Refrigerator
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: typical operating temperature
+- id: obs:temperature:entity-earth-average-surface-temperature
+  name: Earth average surface
+  value: 288.0
+  description: A representative global average surface temperature for Earth.
+  description_format: markdown
+  summary_short: A representative global average surface temperature for Earth.
+  description_medium: A representative global average surface temperature for Earth.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Earth average surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '288.0'
+      source_basis: Representative Earth average surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Instrumental_temperature_record
+      source_value_text: 288 K
+  source: https://en.wikipedia.org/wiki/Instrumental_temperature_record
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-instrumental-temperature-record
+    url: https://en.wikipedia.org/wiki/Instrumental_temperature_record
+    title: Instrumental temperature record
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: average surface temperature
+- id: obs:temperature:scenario-temperature-room-temperature
+  name: Room temperature
+  value: 293.15
+  description: A standard room temperature near twenty degrees Celsius.
+  description_format: markdown
+  summary_short: A standard room temperature near twenty degrees Celsius.
+  description_medium: A standard room temperature near twenty degrees Celsius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Room temperature
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '293.15'
+      source_basis: Representative room temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Room_temperature
+      source_value_text: 20 C
+  source: https://en.wikipedia.org/wiki/Room_temperature
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-room-temperature
+    url: https://en.wikipedia.org/wiki/Room_temperature
+    title: Room temperature
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: typical indoor room temperature
+- id: obs:temperature:entity-human-skin-temperature
+  name: Human skin
+  value: 306.15
+  description: A representative human skin temperature, typically cooler than the body's core.
+  description_format: markdown
+  summary_short: A representative human skin temperature, typically cooler than the body's core.
+  description_medium: A representative human skin temperature, typically cooler than the body's core.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human skin
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '306.15'
+      source_basis: Representative human skin temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Human_body_temperature
+      source_value_text: 33 C
+  source: https://en.wikipedia.org/wiki/Human_body_temperature
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body-temperature
+    url: https://en.wikipedia.org/wiki/Human_body_temperature
+    title: Human body temperature
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: representative skin temperature
+- id: obs:temperature:entity-human-body-core-temperature
+  name: Human body core
+  value: 310.15
+  description: A representative healthy human core-body temperature.
+  description_format: markdown
+  summary_short: A representative healthy human core-body temperature.
+  description_medium: A representative healthy human core-body temperature.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Human body core
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '310.15'
+      source_basis: Representative human core body temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Human_body_temperature
+      source_value_text: 37 C
+  source: https://en.wikipedia.org/wiki/Human_body_temperature
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body-temperature
+    url: https://en.wikipedia.org/wiki/Human_body_temperature
+    title: Human body temperature
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: core body temperature
+- id: obs:temperature:scenario-temperature-high-fever
+  name: High fever
+  value: 313.15
+  description: A high but survivable fever temperature for a human body.
+  description_format: markdown
+  summary_short: A high but survivable fever temperature for a human body.
+  description_medium: A high but survivable fever temperature for a human body.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: High fever
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '313.15'
+      source_basis: Representative high fever temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Human_body_temperature
+      source_value_text: 40 C
+  source: https://en.wikipedia.org/wiki/Human_body_temperature
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-human-body-temperature
+    url: https://en.wikipedia.org/wiki/Human_body_temperature
+    title: Human body temperature
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: fever temperature
+- id: obs:temperature:scenario-temperature-hot-coffee
+  name: Hot coffee
+  value: 333.15
+  description: A representative serving temperature for very hot coffee.
+  description_format: markdown
+  summary_short: A representative serving temperature for very hot coffee.
+  description_medium: A representative serving temperature for very hot coffee.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Hot coffee
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '333.15'
+      source_basis: Representative hot-coffee serving temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Coffee
+      source_value_text: 60 C
+  source: https://en.wikipedia.org/wiki/Coffee
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-coffee
+    url: https://en.wikipedia.org/wiki/Coffee
+    title: Coffee
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: serving temperature
+- id: obs:temperature:scenario-temperature-sauna
+  name: Sauna
+  value: 353.15
+  description: A representative sauna temperature in the lower end of a common operating range.
+  description_format: markdown
+  summary_short: A representative sauna temperature in the lower end of a common operating range.
+  description_medium: A representative sauna temperature in the lower end of a common operating range.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sauna
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '353.15'
+      source_basis: Representative sauna temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Sauna
+      source_value_text: 80 C
+  source: https://en.wikipedia.org/wiki/Sauna
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sauna
+    url: https://en.wikipedia.org/wiki/Sauna
+    title: Sauna
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: room temperature
+- id: obs:temperature:entity-water-boiling-point
+  name: Water boiling point
+  value: 373.15
+  description: The boiling point of water at standard atmospheric pressure.
+  description_format: markdown
+  summary_short: The boiling point of water at standard atmospheric pressure.
+  description_medium: The boiling point of water at standard atmospheric pressure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Water boiling point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '373.15'
+      source_basis: Standard boiling point of water.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Boiling_point
+      source_value_text: 100 C
+  source: https://en.wikipedia.org/wiki/Boiling_point
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-boiling-point
+    url: https://en.wikipedia.org/wiki/Boiling_point
+    title: Boiling point
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: boiling point at 1 atmosphere
+- id: obs:temperature:scenario-temperature-deep-fryer
+  name: Deep fryer oil
+  value: 453.15
+  description: A representative deep-frying oil temperature.
+  description_format: markdown
+  summary_short: A representative deep-frying oil temperature.
+  description_medium: A representative deep-frying oil temperature.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Deep fryer oil
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '453.15'
+      source_basis: Representative deep-frying temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Deep_frying
+      source_value_text: 180 C
+  source: https://en.wikipedia.org/wiki/Deep_frying
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-deep-frying
+    url: https://en.wikipedia.org/wiki/Deep_frying
+    title: Deep frying
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: cooking oil temperature
+- id: obs:temperature:scenario-temperature-pizza-oven
+  name: Pizza oven
+  value: 523.15
+  description: A representative hot pizza-oven temperature.
+  description_format: markdown
+  summary_short: A representative hot pizza-oven temperature.
+  description_medium: A representative hot pizza-oven temperature.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Pizza oven
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '523.15'
+      source_basis: Representative pizza-oven temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Pizza
+      source_value_text: 250 C
+  source: https://en.wikipedia.org/wiki/Pizza
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-pizza
+    url: https://en.wikipedia.org/wiki/Pizza
+    title: Pizza
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: cooking chamber temperature
+- id: obs:temperature:entity-lead-melting-point
+  name: Lead melting point
+  value: 600.61
+  description: The melting point of lead.
+  description_format: markdown
+  summary_short: The melting point of lead.
+  description_medium: The melting point of lead.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lead melting point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '600.61'
+      source_basis: Reported melting point of lead.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Lead
+      source_value_text: 327.46 C
+  source: https://en.wikipedia.org/wiki/Lead
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lead
+    url: https://en.wikipedia.org/wiki/Lead
+    title: Lead
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: melting point
+- id: obs:temperature:entity-venus-surface-temperature
+  name: Venus surface
+  value: 737.0
+  description: The scorching surface temperature of Venus, hot enough to melt lead.
+  description_format: markdown
+  summary_short: The scorching surface temperature of Venus, hot enough to melt lead.
+  description_medium: The scorching surface temperature of Venus, hot enough to melt lead.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Venus surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '737.0'
+      source_basis: Reported Venus surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Venus
+      source_value_text: 737 K
+  source: https://en.wikipedia.org/wiki/Venus
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-venus
+    url: https://en.wikipedia.org/wiki/Venus
+    title: Venus
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface temperature
+- id: obs:temperature:entity-aluminum-melting-point
+  name: Aluminum melting point
+  value: 933.47
+  description: The melting point of aluminum.
+  description_format: markdown
+  summary_short: The melting point of aluminum.
+  description_medium: The melting point of aluminum.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Aluminum melting point
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '933.47'
+      source_basis: Reported melting point of aluminum.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Aluminium
+      source_value_text: 660.32 C
+  source: https://en.wikipedia.org/wiki/Aluminium
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-aluminium
+    url: https://en.wikipedia.org/wiki/Aluminium
+    title: Aluminium
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: melting point
+- id: obs:temperature:scenario-temperature-red-hot-steel
+  name: Red-hot steel
+  value: 1073.15
+  description: A representative temperature where steel glows visibly red.
+  description_format: markdown
+  summary_short: A representative temperature where steel glows visibly red.
+  description_medium: A representative temperature where steel glows visibly red.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Red-hot steel
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '1073.15'
+      source_basis: Representative red-heat temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Red_heat
+      source_value_text: 800 C
+  source: https://en.wikipedia.org/wiki/Red_heat
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-red-heat
+    url: https://en.wikipedia.org/wiki/Red_heat
+    title: Red heat
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: representative glowing steel temperature
+- id: obs:temperature:entity-basalt-lava-temperature
+  name: Basalt lava
+  value: 1473.15
+  description: A representative eruption temperature for basaltic lava.
+  description_format: markdown
+  summary_short: A representative eruption temperature for basaltic lava.
+  description_medium: A representative eruption temperature for basaltic lava.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Basalt lava
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '1473.15'
+      source_basis: Representative basaltic lava temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Lava
+      source_value_text: 1200 C
+  source: https://en.wikipedia.org/wiki/Lava
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lava
+    url: https://en.wikipedia.org/wiki/Lava
+    title: Lava
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: eruption temperature
+- id: obs:temperature:scenario-temperature-candle-flame
+  name: Candle flame
+  value: 1700.0
+  description: A representative temperature inside a candle flame.
+  description_format: markdown
+  summary_short: A representative temperature inside a candle flame.
+  description_medium: A representative temperature inside a candle flame.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Candle flame
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '1700.0'
+      source_basis: Representative candle-flame temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Flame
+      source_value_text: 1700 K
+  source: https://en.wikipedia.org/wiki/Flame
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-flame
+    url: https://en.wikipedia.org/wiki/Flame
+    title: Flame
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: flame temperature
+- id: obs:temperature:scenario-temperature-gas-stove-flame
+  name: Gas stove flame
+  value: 1950.0
+  description: A representative blue-flame gas-stove temperature.
+  description_format: markdown
+  summary_short: A representative blue-flame gas-stove temperature.
+  description_medium: A representative blue-flame gas-stove temperature.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Gas stove flame
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '1950.0'
+      source_basis: Representative gas-stove flame temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Gas_stove
+      source_value_text: 1950 K
+  source: https://en.wikipedia.org/wiki/Gas_stove
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-gas-stove
+    url: https://en.wikipedia.org/wiki/Gas_stove
+    title: Gas stove
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: flame temperature
+- id: obs:temperature:scenario-temperature-blast-furnace
+  name: Blast furnace
+  value: 2273.15
+  description: A representative temperature inside a blast furnace.
+  description_format: markdown
+  summary_short: A representative temperature inside a blast furnace.
+  description_medium: A representative temperature inside a blast furnace.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Blast furnace
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted Celsius to kelvin.
+      method: converted
+      original_value_text: '2273.15'
+      source_basis: Representative blast-furnace temperature.
+      source_unit: deg C
+      source_url: https://en.wikipedia.org/wiki/Blast_furnace
+      source_value_text: 2000 C
+  source: https://en.wikipedia.org/wiki/Blast_furnace
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-blast-furnace
+    url: https://en.wikipedia.org/wiki/Blast_furnace
+    title: Blast furnace
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: furnace temperature
+- id: obs:temperature:entity-tungsten-filament
+  name: Tungsten filament
+  value: 2800.0
+  description: The approximate operating temperature of a tungsten filament in an incandescent bulb.
+  description_format: markdown
+  summary_short: The approximate operating temperature of a tungsten filament in an incandescent bulb.
+  description_medium: The approximate operating temperature of a tungsten filament in an incandescent bulb.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Tungsten filament
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '2800.0'
+      source_basis: Representative tungsten-filament operating temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Incandescent_light_bulb
+      source_value_text: 2800 K
+  source: https://en.wikipedia.org/wiki/Incandescent_light_bulb
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-incandescent-light-bulb
+    url: https://en.wikipedia.org/wiki/Incandescent_light_bulb
+    title: Incandescent light bulb
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: operating temperature
+- id: obs:temperature:entity-sun-photosphere-temperature
+  name: Sun photosphere
+  value: 5778.0
+  description: The effective temperature of the Sun's visible surface.
+  description_format: markdown
+  summary_short: The effective temperature of the Sun's visible surface.
+  description_medium: The effective temperature of the Sun's visible surface.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Sun photosphere
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '5778.0'
+      source_basis: Reported effective temperature of the solar photosphere.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Sun
+      source_value_text: 5778 K
+  source: https://en.wikipedia.org/wiki/Sun
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-sun
+    url: https://en.wikipedia.org/wiki/Sun
+    title: Sun
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: effective temperature
+- id: obs:temperature:entity-lightning-channel-temperature
+  name: Lightning channel
+  value: 30000.0
+  description: A representative peak temperature of the lightning channel.
+  description_format: markdown
+  summary_short: A representative peak temperature of the lightning channel.
+  description_medium: A representative peak temperature of the lightning channel.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Lightning channel
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '30000.0'
+      source_basis: Reported lightning-channel temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Lightning
+      source_value_text: 30000 K
+  source: https://en.wikipedia.org/wiki/Lightning
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-lightning
+    url: https://en.wikipedia.org/wiki/Lightning
+    title: Lightning
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: channel temperature
+- id: obs:temperature:entity-o-type-star-surface-temperature
+  name: O-type star surface
+  value: 40000.0
+  description: A representative surface temperature for a very hot O-type star.
+  description_format: markdown
+  summary_short: A representative surface temperature for a very hot O-type star.
+  description_medium: A representative surface temperature for a very hot O-type star.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: O-type star surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '40000.0'
+      source_basis: Representative O-type stellar surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/O-type_star
+      source_value_text: 40000 K
+  source: https://en.wikipedia.org/wiki/O-type_star
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-o-type-star
+    url: https://en.wikipedia.org/wiki/O-type_star
+    title: O-type star
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface temperature
+- id: obs:temperature:entity-white-dwarf-surface-temperature
+  name: White dwarf surface
+  value: 100000.0
+  description: A representative temperature for a hot white-dwarf surface.
+  description_format: markdown
+  summary_short: A representative temperature for a hot white-dwarf surface.
+  description_medium: A representative temperature for a hot white-dwarf surface.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: White dwarf surface
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '100000.0'
+      source_basis: Representative hot white-dwarf surface temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/White_dwarf
+      source_value_text: 100000 K
+  source: https://en.wikipedia.org/wiki/White_dwarf
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-white-dwarf
+    url: https://en.wikipedia.org/wiki/White_dwarf
+    title: White dwarf
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: surface temperature
+- id: obs:temperature:entity-solar-corona-temperature
+  name: Solar corona
+  value: 1000000.0
+  description: The million-kelvin corona surrounding the Sun.
+  description_format: markdown
+  summary_short: The million-kelvin corona surrounding the Sun.
+  description_medium: The million-kelvin corona surrounding the Sun.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Solar corona
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted megakelvin to kelvin.
+      method: converted
+      original_value_text: '1000000.0'
+      source_basis: Representative solar-corona temperature.
+      source_unit: MK
+      source_url: https://en.wikipedia.org/wiki/Stellar_corona
+      source_value_text: 1 MK
+  source: https://en.wikipedia.org/wiki/Stellar_corona
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-stellar-corona
+    url: https://en.wikipedia.org/wiki/Stellar_corona
+    title: Stellar corona
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: coronal temperature
+- id: obs:temperature:entity-supernova-remnant-temperature
+  name: Supernova remnant plasma
+  value: 10000000.0
+  description: A representative temperature for hot plasma in a supernova remnant.
+  description_format: markdown
+  summary_short: A representative temperature for hot plasma in a supernova remnant.
+  description_medium: A representative temperature for hot plasma in a supernova remnant.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Supernova remnant plasma
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted megakelvin to kelvin.
+      method: converted
+      original_value_text: '10000000.0'
+      source_basis: Representative supernova-remnant plasma temperature.
+      source_unit: MK
+      source_url: https://en.wikipedia.org/wiki/Supernova_remnant
+      source_value_text: 10 MK
+  source: https://en.wikipedia.org/wiki/Supernova_remnant
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-supernova-remnant
+    url: https://en.wikipedia.org/wiki/Supernova_remnant
+    title: Supernova remnant
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: X-ray emitting plasma temperature
+- id: obs:temperature:entity-tokamak-plasma-temperature
+  name: Fusion tokamak plasma
+  value: 150000000.0
+  description: A representative temperature for magnetically confined fusion plasma.
+  description_format: markdown
+  summary_short: A representative temperature for magnetically confined fusion plasma.
+  description_medium: A representative temperature for magnetically confined fusion plasma.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Fusion tokamak plasma
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted megakelvin to kelvin.
+      method: converted
+      original_value_text: '150000000.0'
+      source_basis: Representative tokamak plasma temperature.
+      source_unit: MK
+      source_url: https://en.wikipedia.org/wiki/Tokamak
+      source_value_text: 150 MK
+  source: https://en.wikipedia.org/wiki/Tokamak
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-tokamak
+    url: https://en.wikipedia.org/wiki/Tokamak
+    title: Tokamak
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: plasma temperature
+- id: obs:temperature:entity-big-bang-nucleosynthesis-temperature
+  name: Big Bang nucleosynthesis era
+  value: 1000000000.0
+  description: A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.
+  description_format: markdown
+  summary_short: A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.
+  description_medium: A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Big Bang nucleosynthesis era
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted gigakelvin to kelvin.
+      method: converted
+      original_value_text: '1000000000.0'
+      source_basis: Representative temperature during primordial nucleosynthesis.
+      source_unit: GK
+      source_url: https://en.wikipedia.org/wiki/Big_Bang_nucleosynthesis
+      source_value_text: 1 GK
+  source: https://en.wikipedia.org/wiki/Big_Bang_nucleosynthesis
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-big-bang-nucleosynthesis
+    url: https://en.wikipedia.org/wiki/Big_Bang_nucleosynthesis
+    title: Big Bang nucleosynthesis
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: early-universe temperature
+- id: obs:temperature:entity-neutron-star-merger-temperature
+  name: Neutron star merger ejecta
+  value: 100000000000.0
+  description: A representative temperature scale reached in neutron-star merger matter.
+  description_format: markdown
+  summary_short: A representative temperature scale reached in neutron-star merger matter.
+  description_medium: A representative temperature scale reached in neutron-star merger matter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Neutron star merger ejecta
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      conversion_note: Converted gigakelvin to kelvin.
+      method: converted
+      original_value_text: '100000000000.0'
+      source_basis: Representative neutron-star merger temperature.
+      source_unit: GK
+      source_url: https://en.wikipedia.org/wiki/Kilonova
+      source_value_text: 100 GK
+  source: https://en.wikipedia.org/wiki/Kilonova
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-kilonova
+    url: https://en.wikipedia.org/wiki/Kilonova
+    title: Kilonova
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: merger temperature
+- id: obs:temperature:entity-lhc-quark-gluon-plasma-temperature
+  name: LHC quark-gluon plasma
+  value: 5500000000000.0
+  description: The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.
+  description_format: markdown
+  summary_short: The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.
+  description_medium: The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: LHC quark-gluon plasma
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: direct
+      original_value_text: '5500000000000.0'
+      source_basis: CERN reports quark-gluon plasma temperatures of about 5.5 trillion kelvin.
+      source_unit: K
+      source_url: https://home.cern/news/news/physics/four-times-hotter-centre-sun
+      source_value_text: 5.5 trillion K
+  source: https://home.cern/news/news/physics/four-times-hotter-centre-sun
+  source_count: 2
+  sources:
+  - id: src:https-home-cern-news-news-physics-four-times-hotter-centre-sun
+    url: https://home.cern/news/news/physics/four-times-hotter-centre-sun
+    title: four-times-hotter-centre-sun
+    publisher: home.cern
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: measured
+  qualifiers:
+    measurement: effective collision temperature
+- id: obs:temperature:entity-planck-temperature
+  name: Planck temperature
+  value: 1.416784e+32
+  description: The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.
+  description_format: markdown
+  summary_short: The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.
+  description_medium: The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  facts:
+    canonical_name: Planck temperature
+    ingest_source: dataset/raw/curated/temperature.json
+    source_trace:
+      method: derived
+      original_value_text: '1.416784e+32'
+      source_basis: Planck temperature.
+      source_unit: K
+      source_url: https://en.wikipedia.org/wiki/Planck_temperature
+      source_value_text: 1.416784e32 K
+  source: https://en.wikipedia.org/wiki/Planck_temperature
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-planck-temperature
+    url: https://en.wikipedia.org/wiki/Planck_temperature
+    title: Planck temperature
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-temperature-json
+    url: repo://dataset/raw/curated/temperature.json
+    title: dataset/raw/curated/temperature.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    assumption: included as a fun upper-end theoretical marker
+    measurement: theoretical reference temperature
