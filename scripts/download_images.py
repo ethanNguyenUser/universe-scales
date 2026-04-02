@@ -902,6 +902,16 @@ class ImageDownloader:
                     self.purge_placeholder_artifacts(filename)
                 elif not self.is_valid_existing_image(image_path):
                     print(f"Corrupt image detected for {dimension}/{item_name}: {filename}; refetching")
+                    try:
+                        image_path.unlink()
+                    except Exception:
+                        pass
+                    thumb_path = self.thumbs_dir / filename
+                    if thumb_path.exists():
+                        try:
+                            thumb_path.unlink()
+                        except Exception:
+                            pass
                 else:
                     print(f"Image already exists for {dimension}/{item_name}: {filename}")
                     skipped_count += 1

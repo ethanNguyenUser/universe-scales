@@ -105,6 +105,8 @@ See [DATASET_PIPELINE.md](DATASET_PIPELINE.md) for the source model, output arti
 ├── scripts/            # Python utility scripts
 │   ├── download_images.py     # Automatic image downloader
 │   ├── generate_thumbnails.py # Generate optimized thumbnails for bandwidth savings
+│   ├── check_images.py        # Validate image + thumbnail coverage for all exported items
+│   ├── ensure_images.py       # One-command image backfill + thumbnail build + coverage audit
 │   └── sort_yaml_items.py     # YAML item sorter
 ├── images/             # Item images
 │   └── thumbs/         # Optimized thumbnail versions (generated)
@@ -140,6 +142,8 @@ To add new items or dimensions:
 - `scripts/download_images.py`: Automatically downloads images for items from public sources
 - `scripts/sort_yaml_items.py`: Sorts YAML file items by their value field
 - `scripts/generate_thumbnails.py`: Generates optimized thumbnail versions of images to reduce bandwidth usage (see SCALABILITY_ANALYSIS.md)
+- `scripts/check_images.py`: Audits image and thumbnail coverage for `exports/frontend/*.yaml` and validates files are readable images
+- `scripts/ensure_images.py`: Convenience wrapper that runs downloader, thumbnail generation, and final coverage audit in one command
 - `scripts/suppress_broken_pipe.py`: HTTP server wrapper that suppresses harmless BrokenPipeError exceptions for cleaner logs
 
 ## Performance & Scalability
